@@ -1,0 +1,28 @@
+{
+	"nm_brand": "OHTO",
+	"nm_model": "Sharp Pencil",
+	"components": [
+		{
+			"tip": [
+				{ "cylinder": "2x2"},
+				{ "cone": "3x4" }
+			],
+			"head": [
+				{ "cone_hexagonal":  "3x4" }
+			],
+			"body": [
+				{ "hexagonal": "4x16" }
+			],
+			"ferrule": [
+				{ "cylinder":  "4x5"}
+			],
+			"cap": [
+				{ "cylinder":  "3.5x4" },
+				{ "cylinder":  "4x2" }
+			],
+			"eraser": [
+				{ "cylinder" : "4x5" }
+			]
+		}
+	]
+}

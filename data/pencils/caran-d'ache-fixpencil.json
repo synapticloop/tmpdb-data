@@ -1,0 +1,30 @@
+{
+	"nm_brand": "Caran d'Ache",
+	"nm_model": "Fixpencil",
+	"components": [
+		{
+			"head": [
+				{ "cone_hexagonal":  "8x4" }
+			],
+			"body": [
+				{ "hexagonal": "4x16" }
+			],
+			"clip": [
+				{
+					"angled": "4x5",
+					"position": "clip_end",
+					"type": "line_",
+					"length": "12x4",
+					"clip_offset": "2x4",
+					"offset": "-8"
+				}
+			],
+			"cap": [
+				{ "cylinder":  "3.5x4", "type": "" }
+			],
+			"eraser": [
+				{ "cylinder" : "4x5" }
+			]
+		}
+	]
+}

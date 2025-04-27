@@ -1,0 +1,38 @@
+{
+	"nm_brand": "unbranded",
+	"nm_model": "Metal Black",
+	"components": [
+		{
+			"tip": [
+				{ "cylinder": "2x2" },
+				{ "concave": "3x4", "offset":  "2" },
+				{ "cylinder": "4x4" }
+			],
+			"head": [
+				{ "cylinder":  "2x4" }
+			],
+			"grip": [
+				{ "cylinder": "4x6", "type":  "knurled_ridged", "number":  4 },
+				{ "cylinder": "4x6", "type":  "knurled"}
+			],
+			"body": [
+				{ "hexagonal": "4x16" }
+			],
+			"clip": [
+				{
+					"cylinder": "4x5",
+					"position": "clip_start",
+					"type": "line",
+					"length": "12x4",
+					"offset": "-2x4"
+				}
+			],
+			"tail": [
+				{ "cylinder": "2x4" }
+			],
+			"cap": [
+				{ "cylinder":  "3.5x4" }
+			]
+		}
+	]
+}
