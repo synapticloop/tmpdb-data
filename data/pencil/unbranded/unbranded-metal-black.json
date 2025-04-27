@@ -3,11 +3,16 @@
 	"nm_model": "Metal Black",
 	"components": [
 		{
-			"tip": [
-				{ "cylinder": "2x2" },
-				{ "concave": "3x4", "offset":  "2" },
-				{ "cylinder": "4x4" }
+			"type": "tip",
+			"parts": [
+				{ "type": "cylinder", "dimensions": "3.5x2.75" },
+				{ "type": "cone", "dimensions": "8.75x4.5x7.5", "offset": "4.75" },
+				{ "type": "cylinder", "dimensions": "4.75x7.5" }
 			],
+			"material": "metal",
+			"colours": [ "black" ]
+		},
+		{
 			"head": [
 				{ "cylinder":  "2x4" }
 			],
