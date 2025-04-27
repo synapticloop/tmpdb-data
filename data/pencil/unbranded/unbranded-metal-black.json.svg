@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="600" style="background-color:#ff3400;">
+<!-- RENDERING - component: tip -->
+<!-- RENDERING - part: cylinder -->
+<rect x="100" y="293.125" width="17.5" height="13.75" rx="1" ry="1" stroke-width="2" stroke="black" fill="white"/>
+
+<!-- RENDERING - part: cone -->
+<path d="M117.5 288.75 L161.25 281.25 L161.25 318.75 L117.5 311.25 Z" stroke-width="2" stroke="black" fill="white" />
+
+<!-- RENDERING - part: cylinder -->
+<rect x="161.25" y="281.25" width="23.75" height="37.5" rx="1" ry="1" stroke-width="2" stroke="black" fill="white"/>
+
+
+<!-- RENDERING - component: undefined -->
+</svg>

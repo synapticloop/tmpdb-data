@@ -1,0 +1,34 @@
+{
+  "name": "tmpdb-data",
+  "version": "0.0.1",
+  "description": "Mechanical Pencil Database - Data",
+  "keywords": [
+    "Mechanical",
+    "Pencil",
+    "Leadholders",
+    "Data"
+  ],
+  "homepage": "https://github.com/synapticloop/tmpdb-data#readme",
+  "bugs": {
+    "url": "https://github.com/synapticloop/tmpdb-data/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/synapticloop/tmpdb-data.git"
+  },
+  "license": " CC-BY-NC-SA-4.0",
+  "author": "Synapticloop",
+  "type": "module",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "svg": "node scripts/svg-builder.mjs"
+  },
+  "dependencies": {
+    "color": "^5.0.0",
+    "sharp": "0.34.1"
+  }
+}
