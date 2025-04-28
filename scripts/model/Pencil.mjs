@@ -17,7 +17,9 @@ export class Pencil {
 			`<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 3,3 L 6,0" /> ` +
 			`<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 3,3 L 0,0" /> ` +
 			`</pattern>` +
-			`<rect x="0" y="0" width="${Pencil.WIDTH}" height="${Pencil.HEIGHT}" fill="white" stroke="black" stroke-width="2" />`;
+			`<rect x="0" y="0" width="${Pencil.WIDTH}" height="${Pencil.HEIGHT}" fill="white" stroke="black" stroke-width="4" />` +
+			`<rect x="2" y="2" width="${Pencil.WIDTH - 4}" height="${Pencil.HEIGHT - 4}" fill="white" stroke="orange" stroke-width="1" />`
+			;
 
 	static SVG_END = "</svg>";
 
@@ -40,13 +42,23 @@ export class Pencil {
 		console.log(json);
 	}
 
-	renderSvg() {
+	renderSvg(shouldColour) {
 		let svgString = Pencil.SVG_START;
 		let xPosition = (Pencil.WIDTH - this.width)/2;
 
+		for (let component of this.components) {
+			svgString += component.renderBack(shouldColour, Pencil.WIDTH - (Pencil.WIDTH - this.width)/2 + 100);
+		}
+
+		this.components.reverse();
+		for (let component of this.components) {
+			svgString += component.renderFront(shouldColour, (Pencil.WIDTH - this.width)/2 - 100);
+		}
+		this.components.reverse();
+
 		// now go through each component and render the parts
 		for (let component of this.components) {
-			svgString += component.renderSvg(xPosition);
+			svgString += component.renderSvg(shouldColour, xPosition);
 			xPosition += component.getWidth();
 		}
 

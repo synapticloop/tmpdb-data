@@ -42,19 +42,25 @@
 			"type": "body",
 			"parts": [
 				{ "type": "hexagonal", "dimensions": "66.0x8.0" }
-			]
+			],
+			"material": "metal",
+			"colours": [ "black" ]
 		},
 		{
 			"type": "clip",
 			"parts": [
 				{ "type": "cylinder", "dimensions": "7.5x9.0" }
-			]
+			],
+			"material": "metal",
+			"colours": [ "black" ]
 		},
 		{
 			"type": "tail",
 			"parts": [
 				{ "type": "cylinder", "dimensions": "2.25x7.5" }
-			]
+			],
+			"material": "metal",
+			"colours": [ "black" ]
 		},
 		{
 			"type": "cap",

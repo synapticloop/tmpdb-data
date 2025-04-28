@@ -1,50 +1,90 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="400"> <pattern id="diagonalHatch" patternUnits="userSpaceOnUse" width="6" height="6"><rect width="6" height="6" fill='white'/> <path stroke="black" stroke-linecap="round" stroke-width="1" d="M 3,3 L 6,6"/> <path stroke="black" stroke-linecap="round" stroke-width="1" d="M 3,3 L 0,6"/> <path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 3,3 L 6,0" /> <path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 3,3 L 0,0" /> </pattern><rect x="0" y="0" width="1200" height="400" fill="white" stroke="black" stroke-width="2" />
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="400"> <pattern id="diagonalHatch" patternUnits="userSpaceOnUse" width="6" height="6"><rect width="6" height="6" fill='white'/> <path stroke="black" stroke-linecap="round" stroke-width="1" d="M 3,3 L 6,6"/> <path stroke="black" stroke-linecap="round" stroke-width="1" d="M 3,3 L 0,6"/> <path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 3,3 L 6,0" /> <path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 3,3 L 0,0" /> </pattern><rect x="0" y="0" width="1200" height="400" fill="white" stroke="black" stroke-width="4" /><rect x="2" y="2" width="1196" height="396" fill="white" stroke="orange" stroke-width="1" />
+<!-- RENDERING - component: tip -->
+<circle r="8.125" cx="1041.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="18.75" cx="1041.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" /><circle r="8.125" cx="1041.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+
+<!-- RENDERING - component: head -->
+<circle r="25.625" cx="1041.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" /><circle r="20" cx="1041.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+
+<!-- RENDERING - component: body -->
+<polygon points="1026.4553993520158,174.375 1056.0446006479842,174.375 1070.8392012959682,200 1056.0446006479842,225.625 1026.4553993520158,225.625 1011.6607987040317,200 " stroke="dimgray" stroke-width="1" fill="white"/> 
+
+<!-- RENDERING - component: ferrule -->
+<circle r="25.625" cx="1041.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+
+<!-- RENDERING - component: cap -->
+<circle r="23.125" cx="1041.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="25" cx="1041.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+
+<!-- RENDERING - component: eraser -->
+<circle r="23.125" cx="1041.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="23.125" cx="158.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+
+<!-- RENDERING - component: eraser -->
+<circle r="25" cx="158.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="23.125" cx="158.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+
+<!-- RENDERING - component: cap -->
+<circle r="25.625" cx="158.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+
+<!-- RENDERING - component: ferrule -->
+<polygon points="143.95539935201583,174.375 173.54460064798417,174.375 188.3392012959683,200 173.54460064798417,225.625 143.95539935201583,225.625 129.1607987040317,200 " stroke="dimgray" stroke-width="1" fill="white"/> 
+
+<!-- RENDERING - component: body -->
+<circle r="25.625" cx="158.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" /><circle r="20" cx="158.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+
+<!-- RENDERING - component: head -->
+<circle r="18.75" cx="158.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" /><circle r="8.125" cx="158.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="8.125" cx="158.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+
+<!-- RENDERING - component: tip -->
+
 <!-- RENDERING - component: tip -->
 <!-- RENDERING - part: cylinder -->
-<rect x="260.625" y="191.875" width="12.5" height="16.25" rx="1" ry="1" stroke-width="2" stroke="black" fill="white"/>
+<rect x="258.75" y="191.875" width="12.5" height="16.25" rx="1" ry="1" stroke-width="2" stroke="black" fill="white"/>
 
 <!-- RENDERING - part: cone -->
-<path d="M273.125 191.875 L298.125 181.25 L298.125 218.75 L273.125 208.125 Z" stroke-width="2" stroke="black" fill="white" />
+<path d="M271.25 191.875 L296.25 181.25 L296.25 218.75 L271.25 208.125 Z" stroke-width="2" stroke="black" fill="white" />
 
 
 <!-- RENDERING - component: head -->
 <!-- RENDERING - part: cone -->
-<path d="M298.125 180 L323.125 174.375 L323.125 225.625 L298.125 220 Z" stroke-width="2" stroke="black" fill="white" />
+<path d="M296.25 180 L321.25 174.375 L321.25 225.625 L296.25 220 Z" stroke-width="2" stroke="black" fill="white" />
 
 
 <!-- RENDERING - component: body -->
 <!-- RENDERING - part: hexagonal -->
-<rect x="323.125" y="174.375" width="490" height="51.25" rx="1" ry="1" stroke-width="2" stroke="black" fill="white"/>
-<line x1="323.125" y1="200" x2="813.125" y2="200" stroke-width="3" stroke="black" />
-<line x1="323.125" y1="200" x2="813.125" y2="200" stroke-width="1" stroke="gray" />
+<rect x="321.25" y="174.375" width="490" height="51.25" rx="1" ry="1" stroke-width="2" stroke="black" fill="white"/>
+<line x1="321.25" y1="200" x2="811.25" y2="200" stroke-width="3" stroke="black" fill="none"/>
+<line x1="321.25" y1="200" x2="811.25" y2="200" stroke-width="1" stroke="gray" fill="none" />
 
 
 <!-- RENDERING - component: ferrule -->
 <!-- RENDERING - part: cylinder -->
-<rect x="813.125" y="174.375" width="70" height="51.25" rx="1" ry="1" stroke-width="2" stroke="black" fill="white"/>
-<circle r="4" cx="828.125" cy="187.1875" stroke-width="1" stroke="gray" fill="#efefef" /><line x1="820.0096153846154" y1="175.375" x2="820.0096153846154" y2="224.625" stroke-width="1" stroke="gray" />
-<line x1="825.3942307692307" y1="175.375" x2="825.3942307692307" y2="224.625" stroke-width="1" stroke="gray" />
-<line x1="830.7788461538462" y1="175.375" x2="830.7788461538462" y2="224.625" stroke-width="1" stroke="gray" />
-<line x1="836.1634615384615" y1="175.375" x2="836.1634615384615" y2="224.625" stroke-width="1" stroke="gray" />
-<line x1="841.5480769230769" y1="175.375" x2="841.5480769230769" y2="224.625" stroke-width="1" stroke="gray" />
-<line x1="852.3173076923077" y1="175.375" x2="852.3173076923077" y2="224.625" stroke-width="1" stroke="gray" />
-<line x1="857.7019230769231" y1="175.375" x2="857.7019230769231" y2="224.625" stroke-width="1" stroke="gray" />
-<line x1="863.0865384615385" y1="175.375" x2="863.0865384615385" y2="224.625" stroke-width="1" stroke="gray" />
-<line x1="868.4711538461538" y1="175.375" x2="868.4711538461538" y2="224.625" stroke-width="1" stroke="gray" />
-<line x1="873.8557692307693" y1="175.375" x2="873.8557692307693" y2="224.625" stroke-width="1" stroke="gray" />
-<line x1="879.2403846153846" y1="175.375" x2="879.2403846153846" y2="224.625" stroke-width="1" stroke="gray" />
+<rect x="811.25" y="174.375" width="70" height="51.25" rx="1" ry="1" stroke-width="2" stroke="black" fill="white"/>
+<circle r="4" cx="826.25" cy="187.1875" stroke-width="1" stroke="gray" fill="#efefef" /><line x1="818.1346153846154" y1="175.375" x2="818.1346153846154" y2="224.625" stroke-width="1" stroke="gray" />
+<line x1="823.5192307692307" y1="175.375" x2="823.5192307692307" y2="224.625" stroke-width="1" stroke="gray" />
+<line x1="828.9038461538462" y1="175.375" x2="828.9038461538462" y2="224.625" stroke-width="1" stroke="gray" />
+<line x1="834.2884615384615" y1="175.375" x2="834.2884615384615" y2="224.625" stroke-width="1" stroke="gray" />
+<line x1="839.6730769230769" y1="175.375" x2="839.6730769230769" y2="224.625" stroke-width="1" stroke="gray" />
+<line x1="850.4423076923077" y1="175.375" x2="850.4423076923077" y2="224.625" stroke-width="1" stroke="gray" />
+<line x1="855.8269230769231" y1="175.375" x2="855.8269230769231" y2="224.625" stroke-width="1" stroke="gray" />
+<line x1="861.2115384615385" y1="175.375" x2="861.2115384615385" y2="224.625" stroke-width="1" stroke="gray" />
+<line x1="866.5961538461538" y1="175.375" x2="866.5961538461538" y2="224.625" stroke-width="1" stroke="gray" />
+<line x1="871.9807692307693" y1="175.375" x2="871.9807692307693" y2="224.625" stroke-width="1" stroke="gray" />
+<line x1="877.3653846153846" y1="175.375" x2="877.3653846153846" y2="224.625" stroke-width="1" stroke="gray" />
 
 
 <!-- RENDERING - component: cap -->
 <!-- RENDERING - part: cylinder -->
-<rect x="883.125" y="176.875" width="21.25" height="46.25" rx="1" ry="1" stroke-width="2" stroke="black" fill="white"/>
+<rect x="881.25" y="176.875" width="25" height="46.25" rx="1" ry="1" stroke-width="2" stroke="black" fill="white"/>
 
 <!-- RENDERING - part: cylinder -->
-<rect x="904.375" y="175" width="10" height="50" rx="1" ry="1" stroke-width="2" stroke="black" fill="white"/>
+<rect x="906.25" y="175" width="10" height="50" rx="1" ry="1" stroke-width="2" stroke="black" fill="white"/>
 
 
 <!-- RENDERING - component: eraser -->
 <!-- RENDERING - part: cylinder -->
-<rect x="914.375" y="176.875" width="25" height="46.25" rx="1" ry="1" stroke-width="2" stroke="black" fill="white"/>
+<rect x="916.25" y="176.875" width="25" height="46.25" rx="1" ry="1" stroke-width="2" stroke="black" fill="white"/>
 
 </svg>

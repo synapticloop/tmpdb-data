@@ -5,12 +5,19 @@ export class Part {
 	end_height = 0;
 	offset = 0;
 	finish = "";
+	colours = [];
 
 	constructor(jsonObject) {
 		this.type = jsonObject.type;
 		this.dimensions = jsonObject.dimensions;
 		if(jsonObject.finish) {
 			this.finish = jsonObject.finish;
+		}
+
+		if(jsonObject.colours) {
+			this.colours = jsonObject.colours;
+		} else {
+			this.colours.push("white");
 		}
 
 		this.#parseDimensions(jsonObject.dimensions);
@@ -28,11 +35,10 @@ export class Part {
 		}
 	}
 
-	renderSvg(type, startX, midY) {
+	renderSvg(fillColour, componentType, startX, midY) {
 		let svgString = `<!-- RENDERING - part: ${this.type} -->\n`;
 		// get the fill colour
 
-		let fillColour = "white";
 		if(this.finish === "knurled") {
 			fillColour = "url(#diagonalHatch)";
 		}
@@ -41,10 +47,10 @@ export class Part {
 			case "cylinder":
 			case "hexagonal":
 				svgString += `<rect x="${startX}" ` +
-					`y="${midY - (this.end_height/2 * 5)}" ` +
-					`width="${this.width * 5}" ` +
-					`height="${this.start_height * 5}" ` +
-					`rx="1" ry="1" stroke-width="2" stroke="black" fill="${fillColour}"/>\n`
+						`y="${midY - (this.end_height/2 * 5)}" ` +
+						`width="${this.width * 5}" ` +
+						`height="${this.start_height * 5}" ` +
+						`rx="1" ry="1" stroke-width="2" stroke="black" fill="${fillColour}"/>\n`
 				break;
 			case "cone":
 				svgString += `<path d="M${startX} ` +
@@ -75,12 +81,12 @@ export class Part {
 						`y1="${midY}" ` +
 						`x2="${startX + this.width * 5 }" ` +
 						`y2="${midY}" ` +
-						`stroke-width="3" stroke="black" />\n`
+						`stroke-width="3" stroke="black" fill="none"/>\n`
 				svgString += `<line x1="${startX}" ` +
 						`y1="${midY}" ` +
 						`x2="${startX + this.width * 5 }" ` +
 						`y2="${midY}" ` +
-						`stroke-width="1" stroke="gray" />\n`
+						`stroke-width="1" stroke="gray" fill="none" />\n`
 		}
 
 		// now for the finish - although this only really works for cylinder types
@@ -109,7 +115,7 @@ export class Part {
 				break;
 		}
 
-		switch(type) {
+		switch(componentType) {
 			case "indicator":
 				// now draw the indicator
 				svgString += `<rect x="${startX + 10}" ` +
@@ -129,6 +135,69 @@ export class Part {
 		return(svgString);
 	}
 
+	renderBack(fillColour, componentType, startX, midY) {
+		let svgString = "";
+		switch(this.type) {
+			case "cylinder":
+				svgString += `<circle r="${(this.start_height/2) * 5}" cx="${startX}" cy="${midY}" stroke="dimgray" stroke-width="1" fill="${fillColour}" />`;
+				break;
+			case "cone":
+				svgString += `<circle r="${(this.end_height/2) * 5}" cx="${startX}" cy="${midY}" stroke="dimgray" stroke-width="1" fill="${fillColour}" />`;
+				svgString += `<circle r="${(this.start_height/2) * 5}" cx="${startX}" cy="${midY}" stroke="dimgray" stroke-width="1" fill="${fillColour}" />`;
+				break;
+			case "hexagonal":
+				// do some mathematics for the hexagon
+				let apotherm = this.start_height/2 * 5;
+				// going around the points from top left - clockwise
+				let radians = 30 * Math.PI/180
+				let A = apotherm * Math.tan(radians);
+				// Hypotenuse
+				let H = apotherm/Math.cos(radians);
+
+				svgString += `<polygon points="` +
+					`${startX - A},${midY - this.start_height/2 * 5} ` + // A
+					`${startX + A},${midY - this.start_height/2 * 5} ` + // B
+					`${startX + H},${midY} ` +  // C
+					`${startX + A},${midY + this.start_height/2 * 5} ` + // D
+					`${startX - A},${midY + this.start_height/2 * 5} ` + // E
+					`${startX - H},${midY} ` + // F
+					`" stroke="dimgray" stroke-width="1" fill="${fillColour}"/> `;
+				break;
+		}
+		return(svgString);
+	}
+
+	renderFront(fillColour, componentType, startX, midY) {
+		let svgString = "";
+		switch(this.type) {
+			case "cylinder":
+				svgString += `<circle r="${(this.start_height/2) * 5}" cx="${startX}" cy="${midY}" stroke="dimgray" stroke-width="1" fill="${fillColour}" />`;
+				break;
+			case "cone":
+				svgString += `<circle r="${(this.end_height/2) * 5}" cx="${startX}" cy="${midY}" stroke="dimgray" stroke-width="1" fill="${fillColour}" />`;
+				svgString += `<circle r="${(this.start_height/2) * 5}" cx="${startX}" cy="${midY}" stroke="dimgray" stroke-width="1" fill="${fillColour}" />`;
+				break;
+			case "hexagonal":
+				// do some mathematics for the hexagon
+				let apotherm = this.start_height/2 * 5;
+				// going around the points from top left - clockwise
+				let radians = 30 * Math.PI/180
+				let A = apotherm * Math.tan(radians);
+				// Hypotenuse
+				let H = apotherm/Math.cos(radians);
+
+				svgString += `<polygon points="` +
+						`${startX - A},${midY - this.start_height/2 * 5} ` + // A
+						`${startX + A},${midY - this.start_height/2 * 5} ` + // B
+						`${startX + H},${midY} ` +  // C
+						`${startX + A},${midY + this.start_height/2 * 5} ` + // D
+						`${startX - A},${midY + this.start_height/2 * 5} ` + // E
+						`${startX - H},${midY} ` + // F
+						`" stroke="dimgray" stroke-width="1" fill="${fillColour}"/> `;
+				break;
+		}
+		return(svgString);
+	}
 	getWidth() {
 		return(this.width * 5);
 	}

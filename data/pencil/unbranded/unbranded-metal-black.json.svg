@@ -1,4 +1,74 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="400"> <pattern id="diagonalHatch" patternUnits="userSpaceOnUse" width="6" height="6"><rect width="6" height="6" fill='white'/> <path stroke="black" stroke-linecap="round" stroke-width="1" d="M 3,3 L 6,6"/> <path stroke="black" stroke-linecap="round" stroke-width="1" d="M 3,3 L 0,6"/> <path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 3,3 L 6,0" /> <path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 3,3 L 0,0" /> </pattern><rect x="0" y="0" width="1200" height="400" fill="white" stroke="black" stroke-width="2" />
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="400"> <pattern id="diagonalHatch" patternUnits="userSpaceOnUse" width="6" height="6"><rect width="6" height="6" fill='white'/> <path stroke="black" stroke-linecap="round" stroke-width="1" d="M 3,3 L 6,6"/> <path stroke="black" stroke-linecap="round" stroke-width="1" d="M 3,3 L 0,6"/> <path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 3,3 L 6,0" /> <path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 3,3 L 0,0" /> </pattern><rect x="0" y="0" width="1200" height="400" fill="white" stroke="black" stroke-width="4" /><rect x="2" y="2" width="1196" height="396" fill="white" stroke="orange" stroke-width="1" />
+<!-- RENDERING - component: tip -->
+<circle r="6.875" cx="1058.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="18.75" cx="1058.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" /><circle r="11.25" cx="1058.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="18.75" cx="1058.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+
+<!-- RENDERING - component: head -->
+<circle r="21.25" cx="1058.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+
+<!-- RENDERING - component: grip -->
+<circle r="22.5" cx="1058.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="21.25" cx="1058.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="22.5" cx="1058.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="21.25" cx="1058.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="22.5" cx="1058.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="21.25" cx="1058.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="22.5" cx="1058.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="21.25" cx="1058.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="22.5" cx="1058.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="21.25" cx="1058.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="22.5" cx="1058.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+
+<!-- RENDERING - component: body -->
+<polygon points="1047.2029946162074,180 1070.2970053837926,180 1081.8440107675851,200 1070.2970053837926,220 1047.2029946162074,220 1035.6559892324149,200 " stroke="dimgray" stroke-width="1" fill="white"/> 
+
+<!-- RENDERING - component: clip -->
+<circle r="22.5" cx="1058.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+
+<!-- RENDERING - component: tail -->
+<circle r="18.75" cx="1058.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+
+<!-- RENDERING - component: cap -->
+<circle r="15.625" cx="1058.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="14.375" cx="1058.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" /><circle r="15.625" cx="1058.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="14.375" cx="1058.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="14.375" cx="141.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="14.375" cx="141.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" /><circle r="15.625" cx="141.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="15.625" cx="141.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+
+<!-- RENDERING - component: cap -->
+<circle r="18.75" cx="141.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+
+<!-- RENDERING - component: tail -->
+<circle r="22.5" cx="141.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+
+<!-- RENDERING - component: clip -->
+<polygon points="129.7029946162075,180 152.7970053837925,180 164.34401076758502,200 152.7970053837925,220 129.7029946162075,220 118.15598923241497,200 " stroke="dimgray" stroke-width="1" fill="white"/> 
+
+<!-- RENDERING - component: body -->
+<circle r="22.5" cx="141.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="21.25" cx="141.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="22.5" cx="141.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="21.25" cx="141.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="22.5" cx="141.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="21.25" cx="141.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="22.5" cx="141.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="21.25" cx="141.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="22.5" cx="141.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="21.25" cx="141.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="22.5" cx="141.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+
+<!-- RENDERING - component: grip -->
+<circle r="21.25" cx="141.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+
+<!-- RENDERING - component: head -->
+<circle r="18.75" cx="141.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="18.75" cx="141.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" /><circle r="11.25" cx="141.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="6.875" cx="141.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+
+<!-- RENDERING - component: tip -->
+
 <!-- RENDERING - component: tip -->
 <!-- RENDERING - part: cylinder -->
 <rect x="241.25" y="193.125" width="17.5" height="13.75" rx="1" ry="1" stroke-width="2" stroke="black" fill="white"/>
@@ -53,8 +123,8 @@
 <!-- RENDERING - component: body -->
 <!-- RENDERING - part: hexagonal -->
 <rect x="518.75" y="180" width="330" height="40" rx="1" ry="1" stroke-width="2" stroke="black" fill="white"/>
-<line x1="518.75" y1="200" x2="848.75" y2="200" stroke-width="3" stroke="black" />
-<line x1="518.75" y1="200" x2="848.75" y2="200" stroke-width="1" stroke="gray" />
+<line x1="518.75" y1="200" x2="848.75" y2="200" stroke-width="3" stroke="black" fill="none"/>
+<line x1="518.75" y1="200" x2="848.75" y2="200" stroke-width="1" stroke="gray" fill="none" />
 
 
 <!-- RENDERING - component: clip -->

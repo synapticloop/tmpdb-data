@@ -17,6 +17,8 @@ export class Component {
 
 		if(jsonObject.colours) {
 			this.colours = jsonObject.colours;
+		} else {
+			this.colours.push("white");
 		}
 
 		if(jsonObject.parts) {
@@ -28,12 +30,31 @@ export class Component {
 		}
 	}
 
-	renderSvg(startX) {
+	renderSvg(shouldColour, startX) {
+		const fillColour = shouldColour ? this.colours[0] : "white";
 		let xPosition = startX;
 		let svgString = `\n<!-- RENDERING - component: ${this.type} -->\n`;
 		for(let part of this.parts) {
-			svgString += `${part.renderSvg(this.type, xPosition, Pencil.HEIGHT/2)}\n`;
+			svgString += `${part.renderSvg(fillColour, this.type, xPosition, Pencil.HEIGHT/2)}\n`;
 			xPosition += part.getWidth();
+		}
+		return(svgString);
+	}
+
+	renderBack(shouldColour, startX) {
+		const fillColour = shouldColour ? this.colours[0] : "white";
+		let svgString = `\n<!-- RENDERING - component: ${this.type} -->\n`;
+		for(let part of this.parts) {
+			svgString += `${part.renderBack(fillColour, this.type, startX, Pencil.HEIGHT/2)}\n`;
+		}
+		return(svgString);
+	}
+
+	renderFront(shouldColour, startX) {
+		const fillColour = shouldColour ? this.colours[0] : "white";
+		let svgString = `\n<!-- RENDERING - component: ${this.type} -->\n`;
+		for(let part of this.parts) {
+			svgString = `${part.renderBack(fillColour, this.type, startX, Pencil.HEIGHT/2)}\n` + svgString;
 		}
 		return(svgString);
 	}

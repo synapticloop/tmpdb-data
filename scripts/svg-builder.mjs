@@ -27,13 +27,24 @@ for (const pencilDirectory of pencilDirectories) {
 		const pencil = new Pencil(pencilFileFull);
 		const outputFile = pencilFileFull + ".svg";
 
-		fs.writeFileSync(outputFile, pencil.renderSvg());
+		fs.writeFileSync(outputFile, pencil.renderSvg(false));
+		fs.writeFileSync(pencilFileFull + "-colour.svg", pencil.renderSvg(true));
 
 		let options = {};
 
 		sharp(outputFile, options)
 				.png()
 				.toFile(pencilFileFull + ".png")
+				.then(() => {
+					console.log('SVG successfully converted to PNG');
+				})
+				.catch(error => {
+					console.error('Error converting SVG to PNG:', error);
+				});
+
+		sharp(pencilFileFull + "-colour.svg", options)
+				.png()
+				.toFile(pencilFileFull + "-colour.svg.png")
 				.then(() => {
 					console.log('SVG successfully converted to PNG');
 				})
