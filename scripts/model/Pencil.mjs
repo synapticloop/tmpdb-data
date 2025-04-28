@@ -97,6 +97,8 @@ export class Pencil {
 				`x2="50" y2="${Pencil.HEIGHT/2 + this.maxHeight/2 * 5}" ` +
 				`stroke="black" stroke-width="1" />`;
 
+		svgString += `<text x="100" y="${Pencil.HEIGHT/2 - 28 - this.maxHeight/2 * 5}" font-size="1.8em" font-weight="bold" text-anchor="middle" dominant-baseline="central">Front</text>`
+
 		svgString += `<text x="30" y="${Pencil.HEIGHT/2}" transform="rotate(-90, 30, ${Pencil.HEIGHT/2})" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central">${(Math.round(this.maxHeight * 100) / 100).toFixed(2)} mm</text>`
 
 		// and the measurements of the width
@@ -130,6 +132,9 @@ export class Pencil {
 				`stroke="black" stroke-width="1" />`;
 
 		svgString += `<text x="${Pencil.WIDTH/2}" y="${Pencil.HEIGHT/2 + 50 + this.maxHeight/2 * 5}" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">${(Math.round(this.totalLength/5 * 100) / 100).toFixed(2)} mm</text>`
+		svgString += `<text x="${Pencil.WIDTH/2}" y="${Pencil.HEIGHT/2 - 28 - this.maxHeight/2 * 5}" font-size="1.8em" font-weight="bold" text-anchor="middle" dominant-baseline="central">Side</text>`
+
+		svgString += `<text x="${Pencil.WIDTH-100}" y="${Pencil.HEIGHT/2 - 28 - this.maxHeight/2 * 5}" font-size="1.8em" font-weight="bold" text-anchor="middle" dominant-baseline="central">Back</text>`
 
 		for (let component of this.components) {
 			svgString += component.renderBack(shouldColour, Pencil.WIDTH - 100);
