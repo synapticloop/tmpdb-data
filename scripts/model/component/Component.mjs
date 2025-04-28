@@ -6,6 +6,7 @@ export class Component {
 	material = "";
 	colours = [];
 	type = "";
+	width = 0;
 
 	constructor(jsonObject) {
 		this.type = jsonObject.type;
@@ -20,18 +21,24 @@ export class Component {
 
 		if(jsonObject.parts) {
 			for(let part of jsonObject.parts) {
-				this.parts.push(new Part(part));
+				const thisPart = new Part(part);
+				this.parts.push(thisPart);
+				this.width += thisPart.getWidth();
 			}
 		}
 	}
 
-	renderSvg() {
-		let xPosition = 100;
+	renderSvg(startX) {
+		let xPosition = startX;
 		let svgString = `\n<!-- RENDERING - component: ${this.type} -->\n`;
 		for(let part of this.parts) {
-			svgString += `${part.renderSvg(xPosition, Pencil.HEIGHT/2)}\n`;
+			svgString += `${part.renderSvg(this.type, xPosition, Pencil.HEIGHT/2)}\n`;
 			xPosition += part.getWidth();
 		}
 		return(svgString);
+	}
+
+	getWidth() {
+		return(this.width);
 	}
 }

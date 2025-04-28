@@ -13,31 +13,58 @@
 			"colours": [ "black" ]
 		},
 		{
-			"head": [
-				{ "cylinder":  "2x4" }
+			"type": "head",
+			"parts": [
+				{ "type": "cylinder", "dimensions": "1.5x8.5" }
 			],
-			"grip": [
-				{ "cylinder": "4x6", "type":  "knurled_ridged", "number":  4 },
-				{ "cylinder": "4x6", "type":  "knurled"}
+			"material": "metal",
+			"colours": [ "black"]
+		},
+		{
+			"type": "grip",
+			"parts": [
+				{ "type": "cylinder", "dimensions": "2.5x9.0", "finish":  "knurled" },
+				{ "type": "cylinder", "dimensions": "1.0x8.5" },
+				{ "type": "cylinder", "dimensions": "2.5x9.0", "finish":  "knurled" },
+				{ "type": "cylinder", "dimensions": "1.0x8.5" },
+				{ "type": "cylinder", "dimensions": "2.5x9.0", "finish":  "knurled" },
+				{ "type": "cylinder", "dimensions": "1.0x8.5" },
+				{ "type": "cylinder", "dimensions": "2.5x9.0", "finish":  "knurled" },
+				{ "type": "cylinder", "dimensions": "1.0x8.5" },
+				{ "type": "cylinder", "dimensions": "2.5x9.0", "finish":  "knurled" },
+				{ "type": "cylinder", "dimensions": "1.0x8.5" },
+				{ "type": "cylinder", "dimensions": "19.5x9.0", "finish":  "knurled" }
 			],
-			"body": [
-				{ "hexagonal": "4x16" }
-			],
-			"clip": [
-				{
-					"cylinder": "4x5",
-					"position": "clip_start",
-					"type": "line",
-					"length": "12x4",
-					"offset": "-2x4"
-				}
-			],
-			"tail": [
-				{ "cylinder": "2x4" }
-			],
-			"cap": [
-				{ "cylinder":  "3.5x4" }
+			"material": "metal",
+			"colours": [ "black" ]
+		},
+		{
+			"type": "body",
+			"parts": [
+				{ "type": "hexagonal", "dimensions": "66.0x8.0" }
 			]
+		},
+		{
+			"type": "clip",
+			"parts": [
+				{ "type": "cylinder", "dimensions": "7.5x9.0" }
+			]
+		},
+		{
+			"type": "tail",
+			"parts": [
+				{ "type": "cylinder", "dimensions": "2.25x7.5" }
+			]
+		},
+		{
+			"type": "cap",
+			"parts": [
+				{ "type": "cylinder", "dimensions": "2.25x6.25" },
+				{ "type": "cone", "dimensions": "2.75x6.25x5.75" },
+				{ "type": "cylinder", "dimensions": "7.25x5.75" }
+			],
+			"material": "plastic",
+			"colours": [ "black" ]
 		}
 	]
 }

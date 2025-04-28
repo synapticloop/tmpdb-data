@@ -1,0 +1,56 @@
+{
+	"nm_brand": "OHTO",
+	"nm_model": "WN03",
+	"components": [
+		{
+			"type": "tip",
+			"parts": [
+				{ "type": "cylinder", "dimensions": "2.5x3.25" },
+				{ "type": "cone", "dimensions": "5.0x3.25x7.5" }
+			],
+			"material": "metal",
+			"colours": [ "brass" ]
+		},
+		{
+			"type": "head",
+			"parts": [
+				{ "type": "cone", "dimensions": "5.0x8.0x10.25" }
+			],
+			"material": "wood",
+			"colours": [ "wood"]
+		},
+		{
+			"type": "body",
+			"parts": [
+				{ "type": "hexagonal", "dimensions": "98.0x10.25" }
+			],
+			"material": "wood",
+			"colours": [ "yellow", "blue", "green", "burgundy", "wood" ]
+		},
+		{
+			"type": "ferrule",
+			"parts": [
+				{ "type": "cylinder", "dimensions": "14.0x10.25", "finish": "ferrule" }
+			],
+			"material": "metal",
+			"colours": [ "silver" ]
+		},
+		{
+			"type": "cap",
+			"parts": [
+				{ "type": "cylinder", "dimensions": "4.25x9.25"},
+				{ "type": "cylinder", "dimensions": "2.0x10.0"}
+			],
+			"material": "metal",
+			"colours": [ "silver" ]
+		},
+		{
+			"type": "eraser",
+			"parts": [
+				{ "type": "cylinder", "dimensions": "5x9.25" }
+			],
+			"material": "rubber",
+			"colours": [ "pink" ]
+		}
+	]
+}

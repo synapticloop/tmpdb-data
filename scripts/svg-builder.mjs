@@ -41,6 +41,5 @@ for (const pencilDirectory of pencilDirectories) {
 					console.error('Error converting SVG to PNG:', error);
 				});
 
-		console.log(pencil.renderSvg());
 	}
 }
