@@ -7,6 +7,8 @@ export class Component {
 	colours = [];
 	type = "";
 	width = 0;
+	maxWidth = 0;
+	maxHeight = 0;
 
 	constructor(jsonObject) {
 		this.type = jsonObject.type;
@@ -23,9 +25,19 @@ export class Component {
 
 		if(jsonObject.parts) {
 			for(let part of jsonObject.parts) {
-				const thisPart = new Part(part);
+				const thisPart = new Part(part, this.colours);
 				this.parts.push(thisPart);
 				this.width += thisPart.getWidth();
+
+				let tempWidth = thisPart.getMaxWidth();
+				if(tempWidth >= this.maxWidth) {
+					this.maxWidth = tempWidth;
+				}
+
+				let tempHeight = thisPart.getMaxHeight();
+				if(tempHeight >= this.maxHeight) {
+					this.maxHeight = tempHeight;
+				}
 			}
 		}
 	}
@@ -38,6 +50,7 @@ export class Component {
 			svgString += `${part.renderSvg(fillColour, this.type, xPosition, Pencil.HEIGHT/2)}\n`;
 			xPosition += part.getWidth();
 		}
+
 		return(svgString);
 	}
 
@@ -56,10 +69,19 @@ export class Component {
 		for(let part of this.parts) {
 			svgString = `${part.renderBack(fillColour, this.type, startX, Pencil.HEIGHT/2)}\n` + svgString;
 		}
+
 		return(svgString);
 	}
 
 	getWidth() {
 		return(this.width);
+	}
+
+	getMaxHeight() {
+		return(this.maxHeight);
+	}
+
+	getMaxWidth() {
+		return(this.maxWidth);
 	}
 }

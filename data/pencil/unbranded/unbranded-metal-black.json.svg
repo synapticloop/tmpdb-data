@@ -1,156 +1,156 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="400"> <pattern id="diagonalHatch" patternUnits="userSpaceOnUse" width="8" height="8"><rect width="6" height="6" fill='none'/> <path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,8"/> <path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,8"/> <path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,0" /> <path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,0" /> </pattern><rect x="0" y="0" width="1200" height="400" fill="white" stroke="black" stroke-width="4" /><rect x="2" y="2" width="1196" height="396" fill="white" stroke="orange" stroke-width="1" /><text x="10" y="30" font-weight="bold" font-size="2em">unbranded // Metal Black (2mm)</text><text x="10" y="50" font-weight="bold" font-size="1.1em"></text>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="300"> <pattern id="diagonalHatch" patternUnits="userSpaceOnUse" width="8" height="8"><rect width="6" height="6" fill='none'/> <path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,8"/> <path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,8"/> <path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,0" /> <path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,0" /> </pattern><rect x="0" y="0" width="1200" height="300" fill="white" stroke="black" stroke-width="4" /><rect x="2" y="2" width="1196" height="296" fill="white" stroke="orange" stroke-width="1" /><text x="30" y="40" font-weight="bold" font-size="2em">unbranded // Metal Black (2mm)</text><text x="30" y="60" font-weight="bold" font-size="1.1em"></text><line x1="40" y1="127.5" x2="60" y2="127.5" stroke="black" stroke-width="1" /><line x1="40" y1="172.5" x2="60" y2="172.5" stroke="black" stroke-width="1" /><line x1="50" y1="127.5" x2="50" y2="172.5" stroke="black" stroke-width="1" /><text x="30" y="150" transform="rotate(-90, 30, 150)" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central">9.00 mm</text><line x1="76.90598923241497" y1="202.5" x2="123.09401076758503" y2="202.5" stroke="black" stroke-width="1" /><line x1="76.90598923241497" y1="192.5" x2="76.90598923241497" y2="212.5" stroke="black" stroke-width="1" /><line x1="123.09401076758503" y1="192.5" x2="123.09401076758503" y2="212.5" stroke="black" stroke-width="1" /><text x="100" y="222.5" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">9.24 mm</text><line x1="241.25" y1="202.5" x2="958.75" y2="202.5" stroke="black" stroke-width="1" /><line x1="241.25" y1="192.5" x2="241.25" y2="212.5" stroke="black" stroke-width="1" /><line x1="958.75" y1="192.5" x2="958.75" y2="212.5" stroke="black" stroke-width="1" /><text x="600" y="222.5" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">143.50 mm</text>
 <!-- RENDERING - component: tip -->
-<circle r="6.875" cx="1058.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
-<circle r="18.75" cx="1058.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" /><circle r="11.25" cx="1058.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
-<circle r="18.75" cx="1058.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="6.875" cx="1100" cy="150" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="18.75" cx="1100" cy="150" stroke="dimgray" stroke-width="1" fill="white" /><circle r="11.25" cx="1100" cy="150" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="18.75" cx="1100" cy="150" stroke="dimgray" stroke-width="1" fill="white" />
 
 <!-- RENDERING - component: head -->
-<circle r="21.25" cx="1058.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="21.25" cx="1100" cy="150" stroke="dimgray" stroke-width="1" fill="white" />
 
 <!-- RENDERING - component: grip -->
-<circle r="22.5" cx="1058.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
-<circle r="21.25" cx="1058.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
-<circle r="22.5" cx="1058.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
-<circle r="21.25" cx="1058.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
-<circle r="22.5" cx="1058.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
-<circle r="21.25" cx="1058.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
-<circle r="22.5" cx="1058.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
-<circle r="21.25" cx="1058.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
-<circle r="22.5" cx="1058.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
-<circle r="21.25" cx="1058.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
-<circle r="22.5" cx="1058.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="22.5" cx="1100" cy="150" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="21.25" cx="1100" cy="150" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="22.5" cx="1100" cy="150" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="21.25" cx="1100" cy="150" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="22.5" cx="1100" cy="150" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="21.25" cx="1100" cy="150" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="22.5" cx="1100" cy="150" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="21.25" cx="1100" cy="150" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="22.5" cx="1100" cy="150" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="21.25" cx="1100" cy="150" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="22.5" cx="1100" cy="150" stroke="dimgray" stroke-width="1" fill="white" />
 
 <!-- RENDERING - component: body -->
-<polygon points="1047.2029946162074,180 1070.2970053837926,180 1081.8440107675851,200 1070.2970053837926,220 1047.2029946162074,220 1035.6559892324149,200 " stroke="dimgray" stroke-width="1" fill="white"/> 
+<polygon points="1088.4529946162074,130 1111.5470053837926,130 1123.0940107675851,150 1111.5470053837926,170 1088.4529946162074,170 1076.9059892324149,150 " stroke="dimgray" stroke-width="1" fill="white"/> 
 
 <!-- RENDERING - component: clip -->
-<circle r="22.5" cx="1058.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="22.5" cx="1100" cy="150" stroke="dimgray" stroke-width="1" fill="white" />
 
 <!-- RENDERING - component: tail -->
-<circle r="18.75" cx="1058.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="18.75" cx="1100" cy="150" stroke="dimgray" stroke-width="1" fill="white" />
 
 <!-- RENDERING - component: cap -->
-<circle r="15.625" cx="1058.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
-<circle r="14.375" cx="1058.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" /><circle r="15.625" cx="1058.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
-<circle r="14.375" cx="1058.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
-<circle r="14.375" cx="141.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
-<circle r="14.375" cx="141.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" /><circle r="15.625" cx="141.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
-<circle r="15.625" cx="141.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="15.625" cx="1100" cy="150" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="14.375" cx="1100" cy="150" stroke="dimgray" stroke-width="1" fill="white" /><circle r="15.625" cx="1100" cy="150" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="14.375" cx="1100" cy="150" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="14.375" cx="100" cy="150" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="14.375" cx="100" cy="150" stroke="dimgray" stroke-width="1" fill="white" /><circle r="15.625" cx="100" cy="150" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="15.625" cx="100" cy="150" stroke="dimgray" stroke-width="1" fill="white" />
 
 <!-- RENDERING - component: cap -->
-<circle r="18.75" cx="141.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="18.75" cx="100" cy="150" stroke="dimgray" stroke-width="1" fill="white" />
 
 <!-- RENDERING - component: tail -->
-<circle r="22.5" cx="141.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="22.5" cx="100" cy="150" stroke="dimgray" stroke-width="1" fill="white" />
 
 <!-- RENDERING - component: clip -->
-<polygon points="129.7029946162075,180 152.7970053837925,180 164.34401076758502,200 152.7970053837925,220 129.7029946162075,220 118.15598923241497,200 " stroke="dimgray" stroke-width="1" fill="white"/> 
+<polygon points="88.45299461620749,130 111.54700538379251,130 123.09401076758503,150 111.54700538379251,170 88.45299461620749,170 76.90598923241497,150 " stroke="dimgray" stroke-width="1" fill="white"/> 
 
 <!-- RENDERING - component: body -->
-<circle r="22.5" cx="141.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
-<circle r="21.25" cx="141.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
-<circle r="22.5" cx="141.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
-<circle r="21.25" cx="141.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
-<circle r="22.5" cx="141.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
-<circle r="21.25" cx="141.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
-<circle r="22.5" cx="141.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
-<circle r="21.25" cx="141.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
-<circle r="22.5" cx="141.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
-<circle r="21.25" cx="141.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
-<circle r="22.5" cx="141.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="22.5" cx="100" cy="150" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="21.25" cx="100" cy="150" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="22.5" cx="100" cy="150" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="21.25" cx="100" cy="150" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="22.5" cx="100" cy="150" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="21.25" cx="100" cy="150" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="22.5" cx="100" cy="150" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="21.25" cx="100" cy="150" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="22.5" cx="100" cy="150" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="21.25" cx="100" cy="150" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="22.5" cx="100" cy="150" stroke="dimgray" stroke-width="1" fill="white" />
 
 <!-- RENDERING - component: grip -->
-<circle r="21.25" cx="141.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="21.25" cx="100" cy="150" stroke="dimgray" stroke-width="1" fill="white" />
 
 <!-- RENDERING - component: head -->
-<circle r="18.75" cx="141.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
-<circle r="18.75" cx="141.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" /><circle r="11.25" cx="141.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
-<circle r="6.875" cx="141.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="18.75" cx="100" cy="150" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="18.75" cx="100" cy="150" stroke="dimgray" stroke-width="1" fill="white" /><circle r="11.25" cx="100" cy="150" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="6.875" cx="100" cy="150" stroke="dimgray" stroke-width="1" fill="white" />
 
 <!-- RENDERING - component: tip -->
 
 <!-- RENDERING - component: tip -->
 <!-- RENDERING - part: cylinder -->
-<rect x="241.25" y="193.125" width="17.5" height="13.75" rx="1" ry="1" stroke-width="2" stroke="black" fill="white"/>
+<rect x="241.25" y="143.125" width="17.5" height="13.75" rx="1" ry="1" stroke-width="0.5" stroke="dimgray" fill="white"/>
 
 <!-- RENDERING - part: cone -->
-<path d="M258.75 188.75 L302.5 181.25 L302.5 218.75 L258.75 211.25 Z" stroke-width="2" stroke="black" fill="white" />
+<path d="M258.75 138.75 L302.5 131.25 L302.5 168.75 L258.75 161.25 Z" stroke-width="0.5" stroke="dimgray" fill="white" />
 
 <!-- RENDERING - part: cylinder -->
-<rect x="302.5" y="181.25" width="23.75" height="37.5" rx="1" ry="1" stroke-width="2" stroke="black" fill="white"/>
+<rect x="302.5" y="131.25" width="23.75" height="37.5" rx="1" ry="1" stroke-width="0.5" stroke="dimgray" fill="white"/>
 
 
 <!-- RENDERING - component: head -->
 <!-- RENDERING - part: cylinder -->
-<rect x="326.25" y="178.75" width="7.5" height="42.5" rx="1" ry="1" stroke-width="2" stroke="black" fill="white"/>
+<rect x="326.25" y="128.75" width="7.5" height="42.5" rx="1" ry="1" stroke-width="0.5" stroke="dimgray" fill="white"/>
 
 
 <!-- RENDERING - component: grip -->
 <!-- RENDERING - part: cylinder -->
-<rect x="333.75" y="177.5" width="12.5" height="45" rx="1" ry="1" stroke-width="2" stroke="black" fill="white"/>
-<rect x="333.75" y="177.5" width="12.5" height="45" rx="1" ry="1" stroke-width="2" stroke="black" fill="url(#diagonalHatch)"/>
+<rect x="333.75" y="127.5" width="12.5" height="45" rx="1" ry="1" stroke-width="0.5" stroke="dimgray" fill="white"/>
+<rect x="333.75" y="127.5" width="12.5" height="45" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="url(#diagonalHatch)"/>
 
 <!-- RENDERING - part: cylinder -->
-<rect x="346.25" y="178.75" width="5" height="42.5" rx="1" ry="1" stroke-width="2" stroke="black" fill="white"/>
+<rect x="346.25" y="128.75" width="5" height="42.5" rx="1" ry="1" stroke-width="0.5" stroke="dimgray" fill="white"/>
 
 <!-- RENDERING - part: cylinder -->
-<rect x="351.25" y="177.5" width="12.5" height="45" rx="1" ry="1" stroke-width="2" stroke="black" fill="white"/>
-<rect x="351.25" y="177.5" width="12.5" height="45" rx="1" ry="1" stroke-width="2" stroke="black" fill="url(#diagonalHatch)"/>
+<rect x="351.25" y="127.5" width="12.5" height="45" rx="1" ry="1" stroke-width="0.5" stroke="dimgray" fill="white"/>
+<rect x="351.25" y="127.5" width="12.5" height="45" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="url(#diagonalHatch)"/>
 
 <!-- RENDERING - part: cylinder -->
-<rect x="363.75" y="178.75" width="5" height="42.5" rx="1" ry="1" stroke-width="2" stroke="black" fill="white"/>
+<rect x="363.75" y="128.75" width="5" height="42.5" rx="1" ry="1" stroke-width="0.5" stroke="dimgray" fill="white"/>
 
 <!-- RENDERING - part: cylinder -->
-<rect x="368.75" y="177.5" width="12.5" height="45" rx="1" ry="1" stroke-width="2" stroke="black" fill="white"/>
-<rect x="368.75" y="177.5" width="12.5" height="45" rx="1" ry="1" stroke-width="2" stroke="black" fill="url(#diagonalHatch)"/>
+<rect x="368.75" y="127.5" width="12.5" height="45" rx="1" ry="1" stroke-width="0.5" stroke="dimgray" fill="white"/>
+<rect x="368.75" y="127.5" width="12.5" height="45" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="url(#diagonalHatch)"/>
 
 <!-- RENDERING - part: cylinder -->
-<rect x="381.25" y="178.75" width="5" height="42.5" rx="1" ry="1" stroke-width="2" stroke="black" fill="white"/>
+<rect x="381.25" y="128.75" width="5" height="42.5" rx="1" ry="1" stroke-width="0.5" stroke="dimgray" fill="white"/>
 
 <!-- RENDERING - part: cylinder -->
-<rect x="386.25" y="177.5" width="12.5" height="45" rx="1" ry="1" stroke-width="2" stroke="black" fill="white"/>
-<rect x="386.25" y="177.5" width="12.5" height="45" rx="1" ry="1" stroke-width="2" stroke="black" fill="url(#diagonalHatch)"/>
+<rect x="386.25" y="127.5" width="12.5" height="45" rx="1" ry="1" stroke-width="0.5" stroke="dimgray" fill="white"/>
+<rect x="386.25" y="127.5" width="12.5" height="45" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="url(#diagonalHatch)"/>
 
 <!-- RENDERING - part: cylinder -->
-<rect x="398.75" y="178.75" width="5" height="42.5" rx="1" ry="1" stroke-width="2" stroke="black" fill="white"/>
+<rect x="398.75" y="128.75" width="5" height="42.5" rx="1" ry="1" stroke-width="0.5" stroke="dimgray" fill="white"/>
 
 <!-- RENDERING - part: cylinder -->
-<rect x="403.75" y="177.5" width="12.5" height="45" rx="1" ry="1" stroke-width="2" stroke="black" fill="white"/>
-<rect x="403.75" y="177.5" width="12.5" height="45" rx="1" ry="1" stroke-width="2" stroke="black" fill="url(#diagonalHatch)"/>
+<rect x="403.75" y="127.5" width="12.5" height="45" rx="1" ry="1" stroke-width="0.5" stroke="dimgray" fill="white"/>
+<rect x="403.75" y="127.5" width="12.5" height="45" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="url(#diagonalHatch)"/>
 
 <!-- RENDERING - part: cylinder -->
-<rect x="416.25" y="178.75" width="5" height="42.5" rx="1" ry="1" stroke-width="2" stroke="black" fill="white"/>
+<rect x="416.25" y="128.75" width="5" height="42.5" rx="1" ry="1" stroke-width="0.5" stroke="dimgray" fill="white"/>
 
 <!-- RENDERING - part: cylinder -->
-<rect x="421.25" y="177.5" width="97.5" height="45" rx="1" ry="1" stroke-width="2" stroke="black" fill="white"/>
-<rect x="421.25" y="177.5" width="97.5" height="45" rx="1" ry="1" stroke-width="2" stroke="black" fill="url(#diagonalHatch)"/>
+<rect x="421.25" y="127.5" width="97.5" height="45" rx="1" ry="1" stroke-width="0.5" stroke="dimgray" fill="white"/>
+<rect x="421.25" y="127.5" width="97.5" height="45" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="url(#diagonalHatch)"/>
 
 
 <!-- RENDERING - component: body -->
 <!-- RENDERING - part: hexagonal -->
-<rect x="518.75" y="180" width="330" height="40" rx="1" ry="1" stroke-width="2" stroke="black" fill="white"/>
-<line x1="518.75" y1="200" x2="848.75" y2="200" stroke-width="3" stroke="black" fill="none"/>
-<line x1="518.75" y1="200" x2="848.75" y2="200" stroke-width="1" stroke="gray" fill="none" />
+<rect x="518.75" y="130" width="330" height="40" rx="1" ry="1" stroke-width="0.5" stroke="dimgray" fill="white"/>
+<line x1="518.75" y1="150" x2="848.75" y2="150" stroke-width="1.5" stroke="black" fill="none"/>
+<line x1="518.75" y1="150" x2="848.75" y2="150" stroke-width="0.5" stroke="gray" fill="none" />
 
 
 <!-- RENDERING - component: clip -->
 <!-- RENDERING - part: cylinder -->
-<rect x="848.75" y="177.5" width="37.5" height="45" rx="1" ry="1" stroke-width="2" stroke="black" fill="white"/>
+<rect x="848.75" y="127.5" width="37.5" height="45" rx="1" ry="1" stroke-width="0.5" stroke="dimgray" fill="white"/>
 
 
 <!-- RENDERING - component: tail -->
 <!-- RENDERING - part: cylinder -->
-<rect x="886.25" y="181.25" width="11.25" height="37.5" rx="1" ry="1" stroke-width="2" stroke="black" fill="white"/>
+<rect x="886.25" y="131.25" width="11.25" height="37.5" rx="1" ry="1" stroke-width="0.5" stroke="dimgray" fill="white"/>
 
 
 <!-- RENDERING - component: cap -->
 <!-- RENDERING - part: cylinder -->
-<rect x="897.5" y="184.375" width="11.25" height="31.25" rx="1" ry="1" stroke-width="2" stroke="black" fill="white"/>
+<rect x="897.5" y="134.375" width="11.25" height="31.25" rx="1" ry="1" stroke-width="0.5" stroke="dimgray" fill="white"/>
 
 <!-- RENDERING - part: cone -->
-<path d="M908.75 184.375 L922.5 185.625 L922.5 214.375 L908.75 215.625 Z" stroke-width="2" stroke="black" fill="white" />
+<path d="M908.75 134.375 L922.5 135.625 L922.5 164.375 L908.75 165.625 Z" stroke-width="0.5" stroke="dimgray" fill="white" />
 
 <!-- RENDERING - part: cylinder -->
-<rect x="922.5" y="185.625" width="36.25" height="28.75" rx="1" ry="1" stroke-width="2" stroke="black" fill="white"/>
+<rect x="922.5" y="135.625" width="36.25" height="28.75" rx="1" ry="1" stroke-width="0.5" stroke="dimgray" fill="white"/>
 
-<text x="50%" y="380" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb) // Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text></svg>
+<text x="50%" y="280" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb) // Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text></svg>

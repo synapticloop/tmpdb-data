@@ -7,15 +7,15 @@ export class Part {
 	finish = "";
 	colours = [];
 
-	constructor(jsonObject) {
+	constructor(jsonObject, colours) {
 		this.type = jsonObject.type;
 		this.dimensions = jsonObject.dimensions;
 		if(jsonObject.finish) {
 			this.finish = jsonObject.finish;
 		}
 
-		if(jsonObject.colours) {
-			this.colours = jsonObject.colours;
+		if(colours) {
+			this.colours = colours;
 		} else {
 			this.colours.push("white");
 		}
@@ -38,7 +38,11 @@ export class Part {
 	renderSvg(fillColour, componentType, startX, midY) {
 		let svgString = `<!-- RENDERING - part: ${this.type} -->\n`;
 
-		// get the fill colour
+		// get the stroke colour
+		let strokeColour = "black"
+		if(this.colours[0] === "black") {
+			strokeColour = "dimgray";
+		}
 
 
 		switch (this.type) {
@@ -48,7 +52,7 @@ export class Part {
 						`y="${midY - (this.end_height/2 * 5)}" ` +
 						`width="${this.width * 5}" ` +
 						`height="${this.start_height * 5}" ` +
-						`rx="1" ry="1" stroke-width="2" stroke="black" fill="${fillColour}"/>\n`
+						`rx="1" ry="1" stroke-width="0.5" stroke="${strokeColour}" fill="${fillColour}"/>\n`
 				break;
 			case "cone":
 				svgString += `<path d="M${startX} ` +
@@ -56,19 +60,19 @@ export class Part {
 						`L${startX + this.width * 5} ${midY - (this.end_height/2 * 5)} ` +
 						`L${startX + this.width * 5} ${midY + (this.end_height/2 * 5)} ` +
 						`L${startX} ${midY + (this.start_height/2 *5)} Z" ` +
-						`stroke-width="2" stroke="black" fill="${fillColour}" />\n`
+						`stroke-width="0.5" stroke="${strokeColour}" fill="${fillColour}" />\n`
 				break;
 			case "convex":
 				svgString += `<path d="M${startX} ${midY - (this.start_height/2 * 5)} ` +
 						`Q${startX + this.width*5} ${midY} ` +
 						`${startX} ${midY + (this.start_height/2 * 5)}" ` +
-						`stroke-width="2" stroke="black" fill="${fillColour}"/>\n`
+						`stroke-width="0.5" stroke="${strokeColour}" fill="${fillColour}"/>\n`
 				break;
 			case "concave":
 				svgString += `<path d="M${startX} ${midY - (this.start_height/2 * 5)} ` +
 						`Q${startX + this.width*5} ${midY} ` +
 						`${startX} ${midY + (this.start_height/2 * 5)}" ` +
-						`stroke-width="2" stroke="black" fill="${fillColour}"/>\n`
+						`stroke-width="0.5" stroke="${strokeColour}" fill="${fillColour}"/>\n`
 				break;
 		}
 
@@ -79,12 +83,12 @@ export class Part {
 						`y1="${midY}" ` +
 						`x2="${startX + this.width * 5 }" ` +
 						`y2="${midY}" ` +
-						`stroke-width="3" stroke="black" fill="none"/>\n`
+						`stroke-width="1.5" stroke="black" fill="none"/>\n`
 				svgString += `<line x1="${startX}" ` +
 						`y1="${midY}" ` +
 						`x2="${startX + this.width * 5 }" ` +
 						`y2="${midY}" ` +
-						`stroke-width="1" stroke="gray" fill="none" />\n`
+						`stroke-width="0.5" stroke="gray" fill="none" />\n`
 		}
 
 		// now for the finish - although this only really works for cylinder types
@@ -92,15 +96,10 @@ export class Part {
 		// objects
 		switch(this.finish) {
 			case "ferrule":
-				svgString += `<circle r="4" ` +
-						`cx="${startX + 15}" ` +
-						`cy="${midY - this.start_height/4 * 5}" ` +
-						`stroke-width="1" stroke="gray" fill="#efefef" ` +
-						`/>`
-				let offset = 1.5;
+				let offset = ((this.width/13) * 5)/2;
+
 				for(let i = 0; i < 13; i++) {
-					// svgString += `<line x1="${startX + 15}" ` +
-					if(i !== 0 && i !== 6 && i !== 13) {
+					if(i !== 0 && i !== 6 && i < 12) {
 						svgString += `<line x1="${startX + offset}" ` +
 								`y1="${midY + 1.0 - this.start_height/2 * 5}" ` +
 								`x2="${startX + offset}" ` +
@@ -109,13 +108,20 @@ export class Part {
 					}
 					offset += (this.width/13) * 5;
 				}
+
+				svgString += `<circle r="4" ` +
+						`cx="${startX + 15}" ` +
+						`cy="${midY - this.start_height/4 * 5}" ` +
+						`stroke-width="1" stroke="gray" fill="dimgray" ` +
+						`/>`
+
 				break;
 			case "knurled":
 				svgString += `<rect x="${startX}" ` +
 						`y="${midY - (this.end_height/2 * 5)}" ` +
 						`width="${this.width * 5}" ` +
 						`height="${this.start_height * 5}" ` +
-						`rx="1" ry="1" stroke-width="2" stroke="black" fill="url(#diagonalHatch)"/>\n`
+						`rx="1" ry="1" stroke-width="0.5" stroke="black" fill="url(#diagonalHatch)"/>\n`
 				break;
 		}
 
@@ -151,12 +157,12 @@ export class Part {
 				break;
 			case "hexagonal":
 				// do some mathematics for the hexagon
-				let apotherm = this.start_height/2 * 5;
+				let apothem = this.start_height/2 * 5;
 				// going around the points from top left - clockwise
 				let radians = 30 * Math.PI/180
-				let A = apotherm * Math.tan(radians);
+				let A = apothem * Math.tan(radians);
 				// Hypotenuse
-				let H = apotherm/Math.cos(radians);
+				let H = apothem/Math.cos(radians);
 
 				svgString += `<polygon points="` +
 					`${startX - A},${midY - this.start_height/2 * 5} ` + // A
@@ -183,12 +189,12 @@ export class Part {
 				break;
 			case "hexagonal":
 				// do some mathematics for the hexagon
-				let apotherm = this.start_height/2 * 5;
+				let apothem = this.start_height/2 * 5;
 				// going around the points from top left - clockwise
 				let radians = 30 * Math.PI/180
-				let A = apotherm * Math.tan(radians);
+				let A = apothem * Math.tan(radians);
 				// Hypotenuse
-				let H = apotherm/Math.cos(radians);
+				let H = apothem/Math.cos(radians);
 
 				svgString += `<polygon points="` +
 						`${startX - A},${midY - this.start_height/2 * 5} ` + // A
@@ -202,6 +208,25 @@ export class Part {
 		}
 		return(svgString);
 	}
+
+	getMaxHeight() {
+		if(this.start_height > this.end_height) {
+			return(this.start_height);
+		}
+		return(this.end_height);
+	}
+
+	getMaxWidth() {
+		switch (this.type) {
+			case "hexagonal":
+				let apothem = this.start_height/2;
+				console.log(this.start_height)
+				console.log(apothem/Math.cos(30 * Math.PI/180));
+				return(apothem/Math.cos(30 * Math.PI/180) * 2);
+		}
+		return(this.getMaxHeight());
+	}
+
 	getWidth() {
 		return(this.width * 5);
 	}
