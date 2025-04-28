@@ -132,7 +132,7 @@ export class Part {
 						`y="${midY - (this.end_height/4 * 5)}" ` +
 						`width="${this.width * 5 - 20}" ` +
 						`height="${this.start_height/2 * 5}" ` +
-						`rx="1" ry="1" stroke-width="2" stroke="black" fill="white"/>\n`;
+						`rx="1" ry="1" stroke-width="2" stroke="black" fill="${fillColour}"/>\n`;
 				svgString += `<text x="${startX + (this.width * 5)/2}" ` +
 						`y="${midY}" ` +
 						`text-anchor="middle" dominant-baseline="middle">` +
