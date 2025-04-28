@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="400"> <pattern id="diagonalHatch" patternUnits="userSpaceOnUse" width="6" height="6"><rect width="6" height="6" fill='white'/> <path stroke="black" stroke-linecap="round" stroke-width="1" d="M 3,3 L 6,6"/> <path stroke="black" stroke-linecap="round" stroke-width="1" d="M 3,3 L 0,6"/> <path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 3,3 L 6,0" /> <path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 3,3 L 0,0" /> </pattern><rect x="0" y="0" width="1200" height="400" fill="white" stroke="black" stroke-width="2" />
+<!-- RENDERING - component: tip -->
+<!-- RENDERING - part: cone -->
+<path d="M235.625 191.875 L309.375 180 L309.375 220 L235.625 208.125 Z" stroke-width="2" stroke="black" fill="white" />
+
+<!-- RENDERING - part: cylinder -->
+<rect x="309.375" y="179.375" width="21.25" height="41.25" rx="1" ry="1" stroke-width="2" stroke="black" fill="white"/>
+
+
+<!-- RENDERING - component: grip -->
+<!-- RENDERING - part: cylinder -->
+<rect x="330.625" y="179.375" width="128.75" height="41.25" rx="1" ry="1" stroke-width="2" stroke="black" fill="url(#diagonalHatch)"/>
+
+
+<!-- RENDERING - component: body -->
+<!-- RENDERING - part: hexagonal -->
+<rect x="459.375" y="179.375" width="330" height="41.25" rx="1" ry="1" stroke-width="2" stroke="black" fill="white"/>
+<line x1="459.375" y1="200" x2="789.375" y2="200" stroke-width="3" stroke="black" />
+<line x1="459.375" y1="200" x2="789.375" y2="200" stroke-width="1" stroke="gray" />
+
+
+<!-- RENDERING - component: clip -->
+<!-- RENDERING - part: cylinder -->
+<rect x="789.375" y="176.25" width="30" height="47.5" rx="1" ry="1" stroke-width="2" stroke="black" fill="white"/>
+
+
+<!-- RENDERING - component: tail -->
+<!-- RENDERING - part: cylinder -->
+<rect x="819.375" y="179.375" width="22.5" height="41.25" rx="1" ry="1" stroke-width="2" stroke="black" fill="white"/>
+
+
+<!-- RENDERING - component: ring -->
+<!-- RENDERING - part: cylinder -->
+<rect x="841.875" y="179.375" width="3.75" height="41.25" rx="1" ry="1" stroke-width="2" stroke="black" fill="white"/>
+
+
+<!-- RENDERING - component: indicator -->
+<!-- RENDERING - part: cylinder -->
+<rect x="845.625" y="179.375" width="47.5" height="41.25" rx="1" ry="1" stroke-width="2" stroke="black" fill="url(#diagonalHatch)"/>
+<rect x="855.625" y="189.6875" width="27.5" height="20.625" rx="1" ry="1" stroke-width="2" stroke="black" fill="white"/>
+<text x="869.375" y="200" text-anchor="middle" dominant-baseline="middle"><tspan stroke="black" fill="black" textLength="{this.width * 5 - 24}" > HB</tspan></text>
+
+<!-- RENDERING - component: foot -->
+<!-- RENDERING - part: cylinder -->
+<rect x="893.125" y="179.375" width="12.5" height="41.25" rx="1" ry="1" stroke-width="2" stroke="black" fill="white"/>
+
+
+<!-- RENDERING - component: cap -->
+<!-- RENDERING - part: cylinder -->
+<rect x="905.625" y="186.25" width="52.5" height="27.5" rx="1" ry="1" stroke-width="2" stroke="black" fill="white"/>
+
+<!-- RENDERING - part: convex -->
+<path d="M958.125 186.25 Q964.375 200 958.125 213.75" stroke-width="2" stroke="black" fill="white"/>
+
+</svg>

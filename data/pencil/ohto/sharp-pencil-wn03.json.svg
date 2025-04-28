@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="400"> <pattern id="diagonalHatch" patternUnits="userSpaceOnUse" width="6" height="6"><rect width="6" height="6" fill='white'/> <path stroke="black" stroke-linecap="round" stroke-width="1" d="M 3,3 L 6,6"/> <path stroke="black" stroke-linecap="round" stroke-width="1" d="M 3,3 L 0,6"/> <path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 3,3 L 6,0" /> <path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 3,3 L 0,0" /> </pattern><rect x="0" y="0" width="1200" height="400" fill="white" stroke="black" stroke-width="2" />
+<!-- RENDERING - component: tip -->
+<!-- RENDERING - part: cylinder -->
+<rect x="260.625" y="191.875" width="12.5" height="16.25" rx="1" ry="1" stroke-width="2" stroke="black" fill="white"/>
+
+<!-- RENDERING - part: cone -->
+<path d="M273.125 191.875 L298.125 181.25 L298.125 218.75 L273.125 208.125 Z" stroke-width="2" stroke="black" fill="white" />
+
+
+<!-- RENDERING - component: head -->
+<!-- RENDERING - part: cone -->
+<path d="M298.125 180 L323.125 174.375 L323.125 225.625 L298.125 220 Z" stroke-width="2" stroke="black" fill="white" />
+
+
+<!-- RENDERING - component: body -->
+<!-- RENDERING - part: hexagonal -->
+<rect x="323.125" y="174.375" width="490" height="51.25" rx="1" ry="1" stroke-width="2" stroke="black" fill="white"/>
+<line x1="323.125" y1="200" x2="813.125" y2="200" stroke-width="3" stroke="black" />
+<line x1="323.125" y1="200" x2="813.125" y2="200" stroke-width="1" stroke="gray" />
+
+
+<!-- RENDERING - component: ferrule -->
+<!-- RENDERING - part: cylinder -->
+<rect x="813.125" y="174.375" width="70" height="51.25" rx="1" ry="1" stroke-width="2" stroke="black" fill="white"/>
+<circle r="4" cx="828.125" cy="187.1875" stroke-width="1" stroke="gray" fill="#efefef" /><line x1="820.0096153846154" y1="175.375" x2="820.0096153846154" y2="224.625" stroke-width="1" stroke="gray" />
+<line x1="825.3942307692307" y1="175.375" x2="825.3942307692307" y2="224.625" stroke-width="1" stroke="gray" />
+<line x1="830.7788461538462" y1="175.375" x2="830.7788461538462" y2="224.625" stroke-width="1" stroke="gray" />
+<line x1="836.1634615384615" y1="175.375" x2="836.1634615384615" y2="224.625" stroke-width="1" stroke="gray" />
+<line x1="841.5480769230769" y1="175.375" x2="841.5480769230769" y2="224.625" stroke-width="1" stroke="gray" />
+<line x1="852.3173076923077" y1="175.375" x2="852.3173076923077" y2="224.625" stroke-width="1" stroke="gray" />
+<line x1="857.7019230769231" y1="175.375" x2="857.7019230769231" y2="224.625" stroke-width="1" stroke="gray" />
+<line x1="863.0865384615385" y1="175.375" x2="863.0865384615385" y2="224.625" stroke-width="1" stroke="gray" />
+<line x1="868.4711538461538" y1="175.375" x2="868.4711538461538" y2="224.625" stroke-width="1" stroke="gray" />
+<line x1="873.8557692307693" y1="175.375" x2="873.8557692307693" y2="224.625" stroke-width="1" stroke="gray" />
+<line x1="879.2403846153846" y1="175.375" x2="879.2403846153846" y2="224.625" stroke-width="1" stroke="gray" />
+
+
+<!-- RENDERING - component: cap -->
+<!-- RENDERING - part: cylinder -->
+<rect x="883.125" y="176.875" width="21.25" height="46.25" rx="1" ry="1" stroke-width="2" stroke="black" fill="white"/>
+
+<!-- RENDERING - part: cylinder -->
+<rect x="904.375" y="175" width="10" height="50" rx="1" ry="1" stroke-width="2" stroke="black" fill="white"/>
+
+
+<!-- RENDERING - component: eraser -->
+<!-- RENDERING - part: cylinder -->
+<rect x="914.375" y="176.875" width="25" height="46.25" rx="1" ry="1" stroke-width="2" stroke="black" fill="white"/>
+
+</svg>
