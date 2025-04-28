@@ -1,67 +1,67 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="400"> <pattern id="diagonalHatch" patternUnits="userSpaceOnUse" width="8" height="8"><rect width="6" height="6" fill='none'/> <path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,8"/> <path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,8"/> <path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,0" /> <path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,0" /> </pattern><rect x="0" y="0" width="1200" height="400" fill="white" stroke="black" stroke-width="4" /><rect x="2" y="2" width="1196" height="396" fill="white" stroke="orange" stroke-width="1" /><text x="10" y="30" font-weight="bold" font-size="2em">OHTO // WN03 (2.0mm)</text><text x="10" y="50" font-weight="bold" font-size="1.1em">OHTO JAPAN WN03 Mechanical Pencil 2.0</text>
 <!-- RENDERING - component: tip -->
-<circle r="8.125" cx="1041.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
-<circle r="18.75" cx="1041.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" /><circle r="8.125" cx="1041.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="8.125" cx="1041.25" cy="200" stroke="dimgray" stroke-width="1" fill="gold" />
+<circle r="18.75" cx="1041.25" cy="200" stroke="dimgray" stroke-width="1" fill="gold" /><circle r="8.125" cx="1041.25" cy="200" stroke="dimgray" stroke-width="1" fill="gold" />
 
 <!-- RENDERING - component: head -->
-<circle r="25.625" cx="1041.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" /><circle r="20" cx="1041.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="25.625" cx="1041.25" cy="200" stroke="dimgray" stroke-width="1" fill="sienna" /><circle r="20" cx="1041.25" cy="200" stroke="dimgray" stroke-width="1" fill="sienna" />
 
 <!-- RENDERING - component: body -->
-<polygon points="1026.4553993520158,174.375 1056.0446006479842,174.375 1070.8392012959682,200 1056.0446006479842,225.625 1026.4553993520158,225.625 1011.6607987040317,200 " stroke="dimgray" stroke-width="1" fill="white"/> 
+<polygon points="1026.4553993520158,174.375 1056.0446006479842,174.375 1070.8392012959682,200 1056.0446006479842,225.625 1026.4553993520158,225.625 1011.6607987040317,200 " stroke="dimgray" stroke-width="1" fill="yellow"/> 
 
 <!-- RENDERING - component: ferrule -->
-<circle r="25.625" cx="1041.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="25.625" cx="1041.25" cy="200" stroke="dimgray" stroke-width="1" fill="silver" />
 
 <!-- RENDERING - component: cap -->
-<circle r="23.125" cx="1041.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
-<circle r="25" cx="1041.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="23.125" cx="1041.25" cy="200" stroke="dimgray" stroke-width="1" fill="silver" />
+<circle r="25" cx="1041.25" cy="200" stroke="dimgray" stroke-width="1" fill="silver" />
 
 <!-- RENDERING - component: eraser -->
-<circle r="23.125" cx="1041.25" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
-<circle r="23.125" cx="158.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="23.125" cx="1041.25" cy="200" stroke="dimgray" stroke-width="1" fill="pink" />
+<circle r="23.125" cx="158.75" cy="200" stroke="dimgray" stroke-width="1" fill="pink" />
 
 <!-- RENDERING - component: eraser -->
-<circle r="25" cx="158.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
-<circle r="23.125" cx="158.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="25" cx="158.75" cy="200" stroke="dimgray" stroke-width="1" fill="silver" />
+<circle r="23.125" cx="158.75" cy="200" stroke="dimgray" stroke-width="1" fill="silver" />
 
 <!-- RENDERING - component: cap -->
-<circle r="25.625" cx="158.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="25.625" cx="158.75" cy="200" stroke="dimgray" stroke-width="1" fill="silver" />
 
 <!-- RENDERING - component: ferrule -->
-<polygon points="143.95539935201583,174.375 173.54460064798417,174.375 188.3392012959683,200 173.54460064798417,225.625 143.95539935201583,225.625 129.1607987040317,200 " stroke="dimgray" stroke-width="1" fill="white"/> 
+<polygon points="143.95539935201583,174.375 173.54460064798417,174.375 188.3392012959683,200 173.54460064798417,225.625 143.95539935201583,225.625 129.1607987040317,200 " stroke="dimgray" stroke-width="1" fill="yellow"/> 
 
 <!-- RENDERING - component: body -->
-<circle r="25.625" cx="158.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" /><circle r="20" cx="158.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="25.625" cx="158.75" cy="200" stroke="dimgray" stroke-width="1" fill="sienna" /><circle r="20" cx="158.75" cy="200" stroke="dimgray" stroke-width="1" fill="sienna" />
 
 <!-- RENDERING - component: head -->
-<circle r="18.75" cx="158.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" /><circle r="8.125" cx="158.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
-<circle r="8.125" cx="158.75" cy="200" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="18.75" cx="158.75" cy="200" stroke="dimgray" stroke-width="1" fill="gold" /><circle r="8.125" cx="158.75" cy="200" stroke="dimgray" stroke-width="1" fill="gold" />
+<circle r="8.125" cx="158.75" cy="200" stroke="dimgray" stroke-width="1" fill="gold" />
 
 <!-- RENDERING - component: tip -->
 
 <!-- RENDERING - component: tip -->
 <!-- RENDERING - part: cylinder -->
-<rect x="258.75" y="191.875" width="12.5" height="16.25" rx="1" ry="1" stroke-width="2" stroke="black" fill="white"/>
+<rect x="258.75" y="191.875" width="12.5" height="16.25" rx="1" ry="1" stroke-width="2" stroke="black" fill="gold"/>
 
 <!-- RENDERING - part: cone -->
-<path d="M271.25 191.875 L296.25 181.25 L296.25 218.75 L271.25 208.125 Z" stroke-width="2" stroke="black" fill="white" />
+<path d="M271.25 191.875 L296.25 181.25 L296.25 218.75 L271.25 208.125 Z" stroke-width="2" stroke="black" fill="gold" />
 
 
 <!-- RENDERING - component: head -->
 <!-- RENDERING - part: cone -->
-<path d="M296.25 180 L321.25 174.375 L321.25 225.625 L296.25 220 Z" stroke-width="2" stroke="black" fill="white" />
+<path d="M296.25 180 L321.25 174.375 L321.25 225.625 L296.25 220 Z" stroke-width="2" stroke="black" fill="sienna" />
 
 
 <!-- RENDERING - component: body -->
 <!-- RENDERING - part: hexagonal -->
-<rect x="321.25" y="174.375" width="490" height="51.25" rx="1" ry="1" stroke-width="2" stroke="black" fill="white"/>
+<rect x="321.25" y="174.375" width="490" height="51.25" rx="1" ry="1" stroke-width="2" stroke="black" fill="yellow"/>
 <line x1="321.25" y1="200" x2="811.25" y2="200" stroke-width="3" stroke="black" fill="none"/>
 <line x1="321.25" y1="200" x2="811.25" y2="200" stroke-width="1" stroke="gray" fill="none" />
 
 
 <!-- RENDERING - component: ferrule -->
 <!-- RENDERING - part: cylinder -->
-<rect x="811.25" y="174.375" width="70" height="51.25" rx="1" ry="1" stroke-width="2" stroke="black" fill="white"/>
+<rect x="811.25" y="174.375" width="70" height="51.25" rx="1" ry="1" stroke-width="2" stroke="black" fill="silver"/>
 <circle r="4" cx="826.25" cy="187.1875" stroke-width="1" stroke="gray" fill="#efefef" /><line x1="818.1346153846154" y1="175.375" x2="818.1346153846154" y2="224.625" stroke-width="1" stroke="gray" />
 <line x1="823.5192307692307" y1="175.375" x2="823.5192307692307" y2="224.625" stroke-width="1" stroke="gray" />
 <line x1="828.9038461538462" y1="175.375" x2="828.9038461538462" y2="224.625" stroke-width="1" stroke="gray" />
@@ -77,14 +77,14 @@
 
 <!-- RENDERING - component: cap -->
 <!-- RENDERING - part: cylinder -->
-<rect x="881.25" y="176.875" width="25" height="46.25" rx="1" ry="1" stroke-width="2" stroke="black" fill="white"/>
+<rect x="881.25" y="176.875" width="25" height="46.25" rx="1" ry="1" stroke-width="2" stroke="black" fill="silver"/>
 
 <!-- RENDERING - part: cylinder -->
-<rect x="906.25" y="175" width="10" height="50" rx="1" ry="1" stroke-width="2" stroke="black" fill="white"/>
+<rect x="906.25" y="175" width="10" height="50" rx="1" ry="1" stroke-width="2" stroke="black" fill="silver"/>
 
 
 <!-- RENDERING - component: eraser -->
 <!-- RENDERING - part: cylinder -->
-<rect x="916.25" y="176.875" width="25" height="46.25" rx="1" ry="1" stroke-width="2" stroke="black" fill="white"/>
+<rect x="916.25" y="176.875" width="25" height="46.25" rx="1" ry="1" stroke-width="2" stroke="black" fill="pink"/>
 
 <text x="50%" y="380" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb) // Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text></svg>

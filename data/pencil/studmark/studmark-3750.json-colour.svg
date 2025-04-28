@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="400"> <pattern id="diagonalHatch" patternUnits="userSpaceOnUse" width="8" height="8"><rect width="6" height="6" fill='none'/> <path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,8"/> <path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,8"/> <path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,0" /> <path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,0" /> </pattern><rect x="0" y="0" width="1200" height="400" fill="white" stroke="black" stroke-width="4" /><rect x="2" y="2" width="1196" height="396" fill="white" stroke="orange" stroke-width="1" /><text x="10" y="30" font-weight="bold" font-size="2em">Studmark // 3750 (2.0mm)</text><text x="10" y="50" font-weight="bold" font-size="1.1em">STUDMARK(R) 3750 2.0mm</text>
+<!-- RENDERING - component: tip -->
+<circle r="20" cx="1064.375" cy="200" stroke="dimgray" stroke-width="1" fill="silver" /><circle r="8.125" cx="1064.375" cy="200" stroke="dimgray" stroke-width="1" fill="silver" />
+<circle r="20.625" cx="1064.375" cy="200" stroke="dimgray" stroke-width="1" fill="silver" />
+
+<!-- RENDERING - component: grip -->
+<circle r="20.625" cx="1064.375" cy="200" stroke="dimgray" stroke-width="1" fill="silver" />
+
+<!-- RENDERING - component: body -->
+<polygon points="1052.467150697964,179.375 1076.282849302036,179.375 1088.1906986040722,200 1076.282849302036,220.625 1052.467150697964,220.625 1040.5593013959278,200 " stroke="dimgray" stroke-width="1" fill="royalblue"/> 
+
+<!-- RENDERING - component: clip -->
+<circle r="23.75" cx="1064.375" cy="200" stroke="dimgray" stroke-width="1" fill="silver" />
+
+<!-- RENDERING - component: tail -->
+<circle r="20.625" cx="1064.375" cy="200" stroke="dimgray" stroke-width="1" fill="royalblue" />
+
+<!-- RENDERING - component: ring -->
+<circle r="20.625" cx="1064.375" cy="200" stroke="dimgray" stroke-width="1" fill="red" />
+
+<!-- RENDERING - component: indicator -->
+<circle r="20.625" cx="1064.375" cy="200" stroke="dimgray" stroke-width="1" fill="silver" />
+
+<!-- RENDERING - component: foot -->
+<circle r="20.625" cx="1064.375" cy="200" stroke="dimgray" stroke-width="1" fill="silver" />
+
+<!-- RENDERING - component: cap -->
+<circle r="13.75" cx="1064.375" cy="200" stroke="dimgray" stroke-width="1" fill="silver" />
+
+
+<circle r="13.75" cx="135.625" cy="200" stroke="dimgray" stroke-width="1" fill="silver" />
+
+<!-- RENDERING - component: cap -->
+<circle r="20.625" cx="135.625" cy="200" stroke="dimgray" stroke-width="1" fill="silver" />
+
+<!-- RENDERING - component: foot -->
+<circle r="20.625" cx="135.625" cy="200" stroke="dimgray" stroke-width="1" fill="silver" />
+
+<!-- RENDERING - component: indicator -->
+<circle r="20.625" cx="135.625" cy="200" stroke="dimgray" stroke-width="1" fill="red" />
+
+<!-- RENDERING - component: ring -->
+<circle r="20.625" cx="135.625" cy="200" stroke="dimgray" stroke-width="1" fill="royalblue" />
+
+<!-- RENDERING - component: tail -->
+<circle r="23.75" cx="135.625" cy="200" stroke="dimgray" stroke-width="1" fill="silver" />
+
+<!-- RENDERING - component: clip -->
+<polygon points="123.71715069796397,179.375 147.53284930203603,179.375 159.44069860407205,200 147.53284930203603,220.625 123.71715069796397,220.625 111.80930139592795,200 " stroke="dimgray" stroke-width="1" fill="royalblue"/> 
+
+<!-- RENDERING - component: body -->
+<circle r="20.625" cx="135.625" cy="200" stroke="dimgray" stroke-width="1" fill="silver" />
+
+<!-- RENDERING - component: grip -->
+<circle r="20.625" cx="135.625" cy="200" stroke="dimgray" stroke-width="1" fill="silver" />
+<circle r="20" cx="135.625" cy="200" stroke="dimgray" stroke-width="1" fill="silver" /><circle r="8.125" cx="135.625" cy="200" stroke="dimgray" stroke-width="1" fill="silver" />
+
+<!-- RENDERING - component: tip -->
+
+<!-- RENDERING - component: tip -->
+<!-- RENDERING - part: cone -->
+<path d="M235.625 191.875 L309.375 180 L309.375 220 L235.625 208.125 Z" stroke-width="2" stroke="black" fill="silver" />
+
+<!-- RENDERING - part: cylinder -->
+<rect x="309.375" y="179.375" width="21.25" height="41.25" rx="1" ry="1" stroke-width="2" stroke="black" fill="silver"/>
+
+
+<!-- RENDERING - component: grip -->
+<!-- RENDERING - part: cylinder -->
+<rect x="330.625" y="179.375" width="128.75" height="41.25" rx="1" ry="1" stroke-width="2" stroke="black" fill="silver"/>
+<rect x="330.625" y="179.375" width="128.75" height="41.25" rx="1" ry="1" stroke-width="2" stroke="black" fill="url(#diagonalHatch)"/>
+
+
+<!-- RENDERING - component: body -->
+<!-- RENDERING - part: hexagonal -->
+<rect x="459.375" y="179.375" width="330" height="41.25" rx="1" ry="1" stroke-width="2" stroke="black" fill="royalblue"/>
+<line x1="459.375" y1="200" x2="789.375" y2="200" stroke-width="3" stroke="black" fill="none"/>
+<line x1="459.375" y1="200" x2="789.375" y2="200" stroke-width="1" stroke="gray" fill="none" />
+
+
+<!-- RENDERING - component: clip -->
+<!-- RENDERING - part: cylinder -->
+<rect x="789.375" y="176.25" width="30" height="47.5" rx="1" ry="1" stroke-width="2" stroke="black" fill="silver"/>
+
+
+<!-- RENDERING - component: tail -->
+<!-- RENDERING - part: cylinder -->
+<rect x="819.375" y="179.375" width="22.5" height="41.25" rx="1" ry="1" stroke-width="2" stroke="black" fill="royalblue"/>
+
+
+<!-- RENDERING - component: ring -->
+<!-- RENDERING - part: cylinder -->
+<rect x="841.875" y="179.375" width="3.75" height="41.25" rx="1" ry="1" stroke-width="2" stroke="black" fill="red"/>
+
+
+<!-- RENDERING - component: indicator -->
+<!-- RENDERING - part: cylinder -->
+<rect x="845.625" y="179.375" width="47.5" height="41.25" rx="1" ry="1" stroke-width="2" stroke="black" fill="silver"/>
+<rect x="845.625" y="179.375" width="47.5" height="41.25" rx="1" ry="1" stroke-width="2" stroke="black" fill="url(#diagonalHatch)"/>
+<rect x="855.625" y="189.6875" width="27.5" height="20.625" rx="1" ry="1" stroke-width="2" stroke="black" fill="white"/>
+<text x="869.375" y="200" text-anchor="middle" dominant-baseline="middle"><tspan stroke="black" fill="black" textLength="{this.width * 5 - 24}" > HB</tspan></text>
+
+<!-- RENDERING - component: foot -->
+<!-- RENDERING - part: cylinder -->
+<rect x="893.125" y="179.375" width="12.5" height="41.25" rx="1" ry="1" stroke-width="2" stroke="black" fill="silver"/>
+
+
+<!-- RENDERING - component: cap -->
+<!-- RENDERING - part: cylinder -->
+<rect x="905.625" y="186.25" width="52.5" height="27.5" rx="1" ry="1" stroke-width="2" stroke="black" fill="silver"/>
+
+<!-- RENDERING - part: convex -->
+<path d="M958.125 186.25 Q964.375 200 958.125 213.75" stroke-width="2" stroke="black" fill="silver"/>
+
+<text x="50%" y="380" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb) // Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text></svg>

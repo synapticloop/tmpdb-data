@@ -37,11 +37,9 @@ export class Part {
 
 	renderSvg(fillColour, componentType, startX, midY) {
 		let svgString = `<!-- RENDERING - part: ${this.type} -->\n`;
+
 		// get the fill colour
 
-		if(this.finish === "knurled") {
-			fillColour = "url(#diagonalHatch)";
-		}
 
 		switch (this.type) {
 			case "cylinder":
@@ -111,7 +109,13 @@ export class Part {
 					}
 					offset += (this.width/13) * 5;
 				}
-
+				break;
+			case "knurled":
+				svgString += `<rect x="${startX}" ` +
+						`y="${midY - (this.end_height/2 * 5)}" ` +
+						`width="${this.width * 5}" ` +
+						`height="${this.start_height * 5}" ` +
+						`rx="1" ry="1" stroke-width="2" stroke="black" fill="url(#diagonalHatch)"/>\n`
 				break;
 		}
 
