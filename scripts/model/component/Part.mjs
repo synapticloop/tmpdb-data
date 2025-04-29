@@ -1,3 +1,5 @@
+import {drawShapeDetails, drawOutlineCircle, drawOutlineHexagon, drawOutlineOctagon} from "../../utils/svg-helper.mjs";
+
 export class Part {
 	type = "";
 	width = 0;
@@ -48,6 +50,7 @@ export class Part {
 		switch (this.type) {
 			case "cylinder":
 			case "hexagonal":
+			case "octagonal":
 				svgString += `<rect x="${startX}" ` +
 						`y="${midY - (this.end_height/2 * 5)}" ` +
 						`width="${this.width * 5}" ` +
@@ -79,16 +82,12 @@ export class Part {
 		// draw the additional details
 		switch(this.type) {
 			case "hexagonal":
-				svgString += `<line x1="${startX}" ` +
-						`y1="${midY}" ` +
-						`x2="${startX + this.width * 5 }" ` +
-						`y2="${midY}" ` +
-						`stroke-width="1.5" stroke="black" fill="none"/>\n`
-				svgString += `<line x1="${startX}" ` +
-						`y1="${midY}" ` +
-						`x2="${startX + this.width * 5 }" ` +
-						`y2="${midY}" ` +
-						`stroke-width="0.5" stroke="gray" fill="none" />\n`
+				svgString += drawShapeDetails(startX, midY, this.width *5);
+				break;
+			case "octagonal":
+				svgString += drawShapeDetails(startX, midY - ((this.start_height/2 * 5)*4/7), this.width *5);
+				svgString += drawShapeDetails(startX, midY + ((this.start_height/2 * 5)*4/7), this.width *5);
+				break;
 		}
 
 		// now for the finish - although this only really works for cylinder types
@@ -109,11 +108,7 @@ export class Part {
 					offset += (this.width/13) * 5;
 				}
 
-				svgString += `<circle r="4" ` +
-						`cx="${startX + 15}" ` +
-						`cy="${midY - this.start_height/4 * 5}" ` +
-						`stroke-width="1" stroke="gray" fill="dimgray" ` +
-						`/>`
+				svgString += drawOutlineCircle(4, startX + 15, midY - this.start_height/4 * 5, "dimGray")
 
 				break;
 			case "knurled":
@@ -149,29 +144,17 @@ export class Part {
 		let svgString = "";
 		switch(this.type) {
 			case "cylinder":
-				svgString += `<circle r="${(this.start_height/2) * 5}" cx="${startX}" cy="${midY}" stroke="dimgray" stroke-width="1" fill="${fillColour}" />`;
+				svgString += drawOutlineCircle((this.start_height/2) * 5, startX, midY, fillColour);
 				break;
 			case "cone":
-				svgString += `<circle r="${(this.end_height/2) * 5}" cx="${startX}" cy="${midY}" stroke="dimgray" stroke-width="1" fill="${fillColour}" />`;
-				svgString += `<circle r="${(this.start_height/2) * 5}" cx="${startX}" cy="${midY}" stroke="dimgray" stroke-width="1" fill="${fillColour}" />`;
+				svgString += drawOutlineCircle((this.end_height/2) * 5, startX, midY, fillColour);
+				svgString += drawOutlineCircle((this.start_height/2) * 5, startX, midY, fillColour);
 				break;
 			case "hexagonal":
-				// do some mathematics for the hexagon
-				let apothem = this.start_height/2 * 5;
-				// going around the points from top left - clockwise
-				let radians = 30 * Math.PI/180
-				let A = apothem * Math.tan(radians);
-				// Hypotenuse
-				let H = apothem/Math.cos(radians);
-
-				svgString += `<polygon points="` +
-					`${startX - A},${midY - this.start_height/2 * 5} ` + // A
-					`${startX + A},${midY - this.start_height/2 * 5} ` + // B
-					`${startX + H},${midY} ` +  // C
-					`${startX + A},${midY + this.start_height/2 * 5} ` + // D
-					`${startX - A},${midY + this.start_height/2 * 5} ` + // E
-					`${startX - H},${midY} ` + // F
-					`" stroke="dimgray" stroke-width="1" fill="${fillColour}"/> `;
+				svgString += drawOutlineHexagon(startX, midY, this.start_height, fillColour);
+				break;
+			case "octagonal":
+				svgString += drawOutlineOctagon(startX, midY, this.start_height, fillColour);
 				break;
 		}
 		return(svgString);
@@ -181,29 +164,14 @@ export class Part {
 		let svgString = "";
 		switch(this.type) {
 			case "cylinder":
-				svgString += `<circle r="${(this.start_height/2) * 5}" cx="${startX}" cy="${midY}" stroke="dimgray" stroke-width="1" fill="${fillColour}" />`;
+				svgString +=drawOutlineCircle((this.start_height/2) * 5, startX, midY, fillColour);
 				break;
 			case "cone":
-				svgString += `<circle r="${(this.end_height/2) * 5}" cx="${startX}" cy="${midY}" stroke="dimgray" stroke-width="1" fill="${fillColour}" />`;
-				svgString += `<circle r="${(this.start_height/2) * 5}" cx="${startX}" cy="${midY}" stroke="dimgray" stroke-width="1" fill="${fillColour}" />`;
+				svgString += drawOutlineCircle((this.start_height/2) * 5, startX, midY, fillColour);
+				svgString += drawOutlineCircle((this.end_height/2) * 5, startX, midY, fillColour);
 				break;
 			case "hexagonal":
-				// do some mathematics for the hexagon
-				let apothem = this.start_height/2 * 5;
-				// going around the points from top left - clockwise
-				let radians = 30 * Math.PI/180
-				let A = apothem * Math.tan(radians);
-				// Hypotenuse
-				let H = apothem/Math.cos(radians);
-
-				svgString += `<polygon points="` +
-						`${startX - A},${midY - this.start_height/2 * 5} ` + // A
-						`${startX + A},${midY - this.start_height/2 * 5} ` + // B
-						`${startX + H},${midY} ` +  // C
-						`${startX + A},${midY + this.start_height/2 * 5} ` + // D
-						`${startX - A},${midY + this.start_height/2 * 5} ` + // E
-						`${startX - H},${midY} ` + // F
-						`" stroke="dimgray" stroke-width="1" fill="${fillColour}"/> `;
+				svgString += drawOutlineHexagon(startX, midY, this.start_height, fillColour);
 				break;
 		}
 		return(svgString);

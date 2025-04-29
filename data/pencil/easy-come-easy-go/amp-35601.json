@@ -1,0 +1,56 @@
+{
+	"brand": "Easy Come Easy Go",
+	"model": "amp-35601",
+	"lead_size": "2.0",
+	"text": "EASY COME EASY GO 2.0",
+	"colour_component": "body",
+	"components": [
+		{
+			"type": "tip",
+			"parts": [
+				{ "type": "cylinder", "dimensions": "2.5x3.75" },
+				{ "type": "cone", "dimensions": "8.25x4.0x7.5" },
+				{ "type": "cylinder", "dimensions": "3.0x7.5" },
+				{ "type": "cylinder", "dimensions": "6.0x8.25" }
+			],
+			"material": "plastic",
+			"colours": [ "silver" ]
+		},
+		{
+			"type": "body",
+			"parts": [
+				{ "type": "hexagonal", "dimensions": "99.75x8.0" }
+			],
+			"material": "plastic",
+			"colours": [ "lightsalmon" ]
+		},
+		{
+			"type": "clip",
+			"parts": [
+				{ "type": "cylinder", "dimensions": "4.75x9.25"}
+			],
+			"material": "plastic",
+			"colours": [ "silver" ]
+		},
+		{
+			"type": "tail",
+			"parts": [
+				{ "type": "cylinder", "dimensions": "1.75x8.0"},
+				{ "type": "cylinder", "dimensions": "1.75x7.75"}
+			],
+			"material": "plastic",
+			"colours": [ "lightsalmon" ]
+		},
+		{
+			"type": "cap",
+			"parts": [
+				{ "type": "cylinder", "dimensions": "4.25x6.0"},
+				{ "type": "octagonal", "dimensions": "9.25x8.0"},
+				{ "type": "cylinder", "dimensions": "1.25x8.5"},
+				{ "type": "convex", "dimensions": "0.75x8.5", "offset": "0.75x4.75" }
+			],
+			"material": "plastic",
+			"colours": [ "lightsalmon" ]
+		}
+	]
+}

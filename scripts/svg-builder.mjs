@@ -1,5 +1,5 @@
-import * as filesystem from './filesystem.mjs'
-import {listDirectories, listFiles} from "./filesystem.mjs";
+import * as filesystem from './utils/filesystem.mjs'
+import {listDirectories, listFiles} from "./utils/filesystem.mjs";
 import * as path from "node:path";
 import { Pencil } from "./model/Pencil.mjs";
 import fs from "fs";

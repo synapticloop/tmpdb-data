@@ -84,4 +84,12 @@ export class Component {
 	getMaxWidth() {
 		return(this.maxWidth);
 	}
+
+	getType() {
+		return(this.type);
+	}
+
+	getMaterial() {
+		return(this.material);
+	}
 }

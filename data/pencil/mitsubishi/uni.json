@@ -1,0 +1,58 @@
+{
+	"brand": "Mitsubishi",
+	"model": "uni",
+	"lead_size": "2.0",
+	"text": "MITSUBISHI / uni /",
+	"colour_component": "body",
+	"components": [
+		{
+			"type": "jaws",
+			"parts": [
+				{ "type": "cylinder", "dimensions": "1.0x3.25" }
+			],
+			"material": "metal",
+			"colours": [ "silver" ]
+		},
+		{
+			"type": "tip",
+			"parts": [
+				{ "type": "cone", "dimensions": "11.5x5.25x7.5" }
+			],
+			"material": "metal",
+			"colours": [ "silver" ]
+		},
+		{
+			"type": "grip",
+			"parts": [
+				{ "type": "cylinder", "dimensions": "25.5x8.0", "finish":  "knurled" }
+			],
+			"material": "plastic",
+			"colours": [ "silver"]
+		},
+		{
+			"type": "body",
+			"parts": [
+				{ "type": "hexagonal", "dimensions": "84.0x8.25" }
+			],
+			"material": "plastic",
+			"colours": [ "maroon" ]
+		},
+		{
+			"type": "clip",
+			"parts": [
+				{ "type": "cylinder", "dimensions": "6.75x9.25"}
+			],
+			"material": "plastic",
+			"colours": [ "silver" ]
+		},
+		{
+			"type": "cap",
+			"parts": [
+				{ "type": "cylinder", "dimensions": "9.75x6.0"},
+				{ "type": "cylinder", "dimensions": "2.0x7.5"}
+			],
+			"material": "plastic",
+			"colours": [ "black" ]
+		}
+	]
+}
