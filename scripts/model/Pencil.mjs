@@ -83,7 +83,7 @@ export class Pencil {
 		this.text = json.text ?? this.text;
 
 
-		console.log(json);
+		// console.log(json);
 	}
 
 	renderSvg(shouldColour) {

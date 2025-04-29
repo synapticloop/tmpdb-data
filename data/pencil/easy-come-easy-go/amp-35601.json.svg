@@ -11,6 +11,11 @@
 
 <!-- RENDERING - component: clip -->
 <circle r="23.125" cx="1100" cy="300" stroke="dimgray" stroke-width="1" fill="white" />
+<!-- 4.0 0.6 --><rect x="1090" y="275.375" width="20" height="3" rx="1" ry="1" stroke-width="0.5" stroke="dimgray" fill="white"/>
+<!-- 4.0 1.75 --><rect x="1090" y="269.625" width="20" height="8.75" rx="1" ry="1" stroke-width="0.5" stroke="dimgray" fill="white"/>
+<!-- 4.0 1.75 --><rect x="1090" y="269.625" width="20" height="8.75" rx="1" ry="1" stroke-width="0.5" stroke="dimgray" fill="white"/>
+<!-- 4.0 0.6 --><rect x="1090" y="275.375" width="20" height="3" rx="1" ry="1" stroke-width="0.5" stroke="dimgray" fill="white"/>
+<!-- 4.0 2 --><rect x="1090" y="268.375" width="20" height="10" rx="1" ry="1" stroke-width="0.5" stroke="dimgray" fill="white"/>
 
 
 <!-- RENDERING - component: tail -->
@@ -34,6 +39,11 @@
 <circle r="20" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="white" />
 
 <!-- RENDERING - component: tail -->
+<!-- 4.0 2 --><rect x="90" y="268.375" width="20" height="10" rx="1" ry="1" stroke-width="0.5" stroke="dimgray" fill="white"/>
+<!-- 4.0 0.6 --><rect x="90" y="275.375" width="20" height="3" rx="1" ry="1" stroke-width="0.5" stroke="dimgray" fill="white"/>
+<!-- 4.0 1.75 --><rect x="90" y="269.625" width="20" height="8.75" rx="1" ry="1" stroke-width="0.5" stroke="dimgray" fill="white"/>
+<!-- 4.0 1.75 --><rect x="90" y="269.625" width="20" height="8.75" rx="1" ry="1" stroke-width="0.5" stroke="dimgray" fill="white"/>
+<!-- 4.0 0.6 --><rect x="90" y="275.375" width="20" height="3" rx="1" ry="1" stroke-width="0.5" stroke="dimgray" fill="white"/>
 
 <circle r="23.125" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="white" />
 
@@ -44,7 +54,7 @@
 <!-- RENDERING - component: body -->
 <circle r="20.625" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="white" />
 <circle r="18.75" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="white" />
-<circle r="18.75" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="white" /><circle r="10" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="white" />
+<circle r="10" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="white" /><circle r="18.75" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="white" />
 <circle r="9.375" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="white" />
 
 <!-- RENDERING - component: tip -->
@@ -75,16 +85,16 @@
 <rect x="839.375" y="276.875" width="23.75" height="46.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
 
 <!-- RENDERING - part: extra -->
-<line x1="696.875" y1="266.875" x2="711.875" y2="266.875" stroke-width="4.0" stroke="dimgray" fill="dimgray" stroke-linecap="round" />
-/><line x1="711.875" y1="266.875" x2="731.875" y2="276.875" stroke-width="4.0" stroke="dimgray" fill="dimgray" stroke-linecap="round" />
-/><line x1="731.875" y1="276.875" x2="751.875" y2="266.875" stroke-width="4.0" stroke="dimgray" fill="dimgray" stroke-linecap="round" />
-/><line x1="751.875" y1="266.875" x2="861.875" y2="266.875" stroke-width="4.0" stroke="dimgray" fill="dimgray" stroke-linecap="round" />
-/><path d="M861.875 266.875 Q876.875 271.875 861.875 276.875" stroke-width="4" stroke="dimgray" fill="none" stroke-linecap="round" />
-<line x1="696.875" y1="266.875" x2="711.875" y2="266.875" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
-/><line x1="711.875" y1="266.875" x2="731.875" y2="276.875" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
-/><line x1="731.875" y1="276.875" x2="751.875" y2="266.875" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
-/><line x1="751.875" y1="266.875" x2="861.875" y2="266.875" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
-/><path d="M861.875 266.875 Q876.875 271.875 861.875 276.875" stroke-width="3" stroke="white" fill="none" stroke-linecap="round" />
+<line x1="668.125" y1="268.375" x2="683.125" y2="268.375" stroke-width="4.0" stroke="dimgray" fill="dimgray" stroke-linecap="round" />
+/><line x1="683.125" y1="268.375" x2="703.125" y2="277.125" stroke-width="4.0" stroke="dimgray" fill="dimgray" stroke-linecap="round" />
+/><line x1="703.125" y1="277.125" x2="723.125" y2="268.375" stroke-width="4.0" stroke="dimgray" fill="dimgray" stroke-linecap="round" />
+/><line x1="723.125" y1="268.375" x2="863.125" y2="268.375" stroke-width="4.0" stroke="dimgray" fill="dimgray" stroke-linecap="round" />
+/><path d="M863.125 268.375 Q883.125 273.375 863.125 278.375" stroke-width="4" stroke="dimgray" fill="none" stroke-linecap="round" />
+<line x1="668.125" y1="268.375" x2="683.125" y2="268.375" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
+/><line x1="683.125" y1="268.375" x2="703.125" y2="277.125" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
+/><line x1="703.125" y1="277.125" x2="723.125" y2="268.375" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
+/><line x1="723.125" y1="268.375" x2="863.125" y2="268.375" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
+/><path d="M863.125 268.375 Q883.125 273.375 863.125 278.375" stroke-width="3" stroke="white" fill="none" stroke-linecap="round" />
 
 
 <!-- RENDERING - component: tail -->

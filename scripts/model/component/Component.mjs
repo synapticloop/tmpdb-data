@@ -67,7 +67,7 @@ export class Component {
 		const fillColour = shouldColour ? this.colours[0] : "white";
 		let svgString = `\n<!-- RENDERING - component: ${this.type} -->\n`;
 		for(let part of this.parts) {
-			svgString = `${part.renderBack(fillColour, this.type, startX, Pencil.HEIGHT/2)}\n` + svgString;
+			svgString = `${part.renderFront(fillColour, this.type, startX, Pencil.HEIGHT/2)}\n` + svgString;
 		}
 
 		return(svgString);

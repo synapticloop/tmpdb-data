@@ -1,4 +1,11 @@
-import {drawShapeDetails, drawOutlineCircle, drawOutlineHexagon, drawOutlineOctagon, drawExtra } from "../../utils/svg-helper.mjs";
+import {
+	drawShapeDetails,
+	drawOutlineCircle,
+	drawOutlineHexagon,
+	drawOutlineOctagon,
+	drawExtra,
+	renderBackExtra
+} from "../../utils/svg-helper.mjs";
 
 export class Part {
 	type = "";
@@ -12,6 +19,7 @@ export class Part {
 	extraOffset = [0,0];
 	extraWidth = 0;
 	extraHeight = 0;
+	extraDepth = 0;
 
 	constructor(jsonObject, colours) {
 		this.type = jsonObject.type;
@@ -28,10 +36,11 @@ export class Part {
 		if(this.type === "extra") {
 			this.extraParts = jsonObject.parts ?? this.extraParts;
 			this.extraOffset = jsonObject?.offset.split("x") ?? this.extraOffset;
-			let extraDimensions = [ 0, 0 ]
-			extraDimensions = jsonObject.dimensions ?? extraDimensions;
+			let extraDimensions = [ 0, 0, 0 ]
+			extraDimensions = jsonObject?.dimensions.split("x") ?? extraDimensions;
 			this.extraWidth = extraDimensions[0];
 			this.extraHeight = extraDimensions[1];
+			this.extraDepth = extraDimensions[2];
 		} else {
 			// only parse dimensions for non-extra things
 			this.#parseDimensions(jsonObject.dimensions);
@@ -172,6 +181,16 @@ export class Part {
 			case "octagonal":
 				svgString += drawOutlineOctagon(startX, midY, this.start_height, fillColour);
 				break;
+			case "extra":
+				svgString += renderBackExtra(
+						startX,
+						midY,
+						this.extraOffset[0],
+						this.extraOffset[1],
+						this.extraDepth,
+						this.extraParts,
+						fillColour);
+				break;
 		}
 		return(svgString);
 	}
@@ -188,6 +207,21 @@ export class Part {
 				break;
 			case "hexagonal":
 				svgString += drawOutlineHexagon(startX, midY, this.start_height, fillColour);
+				break;
+			case "octagonal":
+				svgString += drawOutlineOctagon(startX, midY, this.start_height, fillColour);
+				break;
+			case "extra":
+				this.extraParts.reverse();
+				svgString += renderBackExtra(
+						startX,
+						midY,
+						this.extraOffset[0],
+						this.extraOffset[1],
+						this.extraDepth,
+						this.extraParts,
+						fillColour);
+				this.extraParts.reverse();
 				break;
 		}
 		return(svgString);

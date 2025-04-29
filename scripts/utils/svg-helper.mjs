@@ -110,6 +110,33 @@ export function drawExtra(offsetX, offsetY, parts, strokeColour) {
 					`stroke-width="3" stroke="${strokeColour}" fill="${strokeColour}" stroke-linecap="round" />\n`
 		}
 	}
-	console.log(svgString);
+	return(svgString);
+}
+
+export function renderBackExtra(x, y, offsetX, offsetY, width, parts, fillColour) {
+	let svgString = "";
+	let points = [];
+	for(const part of parts) {
+		if(part["line"]) {
+			points = part["line"].split(",");
+		} else if(part["curve"]) {
+			points = part["curve"].split(",");
+		} else if(part["curve-fill"]) {
+			points = part["curve-fill"].split(",");
+		}
+		// don't care what it is, always top to bottom
+		let maxY = Math.max(points[1], points[3]);
+		let minY = Math.min(points[1], points[3]);
+		let height = Math.abs(maxY - minY);
+		if(height === 0) {
+			height = 3/5;
+		}
+		svgString += `<!-- ${width} ${height} -->`;
+		svgString += `<rect x="${x - width/2*5}" ` +
+				`y="${y - Math.abs(offsetY) * 5 - (height * 5)}" ` +
+				`width="${width * 5}" ` +
+				`height="${height * 5}" ` +
+				`rx="1" ry="1" stroke-width="0.5" stroke="dimgray" fill="${fillColour}"/>\n`;
+	}
 	return(svgString);
 }

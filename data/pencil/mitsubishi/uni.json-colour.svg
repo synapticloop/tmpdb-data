@@ -14,6 +14,10 @@
 
 <!-- RENDERING - component: clip -->
 <circle r="23.125" cx="1100" cy="300" stroke="dimgray" stroke-width="1" fill="silver" />
+<!-- 4.0 0.25 --><rect x="1090" y="277.125" width="20" height="1.25" rx="1" ry="1" stroke-width="0.5" stroke="dimgray" fill="silver"/>
+<!-- 4.0 1 --><rect x="1090" y="273.375" width="20" height="5" rx="1" ry="1" stroke-width="0.5" stroke="dimgray" fill="silver"/>
+<!-- 4.0 0.6 --><rect x="1090" y="275.375" width="20" height="3" rx="1" ry="1" stroke-width="0.5" stroke="dimgray" fill="silver"/>
+<!-- 4.0 2.25 --><rect x="1090" y="267.125" width="20" height="11.25" rx="1" ry="1" stroke-width="0.5" stroke="dimgray" fill="silver"/>
 
 
 <!-- RENDERING - component: cap -->
@@ -23,6 +27,10 @@
 <circle r="15" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="black" />
 
 <!-- RENDERING - component: cap -->
+<!-- 4.0 2.25 --><rect x="90" y="267.125" width="20" height="11.25" rx="1" ry="1" stroke-width="0.5" stroke="dimgray" fill="silver"/>
+<!-- 4.0 0.6 --><rect x="90" y="275.375" width="20" height="3" rx="1" ry="1" stroke-width="0.5" stroke="dimgray" fill="silver"/>
+<!-- 4.0 1 --><rect x="90" y="273.375" width="20" height="5" rx="1" ry="1" stroke-width="0.5" stroke="dimgray" fill="silver"/>
+<!-- 4.0 0.25 --><rect x="90" y="277.125" width="20" height="1.25" rx="1" ry="1" stroke-width="0.5" stroke="dimgray" fill="silver"/>
 
 <circle r="23.125" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="silver" />
 
@@ -34,7 +42,7 @@
 <circle r="20" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="silver" />
 
 <!-- RENDERING - component: grip -->
-<circle r="18.75" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="silver" /><circle r="13.125" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="silver" />
+<circle r="13.125" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="silver" /><circle r="18.75" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="silver" />
 
 <!-- RENDERING - component: tip -->
 <circle r="8.125" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="silver" />
@@ -69,14 +77,14 @@
 <rect x="858.75" y="276.875" width="33.75" height="46.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver"/>
 
 <!-- RENDERING - part: extra -->
-<path d="M760 269.375 Q737.5 284.375 725 270.625" stroke-width="4" stroke="dimgray" fill="none" stroke-linecap="round" />
-<path d="M725 270.625 Q717.5 266.875 725 265.625" stroke-width="4" stroke="dimgray" fill="none" stroke-linecap="round" />
-<line x1="725" y1="265.625" x2="855" y2="265.625" stroke-width="4.0" stroke="dimgray" fill="dimgray" stroke-linecap="round" />
-/><line x1="855" y1="265.625" x2="860" y2="276.875" stroke-width="4.0" stroke="dimgray" fill="dimgray" stroke-linecap="round" />
-/><path d="M760 269.375 Q737.5 284.375 725 270.625" stroke-width="3" stroke="silver" fill="none" stroke-linecap="round" />
-<path d="M725 270.625 Q717.5 266.875 725 265.625" stroke-width="3" stroke="silver" fill="none" stroke-linecap="round" />
-<line x1="725" y1="265.625" x2="855" y2="265.625" stroke-width="3" stroke="silver" fill="silver" stroke-linecap="round" />
-/><line x1="855" y1="265.625" x2="860" y2="276.875" stroke-width="3" stroke="silver" fill="silver" stroke-linecap="round" />
+<path d="M760 270.875 Q737.5 285.875 725 272.125" stroke-width="4" stroke="dimgray" fill="none" stroke-linecap="round" />
+<path d="M725 272.125 Q717.5 268.375 725 267.125" stroke-width="4" stroke="dimgray" fill="none" stroke-linecap="round" />
+<line x1="725" y1="267.125" x2="855" y2="267.125" stroke-width="4.0" stroke="dimgray" fill="dimgray" stroke-linecap="round" />
+/><line x1="855" y1="267.125" x2="860" y2="278.375" stroke-width="4.0" stroke="dimgray" fill="dimgray" stroke-linecap="round" />
+/><path d="M760 270.875 Q737.5 285.875 725 272.125" stroke-width="3" stroke="silver" fill="none" stroke-linecap="round" />
+<path d="M725 272.125 Q717.5 268.375 725 267.125" stroke-width="3" stroke="silver" fill="none" stroke-linecap="round" />
+<line x1="725" y1="267.125" x2="855" y2="267.125" stroke-width="3" stroke="silver" fill="silver" stroke-linecap="round" />
+/><line x1="855" y1="267.125" x2="860" y2="278.375" stroke-width="3" stroke="silver" fill="silver" stroke-linecap="round" />
 />
 
 <!-- RENDERING - component: cap -->
