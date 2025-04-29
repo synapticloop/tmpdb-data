@@ -1,4 +1,4 @@
-import {drawShapeDetails, drawOutlineCircle, drawOutlineHexagon, drawOutlineOctagon} from "../../utils/svg-helper.mjs";
+import {drawShapeDetails, drawOutlineCircle, drawOutlineHexagon, drawOutlineOctagon, drawExtra } from "../../utils/svg-helper.mjs";
 
 export class Part {
 	type = "";
@@ -8,13 +8,16 @@ export class Part {
 	offset = 0;
 	finish = "";
 	colours = [];
+	extraParts = [];
+	extraOffset = [0,0];
+	extraWidth = 0;
+	extraHeight = 0;
 
 	constructor(jsonObject, colours) {
 		this.type = jsonObject.type;
 		this.dimensions = jsonObject.dimensions;
-		if(jsonObject.finish) {
-			this.finish = jsonObject.finish;
-		}
+
+		this.finish = jsonObject.finish ?? this.finish;
 
 		if(colours) {
 			this.colours = colours;
@@ -22,7 +25,17 @@ export class Part {
 			this.colours.push("white");
 		}
 
-		this.#parseDimensions(jsonObject.dimensions);
+		if(this.type === "extra") {
+			this.extraParts = jsonObject.parts ?? this.extraParts;
+			this.extraOffset = jsonObject?.offset.split("x") ?? this.extraOffset;
+			let extraDimensions = [ 0, 0 ]
+			extraDimensions = jsonObject.dimensions ?? extraDimensions;
+			this.extraWidth = extraDimensions[0];
+			this.extraHeight = extraDimensions[1];
+		} else {
+			// only parse dimensions for non-extra things
+			this.#parseDimensions(jsonObject.dimensions);
+		}
 	}
 
 	#parseDimensions(dimensions) {
@@ -76,6 +89,9 @@ export class Part {
 						`Q${startX + this.width*5} ${midY} ` +
 						`${startX} ${midY + (this.start_height/2 * 5)}" ` +
 						`stroke-width="0.5" stroke="${strokeColour}" fill="${fillColour}"/>\n`
+				break;
+			case "extra":
+				svgString += drawExtra(startX + this.extraOffset[0]*5, midY - this.extraOffset[1]*5, this.extraParts, fillColour);
 				break;
 		}
 
@@ -188,8 +204,8 @@ export class Part {
 		switch (this.type) {
 			case "hexagonal":
 				let apothem = this.start_height/2;
-				console.log(this.start_height)
-				console.log(apothem/Math.cos(30 * Math.PI/180));
+				// console.log(this.start_height)
+				// console.log(apothem/Math.cos(30 * Math.PI/180));
 				return(apothem/Math.cos(30 * Math.PI/180) * 2);
 		}
 		return(this.getMaxHeight());

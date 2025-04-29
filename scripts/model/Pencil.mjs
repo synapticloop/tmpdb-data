@@ -1,7 +1,7 @@
 // TODO - get rid of the filesystem - should pass in a JSON object
 import * as fs from 'fs';
 import {Component} from "./component/Component.mjs";
-import { svgTextCentred } from "../utils/svg-helper.mjs";
+import { drawTextBoldCentred } from "../utils/svg-helper.mjs";
 
 export class Pencil {
 	static WIDTH = 1200;
@@ -107,7 +107,7 @@ export class Pencil {
 				`x2="50" y2="${Pencil.HEIGHT/2 + this.maxHeight/2 * 5}" ` +
 				`stroke="black" stroke-width="1" />`;
 
-		svgString += `<text x="100" y="${Pencil.HEIGHT/2 + 80 + this.maxHeight/2 * 5}" font-size="1.8em" font-weight="bold" text-anchor="middle" dominant-baseline="central">Front</text>`
+		svgString += drawTextBoldCentred("Front", 100, Pencil.HEIGHT/2 + 80 + this.maxHeight/2 * 5, "1.8em");
 
 		svgString += `<text x="30" y="${Pencil.HEIGHT/2}" transform="rotate(-90, 30, ${Pencil.HEIGHT/2})" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central">${(Math.round(this.maxHeight * 100) / 100).toFixed(2)} mm</text>`
 
@@ -125,7 +125,7 @@ export class Pencil {
 				`x2="${100 + this.maxWidth/2 * 5}" y2="${Pencil.HEIGHT/2 + 40 + this.maxHeight/2 * 5}" ` +
 				`stroke="black" stroke-width="1" />`;
 
-		svgString += `<text x="${100}" y="${Pencil.HEIGHT/2 + 50 + this.maxHeight/2 * 5}" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">${(Math.round(this.maxWidth * 100) / 100).toFixed(2)} mm</text>`
+		svgString += drawTextBoldCentred(`${(Math.round(this.maxWidth * 100) / 100).toFixed(2)} mm`, 100, Pencil.HEIGHT/2 + 50 + this.maxHeight/2 * 5, "1.2em");
 
 		// now for the total
 		// horizontal
@@ -141,12 +141,10 @@ export class Pencil {
 				`x2="${Pencil.WIDTH/2 + this.totalLength/2}" y2="${Pencil.HEIGHT/2 + 40 + this.maxHeight/2 * 5}" ` +
 				`stroke="black" stroke-width="1" />`;
 
-		svgString += `<text x="${Pencil.WIDTH/2}" y="${Pencil.HEIGHT/2 + 50 + this.maxHeight/2 * 5}" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">${(Math.round(this.totalLength/5 * 100) / 100).toFixed(2)} mm</text>`
-		svgString += `<text x="${Pencil.WIDTH/2}" y="${Pencil.HEIGHT/2 + 80 + this.maxHeight/2 * 5}" font-size="1.8em" font-weight="bold" text-anchor="middle" dominant-baseline="central">Side</text>`
-
-		svgString += `<text x="${Pencil.WIDTH-100}" y="${Pencil.HEIGHT/2 + 80 + this.maxHeight/2 * 5}" font-size="1.8em" font-weight="bold" text-anchor="middle" dominant-baseline="central">Back</text>`
-
-		svgString += `<text x="${Pencil.WIDTH/2}" y="${Pencil.HEIGHT/2 + 200 + this.maxHeight/2 * 5}" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central">Materials: ${this.materials.join(", ")}</text>`
+		svgString += drawTextBoldCentred(`${(Math.round(this.totalLength/5 * 100) / 100).toFixed(2)} mm`, Pencil.WIDTH/2, Pencil.HEIGHT/2 + 50 + this.maxHeight/2 * 5, "1.2em");
+		svgString += drawTextBoldCentred("Side", Pencil.WIDTH/2, Pencil.HEIGHT/2 + 80 + this.maxHeight/2 * 5, "1.8em");
+		svgString += drawTextBoldCentred("Back", Pencil.WIDTH-100, Pencil.HEIGHT/2 + 80 + this.maxHeight/2 * 5, "1.8em");
+		svgString += drawTextBoldCentred(`Materials: ${this.materials.join(", ")}`, Pencil.WIDTH/2, Pencil.HEIGHT/2 + 200 + this.maxHeight/2 * 5, "1.2em");
 
 		// now we are going to go through each of the components and draw the shapes
 		let offset = Pencil.WIDTH/2 - this.getTotalLength()/2;

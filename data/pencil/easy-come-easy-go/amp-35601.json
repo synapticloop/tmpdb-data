@@ -27,7 +27,17 @@
 		{
 			"type": "clip",
 			"parts": [
-				{ "type": "cylinder", "dimensions": "4.75x9.25"}
+				{ "type": "cylinder", "dimensions": "4.75x9.25"},
+				{ "type": "extra",
+					"offset": "-33.25x4.625",
+					"dimensions": "40.5x2.0",
+					"parts": [
+						{ "line": "0.0,-2.0,3.0,-2.0" },
+						{ "line": "3.0,-2.0,7.0,0.0" },
+						{ "line": "7.0,0.0,11.0,-2.0" },
+						{ "line": "11.0,-2.0,33.0,-2.0" },
+						{ "curve": "33.0,-2.0,33.0,0.0,36.0,-1.0" }
+					]}
 			],
 			"material": "plastic",
 			"colours": [ "silver" ]

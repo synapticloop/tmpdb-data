@@ -1,5 +1,8 @@
-export function svgTextCentred(text, x, y) {
-
+export function drawTextBoldCentred(text, x, y, fontSize) {
+	return(`<text x="${x}" ` +
+			`y="${y}" ` +
+			`font-size="${fontSize}" font-weight="bold" text-anchor="middle" ` +
+			`dominant-baseline="central">${text}</text>`);
 }
 
 export function drawOutlineHexagon(x, y, height, fillColour) {
@@ -58,4 +61,55 @@ export function drawShapeDetails(xStart, y, width) {
 			`x2="${xStart + width}" ` +
 			`y2="${y}" ` +
 			`stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>\n`);
+}
+
+export function drawExtra(offsetX, offsetY, parts, strokeColour) {
+	let svgString = "";
+	for(const part of parts) {
+		if(part["line"]) {
+			const points = part["line"].split(",");
+			svgString += `<line x1="${offsetX + (points[0] * 5)}" ` +
+					`y1="${offsetY + (points[1] * 5)}" ` +
+					`x2="${offsetX + (points[2] * 5)}" ` +
+					`y2="${offsetY + (points[3] * 5)}" ` +
+					`stroke-width="4.0" stroke="dimgray" fill="dimgray" stroke-linecap="round" />\n/>`;
+		} else if(part["curve"]) {
+			const points = part["curve"].split(",");
+			svgString += `<path d="M${offsetX + (points[0] * 5)} ${offsetY + (points[1] * 5)} ` +
+					`Q${offsetX + (points[4] * 5)} ${offsetY + (points[5] * 5)} ` +
+					`${offsetX + (points[2] * 5)} ${offsetY + (points[3] * 5)}" ` +
+					`stroke-width="4" stroke="dimgray" fill="none" stroke-linecap="round" />\n`
+		} else if(part["curve-fill"]) {
+			const points = part["curve-fill"].split(",");
+			svgString += `<path d="M${offsetX + (points[0] * 5)} ${offsetY + (points[1] * 5)} ` +
+					`Q${offsetX + (points[4] * 5)} ${offsetY + (points[5] * 5)} ` +
+					`${offsetX + (points[2] * 5)} ${offsetY + (points[3] * 5)}" ` +
+					`stroke-width="4" stroke="dimgray" fill="dimgray" stroke-linecap="round" />\n`
+		}
+	}
+
+	for(const part of parts) {
+		if(part["line"]) {
+			const points = part["line"].split(",");
+			svgString += `<line x1="${offsetX + (points[0] * 5)}" ` +
+					`y1="${offsetY + (points[1] * 5)}" ` +
+					`x2="${offsetX + (points[2] * 5)}" ` +
+					`y2="${offsetY + (points[3] * 5)}" ` +
+					`stroke-width="3" stroke="${strokeColour}" fill="${strokeColour}" stroke-linecap="round" />\n/>`;
+		} else if(part["curve"]) {
+			const points = part["curve"].split(",");
+			svgString += `<path d="M${offsetX + (points[0] * 5)} ${offsetY + (points[1] * 5)} ` +
+					`Q${offsetX + (points[4] * 5)} ${offsetY + (points[5] * 5)} ` +
+					`${offsetX + (points[2] * 5)} ${offsetY + (points[3] * 5)}" ` +
+					`stroke-width="3" stroke="${strokeColour}" fill="none" stroke-linecap="round" />\n`
+		} else if(part["curve-fill"]) {
+			const points = part["curve-fill"].split(",");
+			svgString += `<path d="M${offsetX + (points[0] * 5)} ${offsetY + (points[1] * 5)} ` +
+					`Q${offsetX + (points[4] * 5)} ${offsetY + (points[5] * 5)} ` +
+					`${offsetX + (points[2] * 5)} ${offsetY + (points[3] * 5)}" ` +
+					`stroke-width="3" stroke="${strokeColour}" fill="${strokeColour}" stroke-linecap="round" />\n`
+		}
+	}
+	console.log(svgString);
+	return(svgString);
 }
