@@ -76,7 +76,6 @@ export class Part {
 			strokeColour = "dimgray";
 		}
 
-
 		switch (this.type) {
 			case "cylinder":
 			case "hexagonal":

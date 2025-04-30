@@ -236,18 +236,18 @@ export class Pencil {
 				`stroke="black" stroke-width="1" />\n`;
 
 		for (let component of this.components) {
-			svgString += component.renderBack(shouldColour, Pencil.WIDTH - 100);
+			svgString += component.renderBack(shouldColour, Pencil.WIDTH - 100, thisColourIndex, thisColourComponent);
 		}
 
 		this.components.reverse();
 		for (let component of this.components) {
-			svgString += component.renderFront(shouldColour, 100);
+			svgString += component.renderFront(shouldColour, 100, thisColourIndex, thisColourComponent);
 		}
 		this.components.reverse();
 
 		// now go through each component and render the parts
 		for (let component of this.components) {
-			svgString += component.renderSvg(shouldColour, xPosition);
+			svgString += component.renderSvg(shouldColour, xPosition, thisColourIndex, thisColourComponent);
 			xPosition += component.getWidth();
 		}
 
