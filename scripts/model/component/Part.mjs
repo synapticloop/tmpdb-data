@@ -106,8 +106,6 @@ export class Part {
 					offsetY = (this.start_height/2 - this.offset[1]) * 5;
 				}
 
-				// TODO implement
-
 				svgString += `<path d="M${startX} ${midY - (this.start_height/2 * 5)} ` +
 						`Q${startX + offsetX} ${midY - offsetY} ` +
 						`${startX} ${midY + (this.start_height/2 * 5)}" ` +
