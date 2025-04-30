@@ -26,6 +26,7 @@ export class Component {
 					this.extraParts.push(thisPart);
 				}
 
+
 				let tempWidth = thisPart.getMaxWidth();
 				if(tempWidth >= this.maxWidth) {
 					this.maxWidth = tempWidth;
