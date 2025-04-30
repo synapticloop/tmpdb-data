@@ -86,7 +86,11 @@ export class Pencil {
 		// console.log(json);
 	}
 
-	renderSvg(shouldColour) {
+	renderSvg(shouldColour, colourIndex, colourComponent) {
+
+		let thisColourIndex = colourIndex ?? 0;
+		let thisColourComponent = colourComponent ?? "";
+
 		let svgString = Pencil.SVG_START;
 		let xPosition = (Pencil.WIDTH - this.totalLength)/2;
 

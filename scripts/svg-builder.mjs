@@ -35,13 +35,16 @@ for (const pencilDirectory of pencilDirectories) {
 
 		const pencil = new Pencil(pencilFileFull);
 		const outputSvgFile = path.join(svgOutputDir, pencilFileName + ".svg");
-		const outputSvgColourFile = path.join(svgOutputDir, pencilFileName + "-colour.svg");
 
 		fs.writeFileSync(outputSvgFile, pencil.renderSvg(false));
 		writeSvgToPng(outputSvgFile, path.join(pngOutputDir, pencilFileName + ".png"))
 
-		fs.writeFileSync(outputSvgColourFile, pencil.renderSvg(true));
-		writeSvgToPng(outputSvgColourFile, path.join(pngOutputDir, pencilFileName + "-colour.png"))
+		let colourComponent = pencil.colourComponent;
+		for(const [index, colour] of pencil.colourComponents.entries()) {
+			const outputSvgColourFile = path.join(svgOutputDir, pencilFileName + "-colour-" + colour + ".svg");
+			fs.writeFileSync(outputSvgColourFile, pencil.renderSvg(true, index, colourComponent));
+			writeSvgToPng(outputSvgColourFile, path.join(pngOutputDir, pencilFileName + "-colour-" + colour + ".png"))
+		}
 	}
 
 	/**
