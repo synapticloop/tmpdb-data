@@ -148,7 +148,7 @@ export function renderBackExtra(x, y, offsetX, offsetY, width, parts, fillColour
 				`y="${y - Math.abs(offsetY) * 5 - (height * 5)}" ` +
 				`width="${width * 5}" ` +
 				`height="${height * 5}" ` +
-				`rx="1" ry="1" stroke-width="0.5" stroke="dimgray" fill="${fillColour}"/>\n`;
+				`rx="1" ry="1" stroke-width="1.0" stroke="dimgray" fill="${fillColour}"/>\n`;
 	}
 	return(svgString);
 }

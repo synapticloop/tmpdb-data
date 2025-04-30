@@ -12,7 +12,7 @@ export class Part {
 	width = 0;
 	start_height = 0;
 	end_height = 0;
-	offset = 0;
+	offset = [ 0, 0 ];
 	finish = "";
 	colours = [];
 	extraParts = [];
@@ -24,6 +24,11 @@ export class Part {
 	constructor(jsonObject, colours) {
 		this.type = jsonObject.type;
 		this.dimensions = jsonObject.dimensions;
+
+		if(jsonObject.offset) {
+			let offsetTemp = jsonObject.offset.split("x") ?? ["0", "0"];
+			this.offset = [parseFloat(offsetTemp[0]), parseFloat(offsetTemp[1])];
+		}
 
 		this.finish = jsonObject.finish ?? this.finish;
 
@@ -91,9 +96,20 @@ export class Part {
 						`stroke-width="0.5" stroke="${strokeColour}" fill="${fillColour}" />\n`
 				break;
 			case "convex":
-				// TODO - add in offset if known... (and parse from file)
+				let offsetX = this.width *5;
+				if(this.offset[0] !== 0) {
+					offsetX = this.offset[0] * 5;
+				}
+
+				let offsetY = this.start_height/2 * 5;
+				if(this.offset[1] !== 0) {
+					offsetY = (this.start_height/2 - this.offset[1]) * 5;
+				}
+
+				// TODO implement
+
 				svgString += `<path d="M${startX} ${midY - (this.start_height/2 * 5)} ` +
-						`Q${startX + this.width*5} ${midY} ` +
+						`Q${startX + offsetX} ${midY - offsetY} ` +
 						`${startX} ${midY + (this.start_height/2 * 5)}" ` +
 						`stroke-width="0.5" stroke="${strokeColour}" fill="${fillColour}"/>\n`
 				break;
