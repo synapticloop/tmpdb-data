@@ -17,7 +17,7 @@ utilised to generate all sorts of images and output data.
 For the file `/data/ohto/sharp-pencil-wn03.json`, one of the SVG files that 
 is generated.
 
-<img src="./output/vectors/pencil/ohto/sharp-pencil-wn03.svg">
+![Alt text](./output/vectors/pencil/ohto/sharp-pencil-wn03.svg)
 
 and colour variants too (as PNGs)
 
