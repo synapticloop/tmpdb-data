@@ -3,31 +3,28 @@ import {Pencil} from "../Pencil.mjs";
 
 export class Component {
 	parts = [];
-	material = "";
-	colours = [];
-	type = "";
+	material = "unknown";
+	colours = [ "white" ];
+	type = "unknown";
 	width = 0;
 	maxWidth = 0;
 	maxHeight = 0;
+	extraParts = [];
 
 	constructor(jsonObject) {
-		this.type = jsonObject.type;
-
-		if(jsonObject.material) {
-			this.material = jsonObject.material;
-		}
-
-		if(jsonObject.colours) {
-			this.colours = jsonObject.colours;
-		} else {
-			this.colours.push("white");
-		}
+		this.type = jsonObject.type ?? this.type;
+		this.material = jsonObject.material ?? this.material;
+		this.colours = jsonObject.colours ?? this.colours;
 
 		if(jsonObject.parts) {
 			for(let part of jsonObject.parts) {
 				const thisPart = new Part(part, this.colours);
 				this.parts.push(thisPart);
 				this.width += thisPart.getWidth();
+
+				if(thisPart.extraParts.length > 0) {
+					this.extraParts.push(thisPart);
+				}
 
 				let tempWidth = thisPart.getMaxWidth();
 				if(tempWidth >= this.maxWidth) {
@@ -91,5 +88,9 @@ export class Component {
 
 	getMaterial() {
 		return(this.material);
+	}
+
+	getExtraParts() {
+		return(this.extraParts);
 	}
 }

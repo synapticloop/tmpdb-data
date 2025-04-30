@@ -23,34 +23,44 @@ for (const pencilDirectory of pencilDirectories) {
 
 	for (const [index, pencilFile] of pencilFiles.entries()) {
 		console.log(`\t ${index + 1}. ${pencilFile}`);
+
+		const pngOutputDir = path.join("./output/images/pencil/", pencilDirectory);
+		fs.mkdirSync(pngOutputDir, { "recursive": true });
+
+		const svgOutputDir = path.join("./output/vectors/pencil/", pencilDirectory);
+		fs.mkdirSync(svgOutputDir, { "recursive": true });
+
 		const pencilFileFull = path.join(pencilDir, pencilFile);
+		const pencilFileName = path.parse(path.join(pencilDir, pencilFile)).name;
+
 		const pencil = new Pencil(pencilFileFull);
-		const outputFile = pencilFileFull + ".svg";
+		const outputSvgFile = path.join(svgOutputDir, pencilFileName + ".svg");
+		const outputSvgColourFile = path.join(svgOutputDir, pencilFileName + "-colour.svg");
 
-		fs.writeFileSync(outputFile, pencil.renderSvg(false));
-		fs.writeFileSync(pencilFileFull + "-colour.svg", pencil.renderSvg(true));
+		fs.writeFileSync(outputSvgFile, pencil.renderSvg(false));
+		writeSvgToPng(outputSvgFile, path.join(pngOutputDir, pencilFileName + ".png"))
 
+		fs.writeFileSync(outputSvgColourFile, pencil.renderSvg(true));
+		writeSvgToPng(outputSvgColourFile, path.join(pngOutputDir, pencilFileName + "-colour.png"))
+	}
+
+	/**
+	 * Convert an SVG to a Png image and write it to a file
+	 *
+	 * @param inputSvg  The input file location of the SVG
+	 * @param outputPng The output file location to write the PNG
+	 */
+	function writeSvgToPng(inputSvg, outputPng) {
+		// options for things - just in case...
 		let options = {};
-
-		sharp(outputFile, options)
+		sharp(inputSvg, options)
 				.png()
-				.toFile(pencilFileFull + ".png")
+				.toFile(outputPng)
 				.then(() => {
-					console.log('SVG successfully converted to PNG');
+					console.log(`Successfully converted SVG \n\t'${inputSvg}'\n  to PNG \n\t'${outputPng}'`);
 				})
 				.catch(error => {
-					console.error('Error converting SVG to PNG:', error);
+					console.error(`Error converting SVG \n\t'${inputSvg}'\n  to PNG \n\t'${outputPng}'`, error);
 				});
-
-		sharp(pencilFileFull + "-colour.svg", options)
-				.png()
-				.toFile(pencilFileFull + "-colour.svg.png")
-				.then(() => {
-					console.log('SVG successfully converted to PNG');
-				})
-				.catch(error => {
-					console.error('Error converting SVG to PNG:', error);
-				});
-
 	}
 }

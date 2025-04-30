@@ -35,12 +35,15 @@ export class Part {
 
 		if(this.type === "extra") {
 			this.extraParts = jsonObject.parts ?? this.extraParts;
-			this.extraOffset = jsonObject?.offset.split("x") ?? this.extraOffset;
+
+			let extraOffsetTemp = jsonObject?.offset.split("x") ?? [ "0", "0" ];
+			this.extraOffset = [ parseFloat(extraOffsetTemp[0]), parseFloat(extraOffsetTemp[1])];
+
 			let extraDimensions = [ 0, 0, 0 ]
 			extraDimensions = jsonObject?.dimensions.split("x") ?? extraDimensions;
-			this.extraWidth = extraDimensions[0];
-			this.extraHeight = extraDimensions[1];
-			this.extraDepth = extraDimensions[2];
+			this.extraWidth = parseFloat(extraDimensions[0]);
+			this.extraHeight = parseFloat(extraDimensions[1]);
+			this.extraDepth = parseFloat(extraDimensions[2]);
 		} else {
 			// only parse dimensions for non-extra things
 			this.#parseDimensions(jsonObject.dimensions);
@@ -88,6 +91,7 @@ export class Part {
 						`stroke-width="0.5" stroke="${strokeColour}" fill="${fillColour}" />\n`
 				break;
 			case "convex":
+				// TODO - add in offset if known... (and parse from file)
 				svgString += `<path d="M${startX} ${midY - (this.start_height/2 * 5)} ` +
 						`Q${startX + this.width*5} ${midY} ` +
 						`${startX} ${midY + (this.start_height/2 * 5)}" ` +

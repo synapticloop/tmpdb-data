@@ -1,0 +1,184 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600">
+<pattern id="diagonalHatch" patternUnits="userSpaceOnUse" width="8" height="8">
+<rect width="6" height="6" fill='none'/>
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,8"/>
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,8"/>
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,0" />
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,0" />
+</pattern>
+<rect x="0" y="0" width="1200" height="600" fill="white" stroke="black" stroke-width="4" />
+<rect x="2" y="2" width="1196" height="596" fill="white" stroke="orange" stroke-width="1" />
+<text x="30" y="40" font-size="2.0em" font-weight="bold"> Mitsubishi // uni (2.0mm)</text>
+<text x="30" y="64" font-size="1.1em" font-weight="bold"> MITSUBISHI / uni /</text>
+<line x1="248.75" y1="212.875" x2="248.75" y2="443.125" stroke="#cfcfcf" stroke-width="1" />
+<line x1="248.75" y1="212.875" x2="248.75" y2="190.875" stroke="black" stroke-width="1" />
+<text x="251.25" y="194.875" transform="rotate(-90, 251.25, 194.875)" font-size="1.2em" font-weight="bold" dominant-baseline="central">jaws (1.00 mm)</text>
+<line x1="253.75" y1="212.875" x2="253.75" y2="443.125" stroke="#cfcfcf" stroke-width="1" />
+<line x1="253.75" y1="212.875" x2="253.75" y2="190.875" stroke="black" stroke-width="1" />
+<text x="282.5" y="194.875" transform="rotate(-90, 282.5, 194.875)" font-size="1.2em" font-weight="bold" dominant-baseline="central">tip (11.50 mm)</text>
+<line x1="311.25" y1="212.875" x2="311.25" y2="443.125" stroke="#cfcfcf" stroke-width="1" />
+<line x1="311.25" y1="212.875" x2="311.25" y2="190.875" stroke="black" stroke-width="1" />
+<text x="375" y="194.875" transform="rotate(-90, 375, 194.875)" font-size="1.2em" font-weight="bold" dominant-baseline="central">grip (25.50 mm)</text>
+<line x1="438.75" y1="212.875" x2="438.75" y2="443.125" stroke="#cfcfcf" stroke-width="1" />
+<line x1="438.75" y1="212.875" x2="438.75" y2="190.875" stroke="black" stroke-width="1" />
+<text x="648.75" y="194.875" transform="rotate(-90, 648.75, 194.875)" font-size="1.2em" font-weight="bold" dominant-baseline="central">body (84.00 mm)</text>
+<line x1="858.75" y1="212.875" x2="858.75" y2="443.125" stroke="#cfcfcf" stroke-width="1" />
+<line x1="858.75" y1="212.875" x2="858.75" y2="190.875" stroke="black" stroke-width="1" />
+<text x="875.625" y="194.875" transform="rotate(-90, 875.625, 194.875)" font-size="1.2em" font-weight="bold" dominant-baseline="central">clip (6.75 mm)</text>
+<line x1="711.25" y1="212.875" x2="711.25" y2="300" stroke="#cfcfcf" stroke-width="1" />
+<line x1="711.25" y1="240.875" x2="711.25" y2="172.875" stroke="black" stroke-width="1" />
+<line x1="858.75" y1="240.875" x2="858.75" y2="300" stroke="#cfcfcf" stroke-width="1" />
+<line x1="858.75" y1="240.875" x2="858.75" y2="172.875" stroke="black" stroke-width="1" />
+<line x1="711.25" y1="179.875" x2="858.75" y2="179.875" stroke="black" stroke-width="1" />
+<text x="785" y="144.875" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central">clip (extra)</text>
+<text x="785" y="164.875" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central">29.50 mm)</text>
+<line x1="892.5" y1="212.875" x2="892.5" y2="443.125" stroke="#cfcfcf" stroke-width="1" />
+<line x1="892.5" y1="212.875" x2="892.5" y2="190.875" stroke="black" stroke-width="1" />
+<text x="921.875" y="194.875" transform="rotate(-90, 921.875, 194.875)" font-size="1.2em" font-weight="bold" dominant-baseline="central">cap (11.75 mm)</text>
+<line x1="951.25" y1="212.875" x2="951.25" y2="443.125" stroke="#cfcfcf" stroke-width="1" />
+<line x1="951.25" y1="212.875" x2="951.25" y2="190.875" stroke="black" stroke-width="1" />
+<line x1="248.75" y1="201.875" x2="951.25" y2="201.875" stroke="black" stroke-width="1" />
+<line x1="40" y1="276.875" x2="60" y2="276.875" stroke="black" stroke-width="1" />
+<line x1="40" y1="323.125" x2="60" y2="323.125" stroke="black" stroke-width="1" />
+<line x1="50" y1="276.875" x2="50" y2="323.125" stroke="black" stroke-width="1" />
+<text x="100" y="403.125" font-size="1.8em" font-weight="bold" text-anchor="middle" dominant-baseline="central">Front</text>
+<text x="30" y="300" transform="rotate(-90, 30, 300)" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central">9.25 mm</text>
+<line x1="76.18430139592795" y1="353.125" x2="123.81569860407205" y2="353.125" stroke="black" stroke-width="1" />
+<line x1="76.18430139592795" y1="343.125" x2="76.18430139592795" y2="363.125" stroke="black" stroke-width="1" />
+<line x1="123.81569860407205" y1="343.125" x2="123.81569860407205" y2="363.125" stroke="black" stroke-width="1" />
+<text x="100" y="373.125" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central">9.53 mm</text>
+<line x1="248.75" y1="353.125" x2="951.25" y2="353.125" stroke="black" stroke-width="1" />
+<line x1="248.75" y1="343.125" x2="248.75" y2="363.125" stroke="black" stroke-width="1" />
+<line x1="951.25" y1="343.125" x2="951.25" y2="363.125" stroke="black" stroke-width="1" />
+<text x="600" y="373.125" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central">140.50 mm</text>
+<text x="600" y="403.125" font-size="1.8em" font-weight="bold" text-anchor="middle" dominant-baseline="central">Side</text>
+<text x="1100" y="403.125" font-size="1.8em" font-weight="bold" text-anchor="middle" dominant-baseline="central">Back</text>
+<text x="600" y="523.125" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central">Materials: metal, plastic</text>
+<line x1="248.75" y1="423.125" x2="248.75" y2="447.125" stroke="black" stroke-width="1" />
+<text x="251.25" y="449.125" transform="rotate(-90, 251.25, 449.125)" font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">metal</text>
+<line x1="253.75" y1="423.125" x2="253.75" y2="447.125" stroke="black" stroke-width="1" />
+<text x="282.5" y="449.125" transform="rotate(-90, 282.5, 449.125)" font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">metal</text>
+<line x1="311.25" y1="423.125" x2="311.25" y2="447.125" stroke="black" stroke-width="1" />
+<text x="375" y="449.125" transform="rotate(-90, 375, 449.125)" font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">plastic</text>
+<line x1="438.75" y1="423.125" x2="438.75" y2="447.125" stroke="black" stroke-width="1" />
+<text x="648.75" y="449.125" transform="rotate(-90, 648.75, 449.125)" font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">plastic</text>
+<line x1="858.75" y1="423.125" x2="858.75" y2="447.125" stroke="black" stroke-width="1" />
+<text x="875.625" y="449.125" transform="rotate(-90, 875.625, 449.125)" font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">plastic</text>
+<line x1="892.5" y1="423.125" x2="892.5" y2="447.125" stroke="black" stroke-width="1" />
+<text x="921.875" y="449.125" transform="rotate(-90, 921.875, 449.125)" font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">plastic</text>
+<line x1="951.25" y1="423.125" x2="951.25" y2="447.125" stroke="black" stroke-width="1" />
+<line x1="248.75" y1="435.125" x2="951.25" y2="435.125" stroke="black" stroke-width="1" />
+
+<!-- RENDERING - component: jaws -->
+<circle r="8.125" cx="1100" cy="300" stroke="dimgray" stroke-width="1" fill="silver" />
+
+
+<!-- RENDERING - component: tip -->
+<circle r="18.75" cx="1100" cy="300" stroke="dimgray" stroke-width="1" fill="silver" />
+<circle r="13.125" cx="1100" cy="300" stroke="dimgray" stroke-width="1" fill="silver" />
+
+
+<!-- RENDERING - component: grip -->
+<circle r="20" cx="1100" cy="300" stroke="dimgray" stroke-width="1" fill="silver" />
+
+
+<!-- RENDERING - component: body -->
+<polygon points="1088.092150697964,279.375 1111.907849302036,279.375 1123.8156986040722,300 1111.907849302036,320.625 1088.092150697964,320.625 1076.1843013959278,300 " stroke="dimgray" stroke-width="1" fill="maroon"/>
+
+
+<!-- RENDERING - component: clip -->
+<circle r="23.125" cx="1100" cy="300" stroke="dimgray" stroke-width="1" fill="silver" />
+
+<!-- 4 0.25 --><rect x="1090" y="277.125" width="20" height="1.25" rx="1" ry="1" stroke-width="0.5" stroke="dimgray" fill="silver"/>
+<!-- 4 1 --><rect x="1090" y="273.375" width="20" height="5" rx="1" ry="1" stroke-width="0.5" stroke="dimgray" fill="silver"/>
+<!-- 4 0.6 --><rect x="1090" y="275.375" width="20" height="3" rx="1" ry="1" stroke-width="0.5" stroke="dimgray" fill="silver"/>
+<!-- 4 2.25 --><rect x="1090" y="267.125" width="20" height="11.25" rx="1" ry="1" stroke-width="0.5" stroke="dimgray" fill="silver"/>
+
+
+<!-- RENDERING - component: cap -->
+<circle r="15" cx="1100" cy="300" stroke="dimgray" stroke-width="1" fill="black" />
+
+<circle r="18.75" cx="1100" cy="300" stroke="dimgray" stroke-width="1" fill="black" />
+
+<circle r="18.75" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="black" />
+
+<circle r="15" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="black" />
+
+
+<!-- RENDERING - component: cap -->
+<!-- 4 2.25 --><rect x="90" y="267.125" width="20" height="11.25" rx="1" ry="1" stroke-width="0.5" stroke="dimgray" fill="silver"/>
+<!-- 4 0.6 --><rect x="90" y="275.375" width="20" height="3" rx="1" ry="1" stroke-width="0.5" stroke="dimgray" fill="silver"/>
+<!-- 4 1 --><rect x="90" y="273.375" width="20" height="5" rx="1" ry="1" stroke-width="0.5" stroke="dimgray" fill="silver"/>
+<!-- 4 0.25 --><rect x="90" y="277.125" width="20" height="1.25" rx="1" ry="1" stroke-width="0.5" stroke="dimgray" fill="silver"/>
+
+<circle r="23.125" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="silver" />
+
+
+<!-- RENDERING - component: clip -->
+<polygon points="88.09215069796397,279.375 111.90784930203603,279.375 123.81569860407205,300 111.90784930203603,320.625 88.09215069796397,320.625 76.18430139592795,300 " stroke="dimgray" stroke-width="1" fill="maroon"/>
+
+
+<!-- RENDERING - component: body -->
+<circle r="20" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="silver" />
+
+
+<!-- RENDERING - component: grip -->
+<circle r="13.125" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="silver" />
+<circle r="18.75" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="silver" />
+
+
+<!-- RENDERING - component: tip -->
+<circle r="8.125" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="silver" />
+
+
+<!-- RENDERING - component: jaws -->
+
+<!-- RENDERING - component: jaws -->
+<!-- RENDERING - part: cylinder -->
+<rect x="248.75" y="291.875" width="5" height="16.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver"/>
+
+
+<!-- RENDERING - component: tip -->
+<!-- RENDERING - part: cone -->
+<path d="M253.75 286.875 L311.25 281.25 L311.25 318.75 L253.75 313.125 Z" stroke-width="0.5" stroke="black" fill="silver" />
+
+
+<!-- RENDERING - component: grip -->
+<!-- RENDERING - part: cylinder -->
+<rect x="311.25" y="280" width="127.5" height="40" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver"/>
+<rect x="311.25" y="280" width="127.5" height="40" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="url(#diagonalHatch)"/>
+
+
+<!-- RENDERING - component: body -->
+<!-- RENDERING - part: hexagonal -->
+<rect x="438.75" y="279.375" width="420" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="maroon"/>
+<line x1="438.75" y1="300" x2="858.75" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
+<line x1="438.75" y1="300" x2="858.75" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
+
+
+<!-- RENDERING - component: clip -->
+<!-- RENDERING - part: cylinder -->
+<rect x="858.75" y="276.875" width="33.75" height="46.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver"/>
+
+<!-- RENDERING - part: extra -->
+<path d="M753.75 270.875 Q731.25 285.875 718.75 272.125" stroke-width="4" stroke="black" fill="none" stroke-linecap="round" />
+<path d="M718.75 272.125 Q711.25 268.375 718.75 267.125" stroke-width="4" stroke="black" fill="none" stroke-linecap="round" />
+<line x1="718.75" y1="267.125" x2="853.75" y2="267.125" stroke-width="4.0" stroke="black" fill="dimgray" stroke-linecap="round" />
+/><line x1="853.75" y1="267.125" x2="858.75" y2="278.375" stroke-width="4.0" stroke="black" fill="dimgray" stroke-linecap="round" />
+/><path d="M753.75 270.875 Q731.25 285.875 718.75 272.125" stroke-width="3" stroke="silver" fill="none" stroke-linecap="round" />
+<path d="M718.75 272.125 Q711.25 268.375 718.75 267.125" stroke-width="3" stroke="silver" fill="none" stroke-linecap="round" />
+<line x1="718.75" y1="267.125" x2="853.75" y2="267.125" stroke-width="3" stroke="silver" fill="silver" stroke-linecap="round" />
+/><line x1="853.75" y1="267.125" x2="858.75" y2="278.375" stroke-width="3" stroke="silver" fill="silver" stroke-linecap="round" />
+/>
+
+<!-- RENDERING - component: cap -->
+<!-- RENDERING - part: cylinder -->
+<rect x="892.5" y="285" width="48.75" height="30" rx="1" ry="1" stroke-width="0.5" stroke="dimgray" fill="black"/>
+
+<!-- RENDERING - part: cylinder -->
+<rect x="941.25" y="281.25" width="10" height="37.5" rx="1" ry="1" stroke-width="0.5" stroke="dimgray" fill="black"/>
+
+<rect x="1140" y="20" width="40" height="40" stroke="black" stroke-width="2" fill="maroon" />
+<text x="1130" y="40" font-size="1.6em" font-weight="bold" text-anchor="end" dominant-baseline="central">Variants by body colour:</text>
+<text x="50%" y="580" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb) // Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
+</svg>
