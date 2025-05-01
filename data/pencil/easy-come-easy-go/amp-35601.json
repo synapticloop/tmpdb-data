@@ -4,6 +4,9 @@
 	"lead_size": "2.0",
 	"text": "EASY COME EASY GO 2.0",
 	"colour_component": "body",
+	"colour_map": {
+		"pink": "#FFA07A"
+	},
 	"front": [
 		{ "type": "circle", "dimensions": "2.0", "fill":  "black" }
 	],
@@ -20,7 +23,7 @@
 				{ "type": "cylinder", "dimensions": "6.0x8.25" }
 			],
 			"material": "plastic",
-			"colours": [ "silver" ]
+			"colours": [ "silver", "silver" ]
 		},
 		{
 			"type": "body",
@@ -28,7 +31,7 @@
 				{ "type": "hexagonal", "dimensions": "99.75x8.0" }
 			],
 			"material": "plastic",
-			"colours": [ "black" ]
+			"colours": [ "pink" ,"black" ]
 		},
 		{
 			"type": "clip",
@@ -46,7 +49,7 @@
 					]}
 			],
 			"material": "plastic",
-			"colours": [ "silver" ]
+			"colours": [ "silver", "silver" ]
 		},
 		{
 			"type": "tail",
@@ -55,7 +58,7 @@
 				{ "type": "cylinder", "dimensions": "1.75x7.75"}
 			],
 			"material": "plastic",
-			"colours": [ "black" ]
+			"colours": [ "pink", "black" ]
 		},
 		{
 			"type": "cap",
@@ -66,7 +69,7 @@
 				{ "type": "convex", "dimensions": "0.75x8.5", "offset": "1.5x4.25" }
 			],
 			"material": "plastic",
-			"colours": [ "black" ]
+			"colours": [ "pink", "black" ]
 		}
 	]
 }

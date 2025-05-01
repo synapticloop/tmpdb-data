@@ -54,9 +54,6 @@ export class Pencil {
 
 		this.colourComponent = json.colour_component ?? this.colourComponent;
 		this.colourMap = json.colour_map ?? this.colourMap;
-		if(Object.keys(this.colourMap).length > 0) {
-			console.log("sadfkdsjh");
-		}
 
 
 		this.front = json.front ?? this.front;
@@ -302,7 +299,7 @@ export class Pencil {
 
 		// now go through each component and render the parts
 		for (let component of this.components) {
-			svgString += component.renderSvg(shouldColour, xPosition, this.colourMap, thisColourIndex, thisColourComponent);
+			svgString += component.renderSvg(shouldColour, xPosition, this.colourMap, thisColourIndex);
 			xPosition += component.getWidth();
 		}
 

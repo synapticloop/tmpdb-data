@@ -129,15 +129,15 @@
 <circle cx="100" cy="300" r="5" stroke="dimgray" stroke-width="0.5" fill="black" />
 <!-- RENDERING - component: tip -->
 <!-- RENDERING - part: cylinder -->
-<rect x="358.75" y="291.875" width="12.5" height="16.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#ae986f"/>
+<rect x="358.75" y="291.875" width="12.5" height="16.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="undefined"/>
 
 <!-- RENDERING - part: cone -->
-<path d="M371.25 291.875 L396.25 281.25 L396.25 318.75 L371.25 308.125 Z" stroke-width="0.5" stroke="black" fill="#ae986f" />
+<path d="M371.25 291.875 L396.25 281.25 L396.25 318.75 L371.25 308.125 Z" stroke-width="0.5" stroke="black" fill="undefined" />
 
 
 <!-- RENDERING - component: head -->
 <!-- RENDERING - part: cone -->
-<path d="M396.25 280 L421.25 274.375 L421.25 325.625 L396.25 320 Z" stroke-width="0.5" stroke="black" fill="#b88160" />
+<path d="M396.25 280 L421.25 274.375 L421.25 325.625 L396.25 320 Z" stroke-width="0.5" stroke="black" fill="undefined" />
 
 
 <!-- RENDERING - component: body -->
@@ -149,7 +149,7 @@
 
 <!-- RENDERING - component: ferrule -->
 <!-- RENDERING - part: cylinder -->
-<rect x="911.25" y="274.375" width="70" height="51.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#b4b8b9"/>
+<rect x="911.25" y="274.375" width="70" height="51.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="undefined"/>
 <line x1="919.3269230769231" y1="275.375" x2="919.3269230769231" y2="324.625" stroke-width="1" stroke="gray" />
 <line x1="924.7115384615385" y1="275.375" x2="924.7115384615385" y2="324.625" stroke-width="1" stroke="gray" />
 <line x1="930.0961538461538" y1="275.375" x2="930.0961538461538" y2="324.625" stroke-width="1" stroke="gray" />
@@ -165,15 +165,15 @@
 
 <!-- RENDERING - component: cap -->
 <!-- RENDERING - part: cylinder -->
-<rect x="981.25" y="276.875" width="25" height="46.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#b4b8b9"/>
+<rect x="981.25" y="276.875" width="25" height="46.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="undefined"/>
 
 <!-- RENDERING - part: cylinder -->
-<rect x="1006.25" y="275" width="10" height="50" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#b4b8b9"/>
+<rect x="1006.25" y="275" width="10" height="50" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="undefined"/>
 
 
 <!-- RENDERING - component: eraser -->
 <!-- RENDERING - part: cylinder -->
-<rect x="1016.25" y="276.875" width="25" height="46.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#db756d"/>
+<rect x="1016.25" y="276.875" width="25" height="46.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="undefined"/>
 
 <text x="1380" y="30" font-size="1.6em" font-weight="bold" text-anchor="end" dominant-baseline="central">'body' colour variants</text>
 <rect x="1340" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="#e38f0f" />

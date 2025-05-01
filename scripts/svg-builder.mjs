@@ -36,7 +36,7 @@ for (const pencilDirectory of pencilDirectories) {
 		const pencil = new Pencil(pencilFileFull);
 		const outputSvgFile = path.join(svgOutputDir, pencilFileName + ".svg");
 
-		fs.writeFileSync(outputSvgFile, pencil.renderSvg(false, 0, "white"));
+		fs.writeFileSync(outputSvgFile, pencil.renderSvg(false, 0, ""));
 		writeSvgToPng(outputSvgFile, path.join(pngOutputDir, pencilFileName + ".png"))
 
 		let colourComponent = pencil.colourComponent;

@@ -40,11 +40,8 @@ export class Component {
 		}
 	}
 
-	renderSvg(shouldColour, startX, colourMap, index, colourComponent) {
-		let fillColour = shouldColour ? this.colours[0] : "white";
-		if(this.type === colourComponent) {
-			fillColour = this.colours[index];
-		}
+	renderSvg(shouldColour, startX, colourMap, index) {
+		let fillColour = shouldColour ? this.colours[index] : "white";
 
 		if (colourMap[fillColour]) {
 			fillColour = colourMap[fillColour];
