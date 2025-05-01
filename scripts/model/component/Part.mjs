@@ -172,7 +172,7 @@ export class Part {
 						`rx="1" ry="1" stroke-width="2" stroke="black" fill="${fillColour}"/>\n`;
 				svgString += `<text x="${startX + (this.width * 5)/2}" ` +
 						`y="${midY}" ` +
-						`text-anchor="middle" dominant-baseline="middle">` +
+						`text-anchor="middle" dominant-baseline="central">` +
 						`<tspan stroke="black" fill="black" textLength="{this.width * 5 - 24}" > ` +
 						`HB` +
 						`</tspan>` +

@@ -4,6 +4,9 @@
 	"text": "",
 	"colour_component": "body",
 	"lead_size": 2.0,
+	"front": [
+		{ "type": "circle", "dimensions": "2.0", "fill":  "black" }
+	],
 	"components": [
 		{
 			"type": "tip",
@@ -52,7 +55,16 @@
 		{
 			"type": "clip",
 			"parts": [
-				{ "type": "cylinder", "dimensions": "7.5x9.0" }
+				{ "type": "cylinder", "dimensions": "7.5x9.0" },
+				{ "type": "extra",
+					"offset": "-39x4.325",
+					"dimensions": "31.5x3.0x4.5",
+					"parts": [
+						{ "line": "0.0,-2.0,1.75,0.0" },
+						{ "line": "1.75,0.0,26.25,-3.0" },
+						{ "curve": "26.25,-3.0,28.5,-2.25,27.375,-3.0" },
+						{ "line": "28.5,-2.25,31.5,0.0" }
+					]}
 			],
 			"material": "metal",
 			"colours": [ "black" ]

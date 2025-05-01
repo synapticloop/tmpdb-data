@@ -12,7 +12,9 @@ utilised to generate all sorts of images and output data.
   - `/output/vectors/` - Generated vector (SVG) files 
 
 
-## Example
+## Examples
+
+### OHTO WN03
 
 For the file `/data/ohto/sharp-pencil-wn03.json`, one of the SVG files that 
 is generated.
@@ -30,6 +32,17 @@ and colour variants too (as PNGs)
 <img src="./output/images/pencil/ohto/sharp-pencil-wn03-colour-maroon.png">
 
 <img src="./output/images/pencil/ohto/sharp-pencil-wn03-colour-sandybrown.png">
+
+### Mitsubishi Uni 
+
+For the file `/data/mitsubishi/uni.json`, one of the SVG files that is 
+generated.
+
+![Alt text](./output/vectors/pencil/mitsubishi/uni.svg)
+
+and colour variants too (as PNGs)
+
+<img src="./output/images/pencil/mitsubishi/uni-colour-maroon.png">
 
 
 ## Updating CustomVector Images

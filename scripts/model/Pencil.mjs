@@ -1,7 +1,8 @@
 // TODO - get rid of the filesystem - should pass in a JSON object
 import * as fs from 'fs';
-import {Component} from "./component/Component.mjs";
-import { drawTextBoldCentred, drawTextBold } from "../utils/svg-helper.mjs";
+import { Component } from "./component/Component.mjs";
+import { drawTextBoldCentred, drawTextBold, drawText } from "../utils/svg-helper.mjs";
+
 
 export class Pencil {
 	static WIDTH = 1400;
@@ -39,6 +40,8 @@ export class Pencil {
 	materialsSet = new Set();
 	colourComponent = ""
 	colourComponents = [ "white" ];
+	front = [];
+	back = [];
 
 	constructor(filePath) {
 		this.filePath = filePath;
@@ -49,6 +52,9 @@ export class Pencil {
 		const json = JSON.parse(fs.readFileSync(this.filePath, "utf8"));
 
 		this.colourComponent = json.colour_component ?? this.colourComponent;
+
+		this.front = json.front ?? this.front;
+		this.back = json.back ?? this.back;
 
 		for(const component of json.components) {
 			const thisComponent = new Component(component);
@@ -95,7 +101,7 @@ export class Pencil {
 		let xPosition = (Pencil.WIDTH - this.totalLength)/2;
 
 		svgString += drawTextBold(`${this.brand} // ${this.model} (${this.leadSize}mm)`, 30, 50, "2.0em");
-		svgString += drawTextBold(`${this.text}`, 30, 74, "1.1em");
+		svgString += drawText(`${this.text}`, 30, 80, "1.1em");
 
 		svgString += this.drawSvgGuidelines();
 
@@ -116,13 +122,27 @@ export class Pencil {
 			let currentOffset = offset;
 
 			offset += component.getWidth();
-			svgString += `<text x="${(offset + currentOffset)/2}" ` +
-					`y="${Pencil.HEIGHT/2 - 102 - this.maxHeight/2 * 5}" ` +
-					`transform="rotate(-90, ${(offset + currentOffset)/2}, ${Pencil.HEIGHT/2 - 102 - this.maxHeight/2 * 5})" ` +
-					`font-size="1.2em" font-weight="bold" dominant-baseline="middle">` +
-					`${component.getType()} (${(Math.round(component.getWidth()/5 * 100) / 100).toFixed(2)} mm)` +
-					`</text>\n`
-
+			if(component.getWidth()/5 > 8) {
+				svgString += `<text x="${(offset + currentOffset) / 2 - 3}" ` +
+						`y="${Pencil.HEIGHT / 2 - 102 - this.maxHeight / 2 * 5}" ` +
+						`transform="rotate(-90, ${(offset + currentOffset) / 2 - 3}, ${Pencil.HEIGHT / 2 - 102 - this.maxHeight / 2 * 5})" ` +
+						`font-size="1.2em" font-weight="bold" dominant-baseline="auto">` +
+						`${(Math.round(component.getWidth() / 5 * 100) / 100).toFixed(2)} mm` +
+						`</text>\n`
+				svgString += `<text x="${(offset + currentOffset) / 2 + 3}" ` +
+						`y="${Pencil.HEIGHT / 2 - 102 - this.maxHeight / 2 * 5}" ` +
+						`transform="rotate(-90, ${(offset + currentOffset) / 2 + 3}, ${Pencil.HEIGHT / 2 - 102 - this.maxHeight / 2 * 5})" ` +
+						`font-size="1.2em" font-weight="bold" dominant-baseline="hanging">` +
+						`${component.getType()}` +
+						`</text>\n`
+			} else {
+				svgString += `<text x="${(offset + currentOffset) / 2}" ` +
+						`y="${Pencil.HEIGHT / 2 - 102 - this.maxHeight / 2 * 5}" ` +
+						`transform="rotate(-90, ${(offset + currentOffset) / 2}, ${Pencil.HEIGHT / 2 - 102 - this.maxHeight / 2 * 5})" ` +
+						`font-size="1.2em" font-weight="bold" dominant-baseline="middle">` +
+						`${(Math.round(component.getWidth() / 5 * 100) / 100).toFixed(2)} mm ${component.getType()}` +
+						`</text>\n`
+			}
 			// now for extraParts
 			for(const extraPart of component.getExtraParts()) {
 				// draw the straight-through line for guidance
@@ -169,9 +189,9 @@ export class Pencil {
 						`y2="${Pencil.HEIGHT/2 + 132 - this.maxHeight/2 * 5}" ` +
 						`stroke="black" stroke-width="1" />\n`;
 
-				svgString += `<text x="${offset + extraPart.extraOffset[0]*5 + (extraPart.extraWidth/2*5)}" y="${Pencil.HEIGHT/2 + 70 + this.maxHeight/2 * 5}" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central">${component.getMaterial()}</text>\n`
-				svgString += `<text x="${offset + extraPart.extraOffset[0]*5 + (extraPart.extraWidth/2*5)}" y="${Pencil.HEIGHT/2 - 46 - this.maxHeight/2 * 5}" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central">${component.getType()} (extra)</text>\n`
-				svgString += `<text x="${offset + extraPart.extraOffset[0]*5 + (extraPart.extraWidth/2*5)}" y="${Pencil.HEIGHT/2 - 26 - this.maxHeight/2 * 5}" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central">(${(Math.round(extraPart.extraWidth * 100) / 100).toFixed(2)} mm)</text>\n`
+				svgString += `<text x="${offset + extraPart.extraOffset[0]*5 + (extraPart.extraWidth/2*5)}" y="${Pencil.HEIGHT/2 + 70 + this.maxHeight/2 * 5}" font-size="1.2em" text-anchor="middle" dominant-baseline="central">${component.getMaterial()}</text>\n`
+				svgString += `<text x="${offset + extraPart.extraOffset[0]*5 + (extraPart.extraWidth/2*5)}" y="${Pencil.HEIGHT/2 - 46 - this.maxHeight/2 * 5}" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central">${(Math.round(extraPart.extraWidth * 100) / 100).toFixed(2)} mm</text>\n`
+				svgString += `<text x="${offset + extraPart.extraOffset[0]*5 + (extraPart.extraWidth/2*5)}" y="${Pencil.HEIGHT/2 - 26 - this.maxHeight/2 * 5}" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central">${component.getType()} (extra)</text>\n`
 			}
 		}
 
@@ -224,7 +244,7 @@ export class Pencil {
 			let currentOffset = offset;
 
 			offset += component.getWidth();
-			svgString += `<text x="${(offset + currentOffset)/2}" y="${Pencil.HEIGHT/2 + 126 + this.maxHeight/2 * 5}" transform="rotate(-90, ${(offset + currentOffset)/2}, ${Pencil.HEIGHT/2 + 126 + this.maxHeight/2 * 5})" font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="middle">${component.getMaterial()}</text>\n`
+			svgString += `<text x="${(offset + currentOffset)/2}" y="${Pencil.HEIGHT/2 + 126 + this.maxHeight/2 * 5}" transform="rotate(-90, ${(offset + currentOffset)/2}, ${Pencil.HEIGHT/2 + 126 + this.maxHeight/2 * 5})" font-size="1.2em" text-anchor="end" dominant-baseline="middle">${component.getMaterial()}</text>\n`
 		}
 
 		svgString += `<line x1="${offset}" y1="${Pencil.HEIGHT/2 + 100 + this.maxHeight/2 * 5}" ` +
@@ -239,9 +259,38 @@ export class Pencil {
 			svgString += component.renderBack(shouldColour, Pencil.WIDTH - 100, thisColourIndex, thisColourComponent);
 		}
 
+		// last thing we do is to draw the back section in order
+		for(let back of this.back) {
+			let dimensionsTemp = back.dimensions.split("x");
+			let dimensions = [];
+			for(const dimension of dimensionsTemp) {
+				dimensions.push(dimension);
+			}
+
+			switch (back.type) {
+				case "circle":
+					svgString += `<circle cx="${Pencil.WIDTH - 100}" cy="${Pencil.HEIGHT / 2}" r="${dimensions[0]/2 * 5}" stroke="dimgray" stroke-width="0.5" fill="${back.fill}" />`
+					break;
+			}
+		}
+
 		this.components.reverse();
 		for (let component of this.components) {
 			svgString += component.renderFront(shouldColour, 100, thisColourIndex, thisColourComponent);
+		}
+
+		for(let front of this.front) {
+			let dimensionsTemp = front.dimensions.split("x");
+			let dimensions = [];
+			for(const dimension of dimensionsTemp) {
+				dimensions.push(dimension);
+			}
+
+			switch (front.type) {
+				case "circle":
+					svgString += `<circle cx="100" cy="${Pencil.HEIGHT / 2}" r="${dimensions[0]/2 * 5}" stroke="dimgray" stroke-width="0.5" fill="${front.fill}" />`
+					break;
+			}
 		}
 		this.components.reverse();
 
@@ -463,41 +512,48 @@ export class Pencil {
 		// lets draw the pencil colours
 
 		let colourOffset = Pencil.WIDTH - 60;
+
+		svgString += `<text ` +
+				`x="${colourOffset + 40}" ` +
+				`y="30" ` +
+				`font-size="1.6em" font-weight="bold" text-anchor="end" dominant-baseline="central">` +
+				`${this.colourComponent} colour variants` +
+				`</text>\n`
+
 		for(let colourComponent of this.colourComponents) {
-			svgString += `<rect x="${colourOffset}" y="20" width="40" height="40" stroke="black" stroke-width="2" fill="${colourComponent}" />\n`;
+			svgString += `<rect x="${colourOffset}" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="${colourComponent}" />\n`;
 			colourOffset -= 60;
 		}
 
-		svgString += `<text x="${colourOffset + 50 }" y="40" font-size="1.6em" font-weight="bold" text-anchor="end" dominant-baseline="central">Variants by ${this.colourComponent} colour:</text>\n`
 		return(svgString);
 	}
 
 	drawSvgMaterials() {
 		let svgString = "";
 		let i = 0;
-		let offset = 0;
-		for(const material of this.materials) {
-			if(i === 0) {
-				svgString += `<text ` +
-						`x="${Pencil.WIDTH - 20}" ` +
-						`y="${80 + offset}" ` +
-						`font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">` +
-						`Materials: ${this.materials[i]}` +
-						`</text>\n`
-			} else {
-				svgString += `<text ` +
-						`x="${Pencil.WIDTH - 20}" ` +
-						`y="${80 + offset}" ` +
-						`font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">` +
-						`${this.materials[i]}` +
-						`</text>\n`
-			}
+		let offset = 106;
+		svgString += `<text ` +
+				`x="30" ` +
+				`y="${offset}" ` +
+				`font-size="1.2em" font-weight="bold" text-anchor="start" dominant-baseline="central">` +
+				`Materials:` +
+				`</text>\n`
 
-			i++;
+		offset += 20;
+
+		for(const material of this.materials) {
+			svgString += `<text ` +
+					`x="50" ` +
+					`y="${offset}" ` +
+					`font-size="1.2em" text-anchor="start" dominant-baseline="central">` +
+					` - ${material}` +
+					`</text>\n`
 
 			offset += 20;
 		}
+
 		return(svgString);
 	}
+
 	getTotalLength() { return(this.totalLength); }
 }
