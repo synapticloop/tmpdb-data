@@ -4,6 +4,15 @@
 	"lead_size": "2.0",
 	"text": "OHTO JAPAN WN03 Mechanical Pencil 2.0",
 	"colour_component": "body",
+	"colour_map": {
+		"yellow": "#e38f0f",
+		"burgundy": "#5d191d",
+		"blue": "#1a4b88",
+		"green": "#053439",
+		"wood": "#b88160",
+		"brass": "#ae986f",
+		"pink": "#db756d"
+	},
 	"front": [
 		{ "type": "circle", "dimensions": "2.0", "fill":  "black" }
 	],
@@ -15,7 +24,7 @@
 				{ "type": "cone", "dimensions": "5.0x3.25x7.5" }
 			],
 			"material": "metal",
-			"colours": [ "gold" ]
+			"colours": [ "brass" ]
 		},
 		{
 			"type": "head",
@@ -23,7 +32,7 @@
 				{ "type": "cone", "dimensions": "5.0x8.0x10.25" }
 			],
 			"material": "wood",
-			"colours": [ "sandybrown"]
+			"colours": [ "wood"]
 		},
 		{
 			"type": "body",
@@ -31,7 +40,7 @@
 				{ "type": "hexagonal", "dimensions": "98.0x10.25" }
 			],
 			"material": "wood",
-			"colours": [ "yellow", "blue", "green", "maroon", "sandybrown" ]
+			"colours": [ "yellow", "blue", "green", "maroon", "wood" ]
 		},
 		{
 			"type": "ferrule",

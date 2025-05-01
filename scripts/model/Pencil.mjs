@@ -42,6 +42,7 @@ export class Pencil {
 	colourComponents = [ "white" ];
 	front = [];
 	back = [];
+	colourMap = {};
 
 	constructor(filePath) {
 		this.filePath = filePath;
@@ -52,6 +53,11 @@ export class Pencil {
 		const json = JSON.parse(fs.readFileSync(this.filePath, "utf8"));
 
 		this.colourComponent = json.colour_component ?? this.colourComponent;
+		this.colourMap = json.colour_map ?? this.colourMap;
+		if(Object.keys(this.colourMap).length > 0) {
+			console.log("sadfkdsjh");
+		}
+
 
 		this.front = json.front ?? this.front;
 		this.back = json.back ?? this.back;
@@ -256,7 +262,7 @@ export class Pencil {
 				`stroke="black" stroke-width="1" />\n`;
 
 		for (let component of this.components) {
-			svgString += component.renderBack(shouldColour, Pencil.WIDTH - 100, thisColourIndex, thisColourComponent);
+			svgString += component.renderBack(shouldColour, Pencil.WIDTH - 100, this.colourMap, thisColourIndex, thisColourComponent);
 		}
 
 		// last thing we do is to draw the back section in order
@@ -276,7 +282,7 @@ export class Pencil {
 
 		this.components.reverse();
 		for (let component of this.components) {
-			svgString += component.renderFront(shouldColour, 100, thisColourIndex, thisColourComponent);
+			svgString += component.renderFront(shouldColour, 100, this.colourMap, thisColourIndex, thisColourComponent);
 		}
 
 		for(let front of this.front) {
@@ -296,7 +302,7 @@ export class Pencil {
 
 		// now go through each component and render the parts
 		for (let component of this.components) {
-			svgString += component.renderSvg(shouldColour, xPosition, thisColourIndex, thisColourComponent);
+			svgString += component.renderSvg(shouldColour, xPosition, this.colourMap, thisColourIndex, thisColourComponent);
 			xPosition += component.getWidth();
 		}
 
@@ -521,7 +527,13 @@ export class Pencil {
 				`</text>\n`
 
 		for(let colourComponent of this.colourComponents) {
-			svgString += `<rect x="${colourOffset}" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="${colourComponent}" />\n`;
+			let fillColour = colourComponent;
+
+			if (this.colourMap[colourComponent]) {
+				fillColour = this.colourMap[colourComponent];
+			}
+
+			svgString += `<rect x="${colourOffset}" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="${fillColour}" />\n`;
 			colourOffset -= 60;
 		}
 

@@ -68,19 +68,19 @@
 <line x1="358.75" y1="437.625" x2="1041.25" y2="437.625" stroke="black" stroke-width="1" />
 
 <!-- RENDERING - component: tip -->
-<circle r="8.125" cx="1300" cy="300" stroke="dimgray" stroke-width="1" fill="gold" />
+<circle r="8.125" cx="1300" cy="300" stroke="dimgray" stroke-width="1" fill="#ae986f" />
 
-<circle r="18.75" cx="1300" cy="300" stroke="dimgray" stroke-width="1" fill="gold" />
-<circle r="8.125" cx="1300" cy="300" stroke="dimgray" stroke-width="1" fill="gold" />
+<circle r="18.75" cx="1300" cy="300" stroke="dimgray" stroke-width="1" fill="#ae986f" />
+<circle r="8.125" cx="1300" cy="300" stroke="dimgray" stroke-width="1" fill="#ae986f" />
 
 
 <!-- RENDERING - component: head -->
-<circle r="25.625" cx="1300" cy="300" stroke="dimgray" stroke-width="1" fill="sandybrown" />
-<circle r="20" cx="1300" cy="300" stroke="dimgray" stroke-width="1" fill="sandybrown" />
+<circle r="25.625" cx="1300" cy="300" stroke="dimgray" stroke-width="1" fill="#b88160" />
+<circle r="20" cx="1300" cy="300" stroke="dimgray" stroke-width="1" fill="#b88160" />
 
 
 <!-- RENDERING - component: body -->
-<polygon points="1285.2053993520158,274.375 1314.7946006479842,274.375 1329.5892012959682,300 1314.7946006479842,325.625 1285.2053993520158,325.625 1270.4107987040318,300 " stroke="dimgray" stroke-width="1" fill="green"/>
+<polygon points="1285.2053993520158,274.375 1314.7946006479842,274.375 1329.5892012959682,300 1314.7946006479842,325.625 1285.2053993520158,325.625 1270.4107987040318,300 " stroke="dimgray" stroke-width="1" fill="#053439"/>
 
 
 <!-- RENDERING - component: ferrule -->
@@ -94,9 +94,9 @@
 
 
 <!-- RENDERING - component: eraser -->
-<circle r="23.125" cx="1300" cy="300" stroke="dimgray" stroke-width="1" fill="pink" />
+<circle r="23.125" cx="1300" cy="300" stroke="dimgray" stroke-width="1" fill="#db756d" />
 
-<circle r="23.125" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="pink" />
+<circle r="23.125" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="#db756d" />
 
 
 <!-- RENDERING - component: eraser -->
@@ -110,39 +110,39 @@
 
 
 <!-- RENDERING - component: ferrule -->
-<polygon points="85.20539935201585,274.375 114.79460064798415,274.375 129.5892012959683,300 114.79460064798415,325.625 85.20539935201585,325.625 70.41079870403168,300 " stroke="dimgray" stroke-width="1" fill="green"/>
+<polygon points="85.20539935201585,274.375 114.79460064798415,274.375 129.5892012959683,300 114.79460064798415,325.625 85.20539935201585,325.625 70.41079870403168,300 " stroke="dimgray" stroke-width="1" fill="#053439"/>
 
 
 <!-- RENDERING - component: body -->
-<circle r="20" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="sandybrown" />
-<circle r="25.625" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="sandybrown" />
+<circle r="20" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="#b88160" />
+<circle r="25.625" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="#b88160" />
 
 
 <!-- RENDERING - component: head -->
-<circle r="8.125" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="gold" />
-<circle r="18.75" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="gold" />
+<circle r="8.125" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="#ae986f" />
+<circle r="18.75" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="#ae986f" />
 
-<circle r="8.125" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="gold" />
+<circle r="8.125" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="#ae986f" />
 
 
 <!-- RENDERING - component: tip -->
 <circle cx="100" cy="300" r="5" stroke="dimgray" stroke-width="0.5" fill="black" />
 <!-- RENDERING - component: tip -->
 <!-- RENDERING - part: cylinder -->
-<rect x="358.75" y="291.875" width="12.5" height="16.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="gold"/>
+<rect x="358.75" y="291.875" width="12.5" height="16.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#ae986f"/>
 
 <!-- RENDERING - part: cone -->
-<path d="M371.25 291.875 L396.25 281.25 L396.25 318.75 L371.25 308.125 Z" stroke-width="0.5" stroke="black" fill="gold" />
+<path d="M371.25 291.875 L396.25 281.25 L396.25 318.75 L371.25 308.125 Z" stroke-width="0.5" stroke="black" fill="#ae986f" />
 
 
 <!-- RENDERING - component: head -->
 <!-- RENDERING - part: cone -->
-<path d="M396.25 280 L421.25 274.375 L421.25 325.625 L396.25 320 Z" stroke-width="0.5" stroke="black" fill="sandybrown" />
+<path d="M396.25 280 L421.25 274.375 L421.25 325.625 L396.25 320 Z" stroke-width="0.5" stroke="black" fill="#b88160" />
 
 
 <!-- RENDERING - component: body -->
 <!-- RENDERING - part: hexagonal -->
-<rect x="421.25" y="274.375" width="490" height="51.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="green"/>
+<rect x="421.25" y="274.375" width="490" height="51.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#053439"/>
 <line x1="421.25" y1="300" x2="911.25" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="421.25" y1="300" x2="911.25" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
 
@@ -173,14 +173,14 @@
 
 <!-- RENDERING - component: eraser -->
 <!-- RENDERING - part: cylinder -->
-<rect x="1016.25" y="276.875" width="25" height="46.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="pink"/>
+<rect x="1016.25" y="276.875" width="25" height="46.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#db756d"/>
 
 <text x="1380" y="30" font-size="1.6em" font-weight="bold" text-anchor="end" dominant-baseline="central">body colour variants</text>
-<rect x="1340" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="yellow" />
-<rect x="1280" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="blue" />
-<rect x="1220" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="green" />
+<rect x="1340" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="#e38f0f" />
+<rect x="1280" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="#1a4b88" />
+<rect x="1220" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="#053439" />
 <rect x="1160" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="maroon" />
-<rect x="1100" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="sandybrown" />
+<rect x="1100" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="#b88160" />
 <text x="30" y="106" font-size="1.2em" font-weight="bold" text-anchor="start" dominant-baseline="central">Materials:</text>
 <text x="50" y="126" font-size="1.2em" text-anchor="start" dominant-baseline="central"> - metal</text>
 <text x="50" y="146" font-size="1.2em" text-anchor="start" dominant-baseline="central"> - wood</text>
