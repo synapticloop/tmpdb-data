@@ -5,7 +5,7 @@
 	"text": "PACIFIC ARC H-1309",
 	"colour_component": "body",
 	"colour_map": {
-		"silver": "#b4b8b9"
+		"black": "#000000"
 	},
 	"front": [
 		{ "type": "circle", "dimensions": "2.0", "fill":  "black" }
@@ -20,7 +20,7 @@
 				{ "type": "cone", "dimensions": "2.25x3.25x4.0" }
 			],
 			"material": "metal",
-			"colours": [ "silver" ]
+			"colours": [ "black" ]
 		},
 		{
 			"type": "tip",
@@ -28,7 +28,7 @@
 				{ "type": "cone", "dimensions": "13.75x5.25x8.25" }
 			],
 			"material": "metal",
-			"colours": [ "silver" ]
+			"colours": [ "black" ]
 		},
 		{
 			"type": "grip",
@@ -36,7 +36,7 @@
 				{ "type": "cylinder", "dimensions": "29.5x8.25", "finish":  "knurled" }
 			],
 			"material": "metal",
-			"colours": [ "silver" ]
+			"colours": [ "black" ]
 		},
 		{
 			"type": "body",
@@ -44,7 +44,7 @@
 				{ "type": "hexagonal", "dimensions": "67.5x8.0" }
 			],
 			"material": "metal",
-			"colours": [ "silver" ]
+			"colours": [ "black" ]
 		},
 		{
 			"type": "clip",
@@ -60,7 +60,7 @@
 					]}
 			],
 			"material": "metal",
-			"colours": [ "silver" ]
+			"colours": [ "black" ]
 		},
 		{
 			"type": "tail",
@@ -68,7 +68,7 @@
 				{ "type": "cylinder", "dimensions": "4.0x8.0" }
 			],
 			"material": "metal",
-			"colours": [ "silver" ]
+			"colours": [ "black" ]
 		},
 		{
 			"type": "indicator",
@@ -76,7 +76,7 @@
 				{ "type": "cylinder", "dimensions": "9.5x8.25", "finish": "knurled" }
 			],
 			"material": "plastic",
-			"colours": [ "silver" ]
+			"colours": [ "black" ]
 		},
 		{
 			"type": "foot",
@@ -84,7 +84,7 @@
 				{ "type": "cylinder", "dimensions": "1.0x8.0" }
 			],
 			"material": "metal",
-			"colours": [ "silver" ]
+			"colours": [ "black" ]
 		},
 		{
 			"type": "ring",
@@ -100,7 +100,7 @@
 				{ "type": "cylinder", "dimensions": "1.25x8.0" }
 			],
 			"material": "metal",
-			"colours": [ "silver" ]
+			"colours": [ "black" ]
 		},
 		{
 			"type": "cap",
@@ -114,7 +114,7 @@
 				{ "type": "cylinder", "dimensions": "1.75x5.5" }
 			],
 			"material": "plastic",
-			"colours": [ "silver" ]
+			"colours": [ "black" ]
 		}
 	]
 }

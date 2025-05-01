@@ -175,12 +175,17 @@
 <!-- RENDERING - part: cylinder -->
 <rect x="1016.25" y="276.875" width="25" height="46.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
 
-<text x="1380" y="30" font-size="1.6em" font-weight="bold" text-anchor="end" dominant-baseline="central">body colour variants</text>
+<text x="1380" y="30" font-size="1.6em" font-weight="bold" text-anchor="end" dominant-baseline="central">'body' colour variants</text>
 <rect x="1340" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="#e38f0f" />
+<text x="1360" y="100" transform="rotate(-90, 1360, 100)" font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">yellow</text>
 <rect x="1280" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="#1a4b88" />
+<text x="1300" y="100" transform="rotate(-90, 1300, 100)" font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">blue</text>
 <rect x="1220" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="#053439" />
+<text x="1240" y="100" transform="rotate(-90, 1240, 100)" font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">green</text>
 <rect x="1160" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="maroon" />
+<text x="1180" y="100" transform="rotate(-90, 1180, 100)" font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">maroon</text>
 <rect x="1100" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="#b88160" />
+<text x="1120" y="100" transform="rotate(-90, 1120, 100)" font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">wood</text>
 <text x="30" y="106" font-size="1.2em" font-weight="bold" text-anchor="start" dominant-baseline="central">Materials:</text>
 <text x="50" y="126" font-size="1.2em" text-anchor="start" dominant-baseline="central"> - metal</text>
 <text x="50" y="146" font-size="1.2em" text-anchor="start" dominant-baseline="central"> - wood</text>

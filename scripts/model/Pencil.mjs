@@ -523,7 +523,7 @@ export class Pencil {
 				`x="${colourOffset + 40}" ` +
 				`y="30" ` +
 				`font-size="1.6em" font-weight="bold" text-anchor="end" dominant-baseline="central">` +
-				`${this.colourComponent} colour variants` +
+				`'${this.colourComponent}' colour variants` +
 				`</text>\n`
 
 		for(let colourComponent of this.colourComponents) {
@@ -534,6 +534,13 @@ export class Pencil {
 			}
 
 			svgString += `<rect x="${colourOffset}" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="${fillColour}" />\n`;
+			svgString += `<text x="${colourOffset + 20}" ` +
+					`y="100" ` +
+					`transform="rotate(-90, ${colourOffset + 20}, 100)" ` +
+					`font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">` +
+					`${colourComponent}` +
+					`</text>\n`
+
 			colourOffset -= 60;
 		}
 

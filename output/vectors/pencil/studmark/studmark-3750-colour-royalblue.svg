@@ -206,7 +206,7 @@
 <rect x="945.625" y="279.375" width="47.5" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver"/>
 <rect x="945.625" y="279.375" width="47.5" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="url(#diagonalHatch)"/>
 <rect x="955.625" y="289.6875" width="27.5" height="20.625" rx="1" ry="1" stroke-width="2" stroke="black" fill="silver"/>
-<text x="969.375" y="300" text-anchor="middle" dominant-baseline="central"><tspan stroke="black" fill="black" textLength="{this.width * 5 - 24}" > HB</tspan></text>
+<text x="969.375" y="300" text-anchor="middle" dominant-baseline="central"><tspan stroke="dimgray" stroke-width="0.5" fill="black" textLength="{this.width * 5 - 24}" > HB</tspan></text>
 
 <!-- RENDERING - component: foot -->
 <!-- RENDERING - part: cylinder -->
@@ -220,8 +220,9 @@
 <!-- RENDERING - part: convex -->
 <path d="M1058.125 286.25 Q1069.375 300 1058.125 313.75" stroke-width="0.5" stroke="black" fill="silver"/>
 
-<text x="1380" y="30" font-size="1.6em" font-weight="bold" text-anchor="end" dominant-baseline="central">body colour variants</text>
+<text x="1380" y="30" font-size="1.6em" font-weight="bold" text-anchor="end" dominant-baseline="central">'body' colour variants</text>
 <rect x="1340" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="royalblue" />
+<text x="1360" y="100" transform="rotate(-90, 1360, 100)" font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">royalblue</text>
 <text x="30" y="106" font-size="1.2em" font-weight="bold" text-anchor="start" dominant-baseline="central">Materials:</text>
 <text x="50" y="126" font-size="1.2em" text-anchor="start" dominant-baseline="central"> - metal</text>
 <text x="50" y="146" font-size="1.2em" text-anchor="start" dominant-baseline="central"> - plastic</text>

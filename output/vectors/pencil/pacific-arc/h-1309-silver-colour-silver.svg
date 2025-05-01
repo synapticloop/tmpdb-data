@@ -113,31 +113,31 @@
 <line x1="328.75" y1="434.5" x2="1071.25" y2="434.5" stroke="black" stroke-width="1" />
 
 <!-- RENDERING - component: jaws -->
-<circle r="10" cx="1300" cy="300" stroke="dimgray" stroke-width="1" fill="silver" />
-<circle r="8.125" cx="1300" cy="300" stroke="dimgray" stroke-width="1" fill="silver" />
+<circle r="10" cx="1300" cy="300" stroke="dimgray" stroke-width="1" fill="#b4b8b9" />
+<circle r="8.125" cx="1300" cy="300" stroke="dimgray" stroke-width="1" fill="#b4b8b9" />
 
 
 <!-- RENDERING - component: tip -->
-<circle r="20.625" cx="1300" cy="300" stroke="dimgray" stroke-width="1" fill="silver" />
-<circle r="13.125" cx="1300" cy="300" stroke="dimgray" stroke-width="1" fill="silver" />
+<circle r="20.625" cx="1300" cy="300" stroke="dimgray" stroke-width="1" fill="#b4b8b9" />
+<circle r="13.125" cx="1300" cy="300" stroke="dimgray" stroke-width="1" fill="#b4b8b9" />
 
 
 <!-- RENDERING - component: grip -->
-<circle r="20.625" cx="1300" cy="300" stroke="dimgray" stroke-width="1" fill="silver" />
+<circle r="20.625" cx="1300" cy="300" stroke="dimgray" stroke-width="1" fill="#b4b8b9" />
 
 
 <!-- RENDERING - component: body -->
-<polygon points="1288.4529946162074,280 1311.5470053837926,280 1323.0940107675851,300 1311.5470053837926,320 1288.4529946162074,320 1276.9059892324149,300 " stroke="dimgray" stroke-width="1" fill="silver"/>
+<polygon points="1288.4529946162074,280 1311.5470053837926,280 1323.0940107675851,300 1311.5470053837926,320 1288.4529946162074,320 1276.9059892324149,300 " stroke="dimgray" stroke-width="1" fill="#b4b8b9"/>
 
 
 <!-- RENDERING - component: clip -->
-<circle r="22.5" cx="1300" cy="300" stroke="dimgray" stroke-width="1" fill="silver" />
+<circle r="22.5" cx="1300" cy="300" stroke="dimgray" stroke-width="1" fill="#b4b8b9" />
 
-<!-- 4.5 0.6 --><rect x="1288.75" y="275.375" width="22.5" height="3" rx="1" ry="1" stroke-width="1.0" stroke="dimgray" fill="silver"/>
+<!-- 4.5 0.6 --><rect x="1288.75" y="275.375" width="22.5" height="3" rx="1" ry="1" stroke-width="1.0" stroke="dimgray" fill="#b4b8b9"/>
 <rect x="1288.75" y="275.375" width="22.5" height="3" rx="1" ry="1" stroke-width="1.0" stroke="dimgray" fill="none"/>
-<!-- 4.5 0.6 --><rect x="1288.75" y="275.375" width="22.5" height="3" rx="1" ry="1" stroke-width="1.0" stroke="dimgray" fill="silver"/>
+<!-- 4.5 0.6 --><rect x="1288.75" y="275.375" width="22.5" height="3" rx="1" ry="1" stroke-width="1.0" stroke="dimgray" fill="#b4b8b9"/>
 <rect x="1288.75" y="275.375" width="22.5" height="3" rx="1" ry="1" stroke-width="1.0" stroke="dimgray" fill="none"/>
-<!-- 4.5 2.75 --><rect x="1288.75" y="264.625" width="22.5" height="13.75" rx="1" ry="1" stroke-width="1.0" stroke="dimgray" fill="silver"/>
+<!-- 4.5 2.75 --><rect x="1288.75" y="264.625" width="22.5" height="13.75" rx="1" ry="1" stroke-width="1.0" stroke="dimgray" fill="#b4b8b9"/>
 <line x1="1288.75" x2="1311.25" y1="264.625" y2="264.625" stroke-width="0.25" stroke="#dfdfdf" />
 <line x1="1288.75" x2="1311.25" y1="264.625" y2="264.625" stroke-width="0.25" stroke="#dfdfdf" />
 <line x1="1288.75" x2="1311.25" y1="264.625" y2="264.625" stroke-width="0.25" stroke="#dfdfdf" />
@@ -146,15 +146,15 @@
 
 
 <!-- RENDERING - component: tail -->
-<circle r="20" cx="1300" cy="300" stroke="dimgray" stroke-width="1" fill="silver" />
+<circle r="20" cx="1300" cy="300" stroke="dimgray" stroke-width="1" fill="#b4b8b9" />
 
 
 <!-- RENDERING - component: indicator -->
-<circle r="20.625" cx="1300" cy="300" stroke="dimgray" stroke-width="1" fill="silver" />
+<circle r="20.625" cx="1300" cy="300" stroke="dimgray" stroke-width="1" fill="#b4b8b9" />
 
 
 <!-- RENDERING - component: foot -->
-<circle r="20" cx="1300" cy="300" stroke="dimgray" stroke-width="1" fill="silver" />
+<circle r="20" cx="1300" cy="300" stroke="dimgray" stroke-width="1" fill="#b4b8b9" />
 
 
 <!-- RENDERING - component: ring -->
@@ -162,41 +162,41 @@
 
 
 <!-- RENDERING - component: foot -->
-<circle r="20" cx="1300" cy="300" stroke="dimgray" stroke-width="1" fill="silver" />
+<circle r="20" cx="1300" cy="300" stroke="dimgray" stroke-width="1" fill="#b4b8b9" />
 
 
 <!-- RENDERING - component: cap -->
-<circle r="13.75" cx="1300" cy="300" stroke="dimgray" stroke-width="1" fill="silver" />
+<circle r="13.75" cx="1300" cy="300" stroke="dimgray" stroke-width="1" fill="#b4b8b9" />
 
-<circle r="12.5" cx="1300" cy="300" stroke="dimgray" stroke-width="1" fill="silver" />
+<circle r="12.5" cx="1300" cy="300" stroke="dimgray" stroke-width="1" fill="#b4b8b9" />
 
-<circle r="13.75" cx="1300" cy="300" stroke="dimgray" stroke-width="1" fill="silver" />
+<circle r="13.75" cx="1300" cy="300" stroke="dimgray" stroke-width="1" fill="#b4b8b9" />
 
-<circle r="12.5" cx="1300" cy="300" stroke="dimgray" stroke-width="1" fill="silver" />
+<circle r="12.5" cx="1300" cy="300" stroke="dimgray" stroke-width="1" fill="#b4b8b9" />
 
-<circle r="13.75" cx="1300" cy="300" stroke="dimgray" stroke-width="1" fill="silver" />
+<circle r="13.75" cx="1300" cy="300" stroke="dimgray" stroke-width="1" fill="#b4b8b9" />
 
-<circle r="12.5" cx="1300" cy="300" stroke="dimgray" stroke-width="1" fill="silver" />
+<circle r="12.5" cx="1300" cy="300" stroke="dimgray" stroke-width="1" fill="#b4b8b9" />
 
-<circle r="13.75" cx="1300" cy="300" stroke="dimgray" stroke-width="1" fill="silver" />
+<circle r="13.75" cx="1300" cy="300" stroke="dimgray" stroke-width="1" fill="#b4b8b9" />
 
-<circle cx="1300" cy="300" r="5" stroke="dimgray" stroke-width="0.5" fill="black" /><circle r="13.75" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="silver" />
+<circle cx="1300" cy="300" r="5" stroke="dimgray" stroke-width="0.5" fill="black" /><circle r="13.75" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="#b4b8b9" />
 
-<circle r="12.5" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="silver" />
+<circle r="12.5" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="#b4b8b9" />
 
-<circle r="13.75" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="silver" />
+<circle r="13.75" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="#b4b8b9" />
 
-<circle r="12.5" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="silver" />
+<circle r="12.5" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="#b4b8b9" />
 
-<circle r="13.75" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="silver" />
+<circle r="13.75" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="#b4b8b9" />
 
-<circle r="12.5" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="silver" />
+<circle r="12.5" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="#b4b8b9" />
 
-<circle r="13.75" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="silver" />
+<circle r="13.75" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="#b4b8b9" />
 
 
 <!-- RENDERING - component: cap -->
-<circle r="20" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="silver" />
+<circle r="20" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="#b4b8b9" />
 
 
 <!-- RENDERING - component: foot -->
@@ -204,103 +204,103 @@
 
 
 <!-- RENDERING - component: ring -->
-<circle r="20" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="silver" />
+<circle r="20" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="#b4b8b9" />
 
 
 <!-- RENDERING - component: foot -->
-<circle r="20.625" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="silver" />
+<circle r="20.625" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="#b4b8b9" />
 
 
 <!-- RENDERING - component: indicator -->
-<circle r="20" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="silver" />
+<circle r="20" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="#b4b8b9" />
 
 
 <!-- RENDERING - component: tail -->
-<!-- 4.5 2.75 --><rect x="88.75" y="264.625" width="22.5" height="13.75" rx="1" ry="1" stroke-width="1.0" stroke="dimgray" fill="silver"/>
+<!-- 4.5 2.75 --><rect x="88.75" y="264.625" width="22.5" height="13.75" rx="1" ry="1" stroke-width="1.0" stroke="dimgray" fill="#b4b8b9"/>
 <line x1="88.75" x2="111.25" y1="264.625" y2="264.625" stroke-width="0.25" stroke="#dfdfdf" />
 <line x1="88.75" x2="111.25" y1="264.625" y2="264.625" stroke-width="0.25" stroke="#dfdfdf" />
 <line x1="88.75" x2="111.25" y1="264.625" y2="264.625" stroke-width="0.25" stroke="#dfdfdf" />
 <line x1="88.75" x2="111.25" y1="264.625" y2="264.625" stroke-width="0.25" stroke="#dfdfdf" />
 <rect x="88.75" y="264.625" width="22.5" height="13.75" rx="1" ry="1" stroke-width="1.0" stroke="dimgray" fill="none"/>
-<!-- 4.5 0.6 --><rect x="88.75" y="275.375" width="22.5" height="3" rx="1" ry="1" stroke-width="1.0" stroke="dimgray" fill="silver"/>
+<!-- 4.5 0.6 --><rect x="88.75" y="275.375" width="22.5" height="3" rx="1" ry="1" stroke-width="1.0" stroke="dimgray" fill="#b4b8b9"/>
 <rect x="88.75" y="275.375" width="22.5" height="3" rx="1" ry="1" stroke-width="1.0" stroke="dimgray" fill="none"/>
-<!-- 4.5 0.6 --><rect x="88.75" y="275.375" width="22.5" height="3" rx="1" ry="1" stroke-width="1.0" stroke="dimgray" fill="silver"/>
+<!-- 4.5 0.6 --><rect x="88.75" y="275.375" width="22.5" height="3" rx="1" ry="1" stroke-width="1.0" stroke="dimgray" fill="#b4b8b9"/>
 <rect x="88.75" y="275.375" width="22.5" height="3" rx="1" ry="1" stroke-width="1.0" stroke="dimgray" fill="none"/>
 
-<circle r="22.5" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="silver" />
+<circle r="22.5" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="#b4b8b9" />
 
 
 <!-- RENDERING - component: clip -->
-<polygon points="88.45299461620749,280 111.54700538379251,280 123.09401076758503,300 111.54700538379251,320 88.45299461620749,320 76.90598923241497,300 " stroke="dimgray" stroke-width="1" fill="silver"/>
+<polygon points="88.45299461620749,280 111.54700538379251,280 123.09401076758503,300 111.54700538379251,320 88.45299461620749,320 76.90598923241497,300 " stroke="dimgray" stroke-width="1" fill="#b4b8b9"/>
 
 
 <!-- RENDERING - component: body -->
-<circle r="20.625" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="silver" />
+<circle r="20.625" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="#b4b8b9" />
 
 
 <!-- RENDERING - component: grip -->
-<circle r="13.125" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="silver" />
-<circle r="20.625" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="silver" />
+<circle r="13.125" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="#b4b8b9" />
+<circle r="20.625" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="#b4b8b9" />
 
 
 <!-- RENDERING - component: tip -->
-<circle r="8.125" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="silver" />
-<circle r="10" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="silver" />
+<circle r="8.125" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="#b4b8b9" />
+<circle r="10" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="#b4b8b9" />
 
 
 <!-- RENDERING - component: jaws -->
 <circle cx="100" cy="300" r="5" stroke="dimgray" stroke-width="0.5" fill="black" />
 <!-- RENDERING - component: jaws -->
 <!-- RENDERING - part: cone -->
-<path d="M328.75 291.875 L340 290 L340 310 L328.75 308.125 Z" stroke-width="0.5" stroke="black" fill="silver" />
+<path d="M328.75 291.875 L340 290 L340 310 L328.75 308.125 Z" stroke-width="0.5" stroke="black" fill="#b4b8b9" />
 
 
 <!-- RENDERING - component: tip -->
 <!-- RENDERING - part: cone -->
-<path d="M340 286.875 L408.75 279.375 L408.75 320.625 L340 313.125 Z" stroke-width="0.5" stroke="black" fill="silver" />
+<path d="M340 286.875 L408.75 279.375 L408.75 320.625 L340 313.125 Z" stroke-width="0.5" stroke="black" fill="#b4b8b9" />
 
 
 <!-- RENDERING - component: grip -->
 <!-- RENDERING - part: cylinder -->
-<rect x="408.75" y="279.375" width="147.5" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver"/>
+<rect x="408.75" y="279.375" width="147.5" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#b4b8b9"/>
 <rect x="408.75" y="279.375" width="147.5" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="url(#diagonalHatch)"/>
 
 
 <!-- RENDERING - component: body -->
 <!-- RENDERING - part: hexagonal -->
-<rect x="556.25" y="280" width="337.5" height="40" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver"/>
+<rect x="556.25" y="280" width="337.5" height="40" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#b4b8b9"/>
 <line x1="556.25" y1="300" x2="893.75" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="556.25" y1="300" x2="893.75" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
 
 
 <!-- RENDERING - component: clip -->
 <!-- RENDERING - part: cylinder -->
-<rect x="893.75" y="277.5" width="27.5" height="45" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver"/>
+<rect x="893.75" y="277.5" width="27.5" height="45" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#b4b8b9"/>
 
 <!-- RENDERING - part: extra -->
 <path d="M741 265.875 Q763.75 289.375 773.75 265.875 Z" stroke-width="3" stroke="black" fill="dimgray" stroke-linecap="round" />
 <line x1="738.75" y1="264.375" x2="921.25" y2="264.375" stroke-width="3" stroke="black" fill="dimgray" stroke-linecap="round" />
 /><path d="M921.25 264.375 Q941.25 271.875 921.25 278.125" stroke-width="3" stroke="black" fill="none" stroke-linecap="round" />
-<path d="M741 265.875 Q763.75 288.375 773.75 265.875 Z" stroke-width="2" stroke="silver" fill="silver" stroke-linecap="round" />
-<line x1="738.75" y1="264.375" x2="921.25" y2="264.375" stroke-width="2" stroke="silver" fill="silver" stroke-linecap="round" />
-/><path d="M921.25 264.375 Q941.25 271.875 921.25 278.125" stroke-width="2" stroke="silver" fill="none" stroke-linecap="round" />
+<path d="M741 265.875 Q763.75 288.375 773.75 265.875 Z" stroke-width="2" stroke="#b4b8b9" fill="#b4b8b9" stroke-linecap="round" />
+<line x1="738.75" y1="264.375" x2="921.25" y2="264.375" stroke-width="2" stroke="#b4b8b9" fill="#b4b8b9" stroke-linecap="round" />
+/><path d="M921.25 264.375 Q941.25 271.875 921.25 278.125" stroke-width="2" stroke="#b4b8b9" fill="none" stroke-linecap="round" />
 
 
 <!-- RENDERING - component: tail -->
 <!-- RENDERING - part: cylinder -->
-<rect x="921.25" y="280" width="20" height="40" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver"/>
+<rect x="921.25" y="280" width="20" height="40" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#b4b8b9"/>
 
 
 <!-- RENDERING - component: indicator -->
 <!-- RENDERING - part: cylinder -->
-<rect x="941.25" y="279.375" width="47.5" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver"/>
+<rect x="941.25" y="279.375" width="47.5" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#b4b8b9"/>
 <rect x="941.25" y="279.375" width="47.5" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="url(#diagonalHatch)"/>
-<rect x="951.25" y="289.6875" width="27.5" height="20.625" rx="1" ry="1" stroke-width="2" stroke="black" fill="silver"/>
-<text x="965" y="300" text-anchor="middle" dominant-baseline="central"><tspan stroke="black" fill="black" textLength="{this.width * 5 - 24}" > HB</tspan></text>
+<rect x="951.25" y="289.6875" width="27.5" height="20.625" rx="1" ry="1" stroke-width="2" stroke="black" fill="#b4b8b9"/>
+<text x="965" y="300" text-anchor="middle" dominant-baseline="central"><tspan stroke="dimgray" stroke-width="0.5" fill="black" textLength="{this.width * 5 - 24}" > HB</tspan></text>
 
 <!-- RENDERING - component: foot -->
 <!-- RENDERING - part: cylinder -->
-<rect x="988.75" y="280" width="5" height="40" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver"/>
+<rect x="988.75" y="280" width="5" height="40" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#b4b8b9"/>
 
 
 <!-- RENDERING - component: ring -->
@@ -310,33 +310,34 @@
 
 <!-- RENDERING - component: foot -->
 <!-- RENDERING - part: cylinder -->
-<rect x="1000" y="280" width="6.25" height="40" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver"/>
+<rect x="1000" y="280" width="6.25" height="40" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#b4b8b9"/>
 
 
 <!-- RENDERING - component: cap -->
 <!-- RENDERING - part: cylinder -->
-<rect x="1006.25" y="286.25" width="30" height="27.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver"/>
+<rect x="1006.25" y="286.25" width="30" height="27.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#b4b8b9"/>
 
 <!-- RENDERING - part: cylinder -->
-<rect x="1036.25" y="287.5" width="3.75" height="25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver"/>
+<rect x="1036.25" y="287.5" width="3.75" height="25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#b4b8b9"/>
 
 <!-- RENDERING - part: cylinder -->
-<rect x="1040" y="286.25" width="7.5" height="27.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver"/>
+<rect x="1040" y="286.25" width="7.5" height="27.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#b4b8b9"/>
 
 <!-- RENDERING - part: cylinder -->
-<rect x="1047.5" y="287.5" width="3.75" height="25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver"/>
+<rect x="1047.5" y="287.5" width="3.75" height="25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#b4b8b9"/>
 
 <!-- RENDERING - part: cylinder -->
-<rect x="1051.25" y="286.25" width="7.5" height="27.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver"/>
+<rect x="1051.25" y="286.25" width="7.5" height="27.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#b4b8b9"/>
 
 <!-- RENDERING - part: cylinder -->
-<rect x="1058.75" y="287.5" width="3.75" height="25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver"/>
+<rect x="1058.75" y="287.5" width="3.75" height="25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#b4b8b9"/>
 
 <!-- RENDERING - part: cylinder -->
-<rect x="1062.5" y="286.25" width="8.75" height="27.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver"/>
+<rect x="1062.5" y="286.25" width="8.75" height="27.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#b4b8b9"/>
 
-<text x="1380" y="30" font-size="1.6em" font-weight="bold" text-anchor="end" dominant-baseline="central">body colour variants</text>
-<rect x="1340" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="silver" />
+<text x="1380" y="30" font-size="1.6em" font-weight="bold" text-anchor="end" dominant-baseline="central">'body' colour variants</text>
+<rect x="1340" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="#b4b8b9" />
+<text x="1360" y="100" transform="rotate(-90, 1360, 100)" font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">silver</text>
 <text x="30" y="106" font-size="1.2em" font-weight="bold" text-anchor="start" dominant-baseline="central">Materials:</text>
 <text x="50" y="126" font-size="1.2em" text-anchor="start" dominant-baseline="central"> - metal</text>
 <text x="50" y="146" font-size="1.2em" text-anchor="start" dominant-baseline="central"> - plastic</text>

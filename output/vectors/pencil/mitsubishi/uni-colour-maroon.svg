@@ -208,8 +208,9 @@
 <!-- RENDERING - part: cylinder -->
 <rect x="1041.25" y="281.25" width="10" height="37.5" rx="1" ry="1" stroke-width="0.5" stroke="dimgray" fill="black"/>
 
-<text x="1380" y="30" font-size="1.6em" font-weight="bold" text-anchor="end" dominant-baseline="central">body colour variants</text>
+<text x="1380" y="30" font-size="1.6em" font-weight="bold" text-anchor="end" dominant-baseline="central">'body' colour variants</text>
 <rect x="1340" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="maroon" />
+<text x="1360" y="100" transform="rotate(-90, 1360, 100)" font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">maroon</text>
 <text x="30" y="106" font-size="1.2em" font-weight="bold" text-anchor="start" dominant-baseline="central">Materials:</text>
 <text x="50" y="126" font-size="1.2em" text-anchor="start" dominant-baseline="central"> - metal</text>
 <text x="50" y="146" font-size="1.2em" text-anchor="start" dominant-baseline="central"> - plastic</text>

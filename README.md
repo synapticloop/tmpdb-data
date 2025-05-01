@@ -31,7 +31,7 @@ and colour variants too (as PNGs)
 
 <img src="./output/images/pencil/ohto/sharp-pencil-wn03-colour-maroon.png">
 
-<img src="./output/images/pencil/ohto/sharp-pencil-wn03-colour-sandybrown.png">
+<img src="./output/images/pencil/ohto/sharp-pencil-wn03-colour-wood.png">
 
 ### Mitsubishi Uni 
 
