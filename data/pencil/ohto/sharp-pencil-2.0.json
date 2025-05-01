@@ -1,16 +1,18 @@
 {
 	"brand": "OHTO",
-	"model": "WN03",
+	"model": "Sharp Pencil 2.0",
+	"model_number": "APS-680E",
+	"skus": [ ],
 	"lead_size": "2.0",
-	"text": "OHTO JAPAN WN03 Mechanical Pencil 2.0",
+	"text": "OHTO Sharp Pencil 2.0 JAPAN",
 	"colour_component": "body",
 	"colour_map": {
 		"yellow": "#e38f0f",
-		"burgundy": "#5d191d",
+		"red": "#5d191d",
 		"blue": "#1a4b88",
 		"green": "#053439",
 		"wood": "#b88160",
-		"brass": "#ae986f",
+		"brass": "#E1C16E",
 		"pink": "#db756d",
 		"silver": "#b4b8b9"
 	},
@@ -25,23 +27,23 @@
 				{ "type": "cone", "dimensions": "5.0x3.25x7.5" }
 			],
 			"material": "metal",
-			"colours": [ "brass" ]
+			"colours": [ "brass", "brass", "brass", "brass", "brass", "brass" ]
 		},
 		{
 			"type": "head",
 			"parts": [
-				{ "type": "cone", "dimensions": "5.0x8.0x10.25" }
+				{ "type": "cone", "dimensions": "5.0x8.0x11.0" }
 			],
 			"material": "wood",
-			"colours": [ "wood"]
+			"colours": [ "wood", "wood", "wood", "wood", "wood", "wood"]
 		},
 		{
 			"type": "body",
 			"parts": [
-				{ "type": "hexagonal", "dimensions": "98.0x10.25" }
+				{ "type": "hexagonal", "dimensions": "98.0x11.0" }
 			],
 			"material": "wood",
-			"colours": [ "yellow", "blue", "green", "maroon", "wood" ]
+			"colours": [ "yellow", "blue", "green", "red", "wood", "black" ]
 		},
 		{
 			"type": "ferrule",
@@ -49,7 +51,7 @@
 				{ "type": "cylinder", "dimensions": "14.0x10.25", "finish": "ferrule" }
 			],
 			"material": "metal",
-			"colours": [ "silver" ]
+			"colours": [ "brass", "brass", "brass", "brass", "brass", "brass" ]
 		},
 		{
 			"type": "cap",
@@ -58,7 +60,7 @@
 				{ "type": "cylinder", "dimensions": "2.0x10.0" }
 			],
 			"material": "metal",
-			"colours": [ "silver" ]
+			"colours": [ "brass", "brass", "brass", "brass", "brass", "brass" ]
 		},
 		{
 			"type": "eraser",
@@ -66,7 +68,7 @@
 				{ "type": "cylinder", "dimensions": "5x9.25" }
 			],
 			"material": "rubber",
-			"colours": [ "pink" ]
+			"colours": [ "pink", "pink", "pink", "pink", "pink", "pink" ]
 		}
 	]
 }

@@ -1,0 +1,196 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="600">
+<pattern id="diagonalHatch" patternUnits="userSpaceOnUse" width="8" height="8">
+<rect width="6" height="6" fill='none'/>
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,8"/>
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,8"/>
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,0" />
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,0" />
+</pattern>
+<rect x="0" y="0" width="1400" height="600" fill="white" stroke="black" stroke-width="4" />
+<rect x="2" y="2" width="1396" height="596" fill="white" stroke="orange" stroke-width="1" />
+<text x="30" y="50" font-size="2.0em" font-weight="bold"> OHTO // Sharp Pencil 2.0 (2.0mm)</text>
+<text x="30" y="80" font-size="1.1em"> OHTO Sharp Pencil 2.0 JAPAN</text>
+<line x1="40" y1="272.5" x2="1300" y2="272.5" stroke="#cfcfcf" stroke-width="1" />
+<line x1="40" y1="327.5" x2="1300" y2="327.5" stroke="#cfcfcf" stroke-width="1" />
+<line x1="68.24573519457059" y1="347.5" x2="68.24573519457059" y2="300" stroke="#cfcfcf" stroke-width="1" />
+<line x1="131.75426480542941" y1="347.5" x2="131.75426480542941" y2="300" stroke="#cfcfcf" stroke-width="1" />
+<line x1="358.75" y1="184.5" x2="358.75" y2="447.5" stroke="#cfcfcf" stroke-width="1" />
+<line x1="396.25" y1="184.5" x2="396.25" y2="447.5" stroke="#cfcfcf" stroke-width="1" />
+<line x1="421.25" y1="184.5" x2="421.25" y2="447.5" stroke="#cfcfcf" stroke-width="1" />
+<line x1="911.25" y1="184.5" x2="911.25" y2="447.5" stroke="#cfcfcf" stroke-width="1" />
+<line x1="981.25" y1="184.5" x2="981.25" y2="447.5" stroke="#cfcfcf" stroke-width="1" />
+<line x1="1016.25" y1="184.5" x2="1016.25" y2="447.5" stroke="#cfcfcf" stroke-width="1" />
+<line x1="1041.25" y1="184.5" x2="1041.25" y2="427.5" stroke="#cfcfcf" stroke-width="1" />
+<line x1="40" y1="272.5" x2="60" y2="272.5" stroke="black" stroke-width="1" />
+<line x1="40" y1="327.5" x2="60" y2="327.5" stroke="black" stroke-width="1" />
+<line x1="50" y1="327.5" x2="50" y2="272.5" stroke="black" stroke-width="1" />
+<text x="30" y="300" transform="rotate(-90, 30, 300)" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central">11.00 mm</text>
+<text x="100" y="540" font-size="1.8em" font-weight="bold" text-anchor="middle" dominant-baseline="central">Front</text>
+<line x1="68.24573519457059" y1="357.5" x2="131.75426480542941" y2="357.5" stroke="black" stroke-width="1" />
+<line x1="68.24573519457059" y1="347.5" x2="68.24573519457059" y2="367.5" stroke="black" stroke-width="1" />
+<line x1="131.75426480542941" y1="347.5" x2="131.75426480542941" y2="367.5" stroke="black" stroke-width="1" />
+<text x="100" y="377.5" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central">12.70 mm</text>
+<line x1="358.75" y1="195.5" x2="358.75" y2="173.5" stroke="black" stroke-width="1" />
+<text x="377.5" y="170.5" transform="rotate(-90, 377.5, 170.5)" font-size="1.2em" font-weight="bold" dominant-baseline="middle">7.50 mm tip</text>
+<line x1="396.25" y1="195.5" x2="396.25" y2="173.5" stroke="black" stroke-width="1" />
+<text x="408.75" y="170.5" transform="rotate(-90, 408.75, 170.5)" font-size="1.2em" font-weight="bold" dominant-baseline="middle">5.00 mm head</text>
+<line x1="421.25" y1="195.5" x2="421.25" y2="173.5" stroke="black" stroke-width="1" />
+<text x="663.25" y="170.5" transform="rotate(-90, 663.25, 170.5)" font-size="1.2em" font-weight="bold" dominant-baseline="auto">98.00 mm</text>
+<text x="669.25" y="170.5" transform="rotate(-90, 669.25, 170.5)" font-size="1.2em" font-weight="bold" dominant-baseline="hanging">body</text>
+<line x1="911.25" y1="195.5" x2="911.25" y2="173.5" stroke="black" stroke-width="1" />
+<text x="943.25" y="170.5" transform="rotate(-90, 943.25, 170.5)" font-size="1.2em" font-weight="bold" dominant-baseline="auto">14.00 mm</text>
+<text x="949.25" y="170.5" transform="rotate(-90, 949.25, 170.5)" font-size="1.2em" font-weight="bold" dominant-baseline="hanging">ferrule</text>
+<line x1="981.25" y1="195.5" x2="981.25" y2="173.5" stroke="black" stroke-width="1" />
+<text x="998.75" y="170.5" transform="rotate(-90, 998.75, 170.5)" font-size="1.2em" font-weight="bold" dominant-baseline="middle">7.00 mm cap</text>
+<line x1="1016.25" y1="195.5" x2="1016.25" y2="173.5" stroke="black" stroke-width="1" />
+<text x="1028.75" y="170.5" transform="rotate(-90, 1028.75, 170.5)" font-size="1.2em" font-weight="bold" dominant-baseline="middle">5.00 mm eraser</text>
+<line x1="1041.25" y1="195.5" x2="1041.25" y2="173.5" stroke="black" stroke-width="1" />
+<line x1="358.75" y1="184.5" x2="1041.25" y2="184.5" stroke="black" stroke-width="1" />
+<line x1="358.75" y1="357.5" x2="1041.25" y2="357.5" stroke="black" stroke-width="1" />
+<line x1="358.75" y1="347.5" x2="358.75" y2="367.5" stroke="black" stroke-width="1" />
+<line x1="1041.25" y1="347.5" x2="1041.25" y2="367.5" stroke="black" stroke-width="1" />
+<text x="700" y="377.5" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central">136.50 mm</text>
+<text x="700" y="540" font-size="1.8em" font-weight="bold" text-anchor="middle" dominant-baseline="central">Side view</text>
+<text x="1300" y="540" font-size="1.8em" font-weight="bold" text-anchor="middle" dominant-baseline="central">Back</text>
+<line x1="358.75" y1="427.5" x2="358.75" y2="451.5" stroke="black" stroke-width="1" />
+<text x="377.5" y="453.5" transform="rotate(-90, 377.5, 453.5)" font-size="1.2em" text-anchor="end" dominant-baseline="middle">metal</text>
+<line x1="396.25" y1="427.5" x2="396.25" y2="451.5" stroke="black" stroke-width="1" />
+<text x="408.75" y="453.5" transform="rotate(-90, 408.75, 453.5)" font-size="1.2em" text-anchor="end" dominant-baseline="middle">wood</text>
+<line x1="421.25" y1="427.5" x2="421.25" y2="451.5" stroke="black" stroke-width="1" />
+<text x="666.25" y="453.5" transform="rotate(-90, 666.25, 453.5)" font-size="1.2em" text-anchor="end" dominant-baseline="middle">wood</text>
+<line x1="911.25" y1="427.5" x2="911.25" y2="451.5" stroke="black" stroke-width="1" />
+<text x="946.25" y="453.5" transform="rotate(-90, 946.25, 453.5)" font-size="1.2em" text-anchor="end" dominant-baseline="middle">metal</text>
+<line x1="981.25" y1="427.5" x2="981.25" y2="451.5" stroke="black" stroke-width="1" />
+<text x="998.75" y="453.5" transform="rotate(-90, 998.75, 453.5)" font-size="1.2em" text-anchor="end" dominant-baseline="middle">metal</text>
+<line x1="1016.25" y1="427.5" x2="1016.25" y2="451.5" stroke="black" stroke-width="1" />
+<text x="1028.75" y="453.5" transform="rotate(-90, 1028.75, 453.5)" font-size="1.2em" text-anchor="end" dominant-baseline="middle">rubber</text>
+<line x1="1041.25" y1="427.5" x2="1041.25" y2="451.5" stroke="black" stroke-width="1" />
+<line x1="358.75" y1="439.5" x2="1041.25" y2="439.5" stroke="black" stroke-width="1" />
+
+<!-- RENDERING - component: tip -->
+<circle r="8.125" cx="1300" cy="300" stroke="dimgray" stroke-width="1" fill="#E1C16E" />
+
+<circle r="18.75" cx="1300" cy="300" stroke="dimgray" stroke-width="1" fill="#E1C16E" />
+<circle r="8.125" cx="1300" cy="300" stroke="dimgray" stroke-width="1" fill="#E1C16E" />
+
+
+<!-- RENDERING - component: head -->
+<circle r="27.5" cx="1300" cy="300" stroke="dimgray" stroke-width="1" fill="#b88160" />
+<circle r="20" cx="1300" cy="300" stroke="dimgray" stroke-width="1" fill="#b88160" />
+
+
+<!-- RENDERING - component: body -->
+<polygon points="1284.1228675972852,272.5 1315.8771324027148,272.5 1331.7542648054293,300 1315.8771324027148,327.5 1284.1228675972852,327.5 1268.2457351945707,300 " stroke="dimgray" stroke-width="1" fill="black"/>
+
+
+<!-- RENDERING - component: ferrule -->
+<circle r="25.625" cx="1300" cy="300" stroke="dimgray" stroke-width="1" fill="#E1C16E" />
+
+
+<!-- RENDERING - component: cap -->
+<circle r="23.125" cx="1300" cy="300" stroke="dimgray" stroke-width="1" fill="#E1C16E" />
+
+<circle r="25" cx="1300" cy="300" stroke="dimgray" stroke-width="1" fill="#E1C16E" />
+
+
+<!-- RENDERING - component: eraser -->
+<circle r="23.125" cx="1300" cy="300" stroke="dimgray" stroke-width="1" fill="#db756d" />
+
+<circle r="23.125" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="#db756d" />
+
+
+<!-- RENDERING - component: eraser -->
+<circle r="25" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="#E1C16E" />
+
+<circle r="23.125" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="#E1C16E" />
+
+
+<!-- RENDERING - component: cap -->
+<circle r="25.625" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="#E1C16E" />
+
+
+<!-- RENDERING - component: ferrule -->
+<polygon points="84.12286759728529,272.5 115.87713240271471,272.5 131.75426480542941,300 115.87713240271471,327.5 84.12286759728529,327.5 68.24573519457059,300 " stroke="dimgray" stroke-width="1" fill="black"/>
+
+
+<!-- RENDERING - component: body -->
+<circle r="20" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="#b88160" />
+<circle r="27.5" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="#b88160" />
+
+
+<!-- RENDERING - component: head -->
+<circle r="8.125" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="#E1C16E" />
+<circle r="18.75" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="#E1C16E" />
+
+<circle r="8.125" cx="100" cy="300" stroke="dimgray" stroke-width="1" fill="#E1C16E" />
+
+
+<!-- RENDERING - component: tip -->
+<circle cx="100" cy="300" r="5" stroke="dimgray" stroke-width="0.5" fill="black" />
+<!-- RENDERING - component: tip -->
+<!-- RENDERING - part: cylinder -->
+<rect x="358.75" y="291.875" width="12.5" height="16.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#E1C16E"/>
+
+<!-- RENDERING - part: cone -->
+<path d="M371.25 291.875 L396.25 281.25 L396.25 318.75 L371.25 308.125 Z" stroke-width="0.5" stroke="black" fill="#E1C16E" />
+
+
+<!-- RENDERING - component: head -->
+<!-- RENDERING - part: cone -->
+<path d="M396.25 280 L421.25 272.5 L421.25 327.5 L396.25 320 Z" stroke-width="0.5" stroke="black" fill="#b88160" />
+
+
+<!-- RENDERING - component: body -->
+<!-- RENDERING - part: hexagonal -->
+<rect x="421.25" y="272.5" width="490" height="55" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="black"/>
+<line x1="421.25" y1="300" x2="911.25" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
+<line x1="421.25" y1="300" x2="911.25" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
+
+
+<!-- RENDERING - component: ferrule -->
+<!-- RENDERING - part: cylinder -->
+<rect x="911.25" y="274.375" width="70" height="51.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#E1C16E"/>
+<line x1="919.3269230769231" y1="275.375" x2="919.3269230769231" y2="324.625" stroke-width="1" stroke="gray" />
+<line x1="924.7115384615385" y1="275.375" x2="924.7115384615385" y2="324.625" stroke-width="1" stroke="gray" />
+<line x1="930.0961538461538" y1="275.375" x2="930.0961538461538" y2="324.625" stroke-width="1" stroke="gray" />
+<line x1="935.4807692307693" y1="275.375" x2="935.4807692307693" y2="324.625" stroke-width="1" stroke="gray" />
+<line x1="940.8653846153846" y1="275.375" x2="940.8653846153846" y2="324.625" stroke-width="1" stroke="gray" />
+<line x1="951.6346153846154" y1="275.375" x2="951.6346153846154" y2="324.625" stroke-width="1" stroke="gray" />
+<line x1="957.0192307692307" y1="275.375" x2="957.0192307692307" y2="324.625" stroke-width="1" stroke="gray" />
+<line x1="962.4038461538462" y1="275.375" x2="962.4038461538462" y2="324.625" stroke-width="1" stroke="gray" />
+<line x1="967.7884615384615" y1="275.375" x2="967.7884615384615" y2="324.625" stroke-width="1" stroke="gray" />
+<line x1="973.1730769230769" y1="275.375" x2="973.1730769230769" y2="324.625" stroke-width="1" stroke="gray" />
+<circle r="4" cx="926.25" cy="287.1875" stroke="dimgray" stroke-width="1" fill="dimGray" />
+
+
+<!-- RENDERING - component: cap -->
+<!-- RENDERING - part: cylinder -->
+<rect x="981.25" y="276.875" width="25" height="46.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#E1C16E"/>
+
+<!-- RENDERING - part: cylinder -->
+<rect x="1006.25" y="275" width="10" height="50" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#E1C16E"/>
+
+
+<!-- RENDERING - component: eraser -->
+<!-- RENDERING - part: cylinder -->
+<rect x="1016.25" y="276.875" width="25" height="46.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#db756d"/>
+
+<text x="1380" y="30" font-size="1.6em" font-weight="bold" text-anchor="end" dominant-baseline="central">'body' colour variants</text>
+<rect x="1340" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="#e38f0f" />
+<text x="1360" y="100" transform="rotate(-90, 1360, 100)" font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">yellow</text>
+<rect x="1280" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="#1a4b88" />
+<text x="1300" y="100" transform="rotate(-90, 1300, 100)" font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">blue</text>
+<rect x="1220" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="#053439" />
+<text x="1240" y="100" transform="rotate(-90, 1240, 100)" font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">green</text>
+<rect x="1160" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="#5d191d" />
+<text x="1180" y="100" transform="rotate(-90, 1180, 100)" font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">red</text>
+<rect x="1100" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="#b88160" />
+<text x="1120" y="100" transform="rotate(-90, 1120, 100)" font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">wood</text>
+<rect x="1040" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="black" />
+<text x="1060" y="100" transform="rotate(-90, 1060, 100)" font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">black</text>
+<text x="30" y="106" font-size="1.2em" font-weight="bold" text-anchor="start" dominant-baseline="central">Materials:</text>
+<text x="50" y="126" font-size="1.2em" text-anchor="start" dominant-baseline="central"> - metal</text>
+<text x="50" y="146" font-size="1.2em" text-anchor="start" dominant-baseline="central"> - wood</text>
+<text x="50" y="166" font-size="1.2em" text-anchor="start" dominant-baseline="central"> - rubber</text>
+<text x="50%" y="580" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb) // Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
+</svg>
