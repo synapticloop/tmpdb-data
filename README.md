@@ -23,15 +23,17 @@ is generated.
 
 and colour variants too (as PNGs)
 
-<img src="./output/images/pencil/ohto/sharp-pencil-wn03-colour-yellow.png">
+<img src="./output/images/pencil/ohto/sharp-pencil-2.0-colour-black.png">
 
-<img src="./output/images/pencil/ohto/sharp-pencil-wn03-colour-blue.png">
+<img src="./output/images/pencil/ohto/sharp-pencil-2.0-colour-blue.png">
 
-<img src="./output/images/pencil/ohto/sharp-pencil-wn03-colour-green.png">
+<img src="./output/images/pencil/ohto/sharp-pencil-2.0-colour-green.png">
 
-<img src="./output/images/pencil/ohto/sharp-pencil-wn03-colour-maroon.png">
+<img src="./output/images/pencil/ohto/sharp-pencil-2.0-colour-red.png">
 
-<img src="./output/images/pencil/ohto/sharp-pencil-wn03-colour-wood.png">
+<img src="./output/images/pencil/ohto/sharp-pencil-2.0-colour-wood.png">
+
+<img src="./output/images/pencil/ohto/sharp-pencil-2.0-colour-yellow.png">
 
 ### Mitsubishi Uni 
 

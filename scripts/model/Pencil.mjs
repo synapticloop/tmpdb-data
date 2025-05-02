@@ -116,6 +116,7 @@ export class Pencil {
 		// now we are going to go through each of the components and draw the shapes
 		let offset = Pencil.WIDTH/2 - this.getTotalLength()/2;
 
+		// is the extra the first component, or the last
 		for (let component of this.components) {
 			// vertical line
 
@@ -149,55 +150,56 @@ export class Pencil {
 						`${(Math.round(component.getWidth() / 5 * 100) / 100).toFixed(2)} mm ${component.getType()}` +
 						`</text>\n`
 			}
+
 			// now for extraParts
 			for(const extraPart of component.getExtraParts()) {
 				// draw the straight-through line for guidance
 
 				// draw the start vertical
-				svgString += `<line x1="${offset + extraPart.extraOffset[0] * 5}" ` +
+				svgString += `<line x1="${offset + extraPart.extraOffset[0] * 5 - (component.extraPartFirst ? component.getWidth() : 0)}" ` +
 						`y1="${Pencil.HEIGHT/2 - 24 - this.maxHeight/2 * 5}" ` +
-						`x2="${offset + extraPart.extraOffset[0]*5}" ` +
+						`x2="${offset + extraPart.extraOffset[0]*5 - (component.extraPartFirst ? component.getWidth() : 0)}" ` +
 						`y2="${Pencil.HEIGHT/2 - 46 - this.maxHeight/2 * 5}" ` +
 						`stroke="black" stroke-width="1" />\n`;
 
 				// draw the start vertical
-				svgString += `<line x1="${offset + extraPart.extraOffset[0] * 5}" ` +
+				svgString += `<line x1="${offset + extraPart.extraOffset[0] * 5 - (component.extraPartFirst ? component.getWidth() : 0)}" ` +
 						`y1="${Pencil.HEIGHT/2 + 120}" ` +
-						`x2="${offset + extraPart.extraOffset[0]*5}" ` +
+						`x2="${offset + extraPart.extraOffset[0]*5 - (component.extraPartFirst ? component.getWidth() : 0)}" ` +
 						`y2="${Pencil.HEIGHT/2 + 96}" ` +
 						`stroke="black" stroke-width="1" />\n`;
 
-				svgString += `<line x1="${offset + extraPart.extraOffset[0] * 5 + extraPart.extraWidth*5}" ` +
+				svgString += `<line x1="${offset + extraPart.extraOffset[0] * 5 + extraPart.extraWidth*5 - (component.extraPartFirst ? component.getWidth() : 0)}" ` +
 						`y1="${Pencil.HEIGHT/2 + 96}" ` +
-						`x2="${offset + extraPart.extraOffset[0]*5 + extraPart.extraWidth*5}" ` +
+						`x2="${offset + extraPart.extraOffset[0]*5 + extraPart.extraWidth*5 - (component.extraPartFirst ? component.getWidth() : 0)}" ` +
 						`y2="${Pencil.HEIGHT/2 + 120}" ` +
 						`stroke="black" stroke-width="1" />\n`;
 
 				// draw the vertical line
-				svgString += `<line x1="${offset + extraPart.extraOffset[0] * 5 + extraPart.extraWidth*5}" ` +
+				svgString += `<line x1="${offset + extraPart.extraOffset[0] * 5 + extraPart.extraWidth*5 - (component.extraPartFirst ? component.getWidth() : 0)}" ` +
 						`y1="${Pencil.HEIGHT/2 - 24 - this.maxHeight/2 * 5}" ` +
-						`x2="${offset + extraPart.extraOffset[0]*5 + extraPart.extraWidth*5}" ` +
+						`x2="${offset + extraPart.extraOffset[0]*5 + extraPart.extraWidth*5 - (component.extraPartFirst ? component.getWidth() : 0)}" ` +
 						`y2="${Pencil.HEIGHT/2 - 46 - this.maxHeight/2 * 5}" ` +
 						`stroke="black" stroke-width="1" />\n`;
 
 
 				// draw the horizontal line
-				svgString += `<line x1="${offset + extraPart.extraOffset[0] * 5}" ` +
+				svgString += `<line x1="${offset + extraPart.extraOffset[0] * 5 - (component.extraPartFirst ? component.getWidth() : 0)}" ` +
 						`y1="${Pencil.HEIGHT/2 - 35 - this.maxHeight/2 * 5}" ` +
-						`x2="${offset + extraPart.extraOffset[0]*5 + extraPart.extraWidth*5}" ` +
+						`x2="${offset + extraPart.extraOffset[0]*5 + extraPart.extraWidth*5 - (component.extraPartFirst ? component.getWidth() : 0)}" ` +
 						`y2="${Pencil.HEIGHT/2 - 35 - this.maxHeight/2 * 5}" ` +
 						`stroke="black" stroke-width="1" />\n`;
 
 				// draw the end vertical
-				svgString += `<line x1="${offset + extraPart.extraOffset[0] * 5}" ` +
+				svgString += `<line x1="${offset + extraPart.extraOffset[0] * 5 - (component.extraPartFirst ? component.getWidth() : 0)}" ` +
 						`y1="${Pencil.HEIGHT/2 + 132 - this.maxHeight/2 * 5}" ` +
-						`x2="${offset + extraPart.extraOffset[0]*5 + extraPart.extraWidth*5}" ` +
+						`x2="${offset + extraPart.extraOffset[0]*5 + extraPart.extraWidth*5 - (component.extraPartFirst ? component.getWidth() : 0)}" ` +
 						`y2="${Pencil.HEIGHT/2 + 132 - this.maxHeight/2 * 5}" ` +
 						`stroke="black" stroke-width="1" />\n`;
 
-				svgString += `<text x="${offset + extraPart.extraOffset[0]*5 + (extraPart.extraWidth/2*5)}" y="${Pencil.HEIGHT/2 + 70 + this.maxHeight/2 * 5}" font-size="1.2em" text-anchor="middle" dominant-baseline="central">${component.getMaterial()}</text>\n`
-				svgString += `<text x="${offset + extraPart.extraOffset[0]*5 + (extraPart.extraWidth/2*5)}" y="${Pencil.HEIGHT/2 - 46 - this.maxHeight/2 * 5}" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central">${(Math.round(extraPart.extraWidth * 100) / 100).toFixed(2)} mm</text>\n`
-				svgString += `<text x="${offset + extraPart.extraOffset[0]*5 + (extraPart.extraWidth/2*5)}" y="${Pencil.HEIGHT/2 - 26 - this.maxHeight/2 * 5}" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central">${component.getType()} (extra)</text>\n`
+				svgString += `<text x="${offset + extraPart.extraOffset[0]*5 + (extraPart.extraWidth/2*5) - (component.extraPartFirst ? component.getWidth() : 0)}" y="${Pencil.HEIGHT/2 + 70 + this.maxHeight/2 * 5}" font-size="1.2em" text-anchor="middle" dominant-baseline="central">${component.getMaterial()}</text>\n`
+				svgString += `<text x="${offset + extraPart.extraOffset[0]*5 + (extraPart.extraWidth/2*5) - (component.extraPartFirst ? component.getWidth() : 0)}" y="${Pencil.HEIGHT/2 - 46 - this.maxHeight/2 * 5}" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central">${(Math.round(extraPart.extraWidth * 100) / 100).toFixed(2)} mm</text>\n`
+				svgString += `<text x="${offset + extraPart.extraOffset[0]*5 + (extraPart.extraWidth/2*5) - (component.extraPartFirst ? component.getWidth() : 0)}" y="${Pencil.HEIGHT/2 - 26 - this.maxHeight/2 * 5}" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central">${component.getType()} (extra)</text>\n`
 			}
 		}
 
@@ -399,14 +401,14 @@ export class Pencil {
 			// now for extraParts
 			for(const extraPart of component.getExtraParts()) {
 				// draw the straight-through line for guidance
-				svgString += `<line x1="${offset + extraPart.extraOffset[0] * 5}" ` +
+				svgString += `<line x1="${offset + extraPart.extraOffset[0] * 5 - (component.extraPartFirst ? component.getWidth() : 0)}" ` +
 						`y1="${Pencil.HEIGHT/2 - 44 - this.maxHeight/2 * 5}" ` +
-						`x2="${offset + extraPart.extraOffset[0] * 5}" ` +
+						`x2="${offset + extraPart.extraOffset[0] * 5 - (component.extraPartFirst ? component.getWidth() : 0)}" ` +
 						`y2="${Pencil.HEIGHT/2 + 120}" ` +
 						`stroke="#cfcfcf" stroke-width="1" />\n`;
-				svgString += `<line x1="${offset + extraPart.extraOffset[0] * 5 + extraPart.extraWidth*5}" ` +
+				svgString += `<line x1="${offset + extraPart.extraOffset[0] * 5 + extraPart.extraWidth*5 - (component.extraPartFirst ? component.getWidth() : 0)}" ` +
 						`y1="${Pencil.HEIGHT/2 - 44 - this.maxHeight/2 * 5}" ` +
-						`x2="${offset + extraPart.extraOffset[0]*5 + extraPart.extraWidth*5}" ` +
+						`x2="${offset + extraPart.extraOffset[0]*5 + extraPart.extraWidth*5 - (component.extraPartFirst ? component.getWidth() : 0)}" ` +
 						`y2="${Pencil.HEIGHT/2 + 120}" ` +
 						`stroke="#cfcfcf" stroke-width="1" />\n`;
 			}

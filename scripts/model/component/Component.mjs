@@ -10,6 +10,7 @@ export class Component {
 	maxWidth = 0;
 	maxHeight = 0;
 	extraParts = [];
+	extraPartFirst = false;
 
 	constructor(jsonObject) {
 		this.type = jsonObject.type ?? this.type;
@@ -17,6 +18,7 @@ export class Component {
 		this.colours = jsonObject.colours ?? this.colours;
 
 		if(jsonObject.parts) {
+			let isFirst = true;
 			for(let part of jsonObject.parts) {
 				const thisPart = new Part(part, this.colours);
 				this.parts.push(thisPart);
@@ -24,7 +26,11 @@ export class Component {
 
 				if(thisPart.extraParts.length > 0) {
 					this.extraParts.push(thisPart);
+					if(isFirst) {
+						this.extraPartFirst = true;
+					}
 				}
+				isFirst = false;
 
 
 				let tempWidth = thisPart.getMaxWidth();
