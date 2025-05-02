@@ -5,7 +5,7 @@ import { drawTextBoldCentred, drawTextBold, drawText } from "../utils/svg-helper
 
 
 export class Pencil {
-	static WIDTH = 1400;
+	static WIDTH = 1500;
 	static HEIGHT = 600;
 	static SVG_START = `<svg xmlns="http://www.w3.org/2000/svg" ` +
 			`width="${Pencil.WIDTH}" ` +
@@ -40,6 +40,8 @@ export class Pencil {
 	materialsSet = new Set();
 	colourComponent = ""
 	colourComponents = [ "white" ];
+	weight = 0.0;
+	modelNumber = null;
 	front = [];
 	back = [];
 	colourMap = {};
@@ -54,6 +56,7 @@ export class Pencil {
 
 		this.colourComponent = json.colour_component ?? this.colourComponent;
 		this.colourMap = json.colour_map ?? this.colourMap;
+		this.modelNumber = json.model_number ?? this.modelNumber;
 
 
 		this.front = json.front ?? this.front;
@@ -103,7 +106,7 @@ export class Pencil {
 		let svgString = Pencil.SVG_START;
 		let xPosition = (Pencil.WIDTH - this.totalLength)/2;
 
-		svgString += drawTextBold(`${this.brand} // ${this.model} (${this.leadSize}mm)`, 30, 50, "2.0em");
+		svgString += drawTextBold(`${this.brand} // ${this.model} ${(this.modelNumber ? "(Model #: " + this.modelNumber + ")" : "")}`, 30, 50, "2.0em");
 		svgString += drawText(`${this.text}`, 30, 80, "1.1em");
 
 		svgString += this.drawSvgGuidelines();
@@ -279,7 +282,7 @@ export class Pencil {
 
 		this.components.reverse();
 		for (let component of this.components) {
-			svgString += component.renderFront(shouldColour, 100, this.colourMap, thisColourIndex, thisColourComponent);
+			svgString += component.renderFront(shouldColour, 160, this.colourMap, thisColourIndex, thisColourComponent);
 		}
 
 		for(let front of this.front) {
@@ -291,7 +294,7 @@ export class Pencil {
 
 			switch (front.type) {
 				case "circle":
-					svgString += `<circle cx="100" cy="${Pencil.HEIGHT / 2}" r="${dimensions[0]/2 * 5}" stroke="dimgray" stroke-width="0.5" fill="${front.fill}" />`
+					svgString += `<circle cx="160" cy="${Pencil.HEIGHT / 2}" r="${dimensions[0]/2 * 5}" stroke="dimgray" stroke-width="0.5" fill="${front.fill}" />`
 					break;
 			}
 		}
@@ -331,15 +334,28 @@ export class Pencil {
 		for (let component of this.components) {
 			for(const extraPart of component.getExtraParts()) {
 				// draw the straight-through line for guidance
-				svgString += `<line x1="40" ` +
+				svgString += `<line x1="100" ` +
 						`y1="${Pencil.HEIGHT/2 - extraPart.extraOffset[1] * 5 - (extraPart.extraHeight) * 5}" ` +
 						`x2="${Pencil.WIDTH - 100}" ` +
 						`y2="${Pencil.HEIGHT/2 - extraPart.extraOffset[1] * 5 - (extraPart.extraHeight) * 5}" ` +
 						`stroke="#cfcfcf" stroke-width="1" />\n`;
-				svgString += `<line x1="100" ` +
+				svgString += `<line x1="160" ` +
 						`y1="${Pencil.HEIGHT/2 - extraPart.extraOffset[1] * 5}" ` +
 						`x2="${Pencil.WIDTH - 100}" ` +
 						`y2="${Pencil.HEIGHT/2 - extraPart.extraOffset[1] * 5}" ` +
+						`stroke="#cfcfcf" stroke-width="1" />\n`;
+
+				// guidelines for the extra width
+				svgString += `<line x1="${160 - extraPart.extraDepth/2 * 5}" ` +
+						`y1="${Pencil.HEIGHT/2 - 70}" ` +
+						`x2="${160 - extraPart.extraDepth/2 * 5}" ` +
+						`y2="${Pencil.HEIGHT/2}" ` +
+						`stroke="#cfcfcf" stroke-width="1" />\n`;
+
+				svgString += `<line x1="${160 + extraPart.extraDepth/2 * 5}" ` +
+						`y1="${Pencil.HEIGHT/2 - 70}" ` +
+						`x2="${160 + extraPart.extraDepth/2 * 5}" ` +
+						`y2="${Pencil.HEIGHT/2}" ` +
 						`stroke="#cfcfcf" stroke-width="1" />\n`;
 				hasExtra = true;
 			}
@@ -348,24 +364,28 @@ export class Pencil {
 		// FRONT VIEW GUIDELINES
 
 		// top line
-		svgString += `<line x1="${hasExtra ? (Pencil.WIDTH - 100) : 40}" ` +
+		svgString += `<line x1="${hasExtra ? (Pencil.WIDTH - 100) : 100}" ` +
 				`y1="${Pencil.HEIGHT/2 - this.maxHeight/2 * 5}" ` +
 				`x2="${Pencil.WIDTH - 100}" ` +
 				`y2="${Pencil.HEIGHT/2 - this.maxHeight/2 * 5}" ` +
 				`stroke="#cfcfcf" stroke-width="1" />\n`;
-		svgString += `<line x1="40" y1="${Pencil.HEIGHT/2 + this.maxHeight/2 * 5}" ` +
+		// bottom line of full pencil
+		svgString += `<line x1="100" y1="${Pencil.HEIGHT/2 + this.maxHeight/2 * 5}" ` +
 				`x2="${Pencil.WIDTH - 100}" y2="${Pencil.HEIGHT/2 + this.maxHeight/2 * 5}" ` +
 				`stroke="#cfcfcf" stroke-width="1" />\n`;
-		svgString += `<line x1="${100 - this.maxWidth/2 * 5}" y1="${Pencil.HEIGHT/2 + 20 + this.maxHeight/2 * 5}" ` +
-				`x2="${100 - this.maxWidth/2 * 5}" y2="${Pencil.HEIGHT/2}" ` +
+
+		// Vertical line of width
+		svgString += `<line x1="${160 - this.maxWidth/2 * 5}" y1="${Pencil.HEIGHT/2 + 20 + this.maxHeight/2 * 5}" ` +
+				`x2="${160 - this.maxWidth/2 * 5}" y2="${Pencil.HEIGHT/2}" ` +
 				`stroke="#cfcfcf" stroke-width="1" />\n`;
-		svgString += `<line x1="${100 + this.maxWidth/2 * 5}" y1="${Pencil.HEIGHT/2 + 20 + this.maxHeight/2 * 5}" ` +
-				`x2="${100 + this.maxWidth/2 * 5}" y2="${Pencil.HEIGHT/2}" ` +
+		svgString += `<line x1="${160 + this.maxWidth/2 * 5}" y1="${Pencil.HEIGHT/2 + 20 + this.maxHeight/2 * 5}" ` +
+				`x2="${160 + this.maxWidth/2 * 5}" y2="${Pencil.HEIGHT/2}" ` +
 				`stroke="#cfcfcf" stroke-width="1" />\n`;
 
-		// SIDE VIEW GUIDELINES
+		// SIDE VIEW GUIDELINES FOR THE COMPONENTS
 		// reset the offset to redraw
 		offset = Pencil.WIDTH/2 - this.getTotalLength()/2;
+
 		for (let component of this.components) {
 			// vertical line
 			svgString += `<line x1="${offset}" ` +
@@ -397,6 +417,7 @@ export class Pencil {
 				`x2="${offset}" ` +
 				`y2="${Pencil.HEIGHT/2 + 100 + this.maxHeight/2 * 5}" ` +
 				`stroke="#cfcfcf" stroke-width="1" />\n`;
+
 		return(svgString);
 	}
 
@@ -425,87 +446,128 @@ export class Pencil {
 		// now for the measurements of the height
 		// top horizontal
 		if(thisExtraPart) {
-			svgString += `<line x1="40" ` +
+			svgString += `<line x1="100" ` +
 					`y1="${Pencil.HEIGHT / 2 - extrasOffset * 5 - extrasHeight * 5}" ` +
-					`x2="60" ` +
+					`x2="120" ` +
 					`y2="${Pencil.HEIGHT / 2 - extrasOffset * 5 - extrasHeight * 5}" ` +
 					`stroke="black" stroke-width="1" />\n`;
+
+			svgString += `<line x1="${160 - thisExtraPart.extraDepth/2 * 5}" ` +
+					`y1="${Pencil.HEIGHT/2 - 70}" ` +
+					`x2="${160 - thisExtraPart.extraDepth/2 * 5}" ` +
+					`y2="${Pencil.HEIGHT/2 - 50}" ` +
+					`stroke="black" stroke-width="1" />\n`;
+
+			svgString += `<line x1="${160 + thisExtraPart.extraDepth/2 * 5}" ` +
+					`y1="${Pencil.HEIGHT/2 - 70}" ` +
+					`x2="${160 + thisExtraPart.extraDepth/2 * 5}" ` +
+					`y2="${Pencil.HEIGHT/2 - 50}" ` +
+					`stroke="black" stroke-width="1" />\n`;
+
+			svgString += `<line x1="${160 - thisExtraPart.extraDepth/2 * 5}" ` +
+					`y1="${Pencil.HEIGHT/2 - 60}" ` +
+					`x2="${160 + thisExtraPart.extraDepth/2 * 5}" ` +
+					`y2="${Pencil.HEIGHT/2 - 60}" ` +
+					`stroke="black" stroke-width="1" />\n`;
+
+			svgString += `<text x="160" ` +
+					`y="${Pencil.HEIGHT/2 - 80}" ` +
+					`font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central">` +
+					`${(Math.round((thisExtraPart.extraDepth) * 100) / 100).toFixed(2)} mm` +
+					`</text>\n`
+
 		} else {
-			svgString += `<line x1="40" ` +
+			svgString += `<line x1="100" ` +
 					`y1="${Pencil.HEIGHT/2 - this.maxHeight/2 * 5}" ` +
-					`x2="60" ` +
+					`x2="120" ` +
 					`y2="${Pencil.HEIGHT/2 - this.maxHeight/2 * 5}" ` +
 					`stroke="black" stroke-width="1" />\n`;
 
 		}
 		// bottom horizontal
-		svgString += `<line x1="40" ` +
+		svgString += `<line x1="100" ` +
 				`y1="${Pencil.HEIGHT/2 + this.maxHeight/2 * 5}" ` +
-				`x2="60" ` +
+				`x2="120" ` +
 				`y2="${Pencil.HEIGHT/2 + this.maxHeight/2 * 5}" ` +
 				`stroke="black" stroke-width="1" />\n`;
+
 		// down stroke
 		if(thisExtraPart) {
-			svgString += `<line x1="50" ` +
+			svgString += `<line x1="110" ` +
 					`y1="${Pencil.HEIGHT / 2 - extrasOffset * 5 - extrasHeight * 5}" ` +
-					`x2="50" ` +
+					`x2="110" ` +
 					`y2="${Pencil.HEIGHT / 2 + this.maxHeight / 2 * 5}" ` +
 					`stroke="black" stroke-width="1" />\n`;
 		} else {
-			svgString += `<line x1="50" ` +
+			svgString += `<line x1="110" ` +
 					`y1="${Pencil.HEIGHT / 2 + this.maxHeight / 2 * 5}" ` +
-					`x2="50" ` +
+					`x2="110" ` +
 					`y2="${Pencil.HEIGHT / 2 - this.maxHeight / 2 * 5}" ` +
 					`stroke="black" stroke-width="1" />\n`;
 		}
 
 		if(thisExtraPart) {
-			svgString += `<line x1="140" ` +
+			svgString += `<line x1="200" ` +
 					`y1="${Pencil.HEIGHT/2 - extrasOffset * 5 - extrasHeight * 5}" ` +
-					`x2="160" ` +
+					`x2="220" ` +
 					`y2="${Pencil.HEIGHT/2 - extrasOffset * 5 - extrasHeight * 5}" ` +
 					`stroke="black" stroke-width="1" />\n`;
 
-			svgString += `<line x1="140" ` +
+			svgString += `<line x1="200" ` +
 					`y1="${Pencil.HEIGHT/2 - extrasOffset * 5}" ` +
-					`x2="160" ` +
+					`x2="220" ` +
 					`y2="${Pencil.HEIGHT/2 - extrasOffset * 5}" ` +
 					`stroke="black" stroke-width="1" />\n`;
 
-			svgString += `<line x1="150" ` +
+			svgString += `<line x1="210" ` +
 					`y1="${Pencil.HEIGHT/2 - extrasOffset * 5 - extrasHeight * 5}" ` +
-					`x2="150" ` +
+					`x2="210" ` +
 					`y2="${Pencil.HEIGHT/2 - extrasOffset * 5}" ` +
 					`stroke="black" stroke-width="1" />\n`;
 
-			svgString += `<text x="164" ` +
+			svgString += `<text x="224" ` +
 					`y="${Pencil.HEIGHT/2 - extrasOffset * 5 - extrasHeight/2 * 5}" ` +
 					`font-size="1.2em" font-weight="bold" text-anchor="start" dominant-baseline="central">` +
 					`${(Math.round((thisExtraPart.extraHeight) * 100) / 100).toFixed(2)} mm` +
 					`</text>\n`
+
+			svgString += `<line x1="200" ` +
+					`y1="${Pencil.HEIGHT/2 + this.maxHeight/2 * 5}" ` +
+					`x2="220" ` +
+					`y2="${Pencil.HEIGHT/2 + this.maxHeight/2 * 5}" ` +
+					`stroke="black" stroke-width="1" />\n`;
+
+			svgString += `<line x1="210" ` +
+					`y1="${Pencil.HEIGHT / 2 + this.maxHeight / 2 * 5}" ` +
+					`x2="210" ` +
+					`y2="${Pencil.HEIGHT / 2 - this.maxHeight / 2 * 5}" ` +
+					`stroke="black" stroke-width="1" />\n`;
+
+			svgString += `<text x="224" y="${Pencil.HEIGHT/2}" font-size="1.2em" font-weight="bold" text-anchor="start" dominant-baseline="central">${(Math.round((this.maxHeight) * 100) / 100).toFixed(2)} mm</text>\n`
+
 		}
 
-		svgString += `<text x="30" y="${Pencil.HEIGHT/2}" transform="rotate(-90, 30, ${Pencil.HEIGHT/2})" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central">${(Math.round((this.maxHeight + extrasHeight) * 100) / 100).toFixed(2)} mm</text>\n`
+		svgString += `<text x="90" y="${Pencil.HEIGHT/2}" transform="rotate(-90, 90, ${Pencil.HEIGHT/2})" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central">${(Math.round((this.maxHeight + extrasHeight) * 100) / 100).toFixed(2)} mm</text>\n`
 
-		svgString += drawTextBoldCentred("Front", 100, Pencil.HEIGHT - 60, "1.8em");
+		svgString += drawTextBoldCentred("Front", 160, Pencil.HEIGHT - 60, "1.8em");
 
 		// and the measurements of the width
 		// horizontal
-		svgString += `<line x1="${100 - this.maxWidth/2 * 5}" ` +
+		svgString += `<line x1="${160 - this.maxWidth/2 * 5}" ` +
 				`y1="${Pencil.HEIGHT/2 + 30 + this.maxHeight/2 * 5}" ` +
-				`x2="${100 + this.maxWidth/2 * 5}" ` +
+				`x2="${160 + this.maxWidth/2 * 5}" ` +
 				`y2="${Pencil.HEIGHT/2 + 30 + this.maxHeight/2 * 5}" ` +
 				`stroke="black" stroke-width="1" />\n`;
 		// left
-		svgString += `<line x1="${100 - this.maxWidth/2 * 5}" y1="${Pencil.HEIGHT/2 + 20 + this.maxHeight/2 * 5}" ` +
-				`x2="${100 - this.maxWidth/2 * 5}" y2="${Pencil.HEIGHT/2 + 40 + this.maxHeight/2 * 5}" ` +
+		svgString += `<line x1="${160 - this.maxWidth/2 * 5}" y1="${Pencil.HEIGHT/2 + 20 + this.maxHeight/2 * 5}" ` +
+				`x2="${160 - this.maxWidth/2 * 5}" y2="${Pencil.HEIGHT/2 + 40 + this.maxHeight/2 * 5}" ` +
 				`stroke="black" stroke-width="1" />\n`;
 		// right
-		svgString += `<line x1="${100 + this.maxWidth/2 * 5}" y1="${Pencil.HEIGHT/2 + 20 + this.maxHeight/2 * 5}" ` +
-				`x2="${100 + this.maxWidth/2 * 5}" y2="${Pencil.HEIGHT/2 + 40 + this.maxHeight/2 * 5}" ` +
+		svgString += `<line x1="${160 + this.maxWidth/2 * 5}" y1="${Pencil.HEIGHT/2 + 20 + this.maxHeight/2 * 5}" ` +
+				`x2="${160 + this.maxWidth/2 * 5}" y2="${Pencil.HEIGHT/2 + 40 + this.maxHeight/2 * 5}" ` +
 				`stroke="black" stroke-width="1" />\n`;
 
-		svgString += drawTextBoldCentred(`${(Math.round(this.maxWidth * 100) / 100).toFixed(2)} mm`, 100, Pencil.HEIGHT/2 + 50 + this.maxHeight/2 * 5, "1.2em");
+		svgString += drawTextBoldCentred(`${(Math.round(this.maxWidth * 100) / 100).toFixed(2)} mm`, 160, Pencil.HEIGHT/2 + 50 + this.maxHeight/2 * 5, "1.2em");
 
 		return(svgString);
 	}

@@ -179,6 +179,7 @@ export class Part {
 						`</text>`;
 				break;
 		}
+
 		return(svgString);
 	}
 
