@@ -18,7 +18,23 @@ export function drawText(text, x, y, fontSize) {
 			`y="${y}" ` +
 			`font-size="${fontSize}"> ` +
 			`${text}</text>\n`);
+}
 
+export function drawRotatedTextBold(text, x, y, fontSize) {
+	return(`<text x="${x}" ` +
+			`y="${y}" ` +
+			`transform="rotate(-90, ${x}, ${y})" ` +
+			`font-size="${fontSize}" font-weight="bold" dominant-baseline="auto">` +
+			`${text}` +
+			`</text>\n`);
+}
+
+export function drawVerticalLine(x, y, height, colour) {
+	return(`<line x1="${x}" ` +
+			`y1="${y}" ` +
+			`x2="${x}" ` +
+			`y2="${y + height}" ` +
+			`stroke="${colour}" stroke-width="1" />`);
 }
 
 export function drawOutlineHexagon(x, y, height, fillColour) {

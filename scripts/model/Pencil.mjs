@@ -1,7 +1,12 @@
 // TODO - get rid of the filesystem - should pass in a JSON object
 import * as fs from 'fs';
 import { Component } from "./component/Component.mjs";
-import { drawTextBoldCentred, drawTextBold, drawText } from "../utils/svg-helper.mjs";
+import {
+	drawTextBoldCentred,
+	drawTextBold,
+	drawText,
+	drawVerticalLine
+} from "../utils/svg-helper.mjs";
 
 
 export class Pencil {
@@ -120,11 +125,7 @@ export class Pencil {
 		for (let component of this.components) {
 			// vertical line
 
-			svgString += `<line x1="${offset}" ` +
-					`y1="${Pencil.HEIGHT/2 - 77 - this.maxHeight/2 * 5}" ` +
-					`x2="${offset}" ` +
-					`y2="${Pencil.HEIGHT/2 - 99 - this.maxHeight/2 * 5}" ` +
-					`stroke="black" stroke-width="1" />\n`;
+			svgString += drawVerticalLine(offset, Pencil.HEIGHT/2 - 99 - this.maxHeight/2 * 5, 22, "black");
 
 			let currentOffset = offset;
 
