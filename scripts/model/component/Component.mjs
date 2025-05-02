@@ -64,10 +64,7 @@ export class Component {
 	}
 
 	renderBack(shouldColour, startX, colourMap, index, colourComponent) {
-		let fillColour = shouldColour ? this.colours[0] : "white";
-		if(this.type === colourComponent) {
-			fillColour = this.colours[index];
-		}
+		let fillColour = shouldColour ? this.colours[index] : "white";
 
 		if (colourMap[fillColour]) {
 			fillColour = colourMap[fillColour];
@@ -81,10 +78,7 @@ export class Component {
 	}
 
 	renderFront(shouldColour, startX, colourMap, index, colourComponent) {
-		let fillColour = shouldColour ? this.colours[0] : "white";
-		if(this.type === colourComponent) {
-			fillColour = this.colours[index];
-		}
+		let fillColour = shouldColour ? this.colours[index] : "white";
 
 		if (colourMap[fillColour]) {
 			fillColour = colourMap[fillColour];
