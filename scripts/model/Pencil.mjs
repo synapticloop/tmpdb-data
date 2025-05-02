@@ -245,6 +245,67 @@ export class Pencil {
 
 		offset = Pencil.WIDTH/2 - this.getTotalLength()/2;
 		for (let component of this.components) {
+
+			if(component.type === "body") {
+				svgString += `<line x1="${Pencil.WIDTH - 160}" ` +
+						`y1="${Pencil.HEIGHT/2 - component.maxHeight/2 * 5}" ` +
+						`x2="${Pencil.WIDTH - 140}" ` +
+						`y2="${Pencil.HEIGHT/2 - component.maxHeight/2 * 5}" ` +
+						`stroke="black" stroke-width="1" />\n`;
+				svgString += `<line x1="${Pencil.WIDTH - 160}" ` +
+						`y1="${Pencil.HEIGHT/2 + component.maxHeight/2 * 5}" ` +
+						`x2="${Pencil.WIDTH - 140}" ` +
+						`y2="${Pencil.HEIGHT/2 + component.maxHeight/2 * 5}" ` +
+						`stroke="black" stroke-width="1" />\n`;
+				svgString += `<line x1="${Pencil.WIDTH - 150}" ` +
+						`y1="${Pencil.HEIGHT/2 + component.maxHeight/2 * 5}" ` +
+						`x2="${Pencil.WIDTH - 150}" ` +
+						`y2="${Pencil.HEIGHT/2 - component.maxHeight/2 * 5}" ` +
+						`stroke="black" stroke-width="1" />\n`;
+				svgString += `<text ` +
+						`x="${Pencil.WIDTH - 168}" ` +
+						`y="${Pencil.HEIGHT/2}" ` +
+						`transform="rotate(-90, ${Pencil.WIDTH - 168}, ${Pencil.HEIGHT/2})" ` +
+						`font-size="1.2em" text-anchor="middle" dominant-baseline="middle">${component.maxHeight} mm</text>\n`
+
+				svgString += `<text ` +
+						`x="${Pencil.WIDTH - 150}" ` +
+						`y="${Pencil.HEIGHT/2 + 8 + component.maxHeight/2 * 5}" ` +
+						`transform="rotate(-90, ${Pencil.WIDTH - 150}, ${Pencil.HEIGHT/2 + 8 + component.maxHeight/2 * 5})" ` +
+						`font-size="1.2em" text-anchor="end" dominant-baseline="middle">body</text>\n`
+			}
+
+			if(component.type === "grip") {
+				svgString += `<line x1="${Pencil.WIDTH - 200}" ` +
+						`y1="${Pencil.HEIGHT/2 - component.maxHeight/2 * 5}" ` +
+						`x2="${Pencil.WIDTH - 180}" ` +
+						`y2="${Pencil.HEIGHT/2 - component.maxHeight/2 * 5}" ` +
+						`stroke="black" stroke-width="1" />\n`;
+				svgString += `<line x1="${Pencil.WIDTH - 200}" ` +
+						`y1="${Pencil.HEIGHT/2 + component.maxHeight/2 * 5}" ` +
+						`x2="${Pencil.WIDTH - 180}" ` +
+						`y2="${Pencil.HEIGHT/2 + component.maxHeight/2 * 5}" ` +
+						`stroke="black" stroke-width="1" />\n`;
+				svgString += `<line x1="${Pencil.WIDTH - 190}" ` +
+						`y1="${Pencil.HEIGHT/2 + component.maxHeight/2 * 5}" ` +
+						`x2="${Pencil.WIDTH - 190}" ` +
+						`y2="${Pencil.HEIGHT/2 - component.maxHeight/2 * 5}" ` +
+						`stroke="black" stroke-width="1" />\n`;
+
+				svgString += `<text ` +
+						`x="${Pencil.WIDTH - 208}" ` +
+						`y="${Pencil.HEIGHT/2}" ` +
+						`transform="rotate(-90, ${Pencil.WIDTH - 208}, ${Pencil.HEIGHT/2})" ` +
+						`font-size="1.2em" text-anchor="middle" dominant-baseline="middle">${component.maxHeight} mm</text>\n`
+
+				svgString += `<text ` +
+						`x="${Pencil.WIDTH - 190}" ` +
+						`y="${Pencil.HEIGHT/2 + 8 + component.maxHeight/2 * 5}" ` +
+						`transform="rotate(-90, ${Pencil.WIDTH - 190}, ${Pencil.HEIGHT/2 + 8 + component.maxHeight/2 * 5})" ` +
+						`font-size="1.2em" text-anchor="end" dominant-baseline="middle">grip</text>\n`
+			}
+
+
 			svgString += `<line x1="${offset}" ` +
 					`y1="${Pencil.HEIGHT/2 + 100 + this.maxHeight/2 * 5}" ` +
 					`x2="${offset}" ` +
@@ -336,25 +397,27 @@ export class Pencil {
 		// now for the extra components guidelines
 		for (let component of this.components) {
 			for(const extraPart of component.getExtraParts()) {
-				// draw the straight-through line for guidance
+				// draw the straight-through line for guidance top of the extra parts
 				svgString += `<line x1="100" ` +
 						`y1="${Pencil.HEIGHT/2 - extraPart.extraOffset[1] * 5 - (extraPart.extraHeight) * 5}" ` +
 						`x2="${Pencil.WIDTH - 100}" ` +
 						`y2="${Pencil.HEIGHT/2 - extraPart.extraOffset[1] * 5 - (extraPart.extraHeight) * 5}" ` +
 						`stroke="#cfcfcf" stroke-width="1" />\n`;
+				// draw the straight-through line for guidance bottom of the extra parts
 				svgString += `<line x1="160" ` +
 						`y1="${Pencil.HEIGHT/2 - extraPart.extraOffset[1] * 5}" ` +
 						`x2="${Pencil.WIDTH - 100}" ` +
 						`y2="${Pencil.HEIGHT/2 - extraPart.extraOffset[1] * 5}" ` +
 						`stroke="#cfcfcf" stroke-width="1" />\n`;
 
-				// guidelines for the extra width
+				// guidelines for the extra width - left side
 				svgString += `<line x1="${160 - extraPart.extraDepth/2 * 5}" ` +
 						`y1="${Pencil.HEIGHT/2 - 70}" ` +
 						`x2="${160 - extraPart.extraDepth/2 * 5}" ` +
 						`y2="${Pencil.HEIGHT/2}" ` +
 						`stroke="#cfcfcf" stroke-width="1" />\n`;
 
+				// guidelines for the extra width - right side
 				svgString += `<line x1="${160 + extraPart.extraDepth/2 * 5}" ` +
 						`y1="${Pencil.HEIGHT/2 - 70}" ` +
 						`x2="${160 + extraPart.extraDepth/2 * 5}" ` +
@@ -377,10 +440,11 @@ export class Pencil {
 				`x2="${Pencil.WIDTH - 100}" y2="${Pencil.HEIGHT/2 + this.maxHeight/2 * 5}" ` +
 				`stroke="#cfcfcf" stroke-width="1" />\n`;
 
-		// Vertical line of width
+		// Vertical line of width - left
 		svgString += `<line x1="${160 - this.maxWidth/2 * 5}" y1="${Pencil.HEIGHT/2 + 20 + this.maxHeight/2 * 5}" ` +
 				`x2="${160 - this.maxWidth/2 * 5}" y2="${Pencil.HEIGHT/2}" ` +
 				`stroke="#cfcfcf" stroke-width="1" />\n`;
+		// Vertical line of width - right
 		svgString += `<line x1="${160 + this.maxWidth/2 * 5}" y1="${Pencil.HEIGHT/2 + 20 + this.maxHeight/2 * 5}" ` +
 				`x2="${160 + this.maxWidth/2 * 5}" y2="${Pencil.HEIGHT/2}" ` +
 				`stroke="#cfcfcf" stroke-width="1" />\n`;
@@ -397,6 +461,32 @@ export class Pencil {
 					`y2="${Pencil.HEIGHT/2 + 120 + this.maxHeight/2 * 5}" ` +
 					`stroke="#cfcfcf" stroke-width="1" />\n`;
 
+			// vertical lines for the body (on the left hand side)
+			// if(component.type === "body") {
+			// 	svgString += `<line x1="${offset}" ` +
+			// 			`y1="${Pencil.HEIGHT/2 - component.maxHeight/2 * 5}" ` +
+			// 			`x2="${Pencil.WIDTH - 140}" ` +
+			// 			`y2="${Pencil.HEIGHT/2 - component.maxHeight/2 * 5}" ` +
+			// 			`stroke="#cfcfcf" stroke-width="1"  stroke-dasharray="1,1" />\n`;
+			// 	svgString += `<line x1="${offset}" ` +
+			// 			`y1="${Pencil.HEIGHT/2 + component.maxHeight/2 * 5}" ` +
+			// 			`x2="${Pencil.WIDTH - 140}" ` +
+			// 			`y2="${Pencil.HEIGHT/2 + component.maxHeight/2 * 5}" ` +
+			// 			`stroke="#cfcfcf" stroke-width="1" stroke-dasharray="1,1"/>\n`;
+			// }
+			//
+			// if(component.type === "grip") {
+			// 	svgString += `<line x1="${offset}" ` +
+			// 			`y1="${Pencil.HEIGHT/2 - component.maxHeight/2 * 5}" ` +
+			// 			`x2="${Pencil.WIDTH - 180}" ` +
+			// 			`y2="${Pencil.HEIGHT/2 - component.maxHeight/2 * 5}" ` +
+			// 			`stroke="#cfcfcf" stroke-width="1" stroke-dasharray="1.1" />\n`;
+			// 	svgString += `<line x1="${offset}" ` +
+			// 			`y1="${Pencil.HEIGHT/2 + component.maxHeight/2 * 5}" ` +
+			// 			`x2="${Pencil.WIDTH - 180}" ` +
+			// 			`y2="${Pencil.HEIGHT/2 + component.maxHeight/2 * 5}" ` +
+			// 			`stroke="#cfcfcf" stroke-width="1" stroke-dasharray="1,1" />\n`;
+			// }
 			offset += component.getWidth();
 
 			// now for extraParts
