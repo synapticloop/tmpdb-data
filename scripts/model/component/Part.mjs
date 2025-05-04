@@ -76,6 +76,12 @@ export class Part {
 			strokeColour = "dimgray";
 		}
 
+		// switch (this.type) {
+		// 	case "extra":
+		// 		svgString += drawExtraOutline(startX + this.extraOffset[0]*5, midY - this.extraOffset[1]*5, this.extraParts, fillColour);
+		// 		break;
+		// }
+
 		switch (this.type) {
 			case "cylinder":
 			case "hexagonal":
@@ -183,38 +189,9 @@ export class Part {
 		return(svgString);
 	}
 
-	renderBack(fillColour, componentType, startX, midY) {
-		let svgString = "";
-		switch(this.type) {
-			case "cylinder":
-				svgString += drawOutlineCircle((this.start_height/2) * 5, startX, midY, fillColour);
-				break;
-			case "cone":
-				svgString += drawOutlineCircle((this.end_height/2) * 5, startX, midY, fillColour);
-				svgString += drawOutlineCircle((this.start_height/2) * 5, startX, midY, fillColour);
-				break;
-			case "hexagonal":
-				svgString += drawOutlineHexagon(startX, midY, this.start_height, fillColour);
-				break;
-			case "octagonal":
-				svgString += drawOutlineOctagon(startX, midY, this.start_height, fillColour);
-				break;
-			case "extra":
-				svgString += renderBackExtra(
-						startX,
-						midY,
-						this.extraOffset[0],
-						this.extraOffset[1],
-						this.extraDepth,
-						this.extraParts,
-						fillColour);
-				break;
-		}
-		return(svgString);
-	}
-
 	renderFront(fillColour, componentType, startX, midY) {
 		let svgString = "";
+
 		switch(this.type) {
 			case "cylinder":
 				svgString +=drawOutlineCircle((this.start_height/2) * 5, startX, midY, fillColour);
@@ -240,6 +217,36 @@ export class Part {
 						this.extraParts,
 						fillColour);
 				this.extraParts.reverse();
+				break;
+		}
+		return(svgString);
+	}
+
+	renderBack(fillColour, componentType, startX, midY) {
+		let svgString = "";
+		switch(this.type) {
+			case "cylinder":
+				svgString += drawOutlineCircle((this.start_height/2) * 5, startX, midY, fillColour);
+				break;
+			case "cone":
+				svgString += drawOutlineCircle((this.end_height/2) * 5, startX, midY, fillColour);
+				svgString += drawOutlineCircle((this.start_height/2) * 5, startX, midY, fillColour);
+				break;
+			case "hexagonal":
+				svgString += drawOutlineHexagon(startX, midY, this.start_height, fillColour);
+				break;
+			case "octagonal":
+				svgString += drawOutlineOctagon(startX, midY, this.start_height, fillColour);
+				break;
+			case "extra":
+				svgString += renderBackExtra(
+						startX,
+						midY,
+						this.extraOffset[0],
+						this.extraOffset[1],
+						this.extraDepth,
+						this.extraParts,
+						fillColour);
 				break;
 		}
 		return(svgString);

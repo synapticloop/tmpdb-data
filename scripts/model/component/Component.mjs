@@ -63,20 +63,6 @@ export class Component {
 		return(svgString);
 	}
 
-	renderBack(shouldColour, startX, colourMap, index, colourComponent) {
-		let fillColour = shouldColour ? this.colours[index] : "white";
-
-		if (colourMap[fillColour]) {
-			fillColour = colourMap[fillColour];
-		}
-
-		let svgString = `\n<!-- RENDERING - component: ${this.type} -->\n`;
-		for(let part of this.parts) {
-			svgString += `${part.renderBack(fillColour, this.type, startX, Pencil.HEIGHT/2)}\n`;
-		}
-		return(svgString);
-	}
-
 	renderFront(shouldColour, startX, colourMap, index, colourComponent) {
 		let fillColour = shouldColour ? this.colours[index] : "white";
 
@@ -89,6 +75,20 @@ export class Component {
 			svgString = `${part.renderFront(fillColour, this.type, startX, Pencil.HEIGHT/2)}\n` + svgString;
 		}
 
+		return(svgString);
+	}
+
+	renderBack(shouldColour, startX, colourMap, index, colourComponent) {
+		let fillColour = shouldColour ? this.colours[index] : "white";
+
+		if (colourMap[fillColour]) {
+			fillColour = colourMap[fillColour];
+		}
+
+		let svgString = `\n<!-- RENDERING - component: ${this.type} -->\n`;
+		for(let part of this.parts) {
+			svgString += `${part.renderBack(fillColour, this.type, startX, Pencil.HEIGHT/2)}\n`;
+		}
 		return(svgString);
 	}
 

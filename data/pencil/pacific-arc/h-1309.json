@@ -51,12 +51,12 @@
 			"parts": [
 				{ "type": "cylinder", "dimensions": "5.5x9.0" },
 				{ "type": "extra",
-					"dimensions": "39.0x2.75x4.5",
-					"offset": "-36.5x4.325",
+					"dimensions": "39.0x3.0x4.5",
+					"offset": "-36.5x4.25",
 					"parts": [
 						{ "curve-fill": "0.45,-2.5,7.0,-2.5,5.0,2.0" },
 						{ "line": "0.0,-3.0,36.5,-3.0" },
-						{ "curve": "36.5,-3.0,36.5,-0.25,40.5,-1.5" }
+						{ "curve": "36.5,-3.0,36.5,0,40.5,-1.5" }
 					]}
 			],
 			"material": "metal",

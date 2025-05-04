@@ -1,3 +1,8 @@
+// the width of the exported SVG
+export const SVG_WIDTH = 1500;
+// the height of the exported SVG
+export const SVG_HEIGHT = 600;
+
 export function drawTextBoldCentred(text, x, y, fontSize) {
 	return(`<text x="${x}" ` +
 			`y="${y}" ` +
@@ -171,7 +176,7 @@ export function renderBackExtra(x, y, offsetX, offsetY, width, parts, fillColour
 		if(height === 0) {
 			height = 3/5;
 		}
-		svgString += `<!-- ${width} ${height} -->`;
+		svgString += `<!-- WxH ${width} ${height} -->`;
 		svgString += `<rect x="${x - width/2*5}" ` +
 				`y="${y - Math.abs(offsetY) * 5 - (height * 5)}" ` +
 				`width="${width * 5}" ` +
@@ -181,8 +186,11 @@ export function renderBackExtra(x, y, offsetX, offsetY, width, parts, fillColour
 		if(isCurve) {
 			let from = y - Math.abs(offsetY) * 5 - (height * 5);
 			let to = from + (height * 5);
-			for (let i = from + 3; i < to; i+= 3) {
-				svgString += `<line x1="${x - width/2*5}" x2="${x + width/2*5}" y1="${from}" y2="${from}" stroke-width="0.25" stroke="#dfdfdf" />\n`;
+			svgString += `<line x1="${x - width/2*5}" x2="${x + width/2*5}" y1="${from}" y2="${from+3}" stroke-width="0.5" stroke="#cfcfcf" />\n`;
+
+			for (let i = from + 3; i < to; i = i + 3) {
+				svgString += `<line x1="${x - width/2*5}" x2="${x + width/2*5}" y1="${i}" y2="${i}" stroke-width="0.5" stroke="#cfcfcf" />\n`;
+				svgString += `<line x1="${x - width/2*5}" x2="${x + width/2*5}" y1="${i}" y2="${i + 3}" stroke-width="0.5" stroke="#cfcfcf" />\n`;
 			}
 		}
 
@@ -195,3 +203,4 @@ export function renderBackExtra(x, y, offsetX, offsetY, width, parts, fillColour
 	}
 	return(svgString);
 }
+
