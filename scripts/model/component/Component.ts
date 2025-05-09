@@ -1,18 +1,18 @@
-import {Part} from "./Part.mjs";
-import {Pencil} from "../Pencil.mjs";
+import {Part} from "./Part.ts";
+import {Pencil} from "../Pencil.ts";
 
 export class Component {
 	parts = [];
-	material = "unknown";
-	colours = [ "white" ];
-	type = "unknown";
-	width = 0;
-	maxWidth = 0;
-	maxHeight = 0;
+	material:string = "unknown";
+	colours:string[] = [ "white" ];
+	type:string = "unknown";
+	width:number = 0;
+	maxWidth:number = 0;
+	maxHeight:number = 0;
 	extraParts = [];
-	extraPartFirst = false;
+	extraPartFirst:boolean = false;
 
-	constructor(jsonObject) {
+	constructor(jsonObject:any) {
 		this.type = jsonObject.type ?? this.type;
 		this.material = jsonObject.material ?? this.material;
 		this.colours = jsonObject.colours ?? this.colours;

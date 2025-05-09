@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="600">
+<pattern id="diagonalHatch" patternUnits="userSpaceOnUse" width="8" height="8">
+<rect width="6" height="6" fill='none'/>
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,8"/>
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,8"/>
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,0" />
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,0" />
+</pattern>
+<rect x="0" y="0" width="1500" height="600" fill="white" stroke="black" stroke-width="4" />
+<rect x="2" y="2" width="1496" height="596" fill="white" stroke="orange" stroke-width="1" />
+<text x="30" y="50" font-size="2.0em" font-weight="bold"> OHTO // Sharp Pencil 2.0 (Model #: APS-680E)</text>
+<text x="30" y="80" font-size="1.1em"> OHTO Sharp Pencil 2.0 JAPAN</text>
+<text x="1480" y="30" font-size="1.6em" font-weight="bold" text-anchor="end" dominant-baseline="central">'body' colour variants</text>
+<rect x="1440" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="#e38f0f" />
+<text x="1460" y="100" transform="rotate(-90, 1460, 100)" font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">yellow</text>
+<rect x="1380" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="#1a4b88" />
+<text x="1400" y="100" transform="rotate(-90, 1400, 100)" font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">blue</text>
+<rect x="1320" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="#053439" />
+<text x="1340" y="100" transform="rotate(-90, 1340, 100)" font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">green</text>
+<rect x="1260" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="#5d191d" />
+<text x="1280" y="100" transform="rotate(-90, 1280, 100)" font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">red</text>
+<rect x="1200" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="#b88160" />
+<text x="1220" y="100" transform="rotate(-90, 1220, 100)" font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">wood</text>
+<rect x="1140" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="black" />
+<text x="1160" y="100" transform="rotate(-90, 1160, 100)" font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">black</text>
+<text x="30" y="106" font-size="1.2em" font-weight="bold" text-anchor="start" dominant-baseline="central">Materials:</text>
+<text x="50" y="126" font-size="1.2em" text-anchor="start" dominant-baseline="central"> - metal</text>
+<text x="50" y="146" font-size="1.2em" text-anchor="start" dominant-baseline="central"> - wood</text>
+<text x="50" y="166" font-size="1.2em" text-anchor="start" dominant-baseline="central"> - rubber</text>
+<line x1="100" y1="272.5" x2="1400" y2="272.5" stroke="#cfcfcf" stroke-width="1" />
+<line x1="100" y1="327.5" x2="1400" y2="327.5" stroke="#cfcfcf" stroke-width="1" />
+<line x1="128.24573519457059" y1="300" x2="128.24573519457059" y2="347.5" stroke="#cfcfcf" stroke-width="1" />
+<line x1="191.75426480542941" y1="300" x2="191.75426480542941" y2="347.5" stroke="#cfcfcf" stroke-width="1" />
+<line x1="408.75" y1="184.5" x2="408.75" y2="392.5" stroke="#cfcfcf" stroke-width="1" />
+<line x1="446.25" y1="184.5" x2="446.25" y2="392.5" stroke="#cfcfcf" stroke-width="1" />
+<line x1="471.25" y1="184.5" x2="471.25" y2="392.5" stroke="#cfcfcf" stroke-width="1" />
+<line x1="961.25" y1="184.5" x2="961.25" y2="392.5" stroke="#cfcfcf" stroke-width="1" />
+<line x1="1031.25" y1="184.5" x2="1031.25" y2="392.5" stroke="#cfcfcf" stroke-width="1" />
+<line x1="1066.25" y1="184.5" x2="1066.25" y2="392.5" stroke="#cfcfcf" stroke-width="1" />
+<line x1="1091.25" y1="184.5" x2="1091.25" y2="392.5" stroke="#cfcfcf" stroke-width="1" />
+<text x="160" y="540" font-size="1.8em" font-weight="bold" text-anchor="middle" dominant-baseline="central">Front</text>
+<text x="750" y="540" font-size="1.8em" font-weight="bold" text-anchor="middle" dominant-baseline="central">Side view</text>
+<text x="1400" y="540" font-size="1.8em" font-weight="bold" text-anchor="middle" dominant-baseline="central">Back</text>
+<line x1="99" y1="272.5" x2="121" y2="272.5" stroke="red" stroke-width="1" />
+<line x1="110" y1="272.5" x2="110" y2="327.5" stroke="red" stroke-width="1" />
+<line x1="99" y1="327.5" x2="121" y2="327.5" stroke="red" stroke-width="1" />
+<text x="91" y="300" transform="rotate(-90, 91, 300)" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="red">11.00 mm</text>
+<line x1="128.24573519457059" y1="346.5" x2="128.24573519457059" y2="368.5" stroke="red" stroke-width="1" />
+<line x1="128.24573519457059" y1="357.5" x2="191.75426480542941" y2="357.5" stroke="red" stroke-width="1" />
+<line x1="191.75426480542941" y1="346.5" x2="191.75426480542941" y2="368.5" stroke="red" stroke-width="1" />
+<text x="160" y="376.5" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="red">12.70 mm</text>
+<line x1="408.75" y1="229" x2="408.75" y2="251" stroke="red" stroke-width="1" />
+<line x1="408.75" y1="240" x2="446.25" y2="240" stroke="red" stroke-width="1" />
+<line x1="446.25" y1="229" x2="446.25" y2="251" stroke="red" stroke-width="1" />
+<text x="427.5" y="221" font-size="1.2em" transform="rotate(-90, 427.5, 221)" font-weight="bold" text-anchor="start" dominant-baseline="central" fill="red">7.50 mm</text>
+<line x1="446.25" y1="229" x2="446.25" y2="251" stroke="red" stroke-width="1" />
+<line x1="446.25" y1="240" x2="471.25" y2="240" stroke="red" stroke-width="1" />
+<line x1="471.25" y1="229" x2="471.25" y2="251" stroke="red" stroke-width="1" />
+<text x="458.75" y="221" font-size="1.2em" transform="rotate(-90, 458.75, 221)" font-weight="bold" text-anchor="start" dominant-baseline="central" fill="red">5.00 mm</text>
+<line x1="471.25" y1="229" x2="471.25" y2="251" stroke="red" stroke-width="1" />
+<line x1="471.25" y1="240" x2="961.25" y2="240" stroke="red" stroke-width="1" />
+<line x1="961.25" y1="229" x2="961.25" y2="251" stroke="red" stroke-width="1" />
+<text x="716.25" y="221" font-size="1.2em" transform="rotate(-90, 716.25, 221)" font-weight="bold" text-anchor="start" dominant-baseline="central" fill="red">98.00 mm</text>
+<line x1="961.25" y1="229" x2="961.25" y2="251" stroke="red" stroke-width="1" />
+<line x1="961.25" y1="240" x2="1031.25" y2="240" stroke="red" stroke-width="1" />
+<line x1="1031.25" y1="229" x2="1031.25" y2="251" stroke="red" stroke-width="1" />
+<text x="996.25" y="221" font-size="1.2em" transform="rotate(-90, 996.25, 221)" font-weight="bold" text-anchor="start" dominant-baseline="central" fill="red">14.00 mm</text>
+<line x1="1031.25" y1="229" x2="1031.25" y2="251" stroke="red" stroke-width="1" />
+<line x1="1031.25" y1="240" x2="1066.25" y2="240" stroke="red" stroke-width="1" />
+<line x1="1066.25" y1="229" x2="1066.25" y2="251" stroke="red" stroke-width="1" />
+<text x="1048.75" y="221" font-size="1.2em" transform="rotate(-90, 1048.75, 221)" font-weight="bold" text-anchor="start" dominant-baseline="central" fill="red">7.00 mm</text>
+<line x1="1066.25" y1="229" x2="1066.25" y2="251" stroke="red" stroke-width="1" />
+<line x1="1066.25" y1="240" x2="1091.25" y2="240" stroke="red" stroke-width="1" />
+<line x1="1091.25" y1="229" x2="1091.25" y2="251" stroke="red" stroke-width="1" />
+<text x="1078.75" y="221" font-size="1.2em" transform="rotate(-90, 1078.75, 221)" font-weight="bold" text-anchor="start" dominant-baseline="central" fill="red">5.00 mm</text>
+<line x1="1339" y1="272.5" x2="1361" y2="272.5" stroke="red" stroke-width="1" />
+<line x1="1350" y1="272.5" x2="1350" y2="327.5" stroke="red" stroke-width="1" />
+<line x1="1339" y1="327.5" x2="1361" y2="327.5" stroke="red" stroke-width="1" />
+<text x="1331" y="300" transform="rotate(-90, 1331, 300)" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="red">11 mm</text>
+<line x1="1339" y1="272.5" x2="1361" y2="272.5" stroke="red" stroke-width="1" />
+<line x1="1350" y1="272.5" x2="1350" y2="327.5" stroke="red" stroke-width="1" />
+<line x1="1339" y1="327.5" x2="1361" y2="327.5" stroke="red" stroke-width="1" />
+<text x="1350" y="335.5" transform="rotate(-90, 1350, 335.5)" font-size="1.2em" text-anchor="end" dominant-baseline="middle" fill="red">body</text>
+<text x="50%" y="580" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb) // Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
+</svg>

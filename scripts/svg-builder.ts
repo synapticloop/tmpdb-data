@@ -1,11 +1,9 @@
-import * as filesystem from './utils/filesystem.mjs'
-import {listDirectories, listFiles} from "./utils/filesystem.mjs";
+import * as filesystem from './utils/filesystem.ts'
+import {listDirectories, listFiles} from "./utils/filesystem.ts";
 import * as path from "node:path";
-import { Pencil } from "./model/Pencil.mjs";
+import { Pencil } from "./model/Pencil.ts";
 import fs from "fs";
 import sharp from "sharp";
-import Colour from "color";
-import Color from "color";
 
 const baseDir = './data/pencil';
 // list the directories for the pencil data
@@ -33,7 +31,9 @@ for (const pencilDirectory of pencilDirectories) {
 		const pencilFileFull = path.join(pencilDir, pencilFile);
 		const pencilFileName = path.parse(path.join(pencilDir, pencilFile)).name;
 
-		const pencil = new Pencil(pencilFileFull);
+
+		const pencil = new Pencil(fs.readFileSync(pencilFileFull, "utf8"));
+
 		const outputSvgFile = path.join(svgOutputDir, pencilFileName + ".svg");
 
 		fs.writeFileSync(outputSvgFile, pencil.renderSvg(false, 0, ""));

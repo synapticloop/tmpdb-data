@@ -1,6 +1,4 @@
-// TODO - get rid of the filesystem - should pass in a JSON object
-import * as fs from 'fs';
-import { Component } from "./component/Component.mjs";
+import { Component } from "./component/Component.ts";
 import {
 	SVG_WIDTH,
 	SVG_HEIGHT,
@@ -8,7 +6,7 @@ import {
 	drawTextBold,
 	drawText,
 	drawVerticalLine
-} from "../utils/svg-helper.mjs";
+} from "../utils/svg-helper.ts";
 
 
 export class Pencil {
@@ -32,45 +30,58 @@ export class Pencil {
 	static SVG_END = `<text x="50%" y="${SVG_HEIGHT - 20}" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb) // Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>\n` +
 			`</svg>\n`;
 
-	name = "";
-	brand = "";
-	leadSize = "";
-	filePath = "";
-	components = [];
-	// width = 0;
-	text = "";
+	// the name of the pencil
+	name:string = "";
+	// the brand of the pencil
+	brand:string = "";
+	// the lead size
+	leadSize:string = "";
+	// the components that make up the pencil
+	components:Component[] = [];
+	// the text that is written on the pencil
+	text:string = "";
 
-	maxWidth = 0;
-	maxHeight = 0;
-	totalLength = 0
+	// the maximum width of the pencil (generated)
+	maxWidth:number = 0;
+	// the maximum height of the pencil (generated)
+	maxHeight:number = 0;
+	// the total length of the pencil (generated)
+	totalLength:number = 0
 
-	materials = [];
+	// The materials that make up this pencil - to keep them in order of definition
+	materials:string[] = [];
+	// the set of materials for this pencil - which is used to de-duplicate
 	materialsSet = new Set();
-	colourComponent = ""
-	colourComponents = [ "white" ];
-	weight = 0.0;
-	modelNumber = null;
+	// the colour component that defines the differences
+	colourComponent:string = "";
+	// the colour components
+	colourComponents:string[] = [ "white" ];
+	// the weight of the pencil
+	weight:number = null;
+	// the model number
+	modelNumber:String = null;
 	front = [];
 	back = [];
-	colourMap = {};
+	// a map of colour names to HTML # values
+	colourMap: { [id: string]: string; } = { };
+	model = {};
 
-	constructor(filePath) {
-		this.filePath = filePath;
-		this.#generateDetails()
-	}
+	/**
+	 * <p></p>
+	 *
+	 * @param pencilDataString The JSON data of the Pencil
+	 */
+	constructor(pencilDataString: string) {
+		const pencilJSONData:any = JSON.parse(pencilDataString);
 
-	#generateDetails() {
-		const json = JSON.parse(fs.readFileSync(this.filePath, "utf8"));
+		this.colourComponent = pencilJSONData.colour_component ?? this.colourComponent;
+		this.colourMap = pencilJSONData.colour_map ?? this.colourMap;
+		this.modelNumber = pencilJSONData.model_number ?? this.modelNumber;
 
-		this.colourComponent = json.colour_component ?? this.colourComponent;
-		this.colourMap = json.colour_map ?? this.colourMap;
-		this.modelNumber = json.model_number ?? this.modelNumber;
+		this.front = pencilJSONData.front ?? this.front;
+		this.back = pencilJSONData.back ?? this.back;
 
-
-		this.front = json.front ?? this.front;
-		this.back = json.back ?? this.back;
-
-		for(const component of json.components) {
+		for(const component of pencilJSONData.components) {
 			const thisComponent = new Component(component);
 			this.components.push(thisComponent);
 			this.totalLength += thisComponent.getWidth()
@@ -96,18 +107,14 @@ export class Pencil {
 			}
 		}
 
-		this.brand = json.brand ?? this.brand;
-		this.model = json.model ?? this.model;
+		this.brand = pencilJSONData.brand ?? this.brand;
+		this.model = pencilJSONData.model ?? this.model;
 
-		this.leadSize = json.lead_size ?? this.leadSize;
-		this.text = json.text ?? this.text;
-
-
-		// console.log(json);
+		this.leadSize = pencilJSONData.lead_size ?? this.leadSize;
+		this.text = pencilJSONData.text ?? this.text;
 	}
 
 	renderSvg(shouldColour, colourIndex, colourComponent) {
-
 		let thisColourIndex = colourIndex ?? 0;
 		let thisColourComponent = colourComponent ?? "";
 

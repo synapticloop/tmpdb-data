@@ -9,16 +9,16 @@ const __dirname = dirname(__filename);
 /**
  * List all directories in the `directoryPath` directory
  *
- * @param directoryPath The directory path
+ * @param {string} directoryPath The directory path
  * @returns {string[]} The list of directories in the directory path
  */
-export function listDirectories(directoryPath) {
+export function listDirectories(directoryPath: string): string[] {
 	return fs.readdirSync(directoryPath, {withFileTypes: true})
 			.filter(directoryEntry => directoryEntry.isDirectory())
 			.map(directoryEntry => directoryEntry.name);
 }
 
-export function listFiles(directoryPath) {
+export function listFiles(directoryPath:string) {
 	return fs.readdirSync(directoryPath, {withFileTypes: true})
 			.filter(fileEntry => {
 				return(fileEntry.isFile() && fileEntry.name.endsWith(".json"));

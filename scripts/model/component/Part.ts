@@ -5,7 +5,7 @@ import {
 	drawOutlineOctagon,
 	drawExtra,
 	renderBackExtra
-} from "../../utils/svg-helper.mjs";
+} from "../../utils/svg-helper.ts";
 
 export class Part {
 	type = "";
