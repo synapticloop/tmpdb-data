@@ -99,11 +99,13 @@ export class Pencil {
 				this.maxHeight = tempHeight;
 			}
 
-			const componentMaterial = component.material;
+			const componentMaterials = thisComponent.materials;
 
-			if(!this.materialsSet.has(componentMaterial)) {
-				this.materials.push(componentMaterial);
-				this.materialsSet.add(componentMaterial);
+			for(const componentMaterial of componentMaterials) {
+				if(!this.materialsSet.has(componentMaterial)) {
+					this.materials.push(componentMaterial);
+					this.materialsSet.add(componentMaterial);
+				}
 			}
 		}
 

@@ -21,10 +21,12 @@ export class Part {
 	extraHeight = 0;
 	extraDepth = 0;
 	dimensions = [];
+	material: string = null;
 
 	constructor(jsonObject, colours) {
 		this.type = jsonObject.type;
 		this.dimensions = jsonObject.dimensions;
+		this.material = jsonObject.material;
 
 		if(jsonObject.offset) {
 			let offsetTemp = jsonObject.offset.split("x") ?? ["0", "0"];

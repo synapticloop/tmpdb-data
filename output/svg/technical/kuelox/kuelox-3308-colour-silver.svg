@@ -44,6 +44,7 @@
 <text x="30" y="106" font-size="1.2em" font-weight="bold" text-anchor="start" dominant-baseline="central">Materials:</text>
 <text x="50" y="126" font-size="1.2em" text-anchor="start" dominant-baseline="central"> - metal</text>
 <text x="50" y="146" font-size="1.2em" text-anchor="start" dominant-baseline="central"> - plastic</text>
+<text x="50" y="166" font-size="1.2em" text-anchor="start" dominant-baseline="central"> - rubber</text>
 <line x1="100" y1="264.625" x2="1400" y2="264.625" stroke="#cfcfcf"  stroke-width="1" />
 <line x1="160" y1="278.375" x2="1400" y2="278.375" stroke="#cfcfcf"  stroke-width="1" />
 <line x1="148.75" y1="230" x2="148.75" y2="300" stroke="#cfcfcf"  stroke-width="1" />
@@ -166,7 +167,7 @@
 <line x1="1038.75" y1="409" x2="1038.75" y2="431" stroke="black" stroke-width="1" />
 <line x1="1038.75" y1="420" x2="1056.25" y2="420" stroke="black" stroke-width="1" />
 <line x1="1056.25" y1="409" x2="1056.25" y2="431" stroke="black" stroke-width="1" />
-<text x="1047.5" y="439" font-size="1.2em" transform="rotate(-90, 1047.5, 439)"  text-anchor="end" dominant-baseline="middle" fill="black"><tspan x="1047.5" dy="0">metal</tspan></text>
+<text x="1047.5" y="439" font-size="1.2em" transform="rotate(-90, 1035.5, 439)"  text-anchor="end" dominant-baseline="middle" fill="black"><tspan x="1039.5" dy="0">metal</tspan><tspan x="1039.5" dy="1em">rubber</tspan></text>
 <line x1="1056.25" y1="409" x2="1056.25" y2="431" stroke="black" stroke-width="1" />
 <line x1="1056.25" y1="420" x2="1121.25" y2="420" stroke="black" stroke-width="1" />
 <line x1="1121.25" y1="409" x2="1121.25" y2="431" stroke="black" stroke-width="1" />

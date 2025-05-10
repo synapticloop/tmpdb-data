@@ -397,7 +397,7 @@ export class SVGRenderer {
 			svgString += dimensionsHorizontal(xOffset,
 					SVG_HEIGHT/2 + 120,
 					component.width,
-					`${component.material}`,
+					`${(component.materials.join("\n"))}`,
 					TextOrientation.BOTTOM_ROTATED,
 					false);
 			xOffset += component.width;
@@ -411,7 +411,7 @@ export class SVGRenderer {
 				svgString += dimensionsHorizontal(xOffset + extraPart.extraOffset[0] * 5 - (component.extraPartFirst ? component.getWidth() : 0),
 						SVG_HEIGHT/2 + 80,
 						extraPart.extraWidth*5 - (component.extraPartFirst ? component.getWidth() : 0),
-						`${component.material}`,
+						`${component.materials.join("\n")}`,
 						TextOrientation.BOTTOM,
 						false);
 			}

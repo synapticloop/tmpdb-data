@@ -3,7 +3,7 @@ import {Pencil} from "../Pencil.ts";
 
 export class Component {
 	parts = [];
-	material:string = "unknown";
+	materials:string[] = [];
 	colours:string[] = [ "white" ];
 	type:string = "unknown";
 	width:number = 0;
@@ -14,7 +14,13 @@ export class Component {
 
 	constructor(jsonObject:any) {
 		this.type = jsonObject.type ?? this.type;
-		this.material = jsonObject.material ?? this.material;
+
+		if(jsonObject.material) {
+			this.materials.length = 0;
+			this.materials.push(jsonObject.material);
+		} else {
+			this.materials.push("unknown");
+		}
 		this.colours = jsonObject.colours ?? this.colours;
 
 		if(jsonObject.parts) {
@@ -23,6 +29,10 @@ export class Component {
 				const thisPart = new Part(part, this.colours);
 				this.parts.push(thisPart);
 				this.width += thisPart.getWidth();
+
+				if(part.material) {
+					this.materials.push(part.material);
+				}
 
 				if(thisPart.extraParts.length > 0) {
 					this.extraParts.push(thisPart);
@@ -60,10 +70,6 @@ export class Component {
 
 	getType() {
 		return(this.type);
-	}
-
-	getMaterial() {
-		return(this.material);
 	}
 
 	getExtraParts() {
