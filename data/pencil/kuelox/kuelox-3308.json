@@ -81,22 +81,8 @@
 		{
 			"type": "foot",
 			"parts": [
-				{ "type": "cylinder", "dimensions": "1.0x8.0" }
-			],
-			"material": "metal",
-			"colours": [ "silver" ]
-		},
-		{
-			"type": "ring",
-			"parts": [
-				{ "type": "cylinder", "dimensions": "1.25x8.0" }
-			],
-			"material": "rubber",
-			"colours": [ "red" ]
-		},
-		{
-			"type": "foot",
-			"parts": [
+				{ "type": "cylinder", "dimensions": "1.0x8.0" },
+				{ "type": "cylinder", "dimensions": "1.25x8.0", "material": "rubber", "colours": [ "red"] },
 				{ "type": "cylinder", "dimensions": "1.25x8.0" }
 			],
 			"material": "metal",

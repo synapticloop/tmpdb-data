@@ -33,7 +33,9 @@ export class Part {
 
 		this.finish = jsonObject.finish ?? this.finish;
 
-		if(colours) {
+		if(jsonObject.colours) {
+			this.colours = jsonObject.colours;
+		} else if(colours) {
 			this.colours = colours;
 		} else {
 			this.colours.push("white");

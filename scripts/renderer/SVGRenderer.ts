@@ -50,7 +50,7 @@ export class SVGRenderer {
 	 *
 	 * @returns {string} The SVG data as a String
 	 */
-	generateSVG(colourIndex: number):string {
+	render(colourIndex: number):string {
 		// start
 		let svgString:string = SVGRenderer.SVG_START;
 
@@ -484,6 +484,16 @@ export class SVGRenderer {
 					strokeColour = "dimgray";
 				}
 
+				// maybe we have an over-ride colour and material
+				const partColour = part.colours[colourIndex];
+				if(partColour) {
+					if(this.pencil.colourMap[partColour]) {
+						colour = this.pencil.colourMap[partColour];
+					} else {
+						colour = partColour;
+					}
+				}
+
 				switch (part.type) {
 					case "cylinder":
 					case "hexagonal":
@@ -581,7 +591,7 @@ export class SVGRenderer {
 						svgString += `<text x="${startX + (part.width * 5)/2}" ` +
 							`y="${midY}" ` +
 							`text-anchor="middle" dominant-baseline="central">` +
-							`<tspan stroke="dimgray" stroke-width="0.5" fill="black" textLength="{this.width * 5 - 24}" > ` +
+							`<tspan stroke="dimgray" stroke-width="0.5" font-family="sans-serif" fill="black" textLength="{this.width * 5 - 24}" > ` +
 							`HB` +
 							`</tspan>` +
 							`</text>`;

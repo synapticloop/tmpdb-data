@@ -6,7 +6,8 @@
 	"colour_component": "body",
 	"colour_map": {
 		"pink": "#FFA07A",
-		"black": "#000000"
+		"black": "#000000",
+		"blue": "#AEDCDE"
 	},
 	"front": [
 		{ "type": "circle", "dimensions": "2.0", "fill":  "black" }
@@ -24,7 +25,7 @@
 				{ "type": "cylinder", "dimensions": "6.0x8.25" }
 			],
 			"material": "plastic",
-			"colours": [ "silver", "silver" ]
+			"colours": [ "silver", "silver", "silver" ]
 		},
 		{
 			"type": "body",
@@ -32,7 +33,7 @@
 				{ "type": "hexagonal", "dimensions": "99.75x8.0" }
 			],
 			"material": "plastic",
-			"colours": [ "pink" ,"black" ]
+			"colours": [ "pink" ,"black", "blue" ]
 		},
 		{
 			"type": "clip",
@@ -50,7 +51,7 @@
 					]}
 			],
 			"material": "plastic",
-			"colours": [ "silver", "silver" ]
+			"colours": [ "silver", "silver", "silver" ]
 		},
 		{
 			"type": "tail",
@@ -59,7 +60,7 @@
 				{ "type": "cylinder", "dimensions": "1.75x7.75"}
 			],
 			"material": "plastic",
-			"colours": [ "pink", "black" ]
+			"colours": [ "pink", "black", "blue" ]
 		},
 		{
 			"type": "cap",
@@ -70,7 +71,7 @@
 				{ "type": "convex", "dimensions": "0.75x8.5", "offset": "1.5x4.25" }
 			],
 			"material": "plastic",
-			"colours": [ "pink", "black" ]
+			"colours": [ "pink", "black", "blue" ]
 		}
 	]
 }

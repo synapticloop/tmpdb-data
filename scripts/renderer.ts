@@ -5,7 +5,7 @@ import { Pencil } from "./model/Pencil.ts";
 import fs from "fs";
 import sharp from "sharp";
 import {SVGRenderer} from "./renderer/SVGRenderer.ts";
-import {PNGRenderer} from "./renderer/PNGRenderer.ts";
+import {PNGTechnicalRenderer} from "./renderer/PNGTechnicalRenderer.ts";
 
 const baseDir:string = './data/pencil';
 // list the directories for the pencil data
@@ -32,7 +32,7 @@ for (const pencilDirectory of pencilDirectories) {
 			const svgOutputDir = path.join("./output/svg/technical/", pencilDirectory);
 			fs.mkdirSync(svgOutputDir, { "recursive": true });
 			const outputSvgFile = path.join(svgOutputDir, pencilFileName + ".svg");
-			const svgString = new SVGRenderer(pencil).generateSVG(-1);
+			const svgString = new SVGRenderer(pencil).render(-1);
 			fs.writeFileSync(outputSvgFile, svgString);
 			console.log(`       SVG: [${fileNumber}] (outline: white) ${pencilFile} -> ${outputSvgFile}`);
 			fileNumber++;
@@ -40,20 +40,20 @@ for (const pencilDirectory of pencilDirectories) {
 			const pngOutputDir = path.join("./output/png/technical/", pencilDirectory);
 			fs.mkdirSync(pngOutputDir, { "recursive": true });
 			const outputPngFile = path.join(pngOutputDir, pencilFileName + ".png");
-			new PNGRenderer(pencil).renderToPNGFile(outputSvgFile, outputPngFile);
+			new PNGTechnicalRenderer(pencil).render(outputSvgFile, outputPngFile);
 			console.log(`       PNG: [${fileNumber}] (outline: white) ${pencilFile} -> ${outputSvgFile}`);
 			fileNumber++;
 
 			// now go through the colours
 			for(let [ index, colourComponent ] of pencil.colourComponents.entries()) {
 				const colourOutputSvgFile = path.join(svgOutputDir, pencilFileName + "-colour-" + colourComponent + ".svg");
-				const svgString = new SVGRenderer(pencil).generateSVG(index);
+				const svgString = new SVGRenderer(pencil).render(index);
 				fs.writeFileSync(colourOutputSvgFile, svgString);
 				console.log(`       SVG: [${fileNumber}] (colour: ${colourComponent}) ${pencilFile} -> ${colourOutputSvgFile}`);
 				fileNumber++;
 
 				const colourOutputPngFile = path.join(pngOutputDir, pencilFileName + "-colour-" + colourComponent + ".png");
-				new PNGRenderer(pencil).renderToPNGFile(colourOutputSvgFile, colourOutputPngFile);
+				new PNGTechnicalRenderer(pencil).render(colourOutputSvgFile, colourOutputPngFile);
 				console.log(`       PNG: [${fileNumber}] (colour: ${colourComponent}) ${pencilFile} -> ${colourOutputPngFile}`);
 				fileNumber++;
 			}
