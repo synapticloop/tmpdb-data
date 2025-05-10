@@ -215,13 +215,14 @@ export function lineHorizontalDimension(x: number, y: number, width: number): st
 	return(lineHorizontal(x, y, width, "1", "#000000"));
 }
 
-export function lineHorizontal(x: number, y: number, width: number, strokeWidth: string, strokeColour: string): string {
+export function lineHorizontal(x: number, y: number, width: number, strokeWidth: string, strokeColour: string, strokeDash:string=null): string {
 	let svgString: string = "";
 	svgString += `<line x1="${x}" ` +
 		`y1="${y}" ` +
 		`x2="${x + width}" ` +
 		`y2="${y}" ` +
 		`stroke="${strokeColour}" ` +
+		`${(null !== strokeDash ? `stroke-dasharray="${strokeDash}" ` : " ")}` +
 		`stroke-width="${strokeWidth}" />\n`;
 	return(svgString);
 }
@@ -234,23 +235,32 @@ export function lineVerticalDimensions(x: number, y: number, height: number): st
 	return(lineVertical(x, y, height, "1", "#000000"));
 }
 
-export function circle(x: number, y: number, radius: number, strokeWidth: string, strokeColour: string): string {
+export function circle(x: number, y: number, radius: number, strokeWidth: string, strokeColour: string, fillColour:String="none"): string {
 	return(`<circle r="${radius}" `+
 			`cx="${x}" ` +
 			`cy="${y}" ` +
-			`fill="none" ` +
+			`fill="${fillColour}" ` +
 			`stroke="${strokeColour}" ` +
 			`stroke-width="${strokeWidth}"  />\n`);
 
 }
-export function lineVertical(x: number, y: number, height: number, strokeWidth: string, strokeColour: string): string {
+export function lineVertical(x: number, y: number, height: number, strokeWidth: string, strokeColour: string, strokeDash: string=null): string {
 	let svgString: string = "";
 	svgString += `<line x1="${x}" ` +
 		`y1="${y}" ` +
 		`x2="${x}" ` +
 		`y2="${y + height}" ` +
 		`stroke="${strokeColour}" ` +
+		`${(null !== strokeDash ? `stroke-dasharray="${strokeDash}" ` : " ")}` +
 		`stroke-width="${strokeWidth}" />\n`;
+	return(svgString);
+}
+
+export function target(x:number, y:number, length:number, radius:number):string {
+	let svgString = "";
+	svgString += lineHorizontal(x - length/2, y, length, "1", "#000000");
+	svgString += lineVertical(x, y - length/2, length, "1", "#000000");
+	svgString += circle(x, y, radius, "1", "#000000");
 	return(svgString);
 }
 
@@ -451,7 +461,7 @@ export function dimensionsHorizontal(x: number, y:number, width:number, text: st
 		let linedText:string = "";
 		let strings = text.split("\n");
 		for (const [index, string] of strings.entries()) {
-			linedText += `<tspan x="${x + width/2 - ((strings.length - 1) * 8)}" dy="${index === 0 ? "0" : "1.1em"}">${string}</tspan>`;
+			linedText += `<tspan x="${x + width/2 - ((strings.length - 1) * 8)}" dy="${index === 0 ? "0" : "1em"}">${string}</tspan>`;
 		}
 
 		switch (textOrientation) {
@@ -497,7 +507,7 @@ export function dimensionsHorizontal(x: number, y:number, width:number, text: st
 						`transform="rotate(-90, ${x + width/2 - ((strings.length-1) * 12)}, ${y + 8 + DIMENSION_MARKER_LENGTH/2})" ` +
 						`${(shouldBold ? "font-weight=\"bold\"" : "")} ` +
 						`text-anchor="end" ` +
-						`dominant-baseline="central" fill="red">` +
+						`dominant-baseline="middle" fill="red">` +
 						`${linedText}` +
 						`</text>\n`
 				break;			case TextOrientation.TOP_ROTATED:

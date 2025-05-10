@@ -20,6 +20,7 @@ export class Part {
 	extraWidth = 0;
 	extraHeight = 0;
 	extraDepth = 0;
+	dimensions = [];
 
 	constructor(jsonObject, colours) {
 		this.type = jsonObject.type;
@@ -44,7 +45,7 @@ export class Part {
 			let extraOffsetTemp = jsonObject?.offset.split("x") ?? [ "0", "0" ];
 			this.extraOffset = [ parseFloat(extraOffsetTemp[0]), parseFloat(extraOffsetTemp[1])];
 
-			let extraDimensions = [ 0, 0, 0 ]
+			let extraDimensions = [ "0", "0", "0" ];
 			extraDimensions = jsonObject?.dimensions.split("x") ?? extraDimensions;
 			this.extraWidth = parseFloat(extraDimensions[0]);
 			this.extraHeight = parseFloat(extraDimensions[1]);

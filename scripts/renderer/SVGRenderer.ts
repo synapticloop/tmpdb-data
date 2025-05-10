@@ -2,14 +2,17 @@ import {Pencil} from "../model/Pencil.ts";
 import {
 	circle,
 	dimensionsHorizontal,
-	dimensionsVertical,
+	dimensionsVertical, drawOutlineCircle, drawOutlineHexagon, drawOutlineOctagon,
 	drawText,
 	drawTextBold,
-	drawTextBoldCentred, drawVerticalLine, lineHorizontal, lineHorizontalDimension,
-	lineHorizontalGuide, lineVertical,
-	lineVerticalGuide,
+	drawTextBoldCentred,
+	lineHorizontal,
+	lineHorizontalGuide,
+	lineVertical,
+	lineVerticalGuide, renderBackExtra,
 	SVG_HEIGHT,
 	SVG_WIDTH,
+	target,
 	TextOrientation
 } from "../utils/svg-helper.ts";
 
@@ -90,7 +93,9 @@ export class SVGRenderer {
 
 		// now it is time to render the details of the pencil
 
-		svgString += this.renderFront(colour);
+		svgString += this.renderSideComponents(colour);
+		svgString += this.renderFrontComponents(colour);
+		svgString += this.renderBackComponents(colour);
 
 		// end the end of the SVG
 		svgString += SVGRenderer.SVG_END;
@@ -100,27 +105,26 @@ export class SVGRenderer {
 	private renderCentreLines(): string {
 		let svgString:string = "";
 
-		// the horizontal centre line
-		svgString += lineHorizontal(2, SVG_HEIGHT/2, SVG_WIDTH - 4, "1", "#8f8f8f");
+		// the horizontal centre line with targets
+		svgString += lineHorizontal(10, SVG_HEIGHT/2, SVG_WIDTH - 20, "1", "#000000", "2");
+		svgString += target(30, SVG_HEIGHT/2, 40, 10);
+		svgString += target(SVG_WIDTH - 30, SVG_HEIGHT/2, 40, 10);
 
-		svgString += lineVertical(20, SVG_HEIGHT/2 - 20, 40, "1", "#8f8f8f");
-		svgString += circle(20, SVG_HEIGHT/2, 10, "1", "#8f8f8f");
+		// FRONT VIEW the left hand side targets and the dashed line
+		svgString += lineVertical(160, 140, SVG_HEIGHT - 220, "1", "#000000", "2");
+		svgString += target(160, 150, 40, 10);
+		svgString += target(160, SVG_HEIGHT - 100, 40, 10);
 
-		svgString += lineVertical(SVG_WIDTH - 20, SVG_HEIGHT/2 - 20, 40, "1", "#8f8f8f");
-		svgString += circle(SVG_WIDTH - 20, SVG_HEIGHT/2, 10, "1", "#8f8f8f");
+		// SIDE VIEW
+		svgString += lineVertical(SVG_WIDTH/2, 140, SVG_HEIGHT - 220, "1", "#000000", "2");
+		svgString += target(SVG_WIDTH/2, 150, 40, 10);
+		svgString += target(SVG_WIDTH/2, SVG_HEIGHT - 100, 40, 10);
 
-		// the front centre line
-		svgString += lineVertical(160, 160, SVG_HEIGHT - 240, "1", "#8f8f8f");
+		// LEFT VIEW the right hand side targets and the dashed line
+		svgString += lineVertical(SVG_WIDTH-100, 140, SVG_HEIGHT - 220, "1", "#000000", "2");
+		svgString += target(SVG_WIDTH-100, 150, 40, 10);
+		svgString += target(SVG_WIDTH-100, SVG_HEIGHT - 100, 40, 10);
 
-		svgString += circle(160, 180, 10, "1", "#8f8f8f");
-		svgString += lineHorizontal(140, 180, 40, "1", "#8f8f8f");
-
-		svgString += circle(160, SVG_HEIGHT - 100, 10, "1", "#8f8f8f");
-		svgString += lineHorizontal(140, SVG_HEIGHT - 100, 40, "1", "#8f8f8f");
-
-		// the back centre line
-
-		// the side centre line
 		return(svgString);
 	}
 
@@ -142,7 +146,7 @@ export class SVGRenderer {
 			`x="${colourOffset + 40}" ` +
 			`y="30" ` +
 			`font-size="1.6em" font-weight="bold" text-anchor="end" dominant-baseline="central">` +
-			`'${this.pencil.colourComponent}' colour variants` +
+			`Colour variants of the ${this.pencil.colourComponent}` +
 			`</text>\n`
 
 		for(let colourComponent of this.pencil.colourComponents) {
@@ -336,6 +340,7 @@ export class SVGRenderer {
 				true);
 		}
 
+		// This is the BOTTOM WIDTH of the pencil
 		svgString += dimensionsHorizontal(160 - this.pencil.maxWidth/2 * 5,
 			SVG_HEIGHT/2 + 30 + this.pencil.maxHeight/2 * 5,
 			this.pencil.maxWidth * 5,
@@ -355,7 +360,7 @@ export class SVGRenderer {
 			svgString += dimensionsHorizontal(xOffset,
 				SVG_HEIGHT/2 - 120,
 				component.width,
-					`${(Math.round((component.width/5) * 100) / 100).toFixed(2)} mm${(component.width > 24 ? "\n" : " ")}${component.type}`,
+					`${(Math.round((component.width/5) * 100) / 100).toFixed(2)} mm${(component.width > 30 ? "\n" : " ")}${component.type}`,
 				TextOrientation.TOP_ROTATED,
 				true);
 			xOffset += component.width;
@@ -374,6 +379,16 @@ export class SVGRenderer {
 						true);
 			}
 		}
+
+		// now for the total length
+		svgString += dimensionsHorizontal(
+			SVG_WIDTH/2 - this.pencil.totalLength/2,
+			SVG_HEIGHT/2 + 30 + this.pencil.maxHeight/2 * 5,
+			this.pencil.totalLength,
+			`${(Math.round(this.pencil.totalLength * 100) / 100).toFixed(2)} mm`,
+			TextOrientation.BOTTOM,
+			true
+			);
 
 		return(svgString);
 	}
@@ -442,7 +457,7 @@ export class SVGRenderer {
 					SVG_HEIGHT/2 - component.maxHeight/2 * 5,
 					component.maxHeight * 5,
 					"grip",
-					TextOrientation.BOTTOM,
+					TextOrientation.BOTTOM_ROTATED,
 					true);
 
 			}
@@ -450,9 +465,140 @@ export class SVGRenderer {
 		return(svgString);
 	}
 
-	private renderFront(colour:string): string {
+	private renderSideComponents(colour:string): string {
 		let svgString: string = "";
 
 		return(svgString);
 	}
+
+	private renderFrontComponents(colour:string): string {
+		let svgString: string = "";
+		let startX = 160;
+		let midY = SVG_HEIGHT/2;
+
+		// we want to render them back to front so that the last component is on
+		// the bottom
+
+		this.pencil.components.reverse()
+
+		// go through the components and render them
+		for(const component of this.pencil.components) {
+			component.parts.reverse();
+			for (let part of component.parts) {
+				switch (part.type) {
+					case "cylinder":
+						svgString += circle(startX, midY, (part.start_height / 2) * 5, "1", "dimgray", colour);
+						break;
+					case "cone":
+						svgString += drawOutlineCircle((part.start_height / 2) * 5, startX, midY, colour);
+						svgString += drawOutlineCircle((part.end_height / 2) * 5, startX, midY, colour);
+						break;
+					case "hexagonal":
+						svgString += drawOutlineHexagon(startX, midY, part.start_height, colour);
+						break;
+					case "octagonal":
+						svgString += drawOutlineOctagon(startX, midY, part.start_height, colour);
+						break;
+					case "extra":
+						part.extraParts.reverse();
+						svgString += renderBackExtra(
+							startX,
+							midY,
+							part.extraOffset[0],
+							part.extraOffset[1],
+							part.extraDepth,
+							part.extraParts,
+							colour);
+						part.extraParts.reverse();
+						break;
+				}
+			}
+			component.parts.reverse();
+		}
+
+		// now put it back in order
+		this.pencil.components.reverse()
+
+		for(let front of this.pencil.front) {
+			let dimensionsTemp: string = front.dimensions.split("x");
+			let dimensions: number[] = [];
+			for (const dimension of dimensionsTemp) {
+				dimensions.push(parseInt(dimension));
+			}
+
+			if (this.pencil.colourMap[front.fill]) {
+				colour = this.pencil.colourMap[front.fill];
+			}
+
+			// render the front piece
+			switch (front.type) {
+				case "circle":
+					svgString += circle(160, SVG_HEIGHT/2, dimensions[0]/2 * 5, "0.5", "dimgray", front.fill);
+					break;
+			}
+		}
+
+		return(svgString);
+	}
+
+	private renderBackComponents(colour:string): string {
+		let svgString: string = "";
+		let startX = SVG_WIDTH - 100;
+		let midY = SVG_HEIGHT/2;
+
+		// go through the components and render them
+		for(const component of this.pencil.components) {
+			for (let part of component.parts) {
+				switch (part.type) {
+					case "cylinder":
+						svgString += circle(startX, midY, (part.start_height / 2) * 5, "1", "dimgray", colour);
+						break;
+					case "cone":
+						svgString += drawOutlineCircle((part.start_height / 2) * 5, startX, midY, colour);
+						svgString += drawOutlineCircle((part.end_height / 2) * 5, startX, midY, colour);
+						break;
+					case "hexagonal":
+						svgString += drawOutlineHexagon(startX, midY, part.start_height, colour);
+						break;
+					case "octagonal":
+						svgString += drawOutlineOctagon(startX, midY, part.start_height, colour);
+						break;
+					case "extra":
+						part.extraParts.reverse();
+						svgString += renderBackExtra(
+							startX,
+							midY,
+							part.extraOffset[0],
+							part.extraOffset[1],
+							part.extraDepth,
+							part.extraParts,
+							colour);
+						part.extraParts.reverse();
+						break;
+				}
+			}
+		}
+
+		for(let back of this.pencil.back) {
+			let dimensionsTemp: string = back.dimensions.split("x");
+			let dimensions: number[] = [];
+			for (const dimension of dimensionsTemp) {
+				dimensions.push(parseInt(dimension));
+			}
+
+			if (this.pencil.colourMap[back.fill]) {
+				colour = this.pencil.colourMap[back.fill];
+			}
+
+			// render the back piece
+			switch (back.type) {
+				case "circle":
+					svgString += circle(SVG_WIDTH - 100, SVG_HEIGHT/2, dimensions[0]/2 * 5, "1", "dimgray", back.fill);
+					break;
+			}
+		}
+
+		return(svgString);
+	}
+
 }
