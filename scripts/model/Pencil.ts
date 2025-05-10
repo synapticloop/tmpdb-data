@@ -255,6 +255,8 @@ export class Pencil {
 		svgString += drawTextBoldCentred("Back", SVG_WIDTH-100, SVG_HEIGHT - 60, "1.8em");
 
 		offset = SVG_WIDTH/2 - this.getTotalLength()/2;
+
+		// draw the back parts for the body and grip
 		for (let component of this.components) {
 
 			if(component.type === "body") {

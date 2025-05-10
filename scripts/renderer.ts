@@ -30,7 +30,7 @@ for (const pencilDirectory of pencilDirectories) {
 			const svgOutputDir = path.join("./output/svg/pencil/", pencilDirectory);
 			fs.mkdirSync(svgOutputDir, { "recursive": true });
 			const outputSvgFile = path.join(svgOutputDir, pencilFileName + ".svg");
-			const svgString = new SVGRenderer(pencil).generateSVG(false, 0);
+			const svgString = new SVGRenderer(pencil).generateSVG(-1);
 			fs.writeFileSync(outputSvgFile, svgString);
 			console.log(`       SVG: (outline) ${pencilFile} -> ${outputSvgFile}`);
 			// now go through the colours

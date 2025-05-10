@@ -1,11 +1,12 @@
 import {Pencil} from "../model/Pencil.ts";
 import {
+	circle,
 	dimensionsHorizontal,
 	dimensionsVertical,
 	drawText,
 	drawTextBold,
-	drawTextBoldCentred,
-	lineHorizontalGuide,
+	drawTextBoldCentred, drawVerticalLine, lineHorizontal, lineHorizontalDimension,
+	lineHorizontalGuide, lineVertical,
 	lineVerticalGuide,
 	SVG_HEIGHT,
 	SVG_WIDTH,
@@ -40,13 +41,24 @@ export class SVGRenderer {
 	}
 
 	/**
-	 * Generate the SVG data from the Pencil
+	 * <p>Generate the SVG as a string with the colour</p>
+	 *
+	 * @param colourIndex the pencil colour index
 	 *
 	 * @returns {string} The SVG data as a String
 	 */
-	generateSVG(shouldColour: boolean, colourIndex: number):string {
+	generateSVG(colourIndex: number):string {
+		let colour:string = "white";
+		if(colourIndex !== -1 && colourIndex < this.pencil.colourComponents.length) {
+			colour = this.pencil.colourComponents[colourIndex];
+		}
+
 		// start
 		let svgString:string = SVGRenderer.SVG_START;
+
+		// centre line
+		svgString += this.renderCentreLines();
+
 		// overview text
 		svgString += this.renderOverviewText();
 
@@ -70,11 +82,45 @@ export class SVGRenderer {
 		//render the side dimensions
 		svgString += this.renderSideDimensions();
 
+		//render the side materials
+		svgString += this.renderSideMaterials();
+
 		// render the back dimensions
 		svgString += this.renderBackDimensions();
 
+		// now it is time to render the details of the pencil
+
+		svgString += this.renderFront(colour);
+
 		// end the end of the SVG
 		svgString += SVGRenderer.SVG_END;
+		return(svgString);
+	}
+
+	private renderCentreLines(): string {
+		let svgString:string = "";
+
+		// the horizontal centre line
+		svgString += lineHorizontal(2, SVG_HEIGHT/2, SVG_WIDTH - 4, "1", "#8f8f8f");
+
+		svgString += lineVertical(20, SVG_HEIGHT/2 - 20, 40, "1", "#8f8f8f");
+		svgString += circle(20, SVG_HEIGHT/2, 10, "1", "#8f8f8f");
+
+		svgString += lineVertical(SVG_WIDTH - 20, SVG_HEIGHT/2 - 20, 40, "1", "#8f8f8f");
+		svgString += circle(SVG_WIDTH - 20, SVG_HEIGHT/2, 10, "1", "#8f8f8f");
+
+		// the front centre line
+		svgString += lineVertical(160, 160, SVG_HEIGHT - 240, "1", "#8f8f8f");
+
+		svgString += circle(160, 180, 10, "1", "#8f8f8f");
+		svgString += lineHorizontal(140, 180, 40, "1", "#8f8f8f");
+
+		svgString += circle(160, SVG_HEIGHT - 100, 10, "1", "#8f8f8f");
+		svgString += lineHorizontal(140, SVG_HEIGHT - 100, 40, "1", "#8f8f8f");
+
+		// the back centre line
+
+		// the side centre line
 		return(svgString);
 	}
 
@@ -152,7 +198,7 @@ export class SVGRenderer {
 		let offset:number = SVG_WIDTH/2 - this.pencil.getTotalLength()/2;
 
 		let hasExtra = false;
-		// now for the extra components guidelines
+		// now for the extra side components guidelines
 		for (let component of this.pencil.components) {
 			for(const extraPart of component.getExtraParts()) {
 				// draw the straight-through line for guidance top of the extra parts
@@ -191,20 +237,21 @@ export class SVGRenderer {
 		// reset the offset to redraw
 		offset = SVG_WIDTH/2 - this.pencil.getTotalLength()/2;
 
+
 		for (let component of this.pencil.components) {
 			// vertical line
-			svgString += lineVerticalGuide(offset, SVG_HEIGHT/2 - 88 - this.pencil.maxHeight/2 * 5, 208);
+			svgString += lineVerticalGuide(offset, SVG_HEIGHT/2 - 120, 240);
 
 			offset += component.getWidth();
 
 			// now for extraParts
 			for(const extraPart of component.getExtraParts()) {
 				svgString += lineVerticalGuide(offset + extraPart.extraOffset[0] * 5 - (component.extraPartFirst ? component.getWidth() : 0),
-					SVG_HEIGHT/2 - 44 - this.pencil.maxHeight/2 * 5,
-					164)
+					SVG_HEIGHT/2 - 80,
+					160);
 				svgString += lineVerticalGuide(offset + extraPart.extraOffset[0] * 5 + extraPart.extraWidth*5 - (component.extraPartFirst ? component.getWidth() : 0),
-					SVG_HEIGHT/2 - 44 - this.pencil.maxHeight/2 * 5,
-					164)
+					SVG_HEIGHT/2 - 80,
+					160);
 			}
 		}
 
@@ -306,16 +353,62 @@ export class SVGRenderer {
 		for (let component of this.pencil.components) {
 			// draw all the dimensions
 			svgString += dimensionsHorizontal(xOffset,
-				SVG_HEIGHT/2 - 60,
+				SVG_HEIGHT/2 - 120,
 				component.width,
-				`${(Math.round((component.width/5) * 100) / 100).toFixed(2)} mm`,
+					`${(Math.round((component.width/5) * 100) / 100).toFixed(2)} mm${(component.width > 24 ? "\n" : " ")}${component.type}`,
 				TextOrientation.TOP_ROTATED,
-				true)
+				true);
 			xOffset += component.width;
+
+			// now for the extra dimensions
+			// is the extra the first component, or the last
+			// now for extraParts
+			for(const extraPart of component.getExtraParts()) {
+				// draw the straight-through line for guidance
+
+				svgString += dimensionsHorizontal(xOffset + extraPart.extraOffset[0] * 5 - (component.extraPartFirst ? component.getWidth() : 0),
+						SVG_HEIGHT/2 - 80,
+						extraPart.extraWidth*5 - (component.extraPartFirst ? component.getWidth() : 0),
+						`${(Math.round(extraPart.extraWidth * 100) / 100).toFixed(2)} mm\n${component.getType()} (extra)`,
+						TextOrientation.CENTER,
+						true);
+			}
 		}
 
 		return(svgString);
 	}
+
+	private renderSideMaterials(): string {
+		let svgString: string = "";
+
+		let xOffset: number = SVG_WIDTH/2 - (this.pencil.totalLength/2);
+		for (let component of this.pencil.components) {
+			// draw all the dimensions
+			svgString += dimensionsHorizontal(xOffset,
+					SVG_HEIGHT/2 + 120,
+					component.width,
+					`${component.material}`,
+					TextOrientation.BOTTOM_ROTATED,
+					false);
+			xOffset += component.width;
+
+			// now for the extra dimensions
+			// is the extra the first component, or the last
+			// now for extraParts
+			for(const extraPart of component.getExtraParts()) {
+				// draw the straight-through line for guidance
+
+				svgString += dimensionsHorizontal(xOffset + extraPart.extraOffset[0] * 5 - (component.extraPartFirst ? component.getWidth() : 0),
+						SVG_HEIGHT/2 + 80,
+						extraPart.extraWidth*5 - (component.extraPartFirst ? component.getWidth() : 0),
+						`${component.material}`,
+						TextOrientation.BOTTOM,
+						false);
+			}
+		}
+
+		return(svgString);	}
+
 	private renderBackDimensions(): string {
 		let svgString: string = "";
 
@@ -333,7 +426,7 @@ export class SVGRenderer {
 					SVG_HEIGHT/2 - component.maxHeight/2 * 5,
 					component.maxHeight * 5,
 					"body",
-					TextOrientation.BOTTOM,
+					TextOrientation.BOTTOM_ROTATED,
 					true);
 			}
 
@@ -354,6 +447,12 @@ export class SVGRenderer {
 
 			}
 		}
+		return(svgString);
+	}
+
+	private renderFront(colour:string): string {
+		let svgString: string = "";
+
 		return(svgString);
 	}
 }

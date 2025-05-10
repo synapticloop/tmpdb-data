@@ -234,6 +234,15 @@ export function lineVerticalDimensions(x: number, y: number, height: number): st
 	return(lineVertical(x, y, height, "1", "#000000"));
 }
 
+export function circle(x: number, y: number, radius: number, strokeWidth: string, strokeColour: string): string {
+	return(`<circle r="${radius}" `+
+			`cx="${x}" ` +
+			`cy="${y}" ` +
+			`fill="none" ` +
+			`stroke="${strokeColour}" ` +
+			`stroke-width="${strokeWidth}"  />\n`);
+
+}
 export function lineVertical(x: number, y: number, height: number, strokeWidth: string, strokeColour: string): string {
 	let svgString: string = "";
 	svgString += `<line x1="${x}" ` +
@@ -246,6 +255,7 @@ export function lineVertical(x: number, y: number, height: number, strokeWidth: 
 }
 
 export enum TextOrientation {
+	CENTER,
 	TOP,
 	TOP_ROTATED,
 	RIGHT,
@@ -305,6 +315,80 @@ export function dimensionsVertical(x: number, y:number, height:number, text: str
 	// lastly the text
 	if(text) {
 		switch (textOrientation) {
+			case TextOrientation.TOP:
+				svgString += `<text ` +
+						`x="${x}" ` +
+						`y="${y - 8}" ` +
+						`${(shouldBold ? "font-weight=\"bold\"" : "")} ` +
+						`font-size="1.2em" ` +
+						`text-anchor="middle" ` +
+						`dominant-baseline="auto" ` +
+						`fill="red">` +
+						`${text}` +
+						`</text>\n`;
+				break;
+			case TextOrientation.TOP_ROTATED:
+				svgString += `<text ` +
+						`x="${x}" ` +
+						`y="${y - 8}" ` +
+						`transform="rotate(-90, ${x}, ${y - 8})" ` +
+						`${(shouldBold ? "font-weight=\"bold\"" : "")} ` +
+						`font-size="1.2em" ` +
+						`text-anchor="start" ` +
+						`dominant-baseline="middle" ` +
+						`fill="red">` +
+						`${text}` +
+						`</text>\n`
+				break;
+			case TextOrientation.RIGHT:
+				svgString += `<text ` +
+					`x="${x + 2 + DIMENSION_MARKER_LENGTH/2}" ` +
+					`y="${y + height/2}" ` +
+					`font-size="1.2em" ` +
+					`${(shouldBold ? "font-weight=\"bold\"" : "")} ` +
+					`text-anchor="start" ` +
+					`dominant-baseline="central" fill="red">` +
+					`${text}` +
+					`</text>\n`;
+				break;
+			case TextOrientation.RIGHT_ROTATED:
+				break;
+			case TextOrientation.BOTTOM:
+				svgString += `<text ` +
+						`x="${x}" ` +
+						`y="${y + height + 8}" ` +
+						`${(shouldBold ? "font-weight=\"bold\"" : "")} ` +
+						`font-size="1.2em" ` +
+						`text-anchor="end" ` +
+						`dominant-baseline="middle" ` +
+						`fill="red">` +
+						`${text}` +
+						`</text>\n`
+				break;
+			case TextOrientation.BOTTOM_ROTATED:
+				svgString += `<text ` +
+						`x="${x}" ` +
+						`y="${y + height + 8}" ` +
+						`transform="rotate(-90, ${x}, ${y + height + 8})" ` +
+						`${(shouldBold ? "font-weight=\"bold\"" : "")} ` +
+						`font-size="1.2em" ` +
+						`text-anchor="end" ` +
+						`dominant-baseline="middle" ` +
+						`fill="red">` +
+						`${text}` +
+						`</text>\n`
+				break;
+			case TextOrientation.LEFT:
+				svgString += `<text ` +
+						`x="${x - 8 - DIMENSION_MARKER_LENGTH/2}" ` +
+						`y="${y + height/2}" ` +
+						`font-size="1.2em" ` +
+						`${(shouldBold ? "font-weight=\"bold\"" : "")} ` +
+						`text-anchor="end" ` +
+						`dominant-baseline="central" fill="red">` +
+						`${text}` +
+						`</text>\n`;
+				break;
 			case TextOrientation.LEFT_ROTATED:
 				svgString += `<text ` +
 					`x="${x - 8 - DIMENSION_MARKER_LENGTH/2}" ` +
@@ -316,24 +400,6 @@ export function dimensionsVertical(x: number, y:number, height:number, text: str
 					`dominant-baseline="central" fill="red">` +
 					`${text}` +
 					`</text>\n`;
-				break;
-			case TextOrientation.RIGHT:
-					svgString += `<text ` +
-						`x="${x + 2 + DIMENSION_MARKER_LENGTH/2}" ` +
-						`y="${y + height/2}" ` +
-						`font-size="1.2em" ` +
-						`${(shouldBold ? "font-weight=\"bold\"" : "")} ` +
-						`text-anchor="start" ` +
-						`dominant-baseline="central" fill="red">` +
-						`${text}` +
-						`</text>\n`;
-				break;
-			case TextOrientation.BOTTOM:
-				svgString += `<text ` +
-					`x="${x}" ` +
-					`y="${y + height + 8}" ` +
-					`transform="rotate(-90, ${x}, ${y + height + 8})" ` +
-					`font-size="1.2em" text-anchor="end" dominant-baseline="middle" fill="red">${text}</text>\n`
 				break;
 		}
 	}
@@ -382,7 +448,25 @@ export function dimensionsHorizontal(x: number, y:number, width:number, text: st
 
 	// lastly the text
 	if(text) {
+		let linedText:string = "";
+		let strings = text.split("\n");
+		for (const [index, string] of strings.entries()) {
+			linedText += `<tspan x="${x + width/2 - ((strings.length - 1) * 8)}" dy="${index === 0 ? "0" : "1.1em"}">${string}</tspan>`;
+		}
+
 		switch (textOrientation) {
+			case TextOrientation.CENTER:
+				svgString += `<text ` +
+						`x="${x + width/2}" ` +
+						`y="${y - ((strings.length - 1) * 8)}" ` +
+						`${(shouldBold ? "font-weight=\"bold\"" : "")} ` +
+						`font-size="1.2em" ` +
+						`text-anchor="middle" ` +
+						`dominant-baseline="middle" ` +
+						`fill="red">` +
+						`${linedText}` +
+						`</text>\n`;
+				break;
 			case TextOrientation.TOP:
 				svgString += `<text ` +
 					`x="${x + width/2}" ` +
@@ -391,7 +475,7 @@ export function dimensionsHorizontal(x: number, y:number, width:number, text: st
 					`${(shouldBold ? "font-weight=\"bold\"" : "")} ` +
 					`text-anchor="middle" ` +
 					`dominant-baseline="central" fill="red">` +
-					`${text}` +
+					`${linedText}` +
 					`</text>\n`
 				break;
 			case TextOrientation.BOTTOM:
@@ -402,19 +486,30 @@ export function dimensionsHorizontal(x: number, y:number, width:number, text: st
 					`${(shouldBold ? "font-weight=\"bold\"" : "")} ` +
 					`text-anchor="middle" ` +
 					`dominant-baseline="central" fill="red">` +
-					`${text}` +
+					`${linedText}` +
 					`</text>\n`
 				break;
-			case TextOrientation.TOP_ROTATED:
+			case TextOrientation.BOTTOM_ROTATED:
+				svgString += `<text ` +
+						`x="${x + width/2}" ` +
+						`y="${y + 8 + DIMENSION_MARKER_LENGTH/2}" ` +
+						`font-size="1.2em" ` +
+						`transform="rotate(-90, ${x + width/2 - ((strings.length-1) * 12)}, ${y + 8 + DIMENSION_MARKER_LENGTH/2})" ` +
+						`${(shouldBold ? "font-weight=\"bold\"" : "")} ` +
+						`text-anchor="end" ` +
+						`dominant-baseline="central" fill="red">` +
+						`${linedText}` +
+						`</text>\n`
+				break;			case TextOrientation.TOP_ROTATED:
 				svgString += `<text ` +
 					`x="${x + width/2}" ` +
 					`y="${y - 8 - DIMENSION_MARKER_LENGTH/2}" ` +
 					`font-size="1.2em" ` +
-					`transform="rotate(-90, ${x + width/2}, ${y - 8 - DIMENSION_MARKER_LENGTH/2})" ` +
+					`transform="rotate(-90, ${x + width/2 - ((strings.length-1) * 12)}, ${y - 8 - DIMENSION_MARKER_LENGTH/2})" ` +
 					`${(shouldBold ? "font-weight=\"bold\"" : "")} ` +
 					`text-anchor="start" ` +
 					`dominant-baseline="central" fill="red">` +
-					`${text}` +
+					`${linedText}` +
 					`</text>\n`
 				break;
 		}
