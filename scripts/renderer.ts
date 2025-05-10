@@ -13,7 +13,6 @@ const pencilDirectories:string[] = listDirectories(baseDir);
 
 for (const pencilDirectory of pencilDirectories) {
 	const pencilDir=path.join(baseDir, pencilDirectory);
-	console.log(`Searching in directory '${pencilDir}'`);
 
 	const pencilFiles = listFiles(pencilDir);
 
@@ -30,7 +29,7 @@ for (const pencilDirectory of pencilDirectories) {
 			let fileNumber = 1;
 
 			// now for the SVG files
-			const svgOutputDir = path.join("./output/svg/pencil/", pencilDirectory);
+			const svgOutputDir = path.join("./output/svg/technical/", pencilDirectory);
 			fs.mkdirSync(svgOutputDir, { "recursive": true });
 			const outputSvgFile = path.join(svgOutputDir, pencilFileName + ".svg");
 			const svgString = new SVGRenderer(pencil).generateSVG(-1);
@@ -38,7 +37,7 @@ for (const pencilDirectory of pencilDirectories) {
 			console.log(`       SVG: [${fileNumber}] (outline: white) ${pencilFile} -> ${outputSvgFile}`);
 			fileNumber++;
 
-			const pngOutputDir = path.join("./output/png/pencil/", pencilDirectory);
+			const pngOutputDir = path.join("./output/png/technical/", pencilDirectory);
 			fs.mkdirSync(pngOutputDir, { "recursive": true });
 			const outputPngFile = path.join(pngOutputDir, pencilFileName + ".png");
 			new PNGRenderer(pencil).renderToPNGFile(outputSvgFile, outputPngFile);
