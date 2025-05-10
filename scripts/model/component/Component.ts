@@ -46,52 +46,6 @@ export class Component {
 		}
 	}
 
-	renderSvg(shouldColour, startX, colourMap, index) {
-		let fillColour = shouldColour ? this.colours[index] : "white";
-
-		if (colourMap[fillColour]) {
-			fillColour = colourMap[fillColour];
-		}
-
-		let xPosition = startX;
-		let svgString = `\n<!-- RENDERING - component: ${this.type} -->\n`;
-		for(let part of this.parts) {
-			svgString += `${part.renderSvg(fillColour, this.type, xPosition, Pencil.HEIGHT/2)}\n`;
-			xPosition += part.getWidth();
-		}
-
-		return(svgString);
-	}
-
-	renderFront(shouldColour, startX, colourMap, index, colourComponent) {
-		let fillColour = shouldColour ? this.colours[index] : "white";
-
-		if (colourMap[fillColour]) {
-			fillColour = colourMap[fillColour];
-		}
-
-		let svgString = `\n<!-- RENDERING - component: ${this.type} -->\n`;
-		for(let part of this.parts) {
-			svgString = `${part.renderFront(fillColour, this.type, startX, Pencil.HEIGHT/2)}\n` + svgString;
-		}
-
-		return(svgString);
-	}
-
-	renderBack(shouldColour, startX, colourMap, index, colourComponent) {
-		let fillColour = shouldColour ? this.colours[index] : "white";
-
-		if (colourMap[fillColour]) {
-			fillColour = colourMap[fillColour];
-		}
-
-		let svgString = `\n<!-- RENDERING - component: ${this.type} -->\n`;
-		for(let part of this.parts) {
-			svgString += `${part.renderBack(fillColour, this.type, startX, Pencil.HEIGHT/2)}\n`;
-		}
-		return(svgString);
-	}
-
 	getWidth() {
 		return(this.width);
 	}
