@@ -3,9 +3,9 @@ import {listDirectories, listFiles} from "./utils/filesystem.ts";
 import * as path from "node:path";
 import { Pencil } from "./model/Pencil.ts";
 import fs from "fs";
-import sharp from "sharp";
 import {SVGRenderer} from "./renderer/SVGRenderer.ts";
 import {PNGTechnicalRenderer} from "./renderer/PNGTechnicalRenderer.ts";
+import {PDFDatasheetRenderer} from "./renderer/PDFDatasheetRenderer.ts";
 
 const baseDir:string = './data/pencil';
 // list the directories for the pencil data
@@ -57,6 +57,13 @@ for (const pencilDirectory of pencilDirectories) {
 				console.log(`       PNG: [${fileNumber}] (colour: ${colourComponent}) ${pencilFile} -> ${colourOutputPngFile}`);
 				fileNumber++;
 			}
+
+			const pdfOutputDir: string = path.join("./output/pdf/datasheet/");
+			fs.mkdirSync(pdfOutputDir, { "recursive": true });
+			const outputPdfFie: string = path.join(pdfOutputDir, pencilFileName + ".pdf");
+			new PDFDatasheetRenderer(pencil).render(outputPdfFie);
+
+
 		}
 	}
 }
