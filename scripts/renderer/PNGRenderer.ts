@@ -15,27 +15,20 @@ export class PNGRenderer {
 	 *
 	 * @return {string} The PNG as a String
 	 */
-	generatePNG(): string {
+	generatePNG():Promise<Buffer> {
 		const svgString = new SVGRenderer(this.pencil)
-			.generateSVG();
+			.generateSVG(-1);
 
-		sharp(svgString)
+		let options = {};
+
+		return(sharp(svgString, options)
 				.png()
-				.toBuffer()
-				.then((buffer) => {
-					console.log(`Generated PNG for pencil '${this.pencil.name} ${this.pencil.model}'`);
-					return(buffer.toString());
-				})
-				.catch(error => {
-					console.error(`Error generating PNG for pencil '${this.pencil.name} ${this.pencil.model}'`, error);
-					return(null);
-				});
-		return(null);
+				.toBuffer());
 	}
 
-	renderToPNGFile(svgString: string, outputFilePath: string): void {
+	renderToPNGFile(inputSvgFile: any, outputFilePath: any): void {
 		let options = {};
-		sharp(svgString, options)
+		sharp(inputSvgFile, options)
 				.png()
 				.toFile(outputFilePath)
 				.then(() => {

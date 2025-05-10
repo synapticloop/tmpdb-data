@@ -51,11 +51,6 @@ export class SVGRenderer {
 	 * @returns {string} The SVG data as a String
 	 */
 	generateSVG(colourIndex: number):string {
-		let colour:string = "white";
-		if(colourIndex !== -1 && colourIndex < this.pencil.colourComponents.length) {
-			colour = this.pencil.colourComponents[colourIndex];
-		}
-
 		// start
 		let svgString:string = SVGRenderer.SVG_START;
 
@@ -93,9 +88,9 @@ export class SVGRenderer {
 
 		// now it is time to render the details of the pencil
 
-		svgString += this.renderSideComponents(colour);
-		svgString += this.renderFrontComponents(colour);
-		svgString += this.renderBackComponents(colour);
+		svgString += this.renderSideComponents(colourIndex);
+		svgString += this.renderFrontComponents(colourIndex);
+		svgString += this.renderBackComponents(colourIndex);
 
 		// end the end of the SVG
 		svgString += SVGRenderer.SVG_END;
@@ -465,122 +460,125 @@ export class SVGRenderer {
 		return(svgString);
 	}
 
-	private renderSideComponents(colour:string): string {
+	private renderSideComponents(colourIndex:number): string {
 		let svgString: string = "";
 		let startX: number = SVG_WIDTH/2 - (this.pencil.totalLength/2);
+		let midY: number = SVG_HEIGHT/2;
 
-		if (this.pencil.colourMap[colour]) {
-			colour = this.pencil.colourMap[colour];
-		}
+		let colour = "white";
+
 		for (let component of this.pencil.components) {
+			let colourComponent:string = component.colours[colourIndex];
+			if (colourComponent) {
+				if(this.pencil.colourMap[colourComponent]) {
+					colour = this.pencil.colourMap[colourComponent];
+				} else {
+					colour = colourComponent;
+				}
+			}
+
 			for(let part of component.parts) {
 				// get the stroke colour
 				let strokeColour = "black"
-				if(this.colours[0] === "black") {
+				if(component.colours[0] === "black") {
 					strokeColour = "dimgray";
 				}
 
-				// switch (this.type) {
-				// 	case "extra":
-				// 		svgString += drawExtraOutline(startX + this.extraOffset[0]*5, midY - this.extraOffset[1]*5, this.extraParts, fillColour);
-				// 		break;
-				// }
-
-				switch (this.type) {
+				switch (part.type) {
 					case "cylinder":
 					case "hexagonal":
 					case "octagonal":
 						svgString += `<rect x="${startX}" ` +
-							`y="${midY - (this.end_height/2 * 5)}" ` +
-							`width="${this.width * 5}" ` +
-							`height="${this.start_height * 5}" ` +
-							`rx="1" ry="1" stroke-width="0.5" stroke="${strokeColour}" fill="${fillColour}"/>\n`
+							`y="${midY - (part.end_height/2 * 5)}" ` +
+							`width="${part.width * 5}" ` +
+							`height="${part.start_height * 5}" ` +
+							`rx="1" ry="1" stroke-width="0.5" stroke="${strokeColour}" fill="${colour}"/>\n`
 						break;
 					case "cone":
 						svgString += `<path d="M${startX} ` +
-							`${midY - (this.start_height/2 * 5)} ` +
-							`L${startX + this.width * 5} ${midY - (this.end_height/2 * 5)} ` +
-							`L${startX + this.width * 5} ${midY + (this.end_height/2 * 5)} ` +
-							`L${startX} ${midY + (this.start_height/2 *5)} Z" ` +
-							`stroke-width="0.5" stroke="${strokeColour}" fill="${fillColour}" />\n`
+							`${midY - (part.start_height/2 * 5)} ` +
+							`L${startX + part.width * 5} ${midY - (part.end_height/2 * 5)} ` +
+							`L${startX + part.width * 5} ${midY + (part.end_height/2 * 5)} ` +
+							`L${startX} ${midY + (part.start_height/2 *5)} Z" ` +
+							`stroke-width="1" stroke="${strokeColour}" fill="${colour}" />\n`
 						break;
 					case "convex":
-						let offsetX = this.width *5;
-						if(this.offset[0] !== 0) {
-							offsetX = this.offset[0] * 5;
+						let offsetX = part.width *5;
+						if(part.offset[0] !== 0) {
+							offsetX = part.offset[0] * 5;
 						}
 
-						let offsetY = this.start_height/2 * 5;
-						if(this.offset[1] !== 0) {
-							offsetY = (this.start_height/2 - this.offset[1]) * 5;
+						let offsetY = part.start_height/2 * 5;
+						if(part.offset[1] !== 0) {
+							offsetY = (part.start_height/2 - part.offset[1]) * 5;
 						}
 
-						svgString += `<path d="M${startX} ${midY - (this.start_height/2 * 5)} ` +
+						svgString += `<path d="M${startX} ${midY - (part.start_height/2 * 5)} ` +
 							`Q${startX + offsetX} ${midY - offsetY} ` +
-							`${startX} ${midY + (this.start_height/2 * 5)}" ` +
-							`stroke-width="0.5" stroke="${strokeColour}" fill="${fillColour}"/>\n`
+							`${startX} ${midY + (part.start_height/2 * 5)}" ` +
+							`stroke-width="0.5" stroke="${strokeColour}" fill="${colour}"/>\n`
 						break;
 					case "concave":
-						svgString += `<path d="M${startX} ${midY - (this.start_height/2 * 5)} ` +
-							`Q${startX + this.width*5} ${midY} ` +
-							`${startX} ${midY + (this.start_height/2 * 5)}" ` +
-							`stroke-width="0.5" stroke="${strokeColour}" fill="${fillColour}"/>\n`
+						svgString += `<path d="M${startX} ${midY - (part.start_height/2 * 5)} ` +
+							`Q${startX + part.width*5} ${midY} ` +
+							`${startX} ${midY + (part.start_height/2 * 5)}" ` +
+							`stroke-width="0.5" stroke="${strokeColour}" fill="${colour}"/>\n`
 						break;
 					case "extra":
-						svgString += drawExtra(startX + this.extraOffset[0]*5, midY - this.extraOffset[1]*5, this.extraParts, fillColour);
+						svgString += drawExtra(startX + part.extraOffset[0]*5, midY - part.extraOffset[1]*5, part.extraParts, colour);
 						break;
 				}
 
 				// draw the additional details
-				switch(this.type) {
+				switch(part.type) {
 					case "hexagonal":
-						svgString += drawShapeDetails(startX, midY, this.width *5);
+						svgString += drawShapeDetails(startX, midY, part.width *5);
 						break;
 					case "octagonal":
-						svgString += drawShapeDetails(startX, midY - ((this.start_height/2 * 5)*4/7), this.width *5);
-						svgString += drawShapeDetails(startX, midY + ((this.start_height/2 * 5)*4/7), this.width *5);
+						svgString += drawShapeDetails(startX, midY - ((part.start_height/2 * 5)*4/7), part.width *5);
+						svgString += drawShapeDetails(startX, midY + ((part.start_height/2 * 5)*4/7), part.width *5);
 						break;
 				}
 
 				// now for the finish - although this only really works for cylinder types
 				// the question becomes whether there will be other finishes on different
 				// objects
-				switch(this.finish) {
+				switch(part.finish) {
 					case "ferrule":
-						let offset = ((this.width/13) * 5)/2;
+						let offset = ((part.width/13) * 5)/2;
 
 						for(let i = 0; i < 13; i++) {
 							if(i !== 0 && i !== 6 && i < 12) {
 								svgString += `<line x1="${startX + offset}" ` +
-									`y1="${midY + 1.0 - this.start_height/2 * 5}" ` +
+									`y1="${midY + 1.0 - part.start_height/2 * 5}" ` +
 									`x2="${startX + offset}" ` +
-									`y2="${midY - 1.0 + this.start_height/2 * 5}" ` +
+									`y2="${midY - 1.0 + part.start_height/2 * 5}" ` +
 									`stroke-width="1" stroke="gray" />\n`
 							}
-							offset += (this.width/13) * 5;
+							offset += (part.width/13) * 5;
 						}
 
-						svgString += drawOutlineCircle(4, startX + 15, midY - this.start_height/4 * 5, "dimGray")
+						svgString += drawOutlineCircle(4, startX + 15, midY - part.start_height/4 * 5, "dimGray")
 
 						break;
 					case "knurled":
 						svgString += `<rect x="${startX}" ` +
-							`y="${midY - (this.end_height/2 * 5)}" ` +
-							`width="${this.width * 5}" ` +
-							`height="${this.start_height * 5}" ` +
+							`y="${midY - (part.end_height/2 * 5)}" ` +
+							`width="${part.width * 5}" ` +
+							`height="${part.start_height * 5}" ` +
 							`rx="1" ry="1" stroke-width="0.5" stroke="black" fill="url(#diagonalHatch)"/>\n`
 						break;
 				}
 
-				switch(componentType) {
+				switch(component.type) {
 					case "indicator":
 						// now draw the indicator
 						svgString += `<rect x="${startX + 10}" ` +
-							`y="${midY - (this.end_height/4 * 5)}" ` +
-							`width="${this.width * 5 - 20}" ` +
-							`height="${this.start_height/2 * 5}" ` +
-							`rx="1" ry="1" stroke-width="2" stroke="black" fill="${fillColour}"/>\n`;
-						svgString += `<text x="${startX + (this.width * 5)/2}" ` +
+							`y="${midY - (part.end_height/4 * 5)}" ` +
+							`width="${part.width * 5 - 20}" ` +
+							`height="${part.start_height/2 * 5}" ` +
+							`rx="1" ry="1" stroke-width="2" stroke="black" fill="${colour}"/>\n`;
+						svgString += `<text x="${startX + (part.width * 5)/2}" ` +
 							`y="${midY}" ` +
 							`text-anchor="middle" dominant-baseline="central">` +
 							`<tspan stroke="dimgray" stroke-width="0.5" fill="black" textLength="{this.width * 5 - 24}" > ` +
@@ -597,10 +595,12 @@ export class SVGRenderer {
 			return(svgString);
 	}
 
-	private renderFrontComponents(colour:string): string {
+	private renderFrontComponents(colourIndex:number): string {
 		let svgString: string = "";
 		let startX = 160;
 		let midY = SVG_HEIGHT/2;
+
+		let colour = "white";
 
 		// we want to render them back to front so that the last component is on
 		// the bottom
@@ -609,6 +609,14 @@ export class SVGRenderer {
 
 		// go through the components and render them
 		for(const component of this.pencil.components) {
+			let colourComponent:string = component.colours[colourIndex];
+			if (colourComponent) {
+				if(this.pencil.colourMap[colourComponent]) {
+					colour = this.pencil.colourMap[colourComponent];
+				} else {
+					colour = colourComponent;
+				}
+			}
 			component.parts.reverse();
 			for (let part of component.parts) {
 				switch (part.type) {
@@ -667,13 +675,25 @@ export class SVGRenderer {
 		return(svgString);
 	}
 
-	private renderBackComponents(colour:string): string {
+	private renderBackComponents(colourIndex:number): string {
 		let svgString: string = "";
 		let startX = SVG_WIDTH - 100;
 		let midY = SVG_HEIGHT/2;
 
+
+		let colour = "white";
 		// go through the components and render them
 		for(const component of this.pencil.components) {
+			let colourComponent:string = component.colours[colourIndex];
+
+			if (colourComponent) {
+				if(this.pencil.colourMap[colourComponent]) {
+					colour = this.pencil.colourMap[colourComponent];
+				} else {
+					colour = colourComponent;
+				}
+			}
+
 			for (let part of component.parts) {
 				switch (part.type) {
 					case "cylinder":

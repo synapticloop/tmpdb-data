@@ -305,7 +305,7 @@ export function dimensionsVertical(x: number, y:number, height:number, text: str
 		`y1="${y}" ` +
 		`x2="${x + DIMENSION_MARKER_LENGTH/2}" ` +
 		`y2="${y}" ` +
-		`stroke="red" stroke-width="1" />\n`;
+		`stroke="black" stroke-width="1" />\n`;
 
 	// now for the vertical line
 
@@ -313,14 +313,14 @@ export function dimensionsVertical(x: number, y:number, height:number, text: str
 		`y1="${y}" ` +
 		`x2="${x}" ` +
 		`y2="${y + height}" ` +
-		`stroke="red" stroke-width="1" />\n`;
+		`stroke="black" stroke-width="1" />\n`;
 
 	// the bottom horizontal line
 	svgString += `<line x1="${x - DIMENSION_MARKER_LENGTH/2}" ` +
 		`y1="${y + height}" ` +
 		`x2="${x + DIMENSION_MARKER_LENGTH/2}" ` +
 		`y2="${y + height}" ` +
-		`stroke="red" stroke-width="1" />\n`;
+		`stroke="black" stroke-width="1" />\n`;
 
 	// lastly the text
 	if(text) {
@@ -333,7 +333,7 @@ export function dimensionsVertical(x: number, y:number, height:number, text: str
 						`font-size="1.2em" ` +
 						`text-anchor="middle" ` +
 						`dominant-baseline="auto" ` +
-						`fill="red">` +
+						`fill="black">` +
 						`${text}` +
 						`</text>\n`;
 				break;
@@ -346,7 +346,7 @@ export function dimensionsVertical(x: number, y:number, height:number, text: str
 						`font-size="1.2em" ` +
 						`text-anchor="start" ` +
 						`dominant-baseline="middle" ` +
-						`fill="red">` +
+						`fill="black">` +
 						`${text}` +
 						`</text>\n`
 				break;
@@ -357,7 +357,7 @@ export function dimensionsVertical(x: number, y:number, height:number, text: str
 					`font-size="1.2em" ` +
 					`${(shouldBold ? "font-weight=\"bold\"" : "")} ` +
 					`text-anchor="start" ` +
-					`dominant-baseline="central" fill="red">` +
+					`dominant-baseline="central" fill="black">` +
 					`${text}` +
 					`</text>\n`;
 				break;
@@ -371,7 +371,7 @@ export function dimensionsVertical(x: number, y:number, height:number, text: str
 						`font-size="1.2em" ` +
 						`text-anchor="end" ` +
 						`dominant-baseline="middle" ` +
-						`fill="red">` +
+						`fill="black">` +
 						`${text}` +
 						`</text>\n`
 				break;
@@ -384,7 +384,7 @@ export function dimensionsVertical(x: number, y:number, height:number, text: str
 						`font-size="1.2em" ` +
 						`text-anchor="end" ` +
 						`dominant-baseline="middle" ` +
-						`fill="red">` +
+						`fill="black">` +
 						`${text}` +
 						`</text>\n`
 				break;
@@ -395,7 +395,7 @@ export function dimensionsVertical(x: number, y:number, height:number, text: str
 						`font-size="1.2em" ` +
 						`${(shouldBold ? "font-weight=\"bold\"" : "")} ` +
 						`text-anchor="end" ` +
-						`dominant-baseline="central" fill="red">` +
+						`dominant-baseline="central" fill="black">` +
 						`${text}` +
 						`</text>\n`;
 				break;
@@ -407,7 +407,7 @@ export function dimensionsVertical(x: number, y:number, height:number, text: str
 					`font-size="1.2em" ` +
 					`${(shouldBold ? "font-weight=\"bold\"" : "")} ` +
 					`text-anchor="middle" ` +
-					`dominant-baseline="central" fill="red">` +
+					`dominant-baseline="central" fill="black">` +
 					`${text}` +
 					`</text>\n`;
 				break;
@@ -439,7 +439,7 @@ export function dimensionsHorizontal(x: number, y:number, width:number, text: st
 		`y1="${y - DIMENSION_MARKER_LENGTH/2}" ` +
 		`x2="${x}" ` +
 		`y2="${y + DIMENSION_MARKER_LENGTH/2}" ` +
-		`stroke="red" stroke-width="1" />\n`;
+		`stroke="black" stroke-width="1" />\n`;
 
 	// now for the horizonal line
 
@@ -447,14 +447,14 @@ export function dimensionsHorizontal(x: number, y:number, width:number, text: st
 		`y1="${y}" ` +
 		`x2="${x + width}" ` +
 		`y2="${y}" ` +
-		`stroke="red" stroke-width="1" />\n`;
+		`stroke="black" stroke-width="1" />\n`;
 
 	// the right vertical line
 	svgString += `<line x1="${x + width}" ` +
 		`y1="${y - DIMENSION_MARKER_LENGTH/2}" ` +
 		`x2="${x + width}" ` +
 		`y2="${y + DIMENSION_MARKER_LENGTH/2}" ` +
-		`stroke="red" stroke-width="1" />\n`;
+		`stroke="black" stroke-width="1" />\n`;
 
 	// lastly the text
 	if(text) {
@@ -473,7 +473,7 @@ export function dimensionsHorizontal(x: number, y:number, width:number, text: st
 						`font-size="1.2em" ` +
 						`text-anchor="middle" ` +
 						`dominant-baseline="middle" ` +
-						`fill="red">` +
+						`fill="black">` +
 						`${linedText}` +
 						`</text>\n`;
 				break;
@@ -484,7 +484,7 @@ export function dimensionsHorizontal(x: number, y:number, width:number, text: st
 					`font-size="1.2em" ` +
 					`${(shouldBold ? "font-weight=\"bold\"" : "")} ` +
 					`text-anchor="middle" ` +
-					`dominant-baseline="central" fill="red">` +
+					`dominant-baseline="central" fill="black">` +
 					`${linedText}` +
 					`</text>\n`
 				break;
@@ -495,7 +495,7 @@ export function dimensionsHorizontal(x: number, y:number, width:number, text: st
 					`font-size="1.2em" ` +
 					`${(shouldBold ? "font-weight=\"bold\"" : "")} ` +
 					`text-anchor="middle" ` +
-					`dominant-baseline="central" fill="red">` +
+					`dominant-baseline="central" fill="black">` +
 					`${linedText}` +
 					`</text>\n`
 				break;
@@ -507,7 +507,7 @@ export function dimensionsHorizontal(x: number, y:number, width:number, text: st
 						`transform="rotate(-90, ${x + width/2 - ((strings.length-1) * 12)}, ${y + 8 + DIMENSION_MARKER_LENGTH/2})" ` +
 						`${(shouldBold ? "font-weight=\"bold\"" : "")} ` +
 						`text-anchor="end" ` +
-						`dominant-baseline="middle" fill="red">` +
+						`dominant-baseline="middle" fill="black">` +
 						`${linedText}` +
 						`</text>\n`
 				break;			case TextOrientation.TOP_ROTATED:
@@ -518,7 +518,7 @@ export function dimensionsHorizontal(x: number, y:number, width:number, text: st
 					`transform="rotate(-90, ${x + width/2 - ((strings.length-1) * 12)}, ${y - 8 - DIMENSION_MARKER_LENGTH/2})" ` +
 					`${(shouldBold ? "font-weight=\"bold\"" : "")} ` +
 					`text-anchor="start" ` +
-					`dominant-baseline="central" fill="red">` +
+					`dominant-baseline="central" fill="black">` +
 					`${linedText}` +
 					`</text>\n`
 				break;
@@ -538,7 +538,7 @@ export function dimensionsHorizontal(x: number, y:number, width:number, text: st
 // 				`font-size="1.2em" ` +
 // 				`${(shouldBold ? "font-weight=\"bold\"" : "")} ` +
 // 				`text-anchor="middle" ` +
-// 				`dominant-baseline="central" fill="red">` +
+// 				`dominant-baseline="central" fill="black">` +
 // 				`${text}` +
 // 				`</text>\n`
 // 			break;
@@ -549,7 +549,7 @@ export function dimensionsHorizontal(x: number, y:number, width:number, text: st
 // 				`font-size="1.2em" ` +
 // 				`${(shouldBold ? "font-weight=\"bold\"" : "")} ` +
 // 				`text-anchor="start" ` +
-// 				`dominant-baseline="central" fill="red">` +
+// 				`dominant-baseline="central" fill="black">` +
 // 				`${text}` +
 // 				`</text>\n`
 // 			break;
