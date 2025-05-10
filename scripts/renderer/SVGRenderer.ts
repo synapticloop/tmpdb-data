@@ -125,8 +125,23 @@ export class SVGRenderer {
 
 	private renderOverviewText(): string {
 		let svgString = "";
-		svgString += drawTextBold(`${this.pencil.brand} // ${this.pencil.model} ${(this.pencil.modelNumber ? "(Model #: " + this.pencil.modelNumber + ")" : "")}`, 30, 50, "2.0em");
+		svgString += drawTextBold(`${this.pencil.brand}` +
+			` // ` +
+			`${this.pencil.model} ` +
+			`${(this.pencil.modelNumber ? "(Model #: " + this.pencil.modelNumber + ")" : "")}`,
+			30,
+			50,
+			"2.0em");
+
 		svgString += drawText(`${this.pencil.text}`, 30, 80, "1.1em");
+
+		if(this.pencil.leadSize) {
+			svgString += drawText(`Lead size: ${this.pencil.leadSize} mm`, 30, 100, "1.1em");
+		}
+
+		if(this.pencil.weight) {
+			svgString += drawText(`Weight: ${this.pencil.weight}g`, 30, 120, "1.1em");
+		}
 
 		return(svgString);
 	}
@@ -168,7 +183,7 @@ export class SVGRenderer {
 	private renderMaterialList(): string {
 		let svgString:string = "";
 
-		let offset:number = 106;
+		let offset:number = 136;
 		svgString += `<text ` +
 			`x="30" ` +
 			`y="${offset}" ` +
