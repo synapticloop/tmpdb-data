@@ -60,7 +60,7 @@ for (const pencilDirectory of pencilDirectories) {
 
 			const pdfOutputDir: string = path.join("./output/pdf/datasheet/");
 			fs.mkdirSync(pdfOutputDir, { "recursive": true });
-			const outputPdfFie: string = path.join(pdfOutputDir, pencilFileName + ".pdf");
+			const outputPdfFie: string = path.join(pdfOutputDir, pencil.brand + "-" + pencilFileName + ".pdf");
 			new PDFDatasheetRenderer(pencil).render(outputPdfFie);
 
 
