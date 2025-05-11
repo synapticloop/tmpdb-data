@@ -1,65 +1,66 @@
 # The Mechanical Pencil Database - Data
 
-The primary idea of this repository is to record the details of mechanical pencils - including clutch pencils and leadholders for posterity. 
+The primary idea of this repository is to record the technical details of mechanical pencils (including clutch pencils and leadholders) for posterity. 
 
-the data of the pencil in itself should be enpigh, howevevr included in this repository are renderers that will parse this data and putput various formats. 
+The data of the pencil in itself should be enough, however included in this repository are renderers that will parse this data and output various formats.
 
-the base format is SVG which can then be used to generate - which may then be included in other formats. 
+The base output format is SVG which can then be used to generate - which may then be included in other formats. 
 
-for example:
+For example:
 
- - the svg file is ised to generate the png files.
- - the png files are then included in the pdf files.
+ - The svg file is ised to generate the png files.
+ - The png files are then included in the pdf files.
 
-the renderings and output files and formats are included in this repository, although they will probably disappear as the list of pencils be omes too large and unwieldly. 
+Tthe renderings and output files and formats are included in this repository, although they will probably disappear as the list of pencils becomes too large and unwieldly.
 
-Contains data for mechanical pencils in JSON format which can then be 
-utilised to generate all sorts of images and output data.
+Contains data for mechanical pencils in JSON format which can then be utilised to generate all sorts of images and output data.
 
-Despite the renered outputs, the primary goal os to capture the data that the pencil comprises. 
+Despite the rendered outputs, the primary goal os to capture the data that the pencil comprises. 
+
+Since the base output is SVG the JSON data also contains content which is applicable to the SVG output, which is mixing up the information a little bit.
 
 ## Directory structure
 
 - `/docs/` - for documentations
 - `/data/` - for mechanical pencil data
-- `/output/` - For generated files
-  - `/output/images/` - Generated PNG files 
-  - `/output/vectors/` - Generated vector (SVG) files 
+- `/output/` - For generated files, the subdirectories are named for the output folder and will have subdirectories beneath it that are more descriptive of what the output contains
+  - `/output/png/` - Generated PNG files 
+  - `/output/svg/` - Generated vector (SVG) files 
+  - `/output/pdf/` - Generated vector (SVG) files 
 
 
 ## Examples
 
 ### OHTO Sharp Pencil 2.0
 
-For the file `/data/ohto/sharp-pencil-wn03.json`, one of the SVG files that 
-is generated.
+For the file `/data/ohto/sharp-pencil-2.0.json`, one of the SVG files that is generated.
 
-![Alt text](./output/vectors/pencil/ohto/sharp-pencil-wn03.svg)
+![Alt text](./output/png/technical/ohto/sharp-pencil-2.0.svg)
 
 and colour variants too (as PNGs)
 
-<img src="./output/images/pencil/ohto/sharp-pencil-2.0-colour-black.png">
+<img src="./output/png/technical/ohto/sharp-pencil-2.0-colour-black.png">
 
-<img src="./output/images/pencil/ohto/sharp-pencil-2.0-colour-blue.png">
+<img src="./output/png/technical/ohto/sharp-pencil-2.0-colour-blue.png">
 
-<img src="./output/images/pencil/ohto/sharp-pencil-2.0-colour-green.png">
+<img src="./output/png/technical/ohto/sharp-pencil-2.0-colour-green.png">
 
-<img src="./output/images/pencil/ohto/sharp-pencil-2.0-colour-red.png">
+<img src="./output/png/technical/ohto/sharp-pencil-2.0-colour-red.png">
 
-<img src="./output/images/pencil/ohto/sharp-pencil-2.0-colour-wood.png">
+<img src="./output/png/technical/ohto/sharp-pencil-2.0-colour-wood.png">
 
-<img src="./output/images/pencil/ohto/sharp-pencil-2.0-colour-yellow.png">
+<img src="./output/png/technical/ohto/sharp-pencil-2.0-colour-yellow.png">
 
 ### Mitsubishi Uni 
 
 For the file `/data/mitsubishi/uni.json`, one of the SVG files that is 
 generated.
 
-![Alt text](./output/vectors/pencil/mitsubishi/uni.svg)
+![Alt text](./output/png/technical/mitsubishi/uni.svg)
 
 and colour variants too (as PNGs)
 
-<img src="./output/images/pencil/mitsubishi/uni-colour-maroon.png">
+<img src="./output/png/technical/mitsubishi/uni-colour-maroon.png">
 
 
 ## Updating CustomVector Images
