@@ -1,7 +1,22 @@
 # The Mechanical Pencil Database - Data
 
+The primary idea of this repository is to record the details of mechanical pencils - including clutch pencils and leadholders for posterity. 
+
+the data of the pencil in itself should be enpigh, howevevr included in this repository are renderers that will parse this data and putput various formats. 
+
+the base format is SVG which can then be used to generate - which may then be included in other formats. 
+
+for example:
+
+ - the svg file is ised to generate the png files.
+ - the png files are then included in the pdf files.
+
+the renderings and output files and formats are included in this repository, although they will probably disappear as the list of pencils be omes too large and unwieldly. 
+
 Contains data for mechanical pencils in JSON format which can then be 
 utilised to generate all sorts of images and output data.
+
+Despite the renered outputs, the primary goal os to capture the data that the pencil comprises. 
 
 ## Directory structure
 
@@ -14,7 +29,7 @@ utilised to generate all sorts of images and output data.
 
 ## Examples
 
-### OHTO WN03
+### OHTO Sharp Pencil 2.0
 
 For the file `/data/ohto/sharp-pencil-wn03.json`, one of the SVG files that 
 is generated.
