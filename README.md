@@ -35,7 +35,7 @@ Since the base output is SVG the JSON data also contains content which is applic
 
 For the file `/data/ohto/sharp-pencil-2.0.json`, one of the SVG files that is generated.
 
-![Alt text](./output/png/technical/ohto/sharp-pencil-2.0.svg)
+![OHTO Sharp Pencil 2.0](./output/svg/technical/ohto/sharp-pencil-2.0.svg)
 
 and colour variants too (as PNGs)
 
@@ -56,7 +56,7 @@ and colour variants too (as PNGs)
 For the file `/data/mitsubishi/uni.json`, one of the SVG files that is 
 generated.
 
-![Alt text](./output/png/technical/mitsubishi/uni.svg)
+![Mitsubishi UNI pencil](./output/svg/technical/mitsubishi/uni.svg)
 
 and colour variants too (as PNGs)
 
