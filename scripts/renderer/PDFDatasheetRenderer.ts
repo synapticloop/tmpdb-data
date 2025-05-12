@@ -154,7 +154,7 @@ export class PDFDatasheetRenderer {
 
 			this.setFontFamily(doc, FontFamily.HEADING_TINY);
 			doc.text(colourComponent);
-			doc.text('').moveDown(1);
+			doc.text('').moveUp(2);
 			doc.image(`./output/png/pencil/${this.pencilFileDirectory}/${this.pencilFileName}-colour-${colourComponent}.png`,
 				doc.x,
 				doc.y,
@@ -162,10 +162,28 @@ export class PDFDatasheetRenderer {
 
 			this.setFontFamily(doc, FontFamily.PARAGRAPH);
 			doc.y = currentY + height;
-			doc.text('').moveDown(6);
+			doc.text('').moveDown(5);
 
 			// doc.text(this.pencil.skus[index]);
 		}
+
+		doc.addPage({
+			size: 'A3',
+			layout: 'landscape',
+			margins: {
+				top: 1.5/2.54 * 72,
+				bottom: 3.5/2.54 * 72,
+				left: 1.5/2.54 * 72,
+				right: 1.5/2.54 * 72
+			}
+		});
+		this.setFontFamily(doc, FontFamily.HEADING_LARGE);
+		doc.text("Technical Drawing").moveDown(1);
+		doc.image(`./output/png/technical/${this.pencilFileDirectory}/${this.pencilFileName}.png`,
+			doc.x,
+			doc.y,
+			{ scale: 0.73 }
+		);
 		doc.end();
 	}
 
