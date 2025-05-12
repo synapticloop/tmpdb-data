@@ -7,6 +7,7 @@ enum FontFamily {
 	HEADING_LARGE,
 	HEADING_MEDIUM,
 	HEADING_SMALL,
+	HEADING_TINY,
 	PARAGRAPH,
 	FOOTER_COPYRIGHT
 
@@ -29,7 +30,7 @@ export class PDFDatasheetRenderer {
 			margins: {
 				top: 1.5/2.54 * 72,
 				bottom: 3.5/2.54 * 72,
-				left: 2.5/2.54 * 72,
+				left: 1.5/2.54 * 72,
 				right: 1.5/2.54 * 72
 			}
 		});
@@ -61,7 +62,7 @@ export class PDFDatasheetRenderer {
 				}
 			},
 			rowStyles: (i) => {
-				if(i % 2 === 0) {
+				if(i % 2 === 1) {
 					return({ border: [1, 0, 1, 0], borderColor: "#aaa" } );
 				} else {
 					return({ border: [1, 0, 1, 0], borderColor: "#aaa", backgroundColor: "#efefef" } );
@@ -95,21 +96,75 @@ export class PDFDatasheetRenderer {
 
 		doc.addPage();
 
-		this.setFontFamily(doc, FontFamily.HEADING_LARGE);
-		doc.text(`${this.pencil.brand} - ${this.pencil.model}`);
 		this.setFontFamily(doc, FontFamily.HEADING_MEDIUM);
+		doc.text(`${this.pencil.brand} - ${this.pencil.model}`);
+		this.setFontFamily(doc, FontFamily.HEADING_SMALL);
 		doc.text("Colour variants");
+		doc.text('').moveDown(1);
 
-		for(const colourComponent of this.pencil.colourComponents) {
-			this.setFontFamily(doc, FontFamily.HEADING_SMALL);
-			doc.text(colourComponent, { align: "center" });
+		this.setFontFamily(doc, FontFamily.PARAGRAPH);
+		let data:string[][] = [];
+		data.push(["Colour", "SKU"]);
+		for(const [index, colourComponent ] of this.pencil.colourComponents.entries()) {
+			let colourData:string[] = [];
+			colourData.push(colourComponent);
+			if(this.pencil.skus[index]) {
+				colourData.push(this.pencil.skus[index]);
+			} else {
+				colourData.push("undefined");
+			}
+			data.push(colourData);
+		}
+		// @ts-ignore
+		doc.table({
+			columnStyles: (i) => {
+				if(i % 2 == 1) {
+					return({ width: "*", textColor: "black"} );
+				} else {
+					return({ width: 140, align: "right", font: { src: "./fonts/LibreBaskerville-Bold.ttf" }});
+				}
+			},
+			rowStyles: (i) => {
+				if(i === 0) {
+					return({ border: [1, 0, 1, 0], borderColor: "#aaa", backgroundColor: "#cfcfcf", font: { src: "./fonts/LibreBaskerville-Bold.ttf" }} );
+				}
+
+				if(i % 2 === 0) {
+					return({ border: [1, 0, 1, 0], borderColor: "#aaa" } );
+				} else {
+					return({ border: [1, 0, 1, 0], borderColor: "#aaa", backgroundColor: "#efefef" } );
+				}
+			},
+			data: data
+		});
+		doc.text("").moveDown(2);
+
+		for(const [index, colourComponent ] of this.pencil.colourComponents.entries()) {
+			let currentY: number = doc.y;
+
 			const buffer = fs.readFileSync(`./output/png/pencil/${this.pencilFileDirectory}/${this.pencilFileName}-colour-${colourComponent}.png`);
 			const dimensions = imageSize(buffer);
 			const width = dimensions.width*0.5;
 			const height = dimensions.height*0.5;
+
+			if(currentY + height > doc.page.height - doc.page.margins.top - doc.page.margins.bottom) {
+				doc.addPage();
+			}
+			currentY = doc.y;
+
+			this.setFontFamily(doc, FontFamily.HEADING_TINY);
+			doc.text(colourComponent);
+			doc.text('').moveDown(1);
 			doc.image(`./output/png/pencil/${this.pencilFileDirectory}/${this.pencilFileName}-colour-${colourComponent}.png`,
-				{ fit: [ width, height ], align:"center", valign:"center" })
-			;
+				doc.x,
+				doc.y,
+				{ fit: [width, height] });
+
+			this.setFontFamily(doc, FontFamily.PARAGRAPH);
+			doc.y = currentY + height;
+			doc.text('').moveDown(6);
+
+			// doc.text(this.pencil.skus[index]);
 		}
 		doc.end();
 	}
@@ -121,7 +176,7 @@ export class PDFDatasheetRenderer {
 
 		doc.page.margins.bottom = 0;
 
-		this.setFontFamily(doc, FontFamily.HEADING_SMALL)
+		this.setFontFamily(doc, FontFamily.HEADING_TINY)
 
 		doc.text(
 				'Page ' + pageNumber,
@@ -135,11 +190,13 @@ export class PDFDatasheetRenderer {
 
 
 		this.setFontFamily(doc, FontFamily.FOOTER_COPYRIGHT);
+		doc.text('').moveDown(1);
 		doc.text("Copyright (c) // The Mechanical Pencil Database (tmpdb)",
 				doc.page.margins.left,
 				doc.y,
 				{align: "center"}
 		);
+
 		doc.text("Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
 			doc.page.margins.left,
 			doc.y,
@@ -148,7 +205,6 @@ export class PDFDatasheetRenderer {
 
 		doc.page.margins.bottom = bottom;
 		doc.text('', doc.page.margins.left, doc.page.margins.top);
-
 	}
 
 	private setFontFamily(pdfDocument: typeof PDFDocument, fontFamily: FontFamily): void {
@@ -165,12 +221,17 @@ export class PDFDatasheetRenderer {
 				pdfDocument.fontSize(18);
 				pdfDocument.font("./fonts/LibreBaskerville-Bold.ttf");
 				break;
+			case FontFamily.HEADING_TINY:
+				pdfDocument.fontSize(14);
+				pdfDocument.font("./fonts/LibreBaskerville-Bold.ttf");
+				break;
 			case FontFamily.PARAGRAPH:
-				pdfDocument.fontSize(12);
+				pdfDocument.fontSize(10);
 				pdfDocument.font("./fonts/LibreBaskerville-Regular.ttf");
 				break;
 			case FontFamily.FOOTER_COPYRIGHT:
-				pdfDocument.font("./fonts/LibreBaskerville-Regular.ttf");
+				pdfDocument.fontSize(10);
+				pdfDocument.font("./fonts/LibreBaskerville-Italic.ttf");
 				break;
 		}
 	}
