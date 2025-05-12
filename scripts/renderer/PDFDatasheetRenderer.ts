@@ -99,6 +99,41 @@ export class PDFDatasheetRenderer {
 		this.setFontFamily(doc, FontFamily.HEADING_MEDIUM);
 		doc.text(`${this.pencil.brand} - ${this.pencil.model}`);
 		this.setFontFamily(doc, FontFamily.HEADING_SMALL);
+		doc.text("Components");
+		doc.text('').moveDown(1);
+
+		// now for the individual component
+		for(const [index, component] of this.pencil.components.entries()) {
+			let currentY: number = doc.y;
+
+			const buffer = fs.readFileSync(`./output/png/technical/${this.pencilFileDirectory}/${this.pencilFileName}-component-${index}-${component.type}.png`);
+			const dimensions = imageSize(buffer);
+			const width = dimensions.width;
+			const height = dimensions.height;
+
+			if(currentY + height > doc.page.height - doc.page.margins.top - doc.page.margins.bottom) {
+				doc.addPage();
+			}
+			currentY = doc.y;
+
+			this.setFontFamily(doc, FontFamily.HEADING_TINY);
+			doc.text(component.type);
+			doc.text('').moveUp(2);
+			doc.image(`./output/png/technical/${this.pencilFileDirectory}/${this.pencilFileName}-component-${index}-${component.type}.png`,
+				doc.x,
+				doc.y,
+				{ scale: 0.7, align: "center", valign:"center" });
+
+			this.setFontFamily(doc, FontFamily.PARAGRAPH);
+			doc.y = currentY + height;
+			doc.text('').moveDown(5);
+		}
+
+		doc.addPage();
+
+		this.setFontFamily(doc, FontFamily.HEADING_MEDIUM);
+		doc.text(`${this.pencil.brand} - ${this.pencil.model}`);
+		this.setFontFamily(doc, FontFamily.HEADING_SMALL);
 		doc.text("Colour variants");
 		doc.text('').moveDown(1);
 

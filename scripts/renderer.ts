@@ -9,6 +9,7 @@ import {PDFDatasheetRenderer} from "./renderer/PDFDatasheetRenderer.ts";
 
 import {SVGPencilRenderer} from "./renderer/SVGPencilRenderer.ts";
 import {SVGRenderer} from "./renderer/SVGRenderer.ts";
+import {SVGTechnicalComponentRenderer} from "./renderer/SVGTechnicalComponentRenderer.ts";
 
 const baseDir:string = './data/pencil';
 // list the directories for the pencil data
@@ -63,6 +64,23 @@ for (const pencilDirectory of pencilDirectories) {
 				fileNumber++;
 			}
 
+			// now we are going to render each of the components - in white of course :)
+			for(const [ index, component ] of pencil.components.entries()) {
+				const componentFileName = pencilFileName + "-component-" + index + "-" + component.type;
+				const outputSVGFileTechnicalComponent = renderSVG(
+					new SVGTechnicalComponentRenderer(pencil), index,
+					"technical",
+					pencilDirectory,
+					componentFileName,
+					fileNumber);
+				fileNumber++;
+
+				// now PNG it
+				await renderPNG(outputSVGFileTechnicalComponent, "technical", pencilDirectory, componentFileName, fileNumber)
+					.then(r => {});
+				fileNumber++;
+			}
+
 			const pdfOutputDir: string = path.join("./output/pdf/datasheet/");
 			fs.mkdirSync(pdfOutputDir, { "recursive": true });
 			const outputPdfFie: string = path.join(pdfOutputDir, pencilDirectory + "-" + pencilFileName + ".pdf");
@@ -71,11 +89,10 @@ for (const pencilDirectory of pencilDirectories) {
 			fileNumber++;
 		}
 	}
-
 }
 
 function renderSVG(svgRenderer: SVGRenderer,
-									 colourIndex: number,
+									 offsetIndex: number,
 									 outputDirectoryType: string,
 									 pencilDirectory: string,
 									 pencilFileName: string,
@@ -83,7 +100,7 @@ function renderSVG(svgRenderer: SVGRenderer,
 	const svgOutputDir = path.join("./output/svg/", outputDirectoryType, pencilDirectory);
 	fs.mkdirSync(svgOutputDir, { "recursive": true });
 	const outputSvgFile = path.join(svgOutputDir, pencilFileName + ".svg");
-	const svgString = svgRenderer.render(colourIndex);
+	const svgString = svgRenderer.render(offsetIndex);
 	fs.writeFileSync(outputSvgFile, svgString);
 	console.log(`       SVG: [${fileNumber}] (${outputDirectoryType}) ${outputSvgFile}`);
 
