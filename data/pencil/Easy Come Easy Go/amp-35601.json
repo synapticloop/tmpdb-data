@@ -1,0 +1,84 @@
+{
+	"brand": "Easy Come Easy Go",
+	"model": "amp-35601",
+	"lead_size": "2.0",
+	"text": "EASY COME EASY GO 2.0",
+	"colour_component": "body",
+	"colour_map": {
+		"pink": "#FFA07A",
+		"black": "#000000",
+		"blue": "#AEDCDE"
+	},
+	"front": [
+		{ "type": "cylinder", "dimensions":
+		[
+			2.0,
+			10.0
+		], "fill":  "black" }
+	],
+	"back":[
+		{ "type": "circle", "dimensions": [
+			2.0,
+			10.0
+		] , "fill":  "black" }
+	],
+	"components": [
+		{
+			"type": "tip",
+			"parts": [
+				{ "type": "cylinder", "dimensions": "2.5x3.75" },
+				{ "type": "cone", "dimensions": "8.25x4.0x7.5" },
+				{ "type": "cylinder", "dimensions": "3.0x7.5" },
+				{ "type": "cylinder", "dimensions": "6.0x8.25" }
+			],
+			"material": "plastic",
+			"colours": [ "silver", "silver", "silver" ]
+		},
+		{
+			"type": "body",
+			"parts": [
+				{ "type": "hexagonal", "dimensions": "99.75x8.0" }
+			],
+			"material": "plastic",
+			"colours": [ "pink" ,"black", "blue" ]
+		},
+		{
+			"type": "clip",
+			"parts": [
+				{ "type": "cylinder", "dimensions": "4.75x9.25"},
+				{ "type": "extra",
+					"offset": "-39x4.325",
+					"dimensions": "40.5x2.0x4.0",
+					"parts": [
+						{ "line": "0.0,-2.0,3.0,-2.0" },
+						{ "line": "3.0,-2.0,7.0,-0.25" },
+						{ "line": "7.0,-0.25,11.0,-2.0" },
+						{ "line": "11.0,-2.0,39.0,-2.0" },
+						{ "curve": "39.0,-2.0,39.0,0.0,43.0,-1.0" }
+					]}
+			],
+			"material": "plastic",
+			"colours": [ "silver", "silver", "silver" ]
+		},
+		{
+			"type": "tail",
+			"parts": [
+				{ "type": "cone", "dimensions": "1.75x8.0x7.75"},
+				{ "type": "cylinder", "dimensions": "1.75x7.75"}
+			],
+			"material": "plastic",
+			"colours": [ "pink", "black", "blue" ]
+		},
+		{
+			"type": "cap",
+			"parts": [
+				{ "type": "cylinder", "dimensions": "4.25x6.0"},
+				{ "type": "octagonal", "dimensions": "9.25x8.0"},
+				{ "type": "cylinder", "dimensions": "1.25x8.5"},
+				{ "type": "convex", "dimensions": "0.75x8.5", "offset": "1.5x4.25" }
+			],
+			"material": "plastic",
+			"colours": [ "pink", "black", "blue" ]
+		}
+	]
+}

@@ -3,9 +3,12 @@ import {listDirectories, listFiles} from "./utils/filesystem.ts";
 import * as path from "node:path";
 import { Pencil } from "./model/Pencil.ts";
 import fs from "fs";
-import {SVGRenderer} from "./renderer/SVGRenderer.ts";
-import {PNGTechnicalRenderer} from "./renderer/PNGTechnicalRenderer.ts";
+import {SVGTechnicalRenderer} from "./renderer/SVGTechnicalRenderer.ts";
+import {PNGRenderer} from "./renderer/PNGRenderer.ts";
 import {PDFDatasheetRenderer} from "./renderer/PDFDatasheetRenderer.ts";
+
+import {SVGPencilRenderer} from "./renderer/SVGPencilRenderer.ts";
+import {SVGRenderer} from "./renderer/SVGRenderer.ts";
 
 const baseDir:string = './data/pencil';
 // list the directories for the pencil data
@@ -28,42 +31,79 @@ for (const pencilDirectory of pencilDirectories) {
 
 			let fileNumber = 1;
 
-			// now for the SVG files
-			const svgOutputDir = path.join("./output/svg/technical/", pencilDirectory);
-			fs.mkdirSync(svgOutputDir, { "recursive": true });
-			const outputSvgFile = path.join(svgOutputDir, pencilFileName + ".svg");
-			const svgString = new SVGRenderer(pencil).render(-1);
-			fs.writeFileSync(outputSvgFile, svgString);
-			console.log(`       SVG: [${fileNumber}] (outline: white) ${pencilFile} -> ${outputSvgFile}`);
+			const outputSVGFileTechnical = renderSVG(new SVGTechnicalRenderer(pencil), -1, "technical", pencilDirectory, pencilFileName, fileNumber);
 			fileNumber++;
 
-			const pngOutputDir = path.join("./output/png/technical/", pencilDirectory);
-			fs.mkdirSync(pngOutputDir, { "recursive": true });
-			const outputPngFile = path.join(pngOutputDir, pencilFileName + ".png");
-			new PNGTechnicalRenderer(pencil).render(outputSvgFile, outputPngFile);
-			console.log(`       PNG: [${fileNumber}] (outline: white) ${pencilFile} -> ${outputSvgFile}`);
+			await renderPNG(outputSVGFileTechnical, "technical", pencilDirectory, pencilFileName, fileNumber)
+				.then(r => {});
+			fileNumber++;
+
+			const outputSVGFilePencil = renderSVG(new SVGPencilRenderer(pencil), -1, "pencil", pencilDirectory, pencilFileName, fileNumber);
+			fileNumber++;
+
+			await renderPNG(outputSVGFilePencil, "pencil", pencilDirectory, pencilFileName, fileNumber)
+				.then(r => {});
 			fileNumber++;
 
 			// now go through the colours
 			for(let [ index, colourComponent ] of pencil.colourComponents.entries()) {
-				const colourOutputSvgFile = path.join(svgOutputDir, pencilFileName + "-colour-" + colourComponent + ".svg");
-				const svgString = new SVGRenderer(pencil).render(index);
-				fs.writeFileSync(colourOutputSvgFile, svgString);
-				console.log(`       SVG: [${fileNumber}] (colour: ${colourComponent}) ${pencilFile} -> ${colourOutputSvgFile}`);
+				const pencilOutputFileName = pencilFileName + "-colour-" + colourComponent;
+				const outputColourTechnicalSvg = renderSVG(new SVGTechnicalRenderer(pencil), index, "technical", pencilDirectory, pencilOutputFileName, fileNumber);
 				fileNumber++;
 
-				const colourOutputPngFile = path.join(pngOutputDir, pencilFileName + "-colour-" + colourComponent + ".png");
-				new PNGTechnicalRenderer(pencil).render(colourOutputSvgFile, colourOutputPngFile);
-				console.log(`       PNG: [${fileNumber}] (colour: ${colourComponent}) ${pencilFile} -> ${colourOutputPngFile}`);
+				await renderPNG(outputColourTechnicalSvg, "technical", pencilDirectory, pencilOutputFileName, fileNumber)
+					.then(r => {});
+				fileNumber++;
+
+				const outputColourPencilSvg = renderSVG(new SVGPencilRenderer(pencil), index, "pencil", pencilDirectory, pencilOutputFileName, fileNumber);
+				fileNumber++;
+
+				await renderPNG(outputColourPencilSvg, "pencil", pencilDirectory, pencilOutputFileName, fileNumber)
+					.then(r => {});
 				fileNumber++;
 			}
 
 			const pdfOutputDir: string = path.join("./output/pdf/datasheet/");
 			fs.mkdirSync(pdfOutputDir, { "recursive": true });
-			const outputPdfFie: string = path.join(pdfOutputDir, pencil.brand + "-" + pencilFileName + ".pdf");
-			new PDFDatasheetRenderer(pencil).render(outputPdfFie);
-
-
+			const outputPdfFie: string = path.join(pdfOutputDir, pencilDirectory + "-" + pencilFileName + ".pdf");
+			new PDFDatasheetRenderer(pencil, pencilDirectory, pencilFileName).render(outputPdfFie);
+			console.log(`       PDF: [${fileNumber}] (datasheet) ${pencilFile} -> ${outputPdfFie}`);
+			fileNumber++;
 		}
 	}
+
+}
+
+function renderSVG(svgRenderer: SVGRenderer,
+									 colourIndex: number,
+									 outputDirectoryType: string,
+									 pencilDirectory: string,
+									 pencilFileName: string,
+									 fileNumber: number): string {
+	const svgOutputDir = path.join("./output/svg/", outputDirectoryType, pencilDirectory);
+	fs.mkdirSync(svgOutputDir, { "recursive": true });
+	const outputSvgFile = path.join(svgOutputDir, pencilFileName + ".svg");
+	const svgString = svgRenderer.render(colourIndex);
+	fs.writeFileSync(outputSvgFile, svgString);
+	console.log(`       SVG: [${fileNumber}] (${outputDirectoryType}) ${outputSvgFile}`);
+
+	return(outputSvgFile);
+}
+
+async function renderPNG(inputSVGFile:string,
+												 outputDirectoryType: string,
+												 pencilDirectory: string,
+												 pencilFileName: string,
+												 fileNumber: number): Promise<void> {
+	const pngOutputDir = path.join("./output/png/", outputDirectoryType, pencilDirectory);
+	fs.mkdirSync(pngOutputDir, { "recursive": true });
+	const outputPngFile = path.join(pngOutputDir, pencilFileName + ".png");
+
+	await new PNGRenderer().render(inputSVGFile, outputPngFile)
+		.then(() => {})
+		.catch(error => {
+			console.error(error);
+		});
+	console.log(`       PNG: [${fileNumber}] (${outputDirectoryType}) ${outputPngFile}`);
+
 }
