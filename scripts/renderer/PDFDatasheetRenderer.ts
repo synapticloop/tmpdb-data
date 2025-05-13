@@ -15,8 +15,9 @@ enum FontFamily {
 
 export class PDFDatasheetRenderer {
 	private pencil: Pencil;
-	private pencilFileName;
-	private pencilFileDirectory;
+	private pencilFileName: string;
+	private pencilFileDirectory: string;
+	private currentTitle: string;
 
 	constructor(pencil: Pencil, pencilFileDirectory: string, pencilFileName: string) {
 		this.pencil = pencil;
@@ -28,7 +29,7 @@ export class PDFDatasheetRenderer {
 		let doc:typeof PDFDocument = new PDFDocument({
 			size: 'A4',
 			margins: {
-				top: 2.5/2.54 * 72,
+				top: 2.25/2.54 * 72,
 				bottom: 3.5/2.54 * 72,
 				left: 1.5/2.54 * 72,
 				right: 1.5/2.54 * 72
@@ -46,7 +47,7 @@ export class PDFDatasheetRenderer {
 
 		this.setFontFamily(doc, FontFamily.HEADING_LARGE);
 		doc.text(`${this.pencil.brand}`);
-		doc.text(`${this.pencil.model} ${(this.pencilFileDirectory.modelNumber ? "(" + this.pencilFileDirectory.modelNumber + ")" : "")}`);
+		doc.text(`${this.pencil.model} ${(this.pencil.modelNumber ? "(" + this.pencil.modelNumber + ")" : "")}`);
 
 		this.setFontFamily(doc, FontFamily.HEADING_MEDIUM);
 		doc.text("").moveDown(1);
@@ -58,6 +59,7 @@ export class PDFDatasheetRenderer {
 
 		doc.text("").moveDown(1);
 
+		// this.setPageTitle(doc, "Datasheet");
 		doc.text("Datasheet");
 		doc.text('').moveDown(1);
 
@@ -90,17 +92,21 @@ export class PDFDatasheetRenderer {
 			data: [
 				[ "Brand", this.pencil.brand ],
 				[ "Model", this.pencil.model ],
+				[ "Lead size", `${this.pencil.leadSize} mm` ],
+				[ "Years available", `` ],
 				[
 					"Dimensions",
-					`${(Math.round((this.pencil.maxWidth) * 100) / 100).toFixed(2)}mm` +
+					`${(Math.round((this.pencil.maxWidth) * 100) / 100).toFixed(2)} mm` +
 					` (width)\n` +
-					`${(Math.round((this.pencil.maxHeight) * 100) / 100).toFixed(2)}mm` +
+					`${(Math.round((this.pencil.maxHeight) * 100) / 100).toFixed(2)} mm` +
 					` (height)\n` +
-					`${(Math.round((this.pencil.totalLength/5) * 100) / 100).toFixed(2)}mm` +
+					`${(Math.round((this.pencil.totalLength/5) * 100) / 100).toFixed(2)} mm` +
 					` (length)`
 				],
+				[ "Weight", `` ],
 				[ "Materials", `${this.pencil.materials.join("\n")}` ],
 				[ `Colour variants\nbased on the \n${this.pencil.colourComponent} colour`, `${this.pencil.colourComponents.join("\n")}` ],
+				[ "Features", `` ],
 			]
 		});
 
@@ -121,9 +127,9 @@ export class PDFDatasheetRenderer {
 		componentData.push([ "Component", "Material", "Length", "Max.", "Min", "Max.", "Min" ]);
 		for(const [index, component ] of this.pencil.components.entries()) {
 			let componentInner:any[] = [];
-			componentInner.push({ text: component.type, align: "center" });
+			componentInner.push({ text: component.type, align: "right" });
 			componentInner.push({ text: component.materials.join("\n"), align: "center" });
-			componentInner.push({ text: `${(Math.round((component.width) * 100) / 100).toFixed(2)} mm`, align: "center" });
+			componentInner.push({ text: `${(Math.round((component.width) * 100) / 100).toFixed(2)} mm`, align: "right" });
 
 			componentData.push(componentInner);
 		}
