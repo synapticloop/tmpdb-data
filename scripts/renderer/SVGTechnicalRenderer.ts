@@ -397,7 +397,7 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 			SVG_WIDTH/2 - this.pencil.totalLength/2,
 			SVG_HEIGHT/2 + 30 + this.pencil.maxHeight/2 * 5,
 			this.pencil.totalLength,
-			`${(Math.round(this.pencil.totalLength * 100) / 100).toFixed(2)} mm`,
+			`${(Math.round(this.pencil.totalLength/5 * 100) / 100).toFixed(2)} mm`,
 			TextOrientation.BOTTOM,
 			true
 			);

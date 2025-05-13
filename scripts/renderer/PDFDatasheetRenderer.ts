@@ -17,7 +17,8 @@ export class PDFDatasheetRenderer {
 	private pencil: Pencil;
 	private pencilFileName: string;
 	private pencilFileDirectory: string;
-	private currentTitle: string;
+	private currentPageTitle: string;
+	private previousPageTitle: string;
 
 	constructor(pencil: Pencil, pencilFileDirectory: string, pencilFileName: string) {
 		this.pencil = pencil;
@@ -29,22 +30,50 @@ export class PDFDatasheetRenderer {
 		let doc:typeof PDFDocument = new PDFDocument({
 			size: 'A4',
 			margins: {
-				top: 2.25/2.54 * 72,
+				top: 3.5/2.54 * 72,
 				bottom: 3.5/2.54 * 72,
 				left: 1.5/2.54 * 72,
 				right: 1.5/2.54 * 72
 			},
 			bufferPages: true
 		});
+
 		doc.pipe(fs.createWriteStream(outputFile));
 
-		// let pageNumber: number = 1;
-		// doc.on('pageAdded', (): void => {
-		// 	this.addFooter(pageNumber, doc);
-		// 	this.addHeader(doc);
-		// 	pageNumber++;
-		// });
+		doc.on('pageAdded', (): void => {
+			this.setFontFamily(doc, FontFamily.HEADING_MEDIUM);
+			doc.text('').moveUp(1.5);
+			if(this.previousPageTitle === this.currentPageTitle) {
+				doc.text(this.currentPageTitle, {
+							continued: true
+						})
+						.font("./fonts/LibreBaskerville-Italic.ttf")
+						.fontSize(12)
+						.text(" (cont.)", {
+							continued: true
+						});
+			} else {
+				doc.text(this.currentPageTitle);
+			}
+			this.setFontFamily(doc, FontFamily.PARAGRAPH);
+			doc.y = doc.page.margins.top + 10;
+		});
 
+		this.renderFrontPage(doc);
+
+		this.renderComponentsPage(doc);
+
+		this.renderColourVariantsPage(doc);
+
+		this.renderTechnicalDrawing(doc);
+
+		this.appendHeaderAndFooter(doc);
+
+		doc.end();
+	}
+
+	private renderFrontPage(doc: typeof PDFDocument): void {
+		doc.y = doc.y - 30;
 		this.setFontFamily(doc, FontFamily.HEADING_LARGE);
 		doc.text(`${this.pencil.brand}`);
 		doc.text(`${this.pencil.model} ${(this.pencil.modelNumber ? "(" + this.pencil.modelNumber + ")" : "")}`);
@@ -52,14 +81,16 @@ export class PDFDatasheetRenderer {
 		this.setFontFamily(doc, FontFamily.HEADING_MEDIUM);
 		doc.text("").moveDown(1);
 		doc.moveTo(doc.page.margins.left, doc.y)
-			.lineTo(doc.page.width - doc.page.margins.right, doc.y)
-			.lineCap("butt")
-			.lineWidth(6)
-			.stroke("#000000");
+				.lineTo(doc.page.width - doc.page.margins.right, doc.y)
+				.lineCap("butt")
+				.lineWidth(6)
+				.stroke("#000000");
 
 		doc.text("").moveDown(1);
 
-		// this.setPageTitle(doc, "Datasheet");
+		this.currentPageTitle = "Datasheet";
+		this.previousPageTitle = "Datasheet";
+
 		doc.text("Datasheet");
 		doc.text('').moveDown(1);
 
@@ -67,8 +98,8 @@ export class PDFDatasheetRenderer {
 		doc.text('').moveDown();
 
 		this.centreImage(doc,
-			`./output/png/technical/${this.pencilFileDirectory}/${this.pencilFileName}.png`,
-			500);
+				`./output/png/technical/${this.pencilFileDirectory}/${this.pencilFileName}.png`,
+				500);
 
 		doc.text("").moveDown(2);
 
@@ -103,19 +134,16 @@ export class PDFDatasheetRenderer {
 					`${(Math.round((this.pencil.totalLength/5) * 100) / 100).toFixed(2)} mm` +
 					` (length)`
 				],
-				[ "Weight", `` ],
+				[ "Weight", `${this.pencil.weight} g` ],
 				[ "Materials", `${this.pencil.materials.join("\n")}` ],
 				[ `Colour variants\nbased on the \n${this.pencil.colourComponent} colour`, `${this.pencil.colourComponents.join("\n")}` ],
 				[ "Features", `` ],
 			]
 		});
+	}
 
-		doc.addPage();
-
-		this.setFontFamily(doc, FontFamily.HEADING_SMALL);
-		doc.text("Components");
-		doc.text('').moveDown(1);
-
+	private renderComponentsPage(doc: typeof PDFDocument): void {
+		this.addPageWithTitle(doc, "Components");
 		this.centreImage(doc, `./output/png/technical/${this.pencilFileDirectory}/${this.pencilFileName}-components.png`, 500);
 
 		doc.text("").moveDown(2);
@@ -160,16 +188,16 @@ export class PDFDatasheetRenderer {
 			data: componentData
 		});
 		doc.text("").moveDown(2);
-		// @ts-ignore
-		doc.addPage();
+	}
 
-		this.setFontFamily(doc, FontFamily.HEADING_SMALL);
-		doc.text("Colour variants");
-		doc.text('').moveDown(1);
+	private renderColourVariantsPage(doc: typeof PDFDocument): void {
+		this.addPageWithTitle(doc, "Colour variants");
 
 		this.setFontFamily(doc, FontFamily.PARAGRAPH);
+		doc.text(`Variants are designated by the colour of the ${this.pencil.colourComponent}`).moveDown(2);
+
 		let data:string[][] = [];
-		data.push(["Colour", "SKU"]);
+		data.push(["Colour", "SKU", "Render colour"]);
 		for(const [index, colourComponent ] of this.pencil.colourComponents.entries()) {
 			let colourData:string[] = [];
 			colourData.push(colourComponent);
@@ -178,15 +206,26 @@ export class PDFDatasheetRenderer {
 			} else {
 				colourData.push("not recorded");
 			}
+
+			let renderColour = this.pencil.colourMap[colourComponent];
+			if(renderColour) {
+				colourData.push(renderColour);
+			} else {
+				colourData.push(colourComponent);
+			}
 			data.push(colourData);
 		}
+
 		// @ts-ignore
 		doc.table({
 			columnStyles: (i) => {
-				if(i % 2 == 1) {
-					return({ width: "*", textColor: "black"} );
-				} else {
-					return({ width: 140, align: "right", font: { src: "./fonts/LibreBaskerville-Bold.ttf" }});
+				switch(i % 3) {
+					case 0:
+						return({ width: 140, align: "right", font: { src: "./fonts/LibreBaskerville-Bold.ttf" } } );
+					case 1:
+						return({ width: "140", textColor: "black"} );
+					case 2:
+						return({ width: "*", align: "left", textColor: "black", font: { src: "./fonts/Inconsolata-Medium.ttf" } } );
 				}
 			},
 			rowStyles: (i) => {
@@ -207,51 +246,97 @@ export class PDFDatasheetRenderer {
 
 		for(const [index, colourComponent ] of this.pencil.colourComponents.entries()) {
 			this.setFontFamily(doc, FontFamily.HEADING_TINY);
-			doc.text(`Colour for ${this.pencil.colourComponent} - ${colourComponent}`, { align: "center"} );
+
+			doc.text(`${this.pencil.colourComponent} colour - ${colourComponent}`, { align: "center"} );
+			doc.text('').moveDown(1);
+
 
 			this.centreImage(doc,
-				`./output/png/pencil/${this.pencilFileDirectory}/${this.pencilFileName}-colour-${colourComponent}.png`,
-				400);
+					`./output/png/pencil/${this.pencilFileDirectory}/${this.pencilFileName}-colour-${colourComponent}.png`,
+					400);
 			doc.text('').moveDown(2);
 
 			this.setFontFamily(doc, FontFamily.PARAGRAPH);
+
+			const componentData:any[] = [];
+			componentData.push("Component");
+			for(const component of this.pencil.components) {
+				componentData.push({ text: component.type });
+			}
+
+			const colourData:string[] = [];
+			const renderData:string[] = [];
+
+			// now a table for the components
+			// @ts-ignore
+			doc.table({
+				columnStyles: (i) => {
+					switch(i) {
+						case 0:
+							return({ width: 120, textOptions: { rotation: 0 }, align: "right", font: { src: "./fonts/LibreBaskerville-Bold.ttf" } } );
+						default:
+							return({ width: "*", textColor: "black", font: { src: "./fonts/Inconsolata-Medium.ttf" } } );
+					}
+				},
+				rowStyles: (i) => {
+					if(i === 0) {
+						return({ border: [1, 0, 1, 0], align: "left", textOptions: { rotation: 90 }, borderColor: "#aaa", backgroundColor: "#cfcfcf", font: { src: "./fonts/LibreBaskerville-Bold.ttf" }} );
+					}
+
+					if(i % 2 === 0) {
+						return({ border: [1, 0, 1, 0], borderColor: "#aaa" } );
+					} else {
+						return({ border: [1, 0, 1, 0], borderColor: "#aaa", backgroundColor: "#efefef" } );
+					}
+				},
+				data: [
+					componentData
+				]
+			});
+
+			doc.text('').moveDown(2);
+
 		}
+
+	}
+
+	private renderTechnicalDrawing(doc: typeof PDFDocument): void {
+		this.currentPageTitle = "Technical Drawing";
 
 		doc.addPage({
 			size: 'A3',
 			layout: 'landscape',
 			margins: {
-				top: 1.5/2.54 * 72,
+				top: 3.5/2.54 * 72,
 				bottom: 3.5/2.54 * 72,
 				left: 1.5/2.54 * 72,
 				right: 1.5/2.54 * 72
 			},
 			bufferPages: true
 		});
-		this.setFontFamily(doc, FontFamily.HEADING_LARGE);
-		doc.text("Technical Drawing").moveDown(1);
-		doc.image(`./output/png/technical/${this.pencilFileDirectory}/${this.pencilFileName}.png`,
-			doc.x,
-			doc.y,
-			{ scale: 0.73 }
-		);
-		this.writeHeaderAndFooter(doc);
-		doc.end();
+
+		this.centreImage(doc, `./output/png/technical/${this.pencilFileDirectory}/${this.pencilFileName}.png`, 1100)
+	}
+
+	private addPageWithTitle(doc: typeof PDFDocument, pageTitle: string): void {
+		this.previousPageTitle = this.currentPageTitle;
+		this.currentPageTitle = pageTitle;
+		doc.addPage();
 	}
 
 	private addHeader(doc:typeof PDFDocument): void {
 		this.setFontFamily(doc, FontFamily.FOOTER_COPYRIGHT)
 		doc.text(`${this.pencil.brand} - ${this.pencil.model}`, doc.page.margins.left, 20, { align: "right" });
-		doc.moveTo(doc.page.margins.left, doc.page.margins.top -5)
+		doc.moveTo(doc.page.margins.left, doc.page.margins.top - 10)
 			.lineCap("butt")
 			.lineWidth(1)
-			.lineTo(doc.page.width - doc.page.margins.right, doc.page.margins.top - 5)
+			.lineTo(doc.page.width - doc.page.margins.right, doc.page.margins.top - 10)
 			.stroke("#5f5f5f");
 
-		doc.moveTo(doc.page.margins.left, doc.page.margins.top - 4)
+		doc.moveTo(doc.page.margins.left, doc.page.margins.top - 9)
 			.lineCap("butt")
 			.lineWidth(1)
-			.lineTo(doc.page.width - doc.page.margins.right, doc.page.margins.top - 4)
+			.lineTo(doc.page.width - doc.page.margins.right, doc.page.margins.top - 9)
 			.stroke("#afafaf");
 	}
 
@@ -339,18 +424,21 @@ export class PDFDatasheetRenderer {
 
 		const drawableWidth: number = pdfDocument.page.width - pdfDocument.page.margins.left - pdfDocument.page.margins.right;
 
+		const moveDown: number = width/imageWidth * imageHeight;
+
 		pdfDocument.image(imageLocation,
-			pdfDocument.x + ((drawableWidth - width)/2),
-			pdfDocument.y,
-			{ width: width });
-		const moveDown: number = width/imageWidth * imageHeight
-		pdfDocument.y = pdfDocument.y + moveDown;
+				pdfDocument.x + ((drawableWidth - width)/2),
+				pdfDocument.y,
+				{ width: width });
+
+		if(pdfDocument.y + moveDown > (pdfDocument.page.height - pdfDocument.page.margins.top - pdfDocument.page.margins.bottom)) {
+			pdfDocument.addPage();
+		} else {
+			pdfDocument.y = pdfDocument.y + moveDown;
+		}
 	}
 
-	private drawDebugging(pdfDocument: typeof PDFDocument): void {
-	}
-
-	private writeHeaderAndFooter(pdfDocument: typeof PDFDocument): void {
+	private appendHeaderAndFooter(pdfDocument: typeof PDFDocument): void {
 		let pages = pdfDocument.bufferedPageRange();
 		for (let i = 0; i < pages.count; i++) {
 			pdfDocument.switchToPage(i);

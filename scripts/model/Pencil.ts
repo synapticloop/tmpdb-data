@@ -53,6 +53,7 @@ export class Pencil {
 		this.front = pencilJSONData.front ?? this.front;
 		this.back = pencilJSONData.back ?? this.back;
 		this.skus = pencilJSONData.skus ?? this.skus;
+		this.weight = pencilJSONData.weight ?? this.weight;
 
 		for(const component of pencilJSONData.components) {
 			const thisComponent = new Component(component);
