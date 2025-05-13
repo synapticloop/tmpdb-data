@@ -6,9 +6,13 @@ export class Component {
 	materials:string[] = [];
 	colours:string[] = [ "white" ];
 	type:string = "unknown";
+
 	width:number = 0;
 	maxWidth:number = 0;
+	minWidth:number = 0;
 	maxHeight:number = 0;
+	minHeight:number = 0;
+
 	extraParts = [];
 	extraPartFirst:boolean = false;
 

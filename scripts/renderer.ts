@@ -39,6 +39,13 @@ for (const pencilDirectory of pencilDirectories) {
 				.then(r => {});
 			fileNumber++;
 
+			const outputSVGFileTechnicalComponents = renderSVG(new SVGTechnicalComponentRenderer(pencil), -1, "technical", pencilDirectory, pencilFileName + "-components", fileNumber);
+			fileNumber++;
+
+			await renderPNG(outputSVGFileTechnicalComponents, "technical", pencilDirectory, pencilFileName +"-components", fileNumber)
+				.then(r => {});
+			fileNumber++;
+
 			const outputSVGFilePencil = renderSVG(new SVGPencilRenderer(pencil), -1, "pencil", pencilDirectory, pencilFileName, fileNumber);
 			fileNumber++;
 
@@ -60,23 +67,6 @@ for (const pencilDirectory of pencilDirectories) {
 				fileNumber++;
 
 				await renderPNG(outputColourPencilSvg, "pencil", pencilDirectory, pencilOutputFileName, fileNumber)
-					.then(r => {});
-				fileNumber++;
-			}
-
-			// now we are going to render each of the components - in white of course :)
-			for(const [ index, component ] of pencil.components.entries()) {
-				const componentFileName = pencilFileName + "-component-" + index + "-" + component.type;
-				const outputSVGFileTechnicalComponent = renderSVG(
-					new SVGTechnicalComponentRenderer(pencil), index,
-					"technical",
-					pencilDirectory,
-					componentFileName,
-					fileNumber);
-				fileNumber++;
-
-				// now PNG it
-				await renderPNG(outputSVGFileTechnicalComponent, "technical", pencilDirectory, componentFileName, fileNumber)
 					.then(r => {});
 				fileNumber++;
 			}

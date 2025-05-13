@@ -3,7 +3,12 @@ import {SVGRenderer} from "./SVGRenderer.ts";
 import {
 	circle,
 	dimensionsHorizontal,
-	dimensionsVertical, drawExtra, drawOutlineCircle, drawOutlineHexagon, drawOutlineOctagon, drawShapeDetails,
+	dimensionsVertical,
+	drawExtra,
+	drawOutlineCircle,
+	drawOutlineHexagon,
+	drawOutlineOctagon,
+	drawShapeDetails,
 	drawText,
 	drawTextBold,
 	drawTextBoldCentred,
@@ -15,11 +20,10 @@ import {
 	target,
 	TextOrientation
 } from "../utils/svg-helper.ts";
-import {Component} from "../model/component/Component.ts";
 
 export class SVGTechnicalComponentRenderer extends SVGRenderer {
-	static SVG_WIDTH = 600;
-	static SVG_HEIGHT = 420;
+	private static SVG_WIDTH = 1200;
+	private static SVG_HEIGHT = 500;
 
 	static SVG_START = `<svg xmlns="http://www.w3.org/2000/svg" ` +
 		`width="${SVGTechnicalComponentRenderer.SVG_WIDTH}" ` +
@@ -32,16 +36,13 @@ export class SVGTechnicalComponentRenderer extends SVGRenderer {
 		`<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,0" />\n` +
 		`</pattern>\n` +
 		`<rect x="0" y="0" width="${SVGTechnicalComponentRenderer.SVG_WIDTH}" height="${SVGTechnicalComponentRenderer.SVG_HEIGHT}" fill="white" stroke="black" stroke-width="4" />\n` +
-		`<rect x="2" y="2" width="${SVGTechnicalComponentRenderer.SVG_WIDTH - 4}" height="${SVGTechnicalComponentRenderer.SVG_HEIGHT - 4}" fill="white" stroke="dingray" stroke-width="1" />\n`
+		`<rect x="2" y="2" width="${SVGTechnicalComponentRenderer.SVG_WIDTH - 4}" height="${SVGTechnicalComponentRenderer.SVG_HEIGHT - 4}" fill="white" stroke="dimgray" stroke-width="1" />\n`
 	;
 
-	static SVG_END = `<text x="50%" y="${SVGTechnicalComponentRenderer.SVG_HEIGHT - 60}" font-size="1.0em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c)</text>\n` +
-		`<text x="50%" y="${SVGTechnicalComponentRenderer.SVG_HEIGHT - 40}" font-size="1.0em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">The Mechanical Pencil Database (tmpdb)</text>\n` +
-		`<text x="50%" y="${SVGTechnicalComponentRenderer.SVG_HEIGHT - 20}" font-size="1.0em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Licensed under CC-BY-NC-SA-4.0</text>\n` +
+	static SVG_END = `<text x="50%" y="${SVGTechnicalComponentRenderer.SVG_HEIGHT - 20}" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb) // Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>\n` +
 		`</svg>\n`;
 
 	private pencil: Pencil;
-	private component: Component;
 
 	constructor(pencil: Pencil) {
 		super();
@@ -51,14 +52,13 @@ export class SVGTechnicalComponentRenderer extends SVGRenderer {
 	/**
 	 * <p>Generate the SVG as a string with the colour</p>
 	 *
-	 * @param offsetIndex the pencil component offset index
+	 * @param colourIndex the pencil colour index
 	 *
 	 * @returns {string} The SVG data as a String
 	 */
-	render(offsetIndex: number):string {
+	render(colourIndex: number):string {
 		// start
 		let svgString:string = SVGTechnicalComponentRenderer.SVG_START;
-		this.component = this.pencil.components[offsetIndex];
 
 		// centre line
 		svgString += this.renderCentreLines();
@@ -71,13 +71,11 @@ export class SVGTechnicalComponentRenderer extends SVGRenderer {
 
 		// now we get into the dimensions
 
-		// render the front dimensions
-		svgString += this.renderFrontDimensions();
+		//render the side dimensions
+		svgString += this.renderSideDimensions();
 
 		// now it is time to render the details of the pencil
-
-		svgString += this.renderFrontComponents(offsetIndex);
-		svgString += this.renderSideComponents(-1);
+		svgString += this.renderSideComponents(colourIndex);
 
 		// end the end of the SVG
 		svgString += SVGTechnicalComponentRenderer.SVG_END;
@@ -92,81 +90,24 @@ export class SVGTechnicalComponentRenderer extends SVGRenderer {
 		svgString += target(30, SVGTechnicalComponentRenderer.SVG_HEIGHT/2, 40, 10);
 		svgString += target(SVGTechnicalComponentRenderer.SVG_WIDTH - 30, SVGTechnicalComponentRenderer.SVG_HEIGHT/2, 40, 10);
 
-		// FRONT VIEW the left hand side targets and the dashed line
-		svgString += lineVertical(160, 50, SVGTechnicalComponentRenderer.SVG_HEIGHT - 130, "1", "#000000", "2");
-		svgString += target(160, 30, 40, 10);
-		svgString += target(160, SVGTechnicalComponentRenderer.SVG_HEIGHT - 100, 40, 10);
+		// SIDE VIEW - CENTRE LINE
+		svgString += lineVertical(SVGTechnicalComponentRenderer.SVG_WIDTH/2, 30, SVGTechnicalComponentRenderer.SVG_HEIGHT - 180, "1", "#000000", "2");
+		svgString += target(SVGTechnicalComponentRenderer.SVG_WIDTH/2, 30, 40, 10);
+		svgString += target(SVGTechnicalComponentRenderer.SVG_WIDTH/2, SVGTechnicalComponentRenderer.SVG_HEIGHT - 140, 40, 10);
 
 		return(svgString);
 	}
 
 	private renderOverviewText(): string {
 		let svgString = "";
-		svgString += drawTextBold(`${this.component.type}`,
-			30,
-			50,
+		svgString += drawTextBoldCentred(`Components for ${this.pencil.brand}` +
+			` // ` +
+			`${this.pencil.model} ` +
+			`${(this.pencil.modelNumber ? "(Model #: " + this.pencil.modelNumber + ")" : "")}`,
+			SVGTechnicalComponentRenderer.SVG_WIDTH/2,
+			SVGTechnicalComponentRenderer.SVG_HEIGHT - 90,
 			"2.0em");
 
-		return(svgString);
-	}
-
-	private renderPencilColours(): string {
-		let svgString:string = "";
-		// lets draw the pencil colours
-
-		let colourOffset:number = SVGTechnicalComponentRenderer.SVG_WIDTH - 60;
-
-		svgString += `<text ` +
-			`x="${colourOffset + 40}" ` +
-			`y="30" ` +
-			`font-size="1.6em" font-weight="bold" text-anchor="end" dominant-baseline="central">` +
-			`Colour variants of the ${this.pencil.colourComponent}` +
-			`</text>\n`
-
-		for(let colourComponent of this.pencil.colourComponents) {
-			let fillColour = colourComponent;
-
-			if (this.pencil.colourMap[colourComponent]) {
-				fillColour = this.pencil.colourMap[colourComponent];
-			}
-
-			svgString += `<rect x="${colourOffset}" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="${fillColour}" />\n`;
-			svgString += `<text x="${colourOffset + 20}" ` +
-				`y="100" ` +
-				`transform="rotate(-90, ${colourOffset + 20}, 100)" ` +
-				`font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">` +
-				`${colourComponent}` +
-				`</text>\n`
-
-			colourOffset -= 60;
-		}
-
-		return(svgString);
-	}
-
-	private renderMaterialList(): string {
-		let svgString:string = "";
-
-		let offset:number = 136;
-		svgString += `<text ` +
-			`x="30" ` +
-			`y="${offset}" ` +
-			`font-size="1.2em" font-weight="bold" text-anchor="start" dominant-baseline="central">` +
-			`Materials:` +
-			`</text>\n`
-
-		offset += 20;
-
-		for(const material of this.pencil.materials) {
-			svgString += `<text ` +
-				`x="50" ` +
-				`y="${offset}" ` +
-				`font-size="1.2em" text-anchor="start" dominant-baseline="central">` +
-				` - ${material}` +
-				`</text>\n`
-
-			offset += 20;
-		}
 		return(svgString);
 	}
 
@@ -175,209 +116,86 @@ export class SVGTechnicalComponentRenderer extends SVGRenderer {
 		// now we are going to go through each of the components and draw the shapes
 		let offset:number = SVGTechnicalComponentRenderer.SVG_WIDTH/2 - this.pencil.getTotalLength()/2;
 
-		let hasExtra = false;
-		// now for the extra side components guidelines
 
-		for(const extraPart of this.component.getExtraParts()) {
-			// draw the straight-through line for guidance top of the extra parts
-			const y = SVGTechnicalComponentRenderer.SVG_HEIGHT/2 - extraPart.extraOffset[1] * 5 - (extraPart.extraHeight) * 5;
+		// SIDE VIEW GUIDELINES FOR THE COMPONENTS
+		// reset the offset to redraw
+		offset = SVGTechnicalComponentRenderer.SVG_WIDTH/2 - this.pencil.getTotalLength()/2;
 
-			svgString += lineHorizontalGuide(100, y, SVGTechnicalComponentRenderer.SVG_WIDTH - 200);
-			// draw the straight-through line for guidance bottom of the extra parts
-			svgString += lineHorizontalGuide(160, SVGTechnicalComponentRenderer.SVG_HEIGHT/2 - extraPart.extraOffset[1] * 5, SVGTechnicalComponentRenderer.SVG_WIDTH - 260);
-			// guidelines for the extra width - left side
-			svgString += lineVerticalGuide(160 - extraPart.extraDepth/2 * 5, SVGTechnicalComponentRenderer.SVG_HEIGHT/2 - 70, 70);
-			// guidelines for the extra width - right side
-			svgString += lineVerticalGuide(160 + extraPart.extraDepth/2 * 5, SVGTechnicalComponentRenderer.SVG_HEIGHT/2 - 70, 70);
+		svgString += lineVerticalGuide(offset, SVGTechnicalComponentRenderer.SVG_HEIGHT/2 - 88 - this.pencil.maxHeight/2 * 5, 140 + this.pencil.maxHeight/2 * 5);
 
-			hasExtra = true;
-		}
+		for (let component of this.pencil.components) {
+			// vertical line
+			svgString += lineVerticalGuide(offset, SVGTechnicalComponentRenderer.SVG_HEIGHT/2 - 120, 120);
 
-		// FRONT VIEW GUIDELINES
+			offset += component.getWidth();
 
-		// top horizontal line
-		svgString += lineHorizontalGuide((hasExtra ? 160 : 100), SVGTechnicalComponentRenderer.SVG_HEIGHT/2 - this.component.maxHeight/2 * 5, SVGTechnicalComponentRenderer.SVG_WIDTH - 100 - (hasExtra ? 160 : 100));
-
-		// bottom line of full pencil
-		svgString += lineHorizontalGuide(100, SVGTechnicalComponentRenderer.SVG_HEIGHT/2 + this.component.maxHeight/2 * 5, SVGTechnicalComponentRenderer.SVG_WIDTH - 200);
-
-		// Vertical line of width - left
-		svgString += lineVerticalGuide(160 - this.component.maxWidth/2 * 5,
-			SVGTechnicalComponentRenderer.SVG_HEIGHT/2,
-			20 + this.component.maxHeight/2 * 5);
-		// Vertical line of width - right
-		svgString += lineVerticalGuide(160 + this.component.maxWidth/2 * 5,
-			SVGTechnicalComponentRenderer.SVG_HEIGHT/2,
-			20 + this.component.maxHeight/2 * 5);
-
-		// vertical line
-		svgString += lineVerticalGuide(offset, SVGTechnicalComponentRenderer.SVG_HEIGHT/2 - 120, 240);
-
-		offset += this.component.getWidth();
-
-		// now for extraParts
-		for(const extraPart of this.component.getExtraParts()) {
-			svgString += lineVerticalGuide(offset + extraPart.extraOffset[0] * 5 - (this.component.extraPartFirst ? this.component.getWidth() : 0),
-				SVGTechnicalComponentRenderer.SVG_HEIGHT/2 - 80,
-				160);
-			svgString += lineVerticalGuide(offset + extraPart.extraOffset[0] * 5 + extraPart.extraWidth*5 - (this.component.extraPartFirst ? this.component.getWidth() : 0),
-				SVGTechnicalComponentRenderer.SVG_HEIGHT/2 - 80,
-				160);
-		}
-
-		svgString += lineVerticalGuide(offset, SVGTechnicalComponentRenderer.SVG_HEIGHT/2 - 88 - this.pencil.maxHeight/2 * 5, 208);
-		return(svgString);
-	}
-
-	private renderFrontDimensions(): string {
-		let svgString: string = "";
-		// THIS IS THE FRONT VIEW
-
-		let extrasHeight: number = 0;
-		let extrasOffset: number = 0;
-		let extrasOffsetHeight: number = 0;
-		// do we have any extras?
-
-		let thisExtraPart = null;
-		if(this.component.extraParts.length > 0){
-
-			for(const extraPart of this.component.extraParts){
-				if(extraPart.extraHeight > extrasHeight){
-					extrasHeight = extraPart.extraHeight;
-					extrasOffset = extraPart.extraOffset[1];
-					extrasOffsetHeight = this.component.maxHeight/2;
-					thisExtraPart = extraPart;
-				}
+			// now for extraParts
+			for(const extraPart of component.getExtraParts()) {
+				svgString += lineVerticalGuide(offset + extraPart.extraOffset[0] * 5 - (component.extraPartFirst ? component.getWidth() : 0),
+					SVGTechnicalComponentRenderer.SVG_HEIGHT/2 - 80,
+					80);
+				svgString += lineVerticalGuide(offset + extraPart.extraOffset[0] * 5 + extraPart.extraWidth*5 - (component.extraPartFirst ? component.getWidth() : 0),
+					SVGTechnicalComponentRenderer.SVG_HEIGHT/2 - 80,
+					80);
 			}
 		}
 
-		// we will be drawing the left dimension for the full body height - we need to take
-		// into account whether there is an extra part
-		if(thisExtraPart) {
-			// draw the dimensions for the top part of the extra
-			svgString += dimensionsHorizontal(160 - thisExtraPart.extraDepth/2 * 5,
-				SVGTechnicalComponentRenderer.SVG_HEIGHT/2 - 60,
-				thisExtraPart.extraDepth * 5,
-				`${(Math.round((thisExtraPart.extraDepth) * 100) / 100).toFixed(2)} mm`,
-				TextOrientation.TOP,
+		svgString += lineVerticalGuide(offset, SVGTechnicalComponentRenderer.SVG_HEIGHT/2 - 88 - this.pencil.maxHeight/2 * 5, 140 + this.pencil.maxHeight/2 * 5);
+		return(svgString);
+	}
+
+
+	private renderSideDimensions(): string {
+		let svgString: string = "";
+
+		let xOffset: number = SVGTechnicalComponentRenderer.SVG_WIDTH/2 - (this.pencil.totalLength/2);
+		for (let component of this.pencil.components) {
+			// draw all the dimensions
+			svgString += dimensionsHorizontal(xOffset,
+				SVGTechnicalComponentRenderer.SVG_HEIGHT/2 - 120,
+				component.width,
+				`${component.type}`,
+				TextOrientation.TOP_ROTATED,
 				true);
+			xOffset += component.width;
 
-			svgString += dimensionsVertical(222,
-				SVGTechnicalComponentRenderer.SVG_HEIGHT/2 - extrasOffset * 5 - extrasHeight * 5,
-				extrasHeight * 5,
-				`${(Math.round((thisExtraPart.extraHeight) * 100) / 100).toFixed(2)} mm`,
-				TextOrientation.RIGHT);
+			// now for the extra dimensions
+			// is the extra the first component, or the last
+			// now for extraParts
+			for(const extraPart of component.getExtraParts()) {
+				// draw the straight-through line for guidance
 
-			svgString += dimensionsVertical(210,
-				SVGTechnicalComponentRenderer.SVG_HEIGHT/2 - this.component.maxHeight/2 * 5,
-				this.component.maxHeight * 5,
-				`${(Math.round((this.component.maxHeight) * 100) / 100).toFixed(2)} mm`,
-				TextOrientation.RIGHT);
-
-
-			const pencilExtraHeight: number  = this.component.maxHeight + extrasHeight - (extrasOffsetHeight - extrasOffset);
-			// we have an extra part - the height is more than the simple body height
-			svgString += dimensionsVertical(110,
-				SVGTechnicalComponentRenderer.SVG_HEIGHT / 2 - extrasOffset * 5 - extrasHeight * 5,
-				pencilExtraHeight * 5,
-				`${pencilExtraHeight} mm`,
-				TextOrientation.LEFT_ROTATED,
-				true);
-		} else {
-			// no extra height here - so we can just draw the text
-			svgString += dimensionsVertical(110,
-				SVGTechnicalComponentRenderer.SVG_HEIGHT/2 - this.component.maxHeight/2*5,
-				this.component.maxHeight * 5,
-				`${(Math.round((this.component.maxHeight) * 100) / 100).toFixed(2)} mm`,
-				TextOrientation.LEFT_ROTATED,
-				true);
+				svgString += dimensionsHorizontal(xOffset + extraPart.extraOffset[0] * 5 - (component.extraPartFirst ? component.getWidth() : 0),
+					SVGTechnicalComponentRenderer.SVG_HEIGHT/2 - 80,
+					extraPart.extraWidth*5 - (component.extraPartFirst ? component.getWidth() : 0),
+					`${component.getType()} (extra)`,
+					TextOrientation.TOP,
+					true);
+			}
 		}
 
-		// This is the BOTTOM WIDTH of the pencil
-		svgString += dimensionsHorizontal(160 - this.component.maxWidth/2 * 5,
-			SVGTechnicalComponentRenderer.SVG_HEIGHT/2 + 30 + this.component.maxHeight/2 * 5,
-			this.component.maxWidth * 5,
-			`${(Math.round(this.component.maxWidth * 100) / 100).toFixed(2)} mm`,
+		// now for the total length
+		svgString += dimensionsHorizontal(
+			SVGTechnicalComponentRenderer.SVG_WIDTH/2 - this.pencil.totalLength/2,
+			SVGTechnicalComponentRenderer.SVG_HEIGHT/2 + 30 + this.pencil.maxHeight/2 * 5,
+			this.pencil.totalLength,
+			"",
 			TextOrientation.BOTTOM,
-			true);
-
-		return(svgString);
-	}
-
-
-
-	private renderFrontComponents(offsetIndex:number): string {
-		let svgString: string = "";
-		let startX = 160;
-		let midY = SVGTechnicalComponentRenderer.SVG_HEIGHT/2;
-
-		let colour = "white";
-
-		// we want to render them back to front so that the last component is on
-		// the bottom
-
-		this.component.parts.reverse();
-			for (let part of this.component.parts) {
-				switch (part.type) {
-					case "cylinder":
-						svgString += circle(startX, midY, (part.start_height / 2) * 5, "1", "dimgray", colour);
-						break;
-					case "cone":
-						svgString += drawOutlineCircle((part.start_height / 2) * 5, startX, midY, colour);
-						svgString += drawOutlineCircle((part.end_height / 2) * 5, startX, midY, colour);
-						break;
-					case "hexagonal":
-						svgString += drawOutlineHexagon(startX, midY, part.start_height, colour);
-						break;
-					case "octagonal":
-						svgString += drawOutlineOctagon(startX, midY, part.start_height, colour);
-						break;
-					case "extra":
-						part.extraParts.reverse();
-						svgString += renderBackExtra(
-							startX,
-							midY,
-							part.extraOffset[0],
-							part.extraOffset[1],
-							part.extraDepth,
-							part.extraParts,
-							colour);
-						part.extraParts.reverse();
-						break;
-				}
-			}
-		this.component.parts.reverse();
-
-			if(offsetIndex === 0) {
-				for(let front of this.pencil.front) {
-					// only care about the first dimension - which is the width
-					let dimensions: number[] = front.dimensions;
-
-					if (this.pencil.colourMap[front.fill]) {
-						colour = this.pencil.colourMap[front.fill];
-					}
-
-					// render the front piece
-					switch (front.type) {
-						case "cylinder":
-							svgString += circle(160, SVGTechnicalComponentRenderer.SVG_HEIGHT/2, dimensions[0]/2 * 5, "0.5", "dimgray", front.fill);
-							break;
-					}
-				}
-			}
+			true
+		);
 
 		return(svgString);
 	}
 
 	private renderSideComponents(colourIndex:number): string {
 		let svgString: string = "";
-		let startX: number = 240;
+		let startX: number = SVGTechnicalComponentRenderer.SVG_WIDTH/2 - (this.pencil.totalLength/2);
 		let midY: number = SVGTechnicalComponentRenderer.SVG_HEIGHT/2;
 
 		let colour = "white";
 
-
-			let colourComponent:string = this.component.colours[colourIndex];
+		for (let component of this.pencil.components) {
+			let colourComponent:string = component.colours[colourIndex];
 			if (colourComponent) {
 				if(this.pencil.colourMap[colourComponent]) {
 					colour = this.pencil.colourMap[colourComponent];
@@ -386,10 +204,10 @@ export class SVGTechnicalComponentRenderer extends SVGRenderer {
 				}
 			}
 
-			for(let part of this.component.parts) {
+			for(let part of component.parts) {
 				// get the stroke colour
 				let strokeColour = "black"
-				if(this.component.colours[0] === "black") {
+				if(component.colours[0] === "black") {
 					strokeColour = "dimgray";
 				}
 
@@ -489,7 +307,7 @@ export class SVGTechnicalComponentRenderer extends SVGRenderer {
 						break;
 				}
 
-				switch(this.component.type) {
+				switch(component.type) {
 					case "indicator":
 						// now draw the indicator
 						svgString += `<rect x="${startX + 10}" ` +
@@ -508,7 +326,151 @@ export class SVGTechnicalComponentRenderer extends SVGRenderer {
 				}
 				startX += part.getWidth();
 			}
+		}
 
+
+		return(svgString);
+	}
+
+	private renderFrontComponents(colourIndex:number): string {
+		let svgString: string = "";
+		let startX = 160;
+		let midY = SVGTechnicalComponentRenderer.SVG_HEIGHT/2;
+
+		let colour = "white";
+
+		// we want to render them back to front so that the last component is on
+		// the bottom
+
+		this.pencil.components.reverse()
+
+		// go through the components and render them
+		for(const component of this.pencil.components) {
+			let colourComponent:string = component.colours[colourIndex];
+			if (colourComponent) {
+				if(this.pencil.colourMap[colourComponent]) {
+					colour = this.pencil.colourMap[colourComponent];
+				} else {
+					colour = colourComponent;
+				}
+			}
+			component.parts.reverse();
+			for (let part of component.parts) {
+				switch (part.type) {
+					case "cylinder":
+						svgString += circle(startX, midY, (part.start_height / 2) * 5, "1", "dimgray", colour);
+						break;
+					case "cone":
+						svgString += drawOutlineCircle((part.start_height / 2) * 5, startX, midY, colour);
+						svgString += drawOutlineCircle((part.end_height / 2) * 5, startX, midY, colour);
+						break;
+					case "hexagonal":
+						svgString += drawOutlineHexagon(startX, midY, part.start_height, colour);
+						break;
+					case "octagonal":
+						svgString += drawOutlineOctagon(startX, midY, part.start_height, colour);
+						break;
+					case "extra":
+						part.extraParts.reverse();
+						svgString += renderBackExtra(
+							startX,
+							midY,
+							part.extraOffset[0],
+							part.extraOffset[1],
+							part.extraDepth,
+							part.extraParts,
+							colour);
+						part.extraParts.reverse();
+						break;
+				}
+			}
+			component.parts.reverse();
+		}
+
+		// now put it back in order
+		this.pencil.components.reverse()
+
+		for(let front of this.pencil.front) {
+			// only care about the first dimension - which is the width
+			let dimensions: number[] = front.dimensions;
+
+			if (this.pencil.colourMap[front.fill]) {
+				colour = this.pencil.colourMap[front.fill];
+			}
+
+			// render the front piece
+			switch (front.type) {
+				case "cylinder":
+					svgString += circle(160, SVGTechnicalComponentRenderer.SVG_HEIGHT/2, dimensions[0]/2 * 5, "0.5", "dimgray", front.fill);
+					break;
+			}
+		}
+
+		return(svgString);
+	}
+
+	private renderBackComponents(colourIndex:number): string {
+		let svgString: string = "";
+		let startX = SVGTechnicalComponentRenderer.SVG_WIDTH - 100;
+		let midY = SVGTechnicalComponentRenderer.SVG_HEIGHT/2;
+
+
+		let colour = "white";
+		// go through the components and render them
+		for(const component of this.pencil.components) {
+			let colourComponent:string = component.colours[colourIndex];
+
+			if (colourComponent) {
+				if(this.pencil.colourMap[colourComponent]) {
+					colour = this.pencil.colourMap[colourComponent];
+				} else {
+					colour = colourComponent;
+				}
+			}
+
+			for (let part of component.parts) {
+				switch (part.type) {
+					case "cylinder":
+						svgString += circle(startX, midY, (part.start_height / 2) * 5, "1", "dimgray", colour);
+						break;
+					case "cone":
+						svgString += drawOutlineCircle((part.start_height / 2) * 5, startX, midY, colour);
+						svgString += drawOutlineCircle((part.end_height / 2) * 5, startX, midY, colour);
+						break;
+					case "hexagonal":
+						svgString += drawOutlineHexagon(startX, midY, part.start_height, colour);
+						break;
+					case "octagonal":
+						svgString += drawOutlineOctagon(startX, midY, part.start_height, colour);
+						break;
+					case "extra":
+						part.extraParts.reverse();
+						svgString += renderBackExtra(
+							startX,
+							midY,
+							part.extraOffset[0],
+							part.extraOffset[1],
+							part.extraDepth,
+							part.extraParts,
+							colour);
+						part.extraParts.reverse();
+						break;
+				}
+			}
+		}
+
+		for(let back of this.pencil.back) {
+			if (this.pencil.colourMap[back.fill]) {
+				colour = this.pencil.colourMap[back.fill];
+			}
+
+			// render the back piece
+			switch (back.type) {
+				case "cylinder":
+					svgString += circle(SVGTechnicalComponentRenderer.SVG_WIDTH - 100, SVGTechnicalComponentRenderer.SVG_HEIGHT/2, back.dimensions[0]/2 * 5, "1", "dimgray", back.fill);
+					break;
+			}
+		}
 
 		return(svgString);
 	}

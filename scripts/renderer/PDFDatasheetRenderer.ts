@@ -28,29 +28,48 @@ export class PDFDatasheetRenderer {
 		let doc:typeof PDFDocument = new PDFDocument({
 			size: 'A4',
 			margins: {
-				top: 1.5/2.54 * 72,
+				top: 2.5/2.54 * 72,
 				bottom: 3.5/2.54 * 72,
 				left: 1.5/2.54 * 72,
 				right: 1.5/2.54 * 72
-			}
+			},
+			bufferPages: true
 		});
 		doc.pipe(fs.createWriteStream(outputFile));
 
-		let pageNumber: number = 1;
-		doc.on('pageAdded', (): void => {
-			this.addFooter(pageNumber, doc);
-			pageNumber++;
-		});
+		// let pageNumber: number = 1;
+		// doc.on('pageAdded', (): void => {
+		// 	this.addFooter(pageNumber, doc);
+		// 	this.addHeader(doc);
+		// 	pageNumber++;
+		// });
 
 		this.setFontFamily(doc, FontFamily.HEADING_LARGE);
-		doc.text("Datasheet");
+		doc.text(`${this.pencil.brand}`);
+		doc.text(`${this.pencil.model} ${(this.pencilFileDirectory.modelNumber ? "(" + this.pencilFileDirectory.modelNumber + ")" : "")}`);
 
 		this.setFontFamily(doc, FontFamily.HEADING_MEDIUM);
-		doc.text(`    ${this.pencil.brand}`);
-		doc.text(`    ${this.pencil.model} ${(this.pencilFileDirectory.modelNumber ? "(" + this.pencilFileDirectory.modelNumber + ")" : "")}`);
+		doc.text("").moveDown(1);
+		doc.moveTo(doc.page.margins.left, doc.y)
+			.lineTo(doc.page.width - doc.page.margins.right, doc.y)
+			.lineCap("butt")
+			.lineWidth(6)
+			.stroke("#000000");
+
+		doc.text("").moveDown(1);
+
+		doc.text("Datasheet");
+		doc.text('').moveDown(1);
 
 		this.setFontFamily(doc, FontFamily.PARAGRAPH);
 		doc.text('').moveDown();
+
+		this.centreImage(doc,
+			`./output/png/technical/${this.pencilFileDirectory}/${this.pencilFileName}.png`,
+			500);
+
+		doc.text("").moveDown(2);
+
 		// now for the overall table
 		// @ts-ignore
 		doc.table({
@@ -76,63 +95,68 @@ export class PDFDatasheetRenderer {
 					`${(Math.round((this.pencil.maxWidth) * 100) / 100).toFixed(2)}mm` +
 					` (width)\n` +
 					`${(Math.round((this.pencil.maxHeight) * 100) / 100).toFixed(2)}mm` +
-					` (height)\n ` +
+					` (height)\n` +
 					`${(Math.round((this.pencil.totalLength/5) * 100) / 100).toFixed(2)}mm` +
 					` (length)`
 				],
 				[ "Materials", `${this.pencil.materials.join("\n")}` ],
-				[ "Colour variants", `${this.pencil.colourComponents.join("\n")}` ],
+				[ `Colour variants\nbased on the \n${this.pencil.colourComponent} colour`, `${this.pencil.colourComponents.join("\n")}` ],
 			]
 		});
-		doc.text("").moveDown(2);
-
-		doc.image(`./output/png/technical/${this.pencilFileDirectory}/${this.pencilFileName}.png`,
-			doc.x,
-			doc.y,
-			{ fit: [480, 200], align:"center", valign:"center" })
-
-		this.addFooter(pageNumber, doc);
-		pageNumber++;
 
 		doc.addPage();
 
-		this.setFontFamily(doc, FontFamily.HEADING_MEDIUM);
-		doc.text(`${this.pencil.brand} - ${this.pencil.model}`);
 		this.setFontFamily(doc, FontFamily.HEADING_SMALL);
 		doc.text("Components");
 		doc.text('').moveDown(1);
 
-		// now for the individual component
-		for(const [index, component] of this.pencil.components.entries()) {
-			let currentY: number = doc.y;
+		this.centreImage(doc, `./output/png/technical/${this.pencilFileDirectory}/${this.pencilFileName}-components.png`, 500);
 
-			const buffer = fs.readFileSync(`./output/png/technical/${this.pencilFileDirectory}/${this.pencilFileName}-component-${index}-${component.type}.png`);
-			const dimensions = imageSize(buffer);
-			const width = dimensions.width;
-			const height = dimensions.height;
+		doc.text("").moveDown(2);
+		this.setFontFamily(doc, FontFamily.PARAGRAPH);
 
-			if(currentY + height > doc.page.height - doc.page.margins.top - doc.page.margins.bottom) {
-				doc.addPage();
-			}
-			currentY = doc.y;
+		// now for the component
+		let componentData:any[][] = [];
+		componentData.push([ "", "", "", { colSpan: 2, text: "Height", align: "center" }, { colSpan: 2, text: "Width", align: "center" } ]);
+		componentData.push([ "Component", "Material", "Length", "Max.", "Min", "Max.", "Min" ]);
+		for(const [index, component ] of this.pencil.components.entries()) {
+			let componentInner:any[] = [];
+			componentInner.push({ text: component.type, align: "center" });
+			componentInner.push({ text: component.materials.join("\n"), align: "center" });
+			componentInner.push({ text: `${(Math.round((component.width) * 100) / 100).toFixed(2)} mm`, align: "center" });
 
-			this.setFontFamily(doc, FontFamily.HEADING_TINY);
-			doc.text(component.type);
-			doc.text('').moveUp(2);
-			doc.image(`./output/png/technical/${this.pencilFileDirectory}/${this.pencilFileName}-component-${index}-${component.type}.png`,
-				doc.x,
-				doc.y,
-				{ scale: 0.7, align: "center", valign:"center" });
-
-			this.setFontFamily(doc, FontFamily.PARAGRAPH);
-			doc.y = currentY + height;
-			doc.text('').moveDown(5);
+			componentData.push(componentInner);
 		}
+		// @ts-ignore
+		doc.table({
+			columnStyles: (i) => {
+				if(i === 0) {
+					return({ width: 80, textColor: "black", align: "right", font: { src: "./fonts/LibreBaskerville-Bold.ttf" }} );
+				} else {
+					return({ width: "*" });
+				}
+			},
+			rowStyles: (i) => {
+				if(i === 0) {
+					return({ border: [1, 0, 0, 0], borderColor: "#aaa", backgroundColor: "#cfcfcf", font: { src: "./fonts/LibreBaskerville-Bold.ttf" }} );
+				}
 
+				if(i === 1) {
+					return({ border: [0, 0, 1, 0], borderColor: "#aaa", backgroundColor: "#cfcfcf", align: "center", font: { src: "./fonts/LibreBaskerville-Bold.ttf" }} );
+				}
+
+				if(i % 2 === 0) {
+					return({ border: [1, 0, 1, 0], borderColor: "#aaa" } );
+				} else {
+					return({ border: [1, 0, 1, 0], borderColor: "#aaa", backgroundColor: "#efefef" } );
+				}
+			},
+			data: componentData
+		});
+		doc.text("").moveDown(2);
+		// @ts-ignore
 		doc.addPage();
 
-		this.setFontFamily(doc, FontFamily.HEADING_MEDIUM);
-		doc.text(`${this.pencil.brand} - ${this.pencil.model}`);
 		this.setFontFamily(doc, FontFamily.HEADING_SMALL);
 		doc.text("Colour variants");
 		doc.text('').moveDown(1);
@@ -146,7 +170,7 @@ export class PDFDatasheetRenderer {
 			if(this.pencil.skus[index]) {
 				colourData.push(this.pencil.skus[index]);
 			} else {
-				colourData.push("undefined");
+				colourData.push("not recorded");
 			}
 			data.push(colourData);
 		}
@@ -174,32 +198,17 @@ export class PDFDatasheetRenderer {
 		});
 		doc.text("").moveDown(2);
 
+
 		for(const [index, colourComponent ] of this.pencil.colourComponents.entries()) {
-			let currentY: number = doc.y;
-
-			const buffer = fs.readFileSync(`./output/png/pencil/${this.pencilFileDirectory}/${this.pencilFileName}-colour-${colourComponent}.png`);
-			const dimensions = imageSize(buffer);
-			const width = dimensions.width*0.5;
-			const height = dimensions.height*0.5;
-
-			if(currentY + height > doc.page.height - doc.page.margins.top - doc.page.margins.bottom) {
-				doc.addPage();
-			}
-			currentY = doc.y;
-
 			this.setFontFamily(doc, FontFamily.HEADING_TINY);
-			doc.text(colourComponent);
-			doc.text('').moveUp(2);
-			doc.image(`./output/png/pencil/${this.pencilFileDirectory}/${this.pencilFileName}-colour-${colourComponent}.png`,
-				doc.x,
-				doc.y,
-				{ fit: [width, height] });
+			doc.text(`Colour for ${this.pencil.colourComponent} - ${colourComponent}`, { align: "center"} );
+
+			this.centreImage(doc,
+				`./output/png/pencil/${this.pencilFileDirectory}/${this.pencilFileName}-colour-${colourComponent}.png`,
+				400);
+			doc.text('').moveDown(2);
 
 			this.setFontFamily(doc, FontFamily.PARAGRAPH);
-			doc.y = currentY + height;
-			doc.text('').moveDown(5);
-
-			// doc.text(this.pencil.skus[index]);
 		}
 
 		doc.addPage({
@@ -210,7 +219,8 @@ export class PDFDatasheetRenderer {
 				bottom: 3.5/2.54 * 72,
 				left: 1.5/2.54 * 72,
 				right: 1.5/2.54 * 72
-			}
+			},
+			bufferPages: true
 		});
 		this.setFontFamily(doc, FontFamily.HEADING_LARGE);
 		doc.text("Technical Drawing").moveDown(1);
@@ -219,13 +229,39 @@ export class PDFDatasheetRenderer {
 			doc.y,
 			{ scale: 0.73 }
 		);
+		this.writeHeaderAndFooter(doc);
 		doc.end();
 	}
 
+	private addHeader(doc:typeof PDFDocument): void {
+		this.setFontFamily(doc, FontFamily.FOOTER_COPYRIGHT)
+		doc.text(`${this.pencil.brand} - ${this.pencil.model}`, doc.page.margins.left, 20, { align: "right" });
+		doc.moveTo(doc.page.margins.left, doc.page.margins.top -5)
+			.lineCap("butt")
+			.lineWidth(1)
+			.lineTo(doc.page.width - doc.page.margins.right, doc.page.margins.top - 5)
+			.stroke("#5f5f5f");
+
+		doc.moveTo(doc.page.margins.left, doc.page.margins.top - 4)
+			.lineCap("butt")
+			.lineWidth(1)
+			.lineTo(doc.page.width - doc.page.margins.right, doc.page.margins.top - 4)
+			.stroke("#afafaf");
+	}
 
 	private addFooter(pageNumber: number, doc:typeof PDFDocument): void {
 		const footerStartY = doc.page.height - doc.page.margins.bottom + 10;
 		let bottom = doc.page.margins.bottom;
+		doc.moveTo(doc.page.margins.left, footerStartY)
+			.lineCap("butt")
+			.lineWidth(1)
+			.lineTo(doc.page.width - doc.page.margins.right, footerStartY)
+			.stroke("#afafaf");
+		doc.moveTo(doc.page.margins.left, footerStartY +1)
+			.lineCap("butt")
+			.lineWidth(1)
+			.lineTo(doc.page.width - doc.page.margins.right, footerStartY +1)
+			.stroke("#5f5f5f");
 
 		doc.page.margins.bottom = 0;
 
@@ -234,7 +270,7 @@ export class PDFDatasheetRenderer {
 		doc.text(
 				'Page ' + pageNumber,
 				0.5 * (doc.page.width - 100),
-				footerStartY,
+				footerStartY + 10,
 				{
 					width: 100,
 					align: 'center',
@@ -289,8 +325,34 @@ export class PDFDatasheetRenderer {
 		}
 	}
 
+	private centreImage(pdfDocument: typeof PDFDocument, imageLocation: string, width: number): void {
+		const buffer = fs.readFileSync(imageLocation);
+		const dimensions = imageSize(buffer);
+		const imageWidth = dimensions.width;
+		const imageHeight = dimensions.height;
+
+		const drawableWidth: number = pdfDocument.page.width - pdfDocument.page.margins.left - pdfDocument.page.margins.right;
+
+		pdfDocument.image(imageLocation,
+			pdfDocument.x + ((drawableWidth - width)/2),
+			pdfDocument.y,
+			{ width: width });
+		const moveDown: number = width/imageWidth * imageHeight
+		pdfDocument.y = pdfDocument.y + moveDown;
+	}
+
 	private drawDebugging(pdfDocument: typeof PDFDocument): void {
+	}
 
+	private writeHeaderAndFooter(pdfDocument: typeof PDFDocument): void {
+		let pages = pdfDocument.bufferedPageRange();
+		for (let i = 0; i < pages.count; i++) {
+			pdfDocument.switchToPage(i);
+			if(i !== 0) {
+				this.addHeader(pdfDocument);
+			}
 
+			this.addFooter(i + 1, pdfDocument);
+		}
 	}
 }

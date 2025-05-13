@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500">
+<pattern id="diagonalHatch" patternUnits="userSpaceOnUse" width="8" height="8">
+<rect width="6" height="6" fill='none'/>
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,8"/>
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,8"/>
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,0" />
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,0" />
+</pattern>
+<rect x="0" y="0" width="1200" height="500" fill="white" stroke="black" stroke-width="4" />
+<rect x="2" y="2" width="1196" height="496" fill="white" stroke="dimgray" stroke-width="1" />
+<line x1="10" y1="250" x2="1190" y2="250" stroke="#000000" stroke-dasharray="2" stroke-width="1" />
+<line x1="10" y1="250" x2="50" y2="250" stroke="#000000"  stroke-width="1" />
+<line x1="30" y1="230" x2="30" y2="270" stroke="#000000"  stroke-width="1" />
+<circle r="10" cx="30" cy="250" fill="none" stroke="#000000" stroke-width="1"  />
+<line x1="1150" y1="250" x2="1190" y2="250" stroke="#000000"  stroke-width="1" />
+<line x1="1170" y1="230" x2="1170" y2="270" stroke="#000000"  stroke-width="1" />
+<circle r="10" cx="1170" cy="250" fill="none" stroke="#000000" stroke-width="1"  />
+<line x1="600" y1="30" x2="600" y2="350" stroke="#000000" stroke-dasharray="2" stroke-width="1" />
+<line x1="580" y1="30" x2="620" y2="30" stroke="#000000"  stroke-width="1" />
+<line x1="600" y1="10" x2="600" y2="50" stroke="#000000"  stroke-width="1" />
+<circle r="10" cx="600" cy="30" fill="none" stroke="#000000" stroke-width="1"  />
+<line x1="580" y1="360" x2="620" y2="360" stroke="#000000"  stroke-width="1" />
+<line x1="600" y1="340" x2="600" y2="380" stroke="#000000"  stroke-width="1" />
+<circle r="10" cx="600" cy="360" fill="none" stroke="#000000" stroke-width="1"  />
+<text x="600" y="410" font-size="2.0em" font-weight="bold" text-anchor="middle" dominant-baseline="central">Components for Easy Come Easy Go // amp-35601 </text>
+<line x1="241.875" y1="138.875" x2="241.875" y2="302" stroke="#cfcfcf"  stroke-width="1" />
+<line x1="241.875" y1="130" x2="241.875" y2="250" stroke="#cfcfcf"  stroke-width="1" />
+<line x1="340.625" y1="130" x2="340.625" y2="250" stroke="#cfcfcf"  stroke-width="1" />
+<line x1="839.375" y1="130" x2="839.375" y2="250" stroke="#cfcfcf"  stroke-width="1" />
+<line x1="668.125" y1="170" x2="668.125" y2="250" stroke="#cfcfcf"  stroke-width="1" />
+<line x1="870.625" y1="170" x2="870.625" y2="250" stroke="#cfcfcf"  stroke-width="1" />
+<line x1="863.125" y1="130" x2="863.125" y2="250" stroke="#cfcfcf"  stroke-width="1" />
+<line x1="880.625" y1="130" x2="880.625" y2="250" stroke="#cfcfcf"  stroke-width="1" />
+<line x1="958.125" y1="138.875" x2="958.125" y2="302" stroke="#cfcfcf"  stroke-width="1" />
+<line x1="241.875" y1="119" x2="241.875" y2="141" stroke="black" stroke-width="1" />
+<line x1="241.875" y1="130" x2="340.625" y2="130" stroke="black" stroke-width="1" />
+<line x1="340.625" y1="119" x2="340.625" y2="141" stroke="black" stroke-width="1" />
+<text x="291.25" y="111" font-size="1.2em" transform="rotate(-90, 291.25, 111)" font-weight="bold" text-anchor="start" dominant-baseline="central" fill="black"><tspan x="291.25" dy="0">tip</tspan></text>
+<line x1="340.625" y1="119" x2="340.625" y2="141" stroke="black" stroke-width="1" />
+<line x1="340.625" y1="130" x2="839.375" y2="130" stroke="black" stroke-width="1" />
+<line x1="839.375" y1="119" x2="839.375" y2="141" stroke="black" stroke-width="1" />
+<text x="590" y="111" font-size="1.2em" transform="rotate(-90, 590, 111)" font-weight="bold" text-anchor="start" dominant-baseline="central" fill="black"><tspan x="590" dy="0">body</tspan></text>
+<line x1="839.375" y1="119" x2="839.375" y2="141" stroke="black" stroke-width="1" />
+<line x1="839.375" y1="130" x2="863.125" y2="130" stroke="black" stroke-width="1" />
+<line x1="863.125" y1="119" x2="863.125" y2="141" stroke="black" stroke-width="1" />
+<text x="851.25" y="111" font-size="1.2em" transform="rotate(-90, 851.25, 111)" font-weight="bold" text-anchor="start" dominant-baseline="central" fill="black"><tspan x="851.25" dy="0">clip</tspan></text>
+<line x1="668.125" y1="159" x2="668.125" y2="181" stroke="black" stroke-width="1" />
+<line x1="668.125" y1="170" x2="870.625" y2="170" stroke="black" stroke-width="1" />
+<line x1="870.625" y1="159" x2="870.625" y2="181" stroke="black" stroke-width="1" />
+<text x="769.375" y="151" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="black"><tspan x="769.375" dy="0">clip (extra)</tspan></text>
+<line x1="863.125" y1="119" x2="863.125" y2="141" stroke="black" stroke-width="1" />
+<line x1="863.125" y1="130" x2="880.625" y2="130" stroke="black" stroke-width="1" />
+<line x1="880.625" y1="119" x2="880.625" y2="141" stroke="black" stroke-width="1" />
+<text x="871.875" y="111" font-size="1.2em" transform="rotate(-90, 871.875, 111)" font-weight="bold" text-anchor="start" dominant-baseline="central" fill="black"><tspan x="871.875" dy="0">tail</tspan></text>
+<line x1="880.625" y1="119" x2="880.625" y2="141" stroke="black" stroke-width="1" />
+<line x1="880.625" y1="130" x2="958.125" y2="130" stroke="black" stroke-width="1" />
+<line x1="958.125" y1="119" x2="958.125" y2="141" stroke="black" stroke-width="1" />
+<text x="919.375" y="111" font-size="1.2em" transform="rotate(-90, 919.375, 111)" font-weight="bold" text-anchor="start" dominant-baseline="central" fill="black"><tspan x="919.375" dy="0">cap</tspan></text>
+<line x1="241.875" y1="292.125" x2="241.875" y2="314.125" stroke="black" stroke-width="1" />
+<line x1="241.875" y1="303.125" x2="958.125" y2="303.125" stroke="black" stroke-width="1" />
+<line x1="958.125" y1="292.125" x2="958.125" y2="314.125" stroke="black" stroke-width="1" />
+<rect x="241.875" y="240.625" width="12.5" height="18.75" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
+<path d="M254.375 240 L295.625 231.25 L295.625 268.75 L254.375 260 Z" stroke-width="1" stroke="black" fill="white" />
+<rect x="295.625" y="231.25" width="15" height="37.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
+<rect x="310.625" y="229.375" width="30" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
+<rect x="340.625" y="230" width="498.75" height="40" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
+<line x1="340.625" y1="250" x2="839.375" y2="250" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
+<line x1="340.625" y1="250" x2="839.375" y2="250" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
+<rect x="839.375" y="226.875" width="23.75" height="46.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
+<line x1="668.125" y1="219.375" x2="683.125" y2="219.375" stroke-width="3" stroke="black" fill="dimgray" stroke-linecap="round" />
+/><line x1="683.125" y1="219.375" x2="703.125" y2="228.125" stroke-width="3" stroke="black" fill="dimgray" stroke-linecap="round" />
+/><line x1="703.125" y1="228.125" x2="723.125" y2="219.375" stroke-width="3" stroke="black" fill="dimgray" stroke-linecap="round" />
+/><line x1="723.125" y1="219.375" x2="863.125" y2="219.375" stroke-width="3" stroke="black" fill="dimgray" stroke-linecap="round" />
+/><path d="M863.125 219.375 Q883.125 224.375 863.125 229.375" stroke-width="3" stroke="black" fill="none" stroke-linecap="round" />
+<line x1="668.125" y1="219.375" x2="683.125" y2="219.375" stroke-width="2" stroke="white" fill="white" stroke-linecap="round" />
+/><line x1="683.125" y1="219.375" x2="703.125" y2="228.125" stroke-width="2" stroke="white" fill="white" stroke-linecap="round" />
+/><line x1="703.125" y1="228.125" x2="723.125" y2="219.375" stroke-width="2" stroke="white" fill="white" stroke-linecap="round" />
+/><line x1="723.125" y1="219.375" x2="863.125" y2="219.375" stroke-width="2" stroke="white" fill="white" stroke-linecap="round" />
+/><path d="M863.125 219.375 Q883.125 224.375 863.125 229.375" stroke-width="2" stroke="white" fill="none" stroke-linecap="round" />
+<path d="M863.125 230 L871.875 230.625 L871.875 269.375 L863.125 270 Z" stroke-width="1" stroke="black" fill="white" />
+<rect x="871.875" y="230.625" width="8.75" height="38.75" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
+<rect x="880.625" y="235" width="21.25" height="30" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
+<rect x="901.875" y="230" width="46.25" height="40" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
+<line x1="901.875" y1="238.57142857142858" x2="948.125" y2="238.57142857142858" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
+<line x1="901.875" y1="238.57142857142858" x2="948.125" y2="238.57142857142858" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
+<line x1="901.875" y1="261.42857142857144" x2="948.125" y2="261.42857142857144" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
+<line x1="901.875" y1="261.42857142857144" x2="948.125" y2="261.42857142857144" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
+<rect x="948.125" y="228.75" width="6.25" height="42.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
+<path d="M954.375 228.75 Q961.875 250 954.375 271.25" stroke-width="0.5" stroke="black" fill="white"/>
+<text x="50%" y="480" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb) // Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
+</svg>

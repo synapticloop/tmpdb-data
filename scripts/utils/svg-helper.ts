@@ -6,7 +6,7 @@ export const SVG_HEIGHT: number = 600;
 // the height/width of the dimension marker
 const DIMENSION_MARKER_LENGTH = 22;
 
-export function drawTextBoldCentred(text, x, y, fontSize) {
+export function drawTextBoldCentred(text: string, x: number, y:number, fontSize:string) {
 	return(`<text x="${x}" ` +
 			`y="${y}" ` +
 			`font-size="${fontSize}" font-weight="bold" text-anchor="middle" ` +
