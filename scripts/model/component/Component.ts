@@ -1,8 +1,7 @@
 import {Part} from "./Part.ts";
-import {Pencil} from "../Pencil.ts";
 
 export class Component {
-	parts = [];
+	parts: Part[] = [];
 	materials:string[] = [];
 	colours:string[] = [ "white" ];
 	type:string = "unknown";
@@ -25,6 +24,7 @@ export class Component {
 		} else {
 			this.materials.push("unknown");
 		}
+
 		this.colours = jsonObject.colours ?? this.colours;
 
 		if(jsonObject.parts) {
@@ -32,10 +32,16 @@ export class Component {
 			for(let part of jsonObject.parts) {
 				const thisPart = new Part(part, this.colours);
 				this.parts.push(thisPart);
-				this.width += thisPart.getWidth();
+				this.width += thisPart.width;
 
 				if(part.material) {
 					this.materials.push(part.material);
+				}
+
+				if(part.colours) {
+					for(const colour of part.colours) {
+						this.colours.push(colour);
+					}
 				}
 
 				if(thisPart.extraParts.length > 0) {

@@ -63,7 +63,7 @@ export class SVGPencilRenderer extends SVGRenderer {
 
 	private renderSideComponents(colourIndex:number): string {
 		let svgString: string = "";
-		let startX: number = SVGPencilRenderer.SVG_WIDTH/2 - (this.pencil.totalLength/2);
+		let startX: number = SVGPencilRenderer.SVG_WIDTH/2 - (this.pencil.totalLength*5/2);
 		let midY: number = SVGPencilRenderer.SVG_HEIGHT/2;
 
 		let colour = "white";
@@ -198,7 +198,7 @@ export class SVGPencilRenderer extends SVGRenderer {
 							`</text>`;
 						break;
 				}
-				startX += part.getWidth();
+				startX += part.width * 5;
 			}
 		}
 

@@ -89,8 +89,4 @@ export class Part {
 		}
 		return(this.getMaxHeight());
 	}
-
-	getWidth() {
-		return(this.width * 5);
-	}
 }

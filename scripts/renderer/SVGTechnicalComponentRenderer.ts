@@ -114,12 +114,12 @@ export class SVGTechnicalComponentRenderer extends SVGRenderer {
 	private renderGuidelines(): string {
 		let svgString:string = "";
 		// now we are going to go through each of the components and draw the shapes
-		let offset:number = SVGTechnicalComponentRenderer.SVG_WIDTH/2 - this.pencil.getTotalLength()/2;
+		let offset:number;
 
 
 		// SIDE VIEW GUIDELINES FOR THE COMPONENTS
 		// reset the offset to redraw
-		offset = SVGTechnicalComponentRenderer.SVG_WIDTH/2 - this.pencil.getTotalLength()/2;
+		offset = SVGTechnicalComponentRenderer.SVG_WIDTH/2 - this.pencil.totalLength*5/2;
 
 		svgString += lineVerticalGuide(offset, SVGTechnicalComponentRenderer.SVG_HEIGHT/2 - 88 - this.pencil.maxHeight/2 * 5, 140 + this.pencil.maxHeight/2 * 5);
 
@@ -127,14 +127,14 @@ export class SVGTechnicalComponentRenderer extends SVGRenderer {
 			// vertical line
 			svgString += lineVerticalGuide(offset, SVGTechnicalComponentRenderer.SVG_HEIGHT/2 - 120, 120);
 
-			offset += component.getWidth();
+			offset += component.width * 5;
 
 			// now for extraParts
 			for(const extraPart of component.getExtraParts()) {
-				svgString += lineVerticalGuide(offset + extraPart.extraOffset[0] * 5 - (component.extraPartFirst ? component.getWidth() : 0),
+				svgString += lineVerticalGuide(offset + extraPart.extraOffset[0] * 5 - (component.extraPartFirst ? component.width * 5 : 0),
 					SVGTechnicalComponentRenderer.SVG_HEIGHT/2 - 80,
 					80);
-				svgString += lineVerticalGuide(offset + extraPart.extraOffset[0] * 5 + extraPart.extraWidth*5 - (component.extraPartFirst ? component.getWidth() : 0),
+				svgString += lineVerticalGuide(offset + extraPart.extraOffset[0] * 5 + extraPart.extraWidth*5 - (component.extraPartFirst ? component.width * 5 : 0),
 					SVGTechnicalComponentRenderer.SVG_HEIGHT/2 - 80,
 					80);
 			}
@@ -148,16 +148,16 @@ export class SVGTechnicalComponentRenderer extends SVGRenderer {
 	private renderSideDimensions(): string {
 		let svgString: string = "";
 
-		let xOffset: number = SVGTechnicalComponentRenderer.SVG_WIDTH/2 - (this.pencil.totalLength/2);
+		let xOffset: number = SVGTechnicalComponentRenderer.SVG_WIDTH/2 - (this.pencil.totalLength*5/2);
 		for (let component of this.pencil.components) {
 			// draw all the dimensions
 			svgString += dimensionsHorizontal(xOffset,
 				SVGTechnicalComponentRenderer.SVG_HEIGHT/2 - 120,
-				component.width,
+				component.width * 5,
 				`${component.type}`,
 				TextOrientation.TOP_ROTATED,
 				true);
-			xOffset += component.width;
+			xOffset += component.width * 5;
 
 			// now for the extra dimensions
 			// is the extra the first component, or the last
@@ -176,9 +176,9 @@ export class SVGTechnicalComponentRenderer extends SVGRenderer {
 
 		// now for the total length
 		svgString += dimensionsHorizontal(
-			SVGTechnicalComponentRenderer.SVG_WIDTH/2 - this.pencil.totalLength/2,
+			SVGTechnicalComponentRenderer.SVG_WIDTH/2 - this.pencil.totalLength*5/2,
 			SVGTechnicalComponentRenderer.SVG_HEIGHT/2 + 30 + this.pencil.maxHeight/2 * 5,
-			this.pencil.totalLength,
+			this.pencil.totalLength*5,
 			"",
 			TextOrientation.BOTTOM,
 			true
@@ -189,7 +189,7 @@ export class SVGTechnicalComponentRenderer extends SVGRenderer {
 
 	private renderSideComponents(colourIndex:number): string {
 		let svgString: string = "";
-		let startX: number = SVGTechnicalComponentRenderer.SVG_WIDTH/2 - (this.pencil.totalLength/2);
+		let startX: number = SVGTechnicalComponentRenderer.SVG_WIDTH/2 - (this.pencil.totalLength*5/2);
 		let midY: number = SVGTechnicalComponentRenderer.SVG_HEIGHT/2;
 
 		let colour = "white";
@@ -324,7 +324,7 @@ export class SVGTechnicalComponentRenderer extends SVGRenderer {
 							`</text>`;
 						break;
 				}
-				startX += part.getWidth();
+				startX += part.width * 5;
 			}
 		}
 

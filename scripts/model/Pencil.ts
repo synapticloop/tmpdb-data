@@ -89,6 +89,4 @@ export class Pencil {
 		this.leadSize = pencilJSONData.lead_size ?? this.leadSize;
 		this.text = pencilJSONData.text ?? this.text;
 	}
-
-	getTotalLength() { return(this.totalLength); }
 }

@@ -17,8 +17,8 @@ export class PDFDatasheetRenderer {
 	private pencil: Pencil;
 	private pencilFileName: string;
 	private pencilFileDirectory: string;
+	private pageTitles: string[] = [];
 	private currentPageTitle: string;
-	private previousPageTitle: string;
 
 	constructor(pencil: Pencil, pencilFileDirectory: string, pencilFileName: string) {
 		this.pencil = pencil;
@@ -41,22 +41,7 @@ export class PDFDatasheetRenderer {
 		doc.pipe(fs.createWriteStream(outputFile));
 
 		doc.on('pageAdded', (): void => {
-			this.setFontFamily(doc, FontFamily.HEADING_MEDIUM);
-			doc.text('').moveUp(1.5);
-			if(this.previousPageTitle === this.currentPageTitle) {
-				doc.text(this.currentPageTitle, {
-							continued: true
-						})
-						.font("./fonts/LibreBaskerville-Italic.ttf")
-						.fontSize(12)
-						.text(" (cont.)", {
-							continued: true
-						});
-			} else {
-				doc.text(this.currentPageTitle);
-			}
-			this.setFontFamily(doc, FontFamily.PARAGRAPH);
-			doc.y = doc.page.margins.top + 10;
+			this.pageTitles.push(this.currentPageTitle)
 		});
 
 		this.renderFrontPage(doc);
@@ -88,10 +73,11 @@ export class PDFDatasheetRenderer {
 
 		doc.text("").moveDown(1);
 
-		this.currentPageTitle = "Datasheet";
-		this.previousPageTitle = "Datasheet";
+		this.pageTitles.push("Datasheet");
 
 		doc.text("Datasheet");
+		this.currentPageTitle = "Datasheet";
+
 		doc.text('').moveDown(1);
 
 		this.setFontFamily(doc, FontFamily.PARAGRAPH);
@@ -124,6 +110,7 @@ export class PDFDatasheetRenderer {
 				[ "Brand", this.pencil.brand ],
 				[ "Model", this.pencil.model ],
 				[ "Lead size", `${this.pencil.leadSize} mm` ],
+				[ "Text", `${this.pencil.text}` ],
 				[ "Years available", `` ],
 				[
 					"Dimensions",
@@ -131,12 +118,12 @@ export class PDFDatasheetRenderer {
 					` (width)\n` +
 					`${(Math.round((this.pencil.maxHeight) * 100) / 100).toFixed(2)} mm` +
 					` (height)\n` +
-					`${(Math.round((this.pencil.totalLength/5) * 100) / 100).toFixed(2)} mm` +
+					`${(Math.round((this.pencil.totalLength) * 100) / 100).toFixed(2)} mm` +
 					` (length)`
 				],
-				[ "Weight", `${this.pencil.weight} g` ],
+				[ "Weight", `${(this.pencil.weight ? this.pencil.weight + " grams" : "")}` ],
 				[ "Materials", `${this.pencil.materials.join("\n")}` ],
-				[ `Colour variants\nbased on the \n${this.pencil.colourComponent} colour`, `${this.pencil.colourComponents.join("\n")}` ],
+				[ `Colour variants`, `${this.pencil.colourComponents.join("\n")}` ],
 				[ "Features", `` ],
 			]
 		});
@@ -245,27 +232,110 @@ export class PDFDatasheetRenderer {
 
 
 		for(const [index, colourComponent ] of this.pencil.colourComponents.entries()) {
-			this.setFontFamily(doc, FontFamily.HEADING_TINY);
+			this.setFontFamily(doc, FontFamily.HEADING_SMALL);
 
 			doc.text(`${this.pencil.colourComponent} colour - ${colourComponent}`, { align: "center"} );
-			doc.text('').moveDown(1);
-
 
 			this.centreImage(doc,
 					`./output/png/pencil/${this.pencilFileDirectory}/${this.pencilFileName}-colour-${colourComponent}.png`,
 					400);
-			doc.text('').moveDown(2);
+			doc.text('').moveDown(1);
 
 			this.setFontFamily(doc, FontFamily.PARAGRAPH);
 
 			const componentData:any[] = [];
-			componentData.push("Component");
+			componentData.push({ text: "Component", align: "right" });
 			for(const component of this.pencil.components) {
-				componentData.push({ text: component.type });
+				if(this.pencil.colourComponents.length != component.colours.length) {
+					componentData.push({text: component.type, colSpan: component.colours.length, align: "center", valign: "top"});
+				} else {
+					componentData.push({text: component.type});
+				}
 			}
 
-			const colourData:string[] = [];
-			const renderData:string[] = [];
+			componentData.push("");
+
+			const colourData:any[] = [];
+			colourData.push("Colour");
+			for(const component of this.pencil.components) {
+				// we have more colours than the number of components - meaning that
+				// the parts also have an additional colour
+				if(this.pencil.colourComponents.length != component.colours.length) {
+					for(const partColour of component.colours) {
+						let renderColour = this.pencil.colourMap[partColour];
+
+						if (renderColour) {
+							colourData.push({text: "", backgroundColor: renderColour, border: [1, 1, 1, 1], borderColor: "#aaa"});
+						} else {
+							colourData.push({
+								text: "",
+								backgroundColor: partColour,
+								border: [1, 1, 1, 1],
+								borderColor: "#aaa"
+							});
+						}
+					}
+				} else {
+					let renderColour = this.pencil.colourMap[component.colours[index]];
+
+					if (renderColour) {
+						colourData.push({text: "", backgroundColor: renderColour, border: [1, 1, 1, 1], borderColor: "#aaa"});
+					} else {
+						colourData.push({
+							text: "",
+							backgroundColor: component.colours[index],
+							border: [1, 1, 1, 1],
+							borderColor: "#aaa"
+						});
+					}
+				}
+			}
+			colourData.push("");
+			const numColumns: number = colourData.length;
+
+			const colourNameData:any[] = [];
+			colourNameData.push("Colour name");
+			for(const component of this.pencil.components) {
+				if(this.pencil.colourComponents.length != component.colours.length) {
+					colourNameData.push({text: component.colours.join("\n"), align: "center", colSpan: component.colours.length });
+				} else {
+					colourNameData.push({text: component.colours[index]});
+				}
+			}
+			colourNameData.push("");
+
+			const renderData:any[] = [];
+			renderData.push("Render colour");
+			for(const component of this.pencil.components) {
+				if(this.pencil.colourComponents.length != component.colours.length) {
+
+					let multiPartColours: string[] = [];
+
+					for(const partColour of component.colours) {
+						let renderColour = this.pencil.colourMap[partColour];
+
+						if (renderColour) {
+							multiPartColours.push(renderColour);
+						} else {
+							multiPartColours.push(partColour);
+						}
+					}
+
+					renderData.push({text: multiPartColours.join("\n"), colSpan: component.colours.length, align:"center" });
+
+				} else {
+					let renderColour = this.pencil.colourMap[component.colours[index]];
+					if (renderColour) {
+						renderData.push({text: renderColour});
+					} else {
+						renderData.push({text: component.colours[index]});
+					}
+				}
+			}
+			renderData.push("");
+
+			const headingData: any[] = [];
+			headingData.push({ text: "Colours for individual components", colSpan: numColumns, align: "center", font: { size: 14, src: "./fonts/LibreBaskerville-Bold.ttf" } });
 
 			// now a table for the components
 			// @ts-ignore
@@ -273,14 +343,16 @@ export class PDFDatasheetRenderer {
 				columnStyles: (i) => {
 					switch(i) {
 						case 0:
-							return({ width: 120, textOptions: { rotation: 0 }, align: "right", font: { src: "./fonts/LibreBaskerville-Bold.ttf" } } );
+							return({ width: "*", align: "right", font: { src: "./fonts/LibreBaskerville-Bold.ttf" } } );
+						case numColumns - 1:
+							return({ width: "*", align: "right" } );
 						default:
-							return({ width: "*", textColor: "black", font: { src: "./fonts/Inconsolata-Medium.ttf" } } );
+							return({ width: 24, padding: 5, textOptions: { rotation: 90, valign: "center" }, textColor: "black", font: { src: "./fonts/Inconsolata-Medium.ttf" } } );
 					}
 				},
 				rowStyles: (i) => {
-					if(i === 0) {
-						return({ border: [1, 0, 1, 0], align: "left", textOptions: { rotation: 90 }, borderColor: "#aaa", backgroundColor: "#cfcfcf", font: { src: "./fonts/LibreBaskerville-Bold.ttf" }} );
+					if(i === 4) {
+						return({ border: [1, 0, 1, 0], align: "right", valign: "top", borderColor: "#aaa", backgroundColor: "#cfcfcf", font: { src: "./fonts/LibreBaskerville-Bold.ttf" }} );
 					}
 
 					if(i % 2 === 0) {
@@ -290,19 +362,23 @@ export class PDFDatasheetRenderer {
 					}
 				},
 				data: [
+					headingData,
+					colourData,
+					colourNameData,
+					renderData,
 					componentData
 				]
 			});
 
 			doc.text('').moveDown(2);
-
+			if(index === 0 && index !== this.pencil.colourComponents.length - 1) {
+				doc.addPage();
+			}
 		}
-
 	}
 
 	private renderTechnicalDrawing(doc: typeof PDFDocument): void {
 		this.currentPageTitle = "Technical Drawing";
-
 		doc.addPage({
 			size: 'A3',
 			layout: 'landscape',
@@ -319,14 +395,39 @@ export class PDFDatasheetRenderer {
 	}
 
 	private addPageWithTitle(doc: typeof PDFDocument, pageTitle: string): void {
-		this.previousPageTitle = this.currentPageTitle;
 		this.currentPageTitle = pageTitle;
 		doc.addPage();
 	}
 
-	private addHeader(doc:typeof PDFDocument): void {
+	private addHeader(doc:typeof PDFDocument, pageNumber: number): void {
+		this.setFontFamily(doc, FontFamily.HEADING_MEDIUM);
+		if(pageNumber === 0) {
+			return;
+		} else {
+			doc.text('').moveUp(2);
+
+			const currentTitle: string = this.pageTitles[pageNumber];
+			const previousTitle: string  = this.pageTitles[pageNumber -1];
+			if(currentTitle === previousTitle) {
+				doc.fillColor("black")
+					.text(currentTitle, {continued: true})
+					.font("./fonts/LibreBaskerville-Italic.ttf")
+					.fontSize(12)
+					.text(" (cont.)", { continued: true });
+			} else {
+				doc.fillColor("black")
+					.text(currentTitle);
+			}
+		}
+
 		this.setFontFamily(doc, FontFamily.FOOTER_COPYRIGHT)
-		doc.text(`${this.pencil.brand} - ${this.pencil.model}`, doc.page.margins.left, 20, { align: "right" });
+
+		doc.fillColor("black")
+			.text(`${this.pencil.brand} ` +
+				`- ` +
+				`${this.pencil.model} // ` +
+				`${(this.pencil.modelNumber ? this.pencil.modelNumber : "")}`, doc.page.margins.left, 20, { align: "right" });
+
 		doc.moveTo(doc.page.margins.left, doc.page.margins.top - 10)
 			.lineCap("butt")
 			.lineWidth(1)
@@ -358,7 +459,8 @@ export class PDFDatasheetRenderer {
 
 		this.setFontFamily(doc, FontFamily.HEADING_TINY)
 
-		doc.text(
+		doc.fillColor("black")
+			.text(
 				'Page ' + pageNumber,
 				0.5 * (doc.page.width - 100),
 				footerStartY + 10,
@@ -366,28 +468,32 @@ export class PDFDatasheetRenderer {
 					width: 100,
 					align: 'center',
 					lineBreak: false,
-				})
+				});
 
 
 		this.setFontFamily(doc, FontFamily.FOOTER_COPYRIGHT);
 		doc.text('').moveDown(1);
-		doc.text("Copyright (c) // The Mechanical Pencil Database (tmpdb)",
+		doc.fillColor("black")
+			.text("Copyright (c) // The Mechanical Pencil Database (tmpdb)",
 				doc.page.margins.left,
 				doc.y,
 				{align: "center"}
 		);
 
-		doc.text("Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+		doc.fillColor("black")
+			.text("Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
 			doc.page.margins.left,
 			doc.y,
 			{align: "center"}
 		);
 
 		doc.page.margins.bottom = bottom;
-		doc.text('', doc.page.margins.left, doc.page.margins.top);
+		doc.fillColor("black")
+			.text('', doc.page.margins.left, doc.page.margins.top);
 	}
 
 	private setFontFamily(pdfDocument: typeof PDFDocument, fontFamily: FontFamily): void {
+		pdfDocument.fillColor("black");
 		switch(fontFamily) {
 			case FontFamily.HEADING_LARGE:
 				pdfDocument.fontSize(36);
@@ -443,7 +549,7 @@ export class PDFDatasheetRenderer {
 		for (let i = 0; i < pages.count; i++) {
 			pdfDocument.switchToPage(i);
 			if(i !== 0) {
-				this.addHeader(pdfDocument);
+				this.addHeader(pdfDocument, i);
 			}
 
 			this.addFooter(i + 1, pdfDocument);
