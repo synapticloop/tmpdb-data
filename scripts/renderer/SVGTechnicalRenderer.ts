@@ -16,6 +16,7 @@ import {
 	target,
 	TextOrientation
 } from "../utils/svg-helper.ts";
+import {Part} from "../model/component/Part.ts";
 
 export class SVGTechnicalRenderer extends SVGRenderer {
 	static SVG_WIDTH = 1500;
