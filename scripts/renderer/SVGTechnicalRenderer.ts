@@ -573,7 +573,7 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 				// objects
 				switch(part.finish) {
 					case "ferrule":
-						let offset = ((part.length * 5/13) * 5)/2;
+						let offset = ((part.length/13) * 5)/2;
 
 						for(let i = 0; i < 13; i++) {
 							if(i !== 0 && i !== 6 && i < 12) {
@@ -583,7 +583,7 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 									`y2="${midY - 1.0 + part.start_height/2 * 5}" ` +
 									`stroke-width="1" stroke="gray" />\n`
 							}
-							offset += (part.length * 5/13) * 5;
+							offset += (part.length/13) * 5;
 						}
 
 						svgString += drawOutlineCircle(4, startX + 15, midY - part.start_height/4 * 5, "dimGray")
