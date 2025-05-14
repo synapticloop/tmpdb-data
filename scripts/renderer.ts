@@ -79,8 +79,12 @@ for (const pencilDirectory of pencilDirectories) {
 			console.log(`       PDF: [${fileNumber}] (datasheet) ${pencilFile} -> ${outputPdfFie}`);
 			fileNumber++;
 
+			const scadOutputDir: string = path.join("./output/scad/technical/");
+			fs.mkdirSync(scadOutputDir, { "recursive": true });
+			const outputScadFile: string = path.join(scadOutputDir, pencilDirectory + "-" + pencilFileName + ".scad");
 			const outputScadString: string = new OpenSCADRenderer(pencil).render();
-			console.log(outputScadString);
+			console.log(`      SCAD: [${fileNumber}] (datasheet) ${pencilFile} -> ${outputScadFile}`);
+			fs.writeFileSync(outputScadFile, outputScadString);
 		}
 	}
 }
