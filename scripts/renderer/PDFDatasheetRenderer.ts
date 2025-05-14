@@ -3,6 +3,8 @@ import PDFDocument from 'pdfkit';
 import fs from "fs";
 import { imageSize } from 'image-size'
 
+import { formatToTwoPlaces} from "../utils/formatter.ts";
+
 enum FontFamily {
 	HEADING_LARGE,
 	HEADING_MEDIUM,
@@ -114,12 +116,12 @@ export class PDFDatasheetRenderer {
 				[ "Years available", `` ],
 				[
 					"Dimensions",
-					`${(Math.round((this.pencil.maxWidth) * 100) / 100).toFixed(2)} mm` +
+					`${formatToTwoPlaces(this.pencil.totalLength)} mm` +
+					` (length)\n` +
+					`${formatToTwoPlaces(this.pencil.maxWidth)} mm` +
 					` (width)\n` +
-					`${(Math.round((this.pencil.maxHeight) * 100) / 100).toFixed(2)} mm` +
-					` (height)\n` +
-					`${(Math.round((this.pencil.totalLength) * 100) / 100).toFixed(2)} mm` +
-					` (length)`
+					`${formatToTwoPlaces(this.pencil.maxHeight)} mm` +
+					` (height)`
 				],
 				[ "Weight", `${(this.pencil.weight ? this.pencil.weight + " grams" : "")}` ],
 				[ "Materials", `${this.pencil.materials.join("\n")}` ],
@@ -139,20 +141,51 @@ export class PDFDatasheetRenderer {
 		// now for the component
 		let componentData:any[][] = [];
 		componentData.push([ "", "", "", { colSpan: 2, text: "Height", align: "center" }, { colSpan: 2, text: "Width", align: "center" } ]);
-		componentData.push([ "Component", "Material", "Length", "Max.", "Min", "Max.", "Min" ]);
+		componentData.push([ "Component", "Material", "Length", "Min.", "Max", "Min.", "Max." ]);
 		for(const [index, component ] of this.pencil.components.entries()) {
 			let componentInner:any[] = [];
 			componentInner.push({ text: component.type, align: "right" });
 			componentInner.push({ text: component.materials.join("\n"), align: "center" });
-			componentInner.push({ text: `${(Math.round((component.width) * 100) / 100).toFixed(2)} mm`, align: "right" });
+			componentInner.push({ text: `${formatToTwoPlaces(component.length)} mm`, align: "center", border: [ 1, 1, 1, 1 ], borderColor: "#aaa"});
+			if(component.minHeight === component.maxHeight) {
+				componentInner.push({ text: `${formatToTwoPlaces(component.minHeight)} mm`, align: "center", colSpan: 2, border: [ 1, 1, 1, 1 ], borderColor: "#aaa" });
+			} else {
+				componentInner.push({ text: `${formatToTwoPlaces(component.minHeight)} mm`, align: "center", border: [ 1, 1, 1, 1 ], borderColor: "#aaa" });
+				componentInner.push({ text: `${formatToTwoPlaces(component.maxHeight)} mm`, align: "center", border: [ 1, 1, 1, 1 ], borderColor: "#aaa" });
+			}
+
+			if(component.maxWidth === component.minWidth) {
+				componentInner.push({text: `${formatToTwoPlaces(component.minWidth)} mm`, align: "center", colSpan: 2, border: [ 1, 1, 1, 1 ], borderColor: "#aaa" });
+			} else {
+				componentInner.push({text: `${formatToTwoPlaces(component.minWidth)} mm`, align: "center", border: [ 1, 1, 1, 1 ], borderColor: "#aaa"});
+				componentInner.push({text: `${formatToTwoPlaces(component.maxWidth)} mm`, align: "center", border: [ 1, 1, 1, 1 ], borderColor: "#aaa"});
+			}
 
 			componentData.push(componentInner);
+
+			for(const extraPart of component.extraParts) {
+				let componentExtra:any[] = [];
+				componentExtra.push({ text: component.type + " (extra)", align: "right" });
+				componentExtra.push({ text: component.materials.join("\n"), align: "center" });
+
+				componentExtra.push({text: `${formatToTwoPlaces(extraPart.extraLength)} mm`, align: "center", border: [ 1, 1, 1, 1 ], borderColor: "#aaa"});
+				componentExtra.push({text: `${formatToTwoPlaces(extraPart.extraHeight)} mm`, align: "center", colSpan: 2, border: [ 1, 1, 1, 1 ], borderColor: "#aaa" });
+				componentExtra.push({text: `${formatToTwoPlaces(extraPart.extraWidth)} mm`, align: "center", colSpan: 2, border: [ 1, 1, 1, 1 ], borderColor: "#aaa" });
+
+				componentData.push(componentExtra);
+			}
+
 		}
+		componentData.push([
+			{ colSpan: 2, text: "Total length", align: "right",  backgroundColor: "#cfcfcf" },
+			{ text: `${formatToTwoPlaces(this.pencil.totalLength)} mm`,  backgroundColor: "#cfcfcf", font: { src: "./fonts/LibreBaskerville-Bold.ttf" }},
+			{text: "", colSpan: 4,  backgroundColor: "#cfcfcf" }
+		]);
 		// @ts-ignore
 		doc.table({
 			columnStyles: (i) => {
 				if(i === 0) {
-					return({ width: 80, textColor: "black", align: "right", font: { src: "./fonts/LibreBaskerville-Bold.ttf" }} );
+					return({ width: 100, textColor: "black", align: "right", font: { src: "./fonts/LibreBaskerville-Bold.ttf" }} );
 				} else {
 					return({ width: "*" });
 				}

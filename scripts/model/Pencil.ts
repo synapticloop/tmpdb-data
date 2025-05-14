@@ -58,18 +58,19 @@ export class Pencil {
 		for(const component of pencilJSONData.components) {
 			const thisComponent = new Component(component);
 			this.components.push(thisComponent);
-			this.totalLength += thisComponent.getWidth()
+			this.totalLength += thisComponent.length;
 
 			if(thisComponent.type === this.colourComponent) {
 				this.colourComponents = thisComponent.colours;
 			}
 
-			let tempWidth = thisComponent.getMaxWidth();
-			if(tempWidth >= this.maxWidth) {
+			let tempWidth:number = thisComponent.getMaxWidth();
+			if(tempWidth > this.maxWidth) {
 				this.maxWidth = tempWidth;
 			}
-			let tempHeight = thisComponent.getMaxHeight();
-			if(tempHeight >= this.maxHeight) {
+
+			let tempHeight: number = thisComponent.getMaxHeight();
+			if(tempHeight > this.maxHeight) {
 				this.maxHeight = tempHeight;
 			}
 

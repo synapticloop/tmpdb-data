@@ -127,14 +127,14 @@ export class SVGTechnicalComponentRenderer extends SVGRenderer {
 			// vertical line
 			svgString += lineVerticalGuide(offset, SVGTechnicalComponentRenderer.SVG_HEIGHT/2 - 120, 120);
 
-			offset += component.width * 5;
+			offset += component.length * 5;
 
 			// now for extraParts
 			for(const extraPart of component.getExtraParts()) {
-				svgString += lineVerticalGuide(offset + extraPart.extraOffset[0] * 5 - (component.extraPartFirst ? component.width * 5 : 0),
+				svgString += lineVerticalGuide(offset + extraPart.extraOffset[0] * 5 - (component.extraPartFirst ? component.length * 5 : 0),
 					SVGTechnicalComponentRenderer.SVG_HEIGHT/2 - 80,
 					80);
-				svgString += lineVerticalGuide(offset + extraPart.extraOffset[0] * 5 + extraPart.extraWidth*5 - (component.extraPartFirst ? component.width * 5 : 0),
+				svgString += lineVerticalGuide(offset + extraPart.extraOffset[0] * 5 + extraPart.extraLength*5 - (component.extraPartFirst ? component.length * 5 : 0),
 					SVGTechnicalComponentRenderer.SVG_HEIGHT/2 - 80,
 					80);
 			}
@@ -153,11 +153,11 @@ export class SVGTechnicalComponentRenderer extends SVGRenderer {
 			// draw all the dimensions
 			svgString += dimensionsHorizontal(xOffset,
 				SVGTechnicalComponentRenderer.SVG_HEIGHT/2 - 120,
-				component.width * 5,
+				component.length * 5,
 				`${component.type}`,
 				TextOrientation.TOP_ROTATED,
 				true);
-			xOffset += component.width * 5;
+			xOffset += component.length * 5;
 
 			// now for the extra dimensions
 			// is the extra the first component, or the last
@@ -165,9 +165,9 @@ export class SVGTechnicalComponentRenderer extends SVGRenderer {
 			for(const extraPart of component.getExtraParts()) {
 				// draw the straight-through line for guidance
 
-				svgString += dimensionsHorizontal(xOffset + extraPart.extraOffset[0] * 5 - (component.extraPartFirst ? component.getWidth() : 0),
+				svgString += dimensionsHorizontal(xOffset + extraPart.extraOffset[0] * 5 - (component.extraPartFirst ? component.length * 5 : 0),
 					SVGTechnicalComponentRenderer.SVG_HEIGHT/2 - 80,
-					extraPart.extraWidth*5 - (component.extraPartFirst ? component.getWidth() : 0),
+					extraPart.extraLength * 5 - (component.extraPartFirst ? component.length * 5 : 0),
 					`${component.getType()} (extra)`,
 					TextOrientation.TOP,
 					true);
@@ -227,20 +227,20 @@ export class SVGTechnicalComponentRenderer extends SVGRenderer {
 					case "octagonal":
 						svgString += `<rect x="${startX}" ` +
 							`y="${midY - (part.end_height/2 * 5)}" ` +
-							`width="${part.width * 5}" ` +
+							`width="${part.length * 5}" ` +
 							`height="${part.start_height * 5}" ` +
 							`rx="1" ry="1" stroke-width="0.5" stroke="${strokeColour}" fill="${colour}"/>\n`
 						break;
 					case "cone":
 						svgString += `<path d="M${startX} ` +
 							`${midY - (part.start_height/2 * 5)} ` +
-							`L${startX + part.width * 5} ${midY - (part.end_height/2 * 5)} ` +
-							`L${startX + part.width * 5} ${midY + (part.end_height/2 * 5)} ` +
+							`L${startX + part.length * 5} ${midY - (part.end_height/2 * 5)} ` +
+							`L${startX + part.length * 5} ${midY + (part.end_height/2 * 5)} ` +
 							`L${startX} ${midY + (part.start_height/2 *5)} Z" ` +
 							`stroke-width="1" stroke="${strokeColour}" fill="${colour}" />\n`
 						break;
 					case "convex":
-						let offsetX = part.width *5;
+						let offsetX = part.length *5;
 						if(part.offset[0] !== 0) {
 							offsetX = part.offset[0] * 5;
 						}
@@ -257,7 +257,7 @@ export class SVGTechnicalComponentRenderer extends SVGRenderer {
 						break;
 					case "concave":
 						svgString += `<path d="M${startX} ${midY - (part.start_height/2 * 5)} ` +
-							`Q${startX + part.width*5} ${midY} ` +
+							`Q${startX + part.length*5} ${midY} ` +
 							`${startX} ${midY + (part.start_height/2 * 5)}" ` +
 							`stroke-width="0.5" stroke="${strokeColour}" fill="${colour}"/>\n`
 						break;
@@ -269,11 +269,11 @@ export class SVGTechnicalComponentRenderer extends SVGRenderer {
 				// draw the additional details
 				switch(part.type) {
 					case "hexagonal":
-						svgString += drawShapeDetails(startX, midY, part.width *5);
+						svgString += drawShapeDetails(startX, midY, part.length *5);
 						break;
 					case "octagonal":
-						svgString += drawShapeDetails(startX, midY - ((part.start_height/2 * 5)*4/7), part.width *5);
-						svgString += drawShapeDetails(startX, midY + ((part.start_height/2 * 5)*4/7), part.width *5);
+						svgString += drawShapeDetails(startX, midY - ((part.start_height/2 * 5)*4/7), part.length *5);
+						svgString += drawShapeDetails(startX, midY + ((part.start_height/2 * 5)*4/7), part.length *5);
 						break;
 				}
 
@@ -282,7 +282,7 @@ export class SVGTechnicalComponentRenderer extends SVGRenderer {
 				// objects
 				switch(part.finish) {
 					case "ferrule":
-						let offset = ((part.width/13) * 5)/2;
+						let offset = ((part.length/13) * 5)/2;
 
 						for(let i = 0; i < 13; i++) {
 							if(i !== 0 && i !== 6 && i < 12) {
@@ -292,7 +292,7 @@ export class SVGTechnicalComponentRenderer extends SVGRenderer {
 									`y2="${midY - 1.0 + part.start_height/2 * 5}" ` +
 									`stroke-width="1" stroke="gray" />\n`
 							}
-							offset += (part.width/13) * 5;
+							offset += (part.length/13) * 5;
 						}
 
 						svgString += drawOutlineCircle(4, startX + 15, midY - part.start_height/4 * 5, "dimGray")
@@ -301,7 +301,7 @@ export class SVGTechnicalComponentRenderer extends SVGRenderer {
 					case "knurled":
 						svgString += `<rect x="${startX}" ` +
 							`y="${midY - (part.end_height/2 * 5)}" ` +
-							`width="${part.width * 5}" ` +
+							`width="${part.length * 5}" ` +
 							`height="${part.start_height * 5}" ` +
 							`rx="1" ry="1" stroke-width="0.5" stroke="black" fill="url(#diagonalHatch)"/>\n`
 						break;
@@ -312,10 +312,10 @@ export class SVGTechnicalComponentRenderer extends SVGRenderer {
 						// now draw the indicator
 						svgString += `<rect x="${startX + 10}" ` +
 							`y="${midY - (part.end_height/4 * 5)}" ` +
-							`width="${part.width * 5 - 20}" ` +
+							`width="${part.length * 5 - 20}" ` +
 							`height="${part.start_height/2 * 5}" ` +
 							`rx="1" ry="1" stroke-width="2" stroke="black" fill="${colour}"/>\n`;
-						svgString += `<text x="${startX + (part.width * 5)/2}" ` +
+						svgString += `<text x="${startX + (part.length * 5)/2}" ` +
 							`y="${midY}" ` +
 							`text-anchor="middle" dominant-baseline="central">` +
 							`<tspan stroke="dimgray" stroke-width="0.5" font-family="sans-serif" fill="black" textLength="{this.width * 5 - 24}" > ` +
@@ -324,7 +324,7 @@ export class SVGTechnicalComponentRenderer extends SVGRenderer {
 							`</text>`;
 						break;
 				}
-				startX += part.width * 5;
+				startX += part.length * 5;
 			}
 		}
 
@@ -377,7 +377,7 @@ export class SVGTechnicalComponentRenderer extends SVGRenderer {
 							midY,
 							part.extraOffset[0],
 							part.extraOffset[1],
-							part.extraDepth,
+							part.extraWidth,
 							part.extraParts,
 							colour);
 						part.extraParts.reverse();
@@ -450,7 +450,7 @@ export class SVGTechnicalComponentRenderer extends SVGRenderer {
 							midY,
 							part.extraOffset[0],
 							part.extraOffset[1],
-							part.extraDepth,
+							part.extraWidth,
 							part.extraParts,
 							colour);
 						part.extraParts.reverse();

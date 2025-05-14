@@ -9,6 +9,7 @@ export class PNGRenderer {
 		this.pencil = pencil;
 	}
 
-	render(): void {
+	render(outputFilePath: string): void {
+
 	}
 }

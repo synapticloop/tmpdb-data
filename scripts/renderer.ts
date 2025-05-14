@@ -10,6 +10,7 @@ import {PDFDatasheetRenderer} from "./renderer/PDFDatasheetRenderer.ts";
 import {SVGPencilRenderer} from "./renderer/SVGPencilRenderer.ts";
 import {SVGRenderer} from "./renderer/SVGRenderer.ts";
 import {SVGTechnicalComponentRenderer} from "./renderer/SVGTechnicalComponentRenderer.ts";
+import {OpenSCADRenderer} from "./renderer/OpenSCADRenderer.ts";
 
 const baseDir:string = './data/pencil';
 // list the directories for the pencil data
@@ -77,6 +78,9 @@ for (const pencilDirectory of pencilDirectories) {
 			new PDFDatasheetRenderer(pencil, pencilDirectory, pencilFileName).render(outputPdfFie);
 			console.log(`       PDF: [${fileNumber}] (datasheet) ${pencilFile} -> ${outputPdfFie}`);
 			fileNumber++;
+
+			const outputScadString: string = new OpenSCADRenderer(pencil).render();
+			console.log(outputScadString);
 		}
 	}
 }

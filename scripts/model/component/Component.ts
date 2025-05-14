@@ -6,13 +6,18 @@ export class Component {
 	colours:string[] = [ "white" ];
 	type:string = "unknown";
 
-	width:number = 0;
+	// the length of the component - which is when you are looking at it
+	// sideways...
+	length:number = 0;
+
+	// the width
 	maxWidth:number = 0;
 	minWidth:number = 0;
+
 	maxHeight:number = 0;
 	minHeight:number = 0;
 
-	extraParts = [];
+	extraParts:Part[] = [];
 	extraPartFirst:boolean = false;
 
 	constructor(jsonObject:any) {
@@ -32,7 +37,7 @@ export class Component {
 			for(let part of jsonObject.parts) {
 				const thisPart = new Part(part, this.colours);
 				this.parts.push(thisPart);
-				this.width += thisPart.width;
+				this.length += thisPart.length;
 
 				if(part.material) {
 					this.materials.push(part.material);
@@ -53,21 +58,27 @@ export class Component {
 				isFirst = false;
 
 
-				let tempWidth = thisPart.getMaxWidth();
-				if(tempWidth >= this.maxWidth) {
-					this.maxWidth = tempWidth;
+				let tempMaxWidth:number = thisPart.getMaxWidth();
+				if(tempMaxWidth >= this.maxWidth) {
+					this.maxWidth = tempMaxWidth;
 				}
 
-				let tempHeight = thisPart.getMaxHeight();
-				if(tempHeight >= this.maxHeight) {
-					this.maxHeight = tempHeight;
+				let tempMinWidth:number = thisPart.getMinWidth();
+				if(tempMinWidth >= this.minWidth) {
+					this.minWidth = tempMinWidth;
+				}
+
+				let tempMaxHeight = thisPart.getMaxHeight();
+				if(tempMaxHeight >= this.maxHeight) {
+					this.maxHeight = tempMaxHeight;
+				}
+
+				let tempMinHeight = thisPart.getMinHeight();
+				if(tempMinHeight >= this.minHeight) {
+					this.minHeight = tempMinHeight;
 				}
 			}
 		}
-	}
-
-	getWidth() {
-		return(this.width);
 	}
 
 	getMaxHeight() {

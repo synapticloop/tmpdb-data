@@ -9,17 +9,19 @@ import {
 
 export class Part {
 	type = "";
-	width = 0;
+	length = 0;
+
 	start_height = 0;
 	end_height = 0;
+
 	offset = [ 0, 0 ];
 	finish = "";
 	colours = [];
 	extraParts = [];
 	extraOffset = [0,0];
-	extraWidth = 0;
+	extraLength = 0;
 	extraHeight = 0;
-	extraDepth = 0;
+	extraWidth = 0;
 	dimensions = [];
 	material: string = null;
 
@@ -51,9 +53,9 @@ export class Part {
 
 			let extraDimensions = [ "0", "0", "0" ];
 			extraDimensions = jsonObject?.dimensions.split("x") ?? extraDimensions;
-			this.extraWidth = parseFloat(extraDimensions[0]);
+			this.extraLength = parseFloat(extraDimensions[0]);
 			this.extraHeight = parseFloat(extraDimensions[1]);
-			this.extraDepth = parseFloat(extraDimensions[2]);
+			this.extraWidth = parseFloat(extraDimensions[2]);
 		} else {
 			// only parse dimensions for non-extra things
 			this.#parseDimensions(jsonObject.dimensions);
@@ -62,7 +64,7 @@ export class Part {
 
 	#parseDimensions(dimensions) {
 		const split = dimensions.split("x");
-		this.width = Number.parseFloat(split[0]);
+		this.length = Number.parseFloat(split[0]);
 		this.start_height = Number.parseFloat(split[1]);
 
 		if(split.length > 2) {
@@ -79,6 +81,10 @@ export class Part {
 		return(this.end_height);
 	}
 
+	getMinHeight():number {
+		return(this.getMinWidth());
+	}
+
 	getMaxWidth() {
 		switch (this.type) {
 			case "hexagonal":
@@ -89,4 +95,12 @@ export class Part {
 		}
 		return(this.getMaxHeight());
 	}
+
+	getMinWidth(): number {
+		if(this.start_height < this.end_height) {
+			return(this.start_height);
+		}
+		return(this.end_height);
+	}
+
 }
