@@ -11,7 +11,7 @@
 <rect x="195.625" y="81.25" width="15" height="37.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver"/>
 <rect x="210.625" y="79.375" width="30" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver"/>
 <rect x="240.625" y="80" width="498.75" height="40" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#AEDCDE"/>
-<line x1="240.625" y1="100" x2="739.375" y2="100" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
+<path d="M 245.625 80 C 239.375 85, 239.375 95, 245.625 100" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="#AEDCDE" /><path d="M 245.625 120 C 239.375 115, 239.375 105, 245.625 100" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="#AEDCDE" /><line x1="240.625" y1="100" x2="739.375" y2="100" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="240.625" y1="100" x2="739.375" y2="100" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
 <rect x="739.375" y="76.875" width="23.75" height="46.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver"/>
 <line x1="568.125" y1="69.375" x2="583.125" y2="69.375" stroke-width="3" stroke="black" fill="dimgray" stroke-linecap="round" />

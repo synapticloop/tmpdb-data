@@ -52,7 +52,7 @@
 					"type": "hexagonal",
 					"dimensions": "98.0x11.0",
 					"taper_start": {
-						"offset": -2.5
+						"offset": [ -2.5, 1.0 ]
 					}
 				}
 			],

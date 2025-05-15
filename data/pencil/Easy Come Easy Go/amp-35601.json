@@ -38,7 +38,13 @@
 		{
 			"type": "body",
 			"parts": [
-				{ "type": "hexagonal", "dimensions": "99.75x8.0" }
+				{
+					"type": "hexagonal",
+					"dimensions": "99.75x8.0",
+					"taper_start": {
+						"offset": [ 1.0, 0.25 ]
+					}
+				}
 			],
 			"material": "plastic",
 			"colours": [ "pink" ,"black", "blue" ]

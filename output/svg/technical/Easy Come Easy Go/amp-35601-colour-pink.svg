@@ -152,7 +152,7 @@
 <rect x="445.625" y="281.25" width="15" height="37.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver"/>
 <rect x="460.625" y="279.375" width="30" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver"/>
 <rect x="490.625" y="280" width="498.75" height="40" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#FFA07A"/>
-<line x1="490.625" y1="300" x2="989.375" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
+<path d="M 495.625 280 C 489.375 285, 489.375 295, 495.625 300" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="#FFA07A" /><path d="M 495.625 320 C 489.375 315, 489.375 305, 495.625 300" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="#FFA07A" /><line x1="490.625" y1="300" x2="989.375" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="490.625" y1="300" x2="989.375" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
 <rect x="989.375" y="276.875" width="23.75" height="46.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver"/>
 <line x1="818.125" y1="269.375" x2="833.125" y2="269.375" stroke-width="3" stroke="black" fill="dimgray" stroke-linecap="round" />

@@ -1,4 +1,4 @@
-import { Component } from "./component/Component.ts";
+import { Component } from "./Component.ts";
 
 export class Pencil {
 	// the name of the pencil
