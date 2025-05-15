@@ -133,6 +133,10 @@ export class PDFDatasheetRenderer {
 
 	private renderComponentsPage(doc: typeof PDFDocument): void {
 		this.addPageWithTitle(doc, "Components");
+
+		this.setFontFamily(doc, FontFamily.HEADING_SMALL);
+
+		doc.text("Details").moveDown(1);
 		this.centreImage(doc, `./output/png/technical/${this.pencilFileDirectory}/${this.pencilFileName}-components.png`, 500);
 
 		doc.text("").moveDown(2);
@@ -207,7 +211,13 @@ export class PDFDatasheetRenderer {
 			},
 			data: componentData
 		});
-		doc.text("").moveDown(2);
+
+		doc.addPage();
+		this.setFontFamily(doc, FontFamily.HEADING_SMALL);
+		doc.text("Components (exploded)").moveDown(1);
+
+		this.centreImage(doc, `./output/png/technical/${this.pencilFileDirectory}/${this.pencilFileName}-exploded.png`, 500);
+
 	}
 
 	private renderColourVariantsPage(doc: typeof PDFDocument): void {
@@ -565,14 +575,17 @@ export class PDFDatasheetRenderer {
 
 		const moveDown: number = width/imageWidth * imageHeight;
 
+		let pageAdded: boolean = false;
+		if(pdfDocument.y + moveDown > (pdfDocument.page.height - pdfDocument.page.margins.top - pdfDocument.page.margins.bottom)) {
+			pdfDocument.addPage();
+			pageAdded = true;
+		}
+
 		pdfDocument.image(imageLocation,
 				pdfDocument.x + ((drawableWidth - width)/2),
 				pdfDocument.y,
 				{ width: width });
-
-		if(pdfDocument.y + moveDown > (pdfDocument.page.height - pdfDocument.page.margins.top - pdfDocument.page.margins.bottom)) {
-			pdfDocument.addPage();
-		} else {
+		if(!pageAdded) {
 			pdfDocument.y = pdfDocument.y + moveDown;
 		}
 	}

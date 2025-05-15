@@ -434,14 +434,7 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 		let colour = "white";
 
 		for (let component of this.pencil.components) {
-			let colourComponent:string = component.colours[colourIndex];
-			if (colourComponent) {
-				if(this.pencil.colourMap[colourComponent]) {
-					colour = this.pencil.colourMap[colourComponent];
-				} else {
-					colour = colourComponent;
-				}
-			}
+			colour = this.getMappedColour(component, colour, colourIndex);
 
 			for(let part of component.parts) {
 				svgString += super.renderPart(startX, midY, component, part, colourIndex, colour);
@@ -452,14 +445,7 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 		startX = SVG_WIDTH/2 - (this.pencil.totalLength*5/2);
 
 		for (let component of this.pencil.components) {
-			let colourComponent:string = component.colours[colourIndex];
-			if (colourComponent) {
-				if(this.pencil.colourMap[colourComponent]) {
-					colour = this.pencil.colourMap[colourComponent];
-				} else {
-					colour = colourComponent;
-				}
-			}
+			colour = this.getMappedColour(component, colour, colourIndex);
 
 			for(let part of component.parts) {
 				svgString += super.renderTaper(startX, midY, component, part, colourIndex, colour);
@@ -484,14 +470,8 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 
 		// go through the components and render them
 		for(const component of this.pencil.components) {
-			let colourComponent:string = component.colours[colourIndex];
-			if (colourComponent) {
-				if(this.pencil.colourMap[colourComponent]) {
-					colour = this.pencil.colourMap[colourComponent];
-				} else {
-					colour = colourComponent;
-				}
-			}
+			colour = this.getMappedColour(component, colour, colourIndex);
+
 			component.parts.reverse();
 			for (let part of component.parts) {
 				switch (part.type) {
@@ -553,18 +533,10 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 		let midY = SVG_HEIGHT/2;
 
 
-		let colour = "white";
+		let colour: string = "white";
 		// go through the components and render them
 		for(const component of this.pencil.components) {
-			let colourComponent:string = component.colours[colourIndex];
-
-			if (colourComponent) {
-				if(this.pencil.colourMap[colourComponent]) {
-					colour = this.pencil.colourMap[colourComponent];
-				} else {
-					colour = colourComponent;
-				}
-			}
+			colour = this.getMappedColour(component, colour, colourIndex);
 
 			for (let part of component.parts) {
 				switch (part.type) {

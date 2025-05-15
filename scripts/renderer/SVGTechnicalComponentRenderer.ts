@@ -58,7 +58,11 @@ export class SVGTechnicalComponentRenderer extends SVGRenderer {
 		let svgString:string = SVGTechnicalComponentRenderer.SVG_START;
 
 		// centre line
-		svgString += this.renderCentreLines(SVGTechnicalComponentRenderer.SVG_WIDTH, SVGTechnicalComponentRenderer.SVG_HEIGHT);
+		svgString += this.renderCentreLines(
+				SVGTechnicalComponentRenderer.SVG_WIDTH,
+				SVGTechnicalComponentRenderer.SVG_HEIGHT,
+				false,
+				false);
 
 		// overview text
 		svgString += this.renderOverviewText(false);
@@ -160,17 +164,8 @@ export class SVGTechnicalComponentRenderer extends SVGRenderer {
 		let startX: number = SVGTechnicalComponentRenderer.SVG_WIDTH/2 - (this.pencil.totalLength*5/2);
 		let midY: number = SVGTechnicalComponentRenderer.SVG_HEIGHT/2;
 
-		let colour = "white";
-
 		for (let component of this.pencil.components) {
-			let colourComponent:string = component.colours[colourIndex];
-			if (colourComponent) {
-				if(this.pencil.colourMap[colourComponent]) {
-					colour = this.pencil.colourMap[colourComponent];
-				} else {
-					colour = colourComponent;
-				}
-			}
+			let colour: string = this.getMappedColour(component, "white", colourIndex);
 
 			for(let part of component.parts) {
 				svgString += super.renderPart(startX, midY, component, part, colourIndex, colour);
@@ -178,6 +173,16 @@ export class SVGTechnicalComponentRenderer extends SVGRenderer {
 			}
 		}
 
+		startX = SVGTechnicalComponentRenderer.SVG_WIDTH/2 - (this.pencil.totalLength*5/2);
+
+		for (let component of this.pencil.components) {
+			let colour: string = this.getMappedColour(component, "white", colourIndex);
+
+			for(let part of component.parts) {
+				svgString += super.renderTaper(startX, midY, component, part, colourIndex, colour);
+				startX += part.length * 5;
+			}
+		}
 
 		return(svgString);
 	}
@@ -196,14 +201,8 @@ export class SVGTechnicalComponentRenderer extends SVGRenderer {
 
 		// go through the components and render them
 		for(const component of this.pencil.components) {
-			let colourComponent:string = component.colours[colourIndex];
-			if (colourComponent) {
-				if(this.pencil.colourMap[colourComponent]) {
-					colour = this.pencil.colourMap[colourComponent];
-				} else {
-					colour = colourComponent;
-				}
-			}
+			colour = this.getMappedColour(component, colour, colourIndex);
+
 			component.parts.reverse();
 			for (let part of component.parts) {
 				switch (part.type) {
@@ -268,15 +267,7 @@ export class SVGTechnicalComponentRenderer extends SVGRenderer {
 		let colour = "white";
 		// go through the components and render them
 		for(const component of this.pencil.components) {
-			let colourComponent:string = component.colours[colourIndex];
-
-			if (colourComponent) {
-				if(this.pencil.colourMap[colourComponent]) {
-					colour = this.pencil.colourMap[colourComponent];
-				} else {
-					colour = colourComponent;
-				}
-			}
+			colour = this.getMappedColour(component, colour, colourIndex);
 
 			for (let part of component.parts) {
 				switch (part.type) {

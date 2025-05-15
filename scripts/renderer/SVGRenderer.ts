@@ -19,28 +19,32 @@ export abstract class SVGRenderer {
 
 	abstract render(colourInder:number): string;
 
-	protected renderCentreLines(width: number, height: number): string {
-		let svgString:string = "";
+	protected renderCentreLines(width: number, height: number, renderFront:boolean=true, renderBack:boolean=true): string {
+		let svgString: string = "";
 
 		// the horizontal centre line with targets
-		svgString += lineHorizontal(10, height/2, width - 20, "1", "#000000", "2");
-		svgString += target(30, height/2, 40, 10);
-		svgString += target(width - 30, height/2, 40, 10);
+		svgString += lineHorizontal(10, height / 2, width - 20, "1", "#000000", "2");
+		svgString += target(30, height / 2, 40, 10);
+		svgString += target(width - 30, height / 2, 40, 10);
 
-		// FRONT VIEW the left hand side targets and the dashed line
-		svgString += lineVertical(160, 140, height - 220, "1", "#000000", "2");
-		svgString += target(160, 150, 40, 10);
-		svgString += target(160, height - 100, 40, 10);
+		if (renderFront) {
+			// FRONT VIEW the left hand side targets and the dashed line
+			svgString += lineVertical(160, 140, height - 220, "1", "#000000", "2");
+			svgString += target(160, 150, 40, 10);
+			svgString += target(160, height - 100, 40, 10);
+		}
 
 		// SIDE VIEW
-		svgString += lineVertical(width/2, 140, height - 220, "1", "#000000", "2");
-		svgString += target(width/2, 150, 40, 10);
-		svgString += target(width/2, height - 100, 40, 10);
+		svgString += lineVertical(width / 2, 140, height - 220, "1", "#000000", "2");
+		svgString += target(width / 2, 150, 40, 10);
+		svgString += target(width / 2, height - 100, 40, 10);
 
-		// LEFT VIEW the right hand side targets and the dashed line
-		svgString += lineVertical(width-100, 140, height - 220, "1", "#000000", "2");
-		svgString += target(width-100, 150, 40, 10);
-		svgString += target(width-100, height - 100, 40, 10);
+		if (renderBack) {
+			// BACK VIEW the right hand side targets and the dashed line
+			svgString += lineVertical(width - 100, 140, height - 220, "1", "#000000", "2");
+			svgString += target(width - 100, 150, 40, 10);
+			svgString += target(width - 100, height - 100, 40, 10);
+		}
 
 		return(svgString);
 	}
@@ -396,5 +400,18 @@ export abstract class SVGRenderer {
 			}
 			return (svgString);
 		}
+	}
+
+	protected getMappedColour(component: Component, defaultColour: string, colourIndex: number): string {
+		let colourComponent:string = component.colours[colourIndex];
+		if (colourComponent) {
+			if(this.pencil.colourMap[colourComponent]) {
+				return(this.pencil.colourMap[colourComponent]);
+			} else {
+				return(colourComponent);
+			}
+		}
+
+		return(defaultColour);
 	}
 }

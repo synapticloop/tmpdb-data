@@ -160,14 +160,7 @@ export class SVGExplodedTechnicalRenderer extends SVGRenderer {
 				}
 			}
 
-			let colourComponent:string = component.colours[colourIndex];
-			if (colourComponent) {
-				if(this.pencil.colourMap[colourComponent]) {
-					colour = this.pencil.colourMap[colourComponent];
-				} else {
-					colour = colourComponent;
-				}
-			}
+			colour = this.getMappedColour(component, colour, colourIndex);
 
 			let partLength:number = 0;
 			for(let part of component.parts) {
@@ -264,14 +257,7 @@ export class SVGExplodedTechnicalRenderer extends SVGRenderer {
 				midY += 120;
 			}
 
-			let colourComponent:string = component.colours[colourIndex];
-			if (colourComponent) {
-				if(this.pencil.colourMap[colourComponent]) {
-					colour = this.pencil.colourMap[colourComponent];
-				} else {
-					colour = colourComponent;
-				}
-			}
+			colour = this.getMappedColour(component, colour, colourIndex);
 
 			for(let part of component.parts) {
 				svgString += super.renderTaper(startX, midY, component, part, colourIndex, colour);
