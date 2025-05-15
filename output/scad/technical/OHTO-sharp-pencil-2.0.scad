@@ -14,7 +14,7 @@ translate([0, 0, 100.5])
     cylinder(14, 10.25, 10.25, $fn=360);
 translate([0, 0, 114.5]) 
   color("brass") 
-    cylinder(5, 9.25, 9.25, $fn=360);
+    cylinder(5, 9.5, 9.5, $fn=360);
 translate([0, 0, 119.5]) 
   color("brass") 
     cylinder(2, 10, 10, $fn=360);

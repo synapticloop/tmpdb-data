@@ -197,6 +197,7 @@ export function lineHorizontal(x: number, y: number, width: number, strokeWidth:
 		`y1="${y}" ` +
 		`x2="${x + width}" ` +
 		`y2="${y}" ` +
+		`stroke-linecap="round" ` +
 		`stroke="${strokeColour}" ` +
 		`${(null !== strokeDash ? `stroke-dasharray="${strokeDash}" ` : " ")}` +
 		`stroke-width="${strokeWidth}" />\n`;
@@ -216,14 +217,15 @@ export function circle(x: number, y: number, radius: number, strokeWidth: string
 			`stroke-width="${strokeWidth}"  />\n`);
 
 }
-export function lineVertical(x: number, y: number, height: number, strokeWidth: string, strokeColour: string, strokeDash: string=null): string {
+export function lineVertical(x: number, y: number, height: number, strokeWidth: string, strokeColour: string, strokeDashArray: string=null): string {
 	let svgString: string = "";
 	svgString += `<line x1="${x}" ` +
 		`y1="${y}" ` +
 		`x2="${x}" ` +
 		`y2="${y + height}" ` +
 		`stroke="${strokeColour}" ` +
-		`${(null !== strokeDash ? `stroke-dasharray="${strokeDash}" ` : " ")}` +
+		`stroke-linecap="round" ` +
+		`${(null !== strokeDashArray ? `stroke-dasharray="${strokeDashArray}" ` : " ")}` +
 		`stroke-width="${strokeWidth}" />\n`;
 	return(svgString);
 }

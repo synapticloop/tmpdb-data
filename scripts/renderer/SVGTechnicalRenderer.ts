@@ -55,7 +55,7 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 		let svgString:string = SVGTechnicalRenderer.SVG_START;
 
 		// centre line
-		svgString += this.renderCentreLines();
+		svgString += this.renderCentreLines(SVGTechnicalRenderer.SVG_WIDTH, SVGTechnicalRenderer.SVG_HEIGHT);
 
 		// overview text
 		svgString += this.renderOverviewText();
@@ -94,55 +94,6 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 
 		// end the end of the SVG
 		svgString += SVGTechnicalRenderer.SVG_END;
-		return(svgString);
-	}
-
-	private renderCentreLines(): string {
-		let svgString:string = "";
-
-		// the horizontal centre line with targets
-		svgString += lineHorizontal(10, SVG_HEIGHT/2, SVG_WIDTH - 20, "1", "#000000", "2");
-		svgString += target(30, SVG_HEIGHT/2, 40, 10);
-		svgString += target(SVG_WIDTH - 30, SVG_HEIGHT/2, 40, 10);
-
-		// FRONT VIEW the left hand side targets and the dashed line
-		svgString += lineVertical(160, 140, SVG_HEIGHT - 220, "1", "#000000", "2");
-		svgString += target(160, 150, 40, 10);
-		svgString += target(160, SVG_HEIGHT - 100, 40, 10);
-
-		// SIDE VIEW
-		svgString += lineVertical(SVG_WIDTH/2, 140, SVG_HEIGHT - 220, "1", "#000000", "2");
-		svgString += target(SVG_WIDTH/2, 150, 40, 10);
-		svgString += target(SVG_WIDTH/2, SVG_HEIGHT - 100, 40, 10);
-
-		// LEFT VIEW the right hand side targets and the dashed line
-		svgString += lineVertical(SVG_WIDTH-100, 140, SVG_HEIGHT - 220, "1", "#000000", "2");
-		svgString += target(SVG_WIDTH-100, 150, 40, 10);
-		svgString += target(SVG_WIDTH-100, SVG_HEIGHT - 100, 40, 10);
-
-		return(svgString);
-	}
-
-	private renderOverviewText(): string {
-		let svgString = "";
-		svgString += drawTextBold(`${this.pencil.brand}` +
-			` // ` +
-			`${this.pencil.model} ` +
-			`${(this.pencil.modelNumber ? "(Model #: " + this.pencil.modelNumber + ")" : "")}`,
-			30,
-			50,
-			"2.0em");
-
-		svgString += drawText(`${this.pencil.text}`, 30, 80, "1.1em");
-
-		if(this.pencil.leadSize) {
-			svgString += drawText(`Lead size: ${this.pencil.leadSize} mm`, 30, 100, "1.1em");
-		}
-
-		if(this.pencil.weight) {
-			svgString += drawText(`Weight: ${this.pencil.weight}g`, 30, 120, "1.1em");
-		}
-
 		return(svgString);
 	}
 
@@ -498,8 +449,25 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 			}
 		}
 
+		startX = SVG_WIDTH/2 - (this.pencil.totalLength*5/2);
 
-			return(svgString);
+		for (let component of this.pencil.components) {
+			let colourComponent:string = component.colours[colourIndex];
+			if (colourComponent) {
+				if(this.pencil.colourMap[colourComponent]) {
+					colour = this.pencil.colourMap[colourComponent];
+				} else {
+					colour = colourComponent;
+				}
+			}
+
+			for(let part of component.parts) {
+				svgString += super.renderTaper(startX, midY, component, part, colourIndex, colour);
+				startX += part.length * 5;
+			}
+		}
+
+		return(svgString);
 	}
 
 	private renderFrontComponents(colourIndex:number): string {

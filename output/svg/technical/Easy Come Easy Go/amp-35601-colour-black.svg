@@ -8,33 +8,33 @@
 </pattern>
 <rect x="0" y="0" width="1500" height="600" fill="white" stroke="black" stroke-width="4" />
 <rect x="2" y="2" width="1496" height="596" fill="white" stroke="dimgray" stroke-width="1" />
-<line x1="10" y1="300" x2="1490" y2="300" stroke="#000000" stroke-dasharray="2" stroke-width="1" />
-<line x1="10" y1="300" x2="50" y2="300" stroke="#000000"  stroke-width="1" />
-<line x1="30" y1="280" x2="30" y2="320" stroke="#000000"  stroke-width="1" />
+<line x1="10" y1="300" x2="1490" y2="300" stroke-linecap="round" stroke="#000000" stroke-dasharray="2" stroke-width="1" />
+<line x1="10" y1="300" x2="50" y2="300" stroke-linecap="round" stroke="#000000"  stroke-width="1" />
+<line x1="30" y1="280" x2="30" y2="320" stroke="#000000" stroke-linecap="round"  stroke-width="1" />
 <circle r="10" cx="30" cy="300" fill="none" stroke="#000000" stroke-width="1"  />
-<line x1="1450" y1="300" x2="1490" y2="300" stroke="#000000"  stroke-width="1" />
-<line x1="1470" y1="280" x2="1470" y2="320" stroke="#000000"  stroke-width="1" />
+<line x1="1450" y1="300" x2="1490" y2="300" stroke-linecap="round" stroke="#000000"  stroke-width="1" />
+<line x1="1470" y1="280" x2="1470" y2="320" stroke="#000000" stroke-linecap="round"  stroke-width="1" />
 <circle r="10" cx="1470" cy="300" fill="none" stroke="#000000" stroke-width="1"  />
-<line x1="160" y1="140" x2="160" y2="520" stroke="#000000" stroke-dasharray="2" stroke-width="1" />
-<line x1="140" y1="150" x2="180" y2="150" stroke="#000000"  stroke-width="1" />
-<line x1="160" y1="130" x2="160" y2="170" stroke="#000000"  stroke-width="1" />
+<line x1="160" y1="140" x2="160" y2="520" stroke="#000000" stroke-linecap="round" stroke-dasharray="2" stroke-width="1" />
+<line x1="140" y1="150" x2="180" y2="150" stroke-linecap="round" stroke="#000000"  stroke-width="1" />
+<line x1="160" y1="130" x2="160" y2="170" stroke="#000000" stroke-linecap="round"  stroke-width="1" />
 <circle r="10" cx="160" cy="150" fill="none" stroke="#000000" stroke-width="1"  />
-<line x1="140" y1="500" x2="180" y2="500" stroke="#000000"  stroke-width="1" />
-<line x1="160" y1="480" x2="160" y2="520" stroke="#000000"  stroke-width="1" />
+<line x1="140" y1="500" x2="180" y2="500" stroke-linecap="round" stroke="#000000"  stroke-width="1" />
+<line x1="160" y1="480" x2="160" y2="520" stroke="#000000" stroke-linecap="round"  stroke-width="1" />
 <circle r="10" cx="160" cy="500" fill="none" stroke="#000000" stroke-width="1"  />
-<line x1="750" y1="140" x2="750" y2="520" stroke="#000000" stroke-dasharray="2" stroke-width="1" />
-<line x1="730" y1="150" x2="770" y2="150" stroke="#000000"  stroke-width="1" />
-<line x1="750" y1="130" x2="750" y2="170" stroke="#000000"  stroke-width="1" />
+<line x1="750" y1="140" x2="750" y2="520" stroke="#000000" stroke-linecap="round" stroke-dasharray="2" stroke-width="1" />
+<line x1="730" y1="150" x2="770" y2="150" stroke-linecap="round" stroke="#000000"  stroke-width="1" />
+<line x1="750" y1="130" x2="750" y2="170" stroke="#000000" stroke-linecap="round"  stroke-width="1" />
 <circle r="10" cx="750" cy="150" fill="none" stroke="#000000" stroke-width="1"  />
-<line x1="730" y1="500" x2="770" y2="500" stroke="#000000"  stroke-width="1" />
-<line x1="750" y1="480" x2="750" y2="520" stroke="#000000"  stroke-width="1" />
+<line x1="730" y1="500" x2="770" y2="500" stroke-linecap="round" stroke="#000000"  stroke-width="1" />
+<line x1="750" y1="480" x2="750" y2="520" stroke="#000000" stroke-linecap="round"  stroke-width="1" />
 <circle r="10" cx="750" cy="500" fill="none" stroke="#000000" stroke-width="1"  />
-<line x1="1400" y1="140" x2="1400" y2="520" stroke="#000000" stroke-dasharray="2" stroke-width="1" />
-<line x1="1380" y1="150" x2="1420" y2="150" stroke="#000000"  stroke-width="1" />
-<line x1="1400" y1="130" x2="1400" y2="170" stroke="#000000"  stroke-width="1" />
+<line x1="1400" y1="140" x2="1400" y2="520" stroke="#000000" stroke-linecap="round" stroke-dasharray="2" stroke-width="1" />
+<line x1="1380" y1="150" x2="1420" y2="150" stroke-linecap="round" stroke="#000000"  stroke-width="1" />
+<line x1="1400" y1="130" x2="1400" y2="170" stroke="#000000" stroke-linecap="round"  stroke-width="1" />
 <circle r="10" cx="1400" cy="150" fill="none" stroke="#000000" stroke-width="1"  />
-<line x1="1380" y1="500" x2="1420" y2="500" stroke="#000000"  stroke-width="1" />
-<line x1="1400" y1="480" x2="1400" y2="520" stroke="#000000"  stroke-width="1" />
+<line x1="1380" y1="500" x2="1420" y2="500" stroke-linecap="round" stroke="#000000"  stroke-width="1" />
+<line x1="1400" y1="480" x2="1400" y2="520" stroke="#000000" stroke-linecap="round"  stroke-width="1" />
 <circle r="10" cx="1400" cy="500" fill="none" stroke="#000000" stroke-width="1"  />
 <text x="30" y="50" font-size="2.0em" font-weight="bold"> Easy Come Easy Go // amp-35601 </text>
 <text x="30" y="80" font-size="1.1em"> EASY COME EASY GO 2.0</text>
@@ -48,22 +48,22 @@
 <text x="1340" y="100" transform="rotate(-90, 1340, 100)" font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">blue</text>
 <text x="30" y="136" font-size="1.2em" font-weight="bold" text-anchor="start" dominant-baseline="central">Materials:</text>
 <text x="50" y="156" font-size="1.2em" text-anchor="start" dominant-baseline="central"> - plastic</text>
-<line x1="100" y1="268.375" x2="1400" y2="268.375" stroke="#cfcfcf"  stroke-width="1" />
-<line x1="160" y1="278.375" x2="1400" y2="278.375" stroke="#cfcfcf"  stroke-width="1" />
-<line x1="150" y1="230" x2="150" y2="300" stroke="#cfcfcf"  stroke-width="1" />
-<line x1="170" y1="230" x2="170" y2="300" stroke="#cfcfcf"  stroke-width="1" />
-<line x1="160" y1="276.875" x2="1400" y2="276.875" stroke="#cfcfcf"  stroke-width="1" />
-<line x1="100" y1="323.125" x2="1400" y2="323.125" stroke="#cfcfcf"  stroke-width="1" />
-<line x1="136.875" y1="300" x2="136.875" y2="343.125" stroke="#cfcfcf"  stroke-width="1" />
-<line x1="183.125" y1="300" x2="183.125" y2="343.125" stroke="#cfcfcf"  stroke-width="1" />
-<line x1="391.875" y1="180" x2="391.875" y2="420" stroke="#cfcfcf"  stroke-width="1" />
-<line x1="490.625" y1="180" x2="490.625" y2="420" stroke="#cfcfcf"  stroke-width="1" />
-<line x1="989.375" y1="180" x2="989.375" y2="420" stroke="#cfcfcf"  stroke-width="1" />
-<line x1="818.125" y1="220" x2="818.125" y2="380" stroke="#cfcfcf"  stroke-width="1" />
-<line x1="1020.625" y1="220" x2="1020.625" y2="380" stroke="#cfcfcf"  stroke-width="1" />
-<line x1="1013.125" y1="180" x2="1013.125" y2="420" stroke="#cfcfcf"  stroke-width="1" />
-<line x1="1030.625" y1="180" x2="1030.625" y2="420" stroke="#cfcfcf"  stroke-width="1" />
-<line x1="1108.125" y1="188.875" x2="1108.125" y2="396.875" stroke="#cfcfcf"  stroke-width="1" />
+<line x1="100" y1="268.375" x2="1400" y2="268.375" stroke-linecap="round" stroke="#cfcfcf"  stroke-width="1" />
+<line x1="160" y1="278.375" x2="1400" y2="278.375" stroke-linecap="round" stroke="#cfcfcf"  stroke-width="1" />
+<line x1="150" y1="230" x2="150" y2="300" stroke="#cfcfcf" stroke-linecap="round"  stroke-width="1" />
+<line x1="170" y1="230" x2="170" y2="300" stroke="#cfcfcf" stroke-linecap="round"  stroke-width="1" />
+<line x1="160" y1="276.875" x2="1400" y2="276.875" stroke-linecap="round" stroke="#cfcfcf"  stroke-width="1" />
+<line x1="100" y1="323.125" x2="1400" y2="323.125" stroke-linecap="round" stroke="#cfcfcf"  stroke-width="1" />
+<line x1="136.875" y1="300" x2="136.875" y2="343.125" stroke="#cfcfcf" stroke-linecap="round"  stroke-width="1" />
+<line x1="183.125" y1="300" x2="183.125" y2="343.125" stroke="#cfcfcf" stroke-linecap="round"  stroke-width="1" />
+<line x1="391.875" y1="180" x2="391.875" y2="420" stroke="#cfcfcf" stroke-linecap="round"  stroke-width="1" />
+<line x1="490.625" y1="180" x2="490.625" y2="420" stroke="#cfcfcf" stroke-linecap="round"  stroke-width="1" />
+<line x1="989.375" y1="180" x2="989.375" y2="420" stroke="#cfcfcf" stroke-linecap="round"  stroke-width="1" />
+<line x1="818.125" y1="220" x2="818.125" y2="380" stroke="#cfcfcf" stroke-linecap="round"  stroke-width="1" />
+<line x1="1020.625" y1="220" x2="1020.625" y2="380" stroke="#cfcfcf" stroke-linecap="round"  stroke-width="1" />
+<line x1="1013.125" y1="180" x2="1013.125" y2="420" stroke="#cfcfcf" stroke-linecap="round"  stroke-width="1" />
+<line x1="1030.625" y1="180" x2="1030.625" y2="420" stroke="#cfcfcf" stroke-linecap="round"  stroke-width="1" />
+<line x1="1108.125" y1="188.875" x2="1108.125" y2="396.875" stroke="#cfcfcf" stroke-linecap="round"  stroke-width="1" />
 <text x="160" y="540" font-size="1.8em" font-weight="bold" text-anchor="middle" dominant-baseline="central">Front</text>
 <text x="750" y="540" font-size="1.8em" font-weight="bold" text-anchor="middle" dominant-baseline="central">Side view</text>
 <text x="1400" y="540" font-size="1.8em" font-weight="bold" text-anchor="middle" dominant-baseline="central">Back</text>
@@ -152,7 +152,7 @@
 <rect x="445.625" y="281.25" width="15" height="37.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver"/>
 <rect x="460.625" y="279.375" width="30" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver"/>
 <rect x="490.625" y="280" width="498.75" height="40" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#000000"/>
-<path d="M 495.625 280 C 489.375 285, 489.375 295, 495.625 300" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="#000000" /><path d="M 495.625 320 C 489.375 315, 489.375 305, 495.625 300" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="#000000" /><line x1="490.625" y1="300" x2="989.375" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
+<line x1="490.625" y1="300" x2="989.375" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="490.625" y1="300" x2="989.375" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
 <rect x="989.375" y="276.875" width="23.75" height="46.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver"/>
 <line x1="818.125" y1="269.375" x2="833.125" y2="269.375" stroke-width="3" stroke="black" fill="dimgray" stroke-linecap="round" />
@@ -175,7 +175,7 @@
 <line x1="1051.875" y1="311.42857142857144" x2="1098.125" y2="311.42857142857144" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
 <rect x="1098.125" y="278.75" width="6.25" height="42.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#000000"/>
 <path d="M1104.375 278.75 Q1111.875 300 1104.375 321.25" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#000000"/>
-<circle r="21.25" cx="160" cy="300" fill="#000000" stroke="dimgray" stroke-width="1"  />
+<path d="M 495.625 280 C 489.375 285, 489.375 295, 495.625 300" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="#000000" /><path d="M 495.625 320 C 489.375 315, 489.375 305, 495.625 300" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="#000000" /><circle r="21.25" cx="160" cy="300" fill="#000000" stroke="dimgray" stroke-width="1"  />
 <polygon points="151.7157287525381,280 168.2842712474619,280 180,291.7157287525381 180,308.2842712474619 168.2842712474619,320 151.7157287525381,320 140,308.2842712474619 140,291.7157287525381 " stroke="dimgray" stroke-width="1" fill="#000000"/>
 <circle r="15" cx="160" cy="300" fill="#000000" stroke="dimgray" stroke-width="1"  />
 <circle r="19.375" cx="160" cy="300" fill="#000000" stroke="dimgray" stroke-width="1"  />

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="209.25">
+<pattern id="diagonalHatch" patternUnits="userSpaceOnUse" width="8" height="8">
+<rect width="6" height="6" fill='none'/>
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,8"/>
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,8"/>
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,0" />
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,0" />
+</pattern>
+<rect x="0" y="0" width="1200" height="209.25" fill="white" stroke="black" stroke-width="4" />
+<rect x="2" y="2" width="1196" height="205.25" fill="white" stroke="dimgray" stroke-width="1" />
+<text x="30" y="50" font-size="2.0em" font-weight="bold"> Easy Come Easy Go // amp-35601 </text>
+<rect x="241.875" y="110.625" width="12.5" height="18.75" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver"/>
+<path d="M254.375 110 L295.625 101.25 L295.625 138.75 L254.375 130 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" />
+<rect x="295.625" y="101.25" width="15" height="37.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver"/>
+<rect x="310.625" y="99.375" width="30" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver"/>
+<rect x="340.625" y="100" width="498.75" height="40" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#000000"/>
+<line x1="340.625" y1="120" x2="839.375" y2="120" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
+<line x1="340.625" y1="120" x2="839.375" y2="120" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
+<rect x="839.375" y="96.875" width="23.75" height="46.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver"/>
+<line x1="668.125" y1="89.375" x2="683.125" y2="89.375" stroke-width="3" stroke="black" fill="dimgray" stroke-linecap="round" />
+/><line x1="683.125" y1="89.375" x2="703.125" y2="98.125" stroke-width="3" stroke="black" fill="dimgray" stroke-linecap="round" />
+/><line x1="703.125" y1="98.125" x2="723.125" y2="89.375" stroke-width="3" stroke="black" fill="dimgray" stroke-linecap="round" />
+/><line x1="723.125" y1="89.375" x2="863.125" y2="89.375" stroke-width="3" stroke="black" fill="dimgray" stroke-linecap="round" />
+/><path d="M863.125 89.375 Q883.125 94.375 863.125 99.375" stroke-width="3" stroke="black" fill="none" stroke-linecap="round" />
+<line x1="668.125" y1="89.375" x2="683.125" y2="89.375" stroke-width="2" stroke="silver" fill="silver" stroke-linecap="round" />
+/><line x1="683.125" y1="89.375" x2="703.125" y2="98.125" stroke-width="2" stroke="silver" fill="silver" stroke-linecap="round" />
+/><line x1="703.125" y1="98.125" x2="723.125" y2="89.375" stroke-width="2" stroke="silver" fill="silver" stroke-linecap="round" />
+/><line x1="723.125" y1="89.375" x2="863.125" y2="89.375" stroke-width="2" stroke="silver" fill="silver" stroke-linecap="round" />
+/><path d="M863.125 89.375 Q883.125 94.375 863.125 99.375" stroke-width="2" stroke="silver" fill="none" stroke-linecap="round" />
+<path d="M863.125 100 L871.875 100.625 L871.875 139.375 L863.125 140 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#000000" />
+<rect x="871.875" y="100.625" width="8.75" height="38.75" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#000000"/>
+<rect x="880.625" y="105" width="21.25" height="30" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#000000"/>
+<rect x="901.875" y="100" width="46.25" height="40" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#000000"/>
+<line x1="901.875" y1="108.57142857142857" x2="948.125" y2="108.57142857142857" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
+<line x1="901.875" y1="108.57142857142857" x2="948.125" y2="108.57142857142857" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
+<line x1="901.875" y1="131.42857142857142" x2="948.125" y2="131.42857142857142" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
+<line x1="901.875" y1="131.42857142857142" x2="948.125" y2="131.42857142857142" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
+<rect x="948.125" y="98.75" width="6.25" height="42.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#000000"/>
+<path d="M954.375 98.75 Q961.875 120 954.375 141.25" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#000000"/>
+<path d="M 345.625 100 C 339.375 105, 339.375 115, 345.625 120" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="#000000" /><path d="M 345.625 140 C 339.375 135, 339.375 125, 345.625 120" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="#000000" /><text x="50%" y="189.25" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb) // Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
+</svg>

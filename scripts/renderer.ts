@@ -10,6 +10,7 @@ import {SVGPencilRenderer} from "./renderer/SVGPencilRenderer.ts";
 import {SVGRenderer} from "./renderer/SVGRenderer.ts";
 import {SVGTechnicalComponentRenderer} from "./renderer/SVGTechnicalComponentRenderer.ts";
 import {OpenSCADRenderer} from "./renderer/OpenSCADRenderer.ts";
+import {SVGExplodedTechnicalRenderer} from "./renderer/SVGExplodedTechnicalRenderer.ts";
 
 let baseDir:string = './data/pencil';
 
@@ -59,6 +60,13 @@ for (const pencilDirectory of pencilDirectories) {
 				.then(r => {});
 			fileNumber++;
 
+			const outputExplodedTechnicalSvg: string = renderSVG(new SVGExplodedTechnicalRenderer(pencil), -1, "technical", pencilDirectory, pencilFileName + "-exploded", fileNumber);
+			fileNumber++;
+
+			await renderPNG(outputExplodedTechnicalSvg, "technical", pencilDirectory, pencilFileName + "-exploded", fileNumber)
+				.then(r => {});
+			fileNumber++;
+
 			// now go through the colours
 			for(let [ index, colourComponent ] of pencil.colourComponents.entries()) {
 				const pencilOutputFileName = pencilFileName + "-colour-" + colourComponent;
@@ -73,6 +81,12 @@ for (const pencilDirectory of pencilDirectories) {
 				fileNumber++;
 
 				await renderPNG(outputColourPencilSvg, "pencil", pencilDirectory, pencilOutputFileName, fileNumber)
+					.then(r => {});
+				fileNumber++;
+				const outputExplodedTechnicalSvg: string = renderSVG(new SVGExplodedTechnicalRenderer(pencil), index, "technical", pencilDirectory, pencilOutputFileName + "-exploded", fileNumber);
+				fileNumber++;
+
+				await renderPNG(outputExplodedTechnicalSvg, "technical", pencilDirectory, pencilOutputFileName + "-exploded", fileNumber)
 					.then(r => {});
 				fileNumber++;
 			}

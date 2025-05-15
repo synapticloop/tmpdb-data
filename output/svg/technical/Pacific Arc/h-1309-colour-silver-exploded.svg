@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="209">
+<pattern id="diagonalHatch" patternUnits="userSpaceOnUse" width="8" height="8">
+<rect width="6" height="6" fill='none'/>
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,8"/>
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,8"/>
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,0" />
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,0" />
+</pattern>
+<rect x="0" y="0" width="1200" height="209" fill="white" stroke="black" stroke-width="4" />
+<rect x="2" y="2" width="1196" height="205" fill="white" stroke="dimgray" stroke-width="1" />
+<text x="30" y="50" font-size="2.0em" font-weight="bold"> Pacific Arc // H-1309 </text>
+<path d="M228.75 111.875 L240 110 L240 130 L228.75 128.125 Z" stroke-width="0.5" stroke="#888888" stroke-linejoin="round" fill="#b4b8b9" />
+<path d="M240 106.875 L308.75 99.375 L308.75 140.625 L240 133.125 Z" stroke-width="0.5" stroke="#888888" stroke-linejoin="round" fill="#b4b8b9" />
+<rect x="308.75" y="99.375" width="147.5" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="#888888" fill="#b4b8b9"/>
+<rect x="308.75" y="99.375" width="147.5" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="url(#diagonalHatch)"/>
+<rect x="456.25" y="100" width="337.5" height="40" rx="1" ry="1" stroke-width="0.5" stroke="#888888" fill="#b4b8b9"/>
+<line x1="456.25" y1="120" x2="793.75" y2="120" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
+<line x1="456.25" y1="120" x2="793.75" y2="120" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
+<rect x="793.75" y="97.5" width="27.5" height="45" rx="1" ry="1" stroke-width="0.5" stroke="#888888" fill="#b4b8b9"/>
+<path d="M641 86.25 Q663.75 109.75 673.75 86.25 Z" stroke-width="3" stroke="black" fill="dimgray" stroke-linecap="round" />
+<line x1="638.75" y1="84.75" x2="821.25" y2="84.75" stroke-width="3" stroke="black" fill="dimgray" stroke-linecap="round" />
+/><path d="M821.25 84.75 Q841.25 92.25 821.25 99.75" stroke-width="3" stroke="black" fill="none" stroke-linecap="round" />
+<path d="M641 86.25 Q663.75 108.75 673.75 86.25 Z" stroke-width="2" stroke="#b4b8b9" fill="#b4b8b9" stroke-linecap="round" />
+<line x1="638.75" y1="84.75" x2="821.25" y2="84.75" stroke-width="2" stroke="#b4b8b9" fill="#b4b8b9" stroke-linecap="round" />
+/><path d="M821.25 84.75 Q841.25 92.25 821.25 99.75" stroke-width="2" stroke="#b4b8b9" fill="none" stroke-linecap="round" />
+<rect x="821.25" y="100" width="20" height="40" rx="1" ry="1" stroke-width="0.5" stroke="#888888" fill="#b4b8b9"/>
+<rect x="841.25" y="99.375" width="47.5" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="#888888" fill="#b4b8b9"/>
+<rect x="841.25" y="99.375" width="47.5" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="url(#diagonalHatch)"/>
+<rect x="851.25" y="109.6875" width="27.5" height="20.625" rx="1" ry="1" stroke-width="2" stroke="black" fill="#b4b8b9"/>
+<text x="865" y="120" text-anchor="middle" dominant-baseline="central"><tspan stroke="dimgray" stroke-width="0.5" font-family="sans-serif" fill="black" textLength="{this.width * 5 - 24}" > HB</tspan></text><rect x="888.75" y="100" width="5" height="40" rx="1" ry="1" stroke-width="0.5" stroke="#888888" fill="#b4b8b9"/>
+<rect x="893.75" y="100" width="6.25" height="40" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="red"/>
+<rect x="900" y="100" width="6.25" height="40" rx="1" ry="1" stroke-width="0.5" stroke="#888888" fill="#b4b8b9"/>
+<rect x="906.25" y="106.25" width="30" height="27.5" rx="1" ry="1" stroke-width="0.5" stroke="#888888" fill="#b4b8b9"/>
+<rect x="936.25" y="107.5" width="3.75" height="25" rx="1" ry="1" stroke-width="0.5" stroke="#888888" fill="#b4b8b9"/>
+<rect x="940" y="106.25" width="7.5" height="27.5" rx="1" ry="1" stroke-width="0.5" stroke="#888888" fill="#b4b8b9"/>
+<rect x="947.5" y="107.5" width="3.75" height="25" rx="1" ry="1" stroke-width="0.5" stroke="#888888" fill="#b4b8b9"/>
+<rect x="951.25" y="106.25" width="7.5" height="27.5" rx="1" ry="1" stroke-width="0.5" stroke="#888888" fill="#b4b8b9"/>
+<rect x="958.75" y="107.5" width="3.75" height="25" rx="1" ry="1" stroke-width="0.5" stroke="#888888" fill="#b4b8b9"/>
+<rect x="962.5" y="106.25" width="8.75" height="27.5" rx="1" ry="1" stroke-width="0.5" stroke="#888888" fill="#b4b8b9"/>
+<text x="50%" y="189" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb) // Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
+</svg>

@@ -38,6 +38,11 @@ export class Pencil {
 	model = {};
 	skus:string[] = [];
 
+	// whether the pencil has internal parts chich means that the pencil can be
+	// disassembled (possibly) - maybe someone is just keen and has ruined the
+	// pencil
+	hasInternal:boolean = false;
+
 	/**
 	 * <p></p>
 	 *
@@ -81,6 +86,10 @@ export class Pencil {
 					this.materials.push(componentMaterial);
 					this.materialsSet.add(componentMaterial);
 				}
+			}
+
+			if(component.hasInternal) {
+				this.hasInternal = true;
 			}
 		}
 

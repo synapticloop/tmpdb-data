@@ -8,31 +8,45 @@
 </pattern>
 <rect x="0" y="0" width="1200" height="500" fill="white" stroke="black" stroke-width="4" />
 <rect x="2" y="2" width="1196" height="496" fill="white" stroke="dimgray" stroke-width="1" />
-<line x1="10" y1="250" x2="1190" y2="250" stroke="#000000" stroke-dasharray="2" stroke-width="1" />
-<line x1="10" y1="250" x2="50" y2="250" stroke="#000000"  stroke-width="1" />
-<line x1="30" y1="230" x2="30" y2="270" stroke="#000000"  stroke-width="1" />
+<line x1="10" y1="250" x2="1190" y2="250" stroke-linecap="round" stroke="#000000" stroke-dasharray="2" stroke-width="1" />
+<line x1="10" y1="250" x2="50" y2="250" stroke-linecap="round" stroke="#000000"  stroke-width="1" />
+<line x1="30" y1="230" x2="30" y2="270" stroke="#000000" stroke-linecap="round"  stroke-width="1" />
 <circle r="10" cx="30" cy="250" fill="none" stroke="#000000" stroke-width="1"  />
-<line x1="1150" y1="250" x2="1190" y2="250" stroke="#000000"  stroke-width="1" />
-<line x1="1170" y1="230" x2="1170" y2="270" stroke="#000000"  stroke-width="1" />
+<line x1="1150" y1="250" x2="1190" y2="250" stroke-linecap="round" stroke="#000000"  stroke-width="1" />
+<line x1="1170" y1="230" x2="1170" y2="270" stroke="#000000" stroke-linecap="round"  stroke-width="1" />
 <circle r="10" cx="1170" cy="250" fill="none" stroke="#000000" stroke-width="1"  />
-<line x1="600" y1="30" x2="600" y2="350" stroke="#000000" stroke-dasharray="2" stroke-width="1" />
-<line x1="580" y1="30" x2="620" y2="30" stroke="#000000"  stroke-width="1" />
-<line x1="600" y1="10" x2="600" y2="50" stroke="#000000"  stroke-width="1" />
-<circle r="10" cx="600" cy="30" fill="none" stroke="#000000" stroke-width="1"  />
-<line x1="580" y1="360" x2="620" y2="360" stroke="#000000"  stroke-width="1" />
-<line x1="600" y1="340" x2="600" y2="380" stroke="#000000"  stroke-width="1" />
-<circle r="10" cx="600" cy="360" fill="none" stroke="#000000" stroke-width="1"  />
-<text x="600" y="410" font-size="2.0em" font-weight="bold" text-anchor="middle" dominant-baseline="central">Components for Mitsubishi // uni </text>
-<line x1="248.75" y1="138.875" x2="248.75" y2="302" stroke="#cfcfcf"  stroke-width="1" />
-<line x1="248.75" y1="130" x2="248.75" y2="250" stroke="#cfcfcf"  stroke-width="1" />
-<line x1="253.75" y1="130" x2="253.75" y2="250" stroke="#cfcfcf"  stroke-width="1" />
-<line x1="311.25" y1="130" x2="311.25" y2="250" stroke="#cfcfcf"  stroke-width="1" />
-<line x1="438.75" y1="130" x2="438.75" y2="250" stroke="#cfcfcf"  stroke-width="1" />
-<line x1="858.75" y1="130" x2="858.75" y2="250" stroke="#cfcfcf"  stroke-width="1" />
-<line x1="711.25" y1="170" x2="711.25" y2="250" stroke="#cfcfcf"  stroke-width="1" />
-<line x1="858.75" y1="170" x2="858.75" y2="250" stroke="#cfcfcf"  stroke-width="1" />
-<line x1="892.5" y1="130" x2="892.5" y2="250" stroke="#cfcfcf"  stroke-width="1" />
-<line x1="951.25" y1="138.875" x2="951.25" y2="302" stroke="#cfcfcf"  stroke-width="1" />
+<line x1="160" y1="140" x2="160" y2="420" stroke="#000000" stroke-linecap="round" stroke-dasharray="2" stroke-width="1" />
+<line x1="140" y1="150" x2="180" y2="150" stroke-linecap="round" stroke="#000000"  stroke-width="1" />
+<line x1="160" y1="130" x2="160" y2="170" stroke="#000000" stroke-linecap="round"  stroke-width="1" />
+<circle r="10" cx="160" cy="150" fill="none" stroke="#000000" stroke-width="1"  />
+<line x1="140" y1="400" x2="180" y2="400" stroke-linecap="round" stroke="#000000"  stroke-width="1" />
+<line x1="160" y1="380" x2="160" y2="420" stroke="#000000" stroke-linecap="round"  stroke-width="1" />
+<circle r="10" cx="160" cy="400" fill="none" stroke="#000000" stroke-width="1"  />
+<line x1="600" y1="140" x2="600" y2="420" stroke="#000000" stroke-linecap="round" stroke-dasharray="2" stroke-width="1" />
+<line x1="580" y1="150" x2="620" y2="150" stroke-linecap="round" stroke="#000000"  stroke-width="1" />
+<line x1="600" y1="130" x2="600" y2="170" stroke="#000000" stroke-linecap="round"  stroke-width="1" />
+<circle r="10" cx="600" cy="150" fill="none" stroke="#000000" stroke-width="1"  />
+<line x1="580" y1="400" x2="620" y2="400" stroke-linecap="round" stroke="#000000"  stroke-width="1" />
+<line x1="600" y1="380" x2="600" y2="420" stroke="#000000" stroke-linecap="round"  stroke-width="1" />
+<circle r="10" cx="600" cy="400" fill="none" stroke="#000000" stroke-width="1"  />
+<line x1="1100" y1="140" x2="1100" y2="420" stroke="#000000" stroke-linecap="round" stroke-dasharray="2" stroke-width="1" />
+<line x1="1080" y1="150" x2="1120" y2="150" stroke-linecap="round" stroke="#000000"  stroke-width="1" />
+<line x1="1100" y1="130" x2="1100" y2="170" stroke="#000000" stroke-linecap="round"  stroke-width="1" />
+<circle r="10" cx="1100" cy="150" fill="none" stroke="#000000" stroke-width="1"  />
+<line x1="1080" y1="400" x2="1120" y2="400" stroke-linecap="round" stroke="#000000"  stroke-width="1" />
+<line x1="1100" y1="380" x2="1100" y2="420" stroke="#000000" stroke-linecap="round"  stroke-width="1" />
+<circle r="10" cx="1100" cy="400" fill="none" stroke="#000000" stroke-width="1"  />
+<text x="30" y="50" font-size="2.0em" font-weight="bold"> Mitsubishi // uni </text>
+<line x1="248.75" y1="138.875" x2="248.75" y2="302" stroke="#cfcfcf" stroke-linecap="round"  stroke-width="1" />
+<line x1="248.75" y1="130" x2="248.75" y2="250" stroke="#cfcfcf" stroke-linecap="round"  stroke-width="1" />
+<line x1="253.75" y1="130" x2="253.75" y2="250" stroke="#cfcfcf" stroke-linecap="round"  stroke-width="1" />
+<line x1="311.25" y1="130" x2="311.25" y2="250" stroke="#cfcfcf" stroke-linecap="round"  stroke-width="1" />
+<line x1="438.75" y1="130" x2="438.75" y2="250" stroke="#cfcfcf" stroke-linecap="round"  stroke-width="1" />
+<line x1="858.75" y1="130" x2="858.75" y2="250" stroke="#cfcfcf" stroke-linecap="round"  stroke-width="1" />
+<line x1="711.25" y1="170" x2="711.25" y2="250" stroke="#cfcfcf" stroke-linecap="round"  stroke-width="1" />
+<line x1="858.75" y1="170" x2="858.75" y2="250" stroke="#cfcfcf" stroke-linecap="round"  stroke-width="1" />
+<line x1="892.5" y1="130" x2="892.5" y2="250" stroke="#cfcfcf" stroke-linecap="round"  stroke-width="1" />
+<line x1="951.25" y1="138.875" x2="951.25" y2="302" stroke="#cfcfcf" stroke-linecap="round"  stroke-width="1" />
 <line x1="248.75" y1="119" x2="248.75" y2="141" stroke="black" stroke-width="1" />
 <line x1="248.75" y1="130" x2="253.75" y2="130" stroke="black" stroke-width="1" />
 <line x1="253.75" y1="119" x2="253.75" y2="141" stroke="black" stroke-width="1" />

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="209.25">
+<pattern id="diagonalHatch" patternUnits="userSpaceOnUse" width="8" height="8">
+<rect width="6" height="6" fill='none'/>
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,8"/>
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,8"/>
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,0" />
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,0" />
+</pattern>
+<rect x="0" y="0" width="1200" height="209.25" fill="white" stroke="black" stroke-width="4" />
+<rect x="2" y="2" width="1196" height="205.25" fill="white" stroke="dimgray" stroke-width="1" />
+<text x="30" y="50" font-size="2.0em" font-weight="bold"> Mitsubishi // uni </text>
+<rect x="248.75" y="111.875" width="5" height="16.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver"/>
+<path d="M253.75 106.875 L311.25 101.25 L311.25 138.75 L253.75 133.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" />
+<rect x="311.25" y="100" width="127.5" height="40" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver"/>
+<rect x="311.25" y="100" width="127.5" height="40" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="url(#diagonalHatch)"/>
+<rect x="438.75" y="99.375" width="420" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="maroon"/>
+<line x1="438.75" y1="120" x2="858.75" y2="120" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
+<line x1="438.75" y1="120" x2="858.75" y2="120" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
+<path d="M753.75 91.625 Q731.25 104.125 718.75 92.875" stroke-width="3" stroke="black" fill="none" stroke-linecap="round" />
+<path d="M718.75 92.875 Q711.25 89.125 718.75 87.875" stroke-width="3" stroke="black" fill="none" stroke-linecap="round" />
+<line x1="718.75" y1="87.875" x2="853.75" y2="87.875" stroke-width="3" stroke="black" fill="dimgray" stroke-linecap="round" />
+/><line x1="853.75" y1="87.875" x2="858.75" y2="99.125" stroke-width="3" stroke="black" fill="dimgray" stroke-linecap="round" />
+/><path d="M753.75 91.625 Q731.25 104.125 718.75 92.875" stroke-width="2" stroke="silver" fill="none" stroke-linecap="round" />
+<path d="M718.75 92.875 Q711.25 89.125 718.75 87.875" stroke-width="2" stroke="silver" fill="none" stroke-linecap="round" />
+<line x1="718.75" y1="87.875" x2="853.75" y2="87.875" stroke-width="2" stroke="silver" fill="silver" stroke-linecap="round" />
+/><line x1="853.75" y1="87.875" x2="858.75" y2="99.125" stroke-width="2" stroke="silver" fill="silver" stroke-linecap="round" />
+/><rect x="858.75" y="96.875" width="33.75" height="46.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver"/>
+<rect x="892.5" y="105" width="48.75" height="30" rx="1" ry="1" stroke-width="0.5" stroke="#888888" fill="black"/>
+<rect x="941.25" y="101.25" width="10" height="37.5" rx="1" ry="1" stroke-width="0.5" stroke="#888888" fill="black"/>
+<text x="50%" y="189.25" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb) // Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
+</svg>

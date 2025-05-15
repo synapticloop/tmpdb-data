@@ -1,20 +1,5 @@
 import {Pencil} from "../model/Pencil.ts";
 import {SVGRenderer} from "./SVGRenderer.ts";
-import {
-	circle,
-	dimensionsHorizontal,
-	dimensionsVertical, drawExtra, drawOutlineCircle, drawOutlineHexagon, drawOutlineOctagon, drawShapeDetails,
-	drawText,
-	drawTextBold,
-	drawTextBoldCentred,
-	lineHorizontal,
-	lineHorizontalGuide,
-	lineVertical,
-	lineVerticalGuide,
-	renderBackExtra,
-	target,
-	TextOrientation
-} from "../utils/svg-helper.ts";
 
 export class SVGPencilRenderer extends SVGRenderer {
 	static SVG_WIDTH = 1000;

@@ -58,10 +58,10 @@ export class SVGTechnicalComponentRenderer extends SVGRenderer {
 		let svgString:string = SVGTechnicalComponentRenderer.SVG_START;
 
 		// centre line
-		svgString += this.renderCentreLines();
+		svgString += this.renderCentreLines(SVGTechnicalComponentRenderer.SVG_WIDTH, SVGTechnicalComponentRenderer.SVG_HEIGHT);
 
 		// overview text
-		svgString += this.renderOverviewText();
+		svgString += this.renderOverviewText(false);
 
 		// first up the grey guidelines
 		svgString += this.renderGuidelines();
@@ -76,35 +76,6 @@ export class SVGTechnicalComponentRenderer extends SVGRenderer {
 
 		// end the end of the SVG
 		svgString += SVGTechnicalComponentRenderer.SVG_END;
-		return(svgString);
-	}
-
-	private renderCentreLines(): string {
-		let svgString:string = "";
-
-		// the horizontal centre line with targets
-		svgString += lineHorizontal(10, SVGTechnicalComponentRenderer.SVG_HEIGHT/2, SVGTechnicalComponentRenderer.SVG_WIDTH - 20, "1", "#000000", "2");
-		svgString += target(30, SVGTechnicalComponentRenderer.SVG_HEIGHT/2, 40, 10);
-		svgString += target(SVGTechnicalComponentRenderer.SVG_WIDTH - 30, SVGTechnicalComponentRenderer.SVG_HEIGHT/2, 40, 10);
-
-		// SIDE VIEW - CENTRE LINE
-		svgString += lineVertical(SVGTechnicalComponentRenderer.SVG_WIDTH/2, 30, SVGTechnicalComponentRenderer.SVG_HEIGHT - 180, "1", "#000000", "2");
-		svgString += target(SVGTechnicalComponentRenderer.SVG_WIDTH/2, 30, 40, 10);
-		svgString += target(SVGTechnicalComponentRenderer.SVG_WIDTH/2, SVGTechnicalComponentRenderer.SVG_HEIGHT - 140, 40, 10);
-
-		return(svgString);
-	}
-
-	private renderOverviewText(): string {
-		let svgString = "";
-		svgString += drawTextBoldCentred(`Components for ${this.pencil.brand}` +
-			` // ` +
-			`${this.pencil.model} ` +
-			`${(this.pencil.modelNumber ? "(Model #: " + this.pencil.modelNumber + ")" : "")}`,
-			SVGTechnicalComponentRenderer.SVG_WIDTH/2,
-			SVGTechnicalComponentRenderer.SVG_HEIGHT - 90,
-			"2.0em");
-
 		return(svgString);
 	}
 
