@@ -16,16 +16,16 @@ export class Part {
 	dimensions = [];
 	material: string = null;
 
-	startJoinOffset: number = 0;
-	endJoinOffset: number = 0;
+	taperStart:any;
+	taperEnd:any;
 
 	constructor(jsonObject, colours) {
 		this.type = jsonObject.type;
 		this.dimensions = jsonObject.dimensions;
 		this.material = jsonObject.material;
 
-		this.startJoinOffset = jsonObject.start_join_offset ?? 0;
-		this.endJoinOffset = jsonObject.end_join_offset ?? 0;
+		this.taperStart = jsonObject.taper_start;
+		this.taperEnd = jsonObject.taper_end;
 
 		if(jsonObject.offset) {
 			let offsetTemp = jsonObject.offset.split("x") ?? ["0", "0"];

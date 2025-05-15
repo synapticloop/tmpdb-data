@@ -28,23 +28,6 @@ export function drawText(text, x, y, fontSize) {
 			`${text}</text>\n`);
 }
 
-export function drawRotatedTextBold(text, x, y, fontSize) {
-	return(`<text x="${x}" ` +
-			`y="${y}" ` +
-			`transform="rotate(-90, ${x}, ${y})" ` +
-			`font-size="${fontSize}" font-weight="bold" dominant-baseline="auto">` +
-			`${text}` +
-			`</text>\n`);
-}
-
-export function drawVerticalLine(x, y, height, colour) {
-	return(`<line x1="${x}" ` +
-			`y1="${y}" ` +
-			`x2="${x}" ` +
-			`y2="${y + height}" ` +
-			`stroke="${colour}" stroke-width="1" />`);
-}
-
 export function drawOutlineHexagon(x, y, height, fillColour) {
 	// do some mathematics for the hexagon
 	let apothem = height/2 * 5;
@@ -69,8 +52,6 @@ export function drawOutlineOctagon(x, y, height, fillColour) {
 	// going around the points from top left - clockwise
 	let radians = 22.5 * Math.PI/180
 	let A = apothem * Math.tan(radians);
-	// Hypotenuse
-	let H = apothem/Math.cos(radians);
 	return(`<polygon points="` +
 			`${x - A},${y - height/2 * 5} ` + // A
 			`${x + A},${y - height/2 * 5} ` + // B
@@ -91,7 +72,7 @@ export function drawOutlineCircle(radius, x, y, fillColour) {
 }
 
 export function drawShapeDetails(xStart, y, width) {
-	return(`<line x1="${xStart}" ` +
+	return(`<!--hello--><line x1="${xStart}" ` +
 			`y1="${y}" ` +
 			`x2="${xStart + width}" ` +
 			`y2="${y}" ` +
@@ -211,10 +192,6 @@ export function lineHorizontalGuide(x: number, y: number, width: number): string
 	return(lineHorizontal(x, y, width, "1", "#cfcfcf"));
 }
 
-export function lineHorizontalDimension(x: number, y: number, width: number): string {
-	return(lineHorizontal(x, y, width, "1", "#000000"));
-}
-
 export function lineHorizontal(x: number, y: number, width: number, strokeWidth: string, strokeColour: string, strokeDash:string=null): string {
 	let svgString: string = `<line x1="${x}" ` +
 		`y1="${y}" ` +
@@ -228,10 +205,6 @@ export function lineHorizontal(x: number, y: number, width: number, strokeWidth:
 
 export function lineVerticalGuide(x: number, y: number, height: number): string {
 	return(lineVertical(x, y, height, "1", "#cfcfcf"));
-}
-
-export function lineVerticalDimensions(x: number, y: number, height: number): string {
-	return(lineVertical(x, y, height, "1", "#000000"));
 }
 
 export function circle(x: number, y: number, radius: number, strokeWidth: string, strokeColour: string, fillColour:String="none"): string {
@@ -524,6 +497,16 @@ export function dimensionsHorizontal(x: number, y:number, width:number, text: st
 		}
 	}
 	return(svgString);
+}
+export function rectangle(x:number, y:number, width:number, height:number, strokeColour:string, fillColour:string): string {
+	let svgString = "";
+	svgString += `<rect x="${x}" ` +
+		`y="${y}" ` +
+		`width="${width}" ` +
+		`height="${height}" ` +
+		`rx="1" ry="1" stroke-width="0.5" stroke="${strokeColour}" fill="${fillColour}"/>\n`
+	return(svgString);
+
 }
 
 // export function textSmall(x: number, y:number, text: string, textColour: string, textOrientation: TextOrientation=TextOrientation.TOP, shouldBold: boolean=true) {

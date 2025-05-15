@@ -10,7 +10,7 @@ import {
 	lineHorizontal,
 	lineHorizontalGuide,
 	lineVertical,
-	lineVerticalGuide, renderBackExtra,
+	lineVerticalGuide, rectangle, renderBackExtra,
 	SVG_HEIGHT,
 	SVG_WIDTH,
 	target,
@@ -39,11 +39,8 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 	static SVG_END = `<text x="50%" y="${SVG_HEIGHT - 20}" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb) // Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>\n` +
 		`</svg>\n`;
 
-	private pencil: Pencil;
-
 	constructor(pencil: Pencil) {
-		super();
-		this.pencil = pencil;
+		super(pencil);
 	}
 
 	/**
@@ -495,148 +492,139 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 				}
 			}
 
-			let previousPart: Part = null;
 			for(let part of component.parts) {
-				// get the stroke colour
-				let strokeColour = "black"
-				if(component.colours[0] === "black") {
-					strokeColour = "dimgray";
-				}
+				svgString += super.renderPart(startX, midY, component, part, colourIndex, colour);
+				// // get the stroke colour
+				// let strokeColour = "black"
+				// if (component.colours[0] === "black") {
+				// 	strokeColour = "dimgray";
+				// }
+				//
+				// // maybe we have an over-ride colour and material
+				// const partColour = part.colours[colourIndex];
+				// if (partColour) {
+				// 	if (this.pencil.colourMap[partColour]) {
+				// 		colour = this.pencil.colourMap[partColour];
+				// 	} else {
+				// 		colour = partColour;
+				// 	}
+				// }
+				//
+				// let xOffsetStart: number = 0;
+				// let xOffsetEnd: number = 0;
+				// if(part.taperStart?.offset) {
+				// 	xOffsetStart = part.taperStart.offset;
+				// }
+				// if(part.taperEnd?.offset) {
+				// 	xOffsetEnd = part.taperEnd.offset;
+				// }
+				//
+				// switch (part.type) {
+				// 	case "cylinder":
+				// 	case "hexagonal":
+				// 	case "octagonal":
+				// 		svgString += rectangle(
+				// 			startX + xOffsetStart * 5,
+				// 			midY - (part.endHeight / 2 * 5),
+				// 			part.length * 5,
+				// 			part.startHeight * 5,
+				// 			strokeColour,
+				// 			colour);
+				// 		break;
+				// 	case "cone":
+				// 		svgString += `<path d="M${startX} ` +
+				// 			`${midY - (part.startHeight / 2 * 5)} ` +
+				// 			`L${startX + part.length * 5} ${midY - (part.endHeight / 2 * 5)} ` +
+				// 			`L${startX + part.length * 5} ${midY + (part.endHeight / 2 * 5)} ` +
+				// 			`L${startX} ${midY + (part.startHeight / 2 * 5)} Z" ` +
+				// 			`stroke-width="0.5" stroke="${strokeColour}" stroke-linejoin="round" fill="${colour}" />\n`
+				// 		break;
+				// 	case "convex":
+				// 		let offsetX = part.length * 5;
+				// 		if (part.offset[0] !== 0) {
+				// 			offsetX = part.offset[0] * 5;
+				// 		}
+				//
+				// 		let offsetY = part.startHeight / 2 * 5;
+				// 		if (part.offset[1] !== 0) {
+				// 			offsetY = (part.startHeight / 2 - part.offset[1]) * 5;
+				// 		}
+				//
+				// 		svgString += `<path d="M${startX} ${midY - (part.startHeight / 2 * 5)} ` +
+				// 			`Q${startX + offsetX} ${midY - offsetY} ` +
+				// 			`${startX} ${midY + (part.startHeight / 2 * 5)}" ` +
+				// 			`stroke-width="0.5" stroke="${strokeColour}" stroke-linejoin="round" fill="${colour}"/>\n`
+				// 		break;
+				// 	case "concave":
+				// 		svgString += `<path d="M${startX} ${midY - (part.startHeight / 2 * 5)} ` +
+				// 			`Q${startX + part.length * 5} ${midY} ` +
+				// 			`${startX} ${midY + (part.startHeight / 2 * 5)}" ` +
+				// 			`stroke-width="0.5" stroke="${strokeColour}" stroke-linejoin="round" fill="${colour}"/>\n`
+				// 		break;
+				// 	case "extra":
+				// 		svgString += drawExtra(startX + part.extraOffset[0] * 5, midY - part.extraOffset[1] * 5, part.extraParts, colour);
+				// 		break;
+				// }
+				//
+				// switch (part.type) {
+				// 	case "hexagonal":
+				// 		svgString += drawShapeDetails(startX + xOffsetStart * 5, midY, (part.length - xOffsetStart - xOffsetEnd) * 5);
+				// 		break;
+				// 	case "octagonal":
+				// 		svgString += drawShapeDetails(startX + xOffsetStart * 5, midY - ((part.startHeight / 2 * 5) * 4 / 7), (part.length - xOffsetStart - xOffsetEnd) * 5);
+				// 		svgString += drawShapeDetails(startX + xOffsetStart * 5, midY + ((part.startHeight / 2 * 5) * 4 / 7), (part.length - xOffsetStart - xOffsetEnd) * 5);
+				// 		break;
+				// }
+				//
+				// // now for the finish - although this only really works for cylinder types
+				// // the question becomes whether there will be other finishes on different
+				// // objects
+				// switch (part.finish) {
+				// 	case "ferrule":
+				// 		let offset = ((part.length / 13) * 5) / 2;
+				//
+				// 		for (let i = 0; i < 13; i++) {
+				// 			if (i !== 0 && i !== 6 && i < 12) {
+				// 				svgString += `<line x1="${startX + offset}" ` +
+				// 					`y1="${midY + 1.0 - part.startHeight / 2 * 5}" ` +
+				// 					`x2="${startX + offset}" ` +
+				// 					`y2="${midY - 1.0 + part.startHeight / 2 * 5}" ` +
+				// 					`stroke-width="1" stroke="gray" />\n`
+				// 			}
+				// 			offset += (part.length / 13) * 5;
+				// 		}
+				//
+				// 		svgString += drawOutlineCircle(4, startX + 15, midY - part.startHeight / 4 * 5, "dimGray")
+				//
+				// 		break;
+				// 	case "knurled":
+				// 		svgString += `<rect x="${startX}" ` +
+				// 			`y="${midY - (part.endHeight / 2 * 5)}" ` +
+				// 			`width="${part.length * 5}" ` +
+				// 			`height="${part.startHeight * 5}" ` +
+				// 			`rx="1" ry="1" stroke-width="0.5" stroke="black" fill="url(#diagonalHatch)"/>\n`
+				// 		break;
+				// }
+				//
+				// switch (component.type) {
+				// 	case "indicator":
+				// 		// now draw the indicator
+				// 		svgString += `<rect x="${startX + 10}" ` +
+				// 			`y="${midY - (part.endHeight / 4 * 5)}" ` +
+				// 			`width="${part.length * 5 - 20}" ` +
+				// 			`height="${part.startHeight / 2 * 5}" ` +
+				// 			`rx="1" ry="1" stroke-width="2" stroke="black" fill="${colour}"/>\n`;
+				// 		svgString += `<text x="${startX + (part.length * 5) / 2}" ` +
+				// 			`y="${midY}" ` +
+				// 			`text-anchor="middle" dominant-baseline="central">` +
+				// 			`<tspan stroke="dimgray" stroke-width="0.5" font-family="sans-serif" fill="black" textLength="{this.width * 5 - 24}" > ` +
+				// 			`HB` +
+				// 			`</tspan>` +
+				// 			`</text>`;
+				// 		break;
+				// }
 
-				// maybe we have an over-ride colour and material
-				const partColour = part.colours[colourIndex];
-				if(partColour) {
-					if(this.pencil.colourMap[partColour]) {
-						colour = this.pencil.colourMap[partColour];
-					} else {
-						colour = partColour;
-					}
-				}
-
-				switch (part.type) {
-					case "cylinder":
-					case "hexagonal":
-					case "octagonal":
-						svgString += `<rect x="${startX}" ` +
-							`y="${midY - (part.endHeight/2 * 5)}" ` +
-							`width="${part.length * 5}" ` +
-							`height="${part.startHeight * 5}" ` +
-							`rx="1" ry="1" stroke-width="0.5" stroke="${strokeColour}" fill="${colour}"/>\n`
-
-						if(part.startJoinOffset) {
-							svgString += `<line x1="${startX}" ` +
-									`y1="${midY - (part.endHeight/2 * 5) + 1.25}" ` +
-									`x2="${startX}" ` +
-									`y2="${midY + (part.endHeight/2 * 5) - 1.50}" ` +
-									`stroke="${colour}" ` +
-									`stroke-width="${2}" ` +
-									`stroke-linecap="round"/>\n`;
-						}
-						if(part.endJoinOffset) {
-							svgString += `<line x1="${startX + part.length * 5}" ` +
-									`y1="${midY - (part.endHeight/2 * 5) + 1.25}" ` +
-									`x2="${startX + part.length * 5}" ` +
-									`y2="${midY + (part.endHeight/2 * 5) - 1.50}" ` +
-									`stroke="${colour}" ` +
-									`stroke-width="${2}" ` +
-									`stroke-linecap="round"/>\n`;
-						}
-						break;
-					case "cone":
-						svgString += `<path d="M${startX} ` +
-							`${midY - (part.startHeight/2 * 5)} ` +
-							`L${startX + part.length * 5} ${midY - (part.endHeight/2 * 5)} ` +
-							`L${startX + part.length * 5} ${midY + (part.endHeight/2 * 5)} ` +
-							`L${startX} ${midY + (part.startHeight/2 *5)} Z" ` +
-							`stroke-width="0.5" stroke="${strokeColour}" stroke-linejoin="round" fill="${colour}" />\n`
-						break;
-					case "convex":
-						let offsetX = part.length *5;
-						if(part.offset[0] !== 0) {
-							offsetX = part.offset[0] * 5;
-						}
-
-						let offsetY = part.startHeight/2 * 5;
-						if(part.offset[1] !== 0) {
-							offsetY = (part.startHeight/2 - part.offset[1]) * 5;
-						}
-
-						svgString += `<path d="M${startX} ${midY - (part.startHeight/2 * 5)} ` +
-							`Q${startX + offsetX} ${midY - offsetY} ` +
-							`${startX} ${midY + (part.startHeight/2 * 5)}" ` +
-							`stroke-width="0.5" stroke="${strokeColour}" stroke-linejoin="round" fill="${colour}"/>\n`
-						break;
-					case "concave":
-						svgString += `<path d="M${startX} ${midY - (part.startHeight/2 * 5)} ` +
-							`Q${startX + part.length*5} ${midY} ` +
-							`${startX} ${midY + (part.startHeight/2 * 5)}" ` +
-							`stroke-width="0.5" stroke="${strokeColour}" stroke-linejoin="round" fill="${colour}"/>\n`
-						break;
-					case "extra":
-						svgString += drawExtra(startX + part.extraOffset[0]*5, midY - part.extraOffset[1]*5, part.extraParts, colour);
-						break;
-				}
-
-				// draw the additional details
-				switch(part.type) {
-					case "hexagonal":
-						svgString += drawShapeDetails(startX, midY, part.length *5);
-						break;
-					case "octagonal":
-						svgString += drawShapeDetails(startX, midY - ((part.startHeight/2 * 5)*4/7), part.length *5);
-						svgString += drawShapeDetails(startX, midY + ((part.startHeight/2 * 5)*4/7), part.length *5);
-						break;
-				}
-
-				// now for the finish - although this only really works for cylinder types
-				// the question becomes whether there will be other finishes on different
-				// objects
-				switch(part.finish) {
-					case "ferrule":
-						let offset = ((part.length/13) * 5)/2;
-
-						for(let i = 0; i < 13; i++) {
-							if(i !== 0 && i !== 6 && i < 12) {
-								svgString += `<line x1="${startX + offset}" ` +
-									`y1="${midY + 1.0 - part.startHeight/2 * 5}" ` +
-									`x2="${startX + offset}" ` +
-									`y2="${midY - 1.0 + part.startHeight/2 * 5}" ` +
-									`stroke-width="1" stroke="gray" />\n`
-							}
-							offset += (part.length/13) * 5;
-						}
-
-						svgString += drawOutlineCircle(4, startX + 15, midY - part.startHeight/4 * 5, "dimGray")
-
-						break;
-					case "knurled":
-						svgString += `<rect x="${startX}" ` +
-							`y="${midY - (part.endHeight/2 * 5)}" ` +
-							`width="${part.length * 5}" ` +
-							`height="${part.startHeight * 5}" ` +
-							`rx="1" ry="1" stroke-width="0.5" stroke="black" fill="url(#diagonalHatch)"/>\n`
-						break;
-				}
-
-				switch(component.type) {
-					case "indicator":
-						// now draw the indicator
-						svgString += `<rect x="${startX + 10}" ` +
-							`y="${midY - (part.endHeight/4 * 5)}" ` +
-							`width="${part.length * 5 - 20}" ` +
-							`height="${part.startHeight/2 * 5}" ` +
-							`rx="1" ry="1" stroke-width="2" stroke="black" fill="${colour}"/>\n`;
-						svgString += `<text x="${startX + (part.length * 5)/2}" ` +
-							`y="${midY}" ` +
-							`text-anchor="middle" dominant-baseline="central">` +
-							`<tspan stroke="dimgray" stroke-width="0.5" font-family="sans-serif" fill="black" textLength="{this.width * 5 - 24}" > ` +
-							`HB` +
-							`</tspan>` +
-							`</text>`;
-						break;
-				}
 				startX += part.length * 5;
-				previousPart = part;
 			}
 		}
 

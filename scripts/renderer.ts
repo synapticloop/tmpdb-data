@@ -1,4 +1,3 @@
-import * as filesystem from './utils/filesystem.ts'
 import {listDirectories, listFiles} from "./utils/filesystem.ts";
 import * as path from "node:path";
 import { Pencil } from "./model/Pencil.ts";
@@ -12,7 +11,12 @@ import {SVGRenderer} from "./renderer/SVGRenderer.ts";
 import {SVGTechnicalComponentRenderer} from "./renderer/SVGTechnicalComponentRenderer.ts";
 import {OpenSCADRenderer} from "./renderer/OpenSCADRenderer.ts";
 
-const baseDir:string = './data/pencil';
+let baseDir:string = './data/pencil';
+
+if(process.argv[2]) {
+	baseDir = process.argv[2];
+}
+
 // list the directories for the pencil data
 const pencilDirectories:string[] = listDirectories(baseDir);
 
@@ -23,6 +27,7 @@ for (const pencilDirectory of pencilDirectories) {
 
 	if (pencilFiles.length > 0) {
 		console.log(`Generating for brand '${pencilDirectory}' - ${pencilFiles.length} file(s)`)
+
 		for (const [index, pencilFile] of pencilFiles.entries()) {
 			console.log(`    ${index + 1}. ${pencilFile}`);
 
@@ -83,7 +88,7 @@ for (const pencilDirectory of pencilDirectories) {
 			fs.mkdirSync(scadOutputDir, { "recursive": true });
 			const outputScadFile: string = path.join(scadOutputDir, pencilDirectory + "-" + pencilFileName + ".scad");
 			const outputScadString: string = new OpenSCADRenderer(pencil).render();
-			console.log(`      SCAD: [${fileNumber}] (datasheet) ${pencilFile} -> ${outputScadFile}`);
+			console.log(`      SCAD: [${fileNumber}] (openSCAD) ${pencilFile} -> ${outputScadFile}`);
 			fs.writeFileSync(outputScadFile, outputScadString);
 		}
 	}
@@ -119,6 +124,7 @@ async function renderPNG(inputSVGFile:string,
 		.catch(error => {
 			console.error(error);
 		});
+
 	console.log(`       PNG: [${fileNumber}] (${outputDirectoryType}) ${outputPngFile}`);
 
 }

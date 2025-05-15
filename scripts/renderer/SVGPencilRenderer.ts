@@ -35,11 +35,8 @@ export class SVGPencilRenderer extends SVGRenderer {
 	static SVG_END = `<text x="50%" y="${SVGPencilRenderer.SVG_HEIGHT - 20}" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb) // Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>\n` +
 		`</svg>\n`;
 
-	private pencil: Pencil;
-
 	constructor(pencil: Pencil) {
-		super();
-		this.pencil = pencil;
+		super(pencil);
 	}
 
 	/**
