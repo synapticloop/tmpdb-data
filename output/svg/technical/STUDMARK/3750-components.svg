@@ -73,12 +73,12 @@
 <line x1="235.625" y1="292.75" x2="235.625" y2="314.75" stroke="black" stroke-width="1" />
 <line x1="235.625" y1="303.75" x2="964.375" y2="303.75" stroke="black" stroke-width="1" />
 <line x1="964.375" y1="292.75" x2="964.375" y2="314.75" stroke="black" stroke-width="1" />
-<path d="M235.625 241.875 L309.375 230 L309.375 270 L235.625 258.125 Z" stroke-width="1" stroke="black" fill="white" />
+<path d="M235.625 241.875 L309.375 230 L309.375 270 L235.625 258.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" />
 <rect x="309.375" y="229.375" width="21.25" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
 <rect x="330.625" y="229.375" width="128.75" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
 <rect x="330.625" y="229.375" width="128.75" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="url(#diagonalHatch)"/>
 <rect x="459.375" y="229.375" width="330" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
-<!--hello--><line x1="459.375" y1="250" x2="789.375" y2="250" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
+<line x1="459.375" y1="250" x2="789.375" y2="250" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="459.375" y1="250" x2="789.375" y2="250" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
 <rect x="789.375" y="226.25" width="30" height="47.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
 <rect x="819.375" y="229.375" width="22.5" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
@@ -88,6 +88,6 @@
 <rect x="855.625" y="239.6875" width="27.5" height="20.625" rx="1" ry="1" stroke-width="2" stroke="black" fill="white"/>
 <text x="869.375" y="250" text-anchor="middle" dominant-baseline="central"><tspan stroke="dimgray" stroke-width="0.5" font-family="sans-serif" fill="black" textLength="{this.width * 5 - 24}" > HB</tspan></text><rect x="893.125" y="229.375" width="12.5" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
 <rect x="905.625" y="236.25" width="52.5" height="27.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
-<path d="M958.125 236.25 Q969.375 250 958.125 263.75" stroke-width="0.5" stroke="black" fill="white"/>
+<path d="M958.125 236.25 Q969.375 250 958.125 263.75" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white"/>
 <text x="50%" y="480" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb) // Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
 </svg>

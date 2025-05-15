@@ -72,7 +72,7 @@ export function drawOutlineCircle(radius, x, y, fillColour) {
 }
 
 export function drawShapeDetails(xStart, y, width) {
-	return(`<!--hello--><line x1="${xStart}" ` +
+	return(`<line x1="${xStart}" ` +
 			`y1="${y}" ` +
 			`x2="${xStart + width}" ` +
 			`y2="${y}" ` +

@@ -7,11 +7,11 @@
 <path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,0" />
 </pattern>
 <rect x="148.75" y="91.875" width="5" height="16.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
-<path d="M153.75 86.875 L211.25 81.25 L211.25 118.75 L153.75 113.125 Z" stroke-width="1" stroke="black" fill="white" />
+<path d="M153.75 86.875 L211.25 81.25 L211.25 118.75 L153.75 113.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" />
 <rect x="211.25" y="80" width="127.5" height="40" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
 <rect x="211.25" y="80" width="127.5" height="40" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="url(#diagonalHatch)"/>
 <rect x="338.75" y="79.375" width="420" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
-<!--hello--><line x1="338.75" y1="100" x2="758.75" y2="100" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
+<line x1="338.75" y1="100" x2="758.75" y2="100" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="338.75" y1="100" x2="758.75" y2="100" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
 <path d="M653.75 71.625 Q631.25 84.125 618.75 72.875" stroke-width="3" stroke="black" fill="none" stroke-linecap="round" />
 <path d="M618.75 72.875 Q611.25 69.125 618.75 67.875" stroke-width="3" stroke="black" fill="none" stroke-linecap="round" />
@@ -22,7 +22,7 @@
 <line x1="618.75" y1="67.875" x2="753.75" y2="67.875" stroke-width="2" stroke="white" fill="white" stroke-linecap="round" />
 /><line x1="753.75" y1="67.875" x2="758.75" y2="79.125" stroke-width="2" stroke="white" fill="white" stroke-linecap="round" />
 /><rect x="758.75" y="76.875" width="33.75" height="46.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
-<rect x="792.5" y="85" width="48.75" height="30" rx="1" ry="1" stroke-width="0.5" stroke="dimgray" fill="white"/>
-<rect x="841.25" y="81.25" width="10" height="37.5" rx="1" ry="1" stroke-width="0.5" stroke="dimgray" fill="white"/>
+<rect x="792.5" y="85" width="48.75" height="30" rx="1" ry="1" stroke-width="0.5" stroke="#888888" fill="white"/>
+<rect x="841.25" y="81.25" width="10" height="37.5" rx="1" ry="1" stroke-width="0.5" stroke="#888888" fill="white"/>
 <text x="50%" y="180" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb) // Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
 </svg>
