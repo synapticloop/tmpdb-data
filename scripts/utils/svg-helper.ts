@@ -216,8 +216,7 @@ export function lineHorizontalDimension(x: number, y: number, width: number): st
 }
 
 export function lineHorizontal(x: number, y: number, width: number, strokeWidth: string, strokeColour: string, strokeDash:string=null): string {
-	let svgString: string = "";
-	svgString += `<line x1="${x}" ` +
+	let svgString: string = `<line x1="${x}" ` +
 		`y1="${y}" ` +
 		`x2="${x + width}" ` +
 		`y2="${y}" ` +

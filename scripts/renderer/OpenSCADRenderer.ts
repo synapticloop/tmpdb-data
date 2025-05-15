@@ -18,11 +18,11 @@ export class OpenSCADRenderer {
 				scadString += `  color("${component.colours[0]}") \n`
 				switch (part.type) {
 					case "cylinder":
-						scadString += `    cylinder(${part.length}, ${part.start_height}, ${part.end_height}, $fn=360);\n`;
+						scadString += `    cylinder(${part.length}, ${part.startHeight}, ${part.endHeight}, $fn=360);\n`;
 						x = x + part.length;
 						break;
 					case "hexagonal":
-						scadString += `    cylinder(${part.length}, ${part.start_height}, ${part.end_height}, $fn=6, false);\n`;
+						scadString += `    cylinder(${part.length}, ${part.startHeight}, ${part.endHeight}, $fn=6, false);\n`;
 						x = x + part.length;
 						break;
 				}

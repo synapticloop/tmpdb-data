@@ -37,7 +37,10 @@
 		{
 			"type": "head",
 			"parts": [
-				{ "type": "cone", "dimensions": "5.0x8.0x11.0" }
+				{
+					"type": "cone",
+					"dimensions": "5.0x8.0x11.0"
+				}
 			],
 			"material": "wood",
 			"colours": [ "wood", "wood", "wood", "wood", "wood", "wood"]
@@ -45,7 +48,12 @@
 		{
 			"type": "body",
 			"parts": [
-				{ "type": "hexagonal", "dimensions": "98.0x11.0" }
+				{
+					"type": "hexagonal",
+					"dimensions": "98.0x11.0",
+					"start_join_offset": 5.0,
+					"end_join_offset": 5.0
+				}
 			],
 			"material": "wood",
 			"colours": [ "yellow", "blue", "green", "red", "wood", "black" ]

@@ -100,17 +100,17 @@ export class SVGPencilRenderer extends SVGRenderer {
 					case "hexagonal":
 					case "octagonal":
 						svgString += `<rect x="${startX}" ` +
-							`y="${midY - (part.end_height/2 * 5)}" ` +
+							`y="${midY - (part.endHeight/2 * 5)}" ` +
 							`width="${part.length * 5}" ` +
-							`height="${part.start_height * 5}" ` +
+							`height="${part.startHeight * 5}" ` +
 							`rx="1" ry="1" stroke-width="0.5" stroke="${strokeColour}" fill="${colour}"/>\n`
 						break;
 					case "cone":
 						svgString += `<path d="M${startX} ` +
-							`${midY - (part.start_height/2 * 5)} ` +
-							`L${startX + part.length * 5} ${midY - (part.end_height/2 * 5)} ` +
-							`L${startX + part.length * 5} ${midY + (part.end_height/2 * 5)} ` +
-							`L${startX} ${midY + (part.start_height/2 *5)} Z" ` +
+							`${midY - (part.startHeight/2 * 5)} ` +
+							`L${startX + part.length * 5} ${midY - (part.endHeight/2 * 5)} ` +
+							`L${startX + part.length * 5} ${midY + (part.endHeight/2 * 5)} ` +
+							`L${startX} ${midY + (part.startHeight/2 *5)} Z" ` +
 							`stroke-width="1" stroke="${strokeColour}" fill="${colour}" />\n`
 						break;
 					case "convex":
@@ -119,20 +119,20 @@ export class SVGPencilRenderer extends SVGRenderer {
 							offsetX = part.offset[0] * 5;
 						}
 
-						let offsetY = part.start_height/2 * 5;
+						let offsetY = part.startHeight/2 * 5;
 						if(part.offset[1] !== 0) {
-							offsetY = (part.start_height/2 - part.offset[1]) * 5;
+							offsetY = (part.startHeight/2 - part.offset[1]) * 5;
 						}
 
-						svgString += `<path d="M${startX} ${midY - (part.start_height/2 * 5)} ` +
+						svgString += `<path d="M${startX} ${midY - (part.startHeight/2 * 5)} ` +
 							`Q${startX + offsetX} ${midY - offsetY} ` +
-							`${startX} ${midY + (part.start_height/2 * 5)}" ` +
+							`${startX} ${midY + (part.startHeight/2 * 5)}" ` +
 							`stroke-width="0.5" stroke="${strokeColour}" fill="${colour}"/>\n`
 						break;
 					case "concave":
-						svgString += `<path d="M${startX} ${midY - (part.start_height/2 * 5)} ` +
+						svgString += `<path d="M${startX} ${midY - (part.startHeight/2 * 5)} ` +
 							`Q${startX + part.length*5} ${midY} ` +
-							`${startX} ${midY + (part.start_height/2 * 5)}" ` +
+							`${startX} ${midY + (part.startHeight/2 * 5)}" ` +
 							`stroke-width="0.5" stroke="${strokeColour}" fill="${colour}"/>\n`
 						break;
 					case "extra":
@@ -146,8 +146,8 @@ export class SVGPencilRenderer extends SVGRenderer {
 						svgString += drawShapeDetails(startX, midY, part.length *5);
 						break;
 					case "octagonal":
-						svgString += drawShapeDetails(startX, midY - ((part.start_height/2 * 5)*4/7), part.length *5);
-						svgString += drawShapeDetails(startX, midY + ((part.start_height/2 * 5)*4/7), part.length *5);
+						svgString += drawShapeDetails(startX, midY - ((part.startHeight/2 * 5)*4/7), part.length *5);
+						svgString += drawShapeDetails(startX, midY + ((part.startHeight/2 * 5)*4/7), part.length *5);
 						break;
 				}
 
@@ -161,22 +161,22 @@ export class SVGPencilRenderer extends SVGRenderer {
 						for(let i = 0; i < 13; i++) {
 							if(i !== 0 && i !== 6 && i < 12) {
 								svgString += `<line x1="${startX + offset}" ` +
-									`y1="${midY + 1.0 - part.start_height/2 * 5}" ` +
+									`y1="${midY + 1.0 - part.startHeight/2 * 5}" ` +
 									`x2="${startX + offset}" ` +
-									`y2="${midY - 1.0 + part.start_height/2 * 5}" ` +
+									`y2="${midY - 1.0 + part.startHeight/2 * 5}" ` +
 									`stroke-width="1" stroke="gray" />\n`
 							}
 							offset += (part.length/13) * 5;
 						}
 
-						svgString += drawOutlineCircle(4, startX + 15, midY - part.start_height/4 * 5, "dimGray")
+						svgString += drawOutlineCircle(4, startX + 15, midY - part.startHeight/4 * 5, "dimGray")
 
 						break;
 					case "knurled":
 						svgString += `<rect x="${startX}" ` +
-							`y="${midY - (part.end_height/2 * 5)}" ` +
+							`y="${midY - (part.endHeight/2 * 5)}" ` +
 							`width="${part.length * 5}" ` +
-							`height="${part.start_height * 5}" ` +
+							`height="${part.startHeight * 5}" ` +
 							`rx="1" ry="1" stroke-width="0.5" stroke="black" fill="url(#diagonalHatch)"/>\n`
 						break;
 				}
@@ -185,9 +185,9 @@ export class SVGPencilRenderer extends SVGRenderer {
 					case "indicator":
 						// now draw the indicator
 						svgString += `<rect x="${startX + 10}" ` +
-							`y="${midY - (part.end_height/4 * 5)}" ` +
+							`y="${midY - (part.endHeight/4 * 5)}" ` +
 							`width="${part.length * 5 - 20}" ` +
-							`height="${part.start_height/2 * 5}" ` +
+							`height="${part.startHeight/2 * 5}" ` +
 							`rx="1" ry="1" stroke-width="2" stroke="black" fill="${colour}"/>\n`;
 						svgString += `<text x="${startX + (part.length * 5)/2}" ` +
 							`y="${midY}" ` +
@@ -201,8 +201,6 @@ export class SVGPencilRenderer extends SVGRenderer {
 				startX += part.length * 5;
 			}
 		}
-
-
-			return(svgString);
+		return(svgString);
 	}
 }

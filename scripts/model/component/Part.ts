@@ -1,34 +1,31 @@
-import {
-	drawShapeDetails,
-	drawOutlineCircle,
-	drawOutlineHexagon,
-	drawOutlineOctagon,
-	drawExtra,
-	renderBackExtra
-} from "../../utils/svg-helper.ts";
-
 export class Part {
-	type = "";
-	length = 0;
+	type: string = "";
+	length: number = 0;
 
-	start_height = 0;
-	end_height = 0;
+	startHeight: number = 0;
+	endHeight: number = 0;
 
-	offset = [ 0, 0 ];
-	finish = "";
-	colours = [];
+	offset: number[] = [ 0, 0 ];
+	finish: string = "";
+	colours: string[] = [];
 	extraParts = [];
-	extraOffset = [0,0];
-	extraLength = 0;
-	extraHeight = 0;
-	extraWidth = 0;
+	extraOffset: number[] = [0,0];
+	extraLength: number = 0;
+	extraHeight: number = 0;
+	extraWidth: number = 0;
 	dimensions = [];
 	material: string = null;
+
+	startJoinOffset: number = 0;
+	endJoinOffset: number = 0;
 
 	constructor(jsonObject, colours) {
 		this.type = jsonObject.type;
 		this.dimensions = jsonObject.dimensions;
 		this.material = jsonObject.material;
+
+		this.startJoinOffset = jsonObject.start_join_offset ?? 0;
+		this.endJoinOffset = jsonObject.end_join_offset ?? 0;
 
 		if(jsonObject.offset) {
 			let offsetTemp = jsonObject.offset.split("x") ?? ["0", "0"];
@@ -65,20 +62,20 @@ export class Part {
 	#parseDimensions(dimensions) {
 		const split = dimensions.split("x");
 		this.length = Number.parseFloat(split[0]);
-		this.start_height = Number.parseFloat(split[1]);
+		this.startHeight = Number.parseFloat(split[1]);
 
 		if(split.length > 2) {
-			this.end_height = Number.parseFloat(split[2]);
+			this.endHeight = Number.parseFloat(split[2]);
 		} else {
-			this.end_height = this.start_height;
+			this.endHeight = this.startHeight;
 		}
 	}
 
 	getMaxHeight() {
-		if(this.start_height > this.end_height) {
-			return(this.start_height);
+		if(this.startHeight > this.endHeight) {
+			return(this.startHeight);
 		}
-		return(this.end_height);
+		return(this.endHeight);
 	}
 
 	getMinHeight():number {
@@ -88,19 +85,17 @@ export class Part {
 	getMaxWidth() {
 		switch (this.type) {
 			case "hexagonal":
-				let apothem = this.start_height/2;
-				// console.log(this.start_height)
-				// console.log(apothem/Math.cos(30 * Math.PI/180));
+				let apothem = this.startHeight/2;
 				return(apothem/Math.cos(30 * Math.PI/180) * 2);
 		}
 		return(this.getMaxHeight());
 	}
 
 	getMinWidth(): number {
-		if(this.start_height < this.end_height) {
-			return(this.start_height);
+		if(this.startHeight < this.endHeight) {
+			return(this.startHeight);
 		}
-		return(this.end_height);
+		return(this.endHeight);
 	}
 
 }

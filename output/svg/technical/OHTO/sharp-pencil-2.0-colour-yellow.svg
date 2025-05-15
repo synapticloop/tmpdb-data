@@ -140,9 +140,11 @@
 <line x1="1339" y1="327.5" x2="1361" y2="327.5" stroke="black" stroke-width="1" />
 <text x="1350" y="335.5" transform="rotate(-90, 1350, 335.5)" font-weight="bold" font-size="1.2em" text-anchor="end" dominant-baseline="middle" fill="black">body</text>
 <rect x="408.75" y="291.875" width="12.5" height="16.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#E1C16E"/>
-<path d="M421.25 291.875 L446.25 281.25 L446.25 318.75 L421.25 308.125 Z" stroke-width="1" stroke="black" fill="#E1C16E" />
-<path d="M446.25 280 L471.25 272.5 L471.25 327.5 L446.25 320 Z" stroke-width="1" stroke="black" fill="#b88160" />
+<path d="M421.25 291.875 L446.25 281.25 L446.25 318.75 L421.25 308.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#E1C16E" />
+<path d="M446.25 280 L471.25 272.5 L471.25 327.5 L446.25 320 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b88160" />
 <rect x="471.25" y="272.5" width="490" height="55" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#e38f0f"/>
+<line x1="471.25" y1="273.75" x2="471.25" y2="326" stroke="#e38f0f" stroke-width="2" stroke-linecap="round"/>
+<line x1="961.25" y1="273.75" x2="961.25" y2="326" stroke="#e38f0f" stroke-width="2" stroke-linecap="round"/>
 <line x1="471.25" y1="300" x2="961.25" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="471.25" y1="300" x2="961.25" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
 <rect x="961.25" y="274.375" width="70" height="51.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#E1C16E"/>

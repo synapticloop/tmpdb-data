@@ -148,7 +148,7 @@
 <line x1="1339" y1="320" x2="1361" y2="320" stroke="black" stroke-width="1" />
 <text x="1350" y="328" transform="rotate(-90, 1350, 328)" font-weight="bold" font-size="1.2em" text-anchor="end" dominant-baseline="middle" fill="black">body</text>
 <rect x="391.875" y="290.625" width="12.5" height="18.75" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver"/>
-<path d="M404.375 290 L445.625 281.25 L445.625 318.75 L404.375 310 Z" stroke-width="1" stroke="black" fill="silver" />
+<path d="M404.375 290 L445.625 281.25 L445.625 318.75 L404.375 310 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" />
 <rect x="445.625" y="281.25" width="15" height="37.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver"/>
 <rect x="460.625" y="279.375" width="30" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver"/>
 <rect x="490.625" y="280" width="498.75" height="40" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#AEDCDE"/>
@@ -165,7 +165,7 @@
 /><line x1="853.125" y1="278.125" x2="873.125" y2="269.375" stroke-width="2" stroke="silver" fill="silver" stroke-linecap="round" />
 /><line x1="873.125" y1="269.375" x2="1013.125" y2="269.375" stroke-width="2" stroke="silver" fill="silver" stroke-linecap="round" />
 /><path d="M1013.125 269.375 Q1033.125 274.375 1013.125 279.375" stroke-width="2" stroke="silver" fill="none" stroke-linecap="round" />
-<path d="M1013.125 280 L1021.875 280.625 L1021.875 319.375 L1013.125 320 Z" stroke-width="1" stroke="black" fill="#AEDCDE" />
+<path d="M1013.125 280 L1021.875 280.625 L1021.875 319.375 L1013.125 320 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#AEDCDE" />
 <rect x="1021.875" y="280.625" width="8.75" height="38.75" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#AEDCDE"/>
 <rect x="1030.625" y="285" width="21.25" height="30" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#AEDCDE"/>
 <rect x="1051.875" y="280" width="46.25" height="40" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#AEDCDE"/>
@@ -174,7 +174,7 @@
 <line x1="1051.875" y1="311.42857142857144" x2="1098.125" y2="311.42857142857144" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="1051.875" y1="311.42857142857144" x2="1098.125" y2="311.42857142857144" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
 <rect x="1098.125" y="278.75" width="6.25" height="42.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#AEDCDE"/>
-<path d="M1104.375 278.75 Q1111.875 300 1104.375 321.25" stroke-width="0.5" stroke="black" fill="#AEDCDE"/>
+<path d="M1104.375 278.75 Q1111.875 300 1104.375 321.25" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#AEDCDE"/>
 <circle r="21.25" cx="160" cy="300" fill="#AEDCDE" stroke="dimgray" stroke-width="1"  />
 <polygon points="151.7157287525381,280 168.2842712474619,280 180,291.7157287525381 180,308.2842712474619 168.2842712474619,320 151.7157287525381,320 140,308.2842712474619 140,291.7157287525381 " stroke="dimgray" stroke-width="1" fill="#AEDCDE"/>
 <circle r="15" cx="160" cy="300" fill="#AEDCDE" stroke="dimgray" stroke-width="1"  />

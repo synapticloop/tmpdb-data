@@ -189,8 +189,8 @@
 <line x1="1350" y1="280" x2="1350" y2="320" stroke="black" stroke-width="1" />
 <line x1="1339" y1="320" x2="1361" y2="320" stroke="black" stroke-width="1" />
 <text x="1350" y="328" transform="rotate(-90, 1350, 328)" font-weight="bold" font-size="1.2em" text-anchor="end" dominant-baseline="middle" fill="black">body</text>
-<path d="M378.75 291.875 L390 290 L390 310 L378.75 308.125 Z" stroke-width="1" stroke="black" fill="#b4b8b9" />
-<path d="M390 286.875 L458.75 279.375 L458.75 320.625 L390 313.125 Z" stroke-width="1" stroke="black" fill="#b4b8b9" />
+<path d="M378.75 291.875 L390 290 L390 310 L378.75 308.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" />
+<path d="M390 286.875 L458.75 279.375 L458.75 320.625 L390 313.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" />
 <rect x="458.75" y="279.375" width="147.5" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#b4b8b9"/>
 <rect x="458.75" y="279.375" width="147.5" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="url(#diagonalHatch)"/>
 <rect x="606.25" y="280" width="337.5" height="40" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#b4b8b9"/>
