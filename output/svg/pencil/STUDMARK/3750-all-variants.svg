@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="240">
+<pattern id="diagonalHatch" patternUnits="userSpaceOnUse" width="8" height="8">
+<rect width="6" height="6" fill='none'/>
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,8"/>
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,8"/>
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,0" />
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,0" />
+</pattern>
+<path d="M135.625 71.875 L209.375 60 L209.375 100 L135.625 88.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" />
+<rect x="209.375" y="59.375" width="21.25" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver"/>
+<rect x="230.625" y="59.375" width="128.75" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver"/>
+<rect x="230.625" y="59.375" width="128.75" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="url(#diagonalHatch)"/>
+<rect x="359.375" y="59.375" width="330" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="royalblue"/>
+<line x1="359.375" y1="80" x2="689.375" y2="80" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
+<line x1="359.375" y1="80" x2="689.375" y2="80" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
+<rect x="689.375" y="56.25" width="30" height="47.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver"/>
+<rect x="719.375" y="59.375" width="22.5" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="royalblue"/>
+<rect x="741.875" y="59.375" width="3.75" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="red"/>
+<rect x="745.625" y="59.375" width="47.5" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver"/>
+<rect x="745.625" y="59.375" width="47.5" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="url(#diagonalHatch)"/>
+<rect x="755.625" y="69.6875" width="27.5" height="20.625" rx="1" ry="1" stroke-width="2" stroke="black" fill="silver"/>
+<text x="769.375" y="80" text-anchor="middle" dominant-baseline="central"><tspan stroke="dimgray" stroke-width="0.5" font-family="sans-serif" fill="black" textLength="{this.width * 5 - 24}" > HB</tspan></text><rect x="793.125" y="59.375" width="12.5" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver"/>
+<rect x="805.625" y="66.25" width="52.5" height="27.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver"/>
+<path d="M858.125 66.25 Q869.375 80 858.125 93.75" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver"/>
+<text x="50%" y="220" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb) // Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
+</svg>

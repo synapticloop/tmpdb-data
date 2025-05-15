@@ -10,7 +10,8 @@ import {SVGPencilRenderer} from "./renderer/SVGPencilRenderer.ts";
 import {SVGRenderer} from "./renderer/SVGRenderer.ts";
 import {SVGTechnicalComponentRenderer} from "./renderer/SVGTechnicalComponentRenderer.ts";
 import {OpenSCADRenderer} from "./renderer/OpenSCADRenderer.ts";
-import {SVGExplodedTechnicalRenderer} from "./renderer/SVGExplodedTechnicalRenderer.ts";
+import {SVGTechnicalExplodedRenderer} from "./renderer/SVGTechnicalExplodedRenderer.ts";
+import {SVGPencilAllRenderer} from "./renderer/SVGPencilAllRenderer.ts";
 
 let baseDir:string = './data/pencil';
 
@@ -60,7 +61,14 @@ for (const pencilDirectory of pencilDirectories) {
 				.then(r => {});
 			fileNumber++;
 
-			const outputExplodedTechnicalSvg: string = renderSVG(new SVGExplodedTechnicalRenderer(pencil), -1, "technical", pencilDirectory, pencilFileName + "-exploded", fileNumber);
+			const outputSVGFilePencilAll: string = renderSVG(new SVGPencilAllRenderer(pencil), -1, "pencil", pencilDirectory, pencilFileName + "-all-variants", fileNumber);
+			fileNumber++;
+
+			await renderPNG(outputSVGFilePencilAll, "pencil", pencilDirectory, pencilFileName + "-all-variants", fileNumber)
+					.then(r => {});
+			fileNumber++;
+
+			const outputExplodedTechnicalSvg: string = renderSVG(new SVGTechnicalExplodedRenderer(pencil), -1, "technical", pencilDirectory, pencilFileName + "-exploded", fileNumber);
 			fileNumber++;
 
 			await renderPNG(outputExplodedTechnicalSvg, "technical", pencilDirectory, pencilFileName + "-exploded", fileNumber)
@@ -83,7 +91,7 @@ for (const pencilDirectory of pencilDirectories) {
 				await renderPNG(outputColourPencilSvg, "pencil", pencilDirectory, pencilOutputFileName, fileNumber)
 					.then(r => {});
 				fileNumber++;
-				const outputExplodedTechnicalSvg: string = renderSVG(new SVGExplodedTechnicalRenderer(pencil), index, "technical", pencilDirectory, pencilOutputFileName + "-exploded", fileNumber);
+				const outputExplodedTechnicalSvg: string = renderSVG(new SVGTechnicalExplodedRenderer(pencil), index, "technical", pencilDirectory, pencilOutputFileName + "-exploded", fileNumber);
 				fileNumber++;
 
 				await renderPNG(outputExplodedTechnicalSvg, "technical", pencilDirectory, pencilOutputFileName + "-exploded", fileNumber)

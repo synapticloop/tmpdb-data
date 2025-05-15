@@ -1,10 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="209.25">
 <pattern id="diagonalHatch" patternUnits="userSpaceOnUse" width="8" height="8">
-<rect width="6" height="6" fill='none'/>
 <path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,8"/>
 <path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,8"/>
 <path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,0" />
 <path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,0" />
+</pattern>
+<pattern id="spring" patternUnits="userSpaceOnUse" width="8" height="100">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="2" d="M 0,0 L 8,100"/>
+<path stroke="white" stroke-linecap="round" stroke-width="1" d="M 0,0 L 8,100"/>
 </pattern>
 <rect x="0" y="0" width="1200" height="209.25" fill="white" stroke="black" stroke-width="4" />
 <rect x="2" y="2" width="1196" height="205.25" fill="white" stroke="dimgray" stroke-width="1" />

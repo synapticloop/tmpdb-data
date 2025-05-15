@@ -183,7 +183,40 @@ export abstract class SVGRenderer {
 					`y="${midY - (part.endHeight / 2 * 5)}" ` +
 					`width="${part.length * 5}" ` +
 					`height="${part.startHeight * 5}" ` +
-					`rx="1" ry="1" stroke-width="0.5" stroke="black" fill="url(#diagonalHatch)"/>\n`
+					`rx="1" ry="1" stroke-width="0.5" stroke="black" fill="url(#diagonalHatch)"/>\n`;
+				break;
+			case "spring":
+
+				svgString += `<rect x="${startX + 5}" ` +
+						`y="${midY - (part.endHeight / 2 * 5) - 5}" ` +
+						`width="${part.length * 5 - 10}" ` +
+						`height="${part.startHeight * 5 + 10}" ` +
+						`stroke-width="0.0" stroke="black" fill="url(#spring)"/>\n`
+				for (let i:number = 0; i < 4; i++) {
+					svgString += `<line x1="${startX + i * 2 + 0.5}" y1="${midY - (part.endHeight / 2 * 5) - 5}" ` +
+							`x2="${startX + i * 2 + 0.5}" y2="${midY + (part.endHeight / 2 * 5) + 5}" stroke="dimgray" stroke-linecap="round" stroke-width="2" />\n`;
+					svgString += `<line x1="${startX + i * 2 + 0.5}" y1="${midY - (part.endHeight / 2 * 5) - 5}" ` +
+							`x2="${startX + i * 2 + 0.5}" y2="${midY + (part.endHeight / 2 * 5) + 5}" stroke="white" stroke-linecap="round" stroke-width="1" />\n`;
+
+					svgString += `<line x1="${startX + part.length * 5 - i * 2 - 0.5}" y1="${midY - (part.endHeight / 2 * 5) - 5}" ` +
+							`x2="${startX + part.length * 5 - i * 2 -0.5}" y2="${midY + (part.endHeight / 2 * 5) + 5}" stroke="dimgray" stroke-linecap="round" stroke-width="2" />\n`;
+					svgString += `<line x1="${startX + part.length * 5 - i * 2 -0.5}" y1="${midY - (part.endHeight / 2 * 5) - 5}" ` +
+							`x2="${startX + part.length * 5 - i * 2 -0.5}" y2="${midY + (part.endHeight / 2 * 5) + 5}" stroke="white" stroke-linecap="round" stroke-width="1" />\n`;
+
+				}
+				break;
+
+			case "threaded":
+				for (let i:number = 0; i < part.length; i++) {
+					if((i + 1) > part.length) {
+						// TODO - half a line
+						break;
+					}
+					svgString += `<line x1="${startX + i*5}" y1="${midY - (part.endHeight / 2 * 5) - 2}" ` +
+							`x2="${startX + (i + 1) * 5}" y2="${midY + (part.endHeight / 2 * 5) + 2}" stroke="dimgray" stroke-linecap="round" stroke-width="2" />\n`;
+					svgString += `<line x1="${startX + i*5}" y1="${midY - (part.endHeight / 2 * 5) - 2}" ` +
+							`x2="${startX + (i + 1) * 5}" y2="${midY + (part.endHeight / 2 * 5) + 2}" stroke="${colour}" stroke-linecap="round" stroke-width="1" />\n`;
+				}
 				break;
 		}
 
@@ -340,7 +373,12 @@ export abstract class SVGRenderer {
 		return(svgString);
 	}
 
-	protected renderTaper(startX:number, midY:number, component:Component, part: Part, colourIndex:number, colour:string):string {
+	protected renderTaper(startX:number, midY:number, part: Part, colour:string):string {
+		// TODO - need a nice way to determine what shade of black/grey -
+		//   thinking grayscale inverse
+		let strokeColor:string = "black";
+		// let strokeColor:string = (
+		// 		(colour === "black") || (colour === "#000000") ? "#afafaf" : colour);
 		let svgString:string = "";
 		if(!(part.taperStart || part.taperEnd)){
 			return("");
@@ -375,24 +413,24 @@ export abstract class SVGRenderer {
 							`C ${startX + xOffsetStart * xOffsetStartScale * 5} ${midY - part.endHeight / 2 * 5 * 3 / 4}, ` +
 							`${startX + xOffsetStart * xOffsetStartScale * 5} ${midY - part.endHeight / 2 * 5 / 4}, ` +
 							`${startX + 0.65} ${midY}" ` +
-							`stroke-width="0.5" stroke="black" stroke-linecap="round" fill="${colour}" />`
+							`stroke-width="0.5" stroke="${strokeColor}" stroke-linecap="round" fill="${colour}" />`
 						svgString += `<path d="M ${startX + 0.65} ${midY + part.endHeight / 2 * 5} ` +
 							`C ${startX + xOffsetStart * xOffsetStartScale * 5} ${midY + part.endHeight / 2 * 5 * 3 / 4}, ` +
 							`${startX + xOffsetStart * xOffsetStartScale * 5} ${midY + part.endHeight / 2 * 5 / 4}, ` +
 							`${startX + 0.65} ${midY}" ` +
-							`stroke-width="0.5" stroke="black" stroke-linecap="round" fill="${colour}" />`
+							`stroke-width="0.5" stroke="${strokeColor}" stroke-linecap="round" fill="${colour}" />`
 					} else {
 						svgString += `<path d="M ${startX + xOffsetStart * 5} ${midY - part.endHeight / 2 * 5} ` +
 							`C ${startX - (xOffsetStart * xOffsetStartScale * 5)} ${midY - part.endHeight / 2 * 5 * 3 / 4}, ` +
 							`${startX - (xOffsetStart * xOffsetStartScale * 5)} ${midY - part.endHeight / 2 * 5 / 4}, ` +
 							`${startX + xOffsetStart * 5} ${midY}" ` +
-							`stroke-width="0.5" stroke="black" stroke-linecap="round" fill="${colour}" />`
+							`stroke-width="0.5" stroke="${strokeColor}" stroke-linecap="round" fill="${colour}" />`
 
 						svgString += `<path d="M ${startX + xOffsetStart * 5} ${midY + part.endHeight / 2 * 5} ` +
 							`C ${startX - (xOffsetStart * xOffsetStartScale * 5)} ${midY + part.endHeight / 2 * 5 * 3 / 4}, ` +
 							`${startX - (xOffsetStart * xOffsetStartScale * 5)} ${midY + part.endHeight / 2 * 5 / 4}, ` +
 							`${startX + xOffsetStart * 5} ${midY}" ` +
-							`stroke-width="0.5" stroke="black" stroke-linecap="round" fill="${colour}" />`
+							`stroke-width="0.5" stroke="${strokeColor}" stroke-linecap="round" fill="${colour}" />`
 
 					}
 

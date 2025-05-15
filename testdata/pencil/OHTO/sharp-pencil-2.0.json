@@ -52,7 +52,7 @@
 					"type": "hexagonal",
 					"dimensions": "98.0x11.0",
 					"taper_start": {
-						"offset": -2.5
+						"offset": [ -2.5, 1.0 ]
 					}
 				}
 			],
@@ -70,8 +70,14 @@
 		{
 			"type": "cap",
 			"parts": [
-				{ "type": "cylinder", "dimensions": "5.00x9.25" },
+				{ "type": "cylinder", "dimensions": "5.00x9.5" },
 				{ "type": "cylinder", "dimensions": "2.0x10.0" }
+			],
+			"internal": [
+				{ "type": "cylinder", "dimensions": "2.75x2.75" },
+				{ "type": "cylinder", "dimensions": "0.5x3.0" },
+				{ "type": "cylinder", "dimensions": "3.0x2.75" },
+				{ "type": "cylinder", "dimensions": "2.75x9.5" }
 			],
 			"material": "metal",
 			"colours": [ "brass", "brass", "brass", "brass", "brass", "brass" ]
@@ -79,7 +85,10 @@
 		{
 			"type": "eraser",
 			"parts": [
-				{ "type": "cylinder", "dimensions": "5x9.25" }
+				{ "type": "cylinder", "dimensions": "5.00x9.25" }
+			],
+			"internal": [
+				{ "type": "cylinder", "dimensions": "6.00x9.25" }
 			],
 			"material": "rubber",
 			"colours": [ "pink", "pink", "pink", "pink", "pink", "pink" ]

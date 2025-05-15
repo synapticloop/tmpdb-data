@@ -17,7 +17,7 @@ import {
 import {Part} from "../model/Part.ts";
 import {formatToTwoPlaces} from "../utils/formatter.ts";
 
-export class SVGExplodedTechnicalRenderer extends SVGRenderer {
+export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 	SVG_WIDTH: number = 1200;
 	SVG_HEIGHT: number = 200;
 
@@ -38,7 +38,7 @@ export class SVGExplodedTechnicalRenderer extends SVGRenderer {
 		// determine the this.SVG_HEIGHT
 		this.SVG_HEIGHT += this.pencil.maxHeight
 		for(const [index, component] of this.pencil.components.entries()) {
-			if(component.hasInternal) {
+			if(component.hasInternal || component.hasEndInternal) {
 				this.SVG_HEIGHT += 120;
 			}
 		}
@@ -47,11 +47,14 @@ export class SVGExplodedTechnicalRenderer extends SVGRenderer {
 			`width="${this.SVG_WIDTH}" ` +
 			`height="${this.SVG_HEIGHT}">\n` +
 			`<pattern id="diagonalHatch" patternUnits="userSpaceOnUse" width="8" height="8">\n` +
-			`<rect width="6" height="6" fill='none'/>\n` +
 			`<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,8"/>\n` +
 			`<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,8"/>\n` +
 			`<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,0" />\n` +
 			`<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,0" />\n` +
+			`</pattern>\n` +
+			`<pattern id="spring" patternUnits="userSpaceOnUse" width="8" height="100">\n` +
+			`<path stroke="dimgray" stroke-linecap="round" stroke-width="2" d="M 0,0 L 8,100"/>\n` +
+			`<path stroke="white" stroke-linecap="round" stroke-width="1" d="M 0,0 L 8,100"/>\n` +
 			`</pattern>\n` +
 			`<rect x="0" y="0" width="${this.SVG_WIDTH}" height="${this.SVG_HEIGHT}" fill="white" stroke="black" stroke-width="4" />\n` +
 			`<rect x="2" y="2" width="${this.SVG_WIDTH - 4}" height="${this.SVG_HEIGHT - 4}" fill="white" stroke="dimgray" stroke-width="1" />\n`;
@@ -163,16 +166,81 @@ export class SVGExplodedTechnicalRenderer extends SVGRenderer {
 			colour = this.getMappedColour(component, colour, colourIndex);
 
 			let partLength:number = 0;
+			let endPartLength: number = 0;
+
 			for(let part of component.parts) {
 				svgString += super.renderPart(startX, midY, component, part, colourIndex, colour);
 				startX += part.length * 5;
 				partLength += part.length * 5;
+
+				for(let internal of component.endInternals) {
+					svgString += super.renderPart(startX, midY, component, internal, colourIndex, colour);
+					startX += internal.length * 5;
+					endPartLength += internal.length * 5;
+				}
 			}
 
+			if(component.hasEndInternal) {
+				startX -= endPartLength;
+
+				// now draw the dotted line
+				svgString += lineVertical(startX, midY - 40, 80, "1.0", "white");
+				svgString += lineVertical(startX, midY - 40, 80, "1.0", "black", "2,3");
+
+				// and for the arrows
+				svgString += lineHorizontal(startX + 10, midY, 30 + endPartLength, "1.0", "#0f0f0f");
+				svgString += `<line x1="${startX + 10}" ` +
+						`y1="${midY}" ` +
+						`x2="${startX + 20}" ` +
+						`y2="${midY - 10}" ` +
+						`stroke-linecap="round" ` +
+						`stroke="#0f0f0f" ` +
+						`stroke-width="1.0" />\n`;
+				svgString += `<line x1="${startX + 10}" ` +
+						`y1="${midY}" ` +
+						`x2="${startX + 20}" ` +
+						`y2="${midY + 10}" ` +
+						`stroke-linecap="round" ` +
+						`stroke="#0f0f0f" ` +
+						`stroke-width="1.0" />\n`;
+
+				svgString += lineVertical(startX + 40+ endPartLength, midY, 50, "1.0", "#0f0f0f");
+
+				// in between the component line
+				svgString += `<line x1="${startX - 40}" ` +
+						`y1="${midY + 50}" ` +
+						`x2="${startX + 40+ endPartLength}" ` +
+						`y2="${midY + 50}" ` +
+						`stroke-linecap="round" ` +
+						`stroke="#0f0f0f" ` +
+						`stroke-width="1.0" />\n`;
+
+
+				// next part horizontal line
+				svgString += lineHorizontal(startX - 40, midY + 100, 30, "1.0", "#0f0f0f");
+
+				svgString += `<line x1="${startX - 30}" ` +
+						`y1="${midY + 100}" ` +
+						`x2="${startX - 20}" ` +
+						`y2="${midY + 90}" ` +
+						`stroke-linecap="round" ` +
+						`stroke="#0f0f0f" ` +
+						`stroke-width="1.0" />\n`;
+				svgString += `<line x1="${startX - 30}" ` +
+						`y1="${midY + 100}" ` +
+						`x2="${startX - 20}" ` +
+						`y2="${midY + 110}" ` +
+						`stroke-linecap="round" ` +
+						`stroke="#0f0f0f" ` +
+						`stroke-width="1.0" />\n`;
+
+				svgString += lineVertical(startX - 40, midY + 50, 50, "1.0", "#0f0f0f");
+
+				midY += 100;
+
+			}
 
 			if(component.hasInternal) {
-				component.internals.reverse();
-
 				startX -= partLength;
 
 				for(let internalPart of component.internals) {
@@ -237,15 +305,7 @@ export class SVGExplodedTechnicalRenderer extends SVGRenderer {
 					`stroke="#0f0f0f" ` +
 					`stroke-width="1.0" />\n`;
 
-
-				component.internals.reverse();
 				startX += partLength;
-
-				svgString += drawText(
-					`${component.type} (${formatToTwoPlaces(totalLength)} mm)`,
-					startX + 50,
-					midY,
-					"1.1em");
 			}
 		}
 
@@ -260,7 +320,8 @@ export class SVGExplodedTechnicalRenderer extends SVGRenderer {
 			colour = this.getMappedColour(component, colour, colourIndex);
 
 			for(let part of component.parts) {
-				svgString += super.renderTaper(startX, midY, component, part, colourIndex, colour);
+				// TODO - why is the taper off
+				svgString += super.renderTaper(startX, midY, part, colour);
 				startX += part.length * 5;
 			}
 

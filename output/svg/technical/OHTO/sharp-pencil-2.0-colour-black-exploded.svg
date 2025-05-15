@@ -1,10 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="451">
 <pattern id="diagonalHatch" patternUnits="userSpaceOnUse" width="8" height="8">
-<rect width="6" height="6" fill='none'/>
 <path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,8"/>
 <path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,8"/>
 <path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,0" />
 <path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,0" />
+</pattern>
+<pattern id="spring" patternUnits="userSpaceOnUse" width="8" height="100">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="2" d="M 0,0 L 8,100"/>
+<path stroke="white" stroke-linecap="round" stroke-width="1" d="M 0,0 L 8,100"/>
 </pattern>
 <rect x="0" y="0" width="1200" height="451" fill="white" stroke="black" stroke-width="4" />
 <rect x="2" y="2" width="1196" height="447" fill="white" stroke="dimgray" stroke-width="1" />
@@ -44,7 +47,6 @@
 <line x1="891.25" y1="120" x2="921.25" y2="120" stroke-linecap="round" stroke="#0f0f0f"  stroke-width="1.0" />
 <line x1="891.25" y1="120" x2="901.25" y2="110" stroke-linecap="round" stroke="#0f0f0f" stroke-width="1.0" />
 <line x1="891.25" y1="120" x2="901.25" y2="130" stroke-linecap="round" stroke="#0f0f0f" stroke-width="1.0" />
-<text x="966.25" y="220" font-size="1.1em"> cap (16.00 mm)</text>
 <rect x="916.25" y="296.875" width="25" height="46.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#db756d"/>
 <line x1="846.25" y1="320" x2="876.25" y2="320" stroke-linecap="round" stroke="#0f0f0f"  stroke-width="1.0" />
 <line x1="856.25" y1="320" x2="866.25" y2="310" stroke-linecap="round" stroke="#0f0f0f" stroke-width="1.0" />
@@ -58,6 +60,5 @@
 <line x1="926.25" y1="220" x2="956.25" y2="220" stroke-linecap="round" stroke="#0f0f0f"  stroke-width="1.0" />
 <line x1="926.25" y1="220" x2="936.25" y2="210" stroke-linecap="round" stroke="#0f0f0f" stroke-width="1.0" />
 <line x1="926.25" y1="220" x2="936.25" y2="230" stroke-linecap="round" stroke="#0f0f0f" stroke-width="1.0" />
-<text x="991.25" y="320" font-size="1.1em"> eraser (11.00 mm)</text>
 <path d="M 321.9 92.5 C 308.75 99.375, 308.75 113.125, 321.9 120" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="black" /><path d="M 321.9 147.5 C 308.75 140.625, 308.75 126.875, 321.9 120" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="black" /><text x="50%" y="431" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb) // Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
 </svg>

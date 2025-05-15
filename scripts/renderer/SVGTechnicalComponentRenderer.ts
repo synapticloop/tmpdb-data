@@ -179,7 +179,7 @@ export class SVGTechnicalComponentRenderer extends SVGRenderer {
 			let colour: string = this.getMappedColour(component, "white", colourIndex);
 
 			for(let part of component.parts) {
-				svgString += super.renderTaper(startX, midY, component, part, colourIndex, colour);
+				svgString += super.renderTaper(startX, midY, part, colour);
 				startX += part.length * 5;
 			}
 		}

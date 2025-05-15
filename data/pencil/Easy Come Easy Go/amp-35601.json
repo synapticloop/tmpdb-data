@@ -18,7 +18,7 @@
 		], "fill":  "black" }
 	],
 	"back":[
-		{ "type": "circle", "dimensions": [
+		{ "type": "cylinder", "dimensions": [
 			2.0,
 			10.0
 		] , "fill":  "black" }
@@ -45,6 +45,9 @@
 						"offset": [ 1.0, 0.25 ]
 					}
 				}
+			],
+			"internal": [
+				{ "type": "cylinder", "dimensions": "4.0x6.5", "finish": "threaded" }
 			],
 			"material": "plastic",
 			"colours": [ "pink" ,"black", "blue" ]
@@ -83,6 +86,9 @@
 				{ "type": "octagonal", "dimensions": "9.25x8.0"},
 				{ "type": "cylinder", "dimensions": "1.25x8.5"},
 				{ "type": "convex", "dimensions": "0.75x8.5", "offset": "1.5x4.25" }
+			],
+			"internal": [
+				{ "type": "cylinder", "dimensions": "6.75x6.0"}
 			],
 			"material": "plastic",
 			"colours": [ "pink", "black", "blue" ]

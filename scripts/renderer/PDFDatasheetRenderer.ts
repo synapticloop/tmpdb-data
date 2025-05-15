@@ -1,5 +1,5 @@
 import {Pencil} from "../model/Pencil.ts";
-import PDFDocument from 'pdfkit';
+import PDFDocument, {rect} from 'pdfkit';
 import fs from "fs";
 import { imageSize } from 'image-size'
 
@@ -43,7 +43,14 @@ export class PDFDatasheetRenderer {
 		doc.pipe(fs.createWriteStream(outputFile));
 
 		doc.on('pageAdded', (): void => {
-			this.pageTitles.push(this.currentPageTitle)
+			this.pageTitles.push(this.currentPageTitle);
+			// doc.rect(doc.page.margins.left,
+			// 		doc.page.margins.top,
+			// 		doc.page.width - doc.page.margins.left - doc.page.margins.right,
+			// 		doc.page.height - doc.page.margins.top - doc.page.margins.bottom
+			// 		)
+			// 		.fill("none")
+			// 		.stroke("black");
 		});
 
 		this.renderFrontPage(doc);
@@ -60,6 +67,8 @@ export class PDFDatasheetRenderer {
 	}
 
 	private renderFrontPage(doc: typeof PDFDocument): void {
+		this.pageTitles.push("");
+
 		doc.y = doc.y - 30;
 		this.setFontFamily(doc, FontFamily.HEADING_LARGE);
 		doc.text(`${this.pencil.brand}`);
@@ -74,11 +83,12 @@ export class PDFDatasheetRenderer {
 				.stroke("#000000");
 
 		doc.text("").moveDown(1);
+		this.centreImage(doc,
+				`./output/png/pencil/${this.pencilFileDirectory}/${this.pencilFileName}-all-variants.png`,
+				450);
 
-		this.pageTitles.push("Datasheet");
 
-		doc.text("Datasheet");
-		this.currentPageTitle = "Datasheet";
+		this.addPageWithTitle(doc, "Datasheet");
 
 		doc.text('').moveDown(1);
 
@@ -139,7 +149,8 @@ export class PDFDatasheetRenderer {
 		doc.text("Details").moveDown(1);
 		this.centreImage(doc, `./output/png/technical/${this.pencilFileDirectory}/${this.pencilFileName}-components.png`, 500);
 
-		doc.text("").moveDown(2);
+		doc.text("").moveDown(1);
+		doc.text("Measurements").moveDown(1);
 		this.setFontFamily(doc, FontFamily.PARAGRAPH);
 
 		// now for the component
@@ -217,6 +228,12 @@ export class PDFDatasheetRenderer {
 		doc.text("Components (exploded)").moveDown(1);
 
 		this.centreImage(doc, `./output/png/technical/${this.pencilFileDirectory}/${this.pencilFileName}-exploded.png`, 500);
+
+		for(const colourComponent of this.pencil.colourComponents) {
+			this.setFontFamily(doc, FontFamily.HEADING_SMALL);
+			doc.text("").moveDown(1);
+			this.centreImage(doc, `./output/png/technical/${this.pencilFileDirectory}/${this.pencilFileName}-colour-${colourComponent}-exploded.png`, 500);
+		}
 
 	}
 
@@ -575,19 +592,27 @@ export class PDFDatasheetRenderer {
 
 		const moveDown: number = width/imageWidth * imageHeight;
 
-		let pageAdded: boolean = false;
-		if(pdfDocument.y + moveDown > (pdfDocument.page.height - pdfDocument.page.margins.top - pdfDocument.page.margins.bottom)) {
+		let writablePageHeight: number = pdfDocument.page.height - pdfDocument.page.margins.top - pdfDocument.page.margins.bottom;
+
+		if(pdfDocument.y + moveDown > writablePageHeight) {
 			pdfDocument.addPage();
-			pageAdded = true;
 		}
+
+		// if(null == width) {
+		// 	let fullWidth:number = pdfDocument.page.width - pdfDocument.page.margins.left - pdfDocument.page.margins.right;
+		// 	pdfDocument.image(imageLocation,
+		// 			{width: fullWidth});
+		// } else {
+		// 	pdfDocument.image(imageLocation,
+		// 			{width: width});
+		// }
 
 		pdfDocument.image(imageLocation,
 				pdfDocument.x + ((drawableWidth - width)/2),
 				pdfDocument.y,
 				{ width: width });
-		if(!pageAdded) {
-			pdfDocument.y = pdfDocument.y + moveDown;
-		}
+
+		pdfDocument.y = pdfDocument.y + moveDown;
 	}
 
 	private appendHeaderAndFooter(pdfDocument: typeof PDFDocument): void {
