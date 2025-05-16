@@ -45,18 +45,18 @@ export abstract class SVGRenderer {
 
 	protected getSvgEnd(width: number, height: number): string {
 		// todo - need to switch on height
-		if(width >= 1000) {
-			return(`</g><text x="50%" y="${width - 40}" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb)</text>\n` +
-				`<text x="50%" y="${width - 20}" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>\n` +
+		if(width <= 1000) {
+			return(`</g><text x="50%" y="${height - 40}" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb)</text>\n` +
+				`<text x="50%" y="${height - 20}" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>\n` +
 				`</svg>\n`);
 
 		}
-		if(width >= 1200) {
+		if(width <= 1200) {
 			return(`</g><text x="50%" y="${height - 20}" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb) // Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>\n` +
 				`</svg>`);
 		}
 
-		let svgString: string = `</g><text x="50%" y="${width - 20}" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb) // Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>\n` +
+		let svgString: string = `</g><text x="50%" y="${height - 20}" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb) // Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>\n` +
 			`</svg>\n`;
 
 		return(svgString);
