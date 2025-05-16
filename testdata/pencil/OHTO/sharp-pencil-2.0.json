@@ -52,6 +52,13 @@
 					}
 				}
 			],
+			"internal_end": [
+				{
+					"type": "cylinder",
+					"dimensions": [ 8.5, 9.25 ],
+					"colours": [ "wood", "wood", "wood", "wood", "wood", "wood"]
+				}
+			],
 			"material": "wood",
 			"colours": [ "yellow", "blue", "green", "red", "wood", "black" ]
 		},

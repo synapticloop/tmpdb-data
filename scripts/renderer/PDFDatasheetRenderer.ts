@@ -5,6 +5,7 @@ import { imageSize } from 'image-size'
 
 import { formatToTwoPlaces} from "../utils/formatter.ts";
 import {Part} from "../model/Part.ts";
+import {Component} from "../model/Component.ts";
 
 enum FontFamily {
 	HEADING_LARGE,
@@ -233,11 +234,12 @@ export class PDFDatasheetRenderer {
 
 		// now for the component
 		let materialsData:any[][] = [];
-		materialsData.push([ "Component" , "Material(s)", "Shape(s)", "Finish" ]);
+		materialsData.push([ "Component" , "Material(s)", "Colour(s)", "Shape(s)", "Finish" ]);
 		for(const [index, component ] of this.pencil.components.entries()) {
 			let componentInner:any[] = [];
 			componentInner.push({ text: component.type, align: "right" });
 			componentInner.push({ text: component.materials.join("\n"), align: "center" });
+			componentInner.push({ text: this.getColours(component), align: "center" });
 			componentInner.push({ text: this.getShape(component.parts), align: "center" });
 			componentInner.push({ text: this.getFinish(component.parts), align: "center" });
 
@@ -247,6 +249,7 @@ export class PDFDatasheetRenderer {
 				let componentExtra:any[] = [];
 				componentExtra.push({ text: component.type + " (extra)", align: "right" });
 				componentExtra.push({ text: component.materials.join("\n"), align: "center" });
+				componentExtra.push({ text: this.getColours(component), align: "center" });
 				componentExtra.push({ text: this.getShape(component.extraParts), align: "left" });
 				componentExtra.push({ text: this.getFinish(component.extraParts), align: "left" });
 
@@ -735,6 +738,19 @@ export class PDFDatasheetRenderer {
 
 			this.addFooter(i + 1, pdfDocument);
 		}
+	}
+
+	private getColours(component: Component): string {
+		let textSet:Set<string> = new Set<string>();
+		let textArray:string[] = [];
+		component.colours.forEach(colour => {
+			if(!textSet.has(colour)) {
+				textSet.add(colour);
+				textArray.push(colour);
+			}
+		});
+
+		return(textArray.join("\n"));
 	}
 
 	private getShape(parts: Part[]): string {
