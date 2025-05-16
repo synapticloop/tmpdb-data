@@ -4,6 +4,7 @@ import fs from "fs";
 import { imageSize } from 'image-size'
 
 import { formatToTwoPlaces} from "../utils/formatter.ts";
+import {Part} from "../model/Part.ts";
 
 enum FontFamily {
 	HEADING_LARGE,
@@ -61,7 +62,10 @@ export class PDFDatasheetRenderer {
 
 		this.renderTechnicalDrawing(doc);
 
+		this.renderCopyrightPage(doc);
+
 		this.appendHeaderAndFooter(doc);
+
 
 		doc.end();
 	}
@@ -155,12 +159,11 @@ export class PDFDatasheetRenderer {
 
 		// now for the component
 		let componentData:any[][] = [];
-		componentData.push([ "", "", "", { colSpan: 2, text: "Height", align: "center" }, { colSpan: 2, text: "Width", align: "center" } ]);
-		componentData.push([ "Component", "Material", "Length", "Min.", "Max", "Min.", "Max." ]);
+		componentData.push([ "", "", { colSpan: 2, text: "Height", align: "center" }, { colSpan: 2, text: "Width", align: "center" } ]);
+		componentData.push([ "Component" , "Length", "Min.", "Max", "Min.", "Max." ]);
 		for(const [index, component ] of this.pencil.components.entries()) {
 			let componentInner:any[] = [];
 			componentInner.push({ text: component.type, align: "right" });
-			componentInner.push({ text: component.materials.join("\n"), align: "center" });
 			componentInner.push({ text: `${formatToTwoPlaces(component.length)} mm`, align: "center", border: [ 1, 1, 1, 1 ], borderColor: "#aaa"});
 			if(component.minHeight === component.maxHeight) {
 				componentInner.push({ text: `${formatToTwoPlaces(component.minHeight)} mm`, align: "center", colSpan: 2, border: [ 1, 1, 1, 1 ], borderColor: "#aaa" });
@@ -181,7 +184,6 @@ export class PDFDatasheetRenderer {
 			for(const extraPart of component.extraParts) {
 				let componentExtra:any[] = [];
 				componentExtra.push({ text: component.type + " (extra)", align: "right" });
-				componentExtra.push({ text: component.materials.join("\n"), align: "center" });
 
 				componentExtra.push({text: `${formatToTwoPlaces(extraPart.extraLength)} mm`, align: "center", border: [ 1, 1, 1, 1 ], borderColor: "#aaa"});
 				componentExtra.push({text: `${formatToTwoPlaces(extraPart.extraHeight)} mm`, align: "center", colSpan: 2, border: [ 1, 1, 1, 1 ], borderColor: "#aaa" });
@@ -192,10 +194,11 @@ export class PDFDatasheetRenderer {
 
 		}
 		componentData.push([
-			{ colSpan: 2, text: "Total length", align: "right",  backgroundColor: "#cfcfcf" },
-			{ text: `${formatToTwoPlaces(this.pencil.totalLength)} mm`,  backgroundColor: "#cfcfcf", font: { src: "./fonts/LibreBaskerville-Bold.ttf" }},
+			{ text: "Total length", align: "right",  backgroundColor: "#cfcfcf" },
+			{ text: `${formatToTwoPlaces(this.pencil.totalLength)} mm`,  backgroundColor: "#cfcfcf", font: { src: "./fonts/LibreBaskerville-Bold.ttf" }, align: "center" },
 			{text: "", colSpan: 4,  backgroundColor: "#cfcfcf" }
 		]);
+
 		// @ts-ignore
 		doc.table({
 			columnStyles: (i) => {
@@ -223,10 +226,61 @@ export class PDFDatasheetRenderer {
 			data: componentData
 		});
 
+		this.setFontFamily(doc, FontFamily.HEADING_SMALL);
+		doc.text("").moveDown(1);
+		doc.text("Materials").moveDown(1);
+		this.setFontFamily(doc, FontFamily.PARAGRAPH);
+
+		// now for the component
+		let materialsData:any[][] = [];
+		materialsData.push([ "Component" , "Material(s)", "Shape(s)", "Finish" ]);
+		for(const [index, component ] of this.pencil.components.entries()) {
+			let componentInner:any[] = [];
+			componentInner.push({ text: component.type, align: "right" });
+			componentInner.push({ text: component.materials.join("\n"), align: "center" });
+			componentInner.push({ text: this.getShape(component.parts), align: "center" });
+			componentInner.push({ text: this.getFinish(component.parts), align: "center" });
+
+			materialsData.push(componentInner);
+
+			for(const extraPart of component.extraParts) {
+				let componentExtra:any[] = [];
+				componentExtra.push({ text: component.type + " (extra)", align: "right" });
+				componentExtra.push({ text: component.materials.join("\n"), align: "center" });
+				componentExtra.push({ text: this.getShape(component.extraParts), align: "left" });
+				componentExtra.push({ text: this.getFinish(component.extraParts), align: "left" });
+
+				materialsData.push(componentExtra);
+			}
+
+		}
+		// @ts-ignore
+		doc.table({
+			columnStyles: (i) => {
+				if(i === 0) {
+					return({ width: 100, textColor: "black", align: "right", font: { src: "./fonts/LibreBaskerville-Bold.ttf" }} );
+				} else {
+					return({ width: "*" });
+				}
+			},
+			rowStyles: (i) => {
+				if(i === 0) {
+					return({ border: [1, 0, 1, 0], borderColor: "#aaa", backgroundColor: "#cfcfcf", align: "center", font: { src: "./fonts/LibreBaskerville-Bold.ttf" }} );
+				}
+
+				if(i % 2 === 0) {
+					return({ border: [1, 0, 1, 0], borderColor: "#aaa" } );
+				} else {
+					return({ border: [1, 0, 1, 0], borderColor: "#aaa", backgroundColor: "#efefef" } );
+				}
+			},
+			data: materialsData
+		});
+
 		if(this.pencil.hasInternal) {
 			doc.addPage();
 			this.setFontFamily(doc, FontFamily.HEADING_SMALL);
-			doc.text("Components (exploded)").moveDown(1);
+			doc.text("Components (exploded view)").moveDown(1);
 
 			this.centreImage(doc, `./output/png/technical/${this.pencilFileDirectory}/${this.pencilFileName}-exploded.png`, 500);
 
@@ -455,6 +509,61 @@ export class PDFDatasheetRenderer {
 		this.centreImage(doc, `./output/png/technical/${this.pencilFileDirectory}/${this.pencilFileName}.png`, 1100)
 	}
 
+	private renderCopyrightPage(doc: typeof PDFDocument): void {
+		this.addPageWithTitle(doc, "Notices");
+
+		this.setFontFamily(doc, FontFamily.HEADING_SMALL);
+		doc.text("Mechanical Pencils").moveDown(1);
+
+		this.setFontFamily(doc, FontFamily.PARAGRAPH);
+		doc.text("Any and all third-party brand names, logos, and trademarks referenced herein are the property of their " +
+			"respective owners. The use of these names, logos, and trademarks is for identification purposes only and does " +
+			"not imply any affiliation with or endorsement by their respective owners.").moveDown(1);
+
+		this.setFontFamily(doc, FontFamily.HEADING_SMALL);
+		doc.text("Fonts").moveDown(1);
+
+		this.setFontFamily(doc, FontFamily.PARAGRAPH);
+		doc.text("All fonts used in this PDF document are licensed under the SIL Open Font License, Version 1.1.  " +
+			"This license is included in the source code repository that generated this document, copied below, and " +
+			"is also available with a FAQ at: https://openfontlicense.org").moveDown(1);
+
+		this.setFontFamily(doc, FontFamily.HEADING_TINY);
+		doc.text("SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007").moveDown(1);
+
+		this.setFontFamily(doc, FontFamily.PARAGRAPH);
+		doc.text('PREAMBLE').moveDown(1);
+		doc.text('The goals of the Open Font License (OFL) are to stimulate worldwide development of collaborative font projects, to support the font creation efforts of academic and linguistic communities, and to provide a free and open framework in which fonts may be shared and improved in partnership with others.').moveDown(1);
+		doc.text('The OFL allows the licensed fonts to be used, studied, modified and redistributed freely as long as they are not sold by themselves. The fonts, including any derivative works, can be bundled, embedded,  redistributed and/or sold with any software provided that any reserved names are not used by derivative works. The fonts and derivatives, however, cannot be released under any other type of license. The requirement for fonts to remain under this license does not apply to any document created using the fonts or their derivatives.').moveDown(1);
+		doc.text('DEFINITIONS').moveDown(1);
+		doc.text('"Font Software" refers to the set of files released by the Copyright Holder(s) under this license and clearly marked as such. This may include source files, build scripts and documentation.').moveDown(1);
+		doc.text('"Reserved Font Name" refers to any names specified as such after the copyright statement(s).').moveDown(1);
+		doc.text('"Original Version" refers to the collection of Font Software components as distributed by the Copyright Holder(s).').moveDown(1);
+		doc.text('"Modified Version" refers to any derivative made by adding to, deleting, or substituting -- in part or in whole -- any of the components of the Original Version, by changing formats or by porting the Font Software to a new environment.').moveDown(1);
+		doc.text('"Author" refers to any designer, engineer, programmer, technical writer or other person who contributed to the Font Software.').moveDown(1);
+		doc.text('PERMISSION & CONDITIONS').moveDown(1);
+		doc.text('Permission is hereby granted, free of charge, to any person obtaining a copy of the Font Software, to use, study, copy, merge, embed, modify, redistribute, and sell modified and unmodified copies of the Font Software, subject to the following conditions:').moveDown(1);
+		doc.text('1) Neither the Font Software nor any of its individual components, in Original or Modified Versions, may be sold by itself.').moveDown(1);
+		doc.text('2) Original or Modified Versions of the Font Software may be bundled, redistributed and/or sold with any software, provided that each copy contains the above copyright notice and this license. These can be included either as stand-alone text files, human-readable headers or in the appropriate machine-readable metadata fields within text or binary files as long as those fields can be easily viewed by the user.').moveDown(1);
+		doc.text('3) No Modified Version of the Font Software may use the Reserved Font Name(s) unless explicit written permission is granted by the corresponding Copyright Holder. This restriction only applies to the primary font name as presented to the users.').moveDown(1);
+		doc.text('4) The name(s) of the Copyright Holder(s) or the Author(s) of the Font Software shall not be used to promote, endorse or advertise any Modified Version, except to acknowledge the contribution(s) of the Copyright Holder(s) and the Author(s) or with their explicit written permission.').moveDown(1);
+		doc.text('5) The Font Software, modified or unmodified, in part or in whole, must be distributed entirely under this license, and must not be distributed under any other license. The requirement for fonts to remain under this license does not apply to any document created using the Font Software.').moveDown(1);
+		doc.text('TERMINATION').moveDown(1);
+		doc.text('This license becomes null and void if any of the above conditions are not met.').moveDown(1);
+		doc.text('DISCLAIMER').moveDown(1);
+		doc.text('THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,').moveDown(1);
+		doc.text('INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM').moveDown(1);
+		doc.text('OTHER DEALINGS IN THE FONT SOFTWARE.').moveDown(1);
+
+		this.setFontFamily(doc, FontFamily.HEADING_SMALL);
+		doc.text("Data").moveDown(1);
+
+		this.setFontFamily(doc, FontFamily.PARAGRAPH);
+		doc.text("All data Copyright (c) // The Mechanical Pencil Database (tmpdb) - Licensed under Creative Commons " +
+			"Attribution-NonCommercial-ShareAlike 4.0 International.  Data sourced from Synapticloop and other publicly " +
+			"available sources.").moveDown(1);
+	}
+
 	private addPageWithTitle(doc: typeof PDFDocument, pageTitle: string): void {
 		this.currentPageTitle = pageTitle;
 		doc.addPage();
@@ -627,4 +736,42 @@ export class PDFDatasheetRenderer {
 			this.addFooter(i + 1, pdfDocument);
 		}
 	}
+
+	private getShape(parts: Part[]): string {
+		let textSet:Set<string> = new Set<string>();
+		let textArray:string[] = [];
+
+		for(const part of parts) {
+			const type: string = part.type;
+			if(type === "extra") {
+				continue;
+			}
+
+			if(!textSet.has(type)) {
+				textSet.add(type);
+				textArray.push(type);
+			}
+		}
+		return(textArray.join("\n"));
+	}
+
+	private getFinish(parts: Part[]): string {
+		let textSet:Set<string> = new Set<string>();
+		let textArray:string[] = [];
+
+		for(const part of parts) {
+			const finish: string = part.finish;
+
+			if(!textSet.has(finish)) {
+				textSet.add(finish);
+				textArray.push(finish);
+			}
+		}
+		if(textArray.length === 0) {
+			return("fd");
+		} else {
+			return (textArray.join("\n"));
+		}
+	}
+
 }
