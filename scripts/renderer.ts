@@ -43,60 +43,19 @@ for (const pencilDirectory of pencilDirectories) {
 
 			fileNumber = await renderSVGAndPNG(new SVGTechnicalRenderer(pencil), -1, "technical", pencilDirectory, pencilFileName, fileNumber);
 			fileNumber = await renderSVGAndPNG(new SVGTechnicalComponentRenderer(pencil), -1, "technical", pencilDirectory, pencilFileName + "-components", fileNumber);
-
-			const outputSVGFilePencil = renderSVG(new SVGPencilRenderer(pencil), -1, "pencil", pencilDirectory, pencilFileName, fileNumber);
-			fileNumber++;
-
-			await renderPNG(outputSVGFilePencil, "pencil", pencilDirectory, pencilFileName, fileNumber)
-				.then(r => {});
-			fileNumber++;
-
-			const outputSVGFilePencilAll: string = renderSVG(new SVGPencilAllRenderer(pencil), -1, "pencil", pencilDirectory, pencilFileName + "-all-variants", fileNumber);
-			fileNumber++;
-
-			await renderPNG(outputSVGFilePencilAll, "pencil", pencilDirectory, pencilFileName + "-all-variants", fileNumber)
-					.then(r => {});
-			fileNumber++;
-
-			const outputExplodedTechnicalSvg: string = renderSVG(new SVGTechnicalExplodedRenderer(pencil), -1, "technical", pencilDirectory, pencilFileName + "-exploded", fileNumber);
-			fileNumber++;
-
-			await renderPNG(outputExplodedTechnicalSvg, "technical", pencilDirectory, pencilFileName + "-exploded", fileNumber)
-				.then(r => {});
-			fileNumber++;
+			fileNumber = await renderSVGAndPNG(new SVGPencilRenderer(pencil), -1, "pencil", pencilDirectory, pencilFileName, fileNumber);
+			fileNumber = await renderSVGAndPNG(new SVGPencilAllRenderer(pencil), -1, "pencil", pencilDirectory, pencilFileName + "-all-variants", fileNumber);
+			fileNumber = await renderSVGAndPNG(new SVGPencil45Renderer(pencil), -1, "pencil", pencilDirectory, pencilFileName + "-45", fileNumber);
+			fileNumber = await renderSVGAndPNG(new SVGTechnicalExplodedRenderer(pencil), -1, "technical", pencilDirectory, pencilFileName + "-exploded", fileNumber);
 
 			// now go through the colours
 			for(let [ index, colourComponent ] of pencil.colourComponents.entries()) {
-				const pencilOutputFileName = pencilFileName + "-colour-" + colourComponent;
-				const outputColourTechnicalSvg = renderSVG(new SVGTechnicalRenderer(pencil), index, "technical", pencilDirectory, pencilOutputFileName, fileNumber);
-				fileNumber++;
+				const pencilColourOutputFileName: string = pencilFileName + "-colour-" + colourComponent;
 
-				await renderPNG(outputColourTechnicalSvg, "technical", pencilDirectory, pencilOutputFileName, fileNumber)
-					.then(r => {});
-				fileNumber++;
-
-				const outputColour45PencilSvg = renderSVG(new SVGPencil45Renderer(pencil), index, "pencil", pencilDirectory, pencilOutputFileName + "-45", fileNumber);
-				fileNumber++;
-
-				await renderPNG(outputColour45PencilSvg, "pencil", pencilDirectory, pencilOutputFileName + "-45", fileNumber)
-					.then(r => {});
-				fileNumber++;
-
-
-				const outputColourPencilSvg = renderSVG(new SVGPencilRenderer(pencil), index, "pencil", pencilDirectory, pencilOutputFileName, fileNumber);
-				fileNumber++;
-
-				await renderPNG(outputColourPencilSvg, "pencil", pencilDirectory, pencilOutputFileName, fileNumber)
-					.then(r => {});
-				fileNumber++;
-
-				const outputExplodedTechnicalSvg: string = renderSVG(new SVGTechnicalExplodedRenderer(pencil), index, "technical", pencilDirectory, pencilOutputFileName + "-exploded", fileNumber);
-				fileNumber++;
-
-				await renderPNG(outputExplodedTechnicalSvg, "technical", pencilDirectory, pencilOutputFileName + "-exploded", fileNumber)
-					.then(r => {});
-				fileNumber++;
-
+				fileNumber = await renderSVGAndPNG(new SVGTechnicalRenderer(pencil), index, "technical", pencilDirectory, pencilColourOutputFileName, fileNumber);
+				fileNumber = await renderSVGAndPNG(new SVGTechnicalExplodedRenderer(pencil), index, "technical", pencilDirectory, pencilColourOutputFileName + "-exploded", fileNumber);
+				fileNumber = await renderSVGAndPNG(new SVGPencil45Renderer(pencil), index, "pencil", pencilDirectory, pencilColourOutputFileName + "-45", fileNumber);
+				fileNumber = await renderSVGAndPNG(new SVGPencilRenderer(pencil), index, "pencil", pencilDirectory, pencilColourOutputFileName, fileNumber);
 			}
 
 			const pdfOutputDir: string = path.join("./output/pdf/datasheet/");
@@ -123,7 +82,7 @@ async function renderSVGAndPNG(svgRenderer: SVGRenderer,
 												 pencilFileName: string,
 												 fileNumber: number): Promise<number> {
 	const outputSVGFileTechnical = renderSVG(svgRenderer,
-		-1,
+		offsetIndex,
 		outputDirectoryType,
 		pencilDirectory,
 		pencilFileName,
