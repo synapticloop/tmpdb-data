@@ -92,10 +92,7 @@ export class PDFDatasheetRenderer {
 				`./output/png/pencil/${this.pencilFileDirectory}/${this.pencilFileName}-all-variants.png`,
 				450);
 
-
 		this.addPageWithTitle(doc, "Datasheet");
-
-		doc.text('').moveDown(1);
 
 		this.setFontFamily(doc, FontFamily.PARAGRAPH);
 		doc.text('').moveDown();
@@ -105,6 +102,10 @@ export class PDFDatasheetRenderer {
 				500);
 
 		doc.text("").moveDown(2);
+
+		this.setFontFamily(doc, FontFamily.HEADING_SMALL);
+		doc.text("Overview").moveDown(1);
+		this.setFontFamily(doc, FontFamily.PARAGRAPH);
 
 		// now for the overall table
 		// @ts-ignore
@@ -153,11 +154,10 @@ export class PDFDatasheetRenderer {
 
 		this.setFontFamily(doc, FontFamily.HEADING_SMALL);
 
-		doc.text("Details").moveDown(1);
 		this.centreImage(doc, `./output/png/technical/${this.pencilFileDirectory}/${this.pencilFileName}-components.png`, 500);
 
 		doc.text("").moveDown(1);
-		doc.text("Measurements").moveDown(1);
+		doc.text("Measurements - external").moveDown(1);
 		this.setFontFamily(doc, FontFamily.PARAGRAPH);
 
 		// now for the component
@@ -234,7 +234,7 @@ export class PDFDatasheetRenderer {
 
 		this.setFontFamily(doc, FontFamily.HEADING_SMALL);
 		doc.text("").moveDown(1);
-		doc.text("Materials").moveDown(1);
+		doc.text("Materials - external").moveDown(1);
 		this.setFontFamily(doc, FontFamily.PARAGRAPH);
 
 		// now for the component
