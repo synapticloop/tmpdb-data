@@ -24,6 +24,7 @@ export class Component {
 
 	internalStart:Part[] = [];
 	internalEnd:Part[] = [];
+	isHidden: boolean = false;
 
 	constructor(jsonObject:any) {
 		this.type = jsonObject.type ?? this.type;
@@ -91,6 +92,9 @@ export class Component {
 					this.minHeight = tempMinHeight;
 				}
 			}
+		}
+		if(this.parts.length === 0) {
+			this.isHidden = true;
 		}
 
 		if(jsonObject.internal_start) {

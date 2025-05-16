@@ -111,7 +111,7 @@ export class PDFDatasheetRenderer {
 		doc.table({
 			columnStyles: (i) => {
 				if(i % 2 == 0) {
-					return({ width: 140, textColor: "black", align: "right", font: { src: "./fonts/LibreBaskerville-Bold.ttf" }} );
+					return({ width: 160, textColor: "black", align: "right", font: { src: "./fonts/LibreBaskerville-Bold.ttf" }} );
 				} else {
 					return({ width: "*" });
 				}
@@ -128,7 +128,9 @@ export class PDFDatasheetRenderer {
 				[ "Model", this.pencil.model ],
 				[ "Lead size", `${this.pencil.leadSize} mm` ],
 				[ "Text", `${this.pencil.text}` ],
+				[ "Mechanism", `${this.pencil.mechanism}` ],
 				[ "Years available", `` ],
+				[ "Country of manufacture", `` ],
 				[
 					"Dimensions",
 					`${formatToTwoPlaces(this.pencil.totalLength)} mm` +
@@ -163,8 +165,11 @@ export class PDFDatasheetRenderer {
 		componentData.push([ "", "", { colSpan: 2, text: "Height", align: "center" }, { colSpan: 2, text: "Width", align: "center" } ]);
 		componentData.push([ "Component" , "Length", "Min.", "Max", "Min.", "Max." ]);
 		for(const [index, component ] of this.pencil.components.entries()) {
+			if(component.length === 0) {
+				// TODO - we do want the length and details from the internal end and start
+			}
 			let componentInner:any[] = [];
-			componentInner.push({ text: component.type, align: "right" });
+			componentInner.push({ text: component.type + (component.isHidden ? "\n(not shown)" : ""), align: "right" });
 			componentInner.push({ text: `${formatToTwoPlaces(component.length)} mm`, align: "center", border: [ 1, 1, 1, 1 ], borderColor: "#aaa"});
 			if(component.minHeight === component.maxHeight) {
 				componentInner.push({ text: `${formatToTwoPlaces(component.minHeight)} mm`, align: "center", colSpan: 2, border: [ 1, 1, 1, 1 ], borderColor: "#aaa" });

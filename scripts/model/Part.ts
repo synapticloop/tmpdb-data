@@ -19,9 +19,12 @@ export class Part {
 	taperStart:any;
 	taperEnd:any;
 
+	internalOffset: number;
+
 	constructor(jsonObject, colours) {
 		this.type = jsonObject.type;
 		this.material = jsonObject.material;
+		this.internalOffset = jsonObject.internal_offset ?? 0;
 
 		this.taperStart = jsonObject.taper_start;
 		this.taperEnd = jsonObject.taper_end;

@@ -12,6 +12,7 @@ export class Pencil {
 	// the text that is written on the pencil
 	text:string = "";
 
+	mechanism:string = "";
 	// the maximum width of the pencil (generated)
 	maxWidth:number = 0;
 	// the maximum height of the pencil (generated)
@@ -42,6 +43,7 @@ export class Pencil {
 	// disassembled (possibly) - maybe someone is just keen and has ruined the
 	// pencil
 	hasInternal:boolean = false;
+	hasHidden:boolean = false;
 
 	/**
 	 * <p></p>
@@ -54,6 +56,7 @@ export class Pencil {
 		this.colourComponent = pencilJSONData.colour_component ?? this.colourComponent;
 		this.colourMap = pencilJSONData.colour_map ?? this.colourMap;
 		this.modelNumber = pencilJSONData.model_number ?? this.modelNumber;
+		this.mechanism = pencilJSONData.mechanism ?? this.mechanism;
 
 		this.front = pencilJSONData.front ?? this.front;
 		this.back = pencilJSONData.back ?? this.back;
@@ -65,6 +68,10 @@ export class Pencil {
 
 			if(thisComponent.hasInternalStart || thisComponent.hasInternalEnd) {
 				this.hasInternal = true;
+			}
+
+			if(thisComponent.isHidden) {
+				this.hasHidden = true;
 			}
 
 			this.components.push(thisComponent);
