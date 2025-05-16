@@ -18,7 +18,7 @@ export class SVGPencilRenderer extends SVGRenderer {
 	 */
 	render(colourIndex: number):string {
 		// start
-		let svgString:string = this.getSvgStart(this.SVG_WIDTH, this.SVG_HEIGHT);
+		let svgString:string = this.getSvgStart(this.SVG_WIDTH, this.SVG_HEIGHT, true);
 
 		// now it is time to render the details of the pencil
 		svgString += this.renderSideComponents(colourIndex);

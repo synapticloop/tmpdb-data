@@ -5,19 +5,15 @@
 	"colour_component": "body",
 	"lead_size": 2.0,
 	"front": [
-		{ "type": "cylinder", "dimensions":
-		[
-			2.0,
-			10.0
-		], "fill":  "black" }
+		{ "type": "cylinder", "dimensions": [ 2.0, 10.0 ], "fill":  "black" }
 	],
 	"components": [
 		{
 			"type": "tip",
 			"parts": [
-				{ "type": "cylinder", "dimensions": "3.5x2.75" },
-				{ "type": "cone", "dimensions": "8.75x4.5x7.5", "offset": "4.75" },
-				{ "type": "cylinder", "dimensions": "4.75x7.5" }
+				{ "type": "cylinder", "dimensions": [ 3.5, 2.75 ] },
+				{ "type": "cone", "dimensions": [ 8.75, 4.5, 7.5 ], "offset": [ 4.75 ] },
+				{ "type": "cylinder", "dimensions": [ 4.75, 7.5 ] }
 			],
 			"material": "metal",
 			"colours": [ "black" ]
@@ -25,7 +21,7 @@
 		{
 			"type": "head",
 			"parts": [
-				{ "type": "cylinder", "dimensions": "1.5x8.5" }
+				{ "type": "cylinder", "dimensions": [ 1.5, 8.5 ] }
 			],
 			"material": "metal",
 			"colours": [ "black"]
@@ -33,17 +29,17 @@
 		{
 			"type": "grip",
 			"parts": [
-				{ "type": "cylinder", "dimensions": "2.5x9.0", "finish":  "knurled" },
-				{ "type": "cylinder", "dimensions": "1.0x8.5" },
-				{ "type": "cylinder", "dimensions": "2.5x9.0", "finish":  "knurled" },
-				{ "type": "cylinder", "dimensions": "1.0x8.5" },
-				{ "type": "cylinder", "dimensions": "2.5x9.0", "finish":  "knurled" },
-				{ "type": "cylinder", "dimensions": "1.0x8.5" },
-				{ "type": "cylinder", "dimensions": "2.5x9.0", "finish":  "knurled" },
-				{ "type": "cylinder", "dimensions": "1.0x8.5" },
-				{ "type": "cylinder", "dimensions": "2.5x9.0", "finish":  "knurled" },
-				{ "type": "cylinder", "dimensions": "1.0x8.5" },
-				{ "type": "cylinder", "dimensions": "19.5x9.0", "finish":  "knurled" }
+				{ "type": "cylinder", "dimensions": [ 2.5, 9.0 ], "finish":  "knurled" },
+				{ "type": "cylinder", "dimensions": [ 1.0, 8.5 ] },
+				{ "type": "cylinder", "dimensions": [ 2.5, 9.0 ], "finish":  "knurled" },
+				{ "type": "cylinder", "dimensions": [ 1.0, 8.5 ] },
+				{ "type": "cylinder", "dimensions": [ 2.5, 9.0 ], "finish":  "knurled" },
+				{ "type": "cylinder", "dimensions": [ 1.0, 8.5 ] },
+				{ "type": "cylinder", "dimensions": [ 2.5, 9.0 ], "finish":  "knurled" },
+				{ "type": "cylinder", "dimensions": [ 1.0, 8.5 ] },
+				{ "type": "cylinder", "dimensions": [ 2.5, 9.0 ], "finish":  "knurled" },
+				{ "type": "cylinder", "dimensions": [ 1.0, 8.5 ] },
+				{ "type": "cylinder", "dimensions": [ 19.5, 9.0 ], "finish":  "knurled" }
 			],
 			"material": "metal",
 			"colours": [ "black" ]
@@ -51,7 +47,7 @@
 		{
 			"type": "body",
 			"parts": [
-				{ "type": "hexagonal", "dimensions": "66.0x8.0" }
+				{ "type": "hexagonal", "dimensions": [ 66.0, 8.0 ] }
 			],
 			"material": "metal",
 			"colours": [ "black" ]
@@ -59,15 +55,15 @@
 		{
 			"type": "clip",
 			"parts": [
-				{ "type": "cylinder", "dimensions": "7.5x9.0" },
+				{ "type": "cylinder", "dimensions": [ 7.5, 9.0 ] },
 				{ "type": "extra",
-					"offset": "-39x4.325",
-					"dimensions": "31.5x3.0x4.5",
+					"offset": [ -39, 4.325 ],
+					"dimensions": [ 31.5, 3.0, 4.5 ],
 					"parts": [
-						{ "line": "0.0,-2.0,1.75,0.0" },
-						{ "line": "1.75,0.0,26.25,-3.0" },
-						{ "curve": "26.25,-3.0,28.5,-2.25,27.375,-3.0" },
-						{ "line": "28.5,-2.25,31.5,0.0" }
+						{ "line": [ 0.0, -2.0, 1.75, 0.0 ] },
+						{ "line": [ 1.75, 0.0, 26.25, -3.0 ] },
+						{ "curve": [ 26.25, -3.0, 28.5, -2.25, 27.375, -3.0 ] },
+						{ "line": [ 28.5, -2.25, 31.5, 0.0 ] }
 					]}
 			],
 			"material": "metal",
@@ -76,7 +72,7 @@
 		{
 			"type": "tail",
 			"parts": [
-				{ "type": "cylinder", "dimensions": "2.25x7.5" }
+				{ "type": "cylinder", "dimensions": [ 2.25, 7.5 ] }
 			],
 			"material": "metal",
 			"colours": [ "black" ]
@@ -84,9 +80,9 @@
 		{
 			"type": "cap",
 			"parts": [
-				{ "type": "cylinder", "dimensions": "2.25x6.25" },
-				{ "type": "cone", "dimensions": "2.75x6.25x5.75" },
-				{ "type": "cylinder", "dimensions": "7.25x5.75" }
+				{ "type": "cylinder", "dimensions": [ 2.25, 6.25 ] },
+				{ "type": "cone", "dimensions": [ 2.75, 6.25, 5.75 ] },
+				{ "type": "cylinder", "dimensions": [ 7.25, 5.75 ] }
 			],
 			"material": "plastic",
 			"colours": [ "black" ]

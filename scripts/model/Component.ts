@@ -46,7 +46,7 @@ export class Component {
 		}
 
 		if(jsonObject.parts) {
-			let isFirst = true;
+			let isFirst: boolean = true;
 			for(let part of jsonObject.parts) {
 				const thisPart = new Part(part, this.colours);
 				this.parts.push(thisPart);

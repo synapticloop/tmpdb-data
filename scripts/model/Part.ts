@@ -13,7 +13,7 @@ export class Part {
 	extraLength: number = 0;
 	extraHeight: number = 0;
 	extraWidth: number = 0;
-	dimensions = [];
+	dimensions: number[] = [];
 	material: string = null;
 
 	taperStart:any;
@@ -21,15 +21,13 @@ export class Part {
 
 	constructor(jsonObject, colours) {
 		this.type = jsonObject.type;
-		this.dimensions = jsonObject.dimensions;
 		this.material = jsonObject.material;
 
 		this.taperStart = jsonObject.taper_start;
 		this.taperEnd = jsonObject.taper_end;
 
 		if(jsonObject.offset) {
-			let offsetTemp = jsonObject.offset.split("x") ?? ["0", "0"];
-			this.offset = [parseFloat(offsetTemp[0]), parseFloat(offsetTemp[1])];
+			this.offset = jsonObject.offset;
 		}
 
 		this.finish = jsonObject.finish ?? this.finish;
@@ -45,29 +43,24 @@ export class Part {
 		if(this.type === "extra") {
 			this.extraParts = jsonObject.parts ?? this.extraParts;
 
-			let extraOffsetTemp = jsonObject?.offset.split("x") ?? [ "0", "0" ];
-			this.extraOffset = [ parseFloat(extraOffsetTemp[0]), parseFloat(extraOffsetTemp[1])];
+			this.extraOffset = jsonObject.offset ?? [ 0, 0 ];
 
-			let extraDimensions = [ "0", "0", "0" ];
-			extraDimensions = jsonObject?.dimensions.split("x") ?? extraDimensions;
-			this.extraLength = parseFloat(extraDimensions[0]);
-			this.extraHeight = parseFloat(extraDimensions[1]);
-			this.extraWidth = parseFloat(extraDimensions[2]);
+			let extraDimensions:number[] = [ 0, 0, 0 ];
+			extraDimensions = jsonObject?.dimensions ?? extraDimensions;
+			this.extraLength = extraDimensions[0];
+			this.extraHeight = extraDimensions[1];
+			this.extraWidth = extraDimensions[2];
 		} else {
-			// only parse dimensions for non-extra things
-			this.#parseDimensions(jsonObject.dimensions);
-		}
-	}
-
-	#parseDimensions(dimensions) {
-		const split = dimensions.split("x");
-		this.length = Number.parseFloat(split[0]);
-		this.startHeight = Number.parseFloat(split[1]);
-
-		if(split.length > 2) {
-			this.endHeight = Number.parseFloat(split[2]);
-		} else {
-			this.endHeight = this.startHeight;
+			// only parse dimensions for non-extra things - as the extra does not
+			// contribute to the length
+			this.dimensions = jsonObject.dimensions;
+			this.length = this.dimensions[0];
+			this.startHeight = this.dimensions[1];
+			if(this.dimensions.length > 2) {
+				this.endHeight = this.dimensions[2];
+			} else {
+				this.endHeight = this.dimensions[1];
+			}
 		}
 	}
 

@@ -18,18 +18,14 @@
 		"silver": "#b4b8b9"
 	},
 	"front": [
-		{ "type": "cylinder", "dimensions":
-		[
-			2.0,
-			10.0
-		], "fill":  "black" }
+		{ "type": "cylinder", "dimensions": [ 2.0, 10.0 ], "fill":  "black" }
 	],
 	"components": [
 		{
 			"type": "tip",
 			"parts": [
-				{ "type": "cylinder", "dimensions": "2.5x3.25" },
-				{ "type": "cone", "dimensions": "5.0x3.25x7.5" }
+				{ "type": "cylinder", "dimensions": [ 2.5, 3.25 ] },
+				{ "type": "cone", "dimensions": [ 5.0, 3.25, 7.5 ] }
 			],
 			"material": "metal",
 			"colours": [ "brass", "brass", "brass", "brass", "brass", "brass" ]
@@ -39,7 +35,7 @@
 			"parts": [
 				{
 					"type": "cone",
-					"dimensions": "5.0x8.0x11.0"
+					"dimensions": [ 5.0, 8.0, 11.0 ]
 				}
 			],
 			"material": "wood",
@@ -50,7 +46,7 @@
 			"parts": [
 				{
 					"type": "hexagonal",
-					"dimensions": "98.0x11.0",
+					"dimensions": [ 98.0, 11.0 ],
 					"taper_start": {
 						"offset": [ -2.5, 1.0 ]
 					}
@@ -62,7 +58,7 @@
 		{
 			"type": "ferrule",
 			"parts": [
-				{ "type": "cylinder", "dimensions": "14.0x10.25", "finish": "ferrule" }
+				{ "type": "cylinder", "dimensions": [ 14.0, 10.25 ], "finish": "ferrule" }
 			],
 			"material": "metal",
 			"colours": [ "brass", "brass", "brass", "brass", "brass", "brass" ]
@@ -70,14 +66,14 @@
 		{
 			"type": "cap",
 			"parts": [
-				{ "type": "cylinder", "dimensions": "5.00x9.5" },
-				{ "type": "cylinder", "dimensions": "2.0x10.0" }
+				{ "type": "cylinder", "dimensions": [ 5.0, 9.5 ] },
+				{ "type": "cylinder", "dimensions": [ 2.0, 10.0 ] }
 			],
 			"internal_start": [
-				{ "type": "cylinder", "dimensions": "2.75x2.75" },
-				{ "type": "cylinder", "dimensions": "0.5x3.0" },
-				{ "type": "cylinder", "dimensions": "3.0x2.75" },
-				{ "type": "cylinder", "dimensions": "2.75x9.5" }
+				{ "type": "cylinder", "dimensions": [ 2.75, 2.75 ] },
+				{ "type": "cylinder", "dimensions": [ 0.5, 3.0 ] },
+				{ "type": "cylinder", "dimensions": [ 3.0, 2.75 ] },
+				{ "type": "cylinder", "dimensions": [ 2.75, 9.5 ] }
 			],
 			"material": "metal",
 			"colours": [ "brass", "brass", "brass", "brass", "brass", "brass" ]
@@ -85,10 +81,10 @@
 		{
 			"type": "eraser",
 			"parts": [
-				{ "type": "cylinder", "dimensions": "5.00x9.25" }
+				{ "type": "cylinder", "dimensions": [ 5.0, 9.25 ] }
 			],
 			"internal_start": [
-				{ "type": "cylinder", "dimensions": "6.00x9.25" }
+				{ "type": "cylinder", "dimensions": [ 6.0, 9.25 ] }
 			],
 			"material": "rubber",
 			"colours": [ "pink", "pink", "pink", "pink", "pink", "pink" ]

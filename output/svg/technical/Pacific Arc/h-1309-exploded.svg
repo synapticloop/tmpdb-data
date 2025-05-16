@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="209">
-<pattern id="diagonalHatch" patternUnits="userSpaceOnUse" width="8" height="8">
+ <pattern id="diagonalHatch" patternUnits="userSpaceOnUse" width="8" height="8">
 <path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,8"/>
 <path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,8"/>
 <path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,0" />
@@ -11,6 +11,7 @@
 </pattern>
 <rect x="0" y="0" width="1200" height="209" fill="white" stroke="black" stroke-width="4" />
 <rect x="2" y="2" width="1196" height="205" fill="white" stroke="dimgray" stroke-width="1" />
+<g transform="rotate(0 0 0)">
 <text x="30" y="50" font-size="2.0em" font-weight="bold"> Pacific Arc // H-1309 </text>
 <path d="M228.75 111.875 L240 110 L240 130 L228.75 128.125 Z" stroke-width="0.5" stroke="#888888" stroke-linejoin="round" fill="white" />
 <path d="M240 106.875 L308.75 99.375 L308.75 140.625 L240 133.125 Z" stroke-width="0.5" stroke="#888888" stroke-linejoin="round" fill="white" />
@@ -40,5 +41,5 @@
 <rect x="951.25" y="106.25" width="7.5" height="27.5" rx="1" ry="1" stroke-width="0.5" stroke="#888888" fill="white"/>
 <rect x="958.75" y="107.5" width="3.75" height="25" rx="1" ry="1" stroke-width="0.5" stroke="#888888" fill="white"/>
 <rect x="962.5" y="106.25" width="8.75" height="27.5" rx="1" ry="1" stroke-width="0.5" stroke="#888888" fill="white"/>
-<text x="50%" y="189" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb) // Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
+</g><text x="50%" y="189" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb) // Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
 </svg>

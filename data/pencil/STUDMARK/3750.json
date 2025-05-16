@@ -5,18 +5,14 @@
 	"text": "STUDMARK(R) 3750 2.0mm",
 	"colour_component": "body",
 	"front": [
-		{ "type": "cylinder", "dimensions":
-		[
-			2.0,
-			10.0
-		], "fill":  "black" }
+		{ "type": "cylinder", "dimensions": [ 2.0, 10.0 ], "fill":  "black" }
 	],
 	"components": [
 		{
 			"type": "tip",
 			"parts": [
-				{ "type": "cone", "dimensions": "14.75x3.25x8.0" },
-				{ "type": "cylinder", "dimensions": "4.25x8.25" }
+				{ "type": "cone", "dimensions": [ 14.75, 3.25, 8.0 ] },
+				{ "type": "cylinder", "dimensions": [ 4.25, 8.25 ] }
 			],
 			"material": "metal",
 			"colours": [ "silver" ]
@@ -24,7 +20,7 @@
 		{
 			"type": "grip",
 			"parts": [
-				{ "type": "cylinder", "dimensions": "25.75x8.25", "finish":  "knurled" }
+				{ "type": "cylinder", "dimensions": [ 25.75, 8.25 ], "finish":  "knurled" }
 			],
 			"material": "metal",
 			"colours": [ "silver" ]
@@ -32,7 +28,7 @@
 		{
 			"type": "body",
 			"parts": [
-				{ "type": "hexagonal", "dimensions": "66.0x8.25" }
+				{ "type": "hexagonal", "dimensions": [ 66.0, 8.25 ] }
 			],
 			"material": "plastic",
 			"colours": [ "royalblue" ]
@@ -40,7 +36,7 @@
 		{
 			"type": "clip",
 			"parts": [
-				{ "type": "cylinder", "dimensions": "6.0x9.5" }
+				{ "type": "cylinder", "dimensions": [ 6.0, 9.5 ] }
 			],
 			"material": "plastic",
 			"colours": [ "silver" ]
@@ -48,7 +44,7 @@
 		{
 			"type": "tail",
 			"parts": [
-				{ "type": "cylinder", "dimensions": "4.5x8.25" }
+				{ "type": "cylinder", "dimensions": [ 4.5, 8.25 ] }
 			],
 			"material": "plastic",
 			"colours": [ "royalblue" ]
@@ -56,7 +52,7 @@
 		{
 			"type": "ring",
 			"parts": [
-				{ "type": "cylinder", "dimensions": "0.75x8.25" }
+				{ "type": "cylinder", "dimensions": [ 0.75, 8.25 ] }
 			],
 			"material": "rubber",
 			"colours": [ "red" ]
@@ -64,7 +60,7 @@
 		{
 			"type": "indicator",
 			"parts": [
-				{ "type": "cylinder", "dimensions": "9.5x8.25", "finish": "knurled" }
+				{ "type": "cylinder", "dimensions": [ 9.5, 8.25 ], "finish": "knurled" }
 			],
 			"material": "plastic",
 			"colours": [ "silver" ]
@@ -72,7 +68,7 @@
 		{
 			"type": "foot",
 			"parts": [
-				{ "type": "cylinder", "dimensions": "2.5x8.25" }
+				{ "type": "cylinder", "dimensions": [ 2.5, 8.25 ] }
 			],
 			"material": "plastic",
 			"colours": [ "silver" ]
@@ -80,8 +76,8 @@
 		{
 			"type": "cap",
 			"parts": [
-				{ "type": "cylinder", "dimensions": "10.5x5.5" },
-				{ "type": "convex", "dimensions": "1.25x5.5", "offset": "2.25x2.75" }
+				{ "type": "cylinder", "dimensions": [ 10.5, 5.5 ] },
+				{ "type": "convex", "dimensions": [ 1.25, 5.5 ], "offset": [ 2.25, 2.75 ] }
 			],
 			"material": "plastic",
 			"colours": [ "silver" ]

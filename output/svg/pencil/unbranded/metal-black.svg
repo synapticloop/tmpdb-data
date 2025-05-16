@@ -1,11 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="200">
-<pattern id="diagonalHatch" patternUnits="userSpaceOnUse" width="8" height="8">
-<rect width="6" height="6" fill='none'/>
+ <pattern id="diagonalHatch" patternUnits="userSpaceOnUse" width="8" height="8">
 <path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,8"/>
 <path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,8"/>
 <path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,0" />
 <path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,0" />
 </pattern>
+<pattern id="spring" patternUnits="userSpaceOnUse" width="8" height="100">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="2" d="M 0,0 L 8,100"/>
+<path stroke="white" stroke-linecap="round" stroke-width="1" d="M 0,0 L 8,100"/>
+</pattern>
+<g transform="rotate(0 0 0)">
 <rect x="141.25" y="93.125" width="17.5" height="13.75" rx="1" ry="1" stroke-width="0.5" stroke="#888888" fill="white"/>
 <path d="M158.75 88.75 L202.5 81.25 L202.5 118.75 L158.75 111.25 Z" stroke-width="0.5" stroke="#888888" stroke-linejoin="round" fill="white" />
 <rect x="202.5" y="81.25" width="23.75" height="37.5" rx="1" ry="1" stroke-width="0.5" stroke="#888888" fill="white"/>
@@ -43,5 +47,5 @@
 <rect x="797.5" y="84.375" width="11.25" height="31.25" rx="1" ry="1" stroke-width="0.5" stroke="#888888" fill="white"/>
 <path d="M808.75 84.375 L822.5 85.625 L822.5 114.375 L808.75 115.625 Z" stroke-width="0.5" stroke="#888888" stroke-linejoin="round" fill="white" />
 <rect x="822.5" y="85.625" width="36.25" height="28.75" rx="1" ry="1" stroke-width="0.5" stroke="#888888" fill="white"/>
-<text x="50%" y="180" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb) // Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
+</g><text x="50%" y="180" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb) // Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
 </svg>

@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="449.25">
-<pattern id="diagonalHatch" patternUnits="userSpaceOnUse" width="8" height="8">
+ <pattern id="diagonalHatch" patternUnits="userSpaceOnUse" width="8" height="8">
 <path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,8"/>
 <path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,8"/>
 <path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,0" />
@@ -11,6 +11,7 @@
 </pattern>
 <rect x="0" y="0" width="1200" height="449.25" fill="white" stroke="black" stroke-width="4" />
 <rect x="2" y="2" width="1196" height="445.25" fill="white" stroke="dimgray" stroke-width="1" />
+<g transform="rotate(0 0 0)">
 <text x="30" y="50" font-size="2.0em" font-weight="bold"> Easy Come Easy Go // amp-35601 </text>
 <rect x="241.875" y="110.625" width="12.5" height="18.75" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver"/>
 <path d="M254.375 110 L295.625 101.25 L295.625 138.75 L254.375 130 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" />
@@ -72,5 +73,5 @@
 <line x1="890.625" y1="220" x2="920.625" y2="220" stroke-linecap="round" stroke="#0f0f0f"  stroke-width="1.0" />
 <line x1="890.625" y1="220" x2="900.625" y2="210" stroke-linecap="round" stroke="#0f0f0f" stroke-width="1.0" />
 <line x1="890.625" y1="220" x2="900.625" y2="230" stroke-linecap="round" stroke="#0f0f0f" stroke-width="1.0" />
-<path d="M 345.625 220 C 339.375 225, 339.375 235, 345.625 240" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="#000000" /><path d="M 345.625 260 C 339.375 255, 339.375 245, 345.625 240" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="#000000" /><text x="50%" y="429.25" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb) // Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
+<path d="M 345.625 220 C 339.375 225, 339.375 235, 345.625 240" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="#000000" /><path d="M 345.625 260 C 339.375 255, 339.375 245, 345.625 240" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="#000000" /></g><text x="50%" y="429.25" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb) // Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
 </svg>
