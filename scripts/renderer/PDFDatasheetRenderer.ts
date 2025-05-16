@@ -149,14 +149,7 @@ export class PDFDatasheetRenderer {
 		});
 	}
 
-	private renderComponentsPage(doc: typeof PDFDocument): void {
-		this.addPageWithTitle(doc, "Components");
-
-		this.setFontFamily(doc, FontFamily.HEADING_SMALL);
-
-		this.centreImage(doc, `./output/png/technical/${this.pencilFileDirectory}/${this.pencilFileName}-components.png`, 500);
-
-		doc.text("").moveDown(1);
+	private renderExternalMeasurementTable(doc: typeof PDFDocument): void {
 		doc.text("Measurements - external").moveDown(1);
 		this.setFontFamily(doc, FontFamily.PARAGRAPH);
 
@@ -231,7 +224,9 @@ export class PDFDatasheetRenderer {
 			},
 			data: componentData
 		});
+	}
 
+	private renderExternalMaterialsTable(doc: typeof PDFDocument): void {
 		this.setFontFamily(doc, FontFamily.HEADING_SMALL);
 		doc.text("").moveDown(1);
 		doc.text("Materials - external").moveDown(1);
@@ -284,6 +279,25 @@ export class PDFDatasheetRenderer {
 			},
 			data: materialsData
 		});
+	}
+
+	private renderComponentsPage(doc: typeof PDFDocument): void {
+		this.addPageWithTitle(doc, "Components");
+
+		this.setFontFamily(doc, FontFamily.HEADING_SMALL);
+
+		this.centreImage(doc, `./output/png/technical/${this.pencilFileDirectory}/${this.pencilFileName}-components.png`, 500);
+
+		doc.text("").moveDown(1);
+
+		this.renderExternalMeasurementTable(doc);
+
+		this.renderExternalMaterialsTable(doc);
+
+		if(this.pencil.hasHidden) {
+			// centre image for internal components
+			//this.renderInternalMaterialsTable(doc);
+		}
 
 		if(this.pencil.hasInternal) {
 			doc.addPage();

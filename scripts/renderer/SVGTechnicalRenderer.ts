@@ -315,7 +315,7 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 
 				svgString += dimensionsHorizontal(xOffset + extraPart.extraOffset[0] * 5 - (component.extraPartFirst ? component.length * 5: 0),
 						this.SVG_HEIGHT/2 - 80,
-						extraPart.extraLength*5 - (component.extraPartFirst ? component.length * 5 : 0),
+						extraPart.extraLength * 5,
 						`${(Math.round(extraPart.extraLength * 100) / 100).toFixed(2)} mm\n${component.getType()} (extra)`,
 						TextOrientation.CENTER,
 						true);
@@ -355,9 +355,10 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 			for(const extraPart of component.getExtraParts()) {
 				// draw the straight-through line for guidance
 
-				svgString += dimensionsHorizontal(xOffset + extraPart.extraOffset[0] * 5 - (component.extraPartFirst ? component.length * 5 : 0),
+				svgString += dimensionsHorizontal(
+						xOffset + extraPart.extraOffset[0] * 5 - (component.extraPartFirst ? component.length * 5 : 0),
 						this.SVG_HEIGHT/2 + 80,
-						extraPart.extraLength*5 - (component.extraPartFirst ? component.length * 5 : 0),
+						extraPart.extraLength*5,
 						`${component.materials.join("\n")}`,
 						TextOrientation.BOTTOM,
 						false);

@@ -1,9 +1,13 @@
 {
 	"brand": "Mitsubishi",
 	"model": "uni",
+	"model_number": "MH-500",
+	"skus": [ ],
 	"lead_size": "2.0",
 	"text": "MITSUBISHI / uni /",
 	"colour_component": "body",
+	"mechanism": "clutch",
+	"weight": 11.0,
 	"front": [
 		{ "type": "cylinder", "dimensions": [ 2.0, 10.0 ], "fill":  "black" }
 	],
@@ -37,6 +41,10 @@
 			"parts": [
 				{ "type": "hexagonal", "dimensions": [ 84.0, 8.25 ] }
 			],
+			"internal_start": [
+				{ "type": "cylinder", "dimensions": [ 2.0, 6.25 ] },
+				{ "type": "cylinder", "dimensions": [ 4.25, 7.0 ], "finish":  "threaded" }
+			],
 			"material": "plastic",
 			"colours": [ "maroon" ]
 		},
@@ -62,6 +70,10 @@
 			"parts": [
 				{ "type": "cylinder", "dimensions": [ 9.75, 6.0 ]},
 				{ "type": "cylinder", "dimensions": [ 2.0, 7.5 ]}
+			],
+			"internal_start": [
+				{ "type": "cylinder", "dimensions": [ 4.25, 6 ] },
+				{ "type": "cylinder", "dimensions": [ 1.0, 6.25 ] }
 			],
 			"material": "plastic",
 			"colours": [ "black" ]
