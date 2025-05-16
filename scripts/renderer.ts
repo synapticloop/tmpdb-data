@@ -12,6 +12,7 @@ import {SVGTechnicalComponentRenderer} from "./renderer/SVGTechnicalComponentRen
 import {OpenSCADRenderer} from "./renderer/OpenSCADRenderer.ts";
 import {SVGTechnicalExplodedRenderer} from "./renderer/SVGTechnicalExplodedRenderer.ts";
 import {SVGPencilAllRenderer} from "./renderer/SVGPencilAllRenderer.ts";
+import {SVGPencil45Renderer} from "./renderer/SVGPencil45Renderer.ts";
 
 let baseDir:string = './data/pencil';
 
@@ -40,19 +41,8 @@ for (const pencilDirectory of pencilDirectories) {
 
 			let fileNumber = 1;
 
-			const outputSVGFileTechnical = renderSVG(new SVGTechnicalRenderer(pencil), -1, "technical", pencilDirectory, pencilFileName, fileNumber);
-			fileNumber++;
-
-			await renderPNG(outputSVGFileTechnical, "technical", pencilDirectory, pencilFileName, fileNumber)
-				.then(r => {});
-			fileNumber++;
-
-			const outputSVGFileTechnicalComponents = renderSVG(new SVGTechnicalComponentRenderer(pencil), -1, "technical", pencilDirectory, pencilFileName + "-components", fileNumber);
-			fileNumber++;
-
-			await renderPNG(outputSVGFileTechnicalComponents, "technical", pencilDirectory, pencilFileName +"-components", fileNumber)
-				.then(r => {});
-			fileNumber++;
+			fileNumber = await renderSVGAndPNG(new SVGTechnicalRenderer(pencil), -1, "technical", pencilDirectory, pencilFileName, fileNumber);
+			fileNumber = await renderSVGAndPNG(new SVGTechnicalComponentRenderer(pencil), -1, "technical", pencilDirectory, pencilFileName + "-components", fileNumber);
 
 			const outputSVGFilePencil = renderSVG(new SVGPencilRenderer(pencil), -1, "pencil", pencilDirectory, pencilFileName, fileNumber);
 			fileNumber++;
@@ -85,18 +75,28 @@ for (const pencilDirectory of pencilDirectories) {
 					.then(r => {});
 				fileNumber++;
 
+				const outputColour45PencilSvg = renderSVG(new SVGPencil45Renderer(pencil), index, "pencil", pencilDirectory, pencilOutputFileName + "-45", fileNumber);
+				fileNumber++;
+
+				await renderPNG(outputColour45PencilSvg, "pencil", pencilDirectory, pencilOutputFileName + "-45", fileNumber)
+					.then(r => {});
+				fileNumber++;
+
+
 				const outputColourPencilSvg = renderSVG(new SVGPencilRenderer(pencil), index, "pencil", pencilDirectory, pencilOutputFileName, fileNumber);
 				fileNumber++;
 
 				await renderPNG(outputColourPencilSvg, "pencil", pencilDirectory, pencilOutputFileName, fileNumber)
 					.then(r => {});
 				fileNumber++;
+
 				const outputExplodedTechnicalSvg: string = renderSVG(new SVGTechnicalExplodedRenderer(pencil), index, "technical", pencilDirectory, pencilOutputFileName + "-exploded", fileNumber);
 				fileNumber++;
 
 				await renderPNG(outputExplodedTechnicalSvg, "technical", pencilDirectory, pencilOutputFileName + "-exploded", fileNumber)
 					.then(r => {});
 				fileNumber++;
+
 			}
 
 			const pdfOutputDir: string = path.join("./output/pdf/datasheet/");
@@ -114,6 +114,32 @@ for (const pencilDirectory of pencilDirectories) {
 			fs.writeFileSync(outputScadFile, outputScadString);
 		}
 	}
+}
+
+async function renderSVGAndPNG(svgRenderer: SVGRenderer,
+												 offsetIndex: number,
+												 outputDirectoryType: string,
+												 pencilDirectory: string,
+												 pencilFileName: string,
+												 fileNumber: number): Promise<number> {
+	const outputSVGFileTechnical = renderSVG(svgRenderer,
+		-1,
+		outputDirectoryType,
+		pencilDirectory,
+		pencilFileName,
+		fileNumber);
+	fileNumber++;
+
+	await renderPNG(outputSVGFileTechnical,
+		outputDirectoryType,
+		pencilDirectory,
+		pencilFileName,
+		fileNumber)
+		.then(r => {});
+	fileNumber++;
+
+	return(fileNumber);
+
 }
 
 function renderSVG(svgRenderer: SVGRenderer,

@@ -223,18 +223,19 @@ export class PDFDatasheetRenderer {
 			data: componentData
 		});
 
-		doc.addPage();
-		this.setFontFamily(doc, FontFamily.HEADING_SMALL);
-		doc.text("Components (exploded)").moveDown(1);
-
-		this.centreImage(doc, `./output/png/technical/${this.pencilFileDirectory}/${this.pencilFileName}-exploded.png`, 500);
-
-		for(const colourComponent of this.pencil.colourComponents) {
+		if(this.pencil.hasInternal) {
+			doc.addPage();
 			this.setFontFamily(doc, FontFamily.HEADING_SMALL);
-			doc.text("").moveDown(1);
-			this.centreImage(doc, `./output/png/technical/${this.pencilFileDirectory}/${this.pencilFileName}-colour-${colourComponent}-exploded.png`, 500);
-		}
+			doc.text("Components (exploded)").moveDown(1);
 
+			this.centreImage(doc, `./output/png/technical/${this.pencilFileDirectory}/${this.pencilFileName}-exploded.png`, 500);
+
+			for (const colourComponent of this.pencil.colourComponents) {
+				this.setFontFamily(doc, FontFamily.HEADING_SMALL);
+				doc.text("").moveDown(1);
+				this.centreImage(doc, `./output/png/technical/${this.pencilFileDirectory}/${this.pencilFileName}-colour-${colourComponent}-exploded.png`, 500);
+			}
+		}
 	}
 
 	private renderColourVariantsPage(doc: typeof PDFDocument): void {

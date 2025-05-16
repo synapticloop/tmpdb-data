@@ -1,8 +1,3 @@
-// the width of the exported SVG
-export const SVG_WIDTH: number = 1500;
-// the height of the exported SVG
-export const SVG_HEIGHT: number = 600;
-
 // the height/width of the dimension marker
 const DIMENSION_MARKER_LENGTH = 22;
 

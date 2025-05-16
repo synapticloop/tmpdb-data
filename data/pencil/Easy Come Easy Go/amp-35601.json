@@ -46,7 +46,7 @@
 					}
 				}
 			],
-			"internal": [
+			"internal_start": [
 				{ "type": "cylinder", "dimensions": "4.0x6.5", "finish": "threaded" }
 			],
 			"material": "plastic",
@@ -87,11 +87,13 @@
 				{ "type": "cylinder", "dimensions": "1.25x8.5"},
 				{ "type": "convex", "dimensions": "0.75x8.5", "offset": "1.5x4.25" }
 			],
-			"internal": [
+			"internal_start": [
 				{ "type": "cylinder", "dimensions": "6.75x6.0"}
 			],
 			"material": "plastic",
 			"colours": [ "pink", "black", "blue" ]
 		}
+	],
+	"sources": [
 	]
 }

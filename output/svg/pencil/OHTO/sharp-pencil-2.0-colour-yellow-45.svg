@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000">
+ <pattern id="diagonalHatch" patternUnits="userSpaceOnUse" width="8" height="8">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,8"/>
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,8"/>
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,0" />
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,0" />
+</pattern>
+<pattern id="spring" patternUnits="userSpaceOnUse" width="8" height="100">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="2" d="M 0,0 L 8,100"/>
+<path stroke="white" stroke-linecap="round" stroke-width="1" d="M 0,0 L 8,100"/>
+</pattern>
+<rect x="0" y="0" width="1000" height="1000" fill="white" stroke="black" stroke-width="4" />
+<rect x="2" y="2" width="996" height="996" fill="white" stroke="dimgray" stroke-width="1" />
+<g transform="rotate(-45 500 500)">
+<rect x="158.75" y="491.875" width="12.5" height="16.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#E1C16E"/>
+<path d="M171.25 491.875 L196.25 481.25 L196.25 518.75 L171.25 508.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#E1C16E" />
+<path d="M196.25 480 L221.25 472.5 L221.25 527.5 L196.25 520 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b88160" />
+<rect x="221.25" y="472.5" width="490" height="55" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#e38f0f"/>
+<line x1="221.25" y1="500" x2="711.25" y2="500" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
+<line x1="221.25" y1="500" x2="711.25" y2="500" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
+<rect x="711.25" y="474.375" width="70" height="51.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#E1C16E"/>
+<line x1="719.3269230769231" y1="475.375" x2="719.3269230769231" y2="524.625" stroke-width="1" stroke="gray" />
+<line x1="724.7115384615385" y1="475.375" x2="724.7115384615385" y2="524.625" stroke-width="1" stroke="gray" />
+<line x1="730.0961538461538" y1="475.375" x2="730.0961538461538" y2="524.625" stroke-width="1" stroke="gray" />
+<line x1="735.4807692307693" y1="475.375" x2="735.4807692307693" y2="524.625" stroke-width="1" stroke="gray" />
+<line x1="740.8653846153846" y1="475.375" x2="740.8653846153846" y2="524.625" stroke-width="1" stroke="gray" />
+<line x1="751.6346153846154" y1="475.375" x2="751.6346153846154" y2="524.625" stroke-width="1" stroke="gray" />
+<line x1="757.0192307692307" y1="475.375" x2="757.0192307692307" y2="524.625" stroke-width="1" stroke="gray" />
+<line x1="762.4038461538462" y1="475.375" x2="762.4038461538462" y2="524.625" stroke-width="1" stroke="gray" />
+<line x1="767.7884615384615" y1="475.375" x2="767.7884615384615" y2="524.625" stroke-width="1" stroke="gray" />
+<line x1="773.1730769230769" y1="475.375" x2="773.1730769230769" y2="524.625" stroke-width="1" stroke="gray" />
+<circle r="4" cx="726.25" cy="487.1875" stroke="dimgray" stroke-width="1" fill="dimGray" />
+<rect x="781.25" y="476.25" width="25" height="47.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#E1C16E"/>
+<rect x="806.25" y="475" width="10" height="50" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#E1C16E"/>
+<rect x="816.25" y="476.875" width="25" height="46.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#db756d"/>
+<path d="M 221.9 472.5 C 208.75 479.375, 208.75 493.125, 221.9 500" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="#e38f0f" /><path d="M 221.9 527.5 C 208.75 520.625, 208.75 506.875, 221.9 500" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="#e38f0f" /></g><text x="50%" y="960" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb)</text>
+<text x="50%" y="980" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
+</svg>

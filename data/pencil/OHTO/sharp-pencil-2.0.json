@@ -73,7 +73,7 @@
 				{ "type": "cylinder", "dimensions": "5.00x9.5" },
 				{ "type": "cylinder", "dimensions": "2.0x10.0" }
 			],
-			"internal": [
+			"internal_start": [
 				{ "type": "cylinder", "dimensions": "2.75x2.75" },
 				{ "type": "cylinder", "dimensions": "0.5x3.0" },
 				{ "type": "cylinder", "dimensions": "3.0x2.75" },
@@ -87,7 +87,7 @@
 			"parts": [
 				{ "type": "cylinder", "dimensions": "5.00x9.25" }
 			],
-			"internal": [
+			"internal_start": [
 				{ "type": "cylinder", "dimensions": "6.00x9.25" }
 			],
 			"material": "rubber",

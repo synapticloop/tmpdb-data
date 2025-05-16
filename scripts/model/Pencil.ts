@@ -62,6 +62,11 @@ export class Pencil {
 
 		for(const component of pencilJSONData.components) {
 			const thisComponent = new Component(component);
+
+			if(thisComponent.hasInternalStart || thisComponent.hasInternalEnd) {
+				this.hasInternal = true;
+			}
+
 			this.components.push(thisComponent);
 			this.totalLength += thisComponent.length;
 
@@ -86,10 +91,6 @@ export class Pencil {
 					this.materials.push(componentMaterial);
 					this.materialsSet.add(componentMaterial);
 				}
-			}
-
-			if(component.hasInternal) {
-				this.hasInternal = true;
 			}
 		}
 

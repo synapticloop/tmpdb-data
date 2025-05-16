@@ -19,10 +19,11 @@ export class Component {
 
 	extraParts:Part[] = [];
 	extraPartFirst:boolean = false;
-	hasInternal:boolean = false;
-	hasEndInternal:boolean = false;
-	internals:Part[] = [];
-	endInternals:Part[] = [];
+	hasInternalStart:boolean = false;
+	hasInternalEnd:boolean = false;
+
+	internalStart:Part[] = [];
+	internalEnd:Part[] = [];
 
 	constructor(jsonObject:any) {
 		this.type = jsonObject.type ?? this.type;
@@ -35,11 +36,13 @@ export class Component {
 		}
 
 		this.colours = jsonObject.colours ?? this.colours;
-		if(jsonObject.internal) {
-			this.hasInternal = true;
+
+		if(jsonObject.internal_start) {
+			this.hasInternalStart = true;
 		}
-		if(jsonObject.end_internal) {
-			this.hasEndInternal = true;
+
+		if(jsonObject.internal_end) {
+			this.hasInternalEnd = true;
 		}
 
 		if(jsonObject.parts) {
@@ -90,17 +93,17 @@ export class Component {
 			}
 		}
 
-		if(jsonObject.internal) {
-			for(let internal of jsonObject.internal) {
+		if(jsonObject.internal_start) {
+			for(let internal of jsonObject.internal_start) {
 				const thisInternal = new Part(internal, this.colours);
-				this.internals.push(thisInternal);
+				this.internalStart.push(thisInternal);
 			}
 		}
 
-		if(jsonObject.end_internal) {
-			for(let internal of jsonObject.end_internal) {
+		if(jsonObject.internal_end) {
+			for(let internal of jsonObject.internal_end) {
 				const thisInternal = new Part(internal, this.colours);
-				this.endInternals.push(thisInternal);
+				this.internalEnd.push(thisInternal);
 			}
 		}
 

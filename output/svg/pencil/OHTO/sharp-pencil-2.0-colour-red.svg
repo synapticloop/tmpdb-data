@@ -1,11 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="200">
-<pattern id="diagonalHatch" patternUnits="userSpaceOnUse" width="8" height="8">
-<rect width="6" height="6" fill='none'/>
+ <pattern id="diagonalHatch" patternUnits="userSpaceOnUse" width="8" height="8">
 <path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,8"/>
 <path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,8"/>
 <path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,0" />
 <path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,0" />
 </pattern>
+<pattern id="spring" patternUnits="userSpaceOnUse" width="8" height="100">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="2" d="M 0,0 L 8,100"/>
+<path stroke="white" stroke-linecap="round" stroke-width="1" d="M 0,0 L 8,100"/>
+</pattern>
+<rect x="0" y="0" width="1000" height="200" fill="white" stroke="black" stroke-width="4" />
+<rect x="2" y="2" width="996" height="196" fill="white" stroke="dimgray" stroke-width="1" />
+<g transform="rotate(0 0 0)">
 <rect x="158.75" y="91.875" width="12.5" height="16.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#E1C16E"/>
 <path d="M171.25 91.875 L196.25 81.25 L196.25 118.75 L171.25 108.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#E1C16E" />
 <path d="M196.25 80 L221.25 72.5 L221.25 127.5 L196.25 120 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b88160" />
@@ -27,5 +33,6 @@
 <rect x="781.25" y="76.25" width="25" height="47.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#E1C16E"/>
 <rect x="806.25" y="75" width="10" height="50" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#E1C16E"/>
 <rect x="816.25" y="76.875" width="25" height="46.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#db756d"/>
-<path d="M 221.9 72.5 C 208.75 79.375, 208.75 93.125, 221.9 100" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="#5d191d" /><path d="M 221.9 127.5 C 208.75 120.625, 208.75 106.875, 221.9 100" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="#5d191d" /><text x="50%" y="180" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb) // Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
+<path d="M 221.9 72.5 C 208.75 79.375, 208.75 93.125, 221.9 100" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="#5d191d" /><path d="M 221.9 127.5 C 208.75 120.625, 208.75 106.875, 221.9 100" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="#5d191d" /></g><text x="50%" y="960" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb)</text>
+<text x="50%" y="980" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
 </svg>

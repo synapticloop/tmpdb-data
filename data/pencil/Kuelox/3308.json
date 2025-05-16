@@ -29,7 +29,7 @@
 			"parts": [
 				{ "type": "cone", "dimensions": "2.25x3.25x4.0" }
 			],
-			"end_internal": [
+			"internal_end": [
 				{ "type": "cylinder", "dimensions": "16.26x4.0x4.0", "colours": [ "silver" ] },
 				{ "type": "cylinder", "dimensions": "26.25x4.0x4.0", "colours": [ "brass" ], "finish": "spring" },
 				{ "type": "cylinder", "dimensions": "0.75x5.5x5.5", "colours": [ "brass" ] },
@@ -59,7 +59,7 @@
 			"parts": [
 				{ "type": "hexagonal", "dimensions": "67.5x8.0" }
 			],
-			"internal": [
+			"internal_start": [
 				{ "type": "cylinder", "dimensions": "5.75x6.5", "finish": "threaded" }
 			],
 			"material": "metal",
@@ -118,7 +118,7 @@
 				{ "type": "cylinder", "dimensions": "0.75x5.0" },
 				{ "type": "cylinder", "dimensions": "1.75x5.5" }
 			],
-			"internal": [
+			"internal_start": [
 				{ "type": "cylinder", "dimensions": "14.5x5.5", "colours": [ "black" ]  },
 				{ "type": "cylinder", "dimensions": "5.75x5.5"  }
 			],
