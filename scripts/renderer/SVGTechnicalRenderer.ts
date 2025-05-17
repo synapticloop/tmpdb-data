@@ -188,17 +188,16 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 			// vertical line
 			svgString += lineVerticalGuide(offset, this.SVG_HEIGHT/2 - 120, 240);
 
-			offset += component.length * 5;
-
 			// now for extraParts
 			for(const extraPart of component.getExtraParts()) {
-				svgString += lineVerticalGuide(offset + extraPart.extraOffset[0] * 5 - (component.extraPartFirst ? component.length * 5 : 0),
+				svgString += lineVerticalGuide(offset + extraPart.extraOffset[0] * 5,
 					this.SVG_HEIGHT/2 - 80,
 					160);
-				svgString += lineVerticalGuide(offset + extraPart.extraOffset[0] * 5 + extraPart.extraLength * 5 - (component.extraPartFirst ? component.length * 5 : 0),
+				svgString += lineVerticalGuide(offset + extraPart.extraOffset[0] * 5,
 					this.SVG_HEIGHT/2 - 80,
 					160);
 			}
+			offset += component.length * 5;
 		}
 
 		svgString += lineVerticalGuide(offset, this.SVG_HEIGHT/2 - 88 - this.pencil.maxHeight/2 * 5, 208);
@@ -305,7 +304,6 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 					`${(Math.round((component.length) * 100) / 100).toFixed(2)} mm${(component.length * 5 > 30 ? "\n" : " ")}${component.type}`,
 				TextOrientation.TOP_ROTATED,
 				true);
-			xOffset += component.length * 5;
 
 			// now for the extra dimensions
 			// is the extra the first component, or the last
@@ -313,13 +311,14 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 			for(const extraPart of component.getExtraParts()) {
 				// draw the straight-through line for guidance
 
-				svgString += dimensionsHorizontal(xOffset + extraPart.extraOffset[0] * 5 - (component.extraPartFirst ? component.length * 5: 0),
+				svgString += dimensionsHorizontal(xOffset + extraPart.extraOffset[0] * 5,
 						this.SVG_HEIGHT/2 - 80,
 						extraPart.extraLength * 5,
 						`${(Math.round(extraPart.extraLength * 100) / 100).toFixed(2)} mm\n${component.getType()} (extra)`,
 						TextOrientation.CENTER,
 						true);
 			}
+			xOffset += component.length * 5;
 		}
 
 		// now for the total length
@@ -347,7 +346,6 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 					`${(component.materials.join("\n"))}`,
 					TextOrientation.BOTTOM_ROTATED,
 					false);
-			xOffset += component.length * 5;
 
 			// now for the extra dimensions
 			// is the extra the first component, or the last
@@ -356,13 +354,14 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 				// draw the straight-through line for guidance
 
 				svgString += dimensionsHorizontal(
-						xOffset + extraPart.extraOffset[0] * 5 - (component.extraPartFirst ? component.length * 5 : 0),
+						xOffset + extraPart.extraOffset[0] * 5,
 						this.SVG_HEIGHT/2 + 80,
 						extraPart.extraLength*5,
 						`${component.materials.join("\n")}`,
 						TextOrientation.BOTTOM,
 						false);
 			}
+			xOffset += component.length * 5;
 		}
 
 		return(svgString);	}

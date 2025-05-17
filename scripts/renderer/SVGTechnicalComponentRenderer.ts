@@ -113,7 +113,6 @@ export class SVGTechnicalComponentRenderer extends SVGRenderer {
 				`${component.type}`,
 				TextOrientation.TOP_ROTATED,
 				true);
-			xOffset += component.length * 5;
 
 			// now for the extra dimensions
 			// is the extra the first component, or the last
@@ -121,13 +120,14 @@ export class SVGTechnicalComponentRenderer extends SVGRenderer {
 			for(const extraPart of component.getExtraParts()) {
 				// draw the straight-through line for guidance
 
-				svgString += dimensionsHorizontal(xOffset + extraPart.extraOffset[0] * 5 - (component.extraPartFirst ? component.length * 5 : 0),
+				svgString += dimensionsHorizontal(xOffset + extraPart.extraOffset[0] * 5,
 					this.SVG_HEIGHT/2 - 80,
 					extraPart.extraLength * 5 - (component.extraPartFirst ? component.length * 5 : 0),
 					`${component.getType()} (extra)`,
 					TextOrientation.TOP,
 					true);
 			}
+			xOffset += component.length * 5;
 		}
 
 		// now for the total length
