@@ -334,43 +334,6 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 		return(svgString);
 	}
 
-	private renderSideComponents(colourIndex:number): string {
-		let svgString: string = "";
-		let startX: number = this.SVG_WIDTH/2 - (this.pencil.totalLength*5/2);
-		let midY: number = this.SVG_HEIGHT/2;
-
-		let colour = "white";
-
-		for (let component of this.pencil.components) {
-			if(component.isHidden) {
-				continue;
-			}
-
-			colour = this.getMappedColour(component, colour, colourIndex);
-
-			for(let part of component.parts) {
-				svgString += super.renderPart(startX, midY, component, part, colourIndex, colour);
-				startX += part.length * 5;
-			}
-		}
-
-		startX = this.SVG_WIDTH/2 - (this.pencil.totalLength*5/2);
-
-		for (let component of this.pencil.components) {
-			if(component.isHidden) {
-				continue;
-			}
-			colour = this.getMappedColour(component, colour, colourIndex);
-
-			for(let part of component.parts) {
-				svgString += super.renderTaper(startX, midY, part, colour);
-				startX += part.length * 5;
-			}
-		}
-
-		return(svgString);
-	}
-
 	private renderFrontComponents(colourIndex:number): string {
 		let svgString: string = "";
 		let startX = 160;
