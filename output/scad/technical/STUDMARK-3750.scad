@@ -12,9 +12,9 @@ translate([0, 0, 30])
     cylinder(66, 8.25, 8.25, $fn=6, false);
 translate([0, 0, 96]) 
   color("silver") 
-    cylinder(6, 9.5, 9.5, $fn=360);
-translate([0, 0, 102]) 
+translate([0, 0, 96]) 
   color("silver") 
+    cylinder(6, 9.5, 9.5, $fn=360);
 translate([0, 0, 102]) 
   color("royalblue") 
     cylinder(4.5, 8.25, 8.25, $fn=360);

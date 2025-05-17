@@ -23,7 +23,7 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 
 
 	constructor(pencil: Pencil) {
-		super(pencil);
+		super(pencil, 1200, 200, "SVGTechnicalExplodedRenderer");
 	}
 
 	/**
@@ -46,6 +46,8 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 			}
 		}
 
+		super.resize(this.SVG_WIDTH, this.SVG_HEIGHT);
+
 		let svgString:string = this.getSvgStart(this.SVG_WIDTH, this.SVG_HEIGHT);
 
 		// overview text
@@ -53,7 +55,7 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 
 		// now it is time to render the details of the pencil
 
-		svgString += this.renderSideComponents(colourIndex);
+		svgString += this.renderExplodedSideComponents(colourIndex);
 
 		// end the end of the SVG
 		svgString += this.getSvgEnd(this.SVG_WIDTH, this.SVG_HEIGHT);
@@ -62,7 +64,7 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 	}
 
 
-	private renderSideComponents(colourIndex:number): string {
+	private renderExplodedSideComponents(colourIndex:number): string {
 		let svgString: string = "";
 		let startX: number = this.SVG_WIDTH/2 - (this.pencil.totalLength*5/2);
 		let midY: number = 120;

@@ -32,11 +32,11 @@ export class SVGPencilAllRenderer extends SVGRenderer {
 		let midYOverride: number = 120;
 		for (let i:number = 0; i < this.pencil.colourComponents.length; i++) {
 			// now it is time to render the details of the pencil
-			svgString += this.renderSideComponents(i, midYOverride);
+			svgString += super.renderSideComponents(i, midYOverride);
 			midYOverride = midYOverride + 120;
 		}
 
-		svgString += this.getSvgEnd(1000, this.SVG_HEIGHT);
+		svgString += super.getSvgEnd(1000, this.SVG_HEIGHT);
 		return(svgString);
 	}
 }

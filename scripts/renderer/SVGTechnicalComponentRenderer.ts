@@ -26,7 +26,7 @@ export class SVGTechnicalComponentRenderer extends SVGRenderer {
 	SVG_HEIGHT: number = 500;
 
 	constructor(pencil: Pencil) {
-		super(pencil);
+		super(pencil, 1200, 500, "SVGTechnicalComponentRenderer");
 	}
 
 	/**
@@ -38,31 +38,31 @@ export class SVGTechnicalComponentRenderer extends SVGRenderer {
 	 */
 	render(colourIndex: number):string {
 		// start
-		let svgString:string = this.getSvgStart(this.SVG_WIDTH, this.SVG_HEIGHT);
+		let svgString:string = super.getSvgStart(this.SVG_WIDTH, this.SVG_HEIGHT);
 
 		// centre line
-		svgString += this.renderCentreLines(
+		svgString += super.renderCentreLines(
 				this.SVG_WIDTH,
 				this.SVG_HEIGHT,
 				false,
 				false);
 
 		// overview text
-		svgString += this.renderOverviewText(false);
+		svgString += super.renderOverviewText(false);
 
 		// first up the grey guidelines
-		svgString += this.renderGuidelines();
+		svgString += super.renderGuidelines();
 
 		// now we get into the dimensions
 
 		//render the side dimensions
-		svgString += this.renderSideDimensions();
+		svgString += super.renderSideDimensions();
 
 		// now it is time to render the details of the pencil
-		svgString += this.renderSideComponents(colourIndex);
+		svgString += super.renderSideComponents(colourIndex);
 
 		// end the end of the SVG
-		svgString += this.getSvgEnd(this.SVG_WIDTH, this.SVG_HEIGHT);
+		svgString += super.getSvgEnd(this.SVG_WIDTH, this.SVG_HEIGHT);
 
 		return(svgString);
 	}
@@ -101,7 +101,7 @@ export class SVGTechnicalComponentRenderer extends SVGRenderer {
 	}
 
 
-	private renderSideDimensions(): string {
+	private deprecatedrenderSideDimensions(): string {
 		let svgString: string = "";
 
 		let xOffset: number = this.SVG_WIDTH/2 - (this.pencil.totalLength*5/2);
@@ -143,7 +143,7 @@ export class SVGTechnicalComponentRenderer extends SVGRenderer {
 		return(svgString);
 	}
 
-	private renderSideComponents(colourIndex:number): string {
+	private deprecatedrenderSideComponents(colourIndex:number): string {
 		let svgString: string = "";
 		let startX: number = this.SVG_WIDTH/2 - (this.pencil.totalLength*5/2);
 		let midY: number = this.SVG_HEIGHT/2;
