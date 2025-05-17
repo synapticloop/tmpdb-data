@@ -6,17 +6,17 @@
 	"colour_component": "body",
 	"mechanism": "click",
 	"front": [
-		{ "type": "cylinder", "dimensions": [ 2.0, 10.0 ], "fill":  "black" }
+		{ "shape": "cylinder", "dimensions": [ 2.0, 10.0 ], "fill":  "black" }
 	],
 	"back": [
-		{ "type": "cylinder", "dimensions": [ 2.0, 10.0 ], "fill":  "black" }
+		{ "shape": "cylinder", "dimensions": [ 2.0, 10.0 ], "fill":  "black" }
 	],
 	"components": [
 		{
 			"type": "tip",
 			"parts": [
-				{ "type": "cone", "dimensions": [ 14.75, 3.25, 8.0 ] },
-				{ "type": "cylinder", "dimensions": [ 4.25, 8.25 ] }
+				{ "shape": "cone", "dimensions": [ 14.75, 3.25, 8.0 ] },
+				{ "shape": "cylinder", "dimensions": [ 4.25, 8.25 ] }
 			],
 			"material": "metal",
 			"colours": [ "silver" ]
@@ -26,14 +26,14 @@
 			"parts": [
 			],
 			"internal_start": [
-				{ "type": "cylinder", "dimensions": [ 1.0, 5.25 ], "material": "metal" },
-				{ "type": "cylinder", "dimensions": [ 4.25, 7.25 ], "finish": "threaded"}
+				{ "shape": "cylinder", "dimensions": [ 1.0, 5.25 ], "material": "metal" },
+				{ "shape": "cylinder", "dimensions": [ 4.25, 7.25 ], "finish": "threaded"}
 			],
 			"internal_end": [
-				{ "type": "cylinder", "dimensions": [ 5.0, 7.25 ], "finish": "threaded"},
-				{ "type": "cylinder", "dimensions": [ 12.0, 6.0 ], "material": "plastic" },
-				{ "type": "cylinder", "dimensions": [ 86.5, 6.0 ], "material": "plastic", "colours":  [ "none" ] },
-				{ "type": "cylinder", "dimensions": [ 16.5, 3.25 ], "material": "metal", "internal_offset": -4.25 }
+				{ "shape": "cylinder", "dimensions": [ 5.0, 7.25 ], "finish": "threaded"},
+				{ "shape": "cylinder", "dimensions": [ 12.0, 6.0 ], "material": "plastic" },
+				{ "shape": "cylinder", "dimensions": [ 86.5, 6.0 ], "material": "plastic", "colours":  [ "none" ] },
+				{ "shape": "cylinder", "dimensions": [ 16.5, 3.25 ], "material": "metal", "internal_offset": -4.25 }
 			],
 			"material": "plastic",
 			"colours": [ "gold" ]
@@ -41,7 +41,7 @@
 		{
 			"type": "grip",
 			"parts": [
-				{ "type": "cylinder", "dimensions": [ 25.75, 8.25 ], "finish":  "knurled" }
+				{ "shape": "cylinder", "dimensions": [ 25.75, 8.25 ], "finish":  "knurled" }
 			],
 			"material": "metal",
 			"colours": [ "silver" ]
@@ -49,7 +49,7 @@
 		{
 			"type": "body",
 			"parts": [
-				{ "type": "hexagonal", "dimensions": [ 66.0, 8.25 ] }
+				{ "shape": "hexagonal", "dimensions": [ 66.0, 8.25 ] }
 			],
 			"material": "plastic",
 			"colours": [ "royalblue" ]
@@ -57,18 +57,19 @@
 		{
 			"type": "clip",
 			"parts": [
-				{ "type": "extra",
-					"dimensions": [ 41.5, 4.0, 4.0 ],
+				{ "shape": "cylinder", "dimensions": [ 6.0, 9.5 ] }
+			],
+			"extra": [
+				{ "dimensions": [ 41.5, 4.0, 4.0 ],
 					"offset":  [ -32, 4.25 ],
 					"parts": [
-						{ "curve-fill":  [ 0.425, -2.45, 7.0, -2.9, 5.0, 2.0 ] },
-						{ "line":  [ 0.0, -3.0, 33.5, -4.0 ] },
-						{ "line":  [ 0.0, -2.75, 33.5, -3.75 ] },
-						{ "line":  [ 33.5, -3.75, 38, -3.0 ] },
-						{ "curve":  [ 38, -3.0, 38, -0.5, 44.5, -2.0 ] }
+						{ "type": "curve-fill", "points": [ 0.425, -2.45, 7.0, -2.9, 5.0, 2.0 ] },
+						{ "type": "line", "points": [ 0.0, -3.0, 33.5, -4.0 ] },
+						{ "type": "line", "points": [ 0.0, -2.75, 33.5, -3.75 ] },
+						{ "type": "line", "points": [ 33.5, -3.75, 38, -3.0 ] },
+						{ "type": "curve",  "points": [ 38, -3.0, 38, -0.5, 44.5, -2.0 ] }
 					]
-				},
-				{ "type": "cylinder", "dimensions": [ 6.0, 9.5 ] }
+				}
 			],
 			"material": "plastic",
 			"colours": [ "silver" ]
@@ -76,8 +77,8 @@
 		{
 			"type": "tail",
 			"parts": [
-				{ "type": "cylinder", "dimensions": [ 4.5, 8.25 ] },
-				{ "type": "cylinder", "dimensions": [ 0.75, 8.25 ], "colours": [ "red" ], "material": "rubber" }
+				{ "shape": "cylinder", "dimensions": [ 4.5, 8.25 ] },
+				{ "shape": "cylinder", "dimensions": [ 0.75, 8.25 ], "colours": [ "red" ], "material": "rubber" }
 			],
 			"material": "plastic",
 			"colours": [ "royalblue" ]
@@ -85,7 +86,7 @@
 		{
 			"type": "indicator",
 			"parts": [
-				{ "type": "cylinder", "dimensions": [ 9.5, 8.25 ], "finish": "knurled" }
+				{ "shape": "cylinder", "dimensions": [ 9.5, 8.25 ], "finish": "knurled" }
 			],
 			"material": "plastic",
 			"colours": [ "silver" ]
@@ -93,7 +94,7 @@
 		{
 			"type": "foot",
 			"parts": [
-				{ "type": "cylinder", "dimensions": [ 2.5, 8.25 ] }
+				{ "shape": "cylinder", "dimensions": [ 2.5, 8.25 ] }
 			],
 			"material": "plastic",
 			"colours": [ "silver" ]
@@ -101,13 +102,13 @@
 		{
 			"type": "cap",
 			"parts": [
-				{ "type": "cylinder", "dimensions": [ 10.5, 5.5 ] },
-				{ "type": "convex", "dimensions": [ 1.25, 5.5 ], "offset": [ 2.25, 2.75 ] }
+				{ "shape": "cylinder", "dimensions": [ 10.5, 5.5 ] },
+				{ "shape": "convex", "dimensions": [ 1.25, 5.5 ], "offset": [ 2.25, 2.75 ] }
 			],
 			"internal_start": [
-				{ "type": "cylinder", "dimensions": [ 4.0, 5.5 ], "colours":  [ "black" ]  },
-				{ "type": "cylinder", "dimensions": [ 0.25, 5.0 ], "colours":  [ "black" ]  },
-				{ "type": "cylinder", "dimensions": [ 6.75, 5.5 ], "colours":  [ "silver" ] }
+				{ "shape": "cylinder", "dimensions": [ 4.0, 5.5 ], "colours":  [ "black" ]  },
+				{ "shape": "cylinder", "dimensions": [ 0.25, 5.0 ], "colours":  [ "black" ]  },
+				{ "shape": "cylinder", "dimensions": [ 6.75, 5.5 ], "colours":  [ "silver" ] }
 			],
 			"material": "plastic",
 			"colours": [ "silver" ]

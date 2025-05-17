@@ -180,13 +180,13 @@ export class PDFDatasheetRenderer {
 
 			componentData.push(componentInner);
 
-			for(const extraPart of component.extraParts) {
+			for(const extra of component.extras) {
 				let componentExtra:any[] = [];
 				componentExtra.push({ text: component.type + " (extra)", align: "right" });
 
-				componentExtra.push({text: `${formatToTwoPlaces(extraPart.extraLength)} mm`, align: "center", border: [ 1, 1, 1, 1 ], borderColor: "#aaa"});
-				componentExtra.push({text: `${formatToTwoPlaces(extraPart.extraHeight)} mm`, align: "center", colSpan: 2, border: [ 1, 1, 1, 1 ], borderColor: "#aaa" });
-				componentExtra.push({text: `${formatToTwoPlaces(extraPart.extraWidth)} mm`, align: "center", colSpan: 2, border: [ 1, 1, 1, 1 ], borderColor: "#aaa" });
+				componentExtra.push({text: `${formatToTwoPlaces(extra.length)} mm`, align: "center", border: [ 1, 1, 1, 1 ], borderColor: "#aaa"});
+				componentExtra.push({text: `${formatToTwoPlaces(extra.height)} mm`, align: "center", colSpan: 2, border: [ 1, 1, 1, 1 ], borderColor: "#aaa" });
+				componentExtra.push({text: `${formatToTwoPlaces(extra.width)} mm`, align: "center", colSpan: 2, border: [ 1, 1, 1, 1 ], borderColor: "#aaa" });
 
 				componentData.push(componentExtra);
 			}
@@ -245,16 +245,18 @@ export class PDFDatasheetRenderer {
 
 			materialsData.push(componentInner);
 
-			for(const extraPart of component.extraParts) {
-				let componentExtra:any[] = [];
-				componentExtra.push({ text: component.type + " (extra)", align: "right" });
-				componentExtra.push({ text: component.materials.join("\n"), align: "center" });
-				componentExtra.push({ text: this.getColours(component), align: "center" });
-				componentExtra.push({ text: this.getShape(component.extraParts), align: "left" });
-				componentExtra.push({ text: this.getFinish(component.extraParts), align: "left" });
-
-				materialsData.push(componentExtra);
-			}
+			// TODO
+			// for(const extra of component.extras) {
+			// 	let componentExtra:any[] = [];
+			// 	componentExtra.push({ text: component.type + " (extra)", align: "right" });
+			// 	componentExtra.push({ text: component.materials.join("\n"), align: "center" });
+			// 	componentExtra.push({ text: this.getColours(component), align: "center" });
+			// 	if()
+			// 	componentExtra.push({ text: this.getShape(component.extras), align: "left" });
+			// 	componentExtra.push({ text: this.getFinish(component.extras), align: "left" });
+			//
+			// 	materialsData.push(componentExtra);
+			// }
 
 		}
 		// @ts-ignore
@@ -777,7 +779,7 @@ export class PDFDatasheetRenderer {
 		let textArray:string[] = [];
 
 		for(const part of parts) {
-			const type: string = part.type;
+			const type: string = part.shape;
 			if(type === "extra") {
 				continue;
 			}

@@ -1,5 +1,7 @@
 // the height/width of the dimension marker
 import {Part} from "../model/Part.ts";
+import {Extra} from "../model/Extra.ts";
+import {ExtraPart} from "../model/ExtraPart.ts";
 
 const DIMENSION_MARKER_LENGTH = 22;
 
@@ -130,6 +132,69 @@ export function drawExtra(offsetX: number, offsetY: number, parts: Part[], strok
 					`Q${offsetX + (points[4] * 5)} ${offsetY + (points[5] * 5)} ` +
 					`${offsetX + (points[2] * 5)} ${offsetY + (points[3] * 5)} Z" ` +
 					`stroke-width="2" stroke="${strokeColour}" fill="${strokeColour}" stroke-linecap="round" />\n`
+		}
+	}
+	return(svgString);
+}
+
+export function drawExtraBackground(offsetX: number, offsetY: number, extraParts: ExtraPart[]):string {
+	let thisStrokeColour = "dimgray";
+
+	let svgString: string = "";
+	for(const extraPart of extraParts) {
+		const points: number[] = extraPart.points;
+		switch (extraPart.type) {
+			case "line":
+				svgString += `<line x1="${offsetX + (points[0] * 5)}" ` +
+						`y1="${offsetY + (points[1] * 5)+ 1}" ` +
+						`x2="${offsetX + (points[2] * 5)}" ` +
+						`y2="${offsetY + (points[3] * 5)+ 1}" ` +
+						`stroke-width="3" stroke="${thisStrokeColour}" fill="dimgray" stroke-linecap="round" />\n`;
+				break;
+			case "curve":
+				svgString += `<path d="M${offsetX + (points[0] * 5)} ${offsetY + (points[1] * 5) + 1} ` +
+					`Q${offsetX + (points[4] * 5)} ${offsetY + (points[5] * 5) + 1} ` +
+					`${offsetX + (points[2] * 5)} ${offsetY + (points[3] * 5) + 1}" ` +
+					`stroke-width="3" stroke="${thisStrokeColour}" fill="none" stroke-linecap="round" />\n`
+				break;
+			case "curve-fill": {
+				svgString += `<path d="M${offsetX + (points[0] * 5)} ${offsetY + (points[1] * 5)} ` +
+						`Q${offsetX + (points[4] * 5)} ${offsetY + (points[5] * 5) + 1} ` +
+						`${offsetX + (points[2] * 5)} ${offsetY + (points[3] * 5)} Z" ` +
+						`stroke-width="3" stroke="${thisStrokeColour}" fill="dimgray" stroke-linecap="round" />\n`
+			}
+		}
+	}
+
+	return(svgString);
+}
+
+export function drawExtraForeground(offsetX: number, offsetY: number, extraParts: ExtraPart[], fillColour: string):string {
+
+	let svgString: string = "<!--julian-->";
+
+	for(const extraPart of extraParts) {
+		const points: number[] = extraPart.points;
+		switch (extraPart.type) {
+			case "line":
+			svgString += `<line x1="${offsetX + (points[0] * 5)}" ` +
+					`y1="${offsetY + (points[1] * 5) + 1}" ` +
+					`x2="${offsetX + (points[2] * 5)}" ` +
+					`y2="${offsetY + (points[3] * 5) + 1}" ` +
+					`stroke-width="2" stroke="${fillColour}" fill="${fillColour}" stroke-linecap="round" />\n`;
+			break;
+			case "curve":
+			svgString += `<path d="M${offsetX + (points[0] * 5)} ${offsetY + (points[1] * 5) + 1} ` +
+					`Q${offsetX + (points[4] * 5)} ${offsetY + (points[5] * 5) + 1} ` +
+					`${offsetX + (points[2] * 5)} ${offsetY + (points[3] * 5) + 1}" ` +
+					`stroke-width="2" stroke="${fillColour}" fill="none" stroke-linecap="round" />\n`
+				break;
+			case "curve-fill":
+			svgString += `<path d="M${offsetX + (points[0] * 5)} ${offsetY + (points[1] * 5)} ` +
+					`Q${offsetX + (points[4] * 5)} ${offsetY + (points[5] * 5)} ` +
+					`${offsetX + (points[2] * 5)} ${offsetY + (points[3] * 5)} Z" ` +
+					`stroke-width="2" stroke="${fillColour}" fill="${fillColour}" stroke-linecap="round" />\n`
+				break;
 		}
 	}
 	return(svgString);

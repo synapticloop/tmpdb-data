@@ -86,11 +86,11 @@ export class SVGTechnicalComponentRenderer extends SVGRenderer {
 			offset += component.length * 5;
 
 			// now for extraParts
-			for(const extraPart of component.getExtraParts()) {
-				svgString += lineVerticalGuide(offset + extraPart.extraOffset[0] * 5 - (component.extraPartFirst ? component.length * 5 : 0),
+			for(const extra of component.extras) {
+				svgString += lineVerticalGuide(offset + extra.offset[0] * 5,
 					this.SVG_HEIGHT/2 - 80,
 					80);
-				svgString += lineVerticalGuide(offset + extraPart.extraOffset[0] * 5 + extraPart.extraLength*5 - (component.extraPartFirst ? component.length * 5 : 0),
+				svgString += lineVerticalGuide(offset + extra.offset[0] * 5 + extra.length*5,
 					this.SVG_HEIGHT/2 - 80,
 					80);
 			}
@@ -117,13 +117,13 @@ export class SVGTechnicalComponentRenderer extends SVGRenderer {
 			// now for the extra dimensions
 			// is the extra the first component, or the last
 			// now for extraParts
-			for(const extraPart of component.getExtraParts()) {
+			for(const extra of component.extras) {
 				// draw the straight-through line for guidance
 
-				svgString += dimensionsHorizontal(xOffset + extraPart.extraOffset[0] * 5,
+				svgString += dimensionsHorizontal(xOffset + extra.offset[0] * 5,
 					this.SVG_HEIGHT/2 - 80,
-					extraPart.extraLength * 5 - (component.extraPartFirst ? component.length * 5 : 0),
-					`${component.getType()} (extra)`,
+						extra.length * 5,
+					`${component.type} (extra)`,
 					TextOrientation.TOP,
 					true);
 			}

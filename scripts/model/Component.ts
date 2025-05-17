@@ -1,9 +1,16 @@
 import {Part} from "./Part.ts";
+import {Extra} from "./Extra.ts";
 
 export class Component {
 	parts: Part[] = [];
+	extras:Extra[] = [];
+
+	// the materials that this component is made out of
 	materials:string[] = [];
+	// the colours of this component
 	colours:string[] = [ "white" ];
+	// the type of this component
+	// TODO should be shape...
 	type:string = "unknown";
 
 	// the length of the component - which is when you are looking at it
@@ -17,13 +24,12 @@ export class Component {
 	maxHeight:number = 0;
 	minHeight:number = 0;
 
-	extraParts:Part[] = [];
-	extraPartFirst:boolean = false;
 	hasInternalStart:boolean = false;
 	hasInternalEnd:boolean = false;
 
 	internalStart:Part[] = [];
 	internalEnd:Part[] = [];
+
 	isHidden: boolean = false;
 
 	constructor(jsonObject:any) {
@@ -47,7 +53,6 @@ export class Component {
 		}
 
 		if(jsonObject.parts) {
-			let isFirst: boolean = true;
 			for(let part of jsonObject.parts) {
 				const thisPart = new Part(part, this.colours);
 
@@ -63,15 +68,6 @@ export class Component {
 						this.colours.push(colour);
 					}
 				}
-
-				if(thisPart.extraParts.length > 0) {
-					this.extraParts.push(thisPart);
-					if(isFirst) {
-						this.extraPartFirst = true;
-					}
-				}
-				isFirst = false;
-
 
 				let tempMaxWidth:number = thisPart.getMaxWidth();
 				if(tempMaxWidth >= this.maxWidth) {
@@ -94,6 +90,25 @@ export class Component {
 				}
 			}
 		}
+
+		if(jsonObject.extra) {
+			for(let extra of jsonObject.extra) {
+				const thisExtra: Extra = new Extra(extra, this.colours);
+
+				this.extras.push(thisExtra);
+
+				// if(thisExtra.material) {
+				// 	this.materials.push(thisExtra.material);
+				// }
+
+				// if(thisExtra.colours) {
+				// 	for(const colour of extraPart.colours) {
+				// 		this.colours.push(colour);
+				// 	}
+				// }
+			}
+		}
+
 		if(this.parts.length === 0) {
 			this.isHidden = true;
 		}
@@ -111,22 +126,5 @@ export class Component {
 				this.internalEnd.push(thisInternal);
 			}
 		}
-
-	}
-
-	getMaxHeight() {
-		return(this.maxHeight);
-	}
-
-	getMaxWidth() {
-		return(this.maxWidth);
-	}
-
-	getType() {
-		return(this.type);
-	}
-
-	getExtraParts() {
-		return(this.extraParts);
 	}
 }

@@ -81,12 +81,12 @@ export class Pencil {
 				this.colourComponents = thisComponent.colours;
 			}
 
-			let tempWidth:number = thisComponent.getMaxWidth();
+			let tempWidth:number = thisComponent.maxWidth;
 			if(tempWidth > this.maxWidth) {
 				this.maxWidth = tempWidth;
 			}
 
-			let tempHeight: number = thisComponent.getMaxHeight();
+			let tempHeight: number = thisComponent.maxHeight;
 			if(tempHeight > this.maxHeight) {
 				this.maxHeight = tempHeight;
 			}

@@ -16,7 +16,7 @@ export class OpenSCADRenderer {
 			for(const part of component.parts) {
 				scadString += `translate([0, 0, ${x}]) \n`
 				scadString += `  color("${component.colours[0]}") \n`
-				switch (part.type) {
+				switch (part.shape) {
 					case "cylinder":
 						scadString += `    cylinder(${part.length}, ${part.startHeight}, ${part.endHeight}, $fn=360);\n`;
 						x = x + part.length;

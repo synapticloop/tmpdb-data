@@ -1,19 +1,20 @@
 import {Part} from "../model/Part.ts";
 import {
 	dimensionsHorizontal,
-	drawExtra,
+	drawExtra, drawExtraBackground, drawExtraForeground,
 	drawOutlineCircle,
 	drawShapeDetails,
 	drawText,
 	drawTextBold, drawTextBoldCentred,
 	lineHorizontal, lineHorizontalGuide,
 	lineVertical, lineVerticalGuide,
-	rectangle,
+	rectangle, renderBackExtra,
 	target, TextOrientation
 } from "../utils/svg-helper.ts";
 import {Component} from "../model/Component.ts";
 import {Pencil} from "../model/Pencil.ts";
 import {formatToTwoPlaces} from "../utils/formatter.ts";
+import {Extra} from "../model/Extra.ts";
 
 export abstract class SVGRenderer {
 	protected pencil:Pencil;
@@ -238,7 +239,7 @@ export abstract class SVGRenderer {
 
 		if(part.taperStart) {
 			// now we get to draw the taper
-			switch (part.type) {
+			switch (part.shape) {
 				case "hexagonal":
 					if(xOffsetStart < 0) {
 						svgString += `<path d="M ${startX + 0.65} ${midY - part.endHeight / 2 * 5} ` +
@@ -294,13 +295,13 @@ export abstract class SVGRenderer {
 			// now for the extra dimensions
 			// is the extra the first component, or the last
 			// now for extraParts
-			for(const extraPart of component.getExtraParts()) {
+			for(const extra of component.extras) {
 				// draw the straight-through line for guidance
 
-				svgString += dimensionsHorizontal(startX + extraPart.extraOffset[0] * 5,
+				svgString += dimensionsHorizontal(startX + extra.offset[0] * 5,
 					midY - 80,
-					extraPart.extraLength * 5,
-					`${formatToTwoPlaces(extraPart.extraLength)} mm\n${component.getType()} (extra)`,
+					extra.length * 5,
+					`${formatToTwoPlaces(extra.length)} mm\n${component.type} (extra)`,
 					TextOrientation.CENTER,
 					true);
 			}
@@ -321,11 +322,11 @@ export abstract class SVGRenderer {
 			}
 
 			// extra parts are always rendered first
-			for(const extraPart of component.extraParts) {
+			for(const extra of component.extras) {
 				svgString += dimensionsHorizontal(
-					xOffset + extraPart.extraOffset[0] * 5,
+					xOffset + extra.offset[0] * 5,
 					this._height/2 + 80,
-					extraPart.extraLength * 5,
+					extra.length * 5,
 					`${component.materials.join("\n")}`,
 					TextOrientation.BOTTOM,
 					false);
@@ -349,6 +350,7 @@ export abstract class SVGRenderer {
 		let svgString: string = "";
 		let startX: number = this._width/2 - (this.pencil.totalLength*5/2);
 		let midY: number = this._height/2;
+
 		if(null != midYOverride) {
 			midY = midYOverride;
 		}
@@ -357,6 +359,7 @@ export abstract class SVGRenderer {
 
 		for (let component of this.pencil.components) {
 			colour = this.getMappedColour(component, colour, colourIndex);
+
 
 			for(let part of component.parts) {
 				svgString += this.renderPart(startX, midY, component, part, colourIndex, colour);
@@ -376,6 +379,44 @@ export abstract class SVGRenderer {
 			}
 		}
 
+		return(svgString);
+	}
+
+	protected renderExtraComponentsBackground(midYOverride: number):string {
+		let svgString: string = "";
+		let startX: number = this._width/2 - (this.pencil.totalLength*5/2);
+		for (const component of this.pencil.components) {
+			// extras are always rendered first - we render
+			// the background for it
+			for(const extra of component.extras) {
+				svgString += drawExtraBackground(startX + extra.offset[0] * 5, midYOverride - extra.offset[1] * 5, extra.extraParts);
+				break;
+			}
+
+			for(let part of component.parts) {
+				startX += part.length * 5;
+			}
+		}
+		return(svgString);
+	}
+
+	protected renderExtraComponentsForeground(colourIndex:number, midYOverride: number):string {
+		let colour = this.getMappedColour(component, colour, colourIndex);
+
+		let svgString: string = "";
+		let startX: number = this._width/2 - (this.pencil.totalLength*5/2);
+		for (const component of this.pencil.components) {
+			// extras are always rendered first - we render
+			// the background for it
+			for(const extra of component.extras) {
+				svgString += drawExtraForeground(startX + extra.offset[0] * 5, midYOverride - extra.offset[1] * 5, extra.extraParts, "white");
+				break;
+			}
+
+			for(let part of component.parts) {
+				startX += part.length * 5;
+			}
+		}
 		return(svgString);
 	}
 
@@ -409,7 +450,7 @@ export abstract class SVGRenderer {
 			}
 		}
 
-		switch (part.type) {
+		switch (part.shape) {
 			case "cylinder":
 			case "hexagonal":
 			case "octagonal":
@@ -452,12 +493,9 @@ export abstract class SVGRenderer {
 					`${startX + part.internalOffset * 5} ${midY + (part.startHeight / 2 * 5)}" ` +
 					`stroke-width="0.5" stroke="${strokeColour}" stroke-linejoin="round" fill="${colour}"/>\n`
 				break;
-			case "extra":
-				svgString += drawExtra(startX + part.extraOffset[0] * 5, midY - part.extraOffset[1] * 5, part.extraParts, colour);
-				break;
 		}
 
-		switch (part.type) {
+		switch (part.shape) {
 			case "hexagonal":
 				svgString += drawShapeDetails(startX + part.internalOffset * 5, midY, (part.length) * 5);
 				break;
@@ -582,11 +620,11 @@ export abstract class SVGRenderer {
 			offset += component.length * 5;
 
 			// now for extraParts
-			for(const extraPart of component.getExtraParts()) {
-				svgString += lineVerticalGuide(offset + extraPart.extraOffset[0] * 5 - (component.extraPartFirst ? component.length * 5 : 0),
+			for(const extra of component.extras) {
+				svgString += lineVerticalGuide(offset + extra.offset[0] * 5,
 						this._height/2 - 80,
 						80);
-				svgString += lineVerticalGuide(offset + extraPart.extraOffset[0] * 5 + extraPart.extraLength*5 - (component.extraPartFirst ? component.length * 5 : 0),
+				svgString += lineVerticalGuide(offset + extra.offset[0] * 5 + extra.length * 5,
 						this._height/2 - 80,
 						80);
 			}

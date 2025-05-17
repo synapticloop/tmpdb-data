@@ -15,6 +15,7 @@ import {
 	TextOrientation
 } from "../utils/svg-helper.ts";
 import {Part} from "../model/Part.ts";
+import {Extra} from "../model/Extra.ts";
 
 export class SVGTechnicalRenderer extends SVGRenderer {
 	SVG_WIDTH: number = 1500;
@@ -87,17 +88,17 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 		let hasExtra = false;
 		// now for the extra side components guidelines
 		for (let component of this.pencil.components) {
-			for(const extraPart of component.getExtraParts()) {
+			for(const extra of component.extras) {
 				// draw the straight-through line for guidance top of the extra parts
-				const y = this.SVG_HEIGHT/2 - extraPart.extraOffset[1] * 5 - (extraPart.extraHeight) * 5;
+				const y = this.SVG_HEIGHT/2 - extra.offset[1] * 5 - (extra.height) * 5;
 
 				svgString += lineHorizontalGuide(100, y, this.SVG_WIDTH - 200);
 				// draw the straight-through line for guidance bottom of the extra parts
-				svgString += lineHorizontalGuide(160, this.SVG_HEIGHT/2 - extraPart.extraOffset[1] * 5, this.SVG_WIDTH - 260);
+				svgString += lineHorizontalGuide(160, this.SVG_HEIGHT/2 - extra.offset[1] * 5, this.SVG_WIDTH - 260);
 				// guidelines for the extra width - left side
-				svgString += lineVerticalGuide(160 - extraPart.extraWidth/2 * 5, this.SVG_HEIGHT/2 - 70, 70);
+				svgString += lineVerticalGuide(160 - extra.width/2 * 5, this.SVG_HEIGHT/2 - 70, 70);
 				// guidelines for the extra width - right side
-				svgString += lineVerticalGuide(160 + extraPart.extraWidth/2 * 5, this.SVG_HEIGHT/2 - 70, 70);
+				svgString += lineVerticalGuide(160 + extra.width/2 * 5, this.SVG_HEIGHT/2 - 70, 70);
 
 				hasExtra = true;
 			}
@@ -128,11 +129,11 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 			// vertical line
 			svgString += lineVerticalGuide(offset, this.SVG_HEIGHT/2 - 120, 240);
 			// now for extraParts
-			for(const extraPart of component.getExtraParts()) {
-				svgString += lineVerticalGuide(offset + extraPart.extraOffset[0] * 5,
+			for(const extra of component.extras) {
+				svgString += lineVerticalGuide(offset + extra.offset[0] * 5,
 								this.SVG_HEIGHT/2 - 80,
 								160);
-				svgString += lineVerticalGuide(offset + extraPart.extraOffset[0] * 5 + extraPart.extraLength * 5,
+				svgString += lineVerticalGuide(offset + extra.offset[0] * 5 + extra.length * 5,
 								this.SVG_HEIGHT/2 - 80,
 								160);
 			}
@@ -152,16 +153,16 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 		let extrasOffsetHeight: number = 0;
 		// do we have any extras?
 
-		let thisExtraPart: Part = null;
+		let thisExtraPart: Extra = null;
 		for(const component of this.pencil.components) {
-			if(component.extraParts.length > 0){
+			if(component.extras.length > 0){
 
-				for(const extraPart of component.extraParts){
-					if(extraPart.extraHeight > extrasHeight){
-						extrasHeight = extraPart.extraHeight;
-						extrasOffset = extraPart.extraOffset[1];
+				for(const extra of component.extras){
+					if(extra.height > extrasHeight){
+						extrasHeight = extra.height;
+						extrasOffset = extra.offset[1];
 						extrasOffsetHeight = component.maxHeight/2;
-						thisExtraPart = extraPart;
+						thisExtraPart = extra;
 					}
 				}
 			}
@@ -171,17 +172,17 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 		// into account whether there is an extra part
 		if(thisExtraPart) {
 			// draw the dimensions for the top part of the extra
-			svgString += dimensionsHorizontal(160 - thisExtraPart.extraWidth/2 * 5,
+			svgString += dimensionsHorizontal(160 - thisExtraPart.width/2 * 5,
 				this.SVG_HEIGHT/2 - 60,
-				thisExtraPart.extraWidth * 5,
-				`${(Math.round((thisExtraPart.extraWidth) * 100) / 100).toFixed(2)} mm`,
+				thisExtraPart.width * 5,
+				`${(Math.round((thisExtraPart.width) * 100) / 100).toFixed(2)} mm`,
 				TextOrientation.TOP,
 				true);
 
 			svgString += dimensionsVertical(222,
 				this.SVG_HEIGHT/2 - extrasOffset * 5 - extrasHeight * 5,
 				extrasHeight * 5,
-				`${(Math.round((thisExtraPart.extraHeight) * 100) / 100).toFixed(2)} mm`,
+				`${(Math.round((thisExtraPart.height) * 100) / 100).toFixed(2)} mm`,
 				TextOrientation.RIGHT);
 
 			svgString += dimensionsVertical(210,
@@ -277,9 +278,24 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 		for(const component of this.pencil.components) {
 			colour = this.getMappedColour(component, colour, colourIndex);
 
+			// component.extraParts.reverse();
+			// for(const extraPart of component.extraParts) {
+			// 	svgString += renderBackExtra(
+			// 			startX,
+			// 			midY,
+			// 			extraPart.offset[0],
+			// 			extraPart.offset[1],
+			// 			extraPart.width,
+			// 			extraPart,
+			// 			colour);
+			// 	break;
+			//
+			// }
+			// component.extraParts.reverse();
+
 			component.parts.reverse();
 			for (let part of component.parts) {
-				switch (part.type) {
+				switch (part.shape) {
 					case "cylinder":
 						svgString += circle(startX, midY, (part.startHeight / 2) * 5, "1", "dimgray", colour);
 						break;
@@ -292,18 +308,6 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 						break;
 					case "octagonal":
 						svgString += drawOutlineOctagon(startX, midY, part.startHeight, colour);
-						break;
-					case "extra":
-						part.extraParts.reverse();
-						svgString += renderBackExtra(
-							startX,
-							midY,
-							part.extraOffset[0],
-							part.extraOffset[1],
-							part.extraWidth,
-							part.extraParts,
-							colour);
-						part.extraParts.reverse();
 						break;
 				}
 			}
@@ -344,7 +348,7 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 			colour = this.getMappedColour(component, colour, colourIndex);
 
 			for (let part of component.parts) {
-				switch (part.type) {
+				switch (part.shape) {
 					case "cylinder":
 						svgString += circle(startX, midY, (part.startHeight / 2) * 5, "1", "dimgray", colour);
 						break;
@@ -357,18 +361,6 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 						break;
 					case "octagonal":
 						svgString += drawOutlineOctagon(startX, midY, part.startHeight, colour);
-						break;
-					case "extra":
-						part.extraParts.reverse();
-						svgString += renderBackExtra(
-							startX,
-							midY,
-							part.extraOffset[0],
-							part.extraOffset[1],
-							part.extraWidth,
-							part.extraParts,
-							colour);
-						part.extraParts.reverse();
 						break;
 				}
 			}
