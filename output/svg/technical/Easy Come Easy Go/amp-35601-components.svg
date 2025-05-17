@@ -48,10 +48,10 @@
 <line x1="839.375" y1="130" x2="863.125" y2="130" stroke="black" stroke-width="1" />
 <line x1="863.125" y1="119" x2="863.125" y2="141" stroke="black" stroke-width="1" />
 <text x="851.25" y="111" font-size="1.2em" transform="rotate(-90, 851.25, 111)" font-weight="bold" text-anchor="start" dominant-baseline="central" fill="black"><tspan x="851.25" dy="0">clip</tspan></text>
-<line x1="668.125" y1="159" x2="668.125" y2="181" stroke="black" stroke-width="1" />
-<line x1="668.125" y1="170" x2="870.625" y2="170" stroke="black" stroke-width="1" />
-<line x1="870.625" y1="159" x2="870.625" y2="181" stroke="black" stroke-width="1" />
-<text x="769.375" y="151" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="black"><tspan x="769.375" dy="0">clip (extra)</tspan></text>
+<line x1="644.375" y1="159" x2="644.375" y2="181" stroke="black" stroke-width="1" />
+<line x1="644.375" y1="170" x2="846.875" y2="170" stroke="black" stroke-width="1" />
+<line x1="846.875" y1="159" x2="846.875" y2="181" stroke="black" stroke-width="1" />
+<text x="745.625" y="151" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="black"><tspan x="745.625" dy="0">clip (extra)</tspan></text>
 <line x1="863.125" y1="119" x2="863.125" y2="141" stroke="black" stroke-width="1" />
 <line x1="863.125" y1="130" x2="880.625" y2="130" stroke="black" stroke-width="1" />
 <line x1="880.625" y1="119" x2="880.625" y2="141" stroke="black" stroke-width="1" />
@@ -92,4 +92,5 @@
 <rect x="948.125" y="228.75" width="6.25" height="42.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
 <path d="M954.375 228.75 Q961.875 250 954.375 271.25" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white"/>
 <path d="M 345.625 230 C 339.375 235, 339.375 245, 345.625 250" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="white" /><path d="M 345.625 270 C 339.375 265, 339.375 255, 345.625 250" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="white" /></g><text x="50%" y="480" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb) // Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
+<text x="1190" y="490" font-size="0.5em" font-weight="bold" text-anchor="end" dominant-baseline="middle"></text>
 </svg>

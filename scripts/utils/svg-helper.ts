@@ -1,4 +1,6 @@
 // the height/width of the dimension marker
+import {Part} from "../model/Part.ts";
+
 const DIMENSION_MARKER_LENGTH = 22;
 
 export function drawTextBoldCentred(text: string, x: number, y:number, fontSize:string) {
@@ -79,7 +81,7 @@ export function drawShapeDetails(xStart, y, width) {
 			`stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>\n`);
 }
 
-export function drawExtra(offsetX, offsetY, parts, strokeColour) {
+export function drawExtra(offsetX: number, offsetY: number, parts: Part[], strokeColour: string):string {
 	let thisStrokeColour = "black";
 	if(strokeColour === "black") {
 		thisStrokeColour = "dimgray";
