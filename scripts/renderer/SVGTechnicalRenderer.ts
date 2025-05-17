@@ -48,7 +48,7 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 		svgString += super.renderMaterialList();
 
 		// first up the grey guidelines
-		svgString += this.renderGuidelines();
+		svgString += this.renderGuidelinesFull();
 
 		// render the section titles (front/side/back)
 		svgString += super.renderSectionTitles();
@@ -79,6 +79,70 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 		return(svgString);
 	}
 
+	private renderGuidelinesFull(): string {
+		let svgString:string = "";
+		// now we are going to go through each of the components and draw the shapes
+		let offset:number;
+
+		let hasExtra = false;
+		// now for the extra side components guidelines
+		for (let component of this.pencil.components) {
+			for(const extraPart of component.getExtraParts()) {
+				// draw the straight-through line for guidance top of the extra parts
+				const y = this.SVG_HEIGHT/2 - extraPart.extraOffset[1] * 5 - (extraPart.extraHeight) * 5;
+
+				svgString += lineHorizontalGuide(100, y, this.SVG_WIDTH - 200);
+				// draw the straight-through line for guidance bottom of the extra parts
+				svgString += lineHorizontalGuide(160, this.SVG_HEIGHT/2 - extraPart.extraOffset[1] * 5, this.SVG_WIDTH - 260);
+				// guidelines for the extra width - left side
+				svgString += lineVerticalGuide(160 - extraPart.extraWidth/2 * 5, this.SVG_HEIGHT/2 - 70, 70);
+				// guidelines for the extra width - right side
+				svgString += lineVerticalGuide(160 + extraPart.extraWidth/2 * 5, this.SVG_HEIGHT/2 - 70, 70);
+
+				hasExtra = true;
+			}
+		}
+
+		// FRONT VIEW GUIDELINES
+
+		// top horizontal line
+		svgString += lineHorizontalGuide((hasExtra ? 160 : 100), this.SVG_HEIGHT/2 - this.pencil.maxHeight/2 * 5, this.SVG_WIDTH - 100 - (hasExtra ? 160 : 100));
+
+		// bottom line of full pencil
+		svgString += lineHorizontalGuide(100, this.SVG_HEIGHT/2 + this.pencil.maxHeight/2 * 5, this.SVG_WIDTH - 200);
+
+		// Vertical line of width - left
+		svgString += lineVerticalGuide(160 - this.pencil.maxWidth/2 * 5,
+				this.SVG_HEIGHT/2,
+				20 + this.pencil.maxHeight/2 * 5);
+		// Vertical line of width - right
+		svgString += lineVerticalGuide(160 + this.pencil.maxWidth/2 * 5,
+				this.SVG_HEIGHT/2,
+				20 + this.pencil.maxHeight/2 * 5);
+
+		// SIDE VIEW GUIDELINES FOR THE COMPONENTS
+		// reset the offset to redraw
+		offset = this.SVG_WIDTH/2 - this.pencil.totalLength * 5/2;
+
+		for (let component of this.pencil.components) {
+			// vertical line
+			svgString += lineVerticalGuide(offset, this.SVG_HEIGHT/2 - 120, 240);
+			// now for extraParts
+			for(const extraPart of component.getExtraParts()) {
+				svgString += lineVerticalGuide(offset + extraPart.extraOffset[0] * 5,
+								this.SVG_HEIGHT/2 - 80,
+								160);
+				svgString += lineVerticalGuide(offset + extraPart.extraOffset[0] * 5 + extraPart.extraLength * 5,
+								this.SVG_HEIGHT/2 - 80,
+								160);
+			}
+
+			offset += component.length * 5;
+		}
+
+		svgString += lineVerticalGuide(offset, this.SVG_HEIGHT/2 - 88 - this.pencil.maxHeight/2 * 5, 208);
+		return(svgString);
+	}
 	private renderFrontDimensions(): string {
 		let svgString: string = "";
 		// THIS IS THE FRONT VIEW

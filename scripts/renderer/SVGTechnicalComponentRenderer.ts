@@ -51,7 +51,7 @@ export class SVGTechnicalComponentRenderer extends SVGRenderer {
 		svgString += super.renderOverviewText(false);
 
 		// first up the grey guidelines
-		svgString += super.renderGuidelines();
+		svgString += this.renderGuidelinesFull();
 
 		// now we get into the dimensions
 
@@ -67,7 +67,7 @@ export class SVGTechnicalComponentRenderer extends SVGRenderer {
 		return(svgString);
 	}
 
-	private renderGuidelines(): string {
+	private renderGuidelinesFull(): string {
 		let svgString:string = "";
 		// now we are going to go through each of the components and draw the shapes
 		let offset:number;
@@ -77,7 +77,7 @@ export class SVGTechnicalComponentRenderer extends SVGRenderer {
 		// reset the offset to redraw
 		offset = this.SVG_WIDTH/2 - this.pencil.totalLength*5/2;
 
-		svgString += lineVerticalGuide(offset, this.SVG_HEIGHT/2 - 88 - this.pencil.maxHeight/2 * 5, 140 + this.pencil.maxHeight/2 * 5);
+		svgString += lineVerticalGuide(offset, this.SVG_HEIGHT/2 - 88 - this.pencil.maxHeight/2 * 5, 88 + this.pencil.maxHeight/2 * 5);
 
 		for (let component of this.pencil.components) {
 			// vertical line
@@ -96,7 +96,7 @@ export class SVGTechnicalComponentRenderer extends SVGRenderer {
 			}
 		}
 
-		svgString += lineVerticalGuide(offset, this.SVG_HEIGHT/2 - 88 - this.pencil.maxHeight/2 * 5, 140 + this.pencil.maxHeight/2 * 5);
+		svgString += lineVerticalGuide(offset, this.SVG_HEIGHT/2 - 88 - this.pencil.maxHeight/2 * 5, 88 + this.pencil.maxHeight/2 * 5);
 		return(svgString);
 	}
 

@@ -568,64 +568,31 @@ export abstract class SVGRenderer {
 		// now we are going to go through each of the components and draw the shapes
 		let offset:number;
 
-		let hasExtra = false;
-		// now for the extra side components guidelines
-		for (let component of this.pencil.components) {
-			for(const extraPart of component.extraParts) {
-				// draw the straight-through line for guidance top of the extra parts
-				const y = this._width/2 - extraPart.extraOffset[1] * 5 - (extraPart.extraHeight) * 5;
-
-				svgString += lineHorizontalGuide(100, y, this._width - 200);
-				// draw the straight-through line for guidance bottom of the extra parts
-				svgString += lineHorizontalGuide(160, this._height/2 - extraPart.extraOffset[1] * 5, this._width - 260);
-				// guidelines for the extra width - left side
-				svgString += lineVerticalGuide(160 - + extraPart.extraWidth/2 * 5, this._height/2 - 70, 70);
-				// guidelines for the extra width - right side
-				svgString += lineVerticalGuide(160 + extraPart.extraWidth/2 * 5, this._height/2 - 70, 70);
-
-				hasExtra = true;
-			}
-		}
-
-		// FRONT VIEW GUIDELINES
-
-		// top horizontal line
-		svgString += lineHorizontalGuide((hasExtra ? 160 : 100), this._height/2 - this.pencil.maxHeight/2 * 5, this._width - 100 - (hasExtra ? 160 : 100));
-
-		// bottom line of full pencil
-		svgString += lineHorizontalGuide(100, this._height/2 + this.pencil.maxHeight/2 * 5, this._width - 200);
-
-		// Vertical line of width - left
-		svgString += lineVerticalGuide(160 - this.pencil.maxWidth/2 * 5,
-				this._height/2,
-				20 + this.pencil.maxHeight/2 * 5);
-		// Vertical line of width - right
-		svgString += lineVerticalGuide(160 + this.pencil.maxWidth/2 * 5,
-				this._height/2,
-				20 + this.pencil.maxHeight/2 * 5);
 
 		// SIDE VIEW GUIDELINES FOR THE COMPONENTS
 		// reset the offset to redraw
-		offset = this._height/2 - this.pencil.totalLength * 5/2;
+		offset = this._width/2 - this.pencil.totalLength*5/2;
 
+		svgString += lineVerticalGuide(offset, this._height/2 - 88 - this.pencil.maxHeight/2 * 5, 140 + this.pencil.maxHeight/2 * 5);
 
 		for (let component of this.pencil.components) {
 			// vertical line
-			svgString += lineVerticalGuide(offset, this._height/2 - 120, 240);
+			svgString += lineVerticalGuide(offset, this._height/2 - 120, 120);
+
+			offset += component.length * 5;
 
 			// now for extraParts
 			for(const extraPart of component.getExtraParts()) {
-				svgString += lineVerticalGuide(offset + extraPart.extraOffset[0] * 5,
+				svgString += lineVerticalGuide(offset + extraPart.extraOffset[0] * 5 - (component.extraPartFirst ? component.length * 5 : 0),
 						this._height/2 - 80,
-						160);
-				svgString += lineVerticalGuide(offset + extraPart.extraOffset[0] * 5 + extraPart.extraLength * 5,
+						80);
+				svgString += lineVerticalGuide(offset + extraPart.extraOffset[0] * 5 + extraPart.extraLength*5 - (component.extraPartFirst ? component.length * 5 : 0),
 						this._height/2 - 80,
-						160);
+						80);
 			}
-			offset += component.length * 5;
 		}
 
-		svgString += lineVerticalGuide(offset, this._height/2 - 88 - this.pencil.maxHeight/2 * 5, 208);
+		svgString += lineVerticalGuide(offset, this._height/2 - 88 - this.pencil.maxHeight/2 * 5, 140 + this.pencil.maxHeight/2 * 5);
 		return(svgString);
 	}
 

@@ -57,18 +57,18 @@
 		{
 			"type": "clip",
 			"parts": [
-				{ "type": "cylinder", "dimensions": [ 6.0, 9.5 ] },
 				{ "type": "extra",
 					"dimensions": [ 41.5, 4.0, 4.0 ],
-					"offset":  [ -38.0, 4.25 ],
+					"offset":  [ -32, 4.25 ],
 					"parts": [
 						{ "curve-fill":  [ 0.425, -2.45, 7.0, -2.9, 5.0, 2.0 ] },
 						{ "line":  [ 0.0, -3.0, 33.5, -4.0 ] },
 						{ "line":  [ 0.0, -2.75, 33.5, -3.75 ] },
 						{ "line":  [ 33.5, -3.75, 38, -3.0 ] },
-						{ "curve":  [ 38, -3.0, 38, -0.5, 40.5, -2.0 ] }
+						{ "curve":  [ 38, -3.0, 38, -0.5, 44.5, -2.0 ] }
 					]
-				}
+				},
+				{ "type": "cylinder", "dimensions": [ 6.0, 9.5 ] }
 			],
 			"material": "plastic",
 			"colours": [ "silver" ]

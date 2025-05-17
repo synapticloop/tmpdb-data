@@ -50,6 +50,7 @@ export class Component {
 			let isFirst: boolean = true;
 			for(let part of jsonObject.parts) {
 				const thisPart = new Part(part, this.colours);
+
 				this.parts.push(thisPart);
 				this.length += thisPart.length;
 

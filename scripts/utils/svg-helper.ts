@@ -201,8 +201,8 @@ export function lineHorizontal(x: number, y: number, width: number, strokeWidth:
 	return(svgString);
 }
 
-export function lineVerticalGuide(x: number, y: number, height: number): string {
-	return(lineVertical(x, y, height, "1", "#cfcfcf"));
+export function lineVerticalGuide(x: number, y: number, height: number, strokeWidth:string="1"): string {
+	return(lineVertical(x, y, height, strokeWidth, "#cfcfcf"));
 }
 
 export function circle(x: number, y: number, radius: number, strokeWidth: string, strokeColour: string, fillColour:String="none"): string {
