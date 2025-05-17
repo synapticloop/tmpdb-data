@@ -1,7 +1,11 @@
 import {Pencil} from "../model/Pencil.ts";
 import {SVGRenderer} from "./SVGRenderer.ts";
 
+/**
+ * Render a single pencil
+ */
 export class SVGPencilRenderer extends SVGRenderer {
+	// TODO remove - put into constructor
 	SVG_WIDTH: number = 1000;
 	SVG_HEIGHT: number = 200;
 

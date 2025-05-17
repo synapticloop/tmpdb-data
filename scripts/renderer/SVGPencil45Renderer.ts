@@ -1,7 +1,11 @@
 import {Pencil} from "../model/Pencil.ts";
 import {SVGRenderer} from "./SVGRenderer.ts";
 
+/**
+ * Render a single pencil rotated at an angle of -45 degrees
+ */
 export class SVGPencil45Renderer extends SVGRenderer {
+	// TODO - put into the super class
 	SVG_WIDTH: number = 1000;
 	SVG_HEIGHT: number = 1000;
 

@@ -1,6 +1,9 @@
 import {Pencil} from "../model/Pencil.ts";
 import {SVGRenderer} from "./SVGRenderer.ts";
 
+/**
+ * Render all the colour variants of a pencil
+ */
 export class SVGPencilAllRenderer extends SVGRenderer {
 	SVG_WIDTH:number = 1000;
 	SVG_HEIGHT:number = 200;
@@ -35,6 +38,5 @@ export class SVGPencilAllRenderer extends SVGRenderer {
 
 		svgString += this.getSvgEnd(1000, this.SVG_HEIGHT);
 		return(svgString);
-
 	}
 }
