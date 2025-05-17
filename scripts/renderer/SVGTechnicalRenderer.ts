@@ -79,66 +79,6 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 		return(svgString);
 	}
 
-	private renderPencilColours(): string {
-		let svgString:string = "";
-		// lets draw the pencil colours
-
-		let colourOffset:number = this.SVG_WIDTH - 60;
-
-		svgString += `<text ` +
-			`x="${colourOffset + 40}" ` +
-			`y="30" ` +
-			`font-size="1.6em" font-weight="bold" text-anchor="end" dominant-baseline="central">` +
-			`Colour variants of the ${this.pencil.colourComponent}` +
-			`</text>\n`
-
-		for(let colourComponent of this.pencil.colourComponents) {
-			let fillColour = colourComponent;
-
-			if (this.pencil.colourMap[colourComponent]) {
-				fillColour = this.pencil.colourMap[colourComponent];
-			}
-
-			svgString += `<rect x="${colourOffset}" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="${fillColour}" />\n`;
-			svgString += `<text x="${colourOffset + 20}" ` +
-				`y="100" ` +
-				`transform="rotate(-90, ${colourOffset + 20}, 100)" ` +
-				`font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">` +
-				`${colourComponent}` +
-				`</text>\n`
-
-			colourOffset -= 60;
-		}
-
-		return(svgString);
-	}
-
-	private renderMaterialList(): string {
-		let svgString:string = "";
-
-		let offset:number = 136;
-		svgString += `<text ` +
-			`x="30" ` +
-			`y="${offset}" ` +
-			`font-size="1.2em" font-weight="bold" text-anchor="start" dominant-baseline="central">` +
-			`Materials:` +
-			`</text>\n`
-
-		offset += 20;
-
-		for(const material of this.pencil.materials) {
-			svgString += `<text ` +
-				`x="50" ` +
-				`y="${offset}" ` +
-				`font-size="1.2em" text-anchor="start" dominant-baseline="central">` +
-				` - ${material}` +
-				`</text>\n`
-
-			offset += 20;
-		}
-		return(svgString);
-	}
-
 	private renderGuidelines(): string {
 		let svgString:string = "";
 		// now we are going to go through each of the components and draw the shapes
@@ -202,17 +142,6 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 		}
 
 		svgString += lineVerticalGuide(offset, this.SVG_HEIGHT/2 - 88 - this.pencil.maxHeight/2 * 5, 208);
-		return(svgString);
-	}
-
-	private renderSectionTitles(): string {
-		let svgString: string = "";
-		// Front view heading
-		svgString += drawTextBoldCentred("Front", 160, this.SVG_HEIGHT - 60, "1.8em");
-		// Side View Heading
-		svgString += drawTextBoldCentred("Side view", this.SVG_WIDTH/2, this.SVG_HEIGHT - 60, "1.8em");
-		// Back View Heading
-		svgString += drawTextBoldCentred("Back", this.SVG_WIDTH-100, this.SVG_HEIGHT - 60, "1.8em");
 		return(svgString);
 	}
 
