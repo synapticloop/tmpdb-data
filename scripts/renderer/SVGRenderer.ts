@@ -350,20 +350,12 @@ export abstract class SVGRenderer {
 
 
 		for (let component of this.pencil.components) {
-			colour = this.getMappedColour(component, colour, colourIndex);
-
-			if(component.extras.length !== 0) {
-				svgString += this.renderExtraComponentsBackground(midYOverride, colourIndex);
-			}
+			colour = this.getMappedColourOverride(component.colours, colourIndex, colour);
 
 			for(let part of component.parts) {
 				svgString += this.renderPart(startX, midY, component, part, colourIndex, colour);
 				startX += part.length * 5;
 			}
-			if(component.extras.length !== 0) {
-				svgString += this.renderExtraComponentsForeground(colourIndex, midYOverride);
-			}
-
 		}
 
 
@@ -371,7 +363,7 @@ export abstract class SVGRenderer {
 		startX = this._width/2 - (this.pencil.totalLength*5/2);
 
 		for (let component of this.pencil.components) {
-			colour = this.getMappedColour(component, colour, colourIndex);
+			colour = this.getMappedColourOverride(component.colours, colourIndex, colour);
 
 			for(let part of component.parts) {
 				svgString += this.renderTaper(startX, midY, part, colour);
@@ -453,14 +445,7 @@ export abstract class SVGRenderer {
 		}
 
 		// maybe we have an over-ride colour and material
-		const partColour:string = part.colours[colourIndex];
-		if (partColour) {
-			if (this.pencil.colourMap[partColour]) {
-				colour = this.pencil.colourMap[partColour];
-			} else {
-				colour = partColour;
-			}
-		}
+		colour = this.getMappedColourOverride(component.colours, colourIndex, colour);
 
 		switch (part.shape) {
 			case "cylinder":
@@ -607,7 +592,7 @@ export abstract class SVGRenderer {
 	}
 
 	// TODO remove
-	protected getMappedColour(component: Component, defaultColour: string, colourIndex: number): string {
+	protected getMappedColourToBeRemoved(component: Component, defaultColour: string, colourIndex: number): string {
 		let colourComponent:string = component.colours[colourIndex];
 		if (colourComponent) {
 			if(this.pencil.colourMap[colourComponent]) {
@@ -621,16 +606,12 @@ export abstract class SVGRenderer {
 	}
 
 	// TODO - this should be renamed to getMappedColour
-	protected getMappedColourOverride(colours: string[], colourIndex: number, overrideColour: string ): string {
+	protected getMappedColourOverride(colours: string[], colourIndex: number, defaultColour: string ): string {
 		if(colourIndex == -1) {
 			return("white");
 		}
 
 		let colourComponent:string = colours[colourIndex];
-
-		if(overrideColour !== null) {
-			colourComponent = overrideColour;
-		}
 
 		if (colourComponent) {
 			if(this.pencil.colourMap[colourComponent]) {
@@ -640,7 +621,7 @@ export abstract class SVGRenderer {
 			}
 		}
 
-		return(overrideColour);
+		return(defaultColour);
 	}
 
 	protected renderGuidelines(): string {

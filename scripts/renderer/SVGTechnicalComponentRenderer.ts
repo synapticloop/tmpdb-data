@@ -1,24 +1,7 @@
 import {Pencil} from "../model/Pencil.ts";
 import {SVGRenderer} from "./SVGRenderer.ts";
 import {
-	circle,
-	dimensionsHorizontal,
-	dimensionsVertical,
-	drawExtra,
-	drawOutlineCircle,
-	drawOutlineHexagon,
-	drawOutlineOctagon,
-	drawShapeDetails,
-	drawText,
-	drawTextBold,
-	drawTextBoldCentred,
-	lineHorizontal,
-	lineHorizontalGuide,
-	lineVertical,
 	lineVerticalGuide,
-	renderBackExtra,
-	target,
-	TextOrientation
 } from "../utils/svg-helper.ts";
 
 export class SVGTechnicalComponentRenderer extends SVGRenderer {
@@ -98,77 +81,6 @@ export class SVGTechnicalComponentRenderer extends SVGRenderer {
 		}
 
 		svgString += lineVerticalGuide(offset, this.SVG_HEIGHT/2 - 88 - this.pencil.maxHeight/2 * 5, 88 + this.pencil.maxHeight/2 * 5);
-		return(svgString);
-	}
-
-
-	private deprecatedrenderSideDimensions(): string {
-		let svgString: string = "";
-
-		let xOffset: number = this.SVG_WIDTH/2 - (this.pencil.totalLength*5/2);
-		for (let component of this.pencil.components) {
-			// draw all the dimensions
-			svgString += dimensionsHorizontal(xOffset,
-				this.SVG_HEIGHT/2 - 120,
-				component.length * 5,
-				`${component.type}`,
-				TextOrientation.TOP_ROTATED,
-				true);
-
-			// now for the extra dimensions
-			// is the extra the first component, or the last
-			// now for extraParts
-			for(const extra of component.extras) {
-				// draw the straight-through line for guidance
-
-				svgString += dimensionsHorizontal(xOffset + extra.offset[0] * 5,
-					this.SVG_HEIGHT/2 - 80,
-						extra.length * 5,
-					`${component.type} (extra)`,
-					TextOrientation.TOP,
-					true);
-			}
-			xOffset += component.length * 5;
-		}
-
-		// now for the total length
-		svgString += dimensionsHorizontal(
-			this.SVG_WIDTH/2 - this.pencil.totalLength*5/2,
-			this.SVG_HEIGHT/2 + 30 + this.pencil.maxHeight/2 * 5,
-			this.pencil.totalLength*5,
-			"",
-			TextOrientation.BOTTOM,
-			true
-		);
-
-		return(svgString);
-	}
-
-	private deprecatedrenderSideComponents(colourIndex:number): string {
-		let svgString: string = "";
-		let startX: number = this.SVG_WIDTH/2 - (this.pencil.totalLength*5/2);
-		let midY: number = this.SVG_HEIGHT/2;
-
-		for (let component of this.pencil.components) {
-			let colour: string = this.getMappedColour(component, "white", colourIndex);
-
-			for(let part of component.parts) {
-				svgString += super.renderPart(startX, midY, component, part, colourIndex, colour);
-				startX += part.length * 5;
-			}
-		}
-
-		startX = this.SVG_WIDTH/2 - (this.pencil.totalLength*5/2);
-
-		for (let component of this.pencil.components) {
-			let colour: string = this.getMappedColour(component, "white", colourIndex);
-
-			for(let part of component.parts) {
-				svgString += super.renderTaper(startX, midY, part, colour);
-				startX += part.length * 5;
-			}
-		}
-
 		return(svgString);
 	}
 }
