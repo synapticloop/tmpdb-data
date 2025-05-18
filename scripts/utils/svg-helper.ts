@@ -28,7 +28,11 @@ export function drawText(text, x, y, fontSize) {
 			`${text}</text>\n`);
 }
 
-export function drawOutlineHexagon(x, y, height, fillColour) {
+export function drawOutlineHexagon(x, y, height:number, fillColour: OpacityColour) {
+	let strokeColour: string = "black";
+	if(fillColour.colour === "black") {
+		strokeColour = "dimgray";
+	}
 	// do some mathematics for the hexagon
 	let apothem = height/2 * 5;
 	// going around the points from top left - clockwise
@@ -43,10 +47,14 @@ export function drawOutlineHexagon(x, y, height, fillColour) {
 			`${x + A},${y + height/2 * 5} ` + // D
 			`${x - A},${y + height/2 * 5} ` + // E
 			`${x - H},${y} ` + // F
-			`" stroke="dimgray" stroke-width="1" fill="${fillColour}"/>\n`);
+			`" stroke="${strokeColour}" stroke-width="0.5" fill="${fillColour.colour}" fill-opacity="${fillColour.opacity}"/>\n`);
 }
 
 export function drawOutlineOctagon(x, y, height, fillColour) {
+	let strokeColour: string = "black";
+	if(fillColour.colour === "black") {
+		strokeColour = "dimgray";
+	}
 	// do some mathematics for the octagon
 	let apothem = height/2 * 5;
 	// going around the points from top left - clockwise
@@ -61,14 +69,18 @@ export function drawOutlineOctagon(x, y, height, fillColour) {
 			`${x - A},${y + height/2 * 5} ` + // F
 			`${x - height/2 * 5},${y + A} ` +  // G
 			`${x - height/2 * 5},${y - A} ` +  // H
-			`" stroke="dimgray" stroke-width="1" fill="${fillColour}"/>\n`);
+			`" stroke="${strokeColour}" stroke-width="1" fill="${fillColour.colour}" fill-opacity="${fillColour.opacity}"/>\n`);
 }
 
-export function drawOutlineCircle(radius, x, y, fillColour) {
+export function drawOutlineCircle(radius: number, x: number, y:number, fillColour: OpacityColour) {
+	let strokeColour: string = "black";
+	if(fillColour.colour === "black") {
+		strokeColour = "dimgray";
+	}
 	return(`<circle r="${radius}" `+
 			`cx="${x}" ` +
 			`cy="${y}" ` +
-			`stroke="dimgray" stroke-width="1" fill="${fillColour}" />\n`);
+			`stroke="${strokeColour}" stroke-width="0.5" fill="${fillColour.colour}" fill-opacity="${fillColour.opacity}"/>\n`);
 }
 
 export function drawShapeDetails(xStart, y, width) {

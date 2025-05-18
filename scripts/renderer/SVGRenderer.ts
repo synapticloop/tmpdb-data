@@ -507,7 +507,7 @@ export abstract class SVGRenderer {
 						offset += (part.length / 13) * 5;
 					}
 
-					svgString += drawOutlineCircle(4, startX + part.internalOffset * 5 + 15, midY - part.startHeight / 4 * 5, "dimGray")
+					svgString += drawOutlineCircle(4, startX + part.internalOffset * 5 + 15, midY - part.startHeight / 4 * 5, new OpacityColour(null, "dimgray"));
 
 					break;
 				case "knurled":

@@ -269,7 +269,7 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 		let startX = 160;
 		let midY = this.SVG_HEIGHT/2;
 
-		let colour: OpacityColour = new OpacityColour(this.pencil.colourMap, "white");
+		let colour: OpacityColour = new OpacityColour(this.pencil.colourMap, "white%0");
 
 		// we want to render them back to front so that the last component is on
 		// the bottom
@@ -278,13 +278,13 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 
 		// go through the components and render them
 		for(const component of this.pencil.components) {
-			colour = this.getMappedColour(component.colours, colourIndex, colour.colour);
 
 			component.parts.reverse();
 			for (let part of component.parts) {
+				colour = this.getMappedColour(part.colours, colourIndex, colour.colour);
 				switch (part.shape) {
 					case "cylinder":
-						svgString += circle(startX, midY, (part.startHeight / 2) * 5, "1", "dimgray", colour);
+						svgString += circle(startX, midY, (part.startHeight / 2) * 5, "0.5", "black", colour);
 						break;
 					case "cone":
 						svgString += drawOutlineCircle((part.startHeight / 2) * 5, startX, midY, colour);
@@ -307,12 +307,13 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 		for(let front of this.pencil.front) {
 			// only care about the first dimension - which is the width
 			let dimensions: number[] = front.dimensions;
-			let frontFillColour: OpacityColour = new OpacityColour(this.pencil.colourMap, "white%0");
+			let frontFillColour: OpacityColour = new OpacityColour(this.pencil.colourMap, "white");
 
-			if (this.pencil.colourMap[front.fill]) {
-				frontFillColour = new OpacityColour(this.pencil.colourMap, front.fill);
+			if(colourIndex !== -1) {
+				if (this.pencil.colourMap[front.fill]) {
+					frontFillColour = new OpacityColour(this.pencil.colourMap, front.fill);
+				}
 			}
-
 			// render the front piece
 			switch (front.shape) {
 				case "cylinder":
@@ -338,7 +339,7 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 			for (let part of component.parts) {
 				switch (part.shape) {
 					case "cylinder":
-						svgString += circle(startX, midY, (part.startHeight / 2) * 5, "1", "dimgray", colour);
+						svgString += circle(startX, midY, (part.startHeight / 2) * 5, "0.5", "black", colour);
 						break;
 					case "cone":
 						svgString += drawOutlineCircle((part.startHeight / 2) * 5, startX, midY, colour);
@@ -355,10 +356,12 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 		}
 
 		for(let back of this.pencil.back) {
-			let backFillColour: OpacityColour = new OpacityColour(this.pencil.colourMap, "white%0");
+			let backFillColour: OpacityColour = new OpacityColour(this.pencil.colourMap, "white");
 
-			if (this.pencil.colourMap[back.fill]) {
-				backFillColour = new OpacityColour(this.pencil.colourMap, back.fill);
+			if(colourIndex !== -1) {
+				if (this.pencil.colourMap[back.fill]) {
+					backFillColour = new OpacityColour(this.pencil.colourMap, back.fill);
+				}
 			}
 
 			// render the back piece

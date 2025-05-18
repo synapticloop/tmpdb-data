@@ -5,6 +5,10 @@ export class OpacityColour {
 	opacity:number = 1;
 
 	constructor(colourMap: { [ id: string ] : string }, colour: string) {
+		if(colourMap === null) {
+			colourMap = {};
+		}
+
 		const splits: string[] = colour.split("%");
 		switch(splits.length) {
 			case 2:
