@@ -193,33 +193,33 @@
 <line x1="1350" y1="280" x2="1350" y2="320" stroke="black" stroke-width="1" />
 <line x1="1339" y1="320" x2="1361" y2="320" stroke="black" stroke-width="1" />
 <text x="1350" y="328" transform="rotate(-90, 1350, 328)" font-weight="bold" font-size="1.2em" text-anchor="end" dominant-baseline="middle" fill="black">body</text>
-<path d="M378.75 291.875 L390 290 L390 310 L378.75 308.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
-<path d="M390 286.875 L458.75 279.375 L458.75 320.625 L390 313.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
-<rect x="458.75" y="279.375" width="147.5" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver" fill-opacity="1"/>
+<path d="M378.75 291.875 L390 290 L390 310 L378.75 308.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1" />
+<path d="M390 286.875 L458.75 279.375 L458.75 320.625 L390 313.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1" />
+<!-- julian --><rect x="458.75" y="279.375" width="147.5" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#b4b8b9" fill-opacity="1"/>
 <rect x="458.75" y="279.375" width="147.5" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="url(#diagonalHatch)"/>
-<rect x="606.25" y="280" width="337.5" height="40" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver" fill-opacity="1"/>
+<!-- julian --><rect x="606.25" y="280" width="337.5" height="40" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#b4b8b9" fill-opacity="1"/>
 <line x1="606.25" y1="300" x2="943.75" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="606.25" y1="300" x2="943.75" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
 <path d="M763.5 265.875 Q786.25 289.375 796.25 265.875 Z" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
 <line x1="761.25" y1="264.375" x2="943.75" y2="264.375" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
 <path d="M943.75 264.375 Q963.75 271.875 943.75 278.125" stroke-width="4" stroke="black" fill="none" stroke-linecap="round" />
-<rect x="943.75" y="277.5" width="27.5" height="45" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver" fill-opacity="1"/>
-<path d="M763.5 265.875 Q786.25 288.375 796.25 265.875 Z" stroke-width="3" stroke="silver" fill="silver" stroke-linecap="round" />
-<line x1="761.25" y1="264.375" x2="943.75" y2="264.375" stroke-width="3" stroke="silver" fill="silver" stroke-linecap="round" />
-<path d="M943.75 264.375 Q963.75 271.875 943.75 278.125" stroke-width="3" stroke="silver" fill="none" stroke-linecap="round" />
-<rect x="971.25" y="280" width="20" height="40" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver" fill-opacity="1"/>
-<rect x="991.25" y="279.375" width="47.5" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver" fill-opacity="1"/>
+<!-- julian --><rect x="943.75" y="277.5" width="27.5" height="45" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#b4b8b9" fill-opacity="1"/>
+<path d="M763.5 265.875 Q786.25 288.375 796.25 265.875 Z" stroke-width="3" stroke="#b4b8b9" fill="#b4b8b9" stroke-linecap="round" />
+<line x1="761.25" y1="264.375" x2="943.75" y2="264.375" stroke-width="3" stroke="#b4b8b9" fill="#b4b8b9" stroke-linecap="round" />
+<path d="M943.75 264.375 Q963.75 271.875 943.75 278.125" stroke-width="3" stroke="#b4b8b9" fill="none" stroke-linecap="round" />
+<!-- julian --><rect x="971.25" y="280" width="20" height="40" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#b4b8b9" fill-opacity="1"/>
+<!-- julian --><rect x="991.25" y="279.375" width="47.5" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#b4b8b9" fill-opacity="1"/>
 <rect x="991.25" y="279.375" width="47.5" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="url(#diagonalHatch)"/>
-<rect x="1038.75" y="280" width="5" height="40" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver" fill-opacity="1"/>
-<rect x="1043.75" y="280" width="6.25" height="40" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="red" fill-opacity="1"/>
-<rect x="1050" y="280" width="6.25" height="40" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver" fill-opacity="1"/>
-<rect x="1056.25" y="286.25" width="30" height="27.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver" fill-opacity="1"/>
-<rect x="1086.25" y="287.5" width="3.75" height="25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver" fill-opacity="1"/>
-<rect x="1090" y="286.25" width="7.5" height="27.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver" fill-opacity="1"/>
-<rect x="1097.5" y="287.5" width="3.75" height="25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver" fill-opacity="1"/>
-<rect x="1101.25" y="286.25" width="7.5" height="27.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver" fill-opacity="1"/>
-<rect x="1108.75" y="287.5" width="3.75" height="25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver" fill-opacity="1"/>
-<rect x="1112.5" y="286.25" width="8.75" height="27.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver" fill-opacity="1"/>
+<!-- julian --><rect x="1038.75" y="280" width="5" height="40" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#b4b8b9" fill-opacity="1"/>
+<!-- julian --><rect x="1043.75" y="280" width="6.25" height="40" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="red" fill-opacity="1"/>
+<!-- julian --><rect x="1050" y="280" width="6.25" height="40" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#b4b8b9" fill-opacity="1"/>
+<!-- julian --><rect x="1056.25" y="286.25" width="30" height="27.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#b4b8b9" fill-opacity="1"/>
+<!-- julian --><rect x="1086.25" y="287.5" width="3.75" height="25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#b4b8b9" fill-opacity="1"/>
+<!-- julian --><rect x="1090" y="286.25" width="7.5" height="27.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#b4b8b9" fill-opacity="1"/>
+<!-- julian --><rect x="1097.5" y="287.5" width="3.75" height="25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#b4b8b9" fill-opacity="1"/>
+<!-- julian --><rect x="1101.25" y="286.25" width="7.5" height="27.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#b4b8b9" fill-opacity="1"/>
+<!-- julian --><rect x="1108.75" y="287.5" width="3.75" height="25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#b4b8b9" fill-opacity="1"/>
+<!-- julian --><rect x="1112.5" y="286.25" width="8.75" height="27.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#b4b8b9" fill-opacity="1"/>
 <circle r="13.75" cx="160" cy="300" fill="[object Object]" stroke="dimgray" stroke-width="1"  />
 <circle r="12.5" cx="160" cy="300" fill="[object Object]" stroke="dimgray" stroke-width="1"  />
 <circle r="13.75" cx="160" cy="300" fill="[object Object]" stroke="dimgray" stroke-width="1"  />

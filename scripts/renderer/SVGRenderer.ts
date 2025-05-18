@@ -18,7 +18,7 @@ import {formatToTwoPlaces} from "../utils/formatter.ts";
 
 import {Component} from "../model/Component.ts";
 import {Pencil} from "../model/Pencil.ts";
-import {OpaqueColour} from "../model/OpaqueColour.ts";
+import {OpacityColour} from "../model/OpacityColour.ts";
 
 
 export abstract class SVGRenderer {
@@ -351,7 +351,7 @@ export abstract class SVGRenderer {
 			midY = midYOverride;
 		}
 
-		let colourOpacity: OpaqueColour = new OpaqueColour("white");
+		let colourOpacity: OpacityColour = new OpacityColour(this.pencil.colourMap, "white");
 
 
 		for (let component of this.pencil.components) {
@@ -412,7 +412,7 @@ export abstract class SVGRenderer {
 		));
 	}
 
-	protected renderPart(startX:number, midY:number, component:Component, part: Part, colourIndex: number, defaultOpaqueColour: OpaqueColour):string {
+	protected renderPart(startX:number, midY:number, component:Component, part: Part, colourIndex: number, defaultOpaqueColour: OpacityColour):string {
 
 		let svgString:string = "";
 		// get the stroke colour
@@ -431,7 +431,7 @@ export abstract class SVGRenderer {
 		}
 
 		// maybe we have an over-ride colour and material
-		let opaqueColour: OpaqueColour = this.getMappedColour(part.colours, colourIndex, defaultOpaqueColour.colour);
+		let opaqueColour: OpacityColour = this.getMappedColour(part.colours, colourIndex, defaultOpaqueColour.colour);
 
 		switch (part.shape) {
 			case "cylinder":
@@ -569,7 +569,7 @@ export abstract class SVGRenderer {
 		}
 
 		for(const extra of component.extras) {
-			let colour: OpaqueColour = this.getMappedColour(component.colours, colourIndex, extra.colours[colourIndex]);
+			let colour: OpacityColour = this.getMappedColour(component.colours, colourIndex, extra.colours[colourIndex]);
 			svgString += drawExtraForeground(startX + extra.offset[0] * 5, midY - extra.offset[1] * 5, extra.extraParts, colour.colour);
 			break;
 		}
@@ -577,24 +577,24 @@ export abstract class SVGRenderer {
 		return(svgString);
 	}
 
-	protected getMappedColour(colours: string[], colourIndex: number, defaultColour: string ): OpaqueColour {
+	protected getMappedColour(colours: string[], colourIndex: number, defaultColour: string ): OpacityColour {
 		if(colourIndex == -1) {
-			return(new OpaqueColour("white"));
+			return(new OpacityColour(this.pencil.colourMap, "white"));
 		}
 
 		let colourComponent:string = colours[colourIndex];
 
 		if (colourComponent) {
-			let colourOpacity = new OpaqueColour(colourComponent);
+			let colourOpacity = new OpacityColour(this.pencil.colourMap, colourComponent);
 
 			if(this.pencil.colourMap[colourOpacity.colour]) {
 				return(colourOpacity);
 			} else {
-				return(new OpaqueColour(colourComponent));
+				return(new OpacityColour(this.pencil.colourMap, colourComponent));
 			}
 		}
 
-		return(new OpaqueColour(defaultColour));
+		return(new OpacityColour(this.pencil.colourMap, defaultColour));
 	}
 
 	protected renderGuidelines(): string {

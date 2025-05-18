@@ -16,7 +16,7 @@ import {
 } from "../utils/svg-helper.ts";
 import {Part} from "../model/Part.ts";
 import {formatToTwoPlaces} from "../utils/formatter.ts";
-import {OpaqueColour} from "../model/OpaqueColour.ts";
+import {OpacityColour} from "../model/OpacityColour.ts";
 
 export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 	SVG_WIDTH: number = 1200;
@@ -70,7 +70,7 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 		let startX: number = this.SVG_WIDTH/2 - (this.pencil.totalLength*5/2);
 		let midY: number = 120;
 
-		let colour: OpaqueColour = new OpaqueColour("white");
+		let colour: OpacityColour = new OpacityColour(this.pencil.colourMap, "white");
 
 		for (let [index, component] of this.pencil.components.entries()) {
 			if(index !== 0) {
@@ -116,6 +116,7 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 					let prevStartX = startX;
 
 					for (let internalPart of component.internalStart) {
+						colour = this.getMappedColour(internalPart.colours, colourIndex, colour.colour);
 						svgString += super.renderPart(startX, midY, component, internalPart, colourIndex, colour);
 						startX += internalPart.length * 5
 					}
@@ -158,6 +159,7 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 
 					let previousPart:Part = null;
 					for (let internalPart of component.internalEnd) {
+						colour = this.getMappedColour(internalPart.colours, colourIndex, colour.colour);
 						svgString += super.renderPart(startX, midY, component, internalPart, colourIndex, colour);
 						totalLength += internalPart.length;
 						startX += internalPart.length * 5
@@ -234,10 +236,11 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 					startX += part.length * 5;
 					partLength += part.length * 5;
 
-					for (let internal of component.internalEnd) {
-						svgString += super.renderPart(startX, midY, component, internal, colourIndex, colour);
-						startX += internal.length * 5;
-						endPartLength += internal.length * 5;
+					for (let internalEnd of component.internalEnd) {
+						colour = this.getMappedColour(internalEnd.colours, colourIndex, colour.colour);
+						svgString += super.renderPart(startX, midY, component, internalEnd, colourIndex, colour);
+						startX += internalEnd.length * 5;
+						endPartLength += internalEnd.length * 5;
 					}
 				}
 
@@ -331,6 +334,7 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 					let totalLength: number = component.length;
 
 					for (let internalPart of component.internalStart) {
+						colour = this.getMappedColour(internalPart.colours, colourIndex, colour.colour);
 						svgString += super.renderPart(startX, midY, component, internalPart, colourIndex, colour);
 						totalLength += internalPart.length;
 						startX += internalPart.length * 5

@@ -10,13 +10,13 @@
 <path stroke="white" stroke-linecap="round" stroke-width="1" d="M 0,0 L 8,100"/>
 </pattern>
 <g transform="rotate(0 0 0)">
-<rect x="158.75" y="91.875" width="12.5" height="16.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="brass" fill-opacity="1"/>
-<path d="M171.25 91.875 L196.25 81.25 L196.25 118.75 L171.25 108.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="brass" fill-opacity="1" />
-<path d="M196.25 80 L221.25 72.5 L221.25 127.5 L196.25 120 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="wood" fill-opacity="1" />
-<rect x="221.25" y="72.5" width="490" height="55" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="wood" fill-opacity="1"/>
+<!-- julian --><rect x="158.75" y="91.875" width="12.5" height="16.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#E1C16E" fill-opacity="1"/>
+<path d="M171.25 91.875 L196.25 81.25 L196.25 118.75 L171.25 108.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#E1C16E" fill-opacity="1" />
+<path d="M196.25 80 L221.25 72.5 L221.25 127.5 L196.25 120 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b88160" fill-opacity="1" />
+<!-- julian --><rect x="221.25" y="72.5" width="490" height="55" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#b88160" fill-opacity="1"/>
 <line x1="221.25" y1="100" x2="711.25" y2="100" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="221.25" y1="100" x2="711.25" y2="100" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
-<rect x="711.25" y="74.375" width="70" height="51.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="brass" fill-opacity="1"/>
+<!-- julian --><rect x="711.25" y="74.375" width="70" height="51.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#E1C16E" fill-opacity="1"/>
 <line x1="719.3269230769231" y1="75.375" x2="719.3269230769231" y2="124.625" stroke-width="1" stroke="gray" />
 <line x1="724.7115384615385" y1="75.375" x2="724.7115384615385" y2="124.625" stroke-width="1" stroke="gray" />
 <line x1="730.0961538461538" y1="75.375" x2="730.0961538461538" y2="124.625" stroke-width="1" stroke="gray" />
@@ -28,10 +28,10 @@
 <line x1="767.7884615384615" y1="75.375" x2="767.7884615384615" y2="124.625" stroke-width="1" stroke="gray" />
 <line x1="773.1730769230769" y1="75.375" x2="773.1730769230769" y2="124.625" stroke-width="1" stroke="gray" />
 <circle r="4" cx="726.25" cy="87.1875" stroke="dimgray" stroke-width="1" fill="dimGray" />
-<rect x="781.25" y="76.25" width="25" height="47.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="brass" fill-opacity="1"/>
-<rect x="806.25" y="75" width="10" height="50" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="brass" fill-opacity="1"/>
-<rect x="816.25" y="76.875" width="25" height="46.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="pink" fill-opacity="1"/>
-<path d="M 221.9 72.5 C 208.75 79.375, 208.75 93.125, 221.9 100" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="wood" /><path d="M 221.9 127.5 C 208.75 120.625, 208.75 106.875, 221.9 100" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="wood" /></g><text x="50%" y="160" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb)</text>
+<!-- julian --><rect x="781.25" y="76.25" width="25" height="47.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#E1C16E" fill-opacity="1"/>
+<!-- julian --><rect x="806.25" y="75" width="10" height="50" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#E1C16E" fill-opacity="1"/>
+<!-- julian --><rect x="816.25" y="76.875" width="25" height="46.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#db756d" fill-opacity="1"/>
+<path d="M 221.9 72.5 C 208.75 79.375, 208.75 93.125, 221.9 100" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="#b88160" /><path d="M 221.9 127.5 C 208.75 120.625, 208.75 106.875, 221.9 100" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="#b88160" /></g><text x="50%" y="160" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb)</text>
 <text x="50%" y="180" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
 <text x="990" y="190" font-size="0.5em" font-weight="bold" text-anchor="end" dominant-baseline="middle">SVGPencilRenderer</text>
 </svg>

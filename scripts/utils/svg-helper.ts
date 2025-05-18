@@ -2,7 +2,7 @@
 import {Part} from "../model/Part.ts";
 import {Extra} from "../model/Extra.ts";
 import {ExtraPart} from "../model/ExtraPart.ts";
-import {OpaqueColour} from "../model/OpaqueColour.ts";
+import {OpacityColour} from "../model/OpacityColour.ts";
 
 const DIMENSION_MARKER_LENGTH = 22;
 
@@ -562,8 +562,8 @@ export function dimensionsHorizontal(x: number, y:number, width:number, text: st
 	}
 	return(svgString);
 }
-export function rectangle(x:number, y:number, width:number, height:number, strokeColour:string, opaqueColour: OpaqueColour): string {
-	let svgString = "";
+export function rectangle(x:number, y:number, width:number, height:number, strokeColour:string, opaqueColour: OpacityColour): string {
+	let svgString = "<!-- julian -->";
 	svgString += `<rect x="${x}" ` +
 		`y="${y}" ` +
 		`width="${width}" ` +
