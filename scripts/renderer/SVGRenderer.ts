@@ -1,20 +1,23 @@
 import {Part} from "../model/Part.ts";
 import {
 	dimensionsHorizontal,
-	drawExtra, drawExtraBackground, drawExtraForeground,
+	drawExtraBackground,
+	drawExtraForeground,
 	drawOutlineCircle,
 	drawShapeDetails,
 	drawText,
 	drawTextBold, drawTextBoldCentred,
-	lineHorizontal, lineHorizontalGuide,
-	lineVertical, lineVerticalGuide,
-	rectangle, renderBackExtra,
-	target, TextOrientation
+	lineHorizontal,
+	lineVertical,
+	lineVerticalGuide,
+	rectangle,
+	target,
+	TextOrientation
 } from "../utils/svg-helper.ts";
+
 import {Component} from "../model/Component.ts";
 import {Pencil} from "../model/Pencil.ts";
 import {formatToTwoPlaces} from "../utils/formatter.ts";
-import {Extra} from "../model/Extra.ts";
 
 export abstract class SVGRenderer {
 	protected pencil:Pencil;
@@ -210,8 +213,6 @@ export abstract class SVGRenderer {
 		// TODO - need a nice way to determine what shade of black/grey -
 		//   thinking grayscale inverse
 		let strokeColor:string = "black";
-		// let strokeColor:string = (
-		// 		(colour === "black") || (colour === "#000000") ? "#afafaf" : colour);
 		let svgString:string = "";
 		if(!(part.taperStart || part.taperEnd)){
 			return("");
@@ -225,16 +226,6 @@ export abstract class SVGRenderer {
 		}
 		if(part.taperStart?.offset[1]) {
 			xOffsetStartScale = part.taperStart.offset[1];
-		}
-
-		let xOffsetEnd: number = 0;
-		let xOffsetEndScale: number = 1;
-
-		if(part.taperEnd?.offset[0]) {
-			xOffsetEnd = part.taperEnd.offset[0];
-		}
-		if(part.taperEnd?.offset[1]) {
-			xOffsetEndScale = part.taperEnd.offset[1];
 		}
 
 		if(part.taperStart) {

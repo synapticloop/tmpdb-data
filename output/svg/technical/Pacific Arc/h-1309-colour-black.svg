@@ -221,17 +221,17 @@
 <line x1="606.25" y1="300" x2="943.75" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="606.25" y1="300" x2="943.75" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
 <path d="M763.5 -33.75 Q786.25 -10.25 796.25 -33.75 Z" stroke-width="4" stroke="dimgray" fill="dimgray" stroke-linecap="round" />
-<!-- osman --><line x1="761.25" y1="-35.25" x2="943.75" y2="-35.25" stroke-width="4" stroke="dimgray" fill="dimgray" stroke-linecap="round" />
+<line x1="761.25" y1="-35.25" x2="943.75" y2="-35.25" stroke-width="4" stroke="dimgray" fill="dimgray" stroke-linecap="round" />
 <path d="M943.75 -35.25 Q963.75 -27.75 943.75 -20.25" stroke-width="4" stroke="dimgray" fill="none" stroke-linecap="round" />
 <path d="M763.5 266.25 Q786.25 289.75 796.25 266.25 Z" stroke-width="4" stroke="dimgray" fill="dimgray" stroke-linecap="round" />
-<!-- osman --><line x1="761.25" y1="264.75" x2="943.75" y2="264.75" stroke-width="4" stroke="dimgray" fill="dimgray" stroke-linecap="round" />
+<line x1="761.25" y1="264.75" x2="943.75" y2="264.75" stroke-width="4" stroke="dimgray" fill="dimgray" stroke-linecap="round" />
 <path d="M943.75 264.75 Q963.75 272.25 943.75 279.75" stroke-width="4" stroke="dimgray" fill="none" stroke-linecap="round" />
 <rect x="943.75" y="277.5" width="27.5" height="45" rx="1" ry="1" stroke-width="0.5" stroke="dimgray" fill="#000000"/>
 <path d="M763.5 266.25 Q786.25 288.75 796.25 266.25 Z" stroke-width="3" stroke="#000000" fill="#000000" stroke-linecap="round" />
-<!-- julian --><line x1="761.25" y1="264.75" x2="943.75" y2="264.75" stroke-width="3" stroke="#000000" fill="#000000" stroke-linecap="round" />
+<line x1="761.25" y1="264.75" x2="943.75" y2="264.75" stroke-width="3" stroke="#000000" fill="#000000" stroke-linecap="round" />
 <path d="M943.75 264.75 Q963.75 272.25 943.75 279.75" stroke-width="3" stroke="#000000" fill="none" stroke-linecap="round" />
 <path d="M763.5 -33.75 Q786.25 -11.25 796.25 -33.75 Z" stroke-width="3" stroke="#000000" fill="#000000" stroke-linecap="round" />
-<!-- julian --><line x1="761.25" y1="-35.25" x2="943.75" y2="-35.25" stroke-width="3" stroke="#000000" fill="#000000" stroke-linecap="round" />
+<line x1="761.25" y1="-35.25" x2="943.75" y2="-35.25" stroke-width="3" stroke="#000000" fill="#000000" stroke-linecap="round" />
 <path d="M943.75 -35.25 Q963.75 -27.75 943.75 -20.25" stroke-width="3" stroke="#000000" fill="none" stroke-linecap="round" />
 <rect x="971.25" y="280" width="20" height="40" rx="1" ry="1" stroke-width="0.5" stroke="dimgray" fill="#000000"/>
 <rect x="991.25" y="279.375" width="47.5" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="dimgray" fill="#000000"/>
@@ -266,6 +266,7 @@
 <circle r="20.625" cx="160" cy="300" stroke="dimgray" stroke-width="1" fill="#000000" />
 <circle r="8.125" cx="160" cy="300" stroke="dimgray" stroke-width="1" fill="#000000" />
 <circle r="10" cx="160" cy="300" stroke="dimgray" stroke-width="1" fill="#000000" />
+<circle r="5" cx="160" cy="300" fill="black" stroke="dimgray" stroke-width="0.5"  />
 <circle r="8.125" cx="1400" cy="300" stroke="dimgray" stroke-width="1" fill="#000000" />
 <circle r="10" cx="1400" cy="300" stroke="dimgray" stroke-width="1" fill="#000000" />
 <circle r="13.125" cx="1400" cy="300" stroke="dimgray" stroke-width="1" fill="#000000" />

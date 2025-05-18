@@ -91,8 +91,8 @@ export class Component {
 			}
 		}
 
-		if(jsonObject.extra) {
-			for(let extra of jsonObject.extra) {
+		if(jsonObject.extras) {
+			for(let extra of jsonObject.extras) {
 				const thisExtra: Extra = new Extra(extra, this.colours);
 
 				this.extras.push(thisExtra);
