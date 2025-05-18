@@ -72,6 +72,7 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 
 		// now it is time to render the details of the pencil
 		svgString += super.renderSideComponents(colourIndex);
+
 		svgString += this.renderFrontComponents(colourIndex);
 		svgString += this.renderBackComponents(colourIndex);
 

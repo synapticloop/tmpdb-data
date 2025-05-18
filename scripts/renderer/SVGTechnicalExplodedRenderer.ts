@@ -114,11 +114,11 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 
 					let prevStartX = startX;
 
-					let previousPart:Part = null;
 					for (let internalPart of component.internalStart) {
 						svgString += super.renderPart(startX, midY, component, internalPart, colourIndex, colour);
 						startX += internalPart.length * 5
 					}
+
 
 					svgString += `<line x1="${prevStartX - 40}" ` +
 						`y1="${midY - 50}" ` +
@@ -226,6 +226,7 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 					midY += 100;
 				}
 			} else {
+
 
 				for (let part of component.parts) {
 					svgString += super.renderPart(startX, midY, component, part, colourIndex, colour);

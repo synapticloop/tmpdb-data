@@ -6,7 +6,7 @@ export class PNGRenderer {
 	}
 
 	async render(inputSvgFile: string, outputFilePath: string): Promise<void> {
-		let options = { density: 144, resolutionUnit: "inch" };
+		let options = { density: 300, resolutionUnit: "inch" };
 		await sharp(inputSvgFile, options)
 				.png()
 				.toFile(outputFilePath)

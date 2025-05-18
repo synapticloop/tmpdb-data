@@ -1,14 +1,17 @@
 export class ExtraPart {
-	type: string;
+	shape: string;
 	colours: string[];
+	width: number = 3.0
 
 	points: number[] = [];
 	isCurve: boolean = false;
 
 	constructor(jsonObject, colours: string[]) {
-		this.type = jsonObject.type;
+		this.shape = jsonObject.shape;
 		this.colours = colours;
-		switch (this.type) {
+		this.width = jsonObject.width ?? this.width;
+
+		switch (this.shape) {
 			case "curve":
 			case "curve-fill":
 				this.isCurve = true;

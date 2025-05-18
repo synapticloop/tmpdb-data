@@ -83,8 +83,6 @@ export class SVGTechnicalComponentRenderer extends SVGRenderer {
 			// vertical line
 			svgString += lineVerticalGuide(offset, this.SVG_HEIGHT/2 - 120, 120);
 
-			offset += component.length * 5;
-
 			// now for extraParts
 			for(const extra of component.extras) {
 				svgString += lineVerticalGuide(offset + extra.offset[0] * 5,
@@ -94,6 +92,9 @@ export class SVGTechnicalComponentRenderer extends SVGRenderer {
 					this.SVG_HEIGHT/2 - 80,
 					80);
 			}
+
+			offset += component.length * 5;
+
 		}
 
 		svgString += lineVerticalGuide(offset, this.SVG_HEIGHT/2 - 88 - this.pencil.maxHeight/2 * 5, 88 + this.pencil.maxHeight/2 * 5);

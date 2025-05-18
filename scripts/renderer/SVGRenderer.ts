@@ -357,15 +357,24 @@ export abstract class SVGRenderer {
 
 		let colour:string = "white";
 
+
 		for (let component of this.pencil.components) {
 			colour = this.getMappedColour(component, colour, colourIndex);
 
+			if(component.extras.length !== 0) {
+				svgString += this.renderExtraComponentsBackground(this._height/2);
+			}
 
 			for(let part of component.parts) {
 				svgString += this.renderPart(startX, midY, component, part, colourIndex, colour);
 				startX += part.length * 5;
 			}
+			if(component.extras.length !== 0) {
+				svgString += this.renderExtraComponentsForeground(colourIndex, this._height/2);
+			}
+
 		}
+
 
 		// reset to draw the taper lines last
 		startX = this._width/2 - (this.pencil.totalLength*5/2);
@@ -437,6 +446,12 @@ export abstract class SVGRenderer {
 		let strokeColour:string = "black"
 		if (component.colours[0] === "black") {
 			strokeColour = "#888888";
+		}
+
+		for(const extra of component.extras) {
+			let colour: string = this.getMappedColourOverride(component.colours, colourIndex, extra.colours[colourIndex]);
+			svgString += drawExtraBackground(startX + extra.offset[0] * 5, midY - extra.offset[1] * 5, extra.extraParts);
+			break;
 		}
 
 		// maybe we have an over-ride colour and material
@@ -582,6 +597,12 @@ export abstract class SVGRenderer {
 							`</text>`;
 					break;
 			}
+		}
+
+		for(const extra of component.extras) {
+			let colour: string = this.getMappedColourOverride(component.colours, colourIndex, extra.colours[colourIndex]);
+			svgString += drawExtraForeground(startX + extra.offset[0] * 5, midY - extra.offset[1] * 5, extra.extraParts, colour);
+			break;
 		}
 
 		return(svgString);

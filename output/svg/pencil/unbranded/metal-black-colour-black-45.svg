@@ -12,43 +12,12 @@
 <rect x="0" y="0" width="1000" height="1000" fill="white" stroke="black" stroke-width="4" />
 <rect x="2" y="2" width="996" height="996" fill="white" stroke="dimgray" stroke-width="1" />
 <g transform="rotate(-45 500 500)">
-<rect x="141.25" y="493.125" width="17.5" height="13.75" rx="1" ry="1" stroke-width="0.5" stroke="#888888" fill="black"/>
-<path d="M158.75 488.75 L202.5 481.25 L202.5 518.75 L158.75 511.25 Z" stroke-width="0.5" stroke="#888888" stroke-linejoin="round" fill="black" />
-<rect x="202.5" y="481.25" width="23.75" height="37.5" rx="1" ry="1" stroke-width="0.5" stroke="#888888" fill="black"/>
-<rect x="226.25" y="478.75" width="7.5" height="42.5" rx="1" ry="1" stroke-width="0.5" stroke="#888888" fill="black"/>
-<rect x="233.75" y="477.5" width="12.5" height="45" rx="1" ry="1" stroke-width="0.5" stroke="#888888" fill="black"/>
-<rect x="233.75" y="477.5" width="12.5" height="45" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="url(#diagonalHatch)"/>
-<rect x="246.25" y="478.75" width="5" height="42.5" rx="1" ry="1" stroke-width="0.5" stroke="#888888" fill="black"/>
-<rect x="251.25" y="477.5" width="12.5" height="45" rx="1" ry="1" stroke-width="0.5" stroke="#888888" fill="black"/>
-<rect x="251.25" y="477.5" width="12.5" height="45" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="url(#diagonalHatch)"/>
-<rect x="263.75" y="478.75" width="5" height="42.5" rx="1" ry="1" stroke-width="0.5" stroke="#888888" fill="black"/>
-<rect x="268.75" y="477.5" width="12.5" height="45" rx="1" ry="1" stroke-width="0.5" stroke="#888888" fill="black"/>
-<rect x="268.75" y="477.5" width="12.5" height="45" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="url(#diagonalHatch)"/>
-<rect x="281.25" y="478.75" width="5" height="42.5" rx="1" ry="1" stroke-width="0.5" stroke="#888888" fill="black"/>
-<rect x="286.25" y="477.5" width="12.5" height="45" rx="1" ry="1" stroke-width="0.5" stroke="#888888" fill="black"/>
-<rect x="286.25" y="477.5" width="12.5" height="45" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="url(#diagonalHatch)"/>
-<rect x="298.75" y="478.75" width="5" height="42.5" rx="1" ry="1" stroke-width="0.5" stroke="#888888" fill="black"/>
-<rect x="303.75" y="477.5" width="12.5" height="45" rx="1" ry="1" stroke-width="0.5" stroke="#888888" fill="black"/>
-<rect x="303.75" y="477.5" width="12.5" height="45" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="url(#diagonalHatch)"/>
-<rect x="316.25" y="478.75" width="5" height="42.5" rx="1" ry="1" stroke-width="0.5" stroke="#888888" fill="black"/>
-<rect x="321.25" y="477.5" width="97.5" height="45" rx="1" ry="1" stroke-width="0.5" stroke="#888888" fill="black"/>
-<rect x="321.25" y="477.5" width="97.5" height="45" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="url(#diagonalHatch)"/>
-<rect x="418.75" y="480" width="330" height="40" rx="1" ry="1" stroke-width="0.5" stroke="#888888" fill="black"/>
-<line x1="418.75" y1="500" x2="748.75" y2="500" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
-<line x1="418.75" y1="500" x2="748.75" y2="500" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
-<rect x="748.75" y="477.5" width="37.5" height="45" rx="1" ry="1" stroke-width="0.5" stroke="#888888" fill="black"/>
-<line x1="591.25" y1="469.375" x2="600" y2="479.375" stroke-width="3" stroke="dimgray" fill="dimgray" stroke-linecap="round" />
-/><line x1="600" y1="479.375" x2="722.5" y2="464.375" stroke-width="3" stroke="dimgray" fill="dimgray" stroke-linecap="round" />
-/><path d="M722.5 464.375 Q728.125 464.375 733.75 468.125" stroke-width="3" stroke="dimgray" fill="none" stroke-linecap="round" />
-<line x1="733.75" y1="468.125" x2="748.75" y2="479.375" stroke-width="3" stroke="dimgray" fill="dimgray" stroke-linecap="round" />
-/><line x1="591.25" y1="469.375" x2="600" y2="479.375" stroke-width="2" stroke="black" fill="black" stroke-linecap="round" />
-/><line x1="600" y1="479.375" x2="722.5" y2="464.375" stroke-width="2" stroke="black" fill="black" stroke-linecap="round" />
-/><path d="M722.5 464.375 Q728.125 464.375 733.75 468.125" stroke-width="2" stroke="black" fill="none" stroke-linecap="round" />
-<line x1="733.75" y1="468.125" x2="748.75" y2="479.375" stroke-width="2" stroke="black" fill="black" stroke-linecap="round" />
-/><rect x="786.25" y="481.25" width="11.25" height="37.5" rx="1" ry="1" stroke-width="0.5" stroke="#888888" fill="black"/>
-<rect x="797.5" y="484.375" width="11.25" height="31.25" rx="1" ry="1" stroke-width="0.5" stroke="#888888" fill="black"/>
-<path d="M808.75 484.375 L822.5 485.625 L822.5 514.375 L808.75 515.625 Z" stroke-width="0.5" stroke="#888888" stroke-linejoin="round" fill="black" />
-<rect x="822.5" y="485.625" width="36.25" height="28.75" rx="1" ry="1" stroke-width="0.5" stroke="#888888" fill="black"/>
+<rect x="155" y="477.5" width="12.5" height="45" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="url(#diagonalHatch)"/>
+<rect x="172.5" y="477.5" width="12.5" height="45" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="url(#diagonalHatch)"/>
+<rect x="190" y="477.5" width="12.5" height="45" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="url(#diagonalHatch)"/>
+<rect x="207.5" y="477.5" width="12.5" height="45" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="url(#diagonalHatch)"/>
+<rect x="225" y="477.5" width="12.5" height="45" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="url(#diagonalHatch)"/>
+<rect x="242.5" y="477.5" width="97.5" height="45" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="url(#diagonalHatch)"/>
 </g><text x="50%" y="960" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb)</text>
 <text x="50%" y="980" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
 <text x="990" y="990" font-size="0.5em" font-weight="bold" text-anchor="end" dominant-baseline="middle">SVGPencil45Renderer</text>
