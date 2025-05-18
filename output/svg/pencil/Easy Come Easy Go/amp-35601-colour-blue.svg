@@ -10,11 +10,11 @@
 <path stroke="white" stroke-linecap="round" stroke-width="1" d="M 0,0 L 8,100"/>
 </pattern>
 <g transform="rotate(0 0 0)">
-<rect x="141.875" y="90.625" width="12.5" height="18.75" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver"/>
-<path d="M154.375 90 L195.625 81.25 L195.625 118.75 L154.375 110 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" />
-<rect x="195.625" y="81.25" width="15" height="37.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver"/>
-<rect x="210.625" y="79.375" width="30" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver"/>
-<rect x="240.625" y="80" width="498.75" height="40" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#AEDCDE"/>
+<rect x="141.875" y="90.625" width="12.5" height="18.75" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver" fill-opacity="1"/>
+<path d="M154.375 90 L195.625 81.25 L195.625 118.75 L154.375 110 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
+<rect x="195.625" y="81.25" width="15" height="37.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver" fill-opacity="1"/>
+<rect x="210.625" y="79.375" width="30" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver" fill-opacity="1"/>
+<rect x="240.625" y="80" width="498.75" height="40" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="blue" fill-opacity="1"/>
 <line x1="240.625" y1="100" x2="739.375" y2="100" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="240.625" y1="100" x2="739.375" y2="100" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
 <line x1="560.625" y1="69.375" x2="575.625" y2="69.375" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
@@ -22,23 +22,23 @@
 <line x1="595.625" y1="78.125" x2="615.625" y2="69.375" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
 <line x1="615.625" y1="69.375" x2="755.625" y2="69.375" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
 <path d="M755.625 69.375 Q775.625 74.375 755.625 79.375" stroke-width="4" stroke="black" fill="none" stroke-linecap="round" />
-<rect x="739.375" y="76.875" width="23.75" height="46.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver"/>
+<rect x="739.375" y="76.875" width="23.75" height="46.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver" fill-opacity="1"/>
 <line x1="560.625" y1="69.375" x2="575.625" y2="69.375" stroke-width="3" stroke="silver" fill="silver" stroke-linecap="round" />
 <line x1="575.625" y1="69.375" x2="595.625" y2="78.125" stroke-width="3" stroke="silver" fill="silver" stroke-linecap="round" />
 <line x1="595.625" y1="78.125" x2="615.625" y2="69.375" stroke-width="3" stroke="silver" fill="silver" stroke-linecap="round" />
 <line x1="615.625" y1="69.375" x2="755.625" y2="69.375" stroke-width="3" stroke="silver" fill="silver" stroke-linecap="round" />
 <path d="M755.625 69.375 Q775.625 74.375 755.625 79.375" stroke-width="3" stroke="silver" fill="none" stroke-linecap="round" />
-<path d="M763.125 80 L771.875 80.625 L771.875 119.375 L763.125 120 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#AEDCDE" />
-<rect x="771.875" y="80.625" width="8.75" height="38.75" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#AEDCDE"/>
-<rect x="780.625" y="85" width="21.25" height="30" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#AEDCDE"/>
-<rect x="801.875" y="80" width="46.25" height="40" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#AEDCDE"/>
+<path d="M763.125 80 L771.875 80.625 L771.875 119.375 L763.125 120 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="blue" fill-opacity="1" />
+<rect x="771.875" y="80.625" width="8.75" height="38.75" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="blue" fill-opacity="1"/>
+<rect x="780.625" y="85" width="21.25" height="30" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="blue" fill-opacity="1"/>
+<rect x="801.875" y="80" width="46.25" height="40" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="blue" fill-opacity="1"/>
 <line x1="801.875" y1="88.57142857142857" x2="848.125" y2="88.57142857142857" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="801.875" y1="88.57142857142857" x2="848.125" y2="88.57142857142857" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
 <line x1="801.875" y1="111.42857142857143" x2="848.125" y2="111.42857142857143" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="801.875" y1="111.42857142857143" x2="848.125" y2="111.42857142857143" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
-<rect x="848.125" y="78.75" width="6.25" height="42.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#AEDCDE"/>
-<path d="M854.375 78.75 Q861.875 100 854.375 121.25" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#AEDCDE"/>
-<path d="M 245.625 80 C 239.375 85, 239.375 95, 245.625 100" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="#AEDCDE" /><path d="M 245.625 120 C 239.375 115, 239.375 105, 245.625 100" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="#AEDCDE" /></g><text x="50%" y="160" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb)</text>
+<rect x="848.125" y="78.75" width="6.25" height="42.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="blue" fill-opacity="1"/>
+<path d="M854.375 78.75 Q861.875 100 854.375 121.25" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="blue" fill-opacity="1"/>
+<path d="M 245.625 80 C 239.375 85, 239.375 95, 245.625 100" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="blue" /><path d="M 245.625 120 C 239.375 115, 239.375 105, 245.625 100" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="blue" /></g><text x="50%" y="160" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb)</text>
 <text x="50%" y="180" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
 <text x="990" y="190" font-size="0.5em" font-weight="bold" text-anchor="end" dominant-baseline="middle">SVGPencilRenderer</text>
 </svg>

@@ -80,33 +80,33 @@
 <line x1="906.25" y1="130" x2="971.25" y2="130" stroke="black" stroke-width="1" />
 <line x1="971.25" y1="119" x2="971.25" y2="141" stroke="black" stroke-width="1" />
 <text x="938.75" y="111" font-size="1.2em" transform="rotate(-90, 926.75, 111)" font-weight="bold" text-anchor="start" dominant-baseline="central" fill="black"><tspan x="930.75" dy="0">13.00 mm</tspan><tspan x="930.75" dy="1em">cap</tspan></text>
-<path d="M228.75 241.875 L240 240 L240 260 L228.75 258.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" />
-<path d="M240 236.875 L308.75 229.375 L308.75 270.625 L240 263.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" />
-<rect x="308.75" y="229.375" width="147.5" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
+<path d="M228.75 241.875 L240 240 L240 260 L228.75 258.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
+<path d="M240 236.875 L308.75 229.375 L308.75 270.625 L240 263.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
+<rect x="308.75" y="229.375" width="147.5" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white" fill-opacity="1"/>
 <rect x="308.75" y="229.375" width="147.5" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="url(#diagonalHatch)"/>
-<rect x="456.25" y="230" width="337.5" height="40" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
+<rect x="456.25" y="230" width="337.5" height="40" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white" fill-opacity="1"/>
 <line x1="456.25" y1="250" x2="793.75" y2="250" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="456.25" y1="250" x2="793.75" y2="250" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
 <path d="M613.5 215.875 Q636.25 239.375 646.25 215.875 Z" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
 <line x1="611.25" y1="214.375" x2="793.75" y2="214.375" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
 <path d="M793.75 214.375 Q813.75 221.875 793.75 228.125" stroke-width="4" stroke="black" fill="none" stroke-linecap="round" />
-<rect x="793.75" y="227.5" width="27.5" height="45" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
+<rect x="793.75" y="227.5" width="27.5" height="45" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white" fill-opacity="1"/>
 <path d="M613.5 215.875 Q636.25 238.375 646.25 215.875 Z" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
 <line x1="611.25" y1="214.375" x2="793.75" y2="214.375" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
 <path d="M793.75 214.375 Q813.75 221.875 793.75 228.125" stroke-width="3" stroke="white" fill="none" stroke-linecap="round" />
-<rect x="821.25" y="230" width="20" height="40" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
-<rect x="841.25" y="229.375" width="47.5" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
+<rect x="821.25" y="230" width="20" height="40" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white" fill-opacity="1"/>
+<rect x="841.25" y="229.375" width="47.5" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white" fill-opacity="1"/>
 <rect x="841.25" y="229.375" width="47.5" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="url(#diagonalHatch)"/>
-<rect x="888.75" y="230" width="5" height="40" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
-<rect x="893.75" y="230" width="6.25" height="40" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
-<rect x="900" y="230" width="6.25" height="40" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
-<rect x="906.25" y="236.25" width="30" height="27.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
-<rect x="936.25" y="237.5" width="3.75" height="25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
-<rect x="940" y="236.25" width="7.5" height="27.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
-<rect x="947.5" y="237.5" width="3.75" height="25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
-<rect x="951.25" y="236.25" width="7.5" height="27.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
-<rect x="958.75" y="237.5" width="3.75" height="25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
-<rect x="962.5" y="236.25" width="8.75" height="27.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
+<rect x="888.75" y="230" width="5" height="40" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white" fill-opacity="1"/>
+<rect x="893.75" y="230" width="6.25" height="40" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white" fill-opacity="1"/>
+<rect x="900" y="230" width="6.25" height="40" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white" fill-opacity="1"/>
+<rect x="906.25" y="236.25" width="30" height="27.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white" fill-opacity="1"/>
+<rect x="936.25" y="237.5" width="3.75" height="25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white" fill-opacity="1"/>
+<rect x="940" y="236.25" width="7.5" height="27.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white" fill-opacity="1"/>
+<rect x="947.5" y="237.5" width="3.75" height="25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white" fill-opacity="1"/>
+<rect x="951.25" y="236.25" width="7.5" height="27.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white" fill-opacity="1"/>
+<rect x="958.75" y="237.5" width="3.75" height="25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white" fill-opacity="1"/>
+<rect x="962.5" y="236.25" width="8.75" height="27.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white" fill-opacity="1"/>
 </g><text x="50%" y="480" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb) // Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
 <text x="1190" y="490" font-size="0.5em" font-weight="bold" text-anchor="end" dominant-baseline="middle">SVGTechnicalComponentRenderer</text>
 </svg>

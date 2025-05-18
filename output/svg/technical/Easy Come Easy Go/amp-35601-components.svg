@@ -60,11 +60,11 @@
 <line x1="880.625" y1="130" x2="958.125" y2="130" stroke="black" stroke-width="1" />
 <line x1="958.125" y1="119" x2="958.125" y2="141" stroke="black" stroke-width="1" />
 <text x="919.375" y="111" font-size="1.2em" transform="rotate(-90, 907.375, 111)" font-weight="bold" text-anchor="start" dominant-baseline="central" fill="black"><tspan x="911.375" dy="0">15.50 mm</tspan><tspan x="911.375" dy="1em">cap</tspan></text>
-<rect x="241.875" y="240.625" width="12.5" height="18.75" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
-<path d="M254.375 240 L295.625 231.25 L295.625 268.75 L254.375 260 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" />
-<rect x="295.625" y="231.25" width="15" height="37.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
-<rect x="310.625" y="229.375" width="30" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
-<rect x="340.625" y="230" width="498.75" height="40" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
+<rect x="241.875" y="240.625" width="12.5" height="18.75" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white" fill-opacity="1"/>
+<path d="M254.375 240 L295.625 231.25 L295.625 268.75 L254.375 260 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
+<rect x="295.625" y="231.25" width="15" height="37.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white" fill-opacity="1"/>
+<rect x="310.625" y="229.375" width="30" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white" fill-opacity="1"/>
+<rect x="340.625" y="230" width="498.75" height="40" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white" fill-opacity="1"/>
 <line x1="340.625" y1="250" x2="839.375" y2="250" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="340.625" y1="250" x2="839.375" y2="250" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
 <line x1="660.625" y1="219.375" x2="675.625" y2="219.375" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
@@ -72,22 +72,22 @@
 <line x1="695.625" y1="228.125" x2="715.625" y2="219.375" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
 <line x1="715.625" y1="219.375" x2="855.625" y2="219.375" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
 <path d="M855.625 219.375 Q875.625 224.375 855.625 229.375" stroke-width="4" stroke="black" fill="none" stroke-linecap="round" />
-<rect x="839.375" y="226.875" width="23.75" height="46.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
+<rect x="839.375" y="226.875" width="23.75" height="46.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white" fill-opacity="1"/>
 <line x1="660.625" y1="219.375" x2="675.625" y2="219.375" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
 <line x1="675.625" y1="219.375" x2="695.625" y2="228.125" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
 <line x1="695.625" y1="228.125" x2="715.625" y2="219.375" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
 <line x1="715.625" y1="219.375" x2="855.625" y2="219.375" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
 <path d="M855.625 219.375 Q875.625 224.375 855.625 229.375" stroke-width="3" stroke="white" fill="none" stroke-linecap="round" />
-<path d="M863.125 230 L871.875 230.625 L871.875 269.375 L863.125 270 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" />
-<rect x="871.875" y="230.625" width="8.75" height="38.75" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
-<rect x="880.625" y="235" width="21.25" height="30" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
-<rect x="901.875" y="230" width="46.25" height="40" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
+<path d="M863.125 230 L871.875 230.625 L871.875 269.375 L863.125 270 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
+<rect x="871.875" y="230.625" width="8.75" height="38.75" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white" fill-opacity="1"/>
+<rect x="880.625" y="235" width="21.25" height="30" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white" fill-opacity="1"/>
+<rect x="901.875" y="230" width="46.25" height="40" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white" fill-opacity="1"/>
 <line x1="901.875" y1="238.57142857142858" x2="948.125" y2="238.57142857142858" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="901.875" y1="238.57142857142858" x2="948.125" y2="238.57142857142858" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
 <line x1="901.875" y1="261.42857142857144" x2="948.125" y2="261.42857142857144" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="901.875" y1="261.42857142857144" x2="948.125" y2="261.42857142857144" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
-<rect x="948.125" y="228.75" width="6.25" height="42.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
-<path d="M954.375 228.75 Q961.875 250 954.375 271.25" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white"/>
+<rect x="948.125" y="228.75" width="6.25" height="42.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white" fill-opacity="1"/>
+<path d="M954.375 228.75 Q961.875 250 954.375 271.25" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <path d="M 345.625 230 C 339.375 235, 339.375 245, 345.625 250" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="white" /><path d="M 345.625 270 C 339.375 265, 339.375 255, 345.625 250" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="white" /></g><text x="50%" y="480" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb) // Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
 <text x="1190" y="490" font-size="0.5em" font-weight="bold" text-anchor="end" dominant-baseline="middle">SVGTechnicalComponentRenderer</text>
 </svg>

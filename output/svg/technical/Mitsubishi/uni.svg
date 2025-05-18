@@ -166,41 +166,41 @@
 <line x1="1350" y1="279.375" x2="1350" y2="320.625" stroke="black" stroke-width="1" />
 <line x1="1339" y1="320.625" x2="1361" y2="320.625" stroke="black" stroke-width="1" />
 <text x="1350" y="328.625" transform="rotate(-90, 1350, 328.625)" font-weight="bold" font-size="1.2em" text-anchor="end" dominant-baseline="middle" fill="black">body</text>
-<rect x="398.75" y="291.875" width="5" height="16.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
-<path d="M403.75 286.875 L461.25 281.25 L461.25 318.75 L403.75 313.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" />
-<rect x="461.25" y="280" width="127.5" height="40" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
+<rect x="398.75" y="291.875" width="5" height="16.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white" fill-opacity="1"/>
+<path d="M403.75 286.875 L461.25 281.25 L461.25 318.75 L403.75 313.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
+<rect x="461.25" y="280" width="127.5" height="40" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white" fill-opacity="1"/>
 <rect x="461.25" y="280" width="127.5" height="40" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="url(#diagonalHatch)"/>
-<rect x="588.75" y="279.375" width="420" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
+<rect x="588.75" y="279.375" width="420" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white" fill-opacity="1"/>
 <line x1="588.75" y1="300" x2="1008.75" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="588.75" y1="300" x2="1008.75" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
 <path d="M903.75 271.625 Q881.25 284.125 868.75 272.875" stroke-width="4" stroke="black" fill="none" stroke-linecap="round" />
 <path d="M868.75 272.875 Q861.25 269.125 868.75 267.875" stroke-width="4" stroke="black" fill="none" stroke-linecap="round" />
 <line x1="868.75" y1="267.875" x2="1003.75" y2="267.875" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
 <line x1="1003.75" y1="267.875" x2="1008.75" y2="279.125" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
-<rect x="1008.75" y="276.875" width="33.75" height="46.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
+<rect x="1008.75" y="276.875" width="33.75" height="46.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white" fill-opacity="1"/>
 <path d="M903.75 271.625 Q881.25 284.125 868.75 272.875" stroke-width="3" stroke="white" fill="none" stroke-linecap="round" />
 <path d="M868.75 272.875 Q861.25 269.125 868.75 267.875" stroke-width="3" stroke="white" fill="none" stroke-linecap="round" />
 <line x1="868.75" y1="267.875" x2="1003.75" y2="267.875" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
 <line x1="1003.75" y1="267.875" x2="1008.75" y2="279.125" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
-<rect x="1042.5" y="285" width="48.75" height="30" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
-<rect x="1091.25" y="281.25" width="10" height="37.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
-<circle r="18.75" cx="160" cy="300" fill="white" stroke="dimgray" stroke-width="1"  />
-<circle r="15" cx="160" cy="300" fill="white" stroke="dimgray" stroke-width="1"  />
-<circle r="23.125" cx="160" cy="300" fill="white" stroke="dimgray" stroke-width="1"  />
-<polygon points="148.09215069796397,279.375 171.90784930203603,279.375 183.81569860407205,300 171.90784930203603,320.625 148.09215069796397,320.625 136.18430139592795,300 " stroke="dimgray" stroke-width="1" fill="white"/>
-<circle r="20" cx="160" cy="300" fill="white" stroke="dimgray" stroke-width="1"  />
-<circle r="13.125" cx="160" cy="300" stroke="dimgray" stroke-width="1" fill="white" />
-<circle r="18.75" cx="160" cy="300" stroke="dimgray" stroke-width="1" fill="white" />
-<circle r="8.125" cx="160" cy="300" fill="white" stroke="dimgray" stroke-width="1"  />
+<rect x="1042.5" y="285" width="48.75" height="30" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white" fill-opacity="1"/>
+<rect x="1091.25" y="281.25" width="10" height="37.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white" fill-opacity="1"/>
+<circle r="18.75" cx="160" cy="300" fill="[object Object]" stroke="dimgray" stroke-width="1"  />
+<circle r="15" cx="160" cy="300" fill="[object Object]" stroke="dimgray" stroke-width="1"  />
+<circle r="23.125" cx="160" cy="300" fill="[object Object]" stroke="dimgray" stroke-width="1"  />
+<polygon points="148.09215069796397,279.375 171.90784930203603,279.375 183.81569860407205,300 171.90784930203603,320.625 148.09215069796397,320.625 136.18430139592795,300 " stroke="dimgray" stroke-width="1" fill="[object Object]"/>
+<circle r="20" cx="160" cy="300" fill="[object Object]" stroke="dimgray" stroke-width="1"  />
+<circle r="13.125" cx="160" cy="300" stroke="dimgray" stroke-width="1" fill="[object Object]" />
+<circle r="18.75" cx="160" cy="300" stroke="dimgray" stroke-width="1" fill="[object Object]" />
+<circle r="8.125" cx="160" cy="300" fill="[object Object]" stroke="dimgray" stroke-width="1"  />
 <circle r="5" cx="160" cy="300" fill="black" stroke="dimgray" stroke-width="0.5"  />
-<circle r="8.125" cx="1400" cy="300" fill="white" stroke="dimgray" stroke-width="1"  />
-<circle r="13.125" cx="1400" cy="300" stroke="dimgray" stroke-width="1" fill="white" />
-<circle r="18.75" cx="1400" cy="300" stroke="dimgray" stroke-width="1" fill="white" />
-<circle r="20" cx="1400" cy="300" fill="white" stroke="dimgray" stroke-width="1"  />
-<polygon points="1388.092150697964,279.375 1411.907849302036,279.375 1423.8156986040722,300 1411.907849302036,320.625 1388.092150697964,320.625 1376.1843013959278,300 " stroke="dimgray" stroke-width="1" fill="white"/>
-<circle r="23.125" cx="1400" cy="300" fill="white" stroke="dimgray" stroke-width="1"  />
-<circle r="15" cx="1400" cy="300" fill="white" stroke="dimgray" stroke-width="1"  />
-<circle r="18.75" cx="1400" cy="300" fill="white" stroke="dimgray" stroke-width="1"  />
+<circle r="8.125" cx="1400" cy="300" fill="[object Object]" stroke="dimgray" stroke-width="1"  />
+<circle r="13.125" cx="1400" cy="300" stroke="dimgray" stroke-width="1" fill="[object Object]" />
+<circle r="18.75" cx="1400" cy="300" stroke="dimgray" stroke-width="1" fill="[object Object]" />
+<circle r="20" cx="1400" cy="300" fill="[object Object]" stroke="dimgray" stroke-width="1"  />
+<polygon points="1388.092150697964,279.375 1411.907849302036,279.375 1423.8156986040722,300 1411.907849302036,320.625 1388.092150697964,320.625 1376.1843013959278,300 " stroke="dimgray" stroke-width="1" fill="[object Object]"/>
+<circle r="23.125" cx="1400" cy="300" fill="[object Object]" stroke="dimgray" stroke-width="1"  />
+<circle r="15" cx="1400" cy="300" fill="[object Object]" stroke="dimgray" stroke-width="1"  />
+<circle r="18.75" cx="1400" cy="300" fill="[object Object]" stroke="dimgray" stroke-width="1"  />
 </g><text x="50%" y="580" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb) // Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
 <text x="1490" y="590" font-size="0.5em" font-weight="bold" text-anchor="end" dominant-baseline="middle">SVGTechnicalRenderer</text>
 </svg>

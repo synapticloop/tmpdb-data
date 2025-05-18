@@ -16,6 +16,7 @@ import {
 } from "../utils/svg-helper.ts";
 import {Part} from "../model/Part.ts";
 import {formatToTwoPlaces} from "../utils/formatter.ts";
+import {OpaqueColour} from "../model/OpaqueColour.ts";
 
 export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 	SVG_WIDTH: number = 1200;
@@ -69,7 +70,7 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 		let startX: number = this.SVG_WIDTH/2 - (this.pencil.totalLength*5/2);
 		let midY: number = 120;
 
-		let colour:string = "white";
+		let colour: OpaqueColour = new OpaqueColour("white");
 
 		for (let [index, component] of this.pencil.components.entries()) {
 			if(index !== 0) {
@@ -79,7 +80,7 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 				}
 			}
 
-			colour = this.getMappedColour(component.colours, colourIndex, colour);
+			colour = this.getMappedColour(component.colours, colourIndex, colour.colour);
 
 			let partLength:number = 0;
 			let endPartLength: number = 0;
@@ -377,11 +378,11 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 				midY += 120;
 			}
 
-			colour = this.getMappedColour(component.colours, colourIndex, colour);
 
 			for(let part of component.parts) {
+				colour = this.getMappedColour(part.colours, colourIndex, colour.colour);
 				// TODO - why is the taper off
-				svgString += super.renderTaper(startX, midY, part, colour);
+				svgString += super.renderTaper(startX, midY, part, colour.colour);
 				startX += part.length * 5;
 			}
 

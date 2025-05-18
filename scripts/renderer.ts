@@ -9,7 +9,6 @@ import {PDFDatasheetRenderer} from "./renderer/PDFDatasheetRenderer.ts";
 import {SVGPencilRenderer} from "./renderer/SVGPencilRenderer.ts";
 import {SVGRenderer} from "./renderer/SVGRenderer.ts";
 import {SVGTechnicalComponentRenderer} from "./renderer/SVGTechnicalComponentRenderer.ts";
-import {OpenSCADRenderer} from "./renderer/OpenSCADRenderer.ts";
 import {SVGTechnicalExplodedRenderer} from "./renderer/SVGTechnicalExplodedRenderer.ts";
 import {SVGPencilAllRenderer} from "./renderer/SVGPencilAllRenderer.ts";
 import {SVGPencil45Renderer} from "./renderer/SVGPencil45Renderer.ts";
@@ -64,13 +63,6 @@ for (const pencilDirectory of pencilDirectories) {
 			new PDFDatasheetRenderer(pencil, pencilDirectory, pencilFileName).render(outputPdfFie);
 			console.log(`       PDF: [${fileNumber}] (datasheet) ${pencilFile} -> ${outputPdfFie}`);
 			fileNumber++;
-
-			const scadOutputDir: string = path.join("./output/scad/technical/");
-			fs.mkdirSync(scadOutputDir, { "recursive": true });
-			const outputScadFile: string = path.join(scadOutputDir, pencilDirectory + "-" + pencilFileName + ".scad");
-			const outputScadString: string = new OpenSCADRenderer(pencil).render();
-			console.log(`      SCAD: [${fileNumber}] (openSCAD) ${pencilFile} -> ${outputScadFile}`);
-			fs.writeFileSync(outputScadFile, outputScadString);
 		}
 	}
 }

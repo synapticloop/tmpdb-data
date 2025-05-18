@@ -14,10 +14,12 @@ import {
 	target,
 	TextOrientation
 } from "../utils/svg-helper.ts";
+import {formatToTwoPlaces} from "../utils/formatter.ts";
 
 import {Component} from "../model/Component.ts";
 import {Pencil} from "../model/Pencil.ts";
-import {formatToTwoPlaces} from "../utils/formatter.ts";
+import {OpaqueColour} from "../model/OpaqueColour.ts";
+
 
 export abstract class SVGRenderer {
 	protected pencil:Pencil;
@@ -237,7 +239,10 @@ export abstract class SVGRenderer {
 							`C ${startX + xOffsetStart * xOffsetStartScale * 5} ${midY - part.endHeight / 2 * 5 * 3 / 4}, ` +
 							`${startX + xOffsetStart * xOffsetStartScale * 5} ${midY - part.endHeight / 2 * 5 / 4}, ` +
 							`${startX + 0.65} ${midY}" ` +
-							`stroke-width="0.5" stroke="${strokeColor}" stroke-linecap="round" fill="${colour}" />`
+							`stroke-width="0.5" ` +
+							`stroke="${strokeColor}" ` +
+							`stroke-linecap="round" ` +
+							`fill="${colour}" />`
 						svgString += `<path d="M ${startX + 0.65} ${midY + part.endHeight / 2 * 5} ` +
 							`C ${startX + xOffsetStart * xOffsetStartScale * 5} ${midY + part.endHeight / 2 * 5 * 3 / 4}, ` +
 							`${startX + xOffsetStart * xOffsetStartScale * 5} ${midY + part.endHeight / 2 * 5 / 4}, ` +
@@ -346,14 +351,14 @@ export abstract class SVGRenderer {
 			midY = midYOverride;
 		}
 
-		let colour:string = "white";
+		let colourOpacity: OpaqueColour = new OpaqueColour("white");
 
 
 		for (let component of this.pencil.components) {
-			colour = this.getMappedColour(component.colours, colourIndex, colour);
+			colourOpacity = this.getMappedColour(component.colours, colourIndex, "white");
 
 			for(let part of component.parts) {
-				svgString += this.renderPart(startX, midY, component, part, colourIndex, colour);
+				svgString += this.renderPart(startX, midY, component, part, colourIndex, colourOpacity);
 				startX += part.length * 5;
 			}
 		}
@@ -363,10 +368,10 @@ export abstract class SVGRenderer {
 		startX = this._width/2 - (this.pencil.totalLength*5/2);
 
 		for (let component of this.pencil.components) {
-			colour = this.getMappedColour(component.colours, colourIndex, colour);
+			colourOpacity = this.getMappedColour(component.colours, colourIndex, colourOpacity.colour);
 
 			for(let part of component.parts) {
-				svgString += this.renderTaper(startX, midY, part, colour);
+				svgString += this.renderTaper(startX, midY, part, colourOpacity.colour);
 				startX += part.length * 5;
 			}
 		}
@@ -396,25 +401,6 @@ export abstract class SVGRenderer {
 		return(svgString);
 	}
 
-	protected renderExtraComponentsForeground(colourIndex:number, midYOverride: number):string {
-		let svgString: string = "";
-		let startX: number = this._width/2 - (this.pencil.totalLength*5/2);
-		for (const component of this.pencil.components) {
-			// extras are always rendered first - we render
-			// the background for it
-			for(const extra of component.extras) {
-				let colour: string = this.getMappedColour(component.colours, colourIndex, extra.colours[colourIndex]);
-				svgString += drawExtraForeground(startX + extra.offset[0] * 5, midYOverride - extra.offset[1] * 5, extra.extraParts, colour);
-				break;
-			}
-
-			for(let part of component.parts) {
-				startX += part.length * 5;
-			}
-		}
-		return(svgString);
-	}
-
 	protected renderTotalLengthDimensions(): string {
 		return(dimensionsHorizontal(
 			this._width/2 - this.pencil.totalLength*5/2,
@@ -426,7 +412,7 @@ export abstract class SVGRenderer {
 		));
 	}
 
-	protected renderPart(startX:number, midY:number, component:Component, part: Part, colourIndex: number, colour: string):string {
+	protected renderPart(startX:number, midY:number, component:Component, part: Part, colourIndex: number, defaultOpaqueColour: OpaqueColour):string {
 
 		let svgString:string = "";
 		// get the stroke colour
@@ -445,7 +431,7 @@ export abstract class SVGRenderer {
 		}
 
 		// maybe we have an over-ride colour and material
-		colour = this.getMappedColour(component.colours, colourIndex, colour);
+		let opaqueColour: OpaqueColour = this.getMappedColour(part.colours, colourIndex, defaultOpaqueColour.colour);
 
 		switch (part.shape) {
 			case "cylinder":
@@ -457,7 +443,7 @@ export abstract class SVGRenderer {
 					part.length * 5,
 					part.startHeight * 5,
 					strokeColour,
-					colour);
+					opaqueColour);
 
 				break;
 			case "cone":
@@ -466,7 +452,7 @@ export abstract class SVGRenderer {
 					`L${startX + part.internalOffset * 5 + part.length * 5} ${midY - (part.endHeight / 2 * 5)} ` +
 					`L${startX + part.internalOffset * 5 + part.length * 5} ${midY + (part.endHeight / 2 * 5)} ` +
 					`L${startX + part.internalOffset * 5} ${midY + (part.startHeight / 2 * 5)} Z" ` +
-					`stroke-width="0.5" stroke="${strokeColour}" stroke-linejoin="round" fill="${colour}" />\n`
+					`stroke-width="0.5" stroke="${strokeColour}" stroke-linejoin="round" fill="${opaqueColour.colour}" fill-opacity="${opaqueColour.opacity}" />\n`
 				break;
 			case "convex":
 				let offsetX = part.length * 5;
@@ -482,13 +468,13 @@ export abstract class SVGRenderer {
 				svgString += `<path d="M${startX + part.internalOffset * 5} ${midY - (part.startHeight / 2 * 5)} ` +
 					`Q${startX + part.internalOffset * 5 + offsetX} ${midY - offsetY} ` +
 					`${startX + part.internalOffset * 5} ${midY + (part.startHeight / 2 * 5)}" ` +
-					`stroke-width="0.5" stroke="${strokeColour}" stroke-linejoin="round" fill="${colour}"/>\n`
+					`stroke-width="0.5" stroke="${strokeColour}" stroke-linejoin="round" fill="${opaqueColour.colour}" fill-opacity="${opaqueColour.opacity}"/>\n`
 				break;
 			case "concave":
 				svgString += `<path d="M${startX + part.internalOffset * 5} ${midY - (part.startHeight / 2 * 5)} ` +
 					`Q${startX + part.internalOffset * 5 + part.length * 5} ${midY} ` +
 					`${startX + part.internalOffset * 5} ${midY + (part.startHeight / 2 * 5)}" ` +
-					`stroke-width="0.5" stroke="${strokeColour}" stroke-linejoin="round" fill="${colour}"/>\n`
+					`stroke-width="0.5" stroke="${strokeColour}" stroke-linejoin="round" fill="${opaqueColour.colour}" fill-opacity="${opaqueColour.opacity}"/>\n`
 				break;
 		}
 
@@ -561,7 +547,7 @@ export abstract class SVGRenderer {
 						svgString += `<line x1="${startX + part.internalOffset * 5 + i*5}" y1="${midY - (part.endHeight / 2 * 5) - 2}" ` +
 							`x2="${startX + part.internalOffset * 5 + (i + 1) * 5}" y2="${midY + (part.endHeight / 2 * 5) + 2}" stroke="dimgray" stroke-linecap="round" stroke-width="2" />\n`;
 						svgString += `<line x1="${startX + part.internalOffset * 5 + i*5}" y1="${midY - (part.endHeight / 2 * 5) - 2}" ` +
-							`x2="${startX + part.internalOffset * 5 + (i + 1) * 5}" y2="${midY + (part.endHeight / 2 * 5) + 2}" stroke="${colour}" stroke-linecap="round" stroke-width="1" />\n`;
+							`x2="${startX + part.internalOffset * 5 + (i + 1) * 5}" y2="${midY + (part.endHeight / 2 * 5) + 2}" stroke="${opaqueColour}" stroke-linecap="round" stroke-width="1" />\n`;
 					}
 					break;
 				case "indicator":
@@ -570,7 +556,7 @@ export abstract class SVGRenderer {
 							`y="${midY - (part.endHeight / 4 * 5)}" ` +
 							`width="${part.length * 5 - 20}" ` +
 							`height="${part.startHeight / 2 * 5}" ` +
-							`rx="1" ry="1" stroke-width="2" stroke="black" fill="${colour}"/>\n`;
+							`rx="1" ry="1" stroke-width="2" stroke="black" fill="${opaqueColour}"/>\n`;
 					svgString += `<text x="${startX + part.internalOffset * 5 + (part.length * 5) / 2}" ` +
 							`y="${midY}" ` +
 							`text-anchor="middle" dominant-baseline="central">` +
@@ -583,45 +569,32 @@ export abstract class SVGRenderer {
 		}
 
 		for(const extra of component.extras) {
-			let colour: string = this.getMappedColour(component.colours, colourIndex, extra.colours[colourIndex]);
-			svgString += drawExtraForeground(startX + extra.offset[0] * 5, midY - extra.offset[1] * 5, extra.extraParts, colour);
+			let colour: OpaqueColour = this.getMappedColour(component.colours, colourIndex, extra.colours[colourIndex]);
+			svgString += drawExtraForeground(startX + extra.offset[0] * 5, midY - extra.offset[1] * 5, extra.extraParts, colour.colour);
 			break;
 		}
 
 		return(svgString);
 	}
 
-	// TODO remove
-	protected getMappedColourToBeRemoved(component: Component, defaultColour: string, colourIndex: number): string {
-		let colourComponent:string = component.colours[colourIndex];
-		if (colourComponent) {
-			if(this.pencil.colourMap[colourComponent]) {
-				return(this.pencil.colourMap[colourComponent]);
-			} else {
-				return(colourComponent);
-			}
-		}
-
-		return(defaultColour);
-	}
-
-	// TODO - this should be renamed to getMappedColour
-	protected getMappedColour(colours: string[], colourIndex: number, defaultColour: string ): string {
+	protected getMappedColour(colours: string[], colourIndex: number, defaultColour: string ): OpaqueColour {
 		if(colourIndex == -1) {
-			return("white");
+			return(new OpaqueColour("white"));
 		}
 
 		let colourComponent:string = colours[colourIndex];
 
 		if (colourComponent) {
-			if(this.pencil.colourMap[colourComponent]) {
-				return(this.pencil.colourMap[colourComponent]);
+			let colourOpacity = new OpaqueColour(colourComponent);
+
+			if(this.pencil.colourMap[colourOpacity.colour]) {
+				return(colourOpacity);
 			} else {
-				return(colourComponent);
+				return(new OpaqueColour(colourComponent));
 			}
 		}
 
-		return(defaultColour);
+		return(new OpaqueColour(defaultColour));
 	}
 
 	protected renderGuidelines(): string {

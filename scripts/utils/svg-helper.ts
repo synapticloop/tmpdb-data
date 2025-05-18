@@ -2,6 +2,7 @@
 import {Part} from "../model/Part.ts";
 import {Extra} from "../model/Extra.ts";
 import {ExtraPart} from "../model/ExtraPart.ts";
+import {OpaqueColour} from "../model/OpaqueColour.ts";
 
 const DIMENSION_MARKER_LENGTH = 22;
 
@@ -561,43 +562,12 @@ export function dimensionsHorizontal(x: number, y:number, width:number, text: st
 	}
 	return(svgString);
 }
-export function rectangle(x:number, y:number, width:number, height:number, strokeColour:string, fillColour:string): string {
+export function rectangle(x:number, y:number, width:number, height:number, strokeColour:string, opaqueColour: OpaqueColour): string {
 	let svgString = "";
 	svgString += `<rect x="${x}" ` +
 		`y="${y}" ` +
 		`width="${width}" ` +
 		`height="${height}" ` +
-		`rx="1" ry="1" stroke-width="0.5" stroke="${strokeColour}" fill="${fillColour}"/>\n`
+		`rx="1" ry="1" stroke-width="0.5" stroke="${strokeColour}" fill="${opaqueColour.colour}" fill-opacity="${opaqueColour.opacity}"/>\n`
 	return(svgString);
-
 }
-
-// export function textSmall(x: number, y:number, text: string, textColour: string, textOrientation: TextOrientation=TextOrientation.TOP, shouldBold: boolean=true) {
-// 	let svgString: string = "";
-// 	switch (textOrientation) {
-// 		case TextOrientation.LEFT_ROTATED:
-// 			svgString += `<text ` +
-// 				`x="${x - 8 - DIMENSION_MARKER_LENGTH/2}" ` +
-// 				`y="${y + height/2}" ` +
-// 				`transform="rotate(-90, ${x - 8 - DIMENSION_MARKER_LENGTH/2}, ${y + height/2})" ` +
-// 				`font-size="1.2em" ` +
-// 				`${(shouldBold ? "font-weight=\"bold\"" : "")} ` +
-// 				`text-anchor="middle" ` +
-// 				`dominant-baseline="central" fill="black">` +
-// 				`${text}` +
-// 				`</text>\n`
-// 			break;
-// 		case TextOrientation.RIGHT:
-// 			svgString += `<text ` +
-// 				`x="${x + 2 + DIMENSION_MARKER_LENGTH/2}" ` +
-// 				`y="${y + height/2}" ` +
-// 				`font-size="1.2em" ` +
-// 				`${(shouldBold ? "font-weight=\"bold\"" : "")} ` +
-// 				`text-anchor="start" ` +
-// 				`dominant-baseline="central" fill="black">` +
-// 				`${text}` +
-// 				`</text>\n`
-// 			break;
-// 	}
-// 	return(svgString);
-// }
