@@ -227,7 +227,7 @@ export function renderBackExtra(x, y, offsetX, offsetY, width, parts, fillColour
 				`y="${y - Math.abs(offsetY) * 5 - (height * 5)}" ` +
 				`width="${width * 5}" ` +
 				`height="${height * 5}" ` +
-				`rx="1" ry="1" stroke-width="1.0" stroke="dimgray" fill="${fillColour}"/>\n`;
+				`rx="0" ry="0" stroke-width="1.0" stroke="dimgray" fill="${fillColour}"/>\n`;
 
 		if(isCurve) {
 			let from = y - Math.abs(offsetY) * 5 - (height * 5);
@@ -244,7 +244,7 @@ export function renderBackExtra(x, y, offsetX, offsetY, width, parts, fillColour
 				`y="${y - Math.abs(offsetY) * 5 - (height * 5)}" ` +
 				`width="${width * 5}" ` +
 				`height="${height * 5}" ` +
-				`rx="1" ry="1" stroke-width="1.0" stroke="dimgray" fill="none"/>\n`;
+				`rx="0" ry="0" stroke-width="1.0" stroke="dimgray" fill="none"/>\n`;
 
 	}
 	return(svgString);
@@ -568,6 +568,6 @@ export function rectangle(x:number, y:number, width:number, height:number, strok
 		`y="${y}" ` +
 		`width="${width}" ` +
 		`height="${height}" ` +
-		`rx="1" ry="1" stroke-width="0.5" stroke="${strokeColour}" fill="${opaqueColour.colour}" fill-opacity="${opaqueColour.opacity}"/>\n`
+		`rx="0" ry="0" stroke-width="0.5" stroke="${strokeColour}" fill="${opaqueColour.colour}" fill-opacity="${opaqueColour.opacity}"/>\n`
 	return(svgString);
 }

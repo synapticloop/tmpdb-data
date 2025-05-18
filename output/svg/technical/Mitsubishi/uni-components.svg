@@ -65,24 +65,24 @@
 <line x1="892.5" y1="130" x2="951.25" y2="130" stroke="black" stroke-width="1" />
 <line x1="951.25" y1="119" x2="951.25" y2="141" stroke="black" stroke-width="1" />
 <text x="921.875" y="111" font-size="1.2em" transform="rotate(-90, 909.875, 111)" font-weight="bold" text-anchor="start" dominant-baseline="central" fill="black"><tspan x="913.875" dy="0">11.75 mm</tspan><tspan x="913.875" dy="1em">cap</tspan></text>
-<!-- julian --><rect x="248.75" y="241.875" width="5" height="16.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white" fill-opacity="1"/>
+<!-- julian --><rect x="248.75" y="241.875" width="5" height="16.25" rx="0" ry="0" stroke-width="0.5" stroke="black" fill="white" fill-opacity="1"/>
 <path d="M253.75 236.875 L311.25 231.25 L311.25 268.75 L253.75 263.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
-<!-- julian --><rect x="311.25" y="230" width="127.5" height="40" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white" fill-opacity="1"/>
-<rect x="311.25" y="230" width="127.5" height="40" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="url(#diagonalHatch)"/>
-<!-- julian --><rect x="438.75" y="229.375" width="420" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white" fill-opacity="1"/>
+<!-- julian --><rect x="311.25" y="230" width="127.5" height="40" rx="0" ry="0" stroke-width="0.5" stroke="black" fill="white" fill-opacity="1"/>
+<rect x="311.25" y="230" width="127.5" height="40" rx="0" ry="0" stroke-width="0.5" stroke="black" fill="url(#diagonalHatch)"/>
+<!-- julian --><rect x="438.75" y="229.375" width="420" height="41.25" rx="0" ry="0" stroke-width="0.5" stroke="black" fill="white" fill-opacity="1"/>
 <line x1="438.75" y1="250" x2="858.75" y2="250" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="438.75" y1="250" x2="858.75" y2="250" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
 <path d="M753.75 221.625 Q731.25 234.125 718.75 222.875" stroke-width="4" stroke="black" fill="none" stroke-linecap="round" />
 <path d="M718.75 222.875 Q711.25 219.125 718.75 217.875" stroke-width="4" stroke="black" fill="none" stroke-linecap="round" />
 <line x1="718.75" y1="217.875" x2="853.75" y2="217.875" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
 <line x1="853.75" y1="217.875" x2="858.75" y2="229.125" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
-<!-- julian --><rect x="858.75" y="226.875" width="33.75" height="46.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white" fill-opacity="1"/>
+<!-- julian --><rect x="858.75" y="226.875" width="33.75" height="46.25" rx="0" ry="0" stroke-width="0.5" stroke="black" fill="white" fill-opacity="1"/>
 <path d="M753.75 221.625 Q731.25 234.125 718.75 222.875" stroke-width="3" stroke="white" fill="none" stroke-linecap="round" />
 <path d="M718.75 222.875 Q711.25 219.125 718.75 217.875" stroke-width="3" stroke="white" fill="none" stroke-linecap="round" />
 <line x1="718.75" y1="217.875" x2="853.75" y2="217.875" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
 <line x1="853.75" y1="217.875" x2="858.75" y2="229.125" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
-<!-- julian --><rect x="892.5" y="235" width="48.75" height="30" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white" fill-opacity="1"/>
-<!-- julian --><rect x="941.25" y="231.25" width="10" height="37.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white" fill-opacity="1"/>
+<!-- julian --><rect x="892.5" y="235" width="48.75" height="30" rx="0" ry="0" stroke-width="0.5" stroke="black" fill="white" fill-opacity="1"/>
+<!-- julian --><rect x="941.25" y="231.25" width="10" height="37.5" rx="0" ry="0" stroke-width="0.5" stroke="black" fill="white" fill-opacity="1"/>
 </g><text x="50%" y="480" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb) // Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
 <text x="1190" y="490" font-size="0.5em" font-weight="bold" text-anchor="end" dominant-baseline="middle">SVGTechnicalComponentRenderer</text>
 </svg>

@@ -515,7 +515,7 @@ export abstract class SVGRenderer {
 						`y="${midY - (part.endHeight / 2 * 5)}" ` +
 						`width="${part.length * 5}" ` +
 						`height="${part.startHeight * 5}" ` +
-						`rx="1" ry="1" stroke-width="0.5" stroke="black" fill="url(#diagonalHatch)"/>\n`;
+						`rx="0" ry="0" stroke-width="0.5" stroke="black" fill="url(#diagonalHatch)"/>\n`;
 					break;
 				case "spring":
 
@@ -556,7 +556,7 @@ export abstract class SVGRenderer {
 							`y="${midY - (part.endHeight / 4 * 5)}" ` +
 							`width="${part.length * 5 - 20}" ` +
 							`height="${part.startHeight / 2 * 5}" ` +
-							`rx="1" ry="1" stroke-width="2" stroke="black" fill="${opaqueColour}"/>\n`;
+							`rx="0" ry="0" stroke-width="2" stroke="black" fill="${opaqueColour}"/>\n`;
 					svgString += `<text x="${startX + part.internalOffset * 5 + (part.length * 5) / 2}" ` +
 							`y="${midY}" ` +
 							`text-anchor="middle" dominant-baseline="central">` +
