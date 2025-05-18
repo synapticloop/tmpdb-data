@@ -797,15 +797,18 @@ export class PDFDatasheetRenderer {
 		let textArray:string[] = [];
 
 		for(const part of parts) {
-			const finish: string = part.finish;
+			const finishes: string[] = part.finish.split(",");
 
-			if(!textSet.has(finish)) {
-				textSet.add(finish);
-				textArray.push(finish);
+			for(const finish of finishes) {
+				if(!textSet.has(finish)) {
+					textSet.add(finish);
+					textArray.push(finish);
+				}
 			}
 		}
+
 		if(textArray.length === 0) {
-			return("fd");
+			return("");
 		} else {
 			return (textArray.join("\n"));
 		}

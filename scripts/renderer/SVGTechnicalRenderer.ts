@@ -279,21 +279,6 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 		for(const component of this.pencil.components) {
 			colour = this.getMappedColour(component, colour, colourIndex);
 
-			// component.extraParts.reverse();
-			// for(const extraPart of component.extraParts) {
-			// 	svgString += renderBackExtra(
-			// 			startX,
-			// 			midY,
-			// 			extraPart.offset[0],
-			// 			extraPart.offset[1],
-			// 			extraPart.width,
-			// 			extraPart,
-			// 			colour);
-			// 	break;
-			//
-			// }
-			// component.extraParts.reverse();
-
 			component.parts.reverse();
 			for (let part of component.parts) {
 				switch (part.shape) {
@@ -327,7 +312,7 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 			}
 
 			// render the front piece
-			switch (front.type) {
+			switch (front.shape) {
 				case "cylinder":
 					svgString += circle(160, this.SVG_HEIGHT/2, dimensions[0]/2 * 5, "0.5", "dimgray", front.fill);
 					break;
@@ -373,7 +358,7 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 			}
 
 			// render the back piece
-			switch (back.type) {
+			switch (back.shape) {
 				case "cylinder":
 					svgString += circle(this.SVG_WIDTH - 100, this.SVG_HEIGHT/2, back.dimensions[0]/2 * 5, "1", "dimgray", back.fill);
 					break;

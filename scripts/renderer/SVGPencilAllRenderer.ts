@@ -33,14 +33,8 @@ export class SVGPencilAllRenderer extends SVGRenderer {
 
 
 		for (let i:number = 0; i < this.pencil.colourComponents.length; i++) {
-			// render the background for the extras
-			svgString += super.renderExtraComponentsBackground(midYOverride);
-
 			// now it is time to render the details of the pencil
 			svgString += super.renderSideComponents(i, midYOverride);
-
-			// render the foreground for the extras
-			svgString += super.renderExtraComponentsForeground(i, midYOverride);
 
 			midYOverride = midYOverride + 120;
 		}

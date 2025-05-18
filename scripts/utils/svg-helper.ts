@@ -137,31 +137,30 @@ export function drawExtra(offsetX: number, offsetY: number, parts: Part[], strok
 	return(svgString);
 }
 
-export function drawExtraBackground(offsetX: number, offsetY: number, extraParts: ExtraPart[]):string {
-	let thisStrokeColour = "black";
+export function drawExtraBackground(offsetX: number, offsetY: number, extraParts: ExtraPart[], strokeColour: string):string {
 
 	let svgString: string = "";
 	for(const extraPart of extraParts) {
 		const points: number[] = extraPart.points;
 		switch (extraPart.shape) {
 			case "line":
-				svgString += `<!-- osman --><line x1="${offsetX + (points[0] * 5)}" ` +
+				svgString += `<line x1="${offsetX + (points[0] * 5)}" ` +
 						`y1="${offsetY + (points[1] * 5)+ 1}" ` +
 						`x2="${offsetX + (points[2] * 5)}" ` +
 						`y2="${offsetY + (points[3] * 5)+ 1}" ` +
-						`stroke-width="${extraPart.width + 1}" stroke="${thisStrokeColour}" fill="dimgray" stroke-linecap="round" />\n`;
+						`stroke-width="${extraPart.width + 1}" stroke="${strokeColour}" fill="dimgray" stroke-linecap="round" />\n`;
 				break;
 			case "curve":
 				svgString += `<path d="M${offsetX + (points[0] * 5)} ${offsetY + (points[1] * 5) + 1} ` +
 					`Q${offsetX + (points[4] * 5)} ${offsetY + (points[5] * 5) + 1} ` +
 					`${offsetX + (points[2] * 5)} ${offsetY + (points[3] * 5) + 1}" ` +
-					`stroke-width="${extraPart.width + 1}" stroke="${thisStrokeColour}" fill="none" stroke-linecap="round" />\n`
+					`stroke-width="${extraPart.width + 1}" stroke="${strokeColour}" fill="none" stroke-linecap="round" />\n`
 				break;
 			case "curve-fill": {
 				svgString += `<path d="M${offsetX + (points[0] * 5)} ${offsetY + (points[1] * 5)} ` +
 						`Q${offsetX + (points[4] * 5)} ${offsetY + (points[5] * 5) + 1} ` +
 						`${offsetX + (points[2] * 5)} ${offsetY + (points[3] * 5)} Z" ` +
-						`stroke-width="${extraPart.width + 1}" stroke="${thisStrokeColour}" fill="dimgray" stroke-linecap="round" />\n`
+						`stroke-width="${extraPart.width + 1}" stroke="${strokeColour}" fill="dimgray" stroke-linecap="round" />\n`
 			}
 		}
 	}
@@ -177,7 +176,7 @@ export function drawExtraForeground(offsetX: number, offsetY: number, extraParts
 		const points: number[] = extraPart.points;
 		switch (extraPart.shape) {
 			case "line":
-			svgString += `<!-- julian --><line x1="${offsetX + (points[0] * 5)}" ` +
+			svgString += `<line x1="${offsetX + (points[0] * 5)}" ` +
 					`y1="${offsetY + (points[1] * 5) + 1}" ` +
 					`x2="${offsetX + (points[2] * 5)}" ` +
 					`y2="${offsetY + (points[3] * 5) + 1}" ` +

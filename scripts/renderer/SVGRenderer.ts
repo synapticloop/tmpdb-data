@@ -362,7 +362,7 @@ export abstract class SVGRenderer {
 			colour = this.getMappedColour(component, colour, colourIndex);
 
 			if(component.extras.length !== 0) {
-				svgString += this.renderExtraComponentsBackground(this._height/2);
+				svgString += this.renderExtraComponentsBackground(midYOverride, colourIndex);
 			}
 
 			for(let part of component.parts) {
@@ -370,7 +370,7 @@ export abstract class SVGRenderer {
 				startX += part.length * 5;
 			}
 			if(component.extras.length !== 0) {
-				svgString += this.renderExtraComponentsForeground(colourIndex, this._height/2);
+				svgString += this.renderExtraComponentsForeground(colourIndex, midYOverride);
 			}
 
 		}
@@ -391,14 +391,18 @@ export abstract class SVGRenderer {
 		return(svgString);
 	}
 
-	protected renderExtraComponentsBackground(midYOverride: number):string {
+	protected renderExtraComponentsBackground(midYOverride: number, colourIndex: number):string {
 		let svgString: string = "";
 		let startX: number = this._width/2 - (this.pencil.totalLength*5/2);
 		for (const component of this.pencil.components) {
 			// extras are always rendered first - we render
 			// the background for it
 			for(const extra of component.extras) {
-				svgString += drawExtraBackground(startX + extra.offset[0] * 5, midYOverride - extra.offset[1] * 5, extra.extraParts);
+				let backgroundColour = "black";
+				if(component.colours[colourIndex] == "black") {
+					backgroundColour = "dimgray";
+				}
+				svgString += drawExtraBackground(startX + extra.offset[0] * 5, midYOverride - extra.offset[1] * 5, extra.extraParts, backgroundColour);
 				break;
 			}
 
@@ -444,13 +448,16 @@ export abstract class SVGRenderer {
 		let svgString:string = "";
 		// get the stroke colour
 		let strokeColour:string = "black"
-		if (component.colours[0] === "black") {
-			strokeColour = "#888888";
+		if (component.colours[colourIndex] === "black") {
+			strokeColour = "dimgray";
 		}
 
 		for(const extra of component.extras) {
-			let colour: string = this.getMappedColourOverride(component.colours, colourIndex, extra.colours[colourIndex]);
-			svgString += drawExtraBackground(startX + extra.offset[0] * 5, midY - extra.offset[1] * 5, extra.extraParts);
+			let backgroundColour = "black";
+			if(component.colours[colourIndex] == "black") {
+				backgroundColour = "dimgray";
+			}
+			svgString += drawExtraBackground(startX + extra.offset[0] * 5, midY - extra.offset[1] * 5, extra.extraParts, backgroundColour);
 			break;
 		}
 
