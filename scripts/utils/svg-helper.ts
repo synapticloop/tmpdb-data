@@ -138,7 +138,7 @@ export function drawExtra(offsetX: number, offsetY: number, parts: Part[], strok
 }
 
 export function drawExtraBackground(offsetX: number, offsetY: number, extraParts: ExtraPart[]):string {
-	let thisStrokeColour = "dimgray";
+	let thisStrokeColour = "black";
 
 	let svgString: string = "";
 	for(const extraPart of extraParts) {
@@ -171,7 +171,7 @@ export function drawExtraBackground(offsetX: number, offsetY: number, extraParts
 
 export function drawExtraForeground(offsetX: number, offsetY: number, extraParts: ExtraPart[], fillColour: string):string {
 
-	let svgString: string = "<!--julian-->";
+	let svgString: string = "";
 
 	for(const extraPart of extraParts) {
 		const points: number[] = extraPart.points;

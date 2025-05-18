@@ -401,15 +401,14 @@ export abstract class SVGRenderer {
 	}
 
 	protected renderExtraComponentsForeground(colourIndex:number, midYOverride: number):string {
-		let colour = this.getMappedColour(component, colour, colourIndex);
-
 		let svgString: string = "";
 		let startX: number = this._width/2 - (this.pencil.totalLength*5/2);
 		for (const component of this.pencil.components) {
 			// extras are always rendered first - we render
 			// the background for it
 			for(const extra of component.extras) {
-				svgString += drawExtraForeground(startX + extra.offset[0] * 5, midYOverride - extra.offset[1] * 5, extra.extraParts, "white");
+				let colour: string = this.getMappedColourOverride(component.colours, colourIndex, extra.colours[colourIndex]);
+				svgString += drawExtraForeground(startX + extra.offset[0] * 5, midYOverride - extra.offset[1] * 5, extra.extraParts, colour);
 				break;
 			}
 
@@ -508,86 +507,87 @@ export abstract class SVGRenderer {
 		// now for the finish - although this only really works for cylinder types
 		// the question becomes whether there will be other finishes on different
 		// objects
-		switch (part.finish) {
-			case "ferrule":
-				let offset = ((part.length / 13) * 5) / 2;
+		for(const finish of part.finish.split(",")) {
+			switch (finish) {
+				case "ferrule":
+					let offset = ((part.length / 13) * 5) / 2;
 
-				for (let i = 0; i < 13; i++) {
-					if (i !== 0 && i !== 6 && i < 12) {
-						svgString += `<line x1="${startX + part.internalOffset * 5 + offset}" ` +
-							`y1="${midY + 1.0 - part.startHeight / 2 * 5}" ` +
-							`x2="${startX + part.internalOffset * 5 + offset}" ` +
-							`y2="${midY - 1.0 + part.startHeight / 2 * 5}" ` +
-							`stroke-width="1" stroke="gray" />\n`
+					for (let i = 0; i < 13; i++) {
+						if (i !== 0 && i !== 6 && i < 12) {
+							svgString += `<line x1="${startX + part.internalOffset * 5 + offset}" ` +
+								`y1="${midY + 1.0 - part.startHeight / 2 * 5}" ` +
+								`x2="${startX + part.internalOffset * 5 + offset}" ` +
+								`y2="${midY - 1.0 + part.startHeight / 2 * 5}" ` +
+								`stroke-width="1" stroke="gray" />\n`
+						}
+						offset += (part.length / 13) * 5;
 					}
-					offset += (part.length / 13) * 5;
-				}
 
-				svgString += drawOutlineCircle(4, startX + part.internalOffset * 5 + 15, midY - part.startHeight / 4 * 5, "dimGray")
+					svgString += drawOutlineCircle(4, startX + part.internalOffset * 5 + 15, midY - part.startHeight / 4 * 5, "dimGray")
 
-				break;
-			case "knurled":
-				svgString += `<rect x="${startX + part.internalOffset * 5}" ` +
-					`y="${midY - (part.endHeight / 2 * 5)}" ` +
-					`width="${part.length * 5}" ` +
-					`height="${part.startHeight * 5}" ` +
-					`rx="1" ry="1" stroke-width="0.5" stroke="black" fill="url(#diagonalHatch)"/>\n`;
-				break;
-			case "spring":
+					break;
+				case "knurled":
+					svgString += `<rect x="${startX + part.internalOffset * 5}" ` +
+						`y="${midY - (part.endHeight / 2 * 5)}" ` +
+						`width="${part.length * 5}" ` +
+						`height="${part.startHeight * 5}" ` +
+						`rx="1" ry="1" stroke-width="0.5" stroke="black" fill="url(#diagonalHatch)"/>\n`;
+					break;
+				case "spring":
 
-				svgString += `<rect x="${startX + part.internalOffset * 5 + 5}" ` +
-					`y="${midY - (part.endHeight / 2 * 5) - 5}" ` +
-					`width="${part.length * 5 - 10}" ` +
-					`height="${part.startHeight * 5 + 10}" ` +
-					`stroke-width="0.0" stroke="black" fill="url(#spring)"/>\n`
-				for (let i:number = 0; i < 4; i++) {
-					svgString += `<line x1="${startX + part.internalOffset * 5 + i * 2 + 0.5}" y1="${midY - (part.endHeight / 2 * 5) - 5}" ` +
-						`x2="${startX + part.internalOffset * 5 + i * 2 + 0.5}" y2="${midY + (part.endHeight / 2 * 5) + 5}" stroke="dimgray" stroke-linecap="round" stroke-width="2" />\n`;
-					svgString += `<line x1="${startX + part.internalOffset * 5 + i * 2 + 0.5}" y1="${midY - (part.endHeight / 2 * 5) - 5}" ` +
-						`x2="${startX + part.internalOffset * 5 + i * 2 + 0.5}" y2="${midY + (part.endHeight / 2 * 5) + 5}" stroke="white" stroke-linecap="round" stroke-width="1" />\n`;
+					svgString += `<rect x="${startX + part.internalOffset * 5 + 5}" ` +
+						`y="${midY - (part.endHeight / 2 * 5) - 5}" ` +
+						`width="${part.length * 5 - 10}" ` +
+						`height="${part.startHeight * 5 + 10}" ` +
+						`stroke-width="0.0" stroke="black" fill="url(#spring)"/>\n`
+					for (let i:number = 0; i < 4; i++) {
+						svgString += `<line x1="${startX + part.internalOffset * 5 + i * 2 + 0.5}" y1="${midY - (part.endHeight / 2 * 5) - 5}" ` +
+							`x2="${startX + part.internalOffset * 5 + i * 2 + 0.5}" y2="${midY + (part.endHeight / 2 * 5) + 5}" stroke="dimgray" stroke-linecap="round" stroke-width="2" />\n`;
+						svgString += `<line x1="${startX + part.internalOffset * 5 + i * 2 + 0.5}" y1="${midY - (part.endHeight / 2 * 5) - 5}" ` +
+							`x2="${startX + part.internalOffset * 5 + i * 2 + 0.5}" y2="${midY + (part.endHeight / 2 * 5) + 5}" stroke="white" stroke-linecap="round" stroke-width="1" />\n`;
 
-					svgString += `<line x1="${startX + part.internalOffset * 5 + part.length * 5 - i * 2 - 0.5}" y1="${midY - (part.endHeight / 2 * 5) - 5}" ` +
-						`x2="${startX + part.internalOffset * 5 + part.length * 5 - i * 2 -0.5}" y2="${midY + (part.endHeight / 2 * 5) + 5}" stroke="dimgray" stroke-linecap="round" stroke-width="2" />\n`;
-					svgString += `<line x1="${startX + part.internalOffset * 5 + part.length * 5 - i * 2 -0.5}" y1="${midY - (part.endHeight / 2 * 5) - 5}" ` +
-						`x2="${startX + part.internalOffset * 5 + part.length * 5 - i * 2 -0.5}" y2="${midY + (part.endHeight / 2 * 5) + 5}" stroke="white" stroke-linecap="round" stroke-width="1" />\n`;
+						svgString += `<line x1="${startX + part.internalOffset * 5 + part.length * 5 - i * 2 - 0.5}" y1="${midY - (part.endHeight / 2 * 5) - 5}" ` +
+							`x2="${startX + part.internalOffset * 5 + part.length * 5 - i * 2 -0.5}" y2="${midY + (part.endHeight / 2 * 5) + 5}" stroke="dimgray" stroke-linecap="round" stroke-width="2" />\n`;
+						svgString += `<line x1="${startX + part.internalOffset * 5 + part.length * 5 - i * 2 -0.5}" y1="${midY - (part.endHeight / 2 * 5) - 5}" ` +
+							`x2="${startX + part.internalOffset * 5 + part.length * 5 - i * 2 -0.5}" y2="${midY + (part.endHeight / 2 * 5) + 5}" stroke="white" stroke-linecap="round" stroke-width="1" />\n`;
 
-				}
-				break;
-
-			case "threaded":
-				for (let i:number = 0; i < part.length; i++) {
-					if((i + 1) > part.length) {
-						// TODO - half a line
-						break;
 					}
-					svgString += `<line x1="${startX + part.internalOffset * 5 + i*5}" y1="${midY - (part.endHeight / 2 * 5) - 2}" ` +
-						`x2="${startX + part.internalOffset * 5 + (i + 1) * 5}" y2="${midY + (part.endHeight / 2 * 5) + 2}" stroke="dimgray" stroke-linecap="round" stroke-width="2" />\n`;
-					svgString += `<line x1="${startX + part.internalOffset * 5 + i*5}" y1="${midY - (part.endHeight / 2 * 5) - 2}" ` +
-						`x2="${startX + part.internalOffset * 5 + (i + 1) * 5}" y2="${midY + (part.endHeight / 2 * 5) + 2}" stroke="${colour}" stroke-linecap="round" stroke-width="1" />\n`;
-				}
-				break;
+					break;
+
+				case "threaded":
+					for (let i:number = 0; i < part.length; i++) {
+						if((i + 1) > part.length) {
+							// TODO - half a line
+							break;
+						}
+						svgString += `<line x1="${startX + part.internalOffset * 5 + i*5}" y1="${midY - (part.endHeight / 2 * 5) - 2}" ` +
+							`x2="${startX + part.internalOffset * 5 + (i + 1) * 5}" y2="${midY + (part.endHeight / 2 * 5) + 2}" stroke="dimgray" stroke-linecap="round" stroke-width="2" />\n`;
+						svgString += `<line x1="${startX + part.internalOffset * 5 + i*5}" y1="${midY - (part.endHeight / 2 * 5) - 2}" ` +
+							`x2="${startX + part.internalOffset * 5 + (i + 1) * 5}" y2="${midY + (part.endHeight / 2 * 5) + 2}" stroke="${colour}" stroke-linecap="round" stroke-width="1" />\n`;
+					}
+					break;
+				case "indicator":
+					// now draw the indicator
+					svgString += `<rect x="${startX + part.internalOffset * 5 + 10}" ` +
+							`y="${midY - (part.endHeight / 4 * 5)}" ` +
+							`width="${part.length * 5 - 20}" ` +
+							`height="${part.startHeight / 2 * 5}" ` +
+							`rx="1" ry="1" stroke-width="2" stroke="black" fill="${colour}"/>\n`;
+					svgString += `<text x="${startX + part.internalOffset * 5 + (part.length * 5) / 2}" ` +
+							`y="${midY}" ` +
+							`text-anchor="middle" dominant-baseline="central">` +
+							`<tspan stroke="dimgray" stroke-width="0.5" font-family="sans-serif" fill="black" textLength="{this.width * 5 - 24}" > ` +
+							`HB` +
+							`</tspan>` +
+							`</text>`;
+					break;
+			}
 		}
 
-		switch (component.type) {
-			case "indicator":
-				// now draw the indicator
-				svgString += `<rect x="${startX + part.internalOffset * 5 + 10}" ` +
-					`y="${midY - (part.endHeight / 4 * 5)}" ` +
-					`width="${part.length * 5 - 20}" ` +
-					`height="${part.startHeight / 2 * 5}" ` +
-					`rx="1" ry="1" stroke-width="2" stroke="black" fill="${colour}"/>\n`;
-				svgString += `<text x="${startX + part.internalOffset * 5 + (part.length * 5) / 2}" ` +
-					`y="${midY}" ` +
-					`text-anchor="middle" dominant-baseline="central">` +
-					`<tspan stroke="dimgray" stroke-width="0.5" font-family="sans-serif" fill="black" textLength="{this.width * 5 - 24}" > ` +
-					`HB` +
-					`</tspan>` +
-					`</text>`;
-				break;
-		}
 		return(svgString);
 	}
 
+	// TODO remove
 	protected getMappedColour(component: Component, defaultColour: string, colourIndex: number): string {
 		let colourComponent:string = component.colours[colourIndex];
 		if (colourComponent) {
@@ -599,6 +599,29 @@ export abstract class SVGRenderer {
 		}
 
 		return(defaultColour);
+	}
+
+	// TODO - this should be renamed to getMappedColour
+	protected getMappedColourOverride(colours: string[], colourIndex: number, overrideColour: string ): string {
+		if(colourIndex == -1) {
+			return("white");
+		}
+
+		let colourComponent:string = colours[colourIndex];
+
+		if(overrideColour !== null) {
+			colourComponent = overrideColour;
+		}
+
+		if (colourComponent) {
+			if(this.pencil.colourMap[colourComponent]) {
+				return(this.pencil.colourMap[colourComponent]);
+			} else {
+				return(colourComponent);
+			}
+		}
+
+		return(overrideColour);
 	}
 
 	protected renderGuidelines(): string {

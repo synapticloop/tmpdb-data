@@ -109,10 +109,6 @@ export class Component {
 			}
 		}
 
-		if(this.parts.length === 0) {
-			this.isHidden = true;
-		}
-
 		if(jsonObject.internal_start) {
 			for(let internal of jsonObject.internal_start) {
 				const thisInternal = new Part(internal, this.colours);
@@ -125,6 +121,12 @@ export class Component {
 				const thisInternal = new Part(internal, this.colours);
 				this.internalEnd.push(thisInternal);
 			}
+		}
+
+		// this component is only hidden if it has a length of 0 and one, or both
+		// internal parts
+		if(this.parts.length === 0 && (this.internalStart.length !== 0 || this.internalEnd.length !== 0)) {
+			this.isHidden = true;
 		}
 	}
 }

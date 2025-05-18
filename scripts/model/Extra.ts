@@ -6,9 +6,9 @@ export class Extra {
 	height: number;
 	width: number;
 	type: string;
+	colours: string[] = []
 
 	points: number[] = [];
-	isCurve: boolean = false;
 	extraParts:ExtraPart[] = [];
 	offset: number[] = [];
 
@@ -18,8 +18,14 @@ export class Extra {
 		this.height = jsonObject.dimensions[2];
 		this.offset = jsonObject.offset;
 
+		if(jsonObject.colours) {
+			this.colours = jsonObject.colours;
+		} else {
+			this.colours = colours;
+		}
+
 		for(const part of jsonObject.parts) {
-			this.extraParts.push(new ExtraPart(part));
+			this.extraParts.push(new ExtraPart(part, this.colours));
 		}
 	}
 }

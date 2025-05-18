@@ -13,11 +13,11 @@
 <rect x="2" y="2" width="996" height="236" fill="white" stroke="dimgray" stroke-width="1" />
 <g transform="rotate(0 0 0)">
 <text x="30" y="50" font-size="2.0em" font-weight="bold"> STUDMARK // 3750 </text>
-<path d="M531.5 86.5 Q554.375 109.75 564.375 84.25 Z" stroke-width="3" stroke="dimgray" fill="dimgray" stroke-linecap="round" />
-<line x1="529.375" y1="84.75" x2="696.875" y2="79.75" stroke-width="3" stroke="dimgray" fill="dimgray" stroke-linecap="round" />
-<line x1="529.375" y1="86" x2="696.875" y2="81" stroke-width="3" stroke="dimgray" fill="dimgray" stroke-linecap="round" />
-<line x1="696.875" y1="81" x2="719.375" y2="84.75" stroke-width="3" stroke="dimgray" fill="dimgray" stroke-linecap="round" />
-<path d="M719.375 84.75 Q751.875 89.75 719.375 97.25" stroke-width="3" stroke="dimgray" fill="none" stroke-linecap="round" />
+<path d="M531.5 86.5 Q554.375 109.75 564.375 84.25 Z" stroke-width="3" stroke="black" fill="dimgray" stroke-linecap="round" />
+<line x1="529.375" y1="84.75" x2="696.875" y2="79.75" stroke-width="3" stroke="black" fill="dimgray" stroke-linecap="round" />
+<line x1="529.375" y1="86" x2="696.875" y2="81" stroke-width="3" stroke="black" fill="dimgray" stroke-linecap="round" />
+<line x1="696.875" y1="81" x2="719.375" y2="84.75" stroke-width="3" stroke="black" fill="dimgray" stroke-linecap="round" />
+<path d="M719.375 84.75 Q751.875 89.75 719.375 97.25" stroke-width="3" stroke="black" fill="none" stroke-linecap="round" />
 <path d="M135.625 111.875 L209.375 100 L209.375 140 L135.625 128.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" />
 <rect x="209.375" y="99.375" width="21.25" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver"/>
 <rect x="230.625" y="99.375" width="128.75" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver"/>
@@ -34,11 +34,11 @@
 <text x="769.375" y="120" text-anchor="middle" dominant-baseline="central"><tspan stroke="dimgray" stroke-width="0.5" font-family="sans-serif" fill="black" textLength="{this.width * 5 - 24}" > HB</tspan></text><rect x="793.125" y="99.375" width="12.5" height="41.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver"/>
 <rect x="805.625" y="106.25" width="52.5" height="27.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="silver"/>
 <path d="M858.125 106.25 Q869.375 120 858.125 133.75" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver"/>
-<!--julian--><path d="M531.5 86.5 Q554.375 108.75 564.375 84.25 Z" stroke-width="2" stroke="white" fill="white" stroke-linecap="round" />
-<line x1="529.375" y1="84.75" x2="696.875" y2="79.75" stroke-width="2" stroke="white" fill="white" stroke-linecap="round" />
-<line x1="529.375" y1="86" x2="696.875" y2="81" stroke-width="2" stroke="white" fill="white" stroke-linecap="round" />
-<line x1="696.875" y1="81" x2="719.375" y2="84.75" stroke-width="2" stroke="white" fill="white" stroke-linecap="round" />
-<path d="M719.375 84.75 Q751.875 89.75 719.375 97.25" stroke-width="2" stroke="white" fill="none" stroke-linecap="round" />
+<path d="M531.5 86.5 Q554.375 108.75 564.375 84.25 Z" stroke-width="2" stroke="silver" fill="silver" stroke-linecap="round" />
+<line x1="529.375" y1="84.75" x2="696.875" y2="79.75" stroke-width="2" stroke="silver" fill="silver" stroke-linecap="round" />
+<line x1="529.375" y1="86" x2="696.875" y2="81" stroke-width="2" stroke="silver" fill="silver" stroke-linecap="round" />
+<line x1="696.875" y1="81" x2="719.375" y2="84.75" stroke-width="2" stroke="silver" fill="silver" stroke-linecap="round" />
+<path d="M719.375 84.75 Q751.875 89.75 719.375 97.25" stroke-width="2" stroke="silver" fill="none" stroke-linecap="round" />
 </g><text x="50%" y="200" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb)</text>
 <text x="50%" y="220" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
 <text x="990" y="230" font-size="0.5em" font-weight="bold" text-anchor="end" dominant-baseline="middle">SVGPencilAllRenderer</text>

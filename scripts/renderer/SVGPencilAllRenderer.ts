@@ -40,7 +40,7 @@ export class SVGPencilAllRenderer extends SVGRenderer {
 			svgString += super.renderSideComponents(i, midYOverride);
 
 			// render the foreground for the extras
-			svgString += super.renderExtraComponentsForeground(midYOverride, get);
+			svgString += super.renderExtraComponentsForeground(i, midYOverride);
 
 			midYOverride = midYOverride + 120;
 		}
