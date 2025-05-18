@@ -15,31 +15,31 @@
 <line x1="10" y1="300" x2="1490" y2="300" stroke-linecap="round" stroke="#000000" stroke-dasharray="2" stroke-width="1" />
 <line x1="10" y1="300" x2="50" y2="300" stroke-linecap="round" stroke="#000000"  stroke-width="1" />
 <line x1="30" y1="280" x2="30" y2="320" stroke="#000000" stroke-linecap="round"  stroke-width="1" />
-<circle r="10" cx="30" cy="300" fill="none" stroke="#000000" stroke-width="1"  />
+<circle r="10" cx="30" cy="300" fill="white" fill-opacity="0" stroke="#000000" stroke-width="1"  />
 <line x1="1450" y1="300" x2="1490" y2="300" stroke-linecap="round" stroke="#000000"  stroke-width="1" />
 <line x1="1470" y1="280" x2="1470" y2="320" stroke="#000000" stroke-linecap="round"  stroke-width="1" />
-<circle r="10" cx="1470" cy="300" fill="none" stroke="#000000" stroke-width="1"  />
+<circle r="10" cx="1470" cy="300" fill="white" fill-opacity="0" stroke="#000000" stroke-width="1"  />
 <line x1="160" y1="140" x2="160" y2="520" stroke="#000000" stroke-linecap="round" stroke-dasharray="2" stroke-width="1" />
 <line x1="140" y1="150" x2="180" y2="150" stroke-linecap="round" stroke="#000000"  stroke-width="1" />
 <line x1="160" y1="130" x2="160" y2="170" stroke="#000000" stroke-linecap="round"  stroke-width="1" />
-<circle r="10" cx="160" cy="150" fill="none" stroke="#000000" stroke-width="1"  />
+<circle r="10" cx="160" cy="150" fill="white" fill-opacity="0" stroke="#000000" stroke-width="1"  />
 <line x1="140" y1="500" x2="180" y2="500" stroke-linecap="round" stroke="#000000"  stroke-width="1" />
 <line x1="160" y1="480" x2="160" y2="520" stroke="#000000" stroke-linecap="round"  stroke-width="1" />
-<circle r="10" cx="160" cy="500" fill="none" stroke="#000000" stroke-width="1"  />
+<circle r="10" cx="160" cy="500" fill="white" fill-opacity="0" stroke="#000000" stroke-width="1"  />
 <line x1="750" y1="140" x2="750" y2="520" stroke="#000000" stroke-linecap="round" stroke-dasharray="2" stroke-width="1" />
 <line x1="730" y1="150" x2="770" y2="150" stroke-linecap="round" stroke="#000000"  stroke-width="1" />
 <line x1="750" y1="130" x2="750" y2="170" stroke="#000000" stroke-linecap="round"  stroke-width="1" />
-<circle r="10" cx="750" cy="150" fill="none" stroke="#000000" stroke-width="1"  />
+<circle r="10" cx="750" cy="150" fill="white" fill-opacity="0" stroke="#000000" stroke-width="1"  />
 <line x1="730" y1="500" x2="770" y2="500" stroke-linecap="round" stroke="#000000"  stroke-width="1" />
 <line x1="750" y1="480" x2="750" y2="520" stroke="#000000" stroke-linecap="round"  stroke-width="1" />
-<circle r="10" cx="750" cy="500" fill="none" stroke="#000000" stroke-width="1"  />
+<circle r="10" cx="750" cy="500" fill="white" fill-opacity="0" stroke="#000000" stroke-width="1"  />
 <line x1="1400" y1="140" x2="1400" y2="520" stroke="#000000" stroke-linecap="round" stroke-dasharray="2" stroke-width="1" />
 <line x1="1380" y1="150" x2="1420" y2="150" stroke-linecap="round" stroke="#000000"  stroke-width="1" />
 <line x1="1400" y1="130" x2="1400" y2="170" stroke="#000000" stroke-linecap="round"  stroke-width="1" />
-<circle r="10" cx="1400" cy="150" fill="none" stroke="#000000" stroke-width="1"  />
+<circle r="10" cx="1400" cy="150" fill="white" fill-opacity="0" stroke="#000000" stroke-width="1"  />
 <line x1="1380" y1="500" x2="1420" y2="500" stroke-linecap="round" stroke="#000000"  stroke-width="1" />
 <line x1="1400" y1="480" x2="1400" y2="520" stroke="#000000" stroke-linecap="round"  stroke-width="1" />
-<circle r="10" cx="1400" cy="500" fill="none" stroke="#000000" stroke-width="1"  />
+<circle r="10" cx="1400" cy="500" fill="white" fill-opacity="0" stroke="#000000" stroke-width="1"  />
 <text x="30" y="50" font-size="2.0em" font-weight="bold"> OHTO // Sharp Pencil 2.0 (Model #: APS-680E)</text>
 <text x="30" y="80" font-size="1.1em"> OHTO Sharp Pencil 2.0 JAPAN</text>
 <text x="30" y="100" font-size="1.1em"> Lead size: 2 mm</text>
@@ -164,27 +164,27 @@
 <!-- julian --><rect x="1031.25" y="276.25" width="25" height="47.5" rx="0" ry="0" stroke-width="0.5" stroke="black" fill="#E1C16E" fill-opacity="1"/>
 <!-- julian --><rect x="1056.25" y="275" width="10" height="50" rx="0" ry="0" stroke-width="0.5" stroke="black" fill="#E1C16E" fill-opacity="1"/>
 <!-- julian --><rect x="1066.25" y="276.875" width="25" height="46.25" rx="0" ry="0" stroke-width="0.5" stroke="black" fill="#db756d" fill-opacity="1"/>
-<path d="M 471.9 272.5 C 458.75 279.375, 458.75 293.125, 471.9 300" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="#e38f0f" /><path d="M 471.9 327.5 C 458.75 320.625, 458.75 306.875, 471.9 300" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="#e38f0f" /><circle r="23.125" cx="160" cy="300" fill="[object Object]" stroke="dimgray" stroke-width="1"  />
-<circle r="25" cx="160" cy="300" fill="[object Object]" stroke="dimgray" stroke-width="1"  />
-<circle r="23.75" cx="160" cy="300" fill="[object Object]" stroke="dimgray" stroke-width="1"  />
-<circle r="25.625" cx="160" cy="300" fill="[object Object]" stroke="dimgray" stroke-width="1"  />
+<path d="M 471.9 272.5 C 458.75 279.375, 458.75 293.125, 471.9 300" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="#e38f0f" /><path d="M 471.9 327.5 C 458.75 320.625, 458.75 306.875, 471.9 300" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="#e38f0f" /><circle r="23.125" cx="160" cy="300" fill="#db756d" fill-opacity="1" stroke="dimgray" stroke-width="1"  />
+<circle r="25" cx="160" cy="300" fill="#E1C16E" fill-opacity="1" stroke="dimgray" stroke-width="1"  />
+<circle r="23.75" cx="160" cy="300" fill="#E1C16E" fill-opacity="1" stroke="dimgray" stroke-width="1"  />
+<circle r="25.625" cx="160" cy="300" fill="#E1C16E" fill-opacity="1" stroke="dimgray" stroke-width="1"  />
 <polygon points="144.12286759728528,272.5 175.87713240271472,272.5 191.75426480542941,300 175.87713240271472,327.5 144.12286759728528,327.5 128.24573519457059,300 " stroke="dimgray" stroke-width="1" fill="[object Object]"/>
 <circle r="20" cx="160" cy="300" stroke="dimgray" stroke-width="1" fill="[object Object]" />
 <circle r="27.5" cx="160" cy="300" stroke="dimgray" stroke-width="1" fill="[object Object]" />
 <circle r="8.125" cx="160" cy="300" stroke="dimgray" stroke-width="1" fill="[object Object]" />
 <circle r="18.75" cx="160" cy="300" stroke="dimgray" stroke-width="1" fill="[object Object]" />
-<circle r="8.125" cx="160" cy="300" fill="[object Object]" stroke="dimgray" stroke-width="1"  />
-<circle r="5" cx="160" cy="300" fill="black" stroke="dimgray" stroke-width="0.5"  />
-<circle r="8.125" cx="1400" cy="300" fill="[object Object]" stroke="dimgray" stroke-width="1"  />
+<circle r="8.125" cx="160" cy="300" fill="#E1C16E" fill-opacity="1" stroke="dimgray" stroke-width="1"  />
+<circle r="5" cx="160" cy="300" fill="white" fill-opacity="0" stroke="dimgray" stroke-width="0.5"  />
+<circle r="8.125" cx="1400" cy="300" fill="#E1C16E" fill-opacity="1" stroke="dimgray" stroke-width="1"  />
 <circle r="8.125" cx="1400" cy="300" stroke="dimgray" stroke-width="1" fill="[object Object]" />
 <circle r="18.75" cx="1400" cy="300" stroke="dimgray" stroke-width="1" fill="[object Object]" />
 <circle r="20" cx="1400" cy="300" stroke="dimgray" stroke-width="1" fill="[object Object]" />
 <circle r="27.5" cx="1400" cy="300" stroke="dimgray" stroke-width="1" fill="[object Object]" />
 <polygon points="1384.1228675972852,272.5 1415.8771324027148,272.5 1431.7542648054293,300 1415.8771324027148,327.5 1384.1228675972852,327.5 1368.2457351945707,300 " stroke="dimgray" stroke-width="1" fill="[object Object]"/>
-<circle r="25.625" cx="1400" cy="300" fill="[object Object]" stroke="dimgray" stroke-width="1"  />
-<circle r="23.75" cx="1400" cy="300" fill="[object Object]" stroke="dimgray" stroke-width="1"  />
-<circle r="25" cx="1400" cy="300" fill="[object Object]" stroke="dimgray" stroke-width="1"  />
-<circle r="23.125" cx="1400" cy="300" fill="[object Object]" stroke="dimgray" stroke-width="1"  />
+<circle r="25.625" cx="1400" cy="300" fill="#E1C16E" fill-opacity="1" stroke="dimgray" stroke-width="1"  />
+<circle r="23.75" cx="1400" cy="300" fill="#E1C16E" fill-opacity="1" stroke="dimgray" stroke-width="1"  />
+<circle r="25" cx="1400" cy="300" fill="#E1C16E" fill-opacity="1" stroke="dimgray" stroke-width="1"  />
+<circle r="23.125" cx="1400" cy="300" fill="#db756d" fill-opacity="1" stroke="dimgray" stroke-width="1"  />
 </g><text x="50%" y="580" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb) // Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
 <text x="1490" y="590" font-size="0.5em" font-weight="bold" text-anchor="end" dominant-baseline="middle">SVGTechnicalRenderer</text>
 </svg>
