@@ -143,13 +143,13 @@
 <line x1="1350" y1="272.5" x2="1350" y2="327.5" stroke="black" stroke-width="1" />
 <line x1="1339" y1="327.5" x2="1361" y2="327.5" stroke="black" stroke-width="1" />
 <text x="1350" y="335.5" transform="rotate(-90, 1350, 335.5)" font-weight="bold" font-size="1.2em" text-anchor="end" dominant-baseline="middle" fill="black">body</text>
-<rect x="408.75" y="291.875" width="12.5" height="16.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
-<path d="M421.25 291.875 L446.25 281.25 L446.25 318.75 L421.25 308.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" />
-<path d="M446.25 280 L471.25 272.5 L471.25 327.5 L446.25 320 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" />
-<rect x="471.25" y="272.5" width="490" height="55" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
+<rect x="408.75" y="291.875" width="12.5" height="16.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#E1C16E"/>
+<path d="M421.25 291.875 L446.25 281.25 L446.25 318.75 L421.25 308.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#E1C16E" />
+<path d="M446.25 280 L471.25 272.5 L471.25 327.5 L446.25 320 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b88160" />
+<rect x="471.25" y="272.5" width="490" height="55" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#e38f0f"/>
 <line x1="471.25" y1="300" x2="961.25" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="471.25" y1="300" x2="961.25" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
-<rect x="961.25" y="274.375" width="70" height="51.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
+<rect x="961.25" y="274.375" width="70" height="51.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#E1C16E"/>
 <line x1="969.3269230769231" y1="275.375" x2="969.3269230769231" y2="324.625" stroke-width="1" stroke="gray" />
 <line x1="974.7115384615385" y1="275.375" x2="974.7115384615385" y2="324.625" stroke-width="1" stroke="gray" />
 <line x1="980.0961538461538" y1="275.375" x2="980.0961538461538" y2="324.625" stroke-width="1" stroke="gray" />
@@ -161,30 +161,30 @@
 <line x1="1017.7884615384615" y1="275.375" x2="1017.7884615384615" y2="324.625" stroke-width="1" stroke="gray" />
 <line x1="1023.1730769230769" y1="275.375" x2="1023.1730769230769" y2="324.625" stroke-width="1" stroke="gray" />
 <circle r="4" cx="976.25" cy="287.1875" stroke="dimgray" stroke-width="1" fill="dimGray" />
-<rect x="1031.25" y="276.25" width="25" height="47.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
-<rect x="1056.25" y="275" width="10" height="50" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
-<rect x="1066.25" y="276.875" width="25" height="46.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
-<path d="M 471.9 272.5 C 458.75 279.375, 458.75 293.125, 471.9 300" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="white" /><path d="M 471.9 327.5 C 458.75 320.625, 458.75 306.875, 471.9 300" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="white" /><circle r="23.125" cx="160" cy="300" fill="white" stroke="dimgray" stroke-width="1"  />
-<circle r="25" cx="160" cy="300" fill="white" stroke="dimgray" stroke-width="1"  />
-<circle r="23.75" cx="160" cy="300" fill="white" stroke="dimgray" stroke-width="1"  />
-<circle r="25.625" cx="160" cy="300" fill="white" stroke="dimgray" stroke-width="1"  />
-<polygon points="144.12286759728528,272.5 175.87713240271472,272.5 191.75426480542941,300 175.87713240271472,327.5 144.12286759728528,327.5 128.24573519457059,300 " stroke="dimgray" stroke-width="1" fill="white"/>
-<circle r="20" cx="160" cy="300" stroke="dimgray" stroke-width="1" fill="white" />
-<circle r="27.5" cx="160" cy="300" stroke="dimgray" stroke-width="1" fill="white" />
-<circle r="8.125" cx="160" cy="300" stroke="dimgray" stroke-width="1" fill="white" />
-<circle r="18.75" cx="160" cy="300" stroke="dimgray" stroke-width="1" fill="white" />
-<circle r="8.125" cx="160" cy="300" fill="white" stroke="dimgray" stroke-width="1"  />
+<rect x="1031.25" y="276.25" width="25" height="47.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#E1C16E"/>
+<rect x="1056.25" y="275" width="10" height="50" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#E1C16E"/>
+<rect x="1066.25" y="276.875" width="25" height="46.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#db756d"/>
+<path d="M 471.9 272.5 C 458.75 279.375, 458.75 293.125, 471.9 300" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="#e38f0f" /><path d="M 471.9 327.5 C 458.75 320.625, 458.75 306.875, 471.9 300" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="#e38f0f" /><circle r="23.125" cx="160" cy="300" fill="#db756d" stroke="dimgray" stroke-width="1"  />
+<circle r="25" cx="160" cy="300" fill="#E1C16E" stroke="dimgray" stroke-width="1"  />
+<circle r="23.75" cx="160" cy="300" fill="#E1C16E" stroke="dimgray" stroke-width="1"  />
+<circle r="25.625" cx="160" cy="300" fill="#E1C16E" stroke="dimgray" stroke-width="1"  />
+<polygon points="144.12286759728528,272.5 175.87713240271472,272.5 191.75426480542941,300 175.87713240271472,327.5 144.12286759728528,327.5 128.24573519457059,300 " stroke="dimgray" stroke-width="1" fill="#e38f0f"/>
+<circle r="20" cx="160" cy="300" stroke="dimgray" stroke-width="1" fill="#b88160" />
+<circle r="27.5" cx="160" cy="300" stroke="dimgray" stroke-width="1" fill="#b88160" />
+<circle r="8.125" cx="160" cy="300" stroke="dimgray" stroke-width="1" fill="#E1C16E" />
+<circle r="18.75" cx="160" cy="300" stroke="dimgray" stroke-width="1" fill="#E1C16E" />
+<circle r="8.125" cx="160" cy="300" fill="#E1C16E" stroke="dimgray" stroke-width="1"  />
 <circle r="5" cx="160" cy="300" fill="black" stroke="dimgray" stroke-width="0.5"  />
-<circle r="8.125" cx="1400" cy="300" fill="white" stroke="dimgray" stroke-width="1"  />
-<circle r="8.125" cx="1400" cy="300" stroke="dimgray" stroke-width="1" fill="white" />
-<circle r="18.75" cx="1400" cy="300" stroke="dimgray" stroke-width="1" fill="white" />
-<circle r="20" cx="1400" cy="300" stroke="dimgray" stroke-width="1" fill="white" />
-<circle r="27.5" cx="1400" cy="300" stroke="dimgray" stroke-width="1" fill="white" />
-<polygon points="1384.1228675972852,272.5 1415.8771324027148,272.5 1431.7542648054293,300 1415.8771324027148,327.5 1384.1228675972852,327.5 1368.2457351945707,300 " stroke="dimgray" stroke-width="1" fill="white"/>
-<circle r="25.625" cx="1400" cy="300" fill="white" stroke="dimgray" stroke-width="1"  />
-<circle r="23.75" cx="1400" cy="300" fill="white" stroke="dimgray" stroke-width="1"  />
-<circle r="25" cx="1400" cy="300" fill="white" stroke="dimgray" stroke-width="1"  />
-<circle r="23.125" cx="1400" cy="300" fill="white" stroke="dimgray" stroke-width="1"  />
+<circle r="8.125" cx="1400" cy="300" fill="#E1C16E" stroke="dimgray" stroke-width="1"  />
+<circle r="8.125" cx="1400" cy="300" stroke="dimgray" stroke-width="1" fill="#E1C16E" />
+<circle r="18.75" cx="1400" cy="300" stroke="dimgray" stroke-width="1" fill="#E1C16E" />
+<circle r="20" cx="1400" cy="300" stroke="dimgray" stroke-width="1" fill="#b88160" />
+<circle r="27.5" cx="1400" cy="300" stroke="dimgray" stroke-width="1" fill="#b88160" />
+<polygon points="1384.1228675972852,272.5 1415.8771324027148,272.5 1431.7542648054293,300 1415.8771324027148,327.5 1384.1228675972852,327.5 1368.2457351945707,300 " stroke="dimgray" stroke-width="1" fill="#e38f0f"/>
+<circle r="25.625" cx="1400" cy="300" fill="#E1C16E" stroke="dimgray" stroke-width="1"  />
+<circle r="23.75" cx="1400" cy="300" fill="#E1C16E" stroke="dimgray" stroke-width="1"  />
+<circle r="25" cx="1400" cy="300" fill="#E1C16E" stroke="dimgray" stroke-width="1"  />
+<circle r="23.125" cx="1400" cy="300" fill="#db756d" stroke="dimgray" stroke-width="1"  />
 </g><text x="50%" y="580" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb) // Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
 <text x="1490" y="590" font-size="0.5em" font-weight="bold" text-anchor="end" dominant-baseline="middle">SVGTechnicalRenderer</text>
 </svg>

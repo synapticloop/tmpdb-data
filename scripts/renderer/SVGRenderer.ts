@@ -350,7 +350,7 @@ export abstract class SVGRenderer {
 
 
 		for (let component of this.pencil.components) {
-			colour = this.getMappedColourOverride(component.colours, colourIndex, colour);
+			colour = this.getMappedColour(component.colours, colourIndex, colour);
 
 			for(let part of component.parts) {
 				svgString += this.renderPart(startX, midY, component, part, colourIndex, colour);
@@ -363,7 +363,7 @@ export abstract class SVGRenderer {
 		startX = this._width/2 - (this.pencil.totalLength*5/2);
 
 		for (let component of this.pencil.components) {
-			colour = this.getMappedColourOverride(component.colours, colourIndex, colour);
+			colour = this.getMappedColour(component.colours, colourIndex, colour);
 
 			for(let part of component.parts) {
 				svgString += this.renderTaper(startX, midY, part, colour);
@@ -403,7 +403,7 @@ export abstract class SVGRenderer {
 			// extras are always rendered first - we render
 			// the background for it
 			for(const extra of component.extras) {
-				let colour: string = this.getMappedColourOverride(component.colours, colourIndex, extra.colours[colourIndex]);
+				let colour: string = this.getMappedColour(component.colours, colourIndex, extra.colours[colourIndex]);
 				svgString += drawExtraForeground(startX + extra.offset[0] * 5, midYOverride - extra.offset[1] * 5, extra.extraParts, colour);
 				break;
 			}
@@ -445,7 +445,7 @@ export abstract class SVGRenderer {
 		}
 
 		// maybe we have an over-ride colour and material
-		colour = this.getMappedColourOverride(component.colours, colourIndex, colour);
+		colour = this.getMappedColour(component.colours, colourIndex, colour);
 
 		switch (part.shape) {
 			case "cylinder":
@@ -583,7 +583,7 @@ export abstract class SVGRenderer {
 		}
 
 		for(const extra of component.extras) {
-			let colour: string = this.getMappedColourOverride(component.colours, colourIndex, extra.colours[colourIndex]);
+			let colour: string = this.getMappedColour(component.colours, colourIndex, extra.colours[colourIndex]);
 			svgString += drawExtraForeground(startX + extra.offset[0] * 5, midY - extra.offset[1] * 5, extra.extraParts, colour);
 			break;
 		}
@@ -606,7 +606,7 @@ export abstract class SVGRenderer {
 	}
 
 	// TODO - this should be renamed to getMappedColour
-	protected getMappedColourOverride(colours: string[], colourIndex: number, defaultColour: string ): string {
+	protected getMappedColour(colours: string[], colourIndex: number, defaultColour: string ): string {
 		if(colourIndex == -1) {
 			return("white");
 		}

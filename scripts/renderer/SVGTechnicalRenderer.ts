@@ -277,7 +277,7 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 
 		// go through the components and render them
 		for(const component of this.pencil.components) {
-			colour = this.getMappedColourOverride(component.colours, colourIndex, colour);
+			colour = this.getMappedColour(component.colours, colourIndex, colour);
 
 			component.parts.reverse();
 			for (let part of component.parts) {
@@ -331,7 +331,7 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 		let colour: string = "white";
 		// go through the components and render them
 		for(const component of this.pencil.components) {
-			colour = this.getMappedColourOverride(component.colours, colourIndex, colour);
+			colour = this.getMappedColour(component.colours, colourIndex, colour);
 
 			for (let part of component.parts) {
 				switch (part.shape) {

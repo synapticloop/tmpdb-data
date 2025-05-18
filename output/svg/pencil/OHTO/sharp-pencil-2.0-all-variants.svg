@@ -13,13 +13,13 @@
 <rect x="2" y="2" width="996" height="836" fill="white" stroke="dimgray" stroke-width="1" />
 <g transform="rotate(0 0 0)">
 <text x="30" y="50" font-size="2.0em" font-weight="bold"> OHTO // Sharp Pencil 2.0 (Model #: APS-680E)</text>
-<rect x="158.75" y="111.875" width="12.5" height="16.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
-<path d="M171.25 111.875 L196.25 101.25 L196.25 138.75 L171.25 128.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" />
-<path d="M196.25 100 L221.25 92.5 L221.25 147.5 L196.25 140 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" />
-<rect x="221.25" y="92.5" width="490" height="55" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
+<rect x="158.75" y="111.875" width="12.5" height="16.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#E1C16E"/>
+<path d="M171.25 111.875 L196.25 101.25 L196.25 138.75 L171.25 128.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#E1C16E" />
+<path d="M196.25 100 L221.25 92.5 L221.25 147.5 L196.25 140 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b88160" />
+<rect x="221.25" y="92.5" width="490" height="55" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#e38f0f"/>
 <line x1="221.25" y1="120" x2="711.25" y2="120" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="221.25" y1="120" x2="711.25" y2="120" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
-<rect x="711.25" y="94.375" width="70" height="51.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
+<rect x="711.25" y="94.375" width="70" height="51.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#E1C16E"/>
 <line x1="719.3269230769231" y1="95.375" x2="719.3269230769231" y2="144.625" stroke-width="1" stroke="gray" />
 <line x1="724.7115384615385" y1="95.375" x2="724.7115384615385" y2="144.625" stroke-width="1" stroke="gray" />
 <line x1="730.0961538461538" y1="95.375" x2="730.0961538461538" y2="144.625" stroke-width="1" stroke="gray" />
@@ -31,16 +31,16 @@
 <line x1="767.7884615384615" y1="95.375" x2="767.7884615384615" y2="144.625" stroke-width="1" stroke="gray" />
 <line x1="773.1730769230769" y1="95.375" x2="773.1730769230769" y2="144.625" stroke-width="1" stroke="gray" />
 <circle r="4" cx="726.25" cy="107.1875" stroke="dimgray" stroke-width="1" fill="dimGray" />
-<rect x="781.25" y="96.25" width="25" height="47.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
-<rect x="806.25" y="95" width="10" height="50" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
-<rect x="816.25" y="96.875" width="25" height="46.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
-<path d="M 221.9 92.5 C 208.75 99.375, 208.75 113.125, 221.9 120" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="white" /><path d="M 221.9 147.5 C 208.75 140.625, 208.75 126.875, 221.9 120" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="white" /><rect x="158.75" y="231.875" width="12.5" height="16.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
-<path d="M171.25 231.875 L196.25 221.25 L196.25 258.75 L171.25 248.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" />
-<path d="M196.25 220 L221.25 212.5 L221.25 267.5 L196.25 260 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" />
-<rect x="221.25" y="212.5" width="490" height="55" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
+<rect x="781.25" y="96.25" width="25" height="47.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#E1C16E"/>
+<rect x="806.25" y="95" width="10" height="50" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#E1C16E"/>
+<rect x="816.25" y="96.875" width="25" height="46.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#db756d"/>
+<path d="M 221.9 92.5 C 208.75 99.375, 208.75 113.125, 221.9 120" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="#e38f0f" /><path d="M 221.9 147.5 C 208.75 140.625, 208.75 126.875, 221.9 120" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="#e38f0f" /><rect x="158.75" y="231.875" width="12.5" height="16.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#E1C16E"/>
+<path d="M171.25 231.875 L196.25 221.25 L196.25 258.75 L171.25 248.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#E1C16E" />
+<path d="M196.25 220 L221.25 212.5 L221.25 267.5 L196.25 260 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b88160" />
+<rect x="221.25" y="212.5" width="490" height="55" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#1a4b88"/>
 <line x1="221.25" y1="240" x2="711.25" y2="240" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="221.25" y1="240" x2="711.25" y2="240" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
-<rect x="711.25" y="214.375" width="70" height="51.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
+<rect x="711.25" y="214.375" width="70" height="51.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#E1C16E"/>
 <line x1="719.3269230769231" y1="215.375" x2="719.3269230769231" y2="264.625" stroke-width="1" stroke="gray" />
 <line x1="724.7115384615385" y1="215.375" x2="724.7115384615385" y2="264.625" stroke-width="1" stroke="gray" />
 <line x1="730.0961538461538" y1="215.375" x2="730.0961538461538" y2="264.625" stroke-width="1" stroke="gray" />
@@ -52,16 +52,16 @@
 <line x1="767.7884615384615" y1="215.375" x2="767.7884615384615" y2="264.625" stroke-width="1" stroke="gray" />
 <line x1="773.1730769230769" y1="215.375" x2="773.1730769230769" y2="264.625" stroke-width="1" stroke="gray" />
 <circle r="4" cx="726.25" cy="227.1875" stroke="dimgray" stroke-width="1" fill="dimGray" />
-<rect x="781.25" y="216.25" width="25" height="47.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
-<rect x="806.25" y="215" width="10" height="50" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
-<rect x="816.25" y="216.875" width="25" height="46.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
-<path d="M 221.9 212.5 C 208.75 219.375, 208.75 233.125, 221.9 240" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="white" /><path d="M 221.9 267.5 C 208.75 260.625, 208.75 246.875, 221.9 240" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="white" /><rect x="158.75" y="351.875" width="12.5" height="16.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
-<path d="M171.25 351.875 L196.25 341.25 L196.25 378.75 L171.25 368.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" />
-<path d="M196.25 340 L221.25 332.5 L221.25 387.5 L196.25 380 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" />
-<rect x="221.25" y="332.5" width="490" height="55" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
+<rect x="781.25" y="216.25" width="25" height="47.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#E1C16E"/>
+<rect x="806.25" y="215" width="10" height="50" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#E1C16E"/>
+<rect x="816.25" y="216.875" width="25" height="46.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#db756d"/>
+<path d="M 221.9 212.5 C 208.75 219.375, 208.75 233.125, 221.9 240" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="#1a4b88" /><path d="M 221.9 267.5 C 208.75 260.625, 208.75 246.875, 221.9 240" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="#1a4b88" /><rect x="158.75" y="351.875" width="12.5" height="16.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#E1C16E"/>
+<path d="M171.25 351.875 L196.25 341.25 L196.25 378.75 L171.25 368.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#E1C16E" />
+<path d="M196.25 340 L221.25 332.5 L221.25 387.5 L196.25 380 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b88160" />
+<rect x="221.25" y="332.5" width="490" height="55" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#053439"/>
 <line x1="221.25" y1="360" x2="711.25" y2="360" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="221.25" y1="360" x2="711.25" y2="360" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
-<rect x="711.25" y="334.375" width="70" height="51.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
+<rect x="711.25" y="334.375" width="70" height="51.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#E1C16E"/>
 <line x1="719.3269230769231" y1="335.375" x2="719.3269230769231" y2="384.625" stroke-width="1" stroke="gray" />
 <line x1="724.7115384615385" y1="335.375" x2="724.7115384615385" y2="384.625" stroke-width="1" stroke="gray" />
 <line x1="730.0961538461538" y1="335.375" x2="730.0961538461538" y2="384.625" stroke-width="1" stroke="gray" />
@@ -73,16 +73,16 @@
 <line x1="767.7884615384615" y1="335.375" x2="767.7884615384615" y2="384.625" stroke-width="1" stroke="gray" />
 <line x1="773.1730769230769" y1="335.375" x2="773.1730769230769" y2="384.625" stroke-width="1" stroke="gray" />
 <circle r="4" cx="726.25" cy="347.1875" stroke="dimgray" stroke-width="1" fill="dimGray" />
-<rect x="781.25" y="336.25" width="25" height="47.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
-<rect x="806.25" y="335" width="10" height="50" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
-<rect x="816.25" y="336.875" width="25" height="46.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
-<path d="M 221.9 332.5 C 208.75 339.375, 208.75 353.125, 221.9 360" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="white" /><path d="M 221.9 387.5 C 208.75 380.625, 208.75 366.875, 221.9 360" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="white" /><rect x="158.75" y="471.875" width="12.5" height="16.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
-<path d="M171.25 471.875 L196.25 461.25 L196.25 498.75 L171.25 488.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" />
-<path d="M196.25 460 L221.25 452.5 L221.25 507.5 L196.25 500 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" />
-<rect x="221.25" y="452.5" width="490" height="55" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
+<rect x="781.25" y="336.25" width="25" height="47.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#E1C16E"/>
+<rect x="806.25" y="335" width="10" height="50" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#E1C16E"/>
+<rect x="816.25" y="336.875" width="25" height="46.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#db756d"/>
+<path d="M 221.9 332.5 C 208.75 339.375, 208.75 353.125, 221.9 360" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="#053439" /><path d="M 221.9 387.5 C 208.75 380.625, 208.75 366.875, 221.9 360" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="#053439" /><rect x="158.75" y="471.875" width="12.5" height="16.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#E1C16E"/>
+<path d="M171.25 471.875 L196.25 461.25 L196.25 498.75 L171.25 488.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#E1C16E" />
+<path d="M196.25 460 L221.25 452.5 L221.25 507.5 L196.25 500 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b88160" />
+<rect x="221.25" y="452.5" width="490" height="55" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#5d191d"/>
 <line x1="221.25" y1="480" x2="711.25" y2="480" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="221.25" y1="480" x2="711.25" y2="480" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
-<rect x="711.25" y="454.375" width="70" height="51.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
+<rect x="711.25" y="454.375" width="70" height="51.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#E1C16E"/>
 <line x1="719.3269230769231" y1="455.375" x2="719.3269230769231" y2="504.625" stroke-width="1" stroke="gray" />
 <line x1="724.7115384615385" y1="455.375" x2="724.7115384615385" y2="504.625" stroke-width="1" stroke="gray" />
 <line x1="730.0961538461538" y1="455.375" x2="730.0961538461538" y2="504.625" stroke-width="1" stroke="gray" />
@@ -94,16 +94,16 @@
 <line x1="767.7884615384615" y1="455.375" x2="767.7884615384615" y2="504.625" stroke-width="1" stroke="gray" />
 <line x1="773.1730769230769" y1="455.375" x2="773.1730769230769" y2="504.625" stroke-width="1" stroke="gray" />
 <circle r="4" cx="726.25" cy="467.1875" stroke="dimgray" stroke-width="1" fill="dimGray" />
-<rect x="781.25" y="456.25" width="25" height="47.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
-<rect x="806.25" y="455" width="10" height="50" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
-<rect x="816.25" y="456.875" width="25" height="46.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
-<path d="M 221.9 452.5 C 208.75 459.375, 208.75 473.125, 221.9 480" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="white" /><path d="M 221.9 507.5 C 208.75 500.625, 208.75 486.875, 221.9 480" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="white" /><rect x="158.75" y="591.875" width="12.5" height="16.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
-<path d="M171.25 591.875 L196.25 581.25 L196.25 618.75 L171.25 608.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" />
-<path d="M196.25 580 L221.25 572.5 L221.25 627.5 L196.25 620 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" />
-<rect x="221.25" y="572.5" width="490" height="55" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
+<rect x="781.25" y="456.25" width="25" height="47.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#E1C16E"/>
+<rect x="806.25" y="455" width="10" height="50" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#E1C16E"/>
+<rect x="816.25" y="456.875" width="25" height="46.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#db756d"/>
+<path d="M 221.9 452.5 C 208.75 459.375, 208.75 473.125, 221.9 480" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="#5d191d" /><path d="M 221.9 507.5 C 208.75 500.625, 208.75 486.875, 221.9 480" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="#5d191d" /><rect x="158.75" y="591.875" width="12.5" height="16.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#E1C16E"/>
+<path d="M171.25 591.875 L196.25 581.25 L196.25 618.75 L171.25 608.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#E1C16E" />
+<path d="M196.25 580 L221.25 572.5 L221.25 627.5 L196.25 620 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b88160" />
+<rect x="221.25" y="572.5" width="490" height="55" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#b88160"/>
 <line x1="221.25" y1="600" x2="711.25" y2="600" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="221.25" y1="600" x2="711.25" y2="600" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
-<rect x="711.25" y="574.375" width="70" height="51.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
+<rect x="711.25" y="574.375" width="70" height="51.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#E1C16E"/>
 <line x1="719.3269230769231" y1="575.375" x2="719.3269230769231" y2="624.625" stroke-width="1" stroke="gray" />
 <line x1="724.7115384615385" y1="575.375" x2="724.7115384615385" y2="624.625" stroke-width="1" stroke="gray" />
 <line x1="730.0961538461538" y1="575.375" x2="730.0961538461538" y2="624.625" stroke-width="1" stroke="gray" />
@@ -115,16 +115,16 @@
 <line x1="767.7884615384615" y1="575.375" x2="767.7884615384615" y2="624.625" stroke-width="1" stroke="gray" />
 <line x1="773.1730769230769" y1="575.375" x2="773.1730769230769" y2="624.625" stroke-width="1" stroke="gray" />
 <circle r="4" cx="726.25" cy="587.1875" stroke="dimgray" stroke-width="1" fill="dimGray" />
-<rect x="781.25" y="576.25" width="25" height="47.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
-<rect x="806.25" y="575" width="10" height="50" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
-<rect x="816.25" y="576.875" width="25" height="46.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
-<path d="M 221.9 572.5 C 208.75 579.375, 208.75 593.125, 221.9 600" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="white" /><path d="M 221.9 627.5 C 208.75 620.625, 208.75 606.875, 221.9 600" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="white" /><rect x="158.75" y="711.875" width="12.5" height="16.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
-<path d="M171.25 711.875 L196.25 701.25 L196.25 738.75 L171.25 728.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" />
-<path d="M196.25 700 L221.25 692.5 L221.25 747.5 L196.25 740 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" />
-<rect x="221.25" y="692.5" width="490" height="55" rx="1" ry="1" stroke-width="0.5" stroke="dimgray" fill="white"/>
+<rect x="781.25" y="576.25" width="25" height="47.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#E1C16E"/>
+<rect x="806.25" y="575" width="10" height="50" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#E1C16E"/>
+<rect x="816.25" y="576.875" width="25" height="46.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#db756d"/>
+<path d="M 221.9 572.5 C 208.75 579.375, 208.75 593.125, 221.9 600" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="#b88160" /><path d="M 221.9 627.5 C 208.75 620.625, 208.75 606.875, 221.9 600" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="#b88160" /><rect x="158.75" y="711.875" width="12.5" height="16.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#E1C16E"/>
+<path d="M171.25 711.875 L196.25 701.25 L196.25 738.75 L171.25 728.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#E1C16E" />
+<path d="M196.25 700 L221.25 692.5 L221.25 747.5 L196.25 740 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b88160" />
+<rect x="221.25" y="692.5" width="490" height="55" rx="1" ry="1" stroke-width="0.5" stroke="dimgray" fill="black"/>
 <line x1="221.25" y1="720" x2="711.25" y2="720" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="221.25" y1="720" x2="711.25" y2="720" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
-<rect x="711.25" y="694.375" width="70" height="51.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
+<rect x="711.25" y="694.375" width="70" height="51.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#E1C16E"/>
 <line x1="719.3269230769231" y1="695.375" x2="719.3269230769231" y2="744.625" stroke-width="1" stroke="gray" />
 <line x1="724.7115384615385" y1="695.375" x2="724.7115384615385" y2="744.625" stroke-width="1" stroke="gray" />
 <line x1="730.0961538461538" y1="695.375" x2="730.0961538461538" y2="744.625" stroke-width="1" stroke="gray" />
@@ -136,10 +136,10 @@
 <line x1="767.7884615384615" y1="695.375" x2="767.7884615384615" y2="744.625" stroke-width="1" stroke="gray" />
 <line x1="773.1730769230769" y1="695.375" x2="773.1730769230769" y2="744.625" stroke-width="1" stroke="gray" />
 <circle r="4" cx="726.25" cy="707.1875" stroke="dimgray" stroke-width="1" fill="dimGray" />
-<rect x="781.25" y="696.25" width="25" height="47.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
-<rect x="806.25" y="695" width="10" height="50" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
-<rect x="816.25" y="696.875" width="25" height="46.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="white"/>
-<path d="M 221.9 692.5 C 208.75 699.375, 208.75 713.125, 221.9 720" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="white" /><path d="M 221.9 747.5 C 208.75 740.625, 208.75 726.875, 221.9 720" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="white" /></g><text x="50%" y="800" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb)</text>
+<rect x="781.25" y="696.25" width="25" height="47.5" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#E1C16E"/>
+<rect x="806.25" y="695" width="10" height="50" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#E1C16E"/>
+<rect x="816.25" y="696.875" width="25" height="46.25" rx="1" ry="1" stroke-width="0.5" stroke="black" fill="#db756d"/>
+<path d="M 221.9 692.5 C 208.75 699.375, 208.75 713.125, 221.9 720" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="black" /><path d="M 221.9 747.5 C 208.75 740.625, 208.75 726.875, 221.9 720" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="black" /></g><text x="50%" y="800" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb)</text>
 <text x="50%" y="820" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
 <text x="990" y="830" font-size="0.5em" font-weight="bold" text-anchor="end" dominant-baseline="middle">SVGPencilAllRenderer</text>
 </svg>

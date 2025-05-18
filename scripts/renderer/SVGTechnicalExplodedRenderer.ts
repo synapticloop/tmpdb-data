@@ -79,7 +79,7 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 				}
 			}
 
-			colour = this.getMappedColourOverride(component.colours, colourIndex, colour);
+			colour = this.getMappedColour(component.colours, colourIndex, colour);
 
 			let partLength:number = 0;
 			let endPartLength: number = 0;
@@ -377,7 +377,7 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 				midY += 120;
 			}
 
-			colour = this.getMappedColourOverride(component.colours, colourIndex, colour);
+			colour = this.getMappedColour(component.colours, colourIndex, colour);
 
 			for(let part of component.parts) {
 				// TODO - why is the taper off
