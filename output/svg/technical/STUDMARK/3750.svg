@@ -205,34 +205,34 @@
 <!-- julian --><rect x="991.875" y="279.375" width="3.75" height="41.25" rx="0" ry="0" stroke-width="0.5" stroke="black" fill="white" fill-opacity="1"/>
 <!-- julian --><rect x="995.625" y="279.375" width="47.5" height="41.25" rx="0" ry="0" stroke-width="0.5" stroke="black" fill="white" fill-opacity="1"/>
 <rect x="995.625" y="279.375" width="47.5" height="41.25" rx="0" ry="0" stroke-width="0.5" stroke="black" fill="url(#diagonalHatch)"/>
-<rect x="1005.625" y="289.6875" width="27.5" height="20.625" rx="0" ry="0" stroke-width="2" stroke="black" fill="[object Object]"/>
+<rect x="1005.625" y="289.6875" width="27.5" height="20.625" rx="3" ry="3" stroke-width="1" stroke="black" fill="white"/>
 <text x="1019.375" y="300" text-anchor="middle" dominant-baseline="central"><tspan stroke="dimgray" stroke-width="0.5" font-family="sans-serif" fill="black" textLength="{this.width * 5 - 24}" > HB</tspan></text><!-- julian --><rect x="1043.125" y="279.375" width="12.5" height="41.25" rx="0" ry="0" stroke-width="0.5" stroke="black" fill="white" fill-opacity="1"/>
 <!-- julian --><rect x="1055.625" y="286.25" width="52.5" height="27.5" rx="0" ry="0" stroke-width="0.5" stroke="black" fill="white" fill-opacity="1"/>
 <path d="M1108.125 286.25 Q1119.375 300 1108.125 313.75" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<circle r="13.75" cx="160" cy="300" fill="white" fill-opacity="1" stroke="dimgray" stroke-width="1"  />
-<circle r="20.625" cx="160" cy="300" fill="white" fill-opacity="1" stroke="dimgray" stroke-width="1"  />
-<circle r="20.625" cx="160" cy="300" fill="white" fill-opacity="1" stroke="dimgray" stroke-width="1"  />
-<circle r="20.625" cx="160" cy="300" fill="white" fill-opacity="1" stroke="dimgray" stroke-width="1"  />
-<circle r="20.625" cx="160" cy="300" fill="white" fill-opacity="1" stroke="dimgray" stroke-width="1"  />
-<circle r="23.75" cx="160" cy="300" fill="white" fill-opacity="1" stroke="dimgray" stroke-width="1"  />
-<polygon points="148.09215069796397,279.375 171.90784930203603,279.375 183.81569860407205,300 171.90784930203603,320.625 148.09215069796397,320.625 136.18430139592795,300 " stroke="dimgray" stroke-width="1" fill="[object Object]"/>
-<circle r="20.625" cx="160" cy="300" fill="white" fill-opacity="1" stroke="dimgray" stroke-width="1"  />
-<circle r="20.625" cx="160" cy="300" fill="white" fill-opacity="1" stroke="dimgray" stroke-width="1"  />
-<circle r="8.125" cx="160" cy="300" stroke="dimgray" stroke-width="1" fill="[object Object]" />
-<circle r="20" cx="160" cy="300" stroke="dimgray" stroke-width="1" fill="[object Object]" />
-<circle r="5" cx="160" cy="300" fill="white" fill-opacity="0" stroke="dimgray" stroke-width="0.5"  />
-<circle r="8.125" cx="1400" cy="300" stroke="dimgray" stroke-width="1" fill="[object Object]" />
-<circle r="20" cx="1400" cy="300" stroke="dimgray" stroke-width="1" fill="[object Object]" />
-<circle r="20.625" cx="1400" cy="300" fill="white" fill-opacity="1" stroke="dimgray" stroke-width="1"  />
-<circle r="20.625" cx="1400" cy="300" fill="white" fill-opacity="1" stroke="dimgray" stroke-width="1"  />
-<polygon points="1388.092150697964,279.375 1411.907849302036,279.375 1423.8156986040722,300 1411.907849302036,320.625 1388.092150697964,320.625 1376.1843013959278,300 " stroke="dimgray" stroke-width="1" fill="[object Object]"/>
-<circle r="23.75" cx="1400" cy="300" fill="white" fill-opacity="1" stroke="dimgray" stroke-width="1"  />
-<circle r="20.625" cx="1400" cy="300" fill="white" fill-opacity="1" stroke="dimgray" stroke-width="1"  />
-<circle r="20.625" cx="1400" cy="300" fill="white" fill-opacity="1" stroke="dimgray" stroke-width="1"  />
-<circle r="20.625" cx="1400" cy="300" fill="white" fill-opacity="1" stroke="dimgray" stroke-width="1"  />
-<circle r="20.625" cx="1400" cy="300" fill="white" fill-opacity="1" stroke="dimgray" stroke-width="1"  />
-<circle r="13.75" cx="1400" cy="300" fill="white" fill-opacity="1" stroke="dimgray" stroke-width="1"  />
-<circle r="5" cx="1400" cy="300" fill="white" fill-opacity="0" stroke="dimgray" stroke-width="1"  />
+<circle r="13.75" cx="160" cy="300" fill="white" fill-opacity="1" stroke="black" stroke-width="0.5"  />
+<circle r="20.625" cx="160" cy="300" fill="white" fill-opacity="1" stroke="black" stroke-width="0.5"  />
+<circle r="20.625" cx="160" cy="300" fill="white" fill-opacity="1" stroke="black" stroke-width="0.5"  />
+<circle r="20.625" cx="160" cy="300" fill="white" fill-opacity="1" stroke="black" stroke-width="0.5"  />
+<circle r="20.625" cx="160" cy="300" fill="white" fill-opacity="1" stroke="black" stroke-width="0.5"  />
+<circle r="23.75" cx="160" cy="300" fill="white" fill-opacity="1" stroke="black" stroke-width="0.5"  />
+<polygon points="148.09215069796397,279.375 171.90784930203603,279.375 183.81569860407205,300 171.90784930203603,320.625 148.09215069796397,320.625 136.18430139592795,300 " stroke="black" stroke-width="0.5" fill="white" fill-opacity="1"/>
+<circle r="20.625" cx="160" cy="300" fill="white" fill-opacity="1" stroke="black" stroke-width="0.5"  />
+<circle r="20.625" cx="160" cy="300" fill="white" fill-opacity="1" stroke="black" stroke-width="0.5"  />
+<circle r="8.125" cx="160" cy="300" stroke="black" stroke-width="0.5" fill="white" fill-opacity="1"/>
+<circle r="20" cx="160" cy="300" stroke="black" stroke-width="0.5" fill="white" fill-opacity="1"/>
+<circle r="5" cx="160" cy="300" fill="white" fill-opacity="1" stroke="dimgray" stroke-width="0.5"  />
+<circle r="8.125" cx="1400" cy="300" stroke="black" stroke-width="0.5" fill="white" fill-opacity="1"/>
+<circle r="20" cx="1400" cy="300" stroke="black" stroke-width="0.5" fill="white" fill-opacity="1"/>
+<circle r="20.625" cx="1400" cy="300" fill="white" fill-opacity="1" stroke="black" stroke-width="0.5"  />
+<circle r="20.625" cx="1400" cy="300" fill="white" fill-opacity="1" stroke="black" stroke-width="0.5"  />
+<polygon points="1388.092150697964,279.375 1411.907849302036,279.375 1423.8156986040722,300 1411.907849302036,320.625 1388.092150697964,320.625 1376.1843013959278,300 " stroke="black" stroke-width="0.5" fill="white" fill-opacity="1"/>
+<circle r="23.75" cx="1400" cy="300" fill="white" fill-opacity="1" stroke="black" stroke-width="0.5"  />
+<circle r="20.625" cx="1400" cy="300" fill="white" fill-opacity="1" stroke="black" stroke-width="0.5"  />
+<circle r="20.625" cx="1400" cy="300" fill="white" fill-opacity="1" stroke="black" stroke-width="0.5"  />
+<circle r="20.625" cx="1400" cy="300" fill="white" fill-opacity="1" stroke="black" stroke-width="0.5"  />
+<circle r="20.625" cx="1400" cy="300" fill="white" fill-opacity="1" stroke="black" stroke-width="0.5"  />
+<circle r="13.75" cx="1400" cy="300" fill="white" fill-opacity="1" stroke="black" stroke-width="0.5"  />
+<circle r="5" cx="1400" cy="300" fill="white" fill-opacity="1" stroke="dimgray" stroke-width="1"  />
 </g><text x="50%" y="580" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb) // Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
 <text x="1490" y="590" font-size="0.5em" font-weight="bold" text-anchor="end" dominant-baseline="middle">SVGTechnicalRenderer</text>
 </svg>

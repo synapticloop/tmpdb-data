@@ -1,6 +1,0 @@
-<pattern id="diagonal-hatch" patternUnits="userSpaceOnUse" width="8" height="8">
-<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,8"/>
-<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,8"/>
-<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,0" />
-<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,0" />
-</pattern>

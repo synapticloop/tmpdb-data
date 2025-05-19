@@ -6,10 +6,10 @@ import {
 
 export class SVGTechnicalComponentRenderer extends SVGRenderer {
 	SVG_WIDTH: number = 1200;
-	SVG_HEIGHT: number = 500;
+	SVG_HEIGHT: number = 600;
 
 	constructor(pencil: Pencil) {
-		super(pencil, 1200, 500, "SVGTechnicalComponentRenderer");
+		super(pencil, 1200, 600, "SVGTechnicalComponentRenderer");
 	}
 
 	/**

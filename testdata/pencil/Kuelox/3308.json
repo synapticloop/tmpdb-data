@@ -86,7 +86,7 @@
 		{
 			"type": "indicator",
 			"parts": [
-				{ "shape": "cylinder", "dimensions": [ 9.5, 8.25 ], "finish": "knurled" }
+				{ "shape": "cylinder", "dimensions": [ 9.5, 8.25 ], "finish": "knurled,indicator" }
 			],
 			"material": "plastic",
 			"colours": [ "silver" ]

@@ -556,7 +556,7 @@ export abstract class SVGRenderer {
 							`y="${midY - (part.endHeight / 4 * 5)}" ` +
 							`width="${part.length * 5 - 20}" ` +
 							`height="${part.startHeight / 2 * 5}" ` +
-							`rx="0" ry="0" stroke-width="2" stroke="black" fill="${opaqueColour}"/>\n`;
+							`rx="3" ry="3" stroke-width="1" stroke="black" fill="${opaqueColour.colour}"/>\n`;
 					svgString += `<text x="${startX + part.internalOffset * 5 + (part.length * 5) / 2}" ` +
 							`y="${midY}" ` +
 							`text-anchor="middle" dominant-baseline="central">` +
