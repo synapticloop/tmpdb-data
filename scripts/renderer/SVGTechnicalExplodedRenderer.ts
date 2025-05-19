@@ -1,6 +1,7 @@
 import {Pencil} from "../model/Pencil.ts";
 import {SVGRenderer} from "./SVGRenderer.ts";
 import {
+	arrowLeft,
 	circle,
 	dimensionsHorizontal,
 	dimensionsVertical, drawExtra, drawOutlineCircle, drawOutlineHexagon, drawOutlineOctagon, drawShapeDetails,
@@ -179,6 +180,7 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 
 					// and for the arrows
 					svgString += lineHorizontal(startX + 10, midY, 30  + totalLength * 5, "1.0", "#0f0f0f");
+					svgString += arrowLeft(startX + 10, midY);
 					svgString += `<line x1="${startX + 10}" ` +
 						`y1="${midY}" ` +
 						`x2="${startX + 20}" ` +
@@ -252,52 +254,26 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 					svgString += lineVertical(startX, midY - 40, 80, "1.0", "black", "2,3");
 
 					// and for the arrows
+					svgString += lineHorizontal(startX + 10, midY, 30 + endPartLength, "2.0", "white");
 					svgString += lineHorizontal(startX + 10, midY, 30 + endPartLength, "1.0", "#0f0f0f");
-					svgString += `<line x1="${startX + 10}" ` +
-						`y1="${midY}" ` +
-						`x2="${startX + 20}" ` +
-						`y2="${midY - 10}" ` +
-						`stroke-linecap="round" ` +
-						`stroke="#0f0f0f" ` +
-						`stroke-width="1.0" />\n`;
-					svgString += `<line x1="${startX + 10}" ` +
-						`y1="${midY}" ` +
-						`x2="${startX + 20}" ` +
-						`y2="${midY + 10}" ` +
-						`stroke-linecap="round" ` +
-						`stroke="#0f0f0f" ` +
-						`stroke-width="1.0" />\n`;
 
+					svgString += arrowLeft(startX + 10, midY);
+
+					svgString += lineVertical(startX + 40 + endPartLength, midY, 50, "2.0", "white");
 					svgString += lineVertical(startX + 40 + endPartLength, midY, 50, "1.0", "#0f0f0f");
 
 					// in between the component line
-					svgString += `<line x1="${startX - 40}" ` +
-						`y1="${midY + 50}" ` +
-						`x2="${startX + 40 + endPartLength}" ` +
-						`y2="${midY + 50}" ` +
-						`stroke-linecap="round" ` +
-						`stroke="#0f0f0f" ` +
-						`stroke-width="1.0" />\n`;
+					svgString += lineHorizontal(startX - 40, midY + 50, (startX + 40 + endPartLength) - (startX - 40), "2.0", "white");
+					svgString += lineHorizontal(startX - 40, midY + 50, (startX + 40 + endPartLength) - (startX - 40), "1.0", "#0f0f0f");
 
 
 					// next part horizontal line
+					svgString += lineHorizontal(startX - 40, midY + 100, 30, "2.0", "white");
 					svgString += lineHorizontal(startX - 40, midY + 100, 30, "1.0", "#0f0f0f");
 
-					svgString += `<line x1="${startX - 30}" ` +
-						`y1="${midY + 100}" ` +
-						`x2="${startX - 20}" ` +
-						`y2="${midY + 90}" ` +
-						`stroke-linecap="round" ` +
-						`stroke="#0f0f0f" ` +
-						`stroke-width="1.0" />\n`;
-					svgString += `<line x1="${startX - 30}" ` +
-						`y1="${midY + 100}" ` +
-						`x2="${startX - 20}" ` +
-						`y2="${midY + 110}" ` +
-						`stroke-linecap="round" ` +
-						`stroke="#0f0f0f" ` +
-						`stroke-width="1.0" />\n`;
+					svgString += arrowLeft(startX - 30, midY + 100);
 
+					svgString += lineVertical(startX - 40, midY + 50, 50, "2.0", "white");
 					svgString += lineVertical(startX - 40, midY + 50, 50, "1.0", "#0f0f0f");
 
 					midY += 100;
@@ -311,22 +287,10 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 						startX -= internalPart.length * 5;
 					}
 
+					svgString += lineHorizontal(startX - 40, midY, 30, "2.0", "white");
 					svgString += lineHorizontal(startX - 40, midY, 30, "1.0", "#0f0f0f");
-					svgString += `<line x1="${startX - 30}" ` +
-						`y1="${midY}" ` +
-						`x2="${startX - 20}" ` +
-						`y2="${midY - 10}" ` +
-						`stroke-linecap="round" ` +
-						`stroke="#0f0f0f" ` +
-						`stroke-width="1.0" />\n`;
-					svgString += `<line x1="${startX - 30}" ` +
-						`y1="${midY}" ` +
-						`x2="${startX - 20}" ` +
-						`y2="${midY + 10}" ` +
-						`stroke-linecap="round" ` +
-						`stroke="#0f0f0f" ` +
-						`stroke-width="1.0" />\n`;
-
+					svgString += arrowLeft(startX - 30, midY);
+					svgString += lineVertical(startX - 40, midY - 50, 50, "2.0", "white");
 					svgString += lineVertical(startX - 40, midY - 50, 50, "1.0", "#0f0f0f");
 
 
@@ -340,34 +304,17 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 						startX += internalPart.length * 5
 					}
 
-					svgString += `<line x1="${prevStartX - 40}" ` +
-						`y1="${midY - 50}" ` +
-						`x2="${startX + 40}" ` +
-						`y2="${midY - 50}" ` +
-						`stroke-linecap="round" ` +
-						`stroke="#0f0f0f" ` +
-						`stroke-width="1.0" />\n`;
+					svgString += lineHorizontal(prevStartX - 40, midY - 50, (startX + 40) - (prevStartX - 40), "2.0", "white");
+					svgString += lineHorizontal(prevStartX - 40, midY - 50, (startX + 40) - (prevStartX - 40), "1.0", "#0f0f0f");
 
 					svgString += lineVertical(startX, midY - 40, 80, "1.0", "white");
 					svgString += lineVertical(startX, midY - 40, 80, "1.0", "black", "2,3");
 
+					svgString += lineVertical(startX + 40, midY - 100, 50, "2.0", "#ffffff");
 					svgString += lineVertical(startX + 40, midY - 100, 50, "1.0", "#0f0f0f");
 
 					svgString += lineHorizontal(startX + 10, midY - 100, 30, "1.0", "#0f0f0f");
-					svgString += `<line x1="${startX + 10}" ` +
-						`y1="${midY - 100}" ` +
-						`x2="${startX + 20}" ` +
-						`y2="${midY - 110}" ` +
-						`stroke-linecap="round" ` +
-						`stroke="#0f0f0f" ` +
-						`stroke-width="1.0" />\n`;
-					svgString += `<line x1="${startX + 10}" ` +
-						`y1="${midY - 100}" ` +
-						`x2="${startX + 20}" ` +
-						`y2="${midY - 90}" ` +
-						`stroke-linecap="round" ` +
-						`stroke="#0f0f0f" ` +
-						`stroke-width="1.0" />\n`;
+					svgString += arrowLeft(startX + 10, midY - 100);
 
 					startX += partLength;
 				}

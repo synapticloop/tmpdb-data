@@ -21,10 +21,10 @@
 			"colours": [ "silver" ],
 			"internal_end": [
 				{ "shape": "cone", "dimensions": [ 5.25, 4.25, 3.5 ] },
-				{ "shape": "cylinder", "dimensions": [ 11.5, 3.25 ], "finish":  "spring"},
+				{ "shape": "cylinder", "dimensions": [ 11.5, 3.25 ], "finish":  "spring" },
 				{ "shape": "cylinder", "dimensions": [ 3.25, 4.0 ] },
-				{ "shape": "cylinder", "dimensions": [ 7.0, 6.0 ], "colours": [ "black"]  },
-				{ "shape": "cylinder", "dimensions": [ 104.75, 5.0 ], "colours": [ "black"]  }
+				{ "shape": "cylinder", "dimensions": [ 7.0, 6.0 ], "colours": [ "black"] },
+				{ "shape": "cylinder", "dimensions": [ 104.75, 5.0 ], "colours": [ "black"] }
 			]
 		},
 		{

@@ -576,11 +576,46 @@ export function dimensionsHorizontal(x: number, y:number, width:number, text: st
 	return(svgString);
 }
 export function rectangle(x:number, y:number, width:number, height:number, strokeColour:string, opaqueColour: OpacityColour): string {
-	let svgString = "<!-- julian -->";
+	let svgString = "";
 	svgString += `<rect x="${x}" ` +
 		`y="${y}" ` +
 		`width="${width}" ` +
 		`height="${height}" ` +
 		`rx="0" ry="0" stroke-width="0.5" stroke="${strokeColour}" fill="${opaqueColour.colour}" fill-opacity="${opaqueColour.opacity}"/>\n`
+	return(svgString);
+}
+
+export function arrowLeft(x: number, y:number): string {
+	let svgString: string = "";
+	svgString += `<line x1="${x}" ` +
+		`y1="${y}" ` +
+		`x2="${x + 10}" ` +
+		`y2="${y - 10}" ` +
+		`stroke-linecap="round" ` +
+		`stroke="#ffffff" ` +
+		`stroke-width="2.0" />\n`;
+	svgString += `<line x1="${x}" ` +
+		`y1="${y}" ` +
+		`x2="${x + 10}" ` +
+		`y2="${y + 10}" ` +
+		`stroke-linecap="round" ` +
+		`stroke="#ffffff" ` +
+		`stroke-width="2.0" />\n`;
+
+	svgString += `<line x1="${x}" ` +
+		`y1="${y}" ` +
+		`x2="${x + 10}" ` +
+		`y2="${y - 10}" ` +
+		`stroke-linecap="round" ` +
+		`stroke="#0f0f0f" ` +
+		`stroke-width="1.0" />\n`;
+	svgString += `<line x1="${x}" ` +
+		`y1="${y}" ` +
+		`x2="${x + 10}" ` +
+		`y2="${y + 10}" ` +
+		`stroke-linecap="round" ` +
+		`stroke="#0f0f0f" ` +
+		`stroke-width="1.0" />\n`;
+
 	return(svgString);
 }
