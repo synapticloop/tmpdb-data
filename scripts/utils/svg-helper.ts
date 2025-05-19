@@ -305,6 +305,17 @@ export function lineVertical(x: number, y: number, height: number, strokeWidth: 
 	return(svgString);
 }
 
+export function lineJoined(x: number, y: number, height: number, strokeWidth: string, strokeColour: string): string {
+	let svgString: string = "";
+	svgString += `<line x1="${x}" ` +
+		`y1="${y}" ` +
+		`x2="${x}" ` +
+		`y2="${y + height}" ` +
+		`stroke="${strokeColour}" ` +
+		`stroke-width="${strokeWidth}" />\n`;
+	return(svgString);
+}
+
 export function target(x:number, y:number, length:number, radius:number):string {
 	let svgString = "";
 	svgString += lineHorizontal(x - length/2, y, length, "1", "#000000");

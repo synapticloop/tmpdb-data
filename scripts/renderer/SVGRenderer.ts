@@ -7,7 +7,7 @@ import {
 	drawShapeDetails,
 	drawText,
 	drawTextBold, drawTextBoldCentred,
-	lineHorizontal,
+	lineHorizontal, lineJoined,
 	lineVertical,
 	lineVerticalGuide,
 	rectangle,
@@ -478,6 +478,12 @@ export abstract class SVGRenderer {
 					part.startHeight * 5,
 					strokeColour,
 					opaqueColour);
+
+				if(part.joined) {
+					svgString += lineJoined(startX + part.internalOffset * 5,
+						midY - (part.endHeight / 2 * 5) + 0.25,
+						part.startHeight * 5 - 0.5, "3", opaqueColour.colour);
+				}
 
 				break;
 			case "cone":

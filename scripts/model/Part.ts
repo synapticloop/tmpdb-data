@@ -23,6 +23,7 @@ export class Part {
 
 	taperStart:any;
 	taperEnd:any;
+	joined: false;
 
 	internalOffset: number;
 
@@ -30,6 +31,7 @@ export class Part {
 		this.shape = jsonObject.shape;
 		this.material = jsonObject.material;
 		this.internalOffset = jsonObject.internal_offset ?? 0;
+		this.joined = jsonObject.joined ?? false;
 
 		this.taperStart = jsonObject.taper_start;
 		this.taperEnd = jsonObject.taper_end;
