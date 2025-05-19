@@ -333,7 +333,7 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 			for(let part of component.parts) {
 				colour = this.getMappedColour(part.colours, colourIndex, colour.colour);
 				// TODO - why is the taper off
-				svgString += super.renderTaper(startX, midY, part, colour.colour);
+				svgString += super.renderTaper(startX, midY, part, colourIndex, colour.colour);
 				startX += part.length * 5;
 			}
 

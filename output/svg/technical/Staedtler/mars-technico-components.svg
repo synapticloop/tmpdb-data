@@ -78,6 +78,7 @@
 <line x1="383.125" y1="300" x2="556.875" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="383.125" y1="300" x2="556.875" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
 <rect x="556.875" y="280.625" width="293.75" height="38.75" rx="0" ry="0" stroke-width="0.5" stroke="black" fill="white" fill-opacity="1"/>
+<line x1="556.875" y1="280.875" x2="556.875" y2="319.125" stroke="white" stroke-width="3" />
 <line x1="714.375" y1="271.625" x2="698.125" y2="279.125" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
 <line x1="698.125" y1="279.125" x2="683.125" y2="271.625" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
 <path d="M683.125 271.625 Q675.625 269.125 683.125 266.625" stroke-width="4" stroke="black" fill="none" stroke-linecap="round" />
@@ -91,6 +92,8 @@
 <line x1="843.125" y1="266.625" x2="850.625" y2="279.125" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
 <rect x="880.625" y="280.625" width="35" height="38.75" rx="0" ry="0" stroke-width="0.5" stroke="black" fill="white" fill-opacity="1"/>
 <rect x="915.625" y="285.625" width="60" height="28.75" rx="0" ry="0" stroke-width="0.5" stroke="black" fill="white" fill-opacity="1"/>
+<path d="M 456.875 280.625 C 589.7875 285.46875, 589.7875 295.15625, 456.875 300" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="white" />
+<path d="M 456.875 319.375 C 589.7875 314.53125, 589.7875 304.84375, 456.875 300" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="white" />
 </g><text x="50%" y="580" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb) // Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
 <text x="1190" y="590" font-size="0.5em" font-weight="bold" text-anchor="end" dominant-baseline="middle">SVGTechnicalComponentRenderer</text>
 </svg>

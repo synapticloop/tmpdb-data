@@ -18,6 +18,7 @@
 <line x1="283.125" y1="100" x2="456.875" y2="100" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="283.125" y1="100" x2="456.875" y2="100" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
 <rect x="456.875" y="80.625" width="293.75" height="38.75" rx="0" ry="0" stroke-width="0.5" stroke="dimgray" fill="black" fill-opacity="1"/>
+<line x1="456.875" y1="80.875" x2="456.875" y2="119.125" stroke="black" stroke-width="3" />
 <line x1="614.375" y1="71.625" x2="598.125" y2="79.125" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
 <line x1="598.125" y1="79.125" x2="583.125" y2="71.625" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
 <path d="M583.125 71.625 Q575.625 69.125 583.125 66.625" stroke-width="4" stroke="black" fill="none" stroke-linecap="round" />
@@ -31,6 +32,8 @@
 <line x1="743.125" y1="66.625" x2="750.625" y2="79.125" stroke-width="3" stroke="silver" fill="silver" stroke-linecap="round" />
 <rect x="780.625" y="80.625" width="35" height="38.75" rx="0" ry="0" stroke-width="0.5" stroke="dimgray" fill="black" fill-opacity="1"/>
 <rect x="815.625" y="85.625" width="60" height="28.75" rx="0" ry="0" stroke-width="0.5" stroke="black" fill="silver" fill-opacity="1"/>
+<path d="M 356.875 80.625 C 489.7875 85.46875, 489.7875 95.15625, 356.875 100" stroke-width="0.5" stroke="dimgray" stroke-linecap="round" fill="black" />
+<path d="M 356.875 119.375 C 489.7875 114.53125, 489.7875 104.84375, 356.875 100" stroke-width="0.5" stroke="dimgray" stroke-linecap="round" fill="black" />
 </g><text x="50%" y="160" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb)</text>
 <text x="50%" y="180" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
 <text x="990" y="190" font-size="0.5em" font-weight="bold" text-anchor="end" dominant-baseline="middle">SVGPencilRenderer</text>

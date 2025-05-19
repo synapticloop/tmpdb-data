@@ -23,6 +23,7 @@ export class Part {
 
 	taperStart:any;
 	taperEnd:any;
+
 	joined: false;
 
 	internalOffset: number;
