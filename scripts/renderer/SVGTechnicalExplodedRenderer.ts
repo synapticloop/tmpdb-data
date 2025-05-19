@@ -49,7 +49,7 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 
 		super.resize(this.SVG_WIDTH, this.SVG_HEIGHT);
 
-		let svgString:string = this.getSvgStart(this.SVG_WIDTH, this.SVG_HEIGHT);
+		let svgString:string = this.getSvgStart();
 
 		// overview text
 		svgString += this.renderOverviewText(false);
@@ -59,7 +59,7 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 		svgString += this.renderExplodedSideComponents(colourIndex);
 
 		// end the end of the SVG
-		svgString += this.getSvgEnd(this.SVG_WIDTH, this.SVG_HEIGHT);
+		svgString += this.getSvgEnd();
 
 		return(svgString);
 	}

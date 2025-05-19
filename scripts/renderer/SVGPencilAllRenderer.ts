@@ -26,7 +26,7 @@ export class SVGPencilAllRenderer extends SVGRenderer {
 		super.resize(1000, this.SVG_HEIGHT);
 
 		// start
-		let svgString:string = super.getSvgStart(1000, this.SVG_HEIGHT);
+		let svgString:string = super.getSvgStart();
 		svgString += super.renderOverviewText(false);
 
 		let midYOverride: number = 120;
@@ -39,7 +39,7 @@ export class SVGPencilAllRenderer extends SVGRenderer {
 			midYOverride = midYOverride + 120;
 		}
 
-		svgString += super.getSvgEnd(1000, this.SVG_HEIGHT);
+		svgString += super.getSvgEnd();
 		return(svgString);
 	}
 }

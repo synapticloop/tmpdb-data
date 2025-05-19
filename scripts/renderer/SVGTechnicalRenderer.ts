@@ -35,7 +35,7 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 	 */
 	render(colourIndex: number):string {
 		// start
-		let svgString:string = this.getSvgStart(this.SVG_WIDTH, this.SVG_HEIGHT);
+		let svgString:string = this.getSvgStart();
 
 		// centre line
 		svgString += super.renderCentreLines(this.SVG_WIDTH, this.SVG_HEIGHT);
@@ -78,7 +78,7 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 		svgString += this.renderBackComponents(colourIndex);
 
 		// end the end of the SVG
-		svgString += this.getSvgEnd(this.SVG_WIDTH, this.SVG_HEIGHT);
+		svgString += this.getSvgEnd();
 		return(svgString);
 	}
 

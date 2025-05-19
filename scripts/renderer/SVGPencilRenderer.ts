@@ -22,13 +22,13 @@ export class SVGPencilRenderer extends SVGRenderer {
 	 */
 	render(colourIndex: number):string {
 		// start
-		let svgString:string = super.getSvgStart(this.SVG_WIDTH, this.SVG_HEIGHT, true);
+		let svgString:string = super.getSvgStart(true);
 
 		// now it is time to render the details of the pencil
 		svgString += super.renderSideComponents(colourIndex);
 
 		// end the end of the SVG
-		svgString += super.getSvgEnd(this.SVG_WIDTH, this.SVG_HEIGHT);
+		svgString += super.getSvgEnd();
 		return(svgString);
 	}
 }

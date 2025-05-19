@@ -49,10 +49,10 @@ export abstract class SVGRenderer {
 		return("");
 	}
 
-	protected getSvgStart(width: number, height: number, transparent:boolean=false, rotate:number=0): string {
+	protected getSvgStart(transparent:boolean=false, rotate:number=0): string {
 		let svgString:string = `<svg xmlns="http://www.w3.org/2000/svg" ` +
-			`width="${width}" ` +
-			`height="${height}">\n ` +
+			`width="${this._width}" ` +
+			`height="${this._height}">\n ` +
 			`<pattern id="diagonalHatch" patternUnits="userSpaceOnUse" width="8" height="8">\n` +
 			`<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,8"/>\n` +
 			`<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,8"/>\n` +
@@ -63,23 +63,23 @@ export abstract class SVGRenderer {
 			`<path stroke="dimgray" stroke-linecap="round" stroke-width="2" d="M 0,0 L 8,100"/>\n` +
 			`<path stroke="white" stroke-linecap="round" stroke-width="1" d="M 0,0 L 8,100"/>\n` +
 			`</pattern>\n` +
-			this.addOutlineBox(width, height, transparent) +
-			`<g transform="rotate(${rotate} ${(rotate !== 0 ? width/2 : 0)} ${(rotate !== 0 ? height/2 : 0)})">\n`;
+			this.addOutlineBox(this._width, this._height, transparent) +
+			`<g transform="rotate(${rotate} ${(rotate !== 0 ? this._width/2 : 0)} ${(rotate !== 0 ? this._height/2 : 0)})">\n`;
 
 		return(svgString);
 	}
 
-	protected getSvgEnd(width: number, height: number): string {
+	protected getSvgEnd(): string {
 		// todo - need to switch on height
-		if(width <= 1000) {
-			return(`</g><text x="50%" y="${height - 40}" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb)</text>\n` +
-				`<text x="50%" y="${height - 20}" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>\n` +
-				`<text x="${width - 10}" y="${height - 10}" font-size="0.5em" font-weight="bold" text-anchor="end" dominant-baseline="middle">${this._rendererName}</text>\n` +
+		if(this._width <= 1000) {
+			return(`</g><text x="50%" y="${this._height - 40}" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb)</text>\n` +
+				`<text x="50%" y="${this._height - 20}" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>\n` +
+				`<text x="${this._width - 10}" y="${this._height - 10}" font-size="0.5em" font-weight="bold" text-anchor="end" dominant-baseline="middle">${this._rendererName}</text>\n` +
 				`</svg>`);
 		}
 
-		let svgString: string = `</g><text x="50%" y="${height - 20}" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb) // Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>\n` +
-			`<text x="${width - 10}" y="${height - 10}" font-size="0.5em" font-weight="bold" text-anchor="end" dominant-baseline="middle">${this._rendererName}</text>\n` +
+		let svgString: string = `</g><text x="50%" y="${this._height - 20}" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb) // Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>\n` +
+			`<text x="${this._width - 10}" y="${this._height - 10}" font-size="0.5em" font-weight="bold" text-anchor="end" dominant-baseline="middle">${this._rendererName}</text>\n` +
 			`</svg>`;
 
 		return(svgString);
