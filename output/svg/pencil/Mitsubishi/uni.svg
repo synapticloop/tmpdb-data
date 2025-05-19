@@ -13,7 +13,7 @@
 <path d="M148.75 93.125 L153.75 89.375 L153.75 110.625 L148.75 106.875 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
 <path d="M153.75 86.875 L211.25 81.25 L211.25 118.75 L153.75 113.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
 <rect x="211.25" y="80" width="127.5" height="40" rx="0" ry="0" stroke-width="0.5" stroke="black" fill="white" fill-opacity="1"/>
-<rect x="211.25" y="80" width="127.5" height="40" rx="0" ry="0" stroke-width="0.5" stroke="black" fill="url(#diagonalHatch)"/>
+<path d="M211.25 80 L338.75 80 L338.75 120 L211.25 120 Z" stroke-width="1.0" stroke="black" fill="url(#diagonalHatch)"/>
 <rect x="338.75" y="79.375" width="420" height="41.25" rx="0" ry="0" stroke-width="0.5" stroke="black" fill="white" fill-opacity="1"/>
 <line x1="338.75" y1="100" x2="758.75" y2="100" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="338.75" y1="100" x2="758.75" y2="100" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>

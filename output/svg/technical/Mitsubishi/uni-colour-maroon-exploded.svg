@@ -58,7 +58,7 @@
 <line x1="213.75" y1="170" x2="213.75" y2="220" stroke="#0f0f0f" stroke-linecap="round"  stroke-width="1.0" />
 <path d="M253.75 206.875 L311.25 201.25 L311.25 238.75 L253.75 233.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
 <rect x="311.25" y="200" width="127.5" height="40" rx="0" ry="0" stroke-width="0.5" stroke="black" fill="silver" fill-opacity="1"/>
-<rect x="311.25" y="200" width="127.5" height="40" rx="0" ry="0" stroke-width="0.5" stroke="black" fill="url(#diagonalHatch)"/>
+<path d="M311.25 200 L438.75 200 L438.75 240 L311.25 240 Z" stroke-width="1.0" stroke="black" fill="url(#diagonalHatch)"/>
 <rect x="438.75" y="299.375" width="420" height="41.25" rx="0" ry="0" stroke-width="0.5" stroke="black" fill="maroon" fill-opacity="1"/>
 <line x1="438.75" y1="320" x2="858.75" y2="320" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="438.75" y1="320" x2="858.75" y2="320" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>

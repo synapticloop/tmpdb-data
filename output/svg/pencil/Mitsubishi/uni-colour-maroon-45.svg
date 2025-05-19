@@ -15,7 +15,7 @@
 <path d="M148.75 493.125 L153.75 489.375 L153.75 510.625 L148.75 506.875 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
 <path d="M153.75 486.875 L211.25 481.25 L211.25 518.75 L153.75 513.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
 <rect x="211.25" y="480" width="127.5" height="40" rx="0" ry="0" stroke-width="0.5" stroke="black" fill="silver" fill-opacity="1"/>
-<rect x="211.25" y="480" width="127.5" height="40" rx="0" ry="0" stroke-width="0.5" stroke="black" fill="url(#diagonalHatch)"/>
+<path d="M211.25 480 L338.75 480 L338.75 520 L211.25 520 Z" stroke-width="1.0" stroke="black" fill="url(#diagonalHatch)"/>
 <rect x="338.75" y="479.375" width="420" height="41.25" rx="0" ry="0" stroke-width="0.5" stroke="black" fill="maroon" fill-opacity="1"/>
 <line x1="338.75" y1="500" x2="758.75" y2="500" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="338.75" y1="500" x2="758.75" y2="500" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>

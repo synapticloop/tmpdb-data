@@ -215,6 +215,10 @@ export abstract class SVGRenderer {
 		// TODO - need a nice way to determine what shade of black/grey -
 		//   thinking grayscale inverse
 		let strokeColor:string = "black";
+		if(colour === "black") {
+			strokeColor = "dimgray";
+		}
+
 		let svgString:string = "";
 		if(!(part.taperStart || part.taperEnd)){
 			return("");
