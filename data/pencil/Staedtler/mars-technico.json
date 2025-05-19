@@ -37,8 +37,8 @@
 		{
 			"type": "body",
 			"parts": [
-				{ "shape":"hexagonal", "dimensions": [ 34.75, 7.75] },
-				{ "shape":"cylinder", "dimensions": [ 58.75, 7.75] }
+				{ "shape":"hexagonal", "dimensions": [ 34.75, 7.75], "taper_end": { "offset": [ -20.0, 0.835 ] } },
+				{ "shape":"cylinder", "dimensions": [ 58.75, 7.75], "joined": true }
 			],
 			"material": "plastic",
 			"colours": [ "black" ]
