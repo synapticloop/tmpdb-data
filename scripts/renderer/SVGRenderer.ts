@@ -25,7 +25,7 @@ export abstract class SVGRenderer {
 	protected pencil:Pencil;
 	private _width: number;
 	private _height: number;
-	private _rendererName: string;
+	private readonly _rendererName: string;
 
 	protected constructor(pencil:Pencil, width: number, height: number, rendererName:string = "") {
 		this.pencil = pencil;
@@ -85,13 +85,13 @@ export abstract class SVGRenderer {
 		return(svgString);
 	}
 
-	protected renderCentreLines(width: number, height: number, renderFront:boolean=true, renderBack:boolean=true): string {
+	protected renderCentreLines(width: number, height: number, renderFront:boolean=true, renderBack:boolean=true, xInset: number=10, yInset: number=0): string {
 		let svgString: string = "";
 
 		// the horizontal centre line with targets
-		svgString += lineHorizontal(10, height / 2, width - 20, "1", "#000000", "2");
-		svgString += target(30, height / 2, 40, 10);
-		svgString += target(width - 30, height / 2, 40, 10);
+		svgString += lineHorizontal(xInset, height / 2, width - (2 * xInset), "1", "#000000", "2");
+		svgString += target(xInset + 20, height / 2, 40, 10);
+		svgString += target(width - (xInset * 2 + 10), height / 2, 40, 10);
 
 		if (renderFront) {
 			// FRONT VIEW the left hand side targets and the dashed line
@@ -220,53 +220,87 @@ export abstract class SVGRenderer {
 			return("");
 		}
 
-		let xOffsetStart: number = 0;
-		let xOffsetStartScale: number = 1;
+		let xOffsetTaperStart: number = 0;
+		let xOffsetTaperStartScale: number = 1;
 
 		if(part.taperStart?.offset[0]) {
-			xOffsetStart = part.taperStart.offset[0];
+			xOffsetTaperStart = part.taperStart.offset[0];
 		}
 		if(part.taperStart?.offset[1]) {
-			xOffsetStartScale = part.taperStart.offset[1];
+			xOffsetTaperStartScale = part.taperStart.offset[1];
 		}
 
 		if(part.taperStart) {
 			// now we get to draw the taper
 			switch (part.shape) {
 				case "hexagonal":
-					if(xOffsetStart < 0) {
+					if (xOffsetTaperStart < 0) {
 						svgString += `<path d="M ${startX + 0.65} ${midY - part.endHeight / 2 * 5} ` +
-							`C ${startX + xOffsetStart * xOffsetStartScale * 5} ${midY - part.endHeight / 2 * 5 * 3 / 4}, ` +
-							`${startX + xOffsetStart * xOffsetStartScale * 5} ${midY - part.endHeight / 2 * 5 / 4}, ` +
+							`C ${startX + xOffsetTaperStart * xOffsetTaperStartScale * 5} ${midY - part.endHeight / 2 * 5 * 3 / 4}, ` +
+							`${startX + xOffsetTaperStart * xOffsetTaperStartScale * 5} ${midY - part.endHeight / 2 * 5 / 4}, ` +
 							`${startX + 0.65} ${midY}" ` +
 							`stroke-width="0.5" ` +
 							`stroke="${strokeColor}" ` +
 							`stroke-linecap="round" ` +
 							`fill="${colour}" />`
 						svgString += `<path d="M ${startX + 0.65} ${midY + part.endHeight / 2 * 5} ` +
-							`C ${startX + xOffsetStart * xOffsetStartScale * 5} ${midY + part.endHeight / 2 * 5 * 3 / 4}, ` +
-							`${startX + xOffsetStart * xOffsetStartScale * 5} ${midY + part.endHeight / 2 * 5 / 4}, ` +
+							`C ${startX + xOffsetTaperStart * xOffsetTaperStartScale * 5} ${midY + part.endHeight / 2 * 5 * 3 / 4}, ` +
+							`${startX + xOffsetTaperStart * xOffsetTaperStartScale * 5} ${midY + part.endHeight / 2 * 5 / 4}, ` +
 							`${startX + 0.65} ${midY}" ` +
 							`stroke-width="0.5" stroke="${strokeColor}" stroke-linecap="round" fill="${colour}" />`
 					} else {
-						svgString += `<path d="M ${startX + xOffsetStart * 5} ${midY - part.endHeight / 2 * 5} ` +
-							`C ${startX - (xOffsetStart * xOffsetStartScale * 5)} ${midY - part.endHeight / 2 * 5 * 3 / 4}, ` +
-							`${startX - (xOffsetStart * xOffsetStartScale * 5)} ${midY - part.endHeight / 2 * 5 / 4}, ` +
-							`${startX + xOffsetStart * 5} ${midY}" ` +
+						svgString += `<path d="M ${startX + xOffsetTaperStart * 5} ${midY - part.endHeight / 2 * 5} ` +
+							`C ${startX - (xOffsetTaperStart * xOffsetTaperStartScale * 5)} ${midY - part.endHeight / 2 * 5 * 3 / 4}, ` +
+							`${startX - (xOffsetTaperStart * xOffsetTaperStartScale * 5)} ${midY - part.endHeight / 2 * 5 / 4}, ` +
+							`${startX + xOffsetTaperStart * 5} ${midY}" ` +
 							`stroke-width="0.5" stroke="${strokeColor}" stroke-linecap="round" fill="${colour}" />`
 
-						svgString += `<path d="M ${startX + xOffsetStart * 5} ${midY + part.endHeight / 2 * 5} ` +
-							`C ${startX - (xOffsetStart * xOffsetStartScale * 5)} ${midY + part.endHeight / 2 * 5 * 3 / 4}, ` +
-							`${startX - (xOffsetStart * xOffsetStartScale * 5)} ${midY + part.endHeight / 2 * 5 / 4}, ` +
-							`${startX + xOffsetStart * 5} ${midY}" ` +
+						svgString += `<path d="M ${startX + xOffsetTaperStart * 5} ${midY + part.endHeight / 2 * 5} ` +
+							`C ${startX - (xOffsetTaperStart * xOffsetTaperStartScale * 5)} ${midY + part.endHeight / 2 * 5 * 3 / 4}, ` +
+							`${startX - (xOffsetTaperStart * xOffsetTaperStartScale * 5)} ${midY + part.endHeight / 2 * 5 / 4}, ` +
+							`${startX + xOffsetTaperStart * 5} ${midY}" ` +
 							`stroke-width="0.5" stroke="${strokeColor}" stroke-linecap="round" fill="${colour}" />`
 
 					}
 
 					break;
 			}
-			return (svgString);
 		}
+
+		let xOffsetTaperEnd: number = 0;
+		let xOffsetTaperEndScale: number = 1;
+
+		if(part.taperEnd?.offset[0]) {
+			xOffsetTaperEnd = part.taperEnd.offset[0] + part.length;
+		}
+		if(part.taperEnd?.offset[1]) {
+			xOffsetTaperEndScale = part.taperEnd.offset[1];
+		}
+
+		if(part.taperEnd) {
+			// now we get to draw the taper
+			switch (part.shape) {
+				case "hexagonal":
+					svgString += `<path d="M ${startX + xOffsetTaperEnd * 5} ${midY - part.endHeight / 2 * 5} ` +
+						`C ${startX + ((part.length + xOffsetTaperEnd) * 5 * xOffsetTaperEndScale)} ${midY - part.endHeight / 2 * 5 * 3 / 4}, ` +
+						`${startX + ((part.length + xOffsetTaperEnd) * 5 * xOffsetTaperEndScale)} ${midY - part.endHeight / 2 * 5 / 4}, ` +
+						`${startX + xOffsetTaperEnd * 5} ${midY}" ` +
+						`stroke-width="0.5" ` +
+						`stroke="${strokeColor}" ` +
+						`stroke-linecap="round" ` +
+						`fill="${colour}" />\n`;
+
+					svgString += `<path d="M ${startX + xOffsetTaperEnd * 5} ${midY + part.endHeight / 2 * 5} ` +
+						`C ${startX + ((part.length + xOffsetTaperEnd) * 5 * xOffsetTaperEndScale)} ${midY + part.endHeight / 2 * 5 * 3 / 4}, ` +
+						`${startX + ((part.length + xOffsetTaperEnd) * 5 * xOffsetTaperEndScale)} ${midY + part.endHeight / 2 * 5 / 4}, ` +
+						`${startX + xOffsetTaperEnd * 5} ${midY}" ` +
+						`stroke-width="0.5" ` +
+						`stroke="${strokeColor}" ` +
+						`stroke-linecap="round" ` +
+						`fill="${colour}" />\n`;
+			}
+		}
+		return (svgString);
 	}
 
 	protected renderSideDimensions(): string {
@@ -511,11 +545,20 @@ export abstract class SVGRenderer {
 
 					break;
 				case "knurled":
-					svgString += `<rect x="${startX + part.internalOffset * 5}" ` +
-						`y="${midY - (part.endHeight / 2 * 5)}" ` +
-						`width="${part.length * 5}" ` +
-						`height="${part.startHeight * 5}" ` +
-						`rx="0" ry="0" stroke-width="0.5" stroke="black" fill="url(#diagonalHatch)"/>\n`;
+					let xStart: number = startX + (part.internalOffset)* 5;
+					let xEnd: number = startX + part.length * 5;
+
+					let yStartTop: number = midY - (part.startHeight / 2 * 5);
+					let yStartBottom: number = midY + (part.startHeight / 2 * 5);
+
+					let yEndTop: number = midY - (part.endHeight / 2 * 5);
+					let yEndBottom: number = midY + (part.endHeight / 2 * 5);
+
+
+					svgString += `<path d="M${xStart} ${yStartTop} ` +
+						`L${xEnd} ${yEndTop} ` +
+						`L${xEnd} ${yEndBottom} ` +
+						`L${xStart} ${yStartBottom} Z" stroke-width="1.0" stroke="black" fill="url(#diagonalHatch)"/>\n`;
 					break;
 				case "spring":
 
