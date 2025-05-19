@@ -25,7 +25,7 @@
 <line x1="583.125" y1="66.625" x2="743.125" y2="66.625" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
 <line x1="743.125" y1="66.625" x2="750.625" y2="79.125" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
 <path d="M750.625 78.125 L780.625 78.125 L780.625 121.875 L750.625 121.875 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
-<line x1="614.375" y1="71.625" x2="598.125" y2="79.125" stroke-width="3" stroke="silver" fill="silver" stroke-linecap="round" />
+<text x="765.625" y="100" text-anchor="middle" dominant-baseline="central"><tspan stroke="dimgray" stroke-width="0.5" font-family="sans-serif" fill="black" textLength="{this.width * 5 - 12}" > HB</tspan></text><line x1="614.375" y1="71.625" x2="598.125" y2="79.125" stroke-width="3" stroke="silver" fill="silver" stroke-linecap="round" />
 <line x1="598.125" y1="79.125" x2="583.125" y2="71.625" stroke-width="3" stroke="silver" fill="silver" stroke-linecap="round" />
 <path d="M583.125 71.625 Q575.625 69.125 583.125 66.625" stroke-width="3" stroke="silver" fill="none" stroke-linecap="round" />
 <line x1="583.125" y1="66.625" x2="743.125" y2="66.625" stroke-width="3" stroke="silver" fill="silver" stroke-linecap="round" />

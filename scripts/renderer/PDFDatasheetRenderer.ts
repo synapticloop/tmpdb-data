@@ -311,7 +311,7 @@ export class PDFDatasheetRenderer {
 			for (const colourComponent of this.pencil.colourComponents) {
 				this.setFontFamily(doc, FontFamily.HEADING_SMALL);
 				doc.text("").moveDown(1);
-				this.centreImage(doc, `./output/png/technical/${this.pencilFileDirectory}/${this.pencilFileName}-colour-${colourComponent}-exploded.png`, 500);
+				this.centreImage(doc, `./output/png/technical/${this.pencilFileDirectory}/${this.pencilFileName}-exploded-colour-${colourComponent}.png`, 500);
 			}
 		}
 	}

@@ -247,8 +247,7 @@ export abstract class SVGRenderer {
 			switch (part.shape) {
 				case "hexagonal":
 					// rectangle first
-					// svgString += rectangle(startX - 0.3, midY - part.endHeight / 2 * 5 + 0.25, xOffsetTaperStart * 5 + 0.2, part.startHeight * 5 - 0.5, "none", backgroundColour);
-					// svgString += rectangle(startX + xOffsetTaperStart*5 - 0.3, midY - part.endHeight / 2 * 5 + 0.25, 0.6, part.startHeight * 5 - 0.5, "none", new OpacityColour({}, colour));
+					svgString += rectangle(startX, midY - part.endHeight / 2 * 5 + 0.25, xOffsetTaperStart * 5 - 0.5, part.startHeight * 5 - 0.5, "none", backgroundColour);
 					svgString += `<path d="M ${startX + xOffsetTaperStart * 5} ${midY - part.endHeight / 2 * 5} ` +
 						`C ${startX + xOffsetTaperStart * (xOffsetTaperStartScale * -5)} ${midY - part.endHeight / 2 * 5 * 3 / 4}, ` +
 						`${startX + xOffsetTaperStart * (xOffsetTaperStartScale * -5)} ${midY - part.endHeight / 2 * 5 / 4}, ` +
@@ -609,17 +608,26 @@ export abstract class SVGRenderer {
 				case "indicator":
 					// now draw the indicator
 					svgString += `<rect x="${startX + part.internalOffset * 5 + 10}" ` +
-							`y="${midY - (part.endHeight / 4 * 5)}" ` +
-							`width="${part.length * 5 - 20}" ` +
-							`height="${part.startHeight / 2 * 5}" ` +
-							`rx="3" ry="3" stroke-width="1" stroke="black" fill="${opaqueColour.colour}"/>\n`;
+						`y="${midY - (part.endHeight / 4 * 5)}" ` +
+						`width="${part.length * 5 - 20}" ` +
+						`height="${part.startHeight / 2 * 5}" ` +
+						`rx="3" ry="3" stroke-width="1" stroke="black" fill="${opaqueColour.colour}"/>\n`;
 					svgString += `<text x="${startX + part.internalOffset * 5 + (part.length * 5) / 2}" ` +
-							`y="${midY}" ` +
-							`text-anchor="middle" dominant-baseline="central">` +
-							`<tspan stroke="dimgray" stroke-width="0.5" font-family="sans-serif" fill="black" textLength="{this.width * 5 - 24}" > ` +
-							`HB` +
-							`</tspan>` +
-							`</text>`;
+						`y="${midY}" ` +
+						`text-anchor="middle" dominant-baseline="central">` +
+						`<tspan stroke="dimgray" stroke-width="0.5" font-family="sans-serif" fill="black" textLength="{this.width * 5 - 24}" > ` +
+						`HB` +
+						`</tspan>` +
+						`</text>`;
+					break;
+				case "indicator-etched":
+					svgString += `<text x="${startX + part.internalOffset * 5 + (part.length * 5) / 2}" ` +
+						`y="${midY}" ` +
+						`text-anchor="middle" dominant-baseline="central">` +
+						`<tspan stroke="dimgray" stroke-width="0.5" font-family="sans-serif" fill="black" textLength="{this.width * 5 - 12}" > ` +
+						`HB` +
+						`</tspan>` +
+						`</text>`;
 					break;
 				case "lined":
 					for (let i:number = 0; i < part.startHeight * 5/2 - 1; i++) {

@@ -132,6 +132,7 @@
 <line x1="849.125" y1="130.75" x2="853.375" y2="130.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
 <line x1="849.125" y1="132.75" x2="853.375" y2="132.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
 <line x1="849.125" y1="134.75" x2="853.375" y2="134.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
+<rect x="205.625" y="100.25" width="22" height="38.25" rx="0" ry="0" stroke-width="0.5" stroke="none" fill="silver" fill-opacity="1"/>
 <path d="M 228.125 100 C 198.3125 105, 198.3125 115, 228.125 120" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="silver" /><path d="M 228.125 140 C 198.3125 135, 198.3125 125, 228.125 120" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="silver" /><path d="M145.625 232.5 L156.875 231.25 L156.875 248.75 L145.625 247.5 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
 <path d="M156.875 226.875 L205.625 220.625 L205.625 259.375 L156.875 253.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
 <path d="M205.625 220.625 L238.125 220 L238.125 260 L205.625 259.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
@@ -251,6 +252,7 @@
 <line x1="849.125" y1="250.75" x2="853.375" y2="250.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
 <line x1="849.125" y1="252.75" x2="853.375" y2="252.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
 <line x1="849.125" y1="254.75" x2="853.375" y2="254.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
+<rect x="205.625" y="220.25" width="22" height="38.25" rx="0" ry="0" stroke-width="0.5" stroke="none" fill="white" fill-opacity="1"/>
 <path d="M 228.125 220 C 198.3125 225, 198.3125 235, 228.125 240" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="white" /><path d="M 228.125 260 C 198.3125 255, 198.3125 245, 228.125 240" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="white" /><path d="M145.625 352.5 L156.875 351.25 L156.875 368.75 L145.625 367.5 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
 <path d="M156.875 346.875 L205.625 340.625 L205.625 379.375 L156.875 373.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
 <path d="M205.625 340.625 L238.125 340 L238.125 380 L205.625 379.375 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1" />
@@ -370,6 +372,7 @@
 <line x1="849.125" y1="370.75" x2="853.375" y2="370.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
 <line x1="849.125" y1="372.75" x2="853.375" y2="372.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
 <line x1="849.125" y1="374.75" x2="853.375" y2="374.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
+<rect x="205.625" y="340.25" width="22" height="38.25" rx="0" ry="0" stroke-width="0.5" stroke="none" fill="black" fill-opacity="1"/>
 <path d="M 228.125 340 C 198.3125 345, 198.3125 355, 228.125 360" stroke-width="0.5" stroke="dimgray" stroke-linecap="round" fill="black" /><path d="M 228.125 380 C 198.3125 375, 198.3125 365, 228.125 360" stroke-width="0.5" stroke="dimgray" stroke-linecap="round" fill="black" /></g><text x="50%" y="440" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb)</text>
 <text x="50%" y="460" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
 <text x="990" y="470" font-size="0.5em" font-weight="bold" text-anchor="end" dominant-baseline="middle">SVGPencilAllRenderer</text>

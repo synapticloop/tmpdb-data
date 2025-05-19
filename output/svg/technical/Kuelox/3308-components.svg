@@ -33,8 +33,8 @@
 <line x1="308.75" y1="180" x2="308.75" y2="300" stroke="#cfcfcf" stroke-linecap="round"  stroke-width="1" />
 <line x1="456.25" y1="180" x2="456.25" y2="300" stroke="#cfcfcf" stroke-linecap="round"  stroke-width="1" />
 <line x1="793.75" y1="180" x2="793.75" y2="300" stroke="#cfcfcf" stroke-linecap="round"  stroke-width="1" />
-<line x1="611.25" y1="220" x2="611.25" y2="300" stroke="#cfcfcf" stroke-linecap="round"  stroke-width="1" />
-<line x1="806.25" y1="220" x2="806.25" y2="300" stroke="#cfcfcf" stroke-linecap="round"  stroke-width="1" />
+<line x1="636.25" y1="220" x2="636.25" y2="300" stroke="#cfcfcf" stroke-linecap="round"  stroke-width="1" />
+<line x1="831.25" y1="220" x2="831.25" y2="300" stroke="#cfcfcf" stroke-linecap="round"  stroke-width="1" />
 <line x1="821.25" y1="180" x2="821.25" y2="300" stroke="#cfcfcf" stroke-linecap="round"  stroke-width="1" />
 <line x1="841.25" y1="180" x2="841.25" y2="300" stroke="#cfcfcf" stroke-linecap="round"  stroke-width="1" />
 <line x1="888.75" y1="180" x2="888.75" y2="300" stroke="#cfcfcf" stroke-linecap="round"  stroke-width="1" />
@@ -60,10 +60,10 @@
 <line x1="793.75" y1="180" x2="821.25" y2="180" stroke="black" stroke-width="1" />
 <line x1="821.25" y1="169" x2="821.25" y2="191" stroke="black" stroke-width="1" />
 <text x="807.5" y="161" font-size="1.2em" transform="rotate(-90, 807.5, 161)" font-weight="bold" text-anchor="start" dominant-baseline="central" fill="black"><tspan x="807.5" dy="0">5.50 mm clip</tspan></text>
-<line x1="611.25" y1="209" x2="611.25" y2="231" stroke="black" stroke-width="1" />
-<line x1="611.25" y1="220" x2="806.25" y2="220" stroke="black" stroke-width="1" />
-<line x1="806.25" y1="209" x2="806.25" y2="231" stroke="black" stroke-width="1" />
-<text x="708.75" y="212" font-weight="bold" font-size="1.2em" text-anchor="middle" dominant-baseline="middle" fill="black"><tspan x="700.75" dy="0">39.00 mm</tspan><tspan x="700.75" dy="1em">clip (extra)</tspan></text>
+<line x1="636.25" y1="209" x2="636.25" y2="231" stroke="black" stroke-width="1" />
+<line x1="636.25" y1="220" x2="831.25" y2="220" stroke="black" stroke-width="1" />
+<line x1="831.25" y1="209" x2="831.25" y2="231" stroke="black" stroke-width="1" />
+<text x="733.75" y="212" font-weight="bold" font-size="1.2em" text-anchor="middle" dominant-baseline="middle" fill="black"><tspan x="725.75" dy="0">39.00 mm</tspan><tspan x="725.75" dy="1em">clip (extra)</tspan></text>
 <line x1="821.25" y1="169" x2="821.25" y2="191" stroke="black" stroke-width="1" />
 <line x1="821.25" y1="180" x2="841.25" y2="180" stroke="black" stroke-width="1" />
 <line x1="841.25" y1="169" x2="841.25" y2="191" stroke="black" stroke-width="1" />
@@ -87,17 +87,18 @@
 <path d="M456.25 280 L793.75 280 L793.75 320 L456.25 320 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
 <line x1="456.25" y1="300" x2="793.75" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="456.25" y1="300" x2="793.75" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
-<path d="M613.5 265.875 Q636.25 289.375 646.25 265.875 Z" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
-<line x1="611.25" y1="264.375" x2="793.75" y2="264.375" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
-<path d="M793.75 264.375 Q813.75 271.875 793.75 278.125" stroke-width="4" stroke="black" fill="none" stroke-linecap="round" />
+<path d="M638.5 265.875 Q661.25 289.375 671.25 265.875 Z" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
+<line x1="636.25" y1="264.375" x2="818.75" y2="264.375" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
+<path d="M818.75 264.375 Q838.75 271.875 818.75 278.125" stroke-width="4" stroke="black" fill="none" stroke-linecap="round" />
 <path d="M793.75 277.5 L821.25 277.5 L821.25 322.5 L793.75 322.5 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
-<path d="M613.5 265.875 Q636.25 288.375 646.25 265.875 Z" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
-<line x1="611.25" y1="264.375" x2="793.75" y2="264.375" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
-<path d="M793.75 264.375 Q813.75 271.875 793.75 278.125" stroke-width="3" stroke="white" fill="none" stroke-linecap="round" />
+<path d="M638.5 265.875 Q661.25 288.375 671.25 265.875 Z" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
+<line x1="636.25" y1="264.375" x2="818.75" y2="264.375" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
+<path d="M818.75 264.375 Q838.75 271.875 818.75 278.125" stroke-width="3" stroke="white" fill="none" stroke-linecap="round" />
 <path d="M821.25 280 L841.25 280 L841.25 320 L821.25 320 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
 <path d="M841.25 279.375 L888.75 279.375 L888.75 320.625 L841.25 320.625 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
 <path d="M841.25 279.375 L888.75 279.375 L888.75 320.625 L841.25 320.625 Z" stroke-width="1.0" stroke="black" fill="url(#diagonalHatch)"/>
-<path d="M888.75 280 L893.75 280 L893.75 320 L888.75 320 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
+<rect x="851.25" y="289.6875" width="27.5" height="20.625" rx="3" ry="3" stroke-width="1" stroke="black" fill="white"/>
+<text x="865" y="300" text-anchor="middle" dominant-baseline="central"><tspan stroke="dimgray" stroke-width="0.5" font-family="sans-serif" fill="black" textLength="{this.width * 5 - 24}" > HB</tspan></text><path d="M888.75 280 L893.75 280 L893.75 320 L888.75 320 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
 <path d="M893.75 280 L900 280 L900 320 L893.75 320 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
 <path d="M900 280 L906.25 280 L906.25 320 L900 320 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
 <path d="M906.25 286.25 L936.25 286.25 L936.25 313.75 L906.25 313.75 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />

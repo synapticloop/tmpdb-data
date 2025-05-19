@@ -1,6 +1,7 @@
 {
 	"brand": "Staedtler",
 	"model": "Mars Technico",
+	"model_number": "780c",
 	"skus": [ ],
 	"lead_size": "2.0",
 	"text": "STAEDTLER Mars technico",
@@ -41,12 +42,12 @@
 				{ "shape":"cylinder", "dimensions": [ 58.75, 7.75], "joined": true }
 			],
 			"material": "plastic",
-			"colours": [ "black" ]
+			"colours": [ "black", "blue" ]
 		},
 		{
 			"type": "clip",
 			"parts": [
-				{ "shape":"cylinder", "dimensions": [ 6.0, 8.75 ] }
+				{ "shape":"cylinder", "dimensions": [ 6.0, 8.75 ], "finish": "indicator-etched" }
 			],
 			"extras": [
 				{
@@ -70,7 +71,7 @@
 				{ "shape":"cylinder", "dimensions": [ 7.0, 7.75 ]}
 			],
 			"material": "plastic",
-			"colours": [ "black" ]
+			"colours": [ "black", "blue" ]
 		},
 		{
 			"type": "cap",

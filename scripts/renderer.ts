@@ -50,9 +50,10 @@ for (const pencilDirectory of pencilDirectories) {
 			// now go through the colours
 			for(let [ index, colourComponent ] of pencil.colourComponents.entries()) {
 				const pencilColourOutputFileName: string = pencilFileName + "-colour-" + colourComponent;
+				const pencilExplodedColourOutputFileName: string = pencilFileName + "-exploded-colour-" + colourComponent;
 
 				fileNumber = await renderSVGAndPNG(new SVGTechnicalRenderer(pencil), index, "technical", pencilDirectory, pencilColourOutputFileName, fileNumber);
-				fileNumber = await renderSVGAndPNG(new SVGTechnicalExplodedRenderer(pencil), index, "technical", pencilDirectory, pencilColourOutputFileName + "-exploded", fileNumber);
+				fileNumber = await renderSVGAndPNG(new SVGTechnicalExplodedRenderer(pencil), index, "technical", pencilDirectory, pencilExplodedColourOutputFileName, fileNumber);
 				fileNumber = await renderSVGAndPNG(new SVGPencil45Renderer(pencil), index, "pencil", pencilDirectory, pencilColourOutputFileName + "-45", fileNumber);
 				fileNumber = await renderSVGAndPNG(new SVGPencilRenderer(pencil), index, "pencil", pencilDirectory, pencilColourOutputFileName, fileNumber);
 			}

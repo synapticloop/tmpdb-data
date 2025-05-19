@@ -91,17 +91,18 @@
 <line x1="466.25" y1="220" x2="476.25" y2="230" stroke-linecap="round" stroke="#ffffff" stroke-width="2.0" />
 <line x1="466.25" y1="220" x2="476.25" y2="210" stroke-linecap="round" stroke="#0f0f0f" stroke-width="1.0" />
 <line x1="466.25" y1="220" x2="476.25" y2="230" stroke-linecap="round" stroke="#0f0f0f" stroke-width="1.0" />
-<path d="M613.5 285.875 Q636.25 309.375 646.25 285.875 Z" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
-<line x1="611.25" y1="284.375" x2="793.75" y2="284.375" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
-<path d="M793.75 284.375 Q813.75 291.875 793.75 298.125" stroke-width="4" stroke="black" fill="none" stroke-linecap="round" />
+<path d="M638.5 285.875 Q661.25 309.375 671.25 285.875 Z" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
+<line x1="636.25" y1="284.375" x2="818.75" y2="284.375" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
+<path d="M818.75 284.375 Q838.75 291.875 818.75 298.125" stroke-width="4" stroke="black" fill="none" stroke-linecap="round" />
 <path d="M793.75 297.5 L821.25 297.5 L821.25 342.5 L793.75 342.5 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
-<path d="M613.5 285.875 Q636.25 308.375 646.25 285.875 Z" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
-<line x1="611.25" y1="284.375" x2="793.75" y2="284.375" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
-<path d="M793.75 284.375 Q813.75 291.875 793.75 298.125" stroke-width="3" stroke="white" fill="none" stroke-linecap="round" />
+<path d="M638.5 285.875 Q661.25 308.375 671.25 285.875 Z" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
+<line x1="636.25" y1="284.375" x2="818.75" y2="284.375" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
+<path d="M818.75 284.375 Q838.75 291.875 818.75 298.125" stroke-width="3" stroke="white" fill="none" stroke-linecap="round" />
 <path d="M821.25 300 L841.25 300 L841.25 340 L821.25 340 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
 <path d="M841.25 299.375 L888.75 299.375 L888.75 340.625 L841.25 340.625 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
 <path d="M841.25 299.375 L888.75 299.375 L888.75 340.625 L841.25 340.625 Z" stroke-width="1.0" stroke="black" fill="url(#diagonalHatch)"/>
-<path d="M888.75 300 L893.75 300 L893.75 340 L888.75 340 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
+<rect x="851.25" y="309.6875" width="27.5" height="20.625" rx="3" ry="3" stroke-width="1" stroke="black" fill="white"/>
+<text x="865" y="320" text-anchor="middle" dominant-baseline="central"><tspan stroke="dimgray" stroke-width="0.5" font-family="sans-serif" fill="black" textLength="{this.width * 5 - 24}" > HB</tspan></text><path d="M888.75 300 L893.75 300 L893.75 340 L888.75 340 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
 <path d="M893.75 300 L900 300 L900 340 L893.75 340 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
 <path d="M900 300 L906.25 300 L906.25 340 L900 340 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
 <path d="M906.25 406.25 L936.25 406.25 L936.25 433.75 L906.25 433.75 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />

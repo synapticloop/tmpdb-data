@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="240">
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="360">
  <pattern id="diagonalHatch" patternUnits="userSpaceOnUse" width="8" height="8">
 <path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,8"/>
 <path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,8"/>
@@ -9,10 +9,10 @@
 <path stroke="dimgray" stroke-linecap="round" stroke-width="2" d="M 0,0 L 8,100"/>
 <path stroke="white" stroke-linecap="round" stroke-width="1" d="M 0,0 L 8,100"/>
 </pattern>
-<rect x="0" y="0" width="1000" height="240" fill="white" stroke="black" stroke-width="4" />
-<rect x="2" y="2" width="996" height="236" fill="white" stroke="dimgray" stroke-width="1" />
+<rect x="0" y="0" width="1000" height="360" fill="white" stroke="black" stroke-width="4" />
+<rect x="2" y="2" width="996" height="356" fill="white" stroke="dimgray" stroke-width="1" />
 <g transform="rotate(0 0 0)">
-<text x="30" y="50" font-size="2.0em" font-weight="bold"> Staedtler // Mars Technico </text>
+<text x="30" y="50" font-size="2.0em" font-weight="bold"> Staedtler // Mars Technico (Model #: 780c)</text>
 <path d="M124.375 113.125 L126.875 113.125 L126.875 126.875 L124.375 126.875 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
 <path d="M126.875 106.25 L173.125 102.5 L173.125 137.5 L126.875 133.75 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
 <path d="M173.125 101.25 L283.125 98.75 L283.125 141.25 L173.125 138.75 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
@@ -28,7 +28,7 @@
 <line x1="583.125" y1="86.625" x2="743.125" y2="86.625" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
 <line x1="743.125" y1="86.625" x2="750.625" y2="99.125" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
 <path d="M750.625 98.125 L780.625 98.125 L780.625 141.875 L750.625 141.875 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
-<line x1="614.375" y1="91.625" x2="598.125" y2="99.125" stroke-width="3" stroke="silver" fill="silver" stroke-linecap="round" />
+<text x="765.625" y="120" text-anchor="middle" dominant-baseline="central"><tspan stroke="dimgray" stroke-width="0.5" font-family="sans-serif" fill="black" textLength="{this.width * 5 - 12}" > HB</tspan></text><line x1="614.375" y1="91.625" x2="598.125" y2="99.125" stroke-width="3" stroke="silver" fill="silver" stroke-linecap="round" />
 <line x1="598.125" y1="99.125" x2="583.125" y2="91.625" stroke-width="3" stroke="silver" fill="silver" stroke-linecap="round" />
 <path d="M583.125 91.625 Q575.625 89.125 583.125 86.625" stroke-width="3" stroke="silver" fill="none" stroke-linecap="round" />
 <line x1="583.125" y1="86.625" x2="743.125" y2="86.625" stroke-width="3" stroke="silver" fill="silver" stroke-linecap="round" />
@@ -37,7 +37,31 @@
 <path d="M815.625 105.625 L875.625 105.625 L875.625 134.375 L815.625 134.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
 <path d="M 356.875 100.625 C 489.7875 105.46875, 489.7875 115.15625, 356.875 120" stroke-width="0.5" stroke="dimgray" stroke-linecap="round" fill="black" />
 <path d="M 356.875 139.375 C 489.7875 134.53125, 489.7875 124.84375, 356.875 120" stroke-width="0.5" stroke="dimgray" stroke-linecap="round" fill="black" />
-</g><text x="50%" y="200" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb)</text>
-<text x="50%" y="220" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
-<text x="990" y="230" font-size="0.5em" font-weight="bold" text-anchor="end" dominant-baseline="middle">SVGPencilAllRenderer</text>
+<path d="M124.375 233.125 L126.875 233.125 L126.875 246.875 L124.375 246.875 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
+<path d="M126.875 226.25 L173.125 222.5 L173.125 257.5 L126.875 253.75 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
+<path d="M173.125 221.25 L283.125 218.75 L283.125 261.25 L173.125 258.75 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
+<path d="M173.125 221.25 L283.125 218.75 L283.125 261.25 L173.125 258.75 Z" stroke-width="1.0" stroke="black" fill="url(#diagonalHatch)"/>
+<path d="M283.125 220.625 L456.875 220.625 L456.875 259.375 L283.125 259.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="blue" fill-opacity="1" />
+<line x1="283.125" y1="240" x2="456.875" y2="240" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
+<line x1="283.125" y1="240" x2="456.875" y2="240" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
+<path d="M456.875 220.625 L750.625 220.625 L750.625 259.375 L456.875 259.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="blue" fill-opacity="1" />
+<line x1="456.875" y1="220.875" x2="456.875" y2="259.125" stroke="blue" stroke-width="3" />
+<line x1="614.375" y1="211.625" x2="598.125" y2="219.125" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
+<line x1="598.125" y1="219.125" x2="583.125" y2="211.625" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
+<path d="M583.125 211.625 Q575.625 209.125 583.125 206.625" stroke-width="4" stroke="black" fill="none" stroke-linecap="round" />
+<line x1="583.125" y1="206.625" x2="743.125" y2="206.625" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
+<line x1="743.125" y1="206.625" x2="750.625" y2="219.125" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
+<path d="M750.625 218.125 L780.625 218.125 L780.625 261.875 L750.625 261.875 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
+<text x="765.625" y="240" text-anchor="middle" dominant-baseline="central"><tspan stroke="dimgray" stroke-width="0.5" font-family="sans-serif" fill="black" textLength="{this.width * 5 - 12}" > HB</tspan></text><line x1="614.375" y1="211.625" x2="598.125" y2="219.125" stroke-width="3" stroke="silver" fill="silver" stroke-linecap="round" />
+<line x1="598.125" y1="219.125" x2="583.125" y2="211.625" stroke-width="3" stroke="silver" fill="silver" stroke-linecap="round" />
+<path d="M583.125 211.625 Q575.625 209.125 583.125 206.625" stroke-width="3" stroke="silver" fill="none" stroke-linecap="round" />
+<line x1="583.125" y1="206.625" x2="743.125" y2="206.625" stroke-width="3" stroke="silver" fill="silver" stroke-linecap="round" />
+<line x1="743.125" y1="206.625" x2="750.625" y2="219.125" stroke-width="3" stroke="silver" fill="silver" stroke-linecap="round" />
+<path d="M780.625 220.625 L815.625 220.625 L815.625 259.375 L780.625 259.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="blue" fill-opacity="1" />
+<path d="M815.625 225.625 L875.625 225.625 L875.625 254.375 L815.625 254.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
+<path d="M 356.875 220.625 C 489.7875 225.46875, 489.7875 235.15625, 356.875 240" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="blue" />
+<path d="M 356.875 259.375 C 489.7875 254.53125, 489.7875 244.84375, 356.875 240" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="blue" />
+</g><text x="50%" y="320" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb)</text>
+<text x="50%" y="340" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
+<text x="990" y="350" font-size="0.5em" font-weight="bold" text-anchor="end" dominant-baseline="middle">SVGPencilAllRenderer</text>
 </svg>

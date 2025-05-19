@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="240">
+ <pattern id="diagonalHatch" patternUnits="userSpaceOnUse" width="8" height="8">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,8"/>
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,8"/>
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,0" />
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,0" />
+</pattern>
+<pattern id="spring" patternUnits="userSpaceOnUse" width="8" height="100">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="2" d="M 0,0 L 8,100"/>
+<path stroke="white" stroke-linecap="round" stroke-width="1" d="M 0,0 L 8,100"/>
+</pattern>
+<rect x="0" y="0" width="1000" height="240" fill="white" stroke="black" stroke-width="4" />
+<rect x="2" y="2" width="996" height="236" fill="white" stroke="dimgray" stroke-width="1" />
+<g transform="rotate(0 0 0)">
+<text x="30" y="50" font-size="2.0em" font-weight="bold"> Pacific Arc // 1305 </text>
+<path d="M130 111.875 L141.25 110 L141.25 130 L130 128.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1" />
+<path d="M141.25 106.875 L210 99.375 L210 140.625 L141.25 133.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1" />
+<path d="M210 99.375 L357.5 99.375 L357.5 140.625 L210 140.625 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1" />
+<path d="M210 99.375 L357.5 99.375 L357.5 140.625 L210 140.625 Z" stroke-width="1.0" stroke="black" fill="url(#diagonalHatch)"/>
+<path d="M357.5 100 L695 100 L695 140 L357.5 140 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1" />
+<line x1="357.5" y1="120" x2="695" y2="120" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
+<line x1="357.5" y1="120" x2="695" y2="120" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
+<path d="M539.75 85.875 Q562.5 109.375 572.5 85.875 Z" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
+<line x1="537.5" y1="84.375" x2="720" y2="84.375" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
+<path d="M720 84.375 Q740 91.875 720 98.125" stroke-width="4" stroke="black" fill="none" stroke-linecap="round" />
+<path d="M695 97.5 L722.5 97.5 L722.5 142.5 L695 142.5 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1" />
+<path d="M539.75 85.875 Q562.5 108.375 572.5 85.875 Z" stroke-width="3" stroke="#b4b8b9" fill="#b4b8b9" stroke-linecap="round" />
+<line x1="537.5" y1="84.375" x2="720" y2="84.375" stroke-width="3" stroke="#b4b8b9" fill="#b4b8b9" stroke-linecap="round" />
+<path d="M720 84.375 Q740 91.875 720 98.125" stroke-width="3" stroke="#b4b8b9" fill="none" stroke-linecap="round" />
+<path d="M722.5 100 L742.5 100 L742.5 140 L722.5 140 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1" />
+<path d="M742.5 99.375 L790 99.375 L790 140.625 L742.5 140.625 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1" />
+<path d="M742.5 99.375 L790 99.375 L790 140.625 L742.5 140.625 Z" stroke-width="1.0" stroke="black" fill="url(#diagonalHatch)"/>
+<rect x="752.5" y="109.6875" width="27.5" height="20.625" rx="3" ry="3" stroke-width="1" stroke="black" fill="#b4b8b9"/>
+<text x="766.25" y="120" text-anchor="middle" dominant-baseline="central"><tspan stroke="dimgray" stroke-width="0.5" font-family="sans-serif" fill="black" textLength="{this.width * 5 - 24}" > HB</tspan></text><path d="M790 100 L805 100 L805 140 L790 140 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1" />
+<path d="M805 106.25 L835 106.25 L835 133.75 L805 133.75 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1" />
+<path d="M835 107.5 L838.75 107.5 L838.75 132.5 L835 132.5 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1" />
+<path d="M838.75 106.25 L846.25 106.25 L846.25 133.75 L838.75 133.75 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1" />
+<path d="M846.25 107.5 L850 107.5 L850 132.5 L846.25 132.5 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1" />
+<path d="M850 106.25 L857.5 106.25 L857.5 133.75 L850 133.75 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1" />
+<path d="M857.5 107.5 L861.25 107.5 L861.25 132.5 L857.5 132.5 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1" />
+<path d="M861.25 106.25 L870 106.25 L870 133.75 L861.25 133.75 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1" />
+</g><text x="50%" y="200" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb)</text>
+<text x="50%" y="220" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
+<text x="990" y="230" font-size="0.5em" font-weight="bold" text-anchor="end" dominant-baseline="middle">SVGPencilAllRenderer</text>
+</svg>
