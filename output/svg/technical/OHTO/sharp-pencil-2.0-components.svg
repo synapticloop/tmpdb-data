@@ -59,13 +59,13 @@
 <line x1="916.25" y1="180" x2="941.25" y2="180" stroke="black" stroke-width="1" />
 <line x1="941.25" y1="169" x2="941.25" y2="191" stroke="black" stroke-width="1" />
 <text x="928.75" y="161" font-size="1.2em" transform="rotate(-90, 928.75, 161)" font-weight="bold" text-anchor="start" dominant-baseline="central" fill="black"><tspan x="928.75" dy="0">5.00 mm eraser</tspan></text>
-<rect x="258.75" y="291.875" width="12.5" height="16.25" rx="0" ry="0" stroke-width="0.5" stroke="black" fill="white" fill-opacity="1"/>
+<path d="M258.75 291.875 L271.25 291.875 L271.25 308.125 L258.75 308.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
 <path d="M271.25 291.875 L296.25 281.25 L296.25 318.75 L271.25 308.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
 <path d="M296.25 280 L321.25 272.5 L321.25 327.5 L296.25 320 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
-<rect x="321.25" y="272.5" width="490" height="55" rx="0" ry="0" stroke-width="0.5" stroke="black" fill="white" fill-opacity="1"/>
+<path d="M321.25 272.5 L811.25 272.5 L811.25 327.5 L321.25 327.5 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
 <line x1="321.25" y1="300" x2="811.25" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="321.25" y1="300" x2="811.25" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
-<rect x="811.25" y="274.375" width="70" height="51.25" rx="0" ry="0" stroke-width="0.5" stroke="black" fill="white" fill-opacity="1"/>
+<path d="M811.25 274.375 L881.25 274.375 L881.25 325.625 L811.25 325.625 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
 <line x1="819.3269230769231" y1="275.375" x2="819.3269230769231" y2="324.625" stroke-width="1" stroke="gray" />
 <line x1="824.7115384615385" y1="275.375" x2="824.7115384615385" y2="324.625" stroke-width="1" stroke="gray" />
 <line x1="830.0961538461538" y1="275.375" x2="830.0961538461538" y2="324.625" stroke-width="1" stroke="gray" />
@@ -77,11 +77,9 @@
 <line x1="867.7884615384615" y1="275.375" x2="867.7884615384615" y2="324.625" stroke-width="1" stroke="gray" />
 <line x1="873.1730769230769" y1="275.375" x2="873.1730769230769" y2="324.625" stroke-width="1" stroke="gray" />
 <circle r="4" cx="826.25" cy="287.1875" stroke="black" stroke-width="0.5" fill="dimgray" fill-opacity="1"/>
-<rect x="881.25" y="276.25" width="25" height="47.5" rx="0" ry="0" stroke-width="0.5" stroke="black" fill="white" fill-opacity="1"/>
-<rect x="906.25" y="275" width="10" height="50" rx="0" ry="0" stroke-width="0.5" stroke="black" fill="white" fill-opacity="1"/>
-<rect x="916.25" y="276.875" width="25" height="46.25" rx="0" ry="0" stroke-width="0.5" stroke="black" fill="white" fill-opacity="1"/>
-<rect x="320.95" y="272.75" width="12.7" height="54.5" rx="0" ry="0" stroke-width="0.5" stroke="none" fill="white" fill-opacity="1"/>
-<rect x="333.45" y="272.75" width="0.6" height="54.5" rx="0" ry="0" stroke-width="0.5" stroke="none" fill="white" fill-opacity="1"/>
+<path d="M881.25 276.25 L906.25 276.25 L906.25 323.75 L881.25 323.75 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
+<path d="M906.25 275 L916.25 275 L916.25 325 L906.25 325 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
+<path d="M916.25 276.875 L941.25 276.875 L941.25 323.125 L916.25 323.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
 <path d="M 333.75 272.5 C 317.1875 279.375, 317.1875 293.125, 333.75 300" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="white" /><path d="M 333.75 327.5 C 317.1875 320.625, 317.1875 306.875, 333.75 300" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="white" /></g><text x="50%" y="580" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb) // Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
 <text x="1190" y="590" font-size="0.5em" font-weight="bold" text-anchor="end" dominant-baseline="middle">SVGTechnicalComponentRenderer</text>
 </svg>

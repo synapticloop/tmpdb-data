@@ -10,7 +10,6 @@ export class Component {
 	// the colours of this component
 	colours:string[] = [ "white" ];
 	// the type of this component
-	// TODO should be shape...
 	type:string = "unknown";
 
 	// the length of the component - which is when you are looking at it

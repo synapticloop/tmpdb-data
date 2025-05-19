@@ -13,28 +13,30 @@
 <rect x="2" y="2" width="1196" height="324.75" fill="white" stroke="dimgray" stroke-width="1" />
 <g transform="rotate(0 0 0)">
 <text x="30" y="50" font-size="2.0em" font-weight="bold"> Staedtler // Mars Technico </text>
-<rect x="224.375" y="113.125" width="2.5" height="13.75" rx="0" ry="0" stroke-width="0.5" stroke="black" fill="silver" fill-opacity="1"/>
+<path d="M224.375 113.125 L226.875 113.125 L226.875 126.875 L224.375 126.875 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
 <path d="M226.875 106.25 L273.125 102.5 L273.125 137.5 L226.875 133.75 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
 <path d="M273.125 101.25 L383.125 98.75 L383.125 141.25 L273.125 138.75 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
 <path d="M273.125 101.25 L383.125 98.75 L383.125 141.25 L273.125 138.75 Z" stroke-width="1.0" stroke="black" fill="url(#diagonalHatch)"/>
-<rect x="383.125" y="100.625" width="173.75" height="38.75" rx="0" ry="0" stroke-width="0.5" stroke="dimgray" fill="black" fill-opacity="1"/>
+<path d="M383.125 100.625 L556.875 100.625 L556.875 139.375 L383.125 139.375 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1" />
 <line x1="383.125" y1="120" x2="556.875" y2="120" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="383.125" y1="120" x2="556.875" y2="120" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
-<rect x="556.875" y="100.625" width="293.75" height="38.75" rx="0" ry="0" stroke-width="0.5" stroke="dimgray" fill="black" fill-opacity="1"/>
+<path d="M 456.875 100.625 C 589.7875 105.46875, 589.7875 115.15625, 456.875 120" stroke-width="0.5" stroke="dimgray" stroke-linecap="round" fill="black" />
+<path d="M 456.875 139.375 C 589.7875 134.53125, 589.7875 124.84375, 456.875 120" stroke-width="0.5" stroke="dimgray" stroke-linecap="round" fill="black" />
+<path d="M556.875 100.625 L850.625 100.625 L850.625 139.375 L556.875 139.375 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1" />
 <line x1="556.875" y1="100.875" x2="556.875" y2="139.125" stroke="black" stroke-width="3" />
 <line x1="714.375" y1="91.625" x2="698.125" y2="99.125" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
 <line x1="698.125" y1="99.125" x2="683.125" y2="91.625" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
 <path d="M683.125 91.625 Q675.625 89.125 683.125 86.625" stroke-width="4" stroke="black" fill="none" stroke-linecap="round" />
 <line x1="683.125" y1="86.625" x2="843.125" y2="86.625" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
 <line x1="843.125" y1="86.625" x2="850.625" y2="99.125" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
-<rect x="850.625" y="98.125" width="30" height="43.75" rx="0" ry="0" stroke-width="0.5" stroke="black" fill="silver" fill-opacity="1"/>
+<path d="M850.625 98.125 L880.625 98.125 L880.625 141.875 L850.625 141.875 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
 <line x1="714.375" y1="91.625" x2="698.125" y2="99.125" stroke-width="3" stroke="silver" fill="silver" stroke-linecap="round" />
 <line x1="698.125" y1="99.125" x2="683.125" y2="91.625" stroke-width="3" stroke="silver" fill="silver" stroke-linecap="round" />
 <path d="M683.125 91.625 Q675.625 89.125 683.125 86.625" stroke-width="3" stroke="silver" fill="none" stroke-linecap="round" />
 <line x1="683.125" y1="86.625" x2="843.125" y2="86.625" stroke-width="3" stroke="silver" fill="silver" stroke-linecap="round" />
 <line x1="843.125" y1="86.625" x2="850.625" y2="99.125" stroke-width="3" stroke="silver" fill="silver" stroke-linecap="round" />
-<rect x="880.625" y="100.625" width="35" height="38.75" rx="0" ry="0" stroke-width="0.5" stroke="dimgray" fill="black" fill-opacity="1"/>
-<rect x="915.625" y="205.625" width="60" height="28.75" rx="0" ry="0" stroke-width="0.5" stroke="black" fill="silver" fill-opacity="1"/>
+<path d="M880.625 100.625 L915.625 100.625 L915.625 139.375 L880.625 139.375 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1" />
+<path d="M915.625 205.625 L975.625 205.625 L975.625 234.375 L915.625 234.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
 <line x1="823.125" y1="220" x2="853.125" y2="220" stroke-linecap="round" stroke="white"  stroke-width="2.0" />
 <line x1="823.125" y1="220" x2="853.125" y2="220" stroke-linecap="round" stroke="#0f0f0f"  stroke-width="1.0" />
 <line x1="833.125" y1="220" x2="843.125" y2="210" stroke-linecap="round" stroke="#ffffff" stroke-width="2.0" />
@@ -43,8 +45,8 @@
 <line x1="833.125" y1="220" x2="843.125" y2="230" stroke-linecap="round" stroke="#0f0f0f" stroke-width="1.0" />
 <line x1="823.125" y1="170" x2="823.125" y2="220" stroke="white" stroke-linecap="round"  stroke-width="2.0" />
 <line x1="823.125" y1="170" x2="823.125" y2="220" stroke="#0f0f0f" stroke-linecap="round"  stroke-width="1.0" />
-<rect x="863.125" y="205.625" width="16.25" height="28.75" rx="0" ry="0" stroke-width="0.5" stroke="black" fill="silver" fill-opacity="1"/>
-<rect x="879.375" y="205.625" width="36.25" height="28.75" rx="0" ry="0" stroke-width="0.5" stroke="black" fill="silver" fill-opacity="1"/>
+<path d="M863.125 205.625 L879.375 205.625 L879.375 234.375 L863.125 234.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
+<path d="M879.375 205.625 L915.625 205.625 L915.625 234.375 L879.375 234.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
 <line x1="823.125" y1="170" x2="955.625" y2="170" stroke-linecap="round" stroke="white"  stroke-width="2.0" />
 <line x1="823.125" y1="170" x2="955.625" y2="170" stroke-linecap="round" stroke="#0f0f0f"  stroke-width="1.0" />
 <line x1="915.625" y1="180" x2="915.625" y2="260" stroke="white" stroke-linecap="round"  stroke-width="1.0" />
@@ -56,8 +58,6 @@
 <line x1="925.625" y1="120" x2="935.625" y2="130" stroke-linecap="round" stroke="#ffffff" stroke-width="2.0" />
 <line x1="925.625" y1="120" x2="935.625" y2="110" stroke-linecap="round" stroke="#0f0f0f" stroke-width="1.0" />
 <line x1="925.625" y1="120" x2="935.625" y2="130" stroke-linecap="round" stroke="#0f0f0f" stroke-width="1.0" />
-<path d="M 456.875 100.625 C 589.7875 105.46875, 589.7875 115.15625, 456.875 120" stroke-width="0.5" stroke="dimgray" stroke-linecap="round" fill="black" />
-<path d="M 456.875 139.375 C 589.7875 134.53125, 589.7875 124.84375, 456.875 120" stroke-width="0.5" stroke="dimgray" stroke-linecap="round" fill="black" />
 </g><text x="50%" y="308.75" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb) // Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
 <text x="1190" y="318.75" font-size="0.5em" font-weight="bold" text-anchor="end" dominant-baseline="middle">SVGTechnicalExplodedRenderer</text>
 </svg>

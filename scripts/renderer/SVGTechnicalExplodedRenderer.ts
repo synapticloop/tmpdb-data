@@ -235,8 +235,14 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 
 				for (let part of component.parts) {
 					svgString += super.renderPart(startX, midY, component, part, colourIndex, colour);
+
+					colour = this.getMappedColour(part.colours, colourIndex, colour.colour);
+					// TODO - why is the taper off
+					svgString += super.renderTaper(startX, midY, part, colourIndex, colour.colour);
+
 					startX += part.length * 5;
 					partLength += part.length * 5;
+
 
 					for (let internalEnd of component.internalEnd) {
 						colour = this.getMappedColour(internalEnd.colours, colourIndex, colour.colour);
@@ -328,15 +334,6 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 			if((index !== 0 && component.hasInternalStart)) {
 				midY += 120;
 			}
-
-
-			for(let part of component.parts) {
-				colour = this.getMappedColour(part.colours, colourIndex, colour.colour);
-				// TODO - why is the taper off
-				svgString += super.renderTaper(startX, midY, part, colourIndex, colour.colour);
-				startX += part.length * 5;
-			}
-
 		}
 
 		return(svgString);

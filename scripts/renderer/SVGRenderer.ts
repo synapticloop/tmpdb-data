@@ -247,8 +247,8 @@ export abstract class SVGRenderer {
 			switch (part.shape) {
 				case "hexagonal":
 					// rectangle first
-					svgString += rectangle(startX - 0.3, midY - part.endHeight / 2 * 5 + 0.25, xOffsetTaperStart * 5 + 0.2, part.startHeight * 5 - 0.5, "none", backgroundColour);
-					svgString += rectangle(startX + xOffsetTaperStart*5 - 0.3, midY - part.endHeight / 2 * 5 + 0.25, 0.6, part.startHeight * 5 - 0.5, "none", new OpacityColour({}, colour));
+					// svgString += rectangle(startX - 0.3, midY - part.endHeight / 2 * 5 + 0.25, xOffsetTaperStart * 5 + 0.2, part.startHeight * 5 - 0.5, "none", backgroundColour);
+					// svgString += rectangle(startX + xOffsetTaperStart*5 - 0.3, midY - part.endHeight / 2 * 5 + 0.25, 0.6, part.startHeight * 5 - 0.5, "none", new OpacityColour({}, colour));
 					svgString += `<path d="M ${startX + xOffsetTaperStart * 5} ${midY - part.endHeight / 2 * 5} ` +
 						`C ${startX + xOffsetTaperStart * (xOffsetTaperStartScale * -5)} ${midY - part.endHeight / 2 * 5 * 3 / 4}, ` +
 						`${startX + xOffsetTaperStart * (xOffsetTaperStartScale * -5)} ${midY - part.endHeight / 2 * 5 / 4}, ` +
@@ -471,21 +471,21 @@ export abstract class SVGRenderer {
 			case "cylinder":
 			case "hexagonal":
 			case "octagonal":
-				svgString += rectangle(
-					startX + part.internalOffset * 5,
-					midY - (part.endHeight / 2 * 5),
-					part.length * 5,
-					part.startHeight * 5,
-					strokeColour,
-					opaqueColour);
+				// svgString += rectangle(
+				// 	startX + part.internalOffset * 5,
+				// 	midY - (part.endHeight / 2 * 5),
+				// 	part.length * 5,
+				// 	part.startHeight * 5,
+				// 	strokeColour,
+				// 	opaqueColour);
 
-				if(part.joined) {
-					svgString += lineJoined(startX + part.internalOffset * 5,
-						midY - (part.endHeight / 2 * 5) + 0.25,
-						part.startHeight * 5 - 0.5, "3", opaqueColour.colour);
-				}
+				// if(part.joined) {
+				// 	svgString += lineJoined(startX + part.internalOffset * 5,
+				// 		midY - (part.endHeight / 2 * 5) + 0.25,
+				// 		part.startHeight * 5 - 0.5, "3", opaqueColour.colour);
+				// }
 
-				break;
+				// break;
 			case "cone":
 				svgString += `<path d="M${startX + part.internalOffset * 5} ` +
 					`${midY - (part.startHeight / 2 * 5)} ` +
@@ -493,6 +493,13 @@ export abstract class SVGRenderer {
 					`L${startX + part.internalOffset * 5 + part.length * 5} ${midY + (part.endHeight / 2 * 5)} ` +
 					`L${startX + part.internalOffset * 5} ${midY + (part.startHeight / 2 * 5)} Z" ` +
 					`stroke-width="0.5" stroke="${strokeColour}" stroke-linejoin="round" fill="${opaqueColour.colour}" fill-opacity="${opaqueColour.opacity}" />\n`
+
+				if(part.joined) {
+					svgString += lineJoined(startX + part.internalOffset * 5,
+						midY - (part.endHeight / 2 * 5) + 0.25,
+						part.startHeight * 5 - 0.5, "3", opaqueColour.colour);
+				}
+
 				break;
 			case "convex":
 				let offsetX = part.length * 5;
@@ -613,6 +620,12 @@ export abstract class SVGRenderer {
 							`HB` +
 							`</tspan>` +
 							`</text>`;
+					break;
+				case "lined":
+					for (let i:number = 0; i < part.startHeight * 5/2 - 1; i++) {
+						svgString += `<line x1="${startX + part.internalOffset * 5 + 1}" y1="${midY - (part.startHeight / 2 * 5) + i * 2 + 1}" ` +
+							`x2="${startX + (part.internalOffset + part.length) * 5  - 1}" y2="${midY - (part.startHeight / 2 * 5) + i * 2 + 1}" stroke="dimgray" stroke-linecap="round" stroke-width="1" />\n`;
+					}
 					break;
 			}
 		}
