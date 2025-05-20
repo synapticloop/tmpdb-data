@@ -1,12 +1,22 @@
 {
 	"brand": "Pacific Arc",
-	"model": "1305",
+	"model_name": "TECH PRO",
+	"model_number": "H-1305",
+	"skus": [ "H-1305BLK", "H-1305BLU", "H-1304GRN", "H-1305RED", "H-1305BRN"],
 	"lead_size": "2.0",
 	"text": "PACIFIC ARC H-1305",
 	"colour_component": "body",
+	"accurate": true,
+	"features": [
+		{ "type": "sharpener", "location":  "Inside cap"}
+	],
 	"colour_map": {
 		"silver": "#b4b8b9",
-		"brass": "#e1c16e"
+		"brass": "#e1c16e",
+		"brown": "#3f3533",
+		"blue": "#1d528a",
+		"green": "#404f4c",
+		"red": "#be3f39"
 	},
 	"front": [
 		{ "shape": "cylinder", "dimensions": [ 2.0, 10.0 ], "fill":  "black" }
@@ -54,7 +64,7 @@
 				{ "shape": "cylinder", "dimensions": [ 5.75, 6.5 ], "finish": "threaded" }
 			],
 			"material": "plastic",
-			"colours": [ "black" ]
+			"colours": [ "black", "blue", "green", "red", "brown" ]
 		},
 		{
 			"type": "clip",

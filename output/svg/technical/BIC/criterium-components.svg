@@ -26,7 +26,7 @@
 <line x1="580" y1="500" x2="620" y2="500" stroke-linecap="round" stroke="#000000"  stroke-width="1" />
 <line x1="600" y1="480" x2="600" y2="520" stroke="#000000" stroke-linecap="round"  stroke-width="1" />
 <circle r="10" cx="600" cy="500" fill="white" fill-opacity="0" stroke="#000000" stroke-width="1"  />
-<text x="30" y="50" font-size="2.0em" font-weight="bold"> BIC // Criterium </text>
+<text x="30" y="50" font-size="2.0em" font-weight="bold"> BIC //  </text>
 <line x1="245.625" y1="189.5" x2="245.625" y2="300" stroke="#cfcfcf" stroke-linecap="round"  stroke-width="1" />
 <line x1="245.625" y1="180" x2="245.625" y2="300" stroke="#cfcfcf" stroke-linecap="round"  stroke-width="1" />
 <line x1="256.875" y1="180" x2="256.875" y2="300" stroke="#cfcfcf" stroke-linecap="round"  stroke-width="1" />
@@ -177,23 +177,24 @@
 <line x1="854.375" y1="300" x2="910.625" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
 <path d="M910.625 283.75 L943.125 283.75 L943.125 316.25 L910.625 316.25 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
 <path d="M943.125 285 L948.125 285 L948.125 315 L943.125 315 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
-<path d="M948.125 283.75 L954.375 283.75 L954.375 316.25 L948.125 316.25 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
-<line x1="949.125" y1="284.75" x2="953.375" y2="284.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="949.125" y1="286.75" x2="953.375" y2="286.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="949.125" y1="288.75" x2="953.375" y2="288.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="949.125" y1="290.75" x2="953.375" y2="290.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="949.125" y1="292.75" x2="953.375" y2="292.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="949.125" y1="294.75" x2="953.375" y2="294.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="949.125" y1="296.75" x2="953.375" y2="296.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="949.125" y1="298.75" x2="953.375" y2="298.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="949.125" y1="300.75" x2="953.375" y2="300.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="949.125" y1="302.75" x2="953.375" y2="302.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="949.125" y1="304.75" x2="953.375" y2="304.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="949.125" y1="306.75" x2="953.375" y2="306.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="949.125" y1="308.75" x2="953.375" y2="308.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="949.125" y1="310.75" x2="953.375" y2="310.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="949.125" y1="312.75" x2="953.375" y2="312.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="949.125" y1="314.75" x2="953.375" y2="314.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
+<path d="M948.125 283.75 L953.125 283.75 L953.125 316.25 L948.125 316.25 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
+<line x1="949.125" y1="284.75" x2="952.125" y2="284.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
+<line x1="949.125" y1="286.75" x2="952.125" y2="286.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
+<line x1="949.125" y1="288.75" x2="952.125" y2="288.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
+<line x1="949.125" y1="290.75" x2="952.125" y2="290.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
+<line x1="949.125" y1="292.75" x2="952.125" y2="292.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
+<line x1="949.125" y1="294.75" x2="952.125" y2="294.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
+<line x1="949.125" y1="296.75" x2="952.125" y2="296.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
+<line x1="949.125" y1="298.75" x2="952.125" y2="298.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
+<line x1="949.125" y1="300.75" x2="952.125" y2="300.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
+<line x1="949.125" y1="302.75" x2="952.125" y2="302.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
+<line x1="949.125" y1="304.75" x2="952.125" y2="304.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
+<line x1="949.125" y1="306.75" x2="952.125" y2="306.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
+<line x1="949.125" y1="308.75" x2="952.125" y2="308.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
+<line x1="949.125" y1="310.75" x2="952.125" y2="310.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
+<line x1="949.125" y1="312.75" x2="952.125" y2="312.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
+<line x1="949.125" y1="314.75" x2="952.125" y2="314.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
+<path d="M953.125 289.375 L954.375 289.375 L954.375 310.625 L953.125 310.625 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
 <rect x="305.625" y="280.25" width="22" height="38.25" rx="0" ry="0" stroke-width="0.5" stroke="none" fill="white" fill-opacity="1"/>
 <path d="M 328.125 280 C 298.3125 285, 298.3125 295, 328.125 300" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="white" /><path d="M 328.125 320 C 298.3125 315, 298.3125 305, 328.125 300" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="white" /></g><text x="50%" y="580" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb) // Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
 <text x="1190" y="590" font-size="0.5em" font-weight="bold" text-anchor="end" dominant-baseline="middle">SVGTechnicalComponentRenderer</text>

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000">
+ <pattern id="diagonalHatch" patternUnits="userSpaceOnUse" width="8" height="8">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,8"/>
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,8"/>
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,0" />
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,0" />
+</pattern>
+<pattern id="spring" patternUnits="userSpaceOnUse" width="8" height="100">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="2" d="M 0,0 L 8,100"/>
+<path stroke="white" stroke-linecap="round" stroke-width="1" d="M 0,0 L 8,100"/>
+</pattern>
+<rect x="0" y="0" width="1000" height="1000" fill="white" stroke="black" stroke-width="4" />
+<rect x="2" y="2" width="996" height="996" fill="white" stroke="dimgray" stroke-width="1" />
+<g transform="rotate(-45 500 500)">
+<path d="M102.5 491.25 L121.25 491.25 L121.25 508.75 L102.5 508.75 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1" />
+<path d="M121.25 487.5 L153.75 481.25 L153.75 518.75 L121.25 512.5 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1" />
+<path d="M153.75 481.25 L173.75 481.25 L173.75 518.75 L153.75 518.75 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1" />
+<path d="M173.75 480 L190 480 L190 520 L173.75 520 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1" />
+<path d="M190 478.125 L202.5 478.125 L202.5 521.875 L190 521.875 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1" />
+<path d="M202.5 475 L348.75 475 L348.75 525 L202.5 525 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
+<path d="M348.75 476.25 L385 476.25 L385 523.75 L348.75 523.75 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="grey" fill-opacity="1" />
+<rect x="358.75" y="488.125" width="16.25" height="23.75" rx="3" ry="3" stroke-width="1" stroke="black" fill="grey"/>
+<text x="366.875" y="500" text-anchor="middle" dominant-baseline="central"><tspan stroke="dimgray" stroke-width="0.5" font-family="sans-serif" fill="black" textLength="{this.width * 5 - 24}" > HB</tspan></text><path d="M385 480 L722.5 480 L722.5 520 L385 520 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="brown" fill-opacity="1" />
+<line x1="385" y1="500" x2="722.5" y2="500" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
+<line x1="385" y1="500" x2="722.5" y2="500" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
+<path d="M567.25 465.875 Q590 489.375 600 465.875 Z" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
+<line x1="565" y1="464.375" x2="747.5" y2="464.375" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
+<path d="M747.5 464.375 Q767.5 471.875 747.5 478.125" stroke-width="4" stroke="black" fill="none" stroke-linecap="round" />
+<path d="M722.5 477.5 L750 477.5 L750 522.5 L722.5 522.5 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1" />
+<path d="M567.25 465.875 Q590 488.375 600 465.875 Z" stroke-width="3" stroke="#b4b8b9" fill="#b4b8b9" stroke-linecap="round" />
+<line x1="565" y1="464.375" x2="747.5" y2="464.375" stroke-width="3" stroke="#b4b8b9" fill="#b4b8b9" stroke-linecap="round" />
+<path d="M747.5 464.375 Q767.5 471.875 747.5 478.125" stroke-width="3" stroke="#b4b8b9" fill="none" stroke-linecap="round" />
+<path d="M750 480 L770 480 L770 520 L750 520 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1" />
+<path d="M770 479.375 L817.5 479.375 L817.5 520.625 L770 520.625 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1" />
+<path d="M770 479.375 L817.5 479.375 L817.5 520.625 L770 520.625 Z" stroke-width="1.0" stroke="black" fill="url(#diagonalHatch)"/>
+<rect x="780" y="489.6875" width="27.5" height="20.625" rx="3" ry="3" stroke-width="1" stroke="black" fill="#b4b8b9"/>
+<text x="793.75" y="500" text-anchor="middle" dominant-baseline="central"><tspan stroke="dimgray" stroke-width="0.5" font-family="sans-serif" fill="black" textLength="{this.width * 5 - 24}" > HB</tspan></text><path d="M817.5 480 L832.5 480 L832.5 520 L817.5 520 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1" />
+<path d="M832.5 486.25 L862.5 486.25 L862.5 513.75 L832.5 513.75 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1" />
+<path d="M862.5 487.5 L866.25 487.5 L866.25 512.5 L862.5 512.5 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1" />
+<path d="M866.25 486.25 L873.75 486.25 L873.75 513.75 L866.25 513.75 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1" />
+<path d="M873.75 487.5 L877.5 487.5 L877.5 512.5 L873.75 512.5 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1" />
+<path d="M877.5 486.25 L885 486.25 L885 513.75 L877.5 513.75 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1" />
+<path d="M885 487.5 L888.75 487.5 L888.75 512.5 L885 512.5 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1" />
+<path d="M888.75 486.25 L897.5 486.25 L897.5 513.75 L888.75 513.75 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1" />
+</g><text x="50%" y="960" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb)</text>
+<text x="50%" y="980" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
+<text x="990" y="990" font-size="0.5em" font-weight="bold" text-anchor="end" dominant-baseline="middle">SVGPencil45Renderer</text>
+</svg>

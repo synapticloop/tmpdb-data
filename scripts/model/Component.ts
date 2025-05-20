@@ -31,7 +31,7 @@ export class Component {
 
 	isHidden: boolean = false;
 
-	constructor(jsonObject:any) {
+	constructor(jsonObject: any, colours: string[]) {
 		this.type = jsonObject.type ?? this.type;
 
 		if(jsonObject.material) {
@@ -41,7 +41,12 @@ export class Component {
 			this.materials.push("unknown");
 		}
 
-		this.colours = jsonObject.colours ?? this.colours;
+		if(jsonObject.colours) {
+			this.colours = jsonObject.colours;
+		} else {
+			// use the base colours
+			this.colours = colours;
+		}
 
 		if(jsonObject.internal_start) {
 			this.hasInternalStart = true;

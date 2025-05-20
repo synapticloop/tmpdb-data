@@ -531,6 +531,8 @@ export function dimensionsHorizontal(x: number, y:number, width:number, text: st
 						`y="${y - ((strings.length - 1) * 8)}" ` +
 						`${(shouldBold ? "font-weight=\"bold\"" : "")} ` +
 						`font-size="1.2em" ` +
+						`stroke="white" ` +
+						`stroke-width="0.25" ` +
 						`text-anchor="middle" ` +
 						`dominant-baseline="middle" ` +
 						`fill="black">` +

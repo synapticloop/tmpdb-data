@@ -311,6 +311,8 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 
 			if(colourIndex !== -1) {
 				if (this.pencil.colourMap[front.fill]) {
+					frontFillColour = new OpacityColour(this.pencil.colourMap, this.pencil.colourMap[front.fill]);
+				} else {
 					frontFillColour = new OpacityColour(this.pencil.colourMap, front.fill);
 				}
 			}
@@ -359,7 +361,10 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 			let backFillColour: OpacityColour = new OpacityColour(this.pencil.colourMap, "white");
 
 			if(colourIndex !== -1) {
+				// TODO mapped colour
 				if (this.pencil.colourMap[back.fill]) {
+					backFillColour = new OpacityColour(this.pencil.colourMap, this.pencil.colourMap[back.fill]);
+				} else {
 					backFillColour = new OpacityColour(this.pencil.colourMap, back.fill);
 				}
 			}

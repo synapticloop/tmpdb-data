@@ -1,12 +1,17 @@
 {
 	"brand": "OHTO",
-	"model": "Sharp Pencil 2.0",
+	"model_name": "Sharp Pencil 2.0",
 	"model_number": "APS-680E",
-	"skus": [ ],
+	"skus": [ "APS-680E-YL", "APS-680E-BL", "APS-680E-GN", "APS-680E-EN", "APS-680E-NT", "APS-680E-BK"],
+	"accurate": true,
 	"lead_size": 2.0,
 	"text": "OHTO Sharp Pencil 2.0 JAPAN",
 	"weight": 11.0,
+	"mechanism": "click",
 	"colour_component": "body",
+	"features": [
+		{ "type": "eraser", "location": "End of pencil, attached to Ferrule" }
+	],
 	"colour_map": {
 		"yellow": "#e38f0f",
 		"red": "#5d191d",
@@ -47,7 +52,7 @@
 				{
 					"shape": "hexagonal",
 					"dimensions": [ 98.0, 11.0 ],
-					"taper_start": { "offset": [ 2.5, 0.325 ], "backgroundColours": [ "wood", "wood", "wood", "wood", "wood", "wood"] }
+					"taper_start": { "offset": [ 2.5, 0.325 ], "backgroundColours": [ "wood" ] }
 				}
 			],
 			"internal_end": [
@@ -66,7 +71,7 @@
 				{ "shape": "cylinder", "dimensions": [ 14.0, 10.25 ], "finish": "ferrule" }
 			],
 			"material": "metal",
-			"colours": [ "brass", "brass", "brass", "brass", "brass", "brass" ]
+			"colours": [ "brass" ]
 		},
 		{
 			"type": "cap",
@@ -81,7 +86,7 @@
 				{ "shape": "cylinder", "dimensions": [ 2.75, 9.5 ] }
 			],
 			"material": "metal",
-			"colours": [ "brass", "brass", "brass", "brass", "brass", "brass" ]
+			"colours": [ "brass" ]
 		},
 		{
 			"type": "eraser",
@@ -92,7 +97,7 @@
 				{ "shape": "cylinder", "dimensions": [ 6.0, 9.25 ] }
 			],
 			"material": "rubber",
-			"colours": [ "pink", "pink", "pink", "pink", "pink", "pink" ]
+			"colours": [ "pink" ]
 		}
 	]
 }

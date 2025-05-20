@@ -77,9 +77,10 @@ export class PDFDatasheetRenderer {
 		doc.y = doc.y - 30;
 		this.setFontFamily(doc, FontFamily.HEADING_LARGE);
 		doc.text(`${this.pencil.brand}`);
-		doc.text(`${this.pencil.model} ${(this.pencil.modelNumber ? "(" + this.pencil.modelNumber + ")" : "")}`);
-
+		doc.text(`${this.pencil.modelName}`);
 		this.setFontFamily(doc, FontFamily.HEADING_MEDIUM);
+		doc.text(`${(this.pencil.modelNumber ? "Model #: " + this.pencil.modelNumber + "" : "")}`);
+
 		doc.text("").moveDown(1);
 		doc.moveTo(doc.page.margins.left, doc.y)
 				.lineTo(doc.page.width - doc.page.margins.right, doc.y)
@@ -126,7 +127,8 @@ export class PDFDatasheetRenderer {
 			},
 			data: [
 				[ "Brand", this.pencil.brand ],
-				[ "Model", this.pencil.model ],
+				[ "Model Name", this.pencil.modelName ],
+				[ "Model Number", this.pencil.modelNumber ],
 				[ "Lead size", `${this.pencil.leadSize} mm` ],
 				[ "Text", `${this.pencil.text}` ],
 				[ "Mechanism", `${this.pencil.mechanism}` ],
@@ -619,7 +621,7 @@ export class PDFDatasheetRenderer {
 		doc.fillColor("black")
 			.text(`${this.pencil.brand} ` +
 				`- ` +
-				`${this.pencil.model} // ` +
+				`${this.pencil.modelName} // ` +
 				`${(this.pencil.modelNumber ? this.pencil.modelNumber : "")}`, doc.page.margins.left, 20, { align: "right" });
 
 		doc.moveTo(doc.page.margins.left, doc.page.margins.top - 10)

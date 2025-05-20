@@ -59,6 +59,12 @@ export abstract class SVGRenderer {
 			`<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,0" />\n` +
 			`<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,0" />\n` +
 			`</pattern>\n` +
+			`<pattern id="ridged" patternUnits="userSpaceOnUse" width="2" height="2">\n` +
+			`<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 0,0 L 0,2"/>\n` +
+			`</pattern>\n` +
+			`<pattern id="lined" patternUnits="userSpaceOnUse" width="2" height="2">\n` +
+			`<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 0,0 L 2,0"/>\n` +
+			`</pattern>\n` +
 			`<pattern id="spring" patternUnits="userSpaceOnUse" width="8" height="100">\n` +
 			`<path stroke="dimgray" stroke-linecap="round" stroke-width="2" d="M 0,0 L 8,100"/>\n` +
 			`<path stroke="white" stroke-linecap="round" stroke-width="1" d="M 0,0 L 8,100"/>\n` +
@@ -119,7 +125,7 @@ export abstract class SVGRenderer {
 		let svgString = "";
 		svgString += drawTextBold(`${this.pencil.brand}` +
 			` // ` +
-			`${this.pencil.model} ` +
+			`${this.pencil.modelName} ` +
 			`${(this.pencil.modelNumber ? "(Model #: " + this.pencil.modelNumber + ")" : "")}`,
 			30,
 			50,
@@ -237,6 +243,7 @@ export abstract class SVGRenderer {
 			xOffsetTaperStartScale = part.taperStart.offset[1];
 		}
 
+
 		if(part.taperStart) {
 			let backgroundColour: OpacityColour = this.getMappedColour(part.colours, colourIndex, colour);
 			if(part.taperStart?.backgroundColours) {
@@ -263,6 +270,17 @@ export abstract class SVGRenderer {
 						`stroke-width="0.5" stroke="${strokeColor}" stroke-linecap="round" fill="${colour}" />`
 
 					break;
+				case "cylinder":
+					svgString += rectangle(startX, midY - part.endHeight / 2 * 5 + 0.25, xOffsetTaperStart * 5 - 0.5, part.startHeight * 5 - 0.5, "none", backgroundColour);
+					svgString += `<path d="M ${startX + xOffsetTaperStart * 5} ${midY - part.endHeight / 2 * 5} ` +
+						`C ${startX + xOffsetTaperStart * (xOffsetTaperStartScale * -5)} ${midY - part.endHeight/2 * 5}, ` +
+						`${startX + xOffsetTaperStart * (xOffsetTaperStartScale * -5)} ${midY + part.endHeight/2 * 5}, ` +
+						`${startX + xOffsetTaperStart * 5} ${midY + part.endHeight / 2 * 5}, " ` +
+						`stroke-width="0.5" ` +
+						`stroke="${strokeColor}" ` +
+						`stroke-linecap="round" ` +
+						`fill="${colour}" />`
+					break;
 			}
 		}
 
@@ -270,13 +288,17 @@ export abstract class SVGRenderer {
 		let xOffsetTaperEndScale: number = 1;
 
 		if(part.taperEnd?.offset[0]) {
-			xOffsetTaperEnd = part.taperEnd.offset[0] + part.length;
+			xOffsetTaperEnd = part.taperEnd.offset[0];
 		}
 		if(part.taperEnd?.offset[1]) {
 			xOffsetTaperEndScale = part.taperEnd.offset[1];
 		}
 
 		if(part.taperEnd) {
+			let backgroundColour: OpacityColour = this.getMappedColour(part.colours, colourIndex, colour);
+			if(part.taperEnd?.backgroundColours) {
+				backgroundColour = this.getMappedColour(part.taperEnd?.backgroundColours, colourIndex, colour);
+			}
 			// now we get to draw the taper
 			switch (part.shape) {
 				case "hexagonal":
@@ -297,6 +319,18 @@ export abstract class SVGRenderer {
 						`stroke="${strokeColor}" ` +
 						`stroke-linecap="round" ` +
 						`fill="${colour}" />\n`;
+				break;
+				case "cylinder":
+					svgString += rectangle(startX + part.length * 5 + xOffsetTaperEnd * 5, midY - part.endHeight / 2 * 5 + 0.25, xOffsetTaperEnd * -5 - 0.5, part.startHeight * 5 - 0.5, "none", backgroundColour);
+					svgString += `<path d="M ${startX + part.length * 5 + xOffsetTaperEnd * 5} ${midY - part.endHeight / 2 * 5} ` +
+						`C ${startX + ((part.length) * 5 + (xOffsetTaperEndScale * xOffsetTaperEnd) * 5)} ${midY - part.endHeight/2 * 5}, ` +
+						`${startX + ((part.length) * 5 + (xOffsetTaperEndScale * xOffsetTaperEnd) * 5)} ${midY + part.endHeight/2 * 5}, ` +
+						`${startX + part.length * 5 + xOffsetTaperEnd * 5} ${midY + part.endHeight / 2 * 5}, " ` +
+						`stroke-width="0.5" ` +
+						`stroke="${strokeColor}" ` +
+						`stroke-linecap="round" ` +
+						`fill="${colour}" />\n`;
+					break;
 			}
 		}
 		return (svgString);
@@ -538,6 +572,16 @@ export abstract class SVGRenderer {
 		// the question becomes whether there will be other finishes on different
 		// objects
 		for(const finish of part.finish.split(",")) {
+			let xStart: number = startX + (part.internalOffset)* 5;
+			let xEnd: number = startX + part.length * 5;
+
+			let yStartTop: number = midY - (part.startHeight / 2 * 5);
+			let yStartBottom: number = midY + (part.startHeight / 2 * 5);
+
+			let yEndTop: number = midY - (part.endHeight / 2 * 5);
+			let yEndBottom: number = midY + (part.endHeight / 2 * 5);
+
+
 			switch (finish) {
 				case "ferrule":
 					let offset = ((part.length / 13) * 5) / 2;
@@ -557,20 +601,16 @@ export abstract class SVGRenderer {
 
 					break;
 				case "knurled":
-					let xStart: number = startX + (part.internalOffset)* 5;
-					let xEnd: number = startX + part.length * 5;
-
-					let yStartTop: number = midY - (part.startHeight / 2 * 5);
-					let yStartBottom: number = midY + (part.startHeight / 2 * 5);
-
-					let yEndTop: number = midY - (part.endHeight / 2 * 5);
-					let yEndBottom: number = midY + (part.endHeight / 2 * 5);
-
-
 					svgString += `<path d="M${xStart} ${yStartTop} ` +
 						`L${xEnd} ${yEndTop} ` +
 						`L${xEnd} ${yEndBottom} ` +
 						`L${xStart} ${yStartBottom} Z" stroke-width="1.0" stroke="black" fill="url(#diagonalHatch)"/>\n`;
+					break;
+				case "ridged":
+					svgString += `<path d="M${xStart} ${yStartTop} ` +
+						`L${xEnd} ${yEndTop} ` +
+						`L${xEnd} ${yEndBottom} ` +
+						`L${xStart} ${yStartBottom} Z" stroke-width="1.0" stroke="black" fill="url(#ridged)"/>\n`;
 					break;
 				case "spring":
 
@@ -606,16 +646,55 @@ export abstract class SVGRenderer {
 					}
 					break;
 				case "indicator":
+					let backgoundColour: OpacityColour = defaultOpaqueColour;
+
+					if(part.backgroundColours[colourIndex]) {
+						backgoundColour = new OpacityColour(this.pencil.colourMap, part.backgroundColours[colourIndex]);
+					}
 					// now draw the indicator
 					svgString += `<rect x="${startX + part.internalOffset * 5 + 10}" ` +
 						`y="${midY - (part.endHeight / 4 * 5)}" ` +
 						`width="${part.length * 5 - 20}" ` +
 						`height="${part.startHeight / 2 * 5}" ` +
-						`rx="3" ry="3" stroke-width="1" stroke="black" fill="${opaqueColour.colour}"/>\n`;
+						`rx="3" ry="3" stroke-width="1" stroke="black" fill="${backgoundColour.colour}"/>\n`;
 					svgString += `<text x="${startX + part.internalOffset * 5 + (part.length * 5) / 2}" ` +
 						`y="${midY}" ` +
 						`text-anchor="middle" dominant-baseline="central">` +
 						`<tspan stroke="dimgray" stroke-width="0.5" font-family="sans-serif" fill="black" textLength="{this.width * 5 - 24}" > ` +
+						`HB` +
+						`</tspan>` +
+						`</text>`;
+					break;
+				case "indicator-split":
+					// now draw the indicator
+
+					// TODO - this should be at the top of the method
+					let backgroundColour: OpacityColour = defaultOpaqueColour;
+
+					if(part.backgroundColours[colourIndex]) {
+						backgroundColour = new OpacityColour(this.pencil.colourMap, part.backgroundColours[colourIndex]);
+					}
+
+					// horizontal
+					svgString += `<rect x="${startX + part.internalOffset * 5}" ` +
+						`y="${midY - 4}" ` +
+						`width="${part.length * 5}" ` +
+						`height="${8}" ` +
+						`rx="0" ry="0" stroke-width="1" stroke="black" fill="${backgroundColour.colour}"/>\n`;
+					svgString += `<rect x="${startX + part.internalOffset * 5 + 6}" ` +
+						`y="${midY - (part.endHeight / 4 * 5)}" ` +
+						`width="${part.length * 5 - 12}" ` +
+						`height="${part.startHeight / 2 * 5}" ` +
+						`rx="3" ry="3" stroke-width="1" stroke="black" fill="${backgroundColour.colour}"/>\n`;
+					svgString += `<rect x="${startX + part.internalOffset * 5 + 0.25}" ` +
+						`y="${midY - 3.75}" ` +
+						`width="${part.length * 5 - 0.5}" ` +
+						`height="${7.5}" ` +
+						`rx="0" ry="0" stroke-width="1" stroke="none" fill="${backgroundColour.colour}"/>\n`;
+					svgString += `<text x="${startX + part.internalOffset * 5 + (part.length * 5) / 2}" ` +
+						`y="${midY}" ` +
+						`text-anchor="middle" dominant-baseline="central">` +
+						`<tspan stroke="dimgray" stroke-width="0.5" font-family="sans-serif" fill="black" textLength="{this.width * 5 - 14}" > ` +
 						`HB` +
 						`</tspan>` +
 						`</text>`;

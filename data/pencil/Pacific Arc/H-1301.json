@@ -1,12 +1,19 @@
 {
 	"brand": "Pacific Arc",
-	"model": "1305",
+	"model_name": "COLLEGIATE",
+	"model_number": "H-1301",
+	"skus": [ "H-1301BLK", "H-1301BLUE" ],
 	"lead_size": "2.0",
-	"text": "PACIFIC ARC H-1305",
+	"text": "PACIFIC ARC H-1301",
 	"colour_component": "body",
+	"mechanism": "click",
+	"accurate": true,
+	"features": [
+		{ "type": "sharpener", "location":  "Inside cap"}
+	],
 	"colour_map": {
 		"silver": "#b4b8b9",
-		"brass": "#e1c16e"
+		"blue": "#0174bd"
 	},
 	"front": [
 		{ "shape": "cylinder", "dimensions": [ 2.0, 10.0 ], "fill":  "black" }
@@ -16,23 +23,10 @@
 	],
 	"components": [
 		{
-			"type": "jaws",
-			"parts": [
-				{ "shape": "cone", "dimensions": [ 2.25, 3.25, 4.0 ] }
-			],
-			"internal_end": [
-				{ "shape": "cylinder", "dimensions": [ 16.26, 4.0, 4.0 ], "colours": [ "silver" ] },
-				{ "shape": "cylinder", "dimensions": [ 26.25, 4.0, 4.0 ], "colours": [ "brass" ], "finish": "spring" },
-				{ "shape": "cylinder", "dimensions": [ 0.75, 5.5, 5.5 ], "colours": [ "brass" ] },
-				{ "shape": "cylinder", "dimensions": [ 93.5, 4.0, 4.0 ], "colours": [ "brass" ] }
-			],
-			"material": "metal",
-			"colours": [ "silver" ]
-		},
-		{
 			"type": "tip",
 			"parts": [
-				{ "shape": "cone", "dimensions": [ 13.75, 5.25, 8.25 ] }
+				{ "shape": "cylinder", "dimensions": [ 3.75, 3.5 ] },
+				{ "shape": "cone", "dimensions": [ 6.5, 5.0, 7.5 ] }
 			],
 			"material": "metal",
 			"colours": [ "silver" ]
@@ -54,7 +48,7 @@
 				{ "shape": "cylinder", "dimensions": [ 5.75, 6.5 ], "finish": "threaded" }
 			],
 			"material": "plastic",
-			"colours": [ "black" ]
+			"colours": [ "black", "blue", "green", "red", "brown" ]
 		},
 		{
 			"type": "clip",

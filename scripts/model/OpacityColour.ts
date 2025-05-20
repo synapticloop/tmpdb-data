@@ -3,6 +3,7 @@ import {Pencil} from "./Pencil.ts";
 export class OpacityColour {
 	colour:string;
 	opacity:number = 1;
+	definition: string;
 
 	constructor(colourMap: { [ id: string ] : string }, colour: string) {
 		if(colourMap === null) {
@@ -34,5 +35,7 @@ export class OpacityColour {
 			default:
 				this.colour = colour;
 		}
+
+		this.definition = this.colour + "%" + this.opacity;
 	}
 }

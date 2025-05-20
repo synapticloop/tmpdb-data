@@ -1,0 +1,102 @@
+{
+	"brand": "Pacific Arc",
+	"model_name": "COLLEGIATE",
+	"model_number": "H-1301",
+	"skus": [ "H-1301BLK", "H-1301BLUE" ],
+	"lead_size": "2.0",
+	"text": "PACIFIC ARC H-1301",
+	"colour_component": "body",
+	"mechanism": "click",
+	"accurate": true,
+	"features": [
+		{ "type": "sharpener", "location":  "Inside cap"}
+	],
+	"colour_map": {
+		"silver": "#b4b8b9",
+		"blue": "#0174bd"
+	},
+	"front": [
+		{ "shape": "cylinder", "dimensions": [ 2.0, 10.0 ], "fill":  "black" }
+	],
+	"back":[
+		{ "shape": "cylinder", "dimensions": [ 2.0, 10.0 ] , "fill":  "black" }
+	],
+	"components": [
+		{
+			"type": "tip",
+			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 3.75, 3.5 ] },
+				{ "shape": "cone", "dimensions": [ 5.0, 5.0, 7.5 ] },
+				{ "shape": "cylinder", "dimensions": [ 4.25, 7.5 ] },
+				{ "shape": "cylinder", "dimensions": [ 3.25, 8.0 ] },
+				{ "shape": "cylinder", "dimensions": [ 2.5, 8.75 ] }
+			],
+			"material": "plastic",
+			"colours": [ "silver" ]
+		},
+		{
+			"type": "grip",
+			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 29.5, 10 ], "finish":  "ridged", "taper_start": { "offset": [ 20.0, 0.25 ], "backgroundColours": [ "none", "none" ] }, "taper_end": { "offset": [ -9.5, -0.3 ], "backgroundColours": [ "none", "none" ] }  }
+			],
+			"material": "rubber",
+			"colours": [ "black", "blue" ]
+		},
+		{
+			"type": "indicator",
+			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 8.0, 9.5 ], "finish":  "indicator-split,squared", "background_colours": [ "black", "blue"] }
+			],
+			"material": "plastic",
+			"colours": [ "grey" ]
+		},
+		{
+			"type": "body",
+			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 63.75, 9.0 ] }
+			],
+			"material": "plastic",
+			"colours": [ "black", "blue" ]
+		},
+		{
+			"type": "clip",
+			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 4.75, 9.25 ] }
+			],
+			"extras": [
+				{
+					"dimensions": [ 39.0, 2.75, 4.5 ],
+					"offset": [ -31.5, 4.325 ],
+					"parts": [
+						{ "shape": "curve-fill", "points": [ 0.45, -2.5, 7.0,-2.5,5.0,2.0 ] },
+						{ "shape": "line", "points": [ 0.0, -3.0, 36.5, -3.0 ] },
+						{ "shape": "curve", "points": [ 36.5, -3.0, 36.5, -0.25, 40.5, -1.5 ] }
+					]
+				}
+			],
+			"material": "metal",
+			"colours": [ "silver" ]
+		},
+		{
+			"type": "tail",
+			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 1.75, 8.75 ] }
+			],
+			"material": "metal",
+			"colours": [ "black", "blue" ]
+		},
+		{
+			"type": "cap",
+			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 5.25, 6.25 ] },
+				{ "shape": "cylinder", "dimensions": [ 11.0, 8.25 ] },
+				{ "shape": "cylinder", "dimensions": [ 0.5, 8.0 ] },
+				{ "shape": "cylinder", "dimensions": [ 1.5, 8.25 ] }
+			],
+			"internal_start": [
+				{ "shape": "cylinder", "dimensions": [ 6.25, 6.25 ] }
+			],
+			"material": "plastic"
+		}
+	]
+}

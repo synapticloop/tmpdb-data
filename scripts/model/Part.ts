@@ -18,6 +18,7 @@ export class Part {
 
 	// the colours
 	colours: string[] = [];
+	backgroundColours: string[] = [];
 	dimensions: number[] = [];
 	material: string = null;
 
@@ -49,6 +50,12 @@ export class Part {
 			this.colours = colours;
 		} else {
 			this.colours.push("white");
+		}
+
+		if(jsonObject.background_colours) {
+			this.backgroundColours = jsonObject.background_colours;
+		} else {
+			this.backgroundColours = colours;
 		}
 
 		// contribute to the length

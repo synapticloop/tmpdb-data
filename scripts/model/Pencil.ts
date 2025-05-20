@@ -2,11 +2,15 @@ import { Component } from "./Component.ts";
 
 export class Pencil {
 	// the name of the pencil
-	name:string = "";
+	modelName:string = "";
+	modelNumber:string = "";
 	// the brand of the pencil
 	brand:string = "";
 	// the lead size
 	leadSize:string = "";
+	// the lead shape - which defaults to 'cylindrical'
+	leadShape: string = "cylindrical";
+	maximumLeadLength: number;
 	// the components that make up the pencil
 	components:Component[] = [];
 	// the text that is written on the pencil
@@ -30,8 +34,6 @@ export class Pencil {
 	colourComponents:string[] = [ "white" ];
 	// the weight of the pencil
 	weight:number = null;
-	// the model number
-	modelNumber:String = null;
 	front = [];
 	back = [];
 	// a map of colour names to HTML # values
@@ -55,6 +57,8 @@ export class Pencil {
 
 		this.colourComponent = pencilJSONData.colour_component ?? this.colourComponent;
 		this.colourMap = pencilJSONData.colour_map ?? this.colourMap;
+
+		this.modelName = pencilJSONData.model_name ?? this.modelName;
 		this.modelNumber = pencilJSONData.model_number ?? this.modelNumber;
 		this.mechanism = pencilJSONData.mechanism ?? this.mechanism;
 
@@ -63,8 +67,16 @@ export class Pencil {
 		this.skus = pencilJSONData.skus ?? this.skus;
 		this.weight = pencilJSONData.weight ?? this.weight;
 
+		// go through and look for the colour component, this will be the
+		// base colours if not over-ridden
 		for(const component of pencilJSONData.components) {
-			const thisComponent = new Component(component);
+			if (component.type === this.colourComponent) {
+				this.colourComponents = component.colours;
+			}
+		}
+
+		for(const component of pencilJSONData.components) {
+			const thisComponent = new Component(component, this.colourComponents);
 
 			if(thisComponent.hasInternalStart || thisComponent.hasInternalEnd) {
 				this.hasInternal = true;
@@ -105,6 +117,8 @@ export class Pencil {
 		this.model = pencilJSONData.model ?? this.model;
 
 		this.leadSize = pencilJSONData.lead_size ?? this.leadSize;
+		this.leadShape = pencilJSONData.lead_shape ?? this.leadShape;
+		this.maximumLeadLength = pencilJSONData.maximum_lead_length ?? this.maximumLeadLength;
 		this.text = pencilJSONData.text ?? this.text;
 	}
 }

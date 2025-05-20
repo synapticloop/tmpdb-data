@@ -1,8 +1,14 @@
 {
 	"brand": "Pacific Arc",
-	"model": "H-1309",
+	"model_name": "Premium",
+	"model_number": "H-1309",
 	"lead_size": "2.0",
 	"text": "PACIFIC ARC H-1309",
+	"accurate": true,
+	"skus":[ "H-1309SLV", "H-1309BLK"],
+	"features": [
+		{ "type":  "sharpener", "location":  "inside cap" }
+	],
 	"colour_component" : "body",
 	"colour_map": {
 		"black": "#000000",
@@ -21,7 +27,7 @@
 				{ "shape": "cone", "dimensions": [ 2.25, 3.25, 4.0 ] }
 			],
 			"material": "metal",
-			"colours": [ "black", "silver" ]
+			"colours": [ "silver", "black" ]
 		},
 		{
 			"type": "tip",
@@ -29,7 +35,7 @@
 				{ "shape": "cone", "dimensions": [ 13.75, 5.25, 8.25 ] }
 			],
 			"material": "metal",
-			"colours": [ "black", "silver" ]
+			"colours": [ "silver", "black" ]
 		},
 		{
 			"type": "grip",
@@ -37,7 +43,7 @@
 				{ "shape": "cylinder", "dimensions": [ 29.5, 8.25 ], "finish":  "knurled" }
 			],
 			"material": "metal",
-			"colours": [ "black", "silver" ]
+			"colours": [ "silver", "black" ]
 		},
 		{
 			"type": "body",
@@ -45,7 +51,7 @@
 				{ "shape": "hexagonal", "dimensions": [ 67.5, 8.0 ] }
 			],
 			"material": "metal",
-			"colours": [ "black", "silver" ]
+			"colours": [ "silver", "black" ]
 		},
 		{
 			"type": "clip",
@@ -64,7 +70,7 @@
 				}
 			],
 			"material": "metal",
-			"colours": [ "black", "silver" ]
+			"colours": [ "silver", "black" ]
 		},
 		{
 			"type": "tail",
@@ -72,7 +78,7 @@
 				{ "shape": "cylinder", "dimensions": [ 4.0, 8.0 ] }
 			],
 			"material": "metal",
-			"colours": [ "black", "silver" ]
+			"colours": [ "silver", "black" ]
 		},
 		{
 			"type": "indicator",
@@ -80,31 +86,17 @@
 				{ "shape": "cylinder", "dimensions": [ 9.5, 8.25 ], "finish": "knurled,indicator" }
 			],
 			"material": "plastic",
-			"colours": [ "black", "silver" ]
+			"colours": [ "silver", "black" ]
 		},
 		{
 			"type": "foot",
 			"parts": [
-				{ "shape": "cylinder", "dimensions": [ 1.0, 8.0] }
-			],
-			"material": "metal",
-			"colours": [ "black", "silver" ]
-		},
-		{
-			"type": "ring",
-			"parts": [
-				{ "shape": "cylinder", "dimensions": [ 1.25, 8.0 ] }
-			],
-			"material": "rubber",
-			"colours": [ "red", "red" ]
-		},
-		{
-			"type": "foot",
-			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 1.0, 8.0] },
+				{ "shape": "cylinder", "dimensions": [ 1.25, 8.0 ], "colours": [ "red", "white" ], "material": "rubber" },
 				{ "shape": "cylinder", "dimensions": [ 1.25, 8.0 ] }
 			],
 			"material": "metal",
-			"colours": [ "black", "silver" ]
+			"colours": [ "silver", "black" ]
 		},
 		{
 			"type": "cap",
@@ -118,7 +110,7 @@
 				{ "shape": "cylinder", "dimensions": [ 1.75, 5.5 ] }
 			],
 			"material": "plastic",
-			"colours": [ "black", "silver" ]
+			"colours": [ "silver", "black" ]
 		}
 	]
 }

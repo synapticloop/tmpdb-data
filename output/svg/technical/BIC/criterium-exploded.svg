@@ -12,7 +12,7 @@
 <rect x="0" y="0" width="1200" height="449" fill="white" stroke="black" stroke-width="4" />
 <rect x="2" y="2" width="1196" height="445" fill="white" stroke="dimgray" stroke-width="1" />
 <g transform="rotate(0 0 0)">
-<text x="30" y="50" font-size="2.0em" font-weight="bold"> BIC // Criterium </text>
+<text x="30" y="50" font-size="2.0em" font-weight="bold"> BIC //  </text>
 <path d="M245.625 112.5 L256.875 111.25 L256.875 128.75 L245.625 127.5 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
 <path d="M256.875 106.875 L305.625 100.625 L305.625 139.375 L256.875 133.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
 <path d="M305.625 103.75 L334.375 103.75 L334.375 136.25 L305.625 136.25 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
@@ -147,23 +147,24 @@
 <line x1="854.375" y1="220" x2="910.625" y2="220" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
 <path d="M910.625 303.75 L943.125 303.75 L943.125 336.25 L910.625 336.25 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
 <path d="M943.125 305 L948.125 305 L948.125 335 L943.125 335 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
-<path d="M948.125 303.75 L954.375 303.75 L954.375 336.25 L948.125 336.25 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
-<line x1="949.125" y1="304.75" x2="953.375" y2="304.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="949.125" y1="306.75" x2="953.375" y2="306.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="949.125" y1="308.75" x2="953.375" y2="308.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="949.125" y1="310.75" x2="953.375" y2="310.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="949.125" y1="312.75" x2="953.375" y2="312.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="949.125" y1="314.75" x2="953.375" y2="314.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="949.125" y1="316.75" x2="953.375" y2="316.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="949.125" y1="318.75" x2="953.375" y2="318.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="949.125" y1="320.75" x2="953.375" y2="320.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="949.125" y1="322.75" x2="953.375" y2="322.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="949.125" y1="324.75" x2="953.375" y2="324.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="949.125" y1="326.75" x2="953.375" y2="326.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="949.125" y1="328.75" x2="953.375" y2="328.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="949.125" y1="330.75" x2="953.375" y2="330.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="949.125" y1="332.75" x2="953.375" y2="332.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="949.125" y1="334.75" x2="953.375" y2="334.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
+<path d="M948.125 303.75 L953.125 303.75 L953.125 336.25 L948.125 336.25 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
+<line x1="949.125" y1="304.75" x2="952.125" y2="304.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
+<line x1="949.125" y1="306.75" x2="952.125" y2="306.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
+<line x1="949.125" y1="308.75" x2="952.125" y2="308.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
+<line x1="949.125" y1="310.75" x2="952.125" y2="310.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
+<line x1="949.125" y1="312.75" x2="952.125" y2="312.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
+<line x1="949.125" y1="314.75" x2="952.125" y2="314.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
+<line x1="949.125" y1="316.75" x2="952.125" y2="316.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
+<line x1="949.125" y1="318.75" x2="952.125" y2="318.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
+<line x1="949.125" y1="320.75" x2="952.125" y2="320.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
+<line x1="949.125" y1="322.75" x2="952.125" y2="322.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
+<line x1="949.125" y1="324.75" x2="952.125" y2="324.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
+<line x1="949.125" y1="326.75" x2="952.125" y2="326.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
+<line x1="949.125" y1="328.75" x2="952.125" y2="328.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
+<line x1="949.125" y1="330.75" x2="952.125" y2="330.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
+<line x1="949.125" y1="332.75" x2="952.125" y2="332.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
+<line x1="949.125" y1="334.75" x2="952.125" y2="334.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
+<path d="M953.125 309.375 L954.375 309.375 L954.375 330.625 L953.125 330.625 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
 <line x1="801.875" y1="320" x2="831.875" y2="320" stroke-linecap="round" stroke="white"  stroke-width="2.0" />
 <line x1="801.875" y1="320" x2="831.875" y2="320" stroke-linecap="round" stroke="#0f0f0f"  stroke-width="1.0" />
 <line x1="811.875" y1="320" x2="821.875" y2="310" stroke-linecap="round" stroke="#ffffff" stroke-width="2.0" />
