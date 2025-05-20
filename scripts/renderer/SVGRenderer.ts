@@ -59,11 +59,11 @@ export abstract class SVGRenderer {
 			`<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,0" />\n` +
 			`<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,0" />\n` +
 			`</pattern>\n` +
-			`<pattern id="ridged" patternUnits="userSpaceOnUse" width="2" height="2">\n` +
-			`<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 0,0 L 0,2"/>\n` +
+			`<pattern id="ridged" patternUnits="userSpaceOnUse" width="3" height="3">\n` +
+			`<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 0,0 L 0,3"/>\n` +
 			`</pattern>\n` +
-			`<pattern id="lined" patternUnits="userSpaceOnUse" width="2" height="2">\n` +
-			`<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 0,0 L 2,0"/>\n` +
+			`<pattern id="lined" patternUnits="userSpaceOnUse" width="3" height="3">\n` +
+			`<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 0,0 L 3,0"/>\n` +
 			`</pattern>\n` +
 			`<pattern id="spring" patternUnits="userSpaceOnUse" width="8" height="100">\n` +
 			`<path stroke="dimgray" stroke-linecap="round" stroke-width="2" d="M 0,0 L 8,100"/>\n` +
