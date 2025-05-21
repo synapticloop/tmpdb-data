@@ -18,9 +18,9 @@ export abstract class Base {
 		}
 
 		for(const mergedColour of mergedColours) {
-			let opacityColour = new OpaqueColour(colourMap, mergedColour);
-			this.opacityColours.push(opacityColour);
-			this.mergedColours.push(opacityColour.definition);
+			let opaqueColour:OpaqueColour = new OpaqueColour(colourMap, mergedColour);
+			this.opacityColours.push(opaqueColour);
+			this.mergedColours.push(opaqueColour.definition);
 		}
 	}
 

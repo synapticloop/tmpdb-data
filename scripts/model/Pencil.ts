@@ -39,11 +39,11 @@ export class Pencil extends Base {
 	@JsonProperty({ name: "features", required: false })
 	features: Feature[] = [];
 	@JsonProperty({ name: "front", required: false, type: FrontBack, deserializer: FrontBackDeserialiser })
-	front: FrontBack[];
+	front: FrontBack[] = [];
 	@JsonProperty({ name: "back", required: false, type: FrontBack, deserializer: FrontBackDeserialiser })
-	back: FrontBack[];
+	back: FrontBack[] = [];
 	@JsonProperty({ name: "components", required: true, type: Component, deserializer: ComponentDeserialiser})
-	components: Component[]; // the components that make up the pencil
+	components: Component[] = []; // the components that make up the pencil
 	@JsonProperty({ name: "skus", required: false })
 	skus: string[] = []; // the components that make up the pencil
 

@@ -46,15 +46,15 @@
 <line x1="1380" y1="500" x2="1420" y2="500" stroke-linecap="round" stroke="#000000"  stroke-width="1" />
 <line x1="1400" y1="480" x2="1400" y2="520" stroke="#000000" stroke-linecap="round"  stroke-width="1" />
 <circle r="10" cx="1400" cy="500" fill="white" fill-opacity="0" stroke="#000000" stroke-width="1"  />
-<text x="30" y="50" font-size="2.0em" font-weight="bold"> Easy Come Easy Go //  </text>
+<text x="30" y="50" font-size="2.0em" font-weight="bold"> Easy Come Easy Go // unknown (Model #: amp-35601)</text>
 <text x="30" y="80" font-size="1.1em"> EASY COME EASY GO 2.0</text>
 <text x="30" y="100" font-size="1.1em"> Lead size: 2.0 mm</text>
 <text x="1480" y="30" font-size="1.6em" font-weight="bold" text-anchor="end" dominant-baseline="central">Colour variants of the body</text>
-<rect x="1440" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="#FFA07A" />
+<rect x="1440" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="#FFA07A" fill-opacity="1"/>
 <text x="1460" y="100" transform="rotate(-90, 1460, 100)" font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">pink</text>
-<rect x="1380" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="#000000" />
+<rect x="1380" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="#000000" fill-opacity="1"/>
 <text x="1400" y="100" transform="rotate(-90, 1400, 100)" font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">black</text>
-<rect x="1320" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="#AEDCDE" />
+<rect x="1320" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="#AEDCDE" fill-opacity="1"/>
 <text x="1340" y="100" transform="rotate(-90, 1340, 100)" font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">blue</text>
 <text x="30" y="136" font-size="1.2em" font-weight="bold" text-anchor="start" dominant-baseline="central">Materials:</text>
 <text x="50" y="156" font-size="1.2em" text-anchor="start" dominant-baseline="central"> - plastic</text>
@@ -161,7 +161,7 @@
 <path d="M404.375 290 L445.625 281.25 L445.625 318.75 L404.375 310 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
 <path d="M445.625 281.25 L460.625 281.25 L460.625 318.75 L445.625 318.75 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
 <path d="M460.625 279.375 L490.625 279.375 L490.625 320.625 L460.625 320.625 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
-<path d="M490.625 280 L989.375 280 L989.375 320 L490.625 320 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="#000000" fill-opacity="1" />
+<path d="M490.625 280 L989.375 280 L989.375 320 L490.625 320 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#000000" fill-opacity="1" />
 <line x1="490.625" y1="300" x2="989.375" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="490.625" y1="300" x2="989.375" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
 <line x1="810.625" y1="269.375" x2="825.625" y2="269.375" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
@@ -175,16 +175,16 @@
 <line x1="845.625" y1="278.125" x2="865.625" y2="269.375" stroke-width="3" stroke="silver" fill="silver" stroke-linecap="round" />
 <line x1="865.625" y1="269.375" x2="1005.625" y2="269.375" stroke-width="3" stroke="silver" fill="silver" stroke-linecap="round" />
 <path d="M1005.625 269.375 Q1025.625 274.375 1005.625 279.375" stroke-width="3" stroke="silver" fill="none" stroke-linecap="round" />
-<path d="M1013.125 280 L1021.875 280.625 L1021.875 319.375 L1013.125 320 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="#000000" fill-opacity="1" />
-<path d="M1021.875 280.625 L1030.625 280.625 L1030.625 319.375 L1021.875 319.375 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="#000000" fill-opacity="1" />
-<path d="M1030.625 285 L1051.875 285 L1051.875 315 L1030.625 315 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="#000000" fill-opacity="1" />
-<path d="M1051.875 280 L1098.125 280 L1098.125 320 L1051.875 320 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="#000000" fill-opacity="1" />
+<path d="M1013.125 280 L1021.875 280.625 L1021.875 319.375 L1013.125 320 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#000000" fill-opacity="1" />
+<path d="M1021.875 280.625 L1030.625 280.625 L1030.625 319.375 L1021.875 319.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#000000" fill-opacity="1" />
+<path d="M1030.625 285 L1051.875 285 L1051.875 315 L1030.625 315 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#000000" fill-opacity="1" />
+<path d="M1051.875 280 L1098.125 280 L1098.125 320 L1051.875 320 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#000000" fill-opacity="1" />
 <line x1="1051.875" y1="288.57142857142856" x2="1098.125" y2="288.57142857142856" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="1051.875" y1="288.57142857142856" x2="1098.125" y2="288.57142857142856" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
 <line x1="1051.875" y1="311.42857142857144" x2="1098.125" y2="311.42857142857144" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="1051.875" y1="311.42857142857144" x2="1098.125" y2="311.42857142857144" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
-<path d="M1098.125 278.75 L1104.375 278.75 L1104.375 321.25 L1098.125 321.25 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="#000000" fill-opacity="1" />
-<path d="M1104.375 278.75 Q1111.875 300 1104.375 321.25" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="#000000" fill-opacity="1"/>
+<path d="M1098.125 278.75 L1104.375 278.75 L1104.375 321.25 L1098.125 321.25 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#000000" fill-opacity="1" />
+<path d="M1104.375 278.75 Q1111.875 300 1104.375 321.25" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#000000" fill-opacity="1"/>
 <rect x="490.625" y="280.25" width="4.5" height="39.5" rx="0" ry="0" stroke-width="0.5" stroke="none" fill="#000000" fill-opacity="1"/>
 <path d="M 495.625 280 C 489.375 285, 489.375 295, 495.625 300" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="#000000" /><path d="M 495.625 320 C 489.375 315, 489.375 305, 495.625 300" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="#000000" /><circle r="21.25" cx="160" cy="300" fill="#000000" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 <polygon points="151.7157287525381,280 168.2842712474619,280 180,291.7157287525381 180,308.2842712474619 168.2842712474619,320 151.7157287525381,320 140,308.2842712474619 140,291.7157287525381 " stroke="black" stroke-width="1" fill="#000000" fill-opacity="1"/>
@@ -199,7 +199,7 @@
 <circle r="10" cx="160" cy="300" stroke="black" stroke-width="0.5" fill="silver" fill-opacity="1"/>
 <circle r="18.75" cx="160" cy="300" stroke="black" stroke-width="0.5" fill="silver" fill-opacity="1"/>
 <circle r="9.375" cx="160" cy="300" fill="silver" fill-opacity="1" stroke="black" stroke-width="0.5"  />
-<circle r="5" cx="160" cy="300" fill="#000000" fill-opacity="1" stroke="dimgray" stroke-width="0.5"  />
+<circle r="25" cx="160" cy="300" fill="#000000" fill-opacity="1" stroke="dimgray" stroke-width="0.5"  />
 <circle r="9.375" cx="1400" cy="300" fill="silver" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 <circle r="10" cx="1400" cy="300" stroke="black" stroke-width="0.5" fill="silver" fill-opacity="1"/>
 <circle r="18.75" cx="1400" cy="300" stroke="black" stroke-width="0.5" fill="silver" fill-opacity="1"/>

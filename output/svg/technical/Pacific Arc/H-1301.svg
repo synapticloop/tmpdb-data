@@ -50,9 +50,9 @@
 <text x="30" y="80" font-size="1.1em"> PACIFIC ARC H-1301</text>
 <text x="30" y="100" font-size="1.1em"> Lead size: 2.0 mm</text>
 <text x="1480" y="30" font-size="1.6em" font-weight="bold" text-anchor="end" dominant-baseline="central">Colour variants of the body</text>
-<rect x="1440" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="black" />
+<rect x="1440" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="black" fill-opacity="1"/>
 <text x="1460" y="100" transform="rotate(-90, 1460, 100)" font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">black</text>
-<rect x="1380" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="#0174bd" />
+<rect x="1380" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="#0174bd" fill-opacity="1"/>
 <text x="1400" y="100" transform="rotate(-90, 1400, 100)" font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">blue</text>
 <text x="30" y="136" font-size="1.2em" font-weight="bold" text-anchor="start" dominant-baseline="central">Materials:</text>
 <text x="50" y="156" font-size="1.2em" text-anchor="start" dominant-baseline="central"> - plastic</text>
@@ -225,7 +225,7 @@
 <circle r="12.5" cx="160" cy="300" stroke="black" stroke-width="0.5" fill="white" fill-opacity="1"/>
 <circle r="18.75" cx="160" cy="300" stroke="black" stroke-width="0.5" fill="white" fill-opacity="1"/>
 <circle r="8.75" cx="160" cy="300" fill="white" fill-opacity="1" stroke="black" stroke-width="0.5"  />
-<circle r="5" cx="160" cy="300" fill="white" fill-opacity="1" stroke="dimgray" stroke-width="0.5"  />
+<circle r="25" cx="160" cy="300" fill="white" fill-opacity="1" stroke="dimgray" stroke-width="0.5"  />
 <circle r="8.75" cx="1400" cy="300" fill="white" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 <circle r="12.5" cx="1400" cy="300" stroke="black" stroke-width="0.5" fill="white" fill-opacity="1"/>
 <circle r="18.75" cx="1400" cy="300" stroke="black" stroke-width="0.5" fill="white" fill-opacity="1"/>

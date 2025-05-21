@@ -6,14 +6,15 @@ import {OpaqueColour} from "./OpaqueColour.ts";
 import {PartDeserialiser} from "./deserialisers/PartDeserialiser.ts";
 import {ExtraDeserialiser} from "./deserialisers/ExtraDeserialiser.ts";
 import {Base} from "./Base.ts";
+import {StringArrayDeserialiser} from "./deserialisers/StringArrayDeserialiser.ts";
 
 export class Component extends Base {
 
 	@JsonProperty({ name: "material", required: false })
 	private material:string; // the materials that this component is made out of
 
-	@JsonProperty({ name: "color", required: false })
-	private colours:string[]; // the colours of this component
+	@JsonProperty({ name: "colours", required: false })
+	private colours: string[]; // the colours of this component
 
 	@JsonProperty({ name: "type", required: false })
 	type:string; // the type of this component
@@ -64,7 +65,7 @@ export class Component extends Base {
 		}
 
 		for(const extra of this.extras) {
-			extra.postConstruct(colours, colourMap);
+			extra.postConstruct(this.mergedColours, colourMap);
 		}
 
 		for(const internalEnd of this.internalEnd) {

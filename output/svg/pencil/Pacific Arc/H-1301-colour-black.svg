@@ -24,9 +24,9 @@
 <path d="M231.875 75 L379.375 75 L379.375 125 L231.875 125 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1" />
 <path d="M231.875 75 L379.375 75 L379.375 125 L231.875 125 Z" stroke-width="1.0" stroke="black" fill="url(#ridged)"/>
 <path d="M379.375 76.25 L419.375 76.25 L419.375 123.75 L379.375 123.75 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="grey" fill-opacity="1" />
-<rect x="379.375" y="96" width="40" height="8" rx="0" ry="0" stroke-width="1" stroke="black" fill="black"/>
-<rect x="385.375" y="88.125" width="28" height="23.75" rx="3" ry="3" stroke-width="1" stroke="black" fill="black"/>
-<rect x="379.625" y="96.25" width="39.5" height="7.5" rx="0" ry="0" stroke-width="1" stroke="none" fill="black"/>
+<rect x="379.375" y="96" width="40" height="8" rx="0" ry="0" stroke-width="1" stroke="black" fill="grey"/>
+<rect x="385.375" y="88.125" width="28" height="23.75" rx="3" ry="3" stroke-width="1" stroke="black" fill="grey"/>
+<rect x="379.625" y="96.25" width="39.5" height="7.5" rx="0" ry="0" stroke-width="1" stroke="none" fill="grey"/>
 <text x="399.375" y="100" text-anchor="middle" dominant-baseline="central"><tspan stroke="dimgray" stroke-width="0.5" font-family="sans-serif" fill="black" textLength="{this.width * 5 - 14}" > HB</tspan></text><path d="M419.375 77.5 L738.125 77.5 L738.125 122.5 L419.375 122.5 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1" />
 <path d="M582.875 65.875 Q605.625 89.375 615.625 65.875 Z" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
 <line x1="580.625" y1="64.375" x2="763.125" y2="64.375" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
@@ -40,8 +40,8 @@
 <path d="M796.875 79.375 L851.875 79.375 L851.875 120.625 L796.875 120.625 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1" />
 <path d="M851.875 80 L854.375 80 L854.375 120 L851.875 120 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1" />
 <path d="M854.375 79.375 L861.875 79.375 L861.875 120.625 L854.375 120.625 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1" />
-<rect x="231.875" y="75.25" width="99.5" height="49.5" rx="0" ry="0" stroke-width="0.5" stroke="none" fill="none" fill-opacity="1"/>
-<path d="M 331.875 75 C 206.875 75, 206.875 125, 331.875 125, " stroke-width="0.5" stroke="dimgray" stroke-linecap="round" fill="black" /><rect x="331.875" y="75.25" width="47" height="49.5" rx="0" ry="0" stroke-width="0.5" stroke="none" fill="none" fill-opacity="1"/>
+<rect x="231.875" y="75.25" width="99.5" height="49.5" rx="0" ry="0" stroke-width="0.5" stroke="none" fill="black" fill-opacity="1"/>
+<path d="M 331.875 75 C 206.875 75, 206.875 125, 331.875 125, " stroke-width="0.5" stroke="dimgray" stroke-linecap="round" fill="black" /><rect x="331.875" y="75.25" width="47" height="49.5" rx="0" ry="0" stroke-width="0.5" stroke="none" fill="black" fill-opacity="1"/>
 <path d="M 331.875 75 C 393.625 75, 393.625 125, 331.875 125, " stroke-width="0.5" stroke="dimgray" stroke-linecap="round" fill="black" />
 </g><text x="50%" y="160" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb)</text>
 <text x="50%" y="180" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>

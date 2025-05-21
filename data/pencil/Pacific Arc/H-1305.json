@@ -7,6 +7,8 @@
 	"text": "PACIFIC ARC H-1305",
 	"colour_component": "body",
 	"accurate": true,
+	"mechanism": "",
+	"colours": [ "black", "blue", "green", "red", "brown" ],
 	"features": [
 		{ "type": "sharpener", "location":  "Inside cap"}
 	],
@@ -63,8 +65,7 @@
 			"internal_start": [
 				{ "shape": "cylinder", "dimensions": [ 5.75, 6.5 ], "finish": "threaded" }
 			],
-			"material": "plastic",
-			"colours": [ "black", "blue", "green", "red", "brown" ]
+			"material": "plastic"
 		},
 		{
 			"type": "clip",

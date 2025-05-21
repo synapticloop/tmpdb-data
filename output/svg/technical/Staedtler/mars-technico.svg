@@ -46,13 +46,13 @@
 <line x1="1380" y1="500" x2="1420" y2="500" stroke-linecap="round" stroke="#000000"  stroke-width="1" />
 <line x1="1400" y1="480" x2="1400" y2="520" stroke="#000000" stroke-linecap="round"  stroke-width="1" />
 <circle r="10" cx="1400" cy="500" fill="white" fill-opacity="0" stroke="#000000" stroke-width="1"  />
-<text x="30" y="50" font-size="2.0em" font-weight="bold"> Staedtler //  (Model #: 780c)</text>
+<text x="30" y="50" font-size="2.0em" font-weight="bold"> Staedtler // Mars Technico (Model #: 780c)</text>
 <text x="30" y="80" font-size="1.1em"> STAEDTLER Mars technico</text>
 <text x="30" y="100" font-size="1.1em"> Lead size: 2.0 mm</text>
 <text x="1480" y="30" font-size="1.6em" font-weight="bold" text-anchor="end" dominant-baseline="central">Colour variants of the body</text>
-<rect x="1440" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="black" />
+<rect x="1440" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="black" fill-opacity="1"/>
 <text x="1460" y="100" transform="rotate(-90, 1460, 100)" font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">black</text>
-<rect x="1380" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="blue" />
+<rect x="1380" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="blue" fill-opacity="1"/>
 <text x="1400" y="100" transform="rotate(-90, 1400, 100)" font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">blue</text>
 <text x="30" y="136" font-size="1.2em" font-weight="bold" text-anchor="start" dominant-baseline="central">Materials:</text>
 <text x="50" y="156" font-size="1.2em" text-anchor="start" dominant-baseline="central"> - metal</text>
@@ -216,7 +216,7 @@
 <circle r="13.75" cx="160" cy="300" stroke="black" stroke-width="0.5" fill="white" fill-opacity="1"/>
 <circle r="17.5" cx="160" cy="300" stroke="black" stroke-width="0.5" fill="white" fill-opacity="1"/>
 <circle r="6.875" cx="160" cy="300" fill="white" fill-opacity="1" stroke="black" stroke-width="0.5"  />
-<circle r="5" cx="160" cy="300" fill="white" fill-opacity="1" stroke="dimgray" stroke-width="0.5"  />
+<circle r="25" cx="160" cy="300" fill="white" fill-opacity="1" stroke="dimgray" stroke-width="0.5"  />
 <circle r="6.875" cx="1400" cy="300" fill="white" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 <circle r="13.75" cx="1400" cy="300" stroke="black" stroke-width="0.5" fill="white" fill-opacity="1"/>
 <circle r="17.5" cx="1400" cy="300" stroke="black" stroke-width="0.5" fill="white" fill-opacity="1"/>

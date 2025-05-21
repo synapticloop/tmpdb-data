@@ -50,15 +50,15 @@
 <text x="30" y="80" font-size="1.1em"> PACIFIC ARC H-1305</text>
 <text x="30" y="100" font-size="1.1em"> Lead size: 2.0 mm</text>
 <text x="1480" y="30" font-size="1.6em" font-weight="bold" text-anchor="end" dominant-baseline="central">Colour variants of the body</text>
-<rect x="1440" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="black" />
+<rect x="1440" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="black" fill-opacity="1"/>
 <text x="1460" y="100" transform="rotate(-90, 1460, 100)" font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">black</text>
-<rect x="1380" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="#1d528a" />
+<rect x="1380" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="#1d528a" fill-opacity="1"/>
 <text x="1400" y="100" transform="rotate(-90, 1400, 100)" font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">blue</text>
-<rect x="1320" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="#404f4c" />
+<rect x="1320" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="#404f4c" fill-opacity="1"/>
 <text x="1340" y="100" transform="rotate(-90, 1340, 100)" font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">green</text>
-<rect x="1260" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="#be3f39" />
+<rect x="1260" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="#be3f39" fill-opacity="1"/>
 <text x="1280" y="100" transform="rotate(-90, 1280, 100)" font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">red</text>
-<rect x="1200" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="#3f3533" />
+<rect x="1200" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="#3f3533" fill-opacity="1"/>
 <text x="1220" y="100" transform="rotate(-90, 1220, 100)" font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">brown</text>
 <text x="30" y="136" font-size="1.2em" font-weight="bold" text-anchor="start" dominant-baseline="central">Materials:</text>
 <text x="50" y="156" font-size="1.2em" text-anchor="start" dominant-baseline="central"> - metal</text>
@@ -249,7 +249,7 @@
 <circle r="20.625" cx="160" cy="300" stroke="black" stroke-width="0.5" fill="#b4b8b9" fill-opacity="1"/>
 <circle r="8.125" cx="160" cy="300" stroke="black" stroke-width="0.5" fill="#b4b8b9" fill-opacity="1"/>
 <circle r="10" cx="160" cy="300" stroke="black" stroke-width="0.5" fill="#b4b8b9" fill-opacity="1"/>
-<circle r="5" cx="160" cy="300" fill="black" fill-opacity="1" stroke="dimgray" stroke-width="0.5"  />
+<circle r="25" cx="160" cy="300" fill="c" fill-opacity="1" stroke="dimgray" stroke-width="0.5"  />
 <circle r="8.125" cx="1400" cy="300" stroke="black" stroke-width="0.5" fill="#b4b8b9" fill-opacity="1"/>
 <circle r="10" cx="1400" cy="300" stroke="black" stroke-width="0.5" fill="#b4b8b9" fill-opacity="1"/>
 <circle r="13.125" cx="1400" cy="300" stroke="black" stroke-width="0.5" fill="#b4b8b9" fill-opacity="1"/>
@@ -267,7 +267,7 @@
 <circle r="13.75" cx="1400" cy="300" fill="#b4b8b9" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 <circle r="12.5" cx="1400" cy="300" fill="#b4b8b9" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 <circle r="13.75" cx="1400" cy="300" fill="#b4b8b9" fill-opacity="1" stroke="black" stroke-width="0.5"  />
-<circle r="5" cx="1400" cy="300" fill="black" fill-opacity="1" stroke="dimgray" stroke-width="1"  />
+<circle r="5" cx="1400" cy="300" fill="c" fill-opacity="1" stroke="dimgray" stroke-width="1"  />
 </g><text x="50%" y="580" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb) // Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
 <text x="1490" y="590" font-size="0.5em" font-weight="bold" text-anchor="end" dominant-baseline="middle">SVGTechnicalRenderer</text>
 </svg>

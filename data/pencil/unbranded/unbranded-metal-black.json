@@ -1,8 +1,11 @@
 {
-	"brand": "unbranded",
-	"model": "Metal Black",
+	"brand": "Unbranded",
+	"model_name": "Metal Black",
+	"model_number": "unknown",
 	"text": "",
 	"colour_component": "body",
+	"colours": [ "black"],
+	"mechanism": "click",
 	"lead_size": 2.0,
 	"front": [
 		{ "shape": "cylinder", "dimensions": [ 2.0, 10.0 ], "fill":  "black" }
@@ -15,16 +18,14 @@
 				{ "shape": "cone", "dimensions": [ 8.75, 4.5, 7.5 ], "offset": [ 4.75 ] },
 				{ "shape": "cylinder", "dimensions": [ 4.75, 7.5 ] }
 			],
-			"material": "metal",
-			"colours": [ "black" ]
+			"material": "metal"
 		},
 		{
 			"type": "head",
 			"parts": [
 				{ "shape": "cylinder", "dimensions": [ 1.5, 8.5 ] }
 			],
-			"material": "metal",
-			"colours": [ "black"]
+			"material": "metal"
 		},
 		{
 			"type": "grip",
@@ -41,8 +42,7 @@
 				{ "shape": "cylinder", "dimensions": [ 1.0, 8.5 ] },
 				{ "shape": "cylinder", "dimensions": [ 19.5, 9.0 ], "finish":  "knurled" }
 			],
-			"material": "metal",
-			"colours": [ "black" ]
+			"material": "metal"
 		},
 		{
 			"type": "body",
@@ -69,8 +69,7 @@
 					]
 				}
 			],
-			"material": "metal",
-			"colours": [ "black" ]
+			"material": "metal"
 		},
 		{
 			"type": "tail",
@@ -87,8 +86,7 @@
 				{ "shape": "cone", "dimensions": [ 2.75, 6.25, 5.75 ] },
 				{ "shape": "cylinder", "dimensions": [ 7.25, 5.75 ] }
 			],
-			"material": "plastic",
-			"colours": [ "black" ]
+			"material": "plastic"
 		}
 	]
 }

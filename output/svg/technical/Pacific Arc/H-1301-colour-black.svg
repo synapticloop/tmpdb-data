@@ -50,9 +50,9 @@
 <text x="30" y="80" font-size="1.1em"> PACIFIC ARC H-1301</text>
 <text x="30" y="100" font-size="1.1em"> Lead size: 2.0 mm</text>
 <text x="1480" y="30" font-size="1.6em" font-weight="bold" text-anchor="end" dominant-baseline="central">Colour variants of the body</text>
-<rect x="1440" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="black" />
+<rect x="1440" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="black" fill-opacity="1"/>
 <text x="1460" y="100" transform="rotate(-90, 1460, 100)" font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">black</text>
-<rect x="1380" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="#0174bd" />
+<rect x="1380" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="#0174bd" fill-opacity="1"/>
 <text x="1400" y="100" transform="rotate(-90, 1400, 100)" font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">blue</text>
 <text x="30" y="136" font-size="1.2em" font-weight="bold" text-anchor="start" dominant-baseline="central">Materials:</text>
 <text x="50" y="156" font-size="1.2em" text-anchor="start" dominant-baseline="central"> - plastic</text>
@@ -191,9 +191,9 @@
 <path d="M481.875 275 L629.375 275 L629.375 325 L481.875 325 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1" />
 <path d="M481.875 275 L629.375 275 L629.375 325 L481.875 325 Z" stroke-width="1.0" stroke="black" fill="url(#ridged)"/>
 <path d="M629.375 276.25 L669.375 276.25 L669.375 323.75 L629.375 323.75 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="grey" fill-opacity="1" />
-<rect x="629.375" y="296" width="40" height="8" rx="0" ry="0" stroke-width="1" stroke="black" fill="black"/>
-<rect x="635.375" y="288.125" width="28" height="23.75" rx="3" ry="3" stroke-width="1" stroke="black" fill="black"/>
-<rect x="629.625" y="296.25" width="39.5" height="7.5" rx="0" ry="0" stroke-width="1" stroke="none" fill="black"/>
+<rect x="629.375" y="296" width="40" height="8" rx="0" ry="0" stroke-width="1" stroke="black" fill="grey"/>
+<rect x="635.375" y="288.125" width="28" height="23.75" rx="3" ry="3" stroke-width="1" stroke="black" fill="grey"/>
+<rect x="629.625" y="296.25" width="39.5" height="7.5" rx="0" ry="0" stroke-width="1" stroke="none" fill="grey"/>
 <text x="649.375" y="300" text-anchor="middle" dominant-baseline="central"><tspan stroke="dimgray" stroke-width="0.5" font-family="sans-serif" fill="black" textLength="{this.width * 5 - 14}" > HB</tspan></text><path d="M669.375 277.5 L988.125 277.5 L988.125 322.5 L669.375 322.5 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1" />
 <path d="M832.875 265.875 Q855.625 289.375 865.625 265.875 Z" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
 <line x1="830.625" y1="264.375" x2="1013.125" y2="264.375" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
@@ -207,8 +207,8 @@
 <path d="M1046.875 279.375 L1101.875 279.375 L1101.875 320.625 L1046.875 320.625 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1" />
 <path d="M1101.875 280 L1104.375 280 L1104.375 320 L1101.875 320 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1" />
 <path d="M1104.375 279.375 L1111.875 279.375 L1111.875 320.625 L1104.375 320.625 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1" />
-<rect x="481.875" y="275.25" width="99.5" height="49.5" rx="0" ry="0" stroke-width="0.5" stroke="none" fill="none" fill-opacity="1"/>
-<path d="M 581.875 275 C 456.875 275, 456.875 325, 581.875 325, " stroke-width="0.5" stroke="dimgray" stroke-linecap="round" fill="black" /><rect x="581.875" y="275.25" width="47" height="49.5" rx="0" ry="0" stroke-width="0.5" stroke="none" fill="none" fill-opacity="1"/>
+<rect x="481.875" y="275.25" width="99.5" height="49.5" rx="0" ry="0" stroke-width="0.5" stroke="none" fill="black" fill-opacity="1"/>
+<path d="M 581.875 275 C 456.875 275, 456.875 325, 581.875 325, " stroke-width="0.5" stroke="dimgray" stroke-linecap="round" fill="black" /><rect x="581.875" y="275.25" width="47" height="49.5" rx="0" ry="0" stroke-width="0.5" stroke="none" fill="black" fill-opacity="1"/>
 <path d="M 581.875 275 C 643.625 275, 643.625 325, 581.875 325, " stroke-width="0.5" stroke="dimgray" stroke-linecap="round" fill="black" />
 <circle r="20.625" cx="160" cy="300" fill="black" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 <circle r="20" cx="160" cy="300" fill="black" fill-opacity="1" stroke="black" stroke-width="0.5"  />
@@ -225,7 +225,7 @@
 <circle r="12.5" cx="160" cy="300" stroke="black" stroke-width="0.5" fill="#b4b8b9" fill-opacity="1"/>
 <circle r="18.75" cx="160" cy="300" stroke="black" stroke-width="0.5" fill="#b4b8b9" fill-opacity="1"/>
 <circle r="8.75" cx="160" cy="300" fill="#b4b8b9" fill-opacity="1" stroke="black" stroke-width="0.5"  />
-<circle r="5" cx="160" cy="300" fill="black" fill-opacity="1" stroke="dimgray" stroke-width="0.5"  />
+<circle r="25" cx="160" cy="300" fill="b" fill-opacity="1" stroke="dimgray" stroke-width="0.5"  />
 <circle r="8.75" cx="1400" cy="300" fill="#b4b8b9" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 <circle r="12.5" cx="1400" cy="300" stroke="black" stroke-width="0.5" fill="#b4b8b9" fill-opacity="1"/>
 <circle r="18.75" cx="1400" cy="300" stroke="black" stroke-width="0.5" fill="#b4b8b9" fill-opacity="1"/>
@@ -241,7 +241,7 @@
 <circle r="20.625" cx="1400" cy="300" fill="black" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 <circle r="20" cx="1400" cy="300" fill="black" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 <circle r="20.625" cx="1400" cy="300" fill="black" fill-opacity="1" stroke="black" stroke-width="0.5"  />
-<circle r="5" cx="1400" cy="300" fill="black" fill-opacity="1" stroke="dimgray" stroke-width="1"  />
+<circle r="5" cx="1400" cy="300" fill="b" fill-opacity="1" stroke="dimgray" stroke-width="1"  />
 </g><text x="50%" y="580" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb) // Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
 <text x="1490" y="590" font-size="0.5em" font-weight="bold" text-anchor="end" dominant-baseline="middle">SVGTechnicalRenderer</text>
 </svg>

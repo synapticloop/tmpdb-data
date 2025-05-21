@@ -9,6 +9,7 @@
 	"weight": 11.0,
 	"mechanism": "click",
 	"colour_component": "body",
+	"colours": [ "yellow", "blue", "green", "red", "wood", "black" ],
 	"features": [
 		{ "type": "eraser", "location": "End of pencil, attached to Ferrule" }
 	],
@@ -33,7 +34,7 @@
 				{ "shape": "cone", "dimensions": [ 5.0, 3.25, 7.5 ] }
 			],
 			"material": "metal",
-			"colours": [ "brass", "brass", "brass", "brass", "brass", "brass" ]
+			"colours": [ "brass" ]
 		},
 		{
 			"type": "head",
@@ -44,7 +45,7 @@
 				}
 			],
 			"material": "wood",
-			"colours": [ "wood", "wood", "wood", "wood", "wood", "wood"]
+			"colours": [ "wood" ]
 		},
 		{
 			"type": "body",
@@ -59,11 +60,10 @@
 				{
 					"shape": "cylinder",
 					"dimensions": [ 8.5, 9.25 ],
-					"colours": [ "wood", "wood", "wood", "wood", "wood", "wood"]
+					"colours": [ "wood" ]
 				}
 			],
-			"material": "wood",
-			"colours": [ "yellow", "blue", "green", "red", "wood", "black" ]
+			"material": "wood"
 		},
 		{
 			"type": "ferrule",

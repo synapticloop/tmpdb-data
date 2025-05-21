@@ -8,6 +8,7 @@
 	"colour_component": "body",
 	"mechanism": "click",
 	"accurate": true,
+	"colours": [ "black", "blue" ],
 	"features": [
 		{ "type": "sharpener", "location":  "Inside cap"}
 	],
@@ -57,8 +58,7 @@
 			"parts": [
 				{ "shape": "cylinder", "dimensions": [ 63.75, 9.0 ] }
 			],
-			"material": "plastic",
-			"colours": [ "black", "blue" ]
+			"material": "plastic"
 		},
 		{
 			"type": "clip",
