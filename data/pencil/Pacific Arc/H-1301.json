@@ -26,34 +26,44 @@
 			"type": "tip",
 			"parts": [
 				{ "shape": "cylinder", "dimensions": [ 3.75, 3.5 ] },
-				{ "shape": "cone", "dimensions": [ 6.5, 5.0, 7.5 ] }
+				{ "shape": "cone", "dimensions": [ 5.0, 5.0, 7.5 ] },
+				{ "shape": "cylinder", "dimensions": [ 4.25, 7.5 ] },
+				{ "shape": "cylinder", "dimensions": [ 3.25, 8.0 ] },
+				{ "shape": "cylinder", "dimensions": [ 2.5, 8.75 ] }
 			],
-			"material": "metal",
+			"material": "plastic",
 			"colours": [ "silver" ]
 		},
 		{
 			"type": "grip",
 			"parts": [
-				{ "shape": "cylinder", "dimensions": [ 29.5, 8.25 ], "finish":  "knurled" }
+				{ "shape": "cylinder", "dimensions": [ 29.5, 10 ], "finish":  "ridged", "taper_start": { "offset": [ 20.0, 0.25 ], "backgroundColours": [ "none", "none" ] }, "taper_end": { "offset": [ -9.5, -0.3 ], "backgroundColours": [ "none", "none" ] }  }
 			],
-			"material": "metal",
-			"colours": [ "silver" ]
+			"material": "rubber",
+			"internal_start": [
+				{ "shape": "cylinder", "dimensions": [ 3.5, 6.75 ], "finish": "threaded" }
+			]
+		},
+		{
+			"type": "indicator",
+			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 8.0, 9.5 ], "finish":  "indicator-split,squared", "background_colours": [ "black", "blue"] }
+			],
+			"material": "plastic",
+			"colours": [ "grey" ]
 		},
 		{
 			"type": "body",
 			"parts": [
-				{ "shape": "hexagonal", "dimensions": [ 67.5, 8.0 ] }
-			],
-			"internal_start": [
-				{ "shape": "cylinder", "dimensions": [ 5.75, 6.5 ], "finish": "threaded" }
+				{ "shape": "cylinder", "dimensions": [ 63.75, 9.0 ] }
 			],
 			"material": "plastic",
-			"colours": [ "black", "blue", "green", "red", "brown" ]
+			"colours": [ "black", "blue" ]
 		},
 		{
 			"type": "clip",
 			"parts": [
-				{ "shape": "cylinder", "dimensions": [ 5.5, 9.0 ] }
+				{ "shape": "cylinder", "dimensions": [ 4.75, 9.25 ] }
 			],
 			"extras": [
 				{
@@ -72,44 +82,22 @@
 		{
 			"type": "tail",
 			"parts": [
-				{ "shape": "cylinder", "dimensions": [ 4.0, 8.0 ] }
+				{ "shape": "cylinder", "dimensions": [ 1.75, 8.75 ] }
 			],
-			"material": "metal",
-			"colours": [ "silver" ]
-		},
-		{
-			"type": "indicator",
-			"parts": [
-				{ "shape": "cylinder", "dimensions": [ 9.5, 8.25 ], "finish": "knurled,indicator" }
-			],
-			"material": "plastic",
-			"colours": [ "silver" ]
-		},
-		{
-			"type": "foot",
-			"parts": [
-				{ "shape": "cylinder", "dimensions": [ 3.0, 8.0 ] }
-			],
-			"material": "metal",
-			"colours": [ "silver" ]
+			"material": "metal"
 		},
 		{
 			"type": "cap",
 			"parts": [
-				{ "shape": "cylinder", "dimensions": [ 6.0, 5.5 ] },
-				{ "shape": "cylinder", "dimensions": [ 0.75, 5.0 ] },
-				{ "shape": "cylinder", "dimensions": [ 1.5, 5.5 ] },
-				{ "shape": "cylinder", "dimensions": [ 0.75, 5.0 ] },
-				{ "shape": "cylinder", "dimensions": [ 1.5, 5.5 ] },
-				{ "shape": "cylinder", "dimensions": [ 0.75, 5.0 ] },
-				{ "shape": "cylinder", "dimensions": [ 1.75, 5.5 ] }
+				{ "shape": "cylinder", "dimensions": [ 5.25, 6.25 ] },
+				{ "shape": "cylinder", "dimensions": [ 11.0, 8.25 ] },
+				{ "shape": "cylinder", "dimensions": [ 0.5, 8.0 ] },
+				{ "shape": "cylinder", "dimensions": [ 1.5, 8.25 ] }
 			],
 			"internal_start": [
-				{ "shape": "cylinder", "dimensions": [ 14.5, 5.5 ], "colours": [ "black" ]  },
-				{ "shape": "cylinder", "dimensions": [ 5.75, 5.5 ]  }
+				{ "shape": "cylinder", "dimensions": [ 6.25, 6.25 ] }
 			],
-			"material": "plastic",
-			"colours": [ "silver" ]
+			"material": "plastic"
 		}
 	]
 }

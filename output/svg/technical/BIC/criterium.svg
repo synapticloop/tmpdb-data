@@ -5,6 +5,12 @@
 <path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,0" />
 <path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,0" />
 </pattern>
+<pattern id="ridged" patternUnits="userSpaceOnUse" width="3" height="3">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 0,0 L 0,3"/>
+</pattern>
+<pattern id="lined" patternUnits="userSpaceOnUse" width="3" height="3">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 0,0 L 3,0"/>
+</pattern>
 <pattern id="spring" patternUnits="userSpaceOnUse" width="8" height="100">
 <path stroke="dimgray" stroke-linecap="round" stroke-width="2" d="M 0,0 L 8,100"/>
 <path stroke="white" stroke-linecap="round" stroke-width="1" d="M 0,0 L 8,100"/>
@@ -122,7 +128,7 @@
 <line x1="833.125" y1="209" x2="833.125" y2="231" stroke="black" stroke-width="1" />
 <line x1="833.125" y1="220" x2="1020.625" y2="220" stroke="black" stroke-width="1" />
 <line x1="1020.625" y1="209" x2="1020.625" y2="231" stroke="black" stroke-width="1" />
-<text x="926.875" y="212" font-weight="bold" font-size="1.2em" text-anchor="middle" dominant-baseline="middle" fill="black"><tspan x="918.875" dy="0">37.50 mm</tspan><tspan x="918.875" dy="1em">clip (extra)</tspan></text>
+<text x="926.875" y="212" font-weight="bold" font-size="1.2em" stroke="white" stroke-width="0.25" text-anchor="middle" dominant-baseline="middle" fill="black"><tspan x="918.875" dy="0">37.50 mm</tspan><tspan x="918.875" dy="1em">clip (extra)</tspan></text>
 <line x1="1004.375" y1="169" x2="1004.375" y2="191" stroke="black" stroke-width="1" />
 <line x1="1004.375" y1="180" x2="1060.625" y2="180" stroke="black" stroke-width="1" />
 <line x1="1060.625" y1="169" x2="1060.625" y2="191" stroke="black" stroke-width="1" />
@@ -134,7 +140,7 @@
 <line x1="395.625" y1="341.5" x2="395.625" y2="363.5" stroke="black" stroke-width="1" />
 <line x1="395.625" y1="352.5" x2="1104.375" y2="352.5" stroke="black" stroke-width="1" />
 <line x1="1104.375" y1="341.5" x2="1104.375" y2="363.5" stroke="black" stroke-width="1" />
-<text x="750" y="352.5" font-weight="bold" font-size="1.2em" text-anchor="middle" dominant-baseline="middle" fill="black"><tspan x="750" dy="0">141.75 mm</tspan></text>
+<text x="750" y="352.5" font-weight="bold" font-size="1.2em" stroke="white" stroke-width="0.25" text-anchor="middle" dominant-baseline="middle" fill="black"><tspan x="750" dy="0">141.75 mm</tspan></text>
 <line x1="395.625" y1="409" x2="395.625" y2="431" stroke="black" stroke-width="1" />
 <line x1="395.625" y1="420" x2="406.875" y2="420" stroke="black" stroke-width="1" />
 <line x1="406.875" y1="409" x2="406.875" y2="431" stroke="black" stroke-width="1" />
@@ -158,11 +164,11 @@
 <line x1="833.125" y1="369" x2="833.125" y2="391" stroke="black" stroke-width="1" />
 <line x1="833.125" y1="380" x2="1020.625" y2="380" stroke="black" stroke-width="1" />
 <line x1="1020.625" y1="369" x2="1020.625" y2="391" stroke="black" stroke-width="1" />
-<text x="926.875" y="399" font-size="1.2em"  text-anchor="middle" dominant-baseline="central" fill="black"><tspan x="926.875" dy="0">plastic</tspan></text>
+<text x="926.875" y="399" font-size="1.2em"  text-anchor="middle" dominant-baseline="central" fill="black"><tspan x="926.875" dy="0">metal</tspan></text>
 <line x1="970.625" y1="409" x2="970.625" y2="431" stroke="black" stroke-width="1" />
 <line x1="970.625" y1="420" x2="1004.375" y2="420" stroke="black" stroke-width="1" />
 <line x1="1004.375" y1="409" x2="1004.375" y2="431" stroke="black" stroke-width="1" />
-<text x="987.5" y="439" font-size="1.2em" transform="rotate(-90, 987.5, 439)"  text-anchor="end" dominant-baseline="middle" fill="black"><tspan x="987.5" dy="0">plastic</tspan></text>
+<text x="987.5" y="439" font-size="1.2em" transform="rotate(-90, 987.5, 439)"  text-anchor="end" dominant-baseline="middle" fill="black"><tspan x="987.5" dy="0">metal</tspan></text>
 <line x1="1004.375" y1="409" x2="1004.375" y2="431" stroke="black" stroke-width="1" />
 <line x1="1004.375" y1="420" x2="1060.625" y2="420" stroke="black" stroke-width="1" />
 <line x1="1060.625" y1="409" x2="1060.625" y2="431" stroke="black" stroke-width="1" />

@@ -5,6 +5,12 @@
 <path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,0" />
 <path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,0" />
 </pattern>
+<pattern id="ridged" patternUnits="userSpaceOnUse" width="3" height="3">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 0,0 L 0,3"/>
+</pattern>
+<pattern id="lined" patternUnits="userSpaceOnUse" width="3" height="3">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 0,0 L 3,0"/>
+</pattern>
 <pattern id="spring" patternUnits="userSpaceOnUse" width="8" height="100">
 <path stroke="dimgray" stroke-linecap="round" stroke-width="2" d="M 0,0 L 8,100"/>
 <path stroke="white" stroke-linecap="round" stroke-width="1" d="M 0,0 L 8,100"/>
@@ -59,7 +65,7 @@
 <line x1="629.375" y1="209" x2="629.375" y2="231" stroke="black" stroke-width="1" />
 <line x1="629.375" y1="220" x2="836.875" y2="220" stroke="black" stroke-width="1" />
 <line x1="836.875" y1="209" x2="836.875" y2="231" stroke="black" stroke-width="1" />
-<text x="733.125" y="212" font-weight="bold" font-size="1.2em" text-anchor="middle" dominant-baseline="middle" fill="black"><tspan x="725.125" dy="0">41.50 mm</tspan><tspan x="725.125" dy="1em">clip (extra)</tspan></text>
+<text x="733.125" y="212" font-weight="bold" font-size="1.2em" stroke="white" stroke-width="0.25" text-anchor="middle" dominant-baseline="middle" fill="black"><tspan x="725.125" dy="0">41.50 mm</tspan><tspan x="725.125" dy="1em">clip (extra)</tspan></text>
 <line x1="819.375" y1="169" x2="819.375" y2="191" stroke="black" stroke-width="1" />
 <line x1="819.375" y1="180" x2="845.625" y2="180" stroke="black" stroke-width="1" />
 <line x1="845.625" y1="169" x2="845.625" y2="191" stroke="black" stroke-width="1" />

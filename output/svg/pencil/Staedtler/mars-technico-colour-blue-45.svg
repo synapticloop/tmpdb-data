@@ -5,6 +5,12 @@
 <path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,0" />
 <path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,0" />
 </pattern>
+<pattern id="ridged" patternUnits="userSpaceOnUse" width="3" height="3">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 0,0 L 0,3"/>
+</pattern>
+<pattern id="lined" patternUnits="userSpaceOnUse" width="3" height="3">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 0,0 L 3,0"/>
+</pattern>
 <pattern id="spring" patternUnits="userSpaceOnUse" width="8" height="100">
 <path stroke="dimgray" stroke-linecap="round" stroke-width="2" d="M 0,0 L 8,100"/>
 <path stroke="white" stroke-linecap="round" stroke-width="1" d="M 0,0 L 8,100"/>
@@ -34,8 +40,8 @@
 <line x1="743.125" y1="466.625" x2="750.625" y2="479.125" stroke-width="3" stroke="silver" fill="silver" stroke-linecap="round" />
 <path d="M780.625 480.625 L815.625 480.625 L815.625 519.375 L780.625 519.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="blue" fill-opacity="1" />
 <path d="M815.625 485.625 L875.625 485.625 L875.625 514.375 L815.625 514.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
-<path d="M 356.875 480.625 C 489.7875 485.46875, 489.7875 495.15625, 356.875 500" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="blue" />
-<path d="M 356.875 519.375 C 489.7875 514.53125, 489.7875 504.84375, 356.875 500" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="blue" />
+<path d="M 183.125 480.625 C 344.70625 485.46875, 344.70625 495.15625, 183.125 500" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="blue" />
+<path d="M 183.125 519.375 C 344.70625 514.53125, 344.70625 504.84375, 183.125 500" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="blue" />
 </g><text x="50%" y="960" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb)</text>
 <text x="50%" y="980" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
 <text x="990" y="990" font-size="0.5em" font-weight="bold" text-anchor="end" dominant-baseline="middle">SVGPencil45Renderer</text>

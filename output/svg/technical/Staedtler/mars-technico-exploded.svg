@@ -5,6 +5,12 @@
 <path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,0" />
 <path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,0" />
 </pattern>
+<pattern id="ridged" patternUnits="userSpaceOnUse" width="3" height="3">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 0,0 L 0,3"/>
+</pattern>
+<pattern id="lined" patternUnits="userSpaceOnUse" width="3" height="3">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 0,0 L 3,0"/>
+</pattern>
 <pattern id="spring" patternUnits="userSpaceOnUse" width="8" height="100">
 <path stroke="dimgray" stroke-linecap="round" stroke-width="2" d="M 0,0 L 8,100"/>
 <path stroke="white" stroke-linecap="round" stroke-width="1" d="M 0,0 L 8,100"/>
@@ -20,8 +26,8 @@
 <path d="M383.125 100.625 L556.875 100.625 L556.875 139.375 L383.125 139.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
 <line x1="383.125" y1="120" x2="556.875" y2="120" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="383.125" y1="120" x2="556.875" y2="120" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
-<path d="M 456.875 100.625 C 589.7875 105.46875, 589.7875 115.15625, 456.875 120" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="white" />
-<path d="M 456.875 139.375 C 589.7875 134.53125, 589.7875 124.84375, 456.875 120" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="white" />
+<path d="M 283.125 100.625 C 444.70625 105.46875, 444.70625 115.15625, 283.125 120" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="white" />
+<path d="M 283.125 139.375 C 444.70625 134.53125, 444.70625 124.84375, 283.125 120" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="white" />
 <path d="M556.875 100.625 L850.625 100.625 L850.625 139.375 L556.875 139.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
 <line x1="556.875" y1="100.875" x2="556.875" y2="139.125" stroke="white" stroke-width="3" />
 <line x1="714.375" y1="91.625" x2="698.125" y2="99.125" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />

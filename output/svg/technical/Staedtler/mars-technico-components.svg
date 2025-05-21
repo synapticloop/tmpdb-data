@@ -5,6 +5,12 @@
 <path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,0" />
 <path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,0" />
 </pattern>
+<pattern id="ridged" patternUnits="userSpaceOnUse" width="3" height="3">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 0,0 L 0,3"/>
+</pattern>
+<pattern id="lined" patternUnits="userSpaceOnUse" width="3" height="3">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 0,0 L 3,0"/>
+</pattern>
 <pattern id="spring" patternUnits="userSpaceOnUse" width="8" height="100">
 <path stroke="dimgray" stroke-linecap="round" stroke-width="2" d="M 0,0 L 8,100"/>
 <path stroke="white" stroke-linecap="round" stroke-width="1" d="M 0,0 L 8,100"/>
@@ -61,7 +67,7 @@
 <line x1="680.625" y1="209" x2="680.625" y2="231" stroke="black" stroke-width="1" />
 <line x1="680.625" y1="220" x2="850.625" y2="220" stroke="black" stroke-width="1" />
 <line x1="850.625" y1="209" x2="850.625" y2="231" stroke="black" stroke-width="1" />
-<text x="765.625" y="212" font-weight="bold" font-size="1.2em" text-anchor="middle" dominant-baseline="middle" fill="black"><tspan x="757.625" dy="0">34.00 mm</tspan><tspan x="757.625" dy="1em">clip (extra)</tspan></text>
+<text x="765.625" y="212" font-weight="bold" font-size="1.2em" stroke="white" stroke-width="0.25" text-anchor="middle" dominant-baseline="middle" fill="black"><tspan x="757.625" dy="0">34.00 mm</tspan><tspan x="757.625" dy="1em">clip (extra)</tspan></text>
 <line x1="880.625" y1="169" x2="880.625" y2="191" stroke="black" stroke-width="1" />
 <line x1="880.625" y1="180" x2="915.625" y2="180" stroke="black" stroke-width="1" />
 <line x1="915.625" y1="169" x2="915.625" y2="191" stroke="black" stroke-width="1" />
@@ -92,8 +98,8 @@
 <line x1="843.125" y1="266.625" x2="850.625" y2="279.125" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
 <path d="M880.625 280.625 L915.625 280.625 L915.625 319.375 L880.625 319.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
 <path d="M915.625 285.625 L975.625 285.625 L975.625 314.375 L915.625 314.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
-<path d="M 456.875 280.625 C 589.7875 285.46875, 589.7875 295.15625, 456.875 300" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="white" />
-<path d="M 456.875 319.375 C 589.7875 314.53125, 589.7875 304.84375, 456.875 300" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="white" />
+<path d="M 283.125 280.625 C 444.70625 285.46875, 444.70625 295.15625, 283.125 300" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="white" />
+<path d="M 283.125 319.375 C 444.70625 314.53125, 444.70625 304.84375, 283.125 300" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="white" />
 </g><text x="50%" y="580" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb) // Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
 <text x="1190" y="590" font-size="0.5em" font-weight="bold" text-anchor="end" dominant-baseline="middle">SVGTechnicalComponentRenderer</text>
 </svg>

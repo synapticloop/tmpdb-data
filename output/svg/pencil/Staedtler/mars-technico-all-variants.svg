@@ -5,6 +5,12 @@
 <path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,0" />
 <path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,0" />
 </pattern>
+<pattern id="ridged" patternUnits="userSpaceOnUse" width="3" height="3">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 0,0 L 0,3"/>
+</pattern>
+<pattern id="lined" patternUnits="userSpaceOnUse" width="3" height="3">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 0,0 L 3,0"/>
+</pattern>
 <pattern id="spring" patternUnits="userSpaceOnUse" width="8" height="100">
 <path stroke="dimgray" stroke-linecap="round" stroke-width="2" d="M 0,0 L 8,100"/>
 <path stroke="white" stroke-linecap="round" stroke-width="1" d="M 0,0 L 8,100"/>
@@ -35,8 +41,8 @@
 <line x1="743.125" y1="86.625" x2="750.625" y2="99.125" stroke-width="3" stroke="silver" fill="silver" stroke-linecap="round" />
 <path d="M780.625 100.625 L815.625 100.625 L815.625 139.375 L780.625 139.375 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1" />
 <path d="M815.625 105.625 L875.625 105.625 L875.625 134.375 L815.625 134.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
-<path d="M 356.875 100.625 C 489.7875 105.46875, 489.7875 115.15625, 356.875 120" stroke-width="0.5" stroke="dimgray" stroke-linecap="round" fill="black" />
-<path d="M 356.875 139.375 C 489.7875 134.53125, 489.7875 124.84375, 356.875 120" stroke-width="0.5" stroke="dimgray" stroke-linecap="round" fill="black" />
+<path d="M 183.125 100.625 C 344.70625 105.46875, 344.70625 115.15625, 183.125 120" stroke-width="0.5" stroke="dimgray" stroke-linecap="round" fill="black" />
+<path d="M 183.125 139.375 C 344.70625 134.53125, 344.70625 124.84375, 183.125 120" stroke-width="0.5" stroke="dimgray" stroke-linecap="round" fill="black" />
 <path d="M124.375 233.125 L126.875 233.125 L126.875 246.875 L124.375 246.875 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
 <path d="M126.875 226.25 L173.125 222.5 L173.125 257.5 L126.875 253.75 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
 <path d="M173.125 221.25 L283.125 218.75 L283.125 261.25 L173.125 258.75 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
@@ -59,8 +65,8 @@
 <line x1="743.125" y1="206.625" x2="750.625" y2="219.125" stroke-width="3" stroke="silver" fill="silver" stroke-linecap="round" />
 <path d="M780.625 220.625 L815.625 220.625 L815.625 259.375 L780.625 259.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="blue" fill-opacity="1" />
 <path d="M815.625 225.625 L875.625 225.625 L875.625 254.375 L815.625 254.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
-<path d="M 356.875 220.625 C 489.7875 225.46875, 489.7875 235.15625, 356.875 240" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="blue" />
-<path d="M 356.875 259.375 C 489.7875 254.53125, 489.7875 244.84375, 356.875 240" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="blue" />
+<path d="M 183.125 220.625 C 344.70625 225.46875, 344.70625 235.15625, 183.125 240" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="blue" />
+<path d="M 183.125 259.375 C 344.70625 254.53125, 344.70625 244.84375, 183.125 240" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="blue" />
 </g><text x="50%" y="320" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb)</text>
 <text x="50%" y="340" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
 <text x="990" y="350" font-size="0.5em" font-weight="bold" text-anchor="end" dominant-baseline="middle">SVGPencilAllRenderer</text>
