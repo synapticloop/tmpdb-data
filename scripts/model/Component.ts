@@ -24,10 +24,10 @@ export class Component extends Base {
 	@JsonProperty({ name: "extras", required: false, type: Extra, deserializer: ExtraDeserialiser })
 	extras:Extra[] = [];
 
-	@JsonProperty({ name: "internal_start", required: false })
+	@JsonProperty({ name: "internal_start", required: false, type: Part, deserializer: PartDeserialiser })
 	internalStart:Part[] = []; // the type of this component
 
-	@JsonProperty({ name: "internal_end", required: false })
+	@JsonProperty({ name: "internal_end", required: false, type: Part, deserializer: PartDeserialiser })
 	internalEnd:Part[] = []; // the type of this component
 
 
@@ -55,7 +55,7 @@ export class Component extends Base {
 
 	isHidden: boolean = false;
 
-	postConstruct(colours: string[], colourMap: { [id: string]: string}): void {
+	postConstruct(colours: string[], colourMap: Map<string, string>): void {
 		// first up we want to cascade the postConstruct
 		super.mergeOpacityColours(this.colours, colours, colourMap);
 
@@ -65,6 +65,14 @@ export class Component extends Base {
 
 		for(const extra of this.extras) {
 			extra.postConstruct(colours, colourMap);
+		}
+
+		for(const internalEnd of this.internalEnd) {
+			internalEnd.postConstruct(this.mergedColours, colourMap);
+		}
+
+		for(const internalStart of this.internalStart) {
+			internalStart.postConstruct(this.mergedColours, colourMap);
 		}
 
 		this.materials.push(this.material);

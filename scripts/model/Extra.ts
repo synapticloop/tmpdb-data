@@ -20,7 +20,7 @@ export class Extra extends Base{
 	width: number;
 
 
-	postConstruct(colours: string[], colourMap: { [id: string]: string; }): void {
+	postConstruct(colours: string[], colourMap: Map<string, string>): void {
 		super.mergeOpacityColours(this.colours, colours, colourMap);
 
 		this.length = this.dimensions[0];

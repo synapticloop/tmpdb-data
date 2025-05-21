@@ -45,9 +45,9 @@ export class Part extends Base {
 	material: string = null;
 
 
-	postConstruct(colours: string[], colourMap: { [id: string]: string; }): void {
+	postConstruct(colours: string[], colourMap: Map<string, string>): void {
 		// contribute to the length
-		super.mergeOpacityColours(this.colours, colours, colourMap);
+		super.	mergeOpacityColours(this.colours, colours, colourMap);
 
 		if(this.taperStart) {
 			this.taperStart.postConstruct(this.mergedColours, colourMap);
@@ -67,18 +67,18 @@ export class Part extends Base {
 		}
 	}
 
-	getMaxHeight() {
+	getMaxHeight(): number {
 		if(this.startHeight > this.endHeight) {
 			return(this.startHeight);
 		}
 		return(this.endHeight);
 	}
 
-	getMinHeight():number {
+	getMinHeight(): number {
 		return(this.getMinWidth());
 	}
 
-	getMaxWidth():number {
+	getMaxWidth(): number {
 		switch (this.shape) {
 			case "hexagonal":
 				let apothem = this.startHeight/2;

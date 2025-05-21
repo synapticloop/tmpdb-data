@@ -766,10 +766,10 @@ export class PDFDatasheetRenderer {
 	private getColours(component: Component): string {
 		let textSet:Set<string> = new Set<string>();
 		let textArray:string[] = [];
-		component.colours.forEach(colour => {
-			if(!textSet.has(colour)) {
-				textSet.add(colour);
-				textArray.push(colour);
+		component.opacityColours.forEach(colour => {
+			if(!textSet.has(colour.colourName)) {
+				textSet.add(colour.colourName);
+				textArray.push(colour.colourName);
 			}
 		});
 

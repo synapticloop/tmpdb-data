@@ -1,15 +1,15 @@
 import {OpaqueColour} from "./OpaqueColour.ts";
 
 export abstract class Base {
-	static OPACITY_COLOUR_WHITE: OpaqueColour = new OpaqueColour({}, "white");
+	static OPACITY_COLOUR_WHITE: OpaqueColour = new OpaqueColour(new Map<string, string>(), "white");
 
-	abstract postConstruct(colours: string[], colourMap: { [id: string]: string}): void;
+	abstract postConstruct(colours: string[], colourMap: Map<string, string>): void;
 
-	private opacityColours: OpaqueColour[] = [];
-	private backgroundOpacityColours: OpaqueColour[] = [];
+	public opacityColours: OpaqueColour[] = [];
+	public backgroundOpacityColours: OpaqueColour[] = [];
 	protected mergedColours: string[] = [];
 
-	protected mergeOpacityColours(colours: string[], baseColours: string[], colourMap: { [p: string]: string }): void {
+	protected mergeOpacityColours(colours: string[], baseColours: string[], colourMap: Map<string, string>): void {
 		let mergedColours: string[];
 		if(colours === undefined || colours.length === 0) {
 			mergedColours = baseColours;
@@ -24,7 +24,7 @@ export abstract class Base {
 		}
 	}
 
-	protected mergeBackgroundOpacityColours(colours: string[], baseColours: string[], colourMap: { [p: string]: string }): void {
+	protected mergeBackgroundOpacityColours(colours: string[], baseColours: string[], colourMap: Map<string, string>): void {
 		let mergedColours: string[];
 		if(colours === undefined || colours.length === 0) {
 			mergedColours = baseColours;

@@ -281,7 +281,7 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 
 			component.parts.reverse();
 			for (let part of component.parts) {
-				colour = this.getMappedColour(part.colours, colourIndex, colour.colour);
+				colour = part.getOpacityColour(colourIndex);
 				switch (part.shape) {
 					case "cylinder":
 						svgString += circle(startX, midY, (part.startHeight / 2) * 5, "0.5", "black", colour);
@@ -306,20 +306,12 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 
 		for(let front of this.pencil.front) {
 			// only care about the first dimension - which is the width
-			let dimensions: number[] = front.dimensions;
-			let frontFillColour: OpaqueColour = new OpaqueColour(this.pencil.colourMap, "white");
+			let frontFillColour: OpaqueColour = front.getOpacityColour(colourIndex);
 
-			if(colourIndex !== -1) {
-				if (this.pencil.colourMap[front.fill]) {
-					frontFillColour = new OpaqueColour(this.pencil.colourMap, this.pencil.colourMap[front.fill]);
-				} else {
-					frontFillColour = new OpaqueColour(this.pencil.colourMap, front.fill);
-				}
-			}
 			// render the front piece
 			switch (front.shape) {
 				case "cylinder":
-					svgString += circle(160, this.SVG_HEIGHT/2, dimensions[0]/2 * 5, "0.5", "dimgray", frontFillColour);
+					svgString += circle(160, this.SVG_HEIGHT/2, front.length/2 * 5, "0.5", "dimgray", frontFillColour);
 					break;
 			}
 		}
@@ -336,7 +328,7 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 		let colour: OpaqueColour = new OpaqueColour(this.pencil.colourMap, "white");
 		// go through the components and render them
 		for(const component of this.pencil.components) {
-			colour = this.getMappedColour(component.colours, colourIndex, colour.colour);
+			colour = component.getOpacityColour(colourIndex);
 
 			for (let part of component.parts) {
 				switch (part.shape) {
@@ -358,21 +350,12 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 		}
 
 		for(let back of this.pencil.back) {
-			let backFillColour: OpaqueColour = new OpaqueColour(this.pencil.colourMap, "white");
-
-			if(colourIndex !== -1) {
-				// TODO mapped colour
-				if (this.pencil.colourMap[back.fill]) {
-					backFillColour = new OpaqueColour(this.pencil.colourMap, this.pencil.colourMap[back.fill]);
-				} else {
-					backFillColour = new OpaqueColour(this.pencil.colourMap, back.fill);
-				}
-			}
+			let backFillColour: OpaqueColour = back.getOpacityColour(colourIndex);
 
 			// render the back piece
 			switch (back.shape) {
 				case "cylinder":
-					svgString += circle(this.SVG_WIDTH - 100, this.SVG_HEIGHT/2, back.dimensions[0]/2 * 5, "1", "dimgray", backFillColour);
+					svgString += circle(this.SVG_WIDTH - 100, this.SVG_HEIGHT/2, back.width/2 * 5, "1", "dimgray", backFillColour);
 					break;
 			}
 		}

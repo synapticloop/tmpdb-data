@@ -20,7 +20,7 @@ export class Taper extends Base {
 	yOffset: number = 0;
 	xScale: number = 1;
 
-	postConstruct(colours: string[], colourMap: { [p: string]: string }): void {
+	postConstruct(colours: string[], colourMap: Map<string, string>): void {
 		super.mergeOpacityColours(colours, colours, colourMap);
 		super.mergeBackgroundOpacityColours(this.backgroundColours, colours, colourMap);
 

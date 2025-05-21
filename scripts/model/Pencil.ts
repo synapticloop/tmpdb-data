@@ -5,7 +5,9 @@ import {OpaqueColour} from "./OpaqueColour.ts";
 import {Feature} from "./Feature.ts";
 import {FrontBack} from "./FrontBack.ts";
 import {ComponentDeserialiser} from "./deserialisers/ComponentDeserialiser.ts";
+import {MapDeserialiser} from "./deserialisers/MapDeserialiser.ts";
 import {Base} from "./Base.ts";
+import {FrontBackDeserialiser} from "./deserialisers/FrontBackDeserialiser.ts";
 
 export class Pencil extends Base {
 	@JsonProperty({ name: "brand", required: true })
@@ -30,15 +32,15 @@ export class Pencil extends Base {
 	colourComponent: string = ""; // the colour component that defines the differences
 	@JsonProperty({ name: "colours", required: true })
 	private colours: string[] = []; // the colours of the pencil
-	@JsonProperty({ name: "colour_map", required: false })
-	colourMap: { [id: string]: string} = {}; // the map of named colours to hex colour codes
+	@JsonProperty({ name: "colour_map", required: false, deserializer: MapDeserialiser })
+	colourMap: Map<string, string> = new Map<string, string>(); // the map of named colours to hex colour codes
 	@JsonProperty({ name: "accurate", required: false })
 	accurate: boolean = false;
 	@JsonProperty({ name: "features", required: false })
 	features: Feature[] = [];
-	@JsonProperty({ name: "front", required: false })
+	@JsonProperty({ name: "front", required: false, type: FrontBack, deserializer: FrontBackDeserialiser })
 	front: FrontBack[];
-	@JsonProperty({ name: "back", required: false })
+	@JsonProperty({ name: "back", required: false, type: FrontBack, deserializer: FrontBackDeserialiser })
 	back: FrontBack[];
 	@JsonProperty({ name: "components", required: true, type: Component, deserializer: ComponentDeserialiser})
 	components: Component[]; // the components that make up the pencil
@@ -64,7 +66,7 @@ export class Pencil extends Base {
 	hasInternal:boolean = false; // whether this has internal parts
 	hasHidden:boolean = false; // whether this pencil has hidden parts
 
-	postConstruct(colours: string[], colourMap: { [id: string]: string}): void {
+	postConstruct(colours: string[], colourMap: Map<string, string>): void {
 		// first up we need to parse the colours
 		for(const colour of this.colours) {
 			this.colourComponents.push(new OpaqueColour(this.colourMap, colour));
@@ -103,6 +105,14 @@ export class Pencil extends Base {
 					materialsSet.add(componentMaterial);
 				}
 			}
+		}
+
+		for(const front of this.front) {
+			front.postConstruct(this.colours, colourMap);
+		}
+
+		for(const back of this.back) {
+			back.postConstruct(this.colours, colourMap)
 		}
 	}
 

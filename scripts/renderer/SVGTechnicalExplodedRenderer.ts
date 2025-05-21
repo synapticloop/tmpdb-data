@@ -81,7 +81,8 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 				}
 			}
 
-			colour = this.getMappedColour(component.colours, colourIndex, colour.colour);
+			colour = component.getOpacityColour(colourIndex);
+			// colour = this.getMappedColour(component.colours, colourIndex, colour.colour);
 
 			let partLength:number = 0;
 			let endPartLength: number = 0;
@@ -117,7 +118,8 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 					let prevStartX = startX;
 
 					for (let internalPart of component.internalStart) {
-						colour = this.getMappedColour(internalPart.colours, colourIndex, colour.colour);
+						colour = internalPart.getOpacityColour(colourIndex);
+						// colour = this.getMappedColour(internalPart.colours, colourIndex, colour.colour);
 						svgString += super.renderPart(startX, midY, component, internalPart, colourIndex, colour);
 						startX += internalPart.length * 5
 					}
@@ -160,7 +162,8 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 
 					let previousPart:Part = null;
 					for (let internalPart of component.internalEnd) {
-						colour = this.getMappedColour(internalPart.colours, colourIndex, colour.colour);
+						colour = internalPart.getOpacityColour(colourIndex);
+						// colour = this.getMappedColour(internalPart.colours, colourIndex, colour.colour);
 						svgString += super.renderPart(startX, midY, component, internalPart, colourIndex, colour);
 						totalLength += internalPart.length;
 						startX += internalPart.length * 5
@@ -237,7 +240,8 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 					// render the visible part
 					svgString += super.renderPart(startX, midY, component, part, colourIndex, colour);
 
-					colour = this.getMappedColour(part.colours, colourIndex, colour.colour);
+					colour = part.getOpacityColour(colourIndex);
+					// colour = this.getMappedColour(part.colours, colourIndex, colour.colour);
 					// TODO - why is the taper off
 					svgString += super.renderTaper(startX, midY, part, colourIndex, colour.colour);
 
@@ -247,8 +251,10 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 
 					// we are going to render
 					for (let internalEnd of component.internalEnd) {
-						colour = this.getMappedColour(internalEnd.colours, colourIndex, colour.colour);
+						colour = internalEnd.getOpacityColour(colourIndex);
+						// colour = this.getMappedColour(internalEnd.colours, colourIndex, colour.colour);
 						startX += internalEnd.internalOffset * 5;
+						svgString += "<!-- here -->";
 						svgString += super.renderPart(startX, midY, component, internalEnd, colourIndex, colour);
 						startX += internalEnd.length * 5;
 						endPartLength += internalEnd.length * 5;
@@ -308,7 +314,8 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 					let totalLength: number = component.length;
 
 					for (let internalPart of component.internalStart) {
-						colour = this.getMappedColour(internalPart.colours, colourIndex, colour.colour);
+						colour = internalPart.getOpacityColour(colourIndex);
+						// colour = this.getMappedColour(internalPart.colours, colourIndex, colour.colour);
 						svgString += super.renderPart(startX, midY, component, internalPart, colourIndex, colour);
 						totalLength += internalPart.length;
 						startX += internalPart.length * 5

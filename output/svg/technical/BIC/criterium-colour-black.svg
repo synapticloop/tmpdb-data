@@ -46,15 +46,15 @@
 <line x1="1380" y1="500" x2="1420" y2="500" stroke-linecap="round" stroke="#000000"  stroke-width="1" />
 <line x1="1400" y1="480" x2="1400" y2="520" stroke="#000000" stroke-linecap="round"  stroke-width="1" />
 <circle r="10" cx="1400" cy="500" fill="white" fill-opacity="0" stroke="#000000" stroke-width="1"  />
-<text x="30" y="50" font-size="2.0em" font-weight="bold"> BIC //  </text>
+<text x="30" y="50" font-size="2.0em" font-weight="bold"> BIC // Criterium </text>
 <text x="30" y="80" font-size="1.1em"> BIC CRITERIUM 2 mm</text>
 <text x="30" y="100" font-size="1.1em"> Lead size: 2.0 mm</text>
 <text x="1480" y="30" font-size="1.6em" font-weight="bold" text-anchor="end" dominant-baseline="central">Colour variants of the body</text>
-<rect x="1440" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="silver" />
+<rect x="1440" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="silver" fill-opacity="1"/>
 <text x="1460" y="100" transform="rotate(-90, 1460, 100)" font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">silver</text>
-<rect x="1380" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="white" />
+<rect x="1380" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="#ffffff" fill-opacity="1"/>
 <text x="1400" y="100" transform="rotate(-90, 1400, 100)" font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">white</text>
-<rect x="1320" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="black" />
+<rect x="1320" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="#000000" fill-opacity="1"/>
 <text x="1340" y="100" transform="rotate(-90, 1340, 100)" font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">black</text>
 <text x="30" y="136" font-size="1.2em" font-weight="bold" text-anchor="start" dominant-baseline="central">Materials:</text>
 <text x="50" y="156" font-size="1.2em" text-anchor="start" dominant-baseline="central"> - metal</text>
@@ -193,109 +193,109 @@
 <line x1="1350" y1="280" x2="1350" y2="320" stroke="black" stroke-width="1" />
 <line x1="1339" y1="320" x2="1361" y2="320" stroke="black" stroke-width="1" />
 <text x="1350" y="328" transform="rotate(-90, 1350, 328)" font-weight="bold" font-size="1.2em" text-anchor="end" dominant-baseline="middle" fill="black">body</text>
-<path d="M395.625 292.5 L406.875 291.25 L406.875 308.75 L395.625 307.5 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
-<path d="M406.875 286.875 L455.625 280.625 L455.625 319.375 L406.875 313.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
-<path d="M455.625 280.625 L488.125 280 L488.125 320 L455.625 319.375 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1" />
+<path d="M395.625 292.5 L406.875 291.25 L406.875 308.75 L395.625 307.5 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#000000" fill-opacity="1" />
+<path d="M406.875 286.875 L455.625 280.625 L455.625 319.375 L406.875 313.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#000000" fill-opacity="1" />
+<path d="M455.625 280.625 L488.125 280 L488.125 320 L455.625 319.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#000000" fill-opacity="1" />
 <line x1="455.625" y1="300" x2="488.125" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="455.625" y1="300" x2="488.125" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
-<path d="M488.125 280 L494.375 280 L494.375 320 L488.125 320 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1" />
+<path d="M488.125 280 L494.375 280 L494.375 320 L488.125 320 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#000000" fill-opacity="1" />
 <line x1="488.125" y1="300" x2="494.375" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="488.125" y1="300" x2="494.375" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
-<path d="M494.375 280.625 L500.625 280.625 L500.625 319.375 L494.375 319.375 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1" />
+<path d="M494.375 280.625 L500.625 280.625 L500.625 319.375 L494.375 319.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#000000" fill-opacity="1" />
 <line x1="494.375" y1="300" x2="500.625" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="494.375" y1="300" x2="500.625" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
-<path d="M500.625 280 L506.875 280 L506.875 320 L500.625 320 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1" />
+<path d="M500.625 280 L506.875 280 L506.875 320 L500.625 320 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#000000" fill-opacity="1" />
 <line x1="500.625" y1="300" x2="506.875" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="500.625" y1="300" x2="506.875" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
-<path d="M506.875 280.625 L513.125 280.625 L513.125 319.375 L506.875 319.375 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1" />
+<path d="M506.875 280.625 L513.125 280.625 L513.125 319.375 L506.875 319.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#000000" fill-opacity="1" />
 <line x1="506.875" y1="300" x2="513.125" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="506.875" y1="300" x2="513.125" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
-<path d="M513.125 280 L519.375 280 L519.375 320 L513.125 320 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1" />
+<path d="M513.125 280 L519.375 280 L519.375 320 L513.125 320 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#000000" fill-opacity="1" />
 <line x1="513.125" y1="300" x2="519.375" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="513.125" y1="300" x2="519.375" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
-<path d="M519.375 280.625 L525.625 280.625 L525.625 319.375 L519.375 319.375 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1" />
+<path d="M519.375 280.625 L525.625 280.625 L525.625 319.375 L519.375 319.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#000000" fill-opacity="1" />
 <line x1="519.375" y1="300" x2="525.625" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="519.375" y1="300" x2="525.625" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
-<path d="M525.625 280 L531.875 280 L531.875 320 L525.625 320 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1" />
+<path d="M525.625 280 L531.875 280 L531.875 320 L525.625 320 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#000000" fill-opacity="1" />
 <line x1="525.625" y1="300" x2="531.875" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="525.625" y1="300" x2="531.875" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
-<path d="M531.875 280.625 L538.125 280.625 L538.125 319.375 L531.875 319.375 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1" />
+<path d="M531.875 280.625 L538.125 280.625 L538.125 319.375 L531.875 319.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#000000" fill-opacity="1" />
 <line x1="531.875" y1="300" x2="538.125" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="531.875" y1="300" x2="538.125" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
-<path d="M538.125 280 L544.375 280 L544.375 320 L538.125 320 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1" />
+<path d="M538.125 280 L544.375 280 L544.375 320 L538.125 320 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#000000" fill-opacity="1" />
 <line x1="538.125" y1="300" x2="544.375" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="538.125" y1="300" x2="544.375" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
-<path d="M544.375 280.625 L550.625 280.625 L550.625 319.375 L544.375 319.375 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1" />
+<path d="M544.375 280.625 L550.625 280.625 L550.625 319.375 L544.375 319.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#000000" fill-opacity="1" />
 <line x1="544.375" y1="300" x2="550.625" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="544.375" y1="300" x2="550.625" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
-<path d="M550.625 280 L556.875 280 L556.875 320 L550.625 320 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1" />
+<path d="M550.625 280 L556.875 280 L556.875 320 L550.625 320 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#000000" fill-opacity="1" />
 <line x1="550.625" y1="300" x2="556.875" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="550.625" y1="300" x2="556.875" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
-<path d="M556.875 280.625 L563.125 280.625 L563.125 319.375 L556.875 319.375 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1" />
+<path d="M556.875 280.625 L563.125 280.625 L563.125 319.375 L556.875 319.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#000000" fill-opacity="1" />
 <line x1="556.875" y1="300" x2="563.125" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="556.875" y1="300" x2="563.125" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
-<path d="M563.125 280 L569.375 280 L569.375 320 L563.125 320 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1" />
+<path d="M563.125 280 L569.375 280 L569.375 320 L563.125 320 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#000000" fill-opacity="1" />
 <line x1="563.125" y1="300" x2="569.375" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="563.125" y1="300" x2="569.375" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
-<path d="M569.375 280.625 L575.625 280.625 L575.625 319.375 L569.375 319.375 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1" />
+<path d="M569.375 280.625 L575.625 280.625 L575.625 319.375 L569.375 319.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#000000" fill-opacity="1" />
 <line x1="569.375" y1="300" x2="575.625" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="569.375" y1="300" x2="575.625" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
-<path d="M575.625 280 L581.875 280 L581.875 320 L575.625 320 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1" />
+<path d="M575.625 280 L581.875 280 L581.875 320 L575.625 320 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#000000" fill-opacity="1" />
 <line x1="575.625" y1="300" x2="581.875" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="575.625" y1="300" x2="581.875" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
-<path d="M581.875 280.625 L588.125 280.625 L588.125 319.375 L581.875 319.375 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1" />
+<path d="M581.875 280.625 L588.125 280.625 L588.125 319.375 L581.875 319.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#000000" fill-opacity="1" />
 <line x1="581.875" y1="300" x2="588.125" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="581.875" y1="300" x2="588.125" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
-<path d="M588.125 280 L594.375 280 L594.375 320 L588.125 320 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1" />
+<path d="M588.125 280 L594.375 280 L594.375 320 L588.125 320 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#000000" fill-opacity="1" />
 <line x1="588.125" y1="300" x2="594.375" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="588.125" y1="300" x2="594.375" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
-<path d="M594.375 280.625 L600.625 280.625 L600.625 319.375 L594.375 319.375 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1" />
+<path d="M594.375 280.625 L600.625 280.625 L600.625 319.375 L594.375 319.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#000000" fill-opacity="1" />
 <line x1="594.375" y1="300" x2="600.625" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="594.375" y1="300" x2="600.625" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
-<path d="M600.625 280 L606.875 280 L606.875 320 L600.625 320 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1" />
+<path d="M600.625 280 L606.875 280 L606.875 320 L600.625 320 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#000000" fill-opacity="1" />
 <line x1="600.625" y1="300" x2="606.875" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="600.625" y1="300" x2="606.875" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
-<path d="M606.875 280.625 L613.125 280.625 L613.125 319.375 L606.875 319.375 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1" />
+<path d="M606.875 280.625 L613.125 280.625 L613.125 319.375 L606.875 319.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#000000" fill-opacity="1" />
 <line x1="606.875" y1="300" x2="613.125" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="606.875" y1="300" x2="613.125" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
-<path d="M613.125 280 L619.375 280 L619.375 320 L613.125 320 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1" />
+<path d="M613.125 280 L619.375 280 L619.375 320 L613.125 320 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#000000" fill-opacity="1" />
 <line x1="613.125" y1="300" x2="619.375" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="613.125" y1="300" x2="619.375" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
-<path d="M619.375 280.625 L625.625 280.625 L625.625 319.375 L619.375 319.375 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1" />
+<path d="M619.375 280.625 L625.625 280.625 L625.625 319.375 L619.375 319.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#000000" fill-opacity="1" />
 <line x1="619.375" y1="300" x2="625.625" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="619.375" y1="300" x2="625.625" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
-<path d="M625.625 280 L631.875 280 L631.875 320 L625.625 320 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1" />
+<path d="M625.625 280 L631.875 280 L631.875 320 L625.625 320 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#000000" fill-opacity="1" />
 <line x1="625.625" y1="300" x2="631.875" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="625.625" y1="300" x2="631.875" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
-<path d="M631.875 280.625 L638.125 280.625 L638.125 319.375 L631.875 319.375 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1" />
+<path d="M631.875 280.625 L638.125 280.625 L638.125 319.375 L631.875 319.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#000000" fill-opacity="1" />
 <line x1="631.875" y1="300" x2="638.125" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="631.875" y1="300" x2="638.125" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
-<path d="M638.125 280 L644.375 280 L644.375 320 L638.125 320 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1" />
+<path d="M638.125 280 L644.375 280 L644.375 320 L638.125 320 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#000000" fill-opacity="1" />
 <line x1="638.125" y1="300" x2="644.375" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="638.125" y1="300" x2="644.375" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
-<path d="M644.375 280.625 L650.625 280.625 L650.625 319.375 L644.375 319.375 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1" />
+<path d="M644.375 280.625 L650.625 280.625 L650.625 319.375 L644.375 319.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#000000" fill-opacity="1" />
 <line x1="644.375" y1="300" x2="650.625" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="644.375" y1="300" x2="650.625" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
-<path d="M650.625 280 L970.625 280 L970.625 320 L650.625 320 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1" />
+<path d="M650.625 280 L970.625 280 L970.625 320 L650.625 320 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#000000" fill-opacity="1" />
 <line x1="650.625" y1="300" x2="970.625" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="650.625" y1="300" x2="970.625" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
 <path d="M835.625 272.25 Q858.125 288.5 868.125 268.5" stroke-width="4" stroke="black" fill="none" stroke-linecap="round" />
 <path d="M835.625 271 Q925.625 258.5 1018.125 271" stroke-width="4" stroke="black" fill="none" stroke-linecap="round" />
 <path d="M1018.125 271 Q1023.125 274.75 1018.125 278.5" stroke-width="4" stroke="black" fill="none" stroke-linecap="round" />
 <line x1="1018.125" y1="278.5" x2="1003.125" y2="278.5" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
-<path d="M970.625 277.5 L1004.375 277.5 L1004.375 322.5 L970.625 322.5 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
+<path d="M970.625 277.5 L1004.375 277.5 L1004.375 322.5 L970.625 322.5 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#000000" fill-opacity="1" />
 <line x1="970.625" y1="300" x2="1004.375" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="970.625" y1="300" x2="1004.375" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
-<path d="M835.625 272.25 Q858.125 288.5 868.125 268.5" stroke-width="3" stroke="silver" fill="none" stroke-linecap="round" />
-<path d="M835.625 271 Q925.625 258.5 1018.125 271" stroke-width="3" stroke="silver" fill="none" stroke-linecap="round" />
-<path d="M1018.125 271 Q1023.125 274.75 1018.125 278.5" stroke-width="3" stroke="silver" fill="none" stroke-linecap="round" />
-<line x1="1018.125" y1="278.5" x2="1003.125" y2="278.5" stroke-width="3" stroke="silver" fill="silver" stroke-linecap="round" />
-<path d="M1004.375 280 L1060.625 280 L1060.625 320 L1004.375 320 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1" />
+<path d="M835.625 272.25 Q858.125 288.5 868.125 268.5" stroke-width="3" stroke="#000000" fill="none" stroke-linecap="round" />
+<path d="M835.625 271 Q925.625 258.5 1018.125 271" stroke-width="3" stroke="#000000" fill="none" stroke-linecap="round" />
+<path d="M1018.125 271 Q1023.125 274.75 1018.125 278.5" stroke-width="3" stroke="#000000" fill="none" stroke-linecap="round" />
+<line x1="1018.125" y1="278.5" x2="1003.125" y2="278.5" stroke-width="3" stroke="#000000" fill="#000000" stroke-linecap="round" />
+<path d="M1004.375 280 L1060.625 280 L1060.625 320 L1004.375 320 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#000000" fill-opacity="1" />
 <line x1="1004.375" y1="300" x2="1060.625" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="1004.375" y1="300" x2="1060.625" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
-<path d="M1060.625 283.75 L1093.125 283.75 L1093.125 316.25 L1060.625 316.25 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
-<path d="M1093.125 285 L1098.125 285 L1098.125 315 L1093.125 315 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
-<path d="M1098.125 283.75 L1103.125 283.75 L1103.125 316.25 L1098.125 316.25 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
+<path d="M1060.625 283.75 L1093.125 283.75 L1093.125 316.25 L1060.625 316.25 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#000000" fill-opacity="1" />
+<path d="M1093.125 285 L1098.125 285 L1098.125 315 L1093.125 315 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#000000" fill-opacity="1" />
+<path d="M1098.125 283.75 L1103.125 283.75 L1103.125 316.25 L1098.125 316.25 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#000000" fill-opacity="1" />
 <line x1="1099.125" y1="284.75" x2="1102.125" y2="284.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
 <line x1="1099.125" y1="286.75" x2="1102.125" y2="286.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
 <line x1="1099.125" y1="288.75" x2="1102.125" y2="288.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
@@ -312,86 +312,86 @@
 <line x1="1099.125" y1="310.75" x2="1102.125" y2="310.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
 <line x1="1099.125" y1="312.75" x2="1102.125" y2="312.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
 <line x1="1099.125" y1="314.75" x2="1102.125" y2="314.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<path d="M1103.125 289.375 L1104.375 289.375 L1104.375 310.625 L1103.125 310.625 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
-<rect x="455.625" y="280.25" width="22" height="38.25" rx="0" ry="0" stroke-width="0.5" stroke="none" fill="black" fill-opacity="1"/>
-<path d="M 478.125 280 C 448.3125 285, 448.3125 295, 478.125 300" stroke-width="0.5" stroke="dimgray" stroke-linecap="round" fill="black" /><path d="M 478.125 320 C 448.3125 315, 448.3125 305, 478.125 300" stroke-width="0.5" stroke="dimgray" stroke-linecap="round" fill="black" /><circle r="10.625" cx="160" cy="300" fill="silver" fill-opacity="1" stroke="black" stroke-width="0.5"  />
-<circle r="16.25" cx="160" cy="300" fill="silver" fill-opacity="1" stroke="black" stroke-width="0.5"  />
-<circle r="15" cx="160" cy="300" fill="silver" fill-opacity="1" stroke="black" stroke-width="0.5"  />
-<circle r="16.25" cx="160" cy="300" fill="silver" fill-opacity="1" stroke="black" stroke-width="0.5"  />
-<polygon points="148.4529946162075,280 171.5470053837925,280 183.09401076758502,300 171.5470053837925,320 148.4529946162075,320 136.90598923241498,300 " stroke="dimgray" stroke-width="0.5" fill="black" fill-opacity="1"/>
-<polygon points="147.00961894323342,277.5 172.99038105676658,277.5 185.98076211353316,300 172.99038105676658,322.5 147.00961894323342,322.5 134.01923788646684,300 " stroke="black" stroke-width="0.5" fill="silver" fill-opacity="1"/>
-<polygon points="148.4529946162075,280 171.5470053837925,280 183.09401076758502,300 171.5470053837925,320 148.4529946162075,320 136.90598923241498,300 " stroke="dimgray" stroke-width="0.5" fill="black" fill-opacity="1"/>
-<polygon points="148.813838534451,280.625 171.186161465549,280.625 182.37232293109798,300 171.186161465549,319.375 148.813838534451,319.375 137.62767706890202,300 " stroke="dimgray" stroke-width="0.5" fill="black" fill-opacity="1"/>
-<polygon points="148.4529946162075,280 171.5470053837925,280 183.09401076758502,300 171.5470053837925,320 148.4529946162075,320 136.90598923241498,300 " stroke="dimgray" stroke-width="0.5" fill="black" fill-opacity="1"/>
-<polygon points="148.813838534451,280.625 171.186161465549,280.625 182.37232293109798,300 171.186161465549,319.375 148.813838534451,319.375 137.62767706890202,300 " stroke="dimgray" stroke-width="0.5" fill="black" fill-opacity="1"/>
-<polygon points="148.4529946162075,280 171.5470053837925,280 183.09401076758502,300 171.5470053837925,320 148.4529946162075,320 136.90598923241498,300 " stroke="dimgray" stroke-width="0.5" fill="black" fill-opacity="1"/>
-<polygon points="148.813838534451,280.625 171.186161465549,280.625 182.37232293109798,300 171.186161465549,319.375 148.813838534451,319.375 137.62767706890202,300 " stroke="dimgray" stroke-width="0.5" fill="black" fill-opacity="1"/>
-<polygon points="148.4529946162075,280 171.5470053837925,280 183.09401076758502,300 171.5470053837925,320 148.4529946162075,320 136.90598923241498,300 " stroke="dimgray" stroke-width="0.5" fill="black" fill-opacity="1"/>
-<polygon points="148.813838534451,280.625 171.186161465549,280.625 182.37232293109798,300 171.186161465549,319.375 148.813838534451,319.375 137.62767706890202,300 " stroke="dimgray" stroke-width="0.5" fill="black" fill-opacity="1"/>
-<polygon points="148.4529946162075,280 171.5470053837925,280 183.09401076758502,300 171.5470053837925,320 148.4529946162075,320 136.90598923241498,300 " stroke="dimgray" stroke-width="0.5" fill="black" fill-opacity="1"/>
-<polygon points="148.813838534451,280.625 171.186161465549,280.625 182.37232293109798,300 171.186161465549,319.375 148.813838534451,319.375 137.62767706890202,300 " stroke="dimgray" stroke-width="0.5" fill="black" fill-opacity="1"/>
-<polygon points="148.4529946162075,280 171.5470053837925,280 183.09401076758502,300 171.5470053837925,320 148.4529946162075,320 136.90598923241498,300 " stroke="dimgray" stroke-width="0.5" fill="black" fill-opacity="1"/>
-<polygon points="148.813838534451,280.625 171.186161465549,280.625 182.37232293109798,300 171.186161465549,319.375 148.813838534451,319.375 137.62767706890202,300 " stroke="dimgray" stroke-width="0.5" fill="black" fill-opacity="1"/>
-<polygon points="148.4529946162075,280 171.5470053837925,280 183.09401076758502,300 171.5470053837925,320 148.4529946162075,320 136.90598923241498,300 " stroke="dimgray" stroke-width="0.5" fill="black" fill-opacity="1"/>
-<polygon points="148.813838534451,280.625 171.186161465549,280.625 182.37232293109798,300 171.186161465549,319.375 148.813838534451,319.375 137.62767706890202,300 " stroke="dimgray" stroke-width="0.5" fill="black" fill-opacity="1"/>
-<polygon points="148.4529946162075,280 171.5470053837925,280 183.09401076758502,300 171.5470053837925,320 148.4529946162075,320 136.90598923241498,300 " stroke="dimgray" stroke-width="0.5" fill="black" fill-opacity="1"/>
-<polygon points="148.813838534451,280.625 171.186161465549,280.625 182.37232293109798,300 171.186161465549,319.375 148.813838534451,319.375 137.62767706890202,300 " stroke="dimgray" stroke-width="0.5" fill="black" fill-opacity="1"/>
-<polygon points="148.4529946162075,280 171.5470053837925,280 183.09401076758502,300 171.5470053837925,320 148.4529946162075,320 136.90598923241498,300 " stroke="dimgray" stroke-width="0.5" fill="black" fill-opacity="1"/>
-<polygon points="148.813838534451,280.625 171.186161465549,280.625 182.37232293109798,300 171.186161465549,319.375 148.813838534451,319.375 137.62767706890202,300 " stroke="dimgray" stroke-width="0.5" fill="black" fill-opacity="1"/>
-<polygon points="148.4529946162075,280 171.5470053837925,280 183.09401076758502,300 171.5470053837925,320 148.4529946162075,320 136.90598923241498,300 " stroke="dimgray" stroke-width="0.5" fill="black" fill-opacity="1"/>
-<polygon points="148.813838534451,280.625 171.186161465549,280.625 182.37232293109798,300 171.186161465549,319.375 148.813838534451,319.375 137.62767706890202,300 " stroke="dimgray" stroke-width="0.5" fill="black" fill-opacity="1"/>
-<polygon points="148.4529946162075,280 171.5470053837925,280 183.09401076758502,300 171.5470053837925,320 148.4529946162075,320 136.90598923241498,300 " stroke="dimgray" stroke-width="0.5" fill="black" fill-opacity="1"/>
-<polygon points="148.813838534451,280.625 171.186161465549,280.625 182.37232293109798,300 171.186161465549,319.375 148.813838534451,319.375 137.62767706890202,300 " stroke="dimgray" stroke-width="0.5" fill="black" fill-opacity="1"/>
-<polygon points="148.4529946162075,280 171.5470053837925,280 183.09401076758502,300 171.5470053837925,320 148.4529946162075,320 136.90598923241498,300 " stroke="dimgray" stroke-width="0.5" fill="black" fill-opacity="1"/>
-<polygon points="148.813838534451,280.625 171.186161465549,280.625 182.37232293109798,300 171.186161465549,319.375 148.813838534451,319.375 137.62767706890202,300 " stroke="dimgray" stroke-width="0.5" fill="black" fill-opacity="1"/>
-<polygon points="148.4529946162075,280 171.5470053837925,280 183.09401076758502,300 171.5470053837925,320 148.4529946162075,320 136.90598923241498,300 " stroke="dimgray" stroke-width="0.5" fill="black" fill-opacity="1"/>
-<polygon points="148.813838534451,280.625 171.186161465549,280.625 182.37232293109798,300 171.186161465549,319.375 148.813838534451,319.375 137.62767706890202,300 " stroke="dimgray" stroke-width="0.5" fill="black" fill-opacity="1"/>
-<polygon points="148.4529946162075,280 171.5470053837925,280 183.09401076758502,300 171.5470053837925,320 148.4529946162075,320 136.90598923241498,300 " stroke="dimgray" stroke-width="0.5" fill="black" fill-opacity="1"/>
-<polygon points="148.813838534451,280.625 171.186161465549,280.625 182.37232293109798,300 171.186161465549,319.375 148.813838534451,319.375 137.62767706890202,300 " stroke="dimgray" stroke-width="0.5" fill="black" fill-opacity="1"/>
-<circle r="13.125" cx="160" cy="300" stroke="black" stroke-width="0.5" fill="silver" fill-opacity="1"/>
-<circle r="19.375" cx="160" cy="300" stroke="black" stroke-width="0.5" fill="silver" fill-opacity="1"/>
-<circle r="7.5" cx="160" cy="300" stroke="black" stroke-width="0.5" fill="silver" fill-opacity="1"/>
-<circle r="8.75" cx="160" cy="300" stroke="black" stroke-width="0.5" fill="silver" fill-opacity="1"/>
-<circle r="3.125" cx="160" cy="300" fill="black" fill-opacity="1" stroke="dimgray" stroke-width="0.5"  />
-<circle r="7.5" cx="1400" cy="300" stroke="black" stroke-width="0.5" fill="silver" fill-opacity="1"/>
-<circle r="8.75" cx="1400" cy="300" stroke="black" stroke-width="0.5" fill="silver" fill-opacity="1"/>
-<circle r="13.125" cx="1400" cy="300" stroke="black" stroke-width="0.5" fill="silver" fill-opacity="1"/>
-<circle r="19.375" cx="1400" cy="300" stroke="black" stroke-width="0.5" fill="silver" fill-opacity="1"/>
-<polygon points="1388.813838534451,280.625 1411.186161465549,280.625 1422.372322931098,300 1411.186161465549,319.375 1388.813838534451,319.375 1377.627677068902,300 " stroke="dimgray" stroke-width="0.5" fill="black" fill-opacity="1"/>
-<polygon points="1388.4529946162074,280 1411.5470053837926,280 1423.0940107675851,300 1411.5470053837926,320 1388.4529946162074,320 1376.9059892324149,300 " stroke="dimgray" stroke-width="0.5" fill="black" fill-opacity="1"/>
-<polygon points="1388.813838534451,280.625 1411.186161465549,280.625 1422.372322931098,300 1411.186161465549,319.375 1388.813838534451,319.375 1377.627677068902,300 " stroke="dimgray" stroke-width="0.5" fill="black" fill-opacity="1"/>
-<polygon points="1388.4529946162074,280 1411.5470053837926,280 1423.0940107675851,300 1411.5470053837926,320 1388.4529946162074,320 1376.9059892324149,300 " stroke="dimgray" stroke-width="0.5" fill="black" fill-opacity="1"/>
-<polygon points="1388.813838534451,280.625 1411.186161465549,280.625 1422.372322931098,300 1411.186161465549,319.375 1388.813838534451,319.375 1377.627677068902,300 " stroke="dimgray" stroke-width="0.5" fill="black" fill-opacity="1"/>
-<polygon points="1388.4529946162074,280 1411.5470053837926,280 1423.0940107675851,300 1411.5470053837926,320 1388.4529946162074,320 1376.9059892324149,300 " stroke="dimgray" stroke-width="0.5" fill="black" fill-opacity="1"/>
-<polygon points="1388.813838534451,280.625 1411.186161465549,280.625 1422.372322931098,300 1411.186161465549,319.375 1388.813838534451,319.375 1377.627677068902,300 " stroke="dimgray" stroke-width="0.5" fill="black" fill-opacity="1"/>
-<polygon points="1388.4529946162074,280 1411.5470053837926,280 1423.0940107675851,300 1411.5470053837926,320 1388.4529946162074,320 1376.9059892324149,300 " stroke="dimgray" stroke-width="0.5" fill="black" fill-opacity="1"/>
-<polygon points="1388.813838534451,280.625 1411.186161465549,280.625 1422.372322931098,300 1411.186161465549,319.375 1388.813838534451,319.375 1377.627677068902,300 " stroke="dimgray" stroke-width="0.5" fill="black" fill-opacity="1"/>
-<polygon points="1388.4529946162074,280 1411.5470053837926,280 1423.0940107675851,300 1411.5470053837926,320 1388.4529946162074,320 1376.9059892324149,300 " stroke="dimgray" stroke-width="0.5" fill="black" fill-opacity="1"/>
-<polygon points="1388.813838534451,280.625 1411.186161465549,280.625 1422.372322931098,300 1411.186161465549,319.375 1388.813838534451,319.375 1377.627677068902,300 " stroke="dimgray" stroke-width="0.5" fill="black" fill-opacity="1"/>
-<polygon points="1388.4529946162074,280 1411.5470053837926,280 1423.0940107675851,300 1411.5470053837926,320 1388.4529946162074,320 1376.9059892324149,300 " stroke="dimgray" stroke-width="0.5" fill="black" fill-opacity="1"/>
-<polygon points="1388.813838534451,280.625 1411.186161465549,280.625 1422.372322931098,300 1411.186161465549,319.375 1388.813838534451,319.375 1377.627677068902,300 " stroke="dimgray" stroke-width="0.5" fill="black" fill-opacity="1"/>
-<polygon points="1388.4529946162074,280 1411.5470053837926,280 1423.0940107675851,300 1411.5470053837926,320 1388.4529946162074,320 1376.9059892324149,300 " stroke="dimgray" stroke-width="0.5" fill="black" fill-opacity="1"/>
-<polygon points="1388.813838534451,280.625 1411.186161465549,280.625 1422.372322931098,300 1411.186161465549,319.375 1388.813838534451,319.375 1377.627677068902,300 " stroke="dimgray" stroke-width="0.5" fill="black" fill-opacity="1"/>
-<polygon points="1388.4529946162074,280 1411.5470053837926,280 1423.0940107675851,300 1411.5470053837926,320 1388.4529946162074,320 1376.9059892324149,300 " stroke="dimgray" stroke-width="0.5" fill="black" fill-opacity="1"/>
-<polygon points="1388.813838534451,280.625 1411.186161465549,280.625 1422.372322931098,300 1411.186161465549,319.375 1388.813838534451,319.375 1377.627677068902,300 " stroke="dimgray" stroke-width="0.5" fill="black" fill-opacity="1"/>
-<polygon points="1388.4529946162074,280 1411.5470053837926,280 1423.0940107675851,300 1411.5470053837926,320 1388.4529946162074,320 1376.9059892324149,300 " stroke="dimgray" stroke-width="0.5" fill="black" fill-opacity="1"/>
-<polygon points="1388.813838534451,280.625 1411.186161465549,280.625 1422.372322931098,300 1411.186161465549,319.375 1388.813838534451,319.375 1377.627677068902,300 " stroke="dimgray" stroke-width="0.5" fill="black" fill-opacity="1"/>
-<polygon points="1388.4529946162074,280 1411.5470053837926,280 1423.0940107675851,300 1411.5470053837926,320 1388.4529946162074,320 1376.9059892324149,300 " stroke="dimgray" stroke-width="0.5" fill="black" fill-opacity="1"/>
-<polygon points="1388.813838534451,280.625 1411.186161465549,280.625 1422.372322931098,300 1411.186161465549,319.375 1388.813838534451,319.375 1377.627677068902,300 " stroke="dimgray" stroke-width="0.5" fill="black" fill-opacity="1"/>
-<polygon points="1388.4529946162074,280 1411.5470053837926,280 1423.0940107675851,300 1411.5470053837926,320 1388.4529946162074,320 1376.9059892324149,300 " stroke="dimgray" stroke-width="0.5" fill="black" fill-opacity="1"/>
-<polygon points="1388.813838534451,280.625 1411.186161465549,280.625 1422.372322931098,300 1411.186161465549,319.375 1388.813838534451,319.375 1377.627677068902,300 " stroke="dimgray" stroke-width="0.5" fill="black" fill-opacity="1"/>
-<polygon points="1388.4529946162074,280 1411.5470053837926,280 1423.0940107675851,300 1411.5470053837926,320 1388.4529946162074,320 1376.9059892324149,300 " stroke="dimgray" stroke-width="0.5" fill="black" fill-opacity="1"/>
-<polygon points="1388.813838534451,280.625 1411.186161465549,280.625 1422.372322931098,300 1411.186161465549,319.375 1388.813838534451,319.375 1377.627677068902,300 " stroke="dimgray" stroke-width="0.5" fill="black" fill-opacity="1"/>
-<polygon points="1388.4529946162074,280 1411.5470053837926,280 1423.0940107675851,300 1411.5470053837926,320 1388.4529946162074,320 1376.9059892324149,300 " stroke="dimgray" stroke-width="0.5" fill="black" fill-opacity="1"/>
-<polygon points="1388.813838534451,280.625 1411.186161465549,280.625 1422.372322931098,300 1411.186161465549,319.375 1388.813838534451,319.375 1377.627677068902,300 " stroke="dimgray" stroke-width="0.5" fill="black" fill-opacity="1"/>
-<polygon points="1388.4529946162074,280 1411.5470053837926,280 1423.0940107675851,300 1411.5470053837926,320 1388.4529946162074,320 1376.9059892324149,300 " stroke="dimgray" stroke-width="0.5" fill="black" fill-opacity="1"/>
-<polygon points="1387.0096189432334,277.5 1412.9903810567666,277.5 1425.980762113533,300 1412.9903810567666,322.5 1387.0096189432334,322.5 1374.019237886467,300 " stroke="black" stroke-width="0.5" fill="silver" fill-opacity="1"/>
-<polygon points="1388.4529946162074,280 1411.5470053837926,280 1423.0940107675851,300 1411.5470053837926,320 1388.4529946162074,320 1376.9059892324149,300 " stroke="dimgray" stroke-width="0.5" fill="black" fill-opacity="1"/>
-<circle r="16.25" cx="1400" cy="300" fill="silver" fill-opacity="1" stroke="black" stroke-width="0.5"  />
-<circle r="15" cx="1400" cy="300" fill="silver" fill-opacity="1" stroke="black" stroke-width="0.5"  />
-<circle r="16.25" cx="1400" cy="300" fill="silver" fill-opacity="1" stroke="black" stroke-width="0.5"  />
-<circle r="10.625" cx="1400" cy="300" fill="silver" fill-opacity="1" stroke="black" stroke-width="0.5"  />
-<circle r="5" cx="1400" cy="300" fill="black" fill-opacity="1" stroke="dimgray" stroke-width="1"  />
+<path d="M1103.125 289.375 L1104.375 289.375 L1104.375 310.625 L1103.125 310.625 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#000000" fill-opacity="1" />
+<rect x="455.625" y="280.25" width="22" height="38.25" rx="0" ry="0" stroke-width="0.5" stroke="none" fill="#000000" fill-opacity="1"/>
+<path d="M 478.125 280 C 448.3125 285, 448.3125 295, 478.125 300" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="#000000" /><path d="M 478.125 320 C 448.3125 315, 448.3125 305, 478.125 300" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="#000000" /><circle r="10.625" cx="160" cy="300" fill="#000000" fill-opacity="1" stroke="black" stroke-width="0.5"  />
+<circle r="16.25" cx="160" cy="300" fill="#000000" fill-opacity="1" stroke="black" stroke-width="0.5"  />
+<circle r="15" cx="160" cy="300" fill="#000000" fill-opacity="1" stroke="black" stroke-width="0.5"  />
+<circle r="16.25" cx="160" cy="300" fill="#000000" fill-opacity="1" stroke="black" stroke-width="0.5"  />
+<polygon points="148.4529946162075,280 171.5470053837925,280 183.09401076758502,300 171.5470053837925,320 148.4529946162075,320 136.90598923241498,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<polygon points="147.00961894323342,277.5 172.99038105676658,277.5 185.98076211353316,300 172.99038105676658,322.5 147.00961894323342,322.5 134.01923788646684,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<polygon points="148.4529946162075,280 171.5470053837925,280 183.09401076758502,300 171.5470053837925,320 148.4529946162075,320 136.90598923241498,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<polygon points="148.813838534451,280.625 171.186161465549,280.625 182.37232293109798,300 171.186161465549,319.375 148.813838534451,319.375 137.62767706890202,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<polygon points="148.4529946162075,280 171.5470053837925,280 183.09401076758502,300 171.5470053837925,320 148.4529946162075,320 136.90598923241498,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<polygon points="148.813838534451,280.625 171.186161465549,280.625 182.37232293109798,300 171.186161465549,319.375 148.813838534451,319.375 137.62767706890202,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<polygon points="148.4529946162075,280 171.5470053837925,280 183.09401076758502,300 171.5470053837925,320 148.4529946162075,320 136.90598923241498,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<polygon points="148.813838534451,280.625 171.186161465549,280.625 182.37232293109798,300 171.186161465549,319.375 148.813838534451,319.375 137.62767706890202,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<polygon points="148.4529946162075,280 171.5470053837925,280 183.09401076758502,300 171.5470053837925,320 148.4529946162075,320 136.90598923241498,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<polygon points="148.813838534451,280.625 171.186161465549,280.625 182.37232293109798,300 171.186161465549,319.375 148.813838534451,319.375 137.62767706890202,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<polygon points="148.4529946162075,280 171.5470053837925,280 183.09401076758502,300 171.5470053837925,320 148.4529946162075,320 136.90598923241498,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<polygon points="148.813838534451,280.625 171.186161465549,280.625 182.37232293109798,300 171.186161465549,319.375 148.813838534451,319.375 137.62767706890202,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<polygon points="148.4529946162075,280 171.5470053837925,280 183.09401076758502,300 171.5470053837925,320 148.4529946162075,320 136.90598923241498,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<polygon points="148.813838534451,280.625 171.186161465549,280.625 182.37232293109798,300 171.186161465549,319.375 148.813838534451,319.375 137.62767706890202,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<polygon points="148.4529946162075,280 171.5470053837925,280 183.09401076758502,300 171.5470053837925,320 148.4529946162075,320 136.90598923241498,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<polygon points="148.813838534451,280.625 171.186161465549,280.625 182.37232293109798,300 171.186161465549,319.375 148.813838534451,319.375 137.62767706890202,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<polygon points="148.4529946162075,280 171.5470053837925,280 183.09401076758502,300 171.5470053837925,320 148.4529946162075,320 136.90598923241498,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<polygon points="148.813838534451,280.625 171.186161465549,280.625 182.37232293109798,300 171.186161465549,319.375 148.813838534451,319.375 137.62767706890202,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<polygon points="148.4529946162075,280 171.5470053837925,280 183.09401076758502,300 171.5470053837925,320 148.4529946162075,320 136.90598923241498,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<polygon points="148.813838534451,280.625 171.186161465549,280.625 182.37232293109798,300 171.186161465549,319.375 148.813838534451,319.375 137.62767706890202,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<polygon points="148.4529946162075,280 171.5470053837925,280 183.09401076758502,300 171.5470053837925,320 148.4529946162075,320 136.90598923241498,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<polygon points="148.813838534451,280.625 171.186161465549,280.625 182.37232293109798,300 171.186161465549,319.375 148.813838534451,319.375 137.62767706890202,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<polygon points="148.4529946162075,280 171.5470053837925,280 183.09401076758502,300 171.5470053837925,320 148.4529946162075,320 136.90598923241498,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<polygon points="148.813838534451,280.625 171.186161465549,280.625 182.37232293109798,300 171.186161465549,319.375 148.813838534451,319.375 137.62767706890202,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<polygon points="148.4529946162075,280 171.5470053837925,280 183.09401076758502,300 171.5470053837925,320 148.4529946162075,320 136.90598923241498,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<polygon points="148.813838534451,280.625 171.186161465549,280.625 182.37232293109798,300 171.186161465549,319.375 148.813838534451,319.375 137.62767706890202,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<polygon points="148.4529946162075,280 171.5470053837925,280 183.09401076758502,300 171.5470053837925,320 148.4529946162075,320 136.90598923241498,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<polygon points="148.813838534451,280.625 171.186161465549,280.625 182.37232293109798,300 171.186161465549,319.375 148.813838534451,319.375 137.62767706890202,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<polygon points="148.4529946162075,280 171.5470053837925,280 183.09401076758502,300 171.5470053837925,320 148.4529946162075,320 136.90598923241498,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<polygon points="148.813838534451,280.625 171.186161465549,280.625 182.37232293109798,300 171.186161465549,319.375 148.813838534451,319.375 137.62767706890202,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<circle r="13.125" cx="160" cy="300" stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<circle r="19.375" cx="160" cy="300" stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<circle r="7.5" cx="160" cy="300" stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<circle r="8.75" cx="160" cy="300" stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<circle r="25" cx="160" cy="300" fill="a" fill-opacity="1" stroke="dimgray" stroke-width="0.5"  />
+<circle r="7.5" cx="1400" cy="300" stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<circle r="8.75" cx="1400" cy="300" stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<circle r="13.125" cx="1400" cy="300" stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<circle r="19.375" cx="1400" cy="300" stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<polygon points="1388.813838534451,280.625 1411.186161465549,280.625 1422.372322931098,300 1411.186161465549,319.375 1388.813838534451,319.375 1377.627677068902,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<polygon points="1388.4529946162074,280 1411.5470053837926,280 1423.0940107675851,300 1411.5470053837926,320 1388.4529946162074,320 1376.9059892324149,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<polygon points="1388.813838534451,280.625 1411.186161465549,280.625 1422.372322931098,300 1411.186161465549,319.375 1388.813838534451,319.375 1377.627677068902,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<polygon points="1388.4529946162074,280 1411.5470053837926,280 1423.0940107675851,300 1411.5470053837926,320 1388.4529946162074,320 1376.9059892324149,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<polygon points="1388.813838534451,280.625 1411.186161465549,280.625 1422.372322931098,300 1411.186161465549,319.375 1388.813838534451,319.375 1377.627677068902,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<polygon points="1388.4529946162074,280 1411.5470053837926,280 1423.0940107675851,300 1411.5470053837926,320 1388.4529946162074,320 1376.9059892324149,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<polygon points="1388.813838534451,280.625 1411.186161465549,280.625 1422.372322931098,300 1411.186161465549,319.375 1388.813838534451,319.375 1377.627677068902,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<polygon points="1388.4529946162074,280 1411.5470053837926,280 1423.0940107675851,300 1411.5470053837926,320 1388.4529946162074,320 1376.9059892324149,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<polygon points="1388.813838534451,280.625 1411.186161465549,280.625 1422.372322931098,300 1411.186161465549,319.375 1388.813838534451,319.375 1377.627677068902,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<polygon points="1388.4529946162074,280 1411.5470053837926,280 1423.0940107675851,300 1411.5470053837926,320 1388.4529946162074,320 1376.9059892324149,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<polygon points="1388.813838534451,280.625 1411.186161465549,280.625 1422.372322931098,300 1411.186161465549,319.375 1388.813838534451,319.375 1377.627677068902,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<polygon points="1388.4529946162074,280 1411.5470053837926,280 1423.0940107675851,300 1411.5470053837926,320 1388.4529946162074,320 1376.9059892324149,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<polygon points="1388.813838534451,280.625 1411.186161465549,280.625 1422.372322931098,300 1411.186161465549,319.375 1388.813838534451,319.375 1377.627677068902,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<polygon points="1388.4529946162074,280 1411.5470053837926,280 1423.0940107675851,300 1411.5470053837926,320 1388.4529946162074,320 1376.9059892324149,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<polygon points="1388.813838534451,280.625 1411.186161465549,280.625 1422.372322931098,300 1411.186161465549,319.375 1388.813838534451,319.375 1377.627677068902,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<polygon points="1388.4529946162074,280 1411.5470053837926,280 1423.0940107675851,300 1411.5470053837926,320 1388.4529946162074,320 1376.9059892324149,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<polygon points="1388.813838534451,280.625 1411.186161465549,280.625 1422.372322931098,300 1411.186161465549,319.375 1388.813838534451,319.375 1377.627677068902,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<polygon points="1388.4529946162074,280 1411.5470053837926,280 1423.0940107675851,300 1411.5470053837926,320 1388.4529946162074,320 1376.9059892324149,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<polygon points="1388.813838534451,280.625 1411.186161465549,280.625 1422.372322931098,300 1411.186161465549,319.375 1388.813838534451,319.375 1377.627677068902,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<polygon points="1388.4529946162074,280 1411.5470053837926,280 1423.0940107675851,300 1411.5470053837926,320 1388.4529946162074,320 1376.9059892324149,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<polygon points="1388.813838534451,280.625 1411.186161465549,280.625 1422.372322931098,300 1411.186161465549,319.375 1388.813838534451,319.375 1377.627677068902,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<polygon points="1388.4529946162074,280 1411.5470053837926,280 1423.0940107675851,300 1411.5470053837926,320 1388.4529946162074,320 1376.9059892324149,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<polygon points="1388.813838534451,280.625 1411.186161465549,280.625 1422.372322931098,300 1411.186161465549,319.375 1388.813838534451,319.375 1377.627677068902,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<polygon points="1388.4529946162074,280 1411.5470053837926,280 1423.0940107675851,300 1411.5470053837926,320 1388.4529946162074,320 1376.9059892324149,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<polygon points="1388.813838534451,280.625 1411.186161465549,280.625 1422.372322931098,300 1411.186161465549,319.375 1388.813838534451,319.375 1377.627677068902,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<polygon points="1388.4529946162074,280 1411.5470053837926,280 1423.0940107675851,300 1411.5470053837926,320 1388.4529946162074,320 1376.9059892324149,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<polygon points="1388.813838534451,280.625 1411.186161465549,280.625 1422.372322931098,300 1411.186161465549,319.375 1388.813838534451,319.375 1377.627677068902,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<polygon points="1388.4529946162074,280 1411.5470053837926,280 1423.0940107675851,300 1411.5470053837926,320 1388.4529946162074,320 1376.9059892324149,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<polygon points="1387.0096189432334,277.5 1412.9903810567666,277.5 1425.980762113533,300 1412.9903810567666,322.5 1387.0096189432334,322.5 1374.019237886467,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<polygon points="1388.4529946162074,280 1411.5470053837926,280 1423.0940107675851,300 1411.5470053837926,320 1388.4529946162074,320 1376.9059892324149,300 " stroke="black" stroke-width="0.5" fill="#000000" fill-opacity="1"/>
+<circle r="16.25" cx="1400" cy="300" fill="#000000" fill-opacity="1" stroke="black" stroke-width="0.5"  />
+<circle r="15" cx="1400" cy="300" fill="#000000" fill-opacity="1" stroke="black" stroke-width="0.5"  />
+<circle r="16.25" cx="1400" cy="300" fill="#000000" fill-opacity="1" stroke="black" stroke-width="0.5"  />
+<circle r="10.625" cx="1400" cy="300" fill="#000000" fill-opacity="1" stroke="black" stroke-width="0.5"  />
+<circle r="5" cx="1400" cy="300" fill="a" fill-opacity="1" stroke="dimgray" stroke-width="1"  />
 </g><text x="50%" y="580" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb) // Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
 <text x="1490" y="590" font-size="0.5em" font-weight="bold" text-anchor="end" dominant-baseline="middle">SVGTechnicalRenderer</text>
 </svg>

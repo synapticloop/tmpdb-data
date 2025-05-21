@@ -282,7 +282,7 @@ export function lineVerticalGuide(x: number, y: number, height: number, strokeWi
 	return(lineVertical(x, y, height, strokeWidth, "#cfcfcf"));
 }
 
-export function circle(x: number, y: number, radius: number, strokeWidth: string, strokeColour: string, fillColour: OpaqueColour=new OpaqueColour({}, "white%0")): string {
+export function circle(x: number, y: number, radius: number, strokeWidth: string, strokeColour: string, fillColour: OpaqueColour=new OpaqueColour(null, "white%0")): string {
 	return(`<circle r="${radius}" `+
 			`cx="${x}" ` +
 			`cy="${y}" ` +

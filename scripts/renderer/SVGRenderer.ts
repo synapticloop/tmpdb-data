@@ -160,12 +160,12 @@ export abstract class SVGRenderer {
 			`</text>\n`
 
 		for(let colourComponent of this.pencil.colourComponents) {
-			svgString += `<rect x="${colourOffset}" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="${colourComponent.colour}" />\n`;
+			svgString += `<rect x="${colourOffset}" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="${colourComponent.colour}" fill-opacity="${colourComponent.opacity}"/>\n`;
 			svgString += `<text x="${colourOffset + 20}" ` +
 				`y="100" ` +
 				`transform="rotate(-90, ${colourOffset + 20}, 100)" ` +
 				`font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">` +
-				`${colourComponent.colour}` +
+				`${colourComponent.colourName}` +
 				`</text>\n`
 
 			colourOffset -= 60;
@@ -435,28 +435,6 @@ export abstract class SVGRenderer {
 		return(svgString);
 	}
 
-	protected renderExtraComponentsBackground(midYOverride: number, colourIndex: number):string {
-		let svgString: string = "";
-		let startX: number = this._width/2 - (this.pencil.totalLength*5/2);
-		for (const component of this.pencil.components) {
-			// extras are always rendered first - we render
-			// the background for it
-			for(const extra of component.extras) {
-				let backgroundColour = "black";
-				if(component.colours[colourIndex] == "black") {
-					backgroundColour = "dimgray";
-				}
-				svgString += drawExtraBackground(startX + extra.offset[0] * 5, midYOverride - extra.offset[1] * 5, extra.extraParts, backgroundColour);
-				break;
-			}
-
-			for(let part of component.parts) {
-				startX += part.length * 5;
-			}
-		}
-		return(svgString);
-	}
-
 	protected renderTotalLengthDimensions(): string {
 		return(dimensionsHorizontal(
 			this._width/2 - this.pencil.totalLength*5/2,
@@ -643,11 +621,9 @@ export abstract class SVGRenderer {
 					}
 					break;
 				case "indicator":
-					let backgoundColour: OpaqueColour = defaultOpaqueColour;
+					// let backgoundColour: OpaqueColour = defaultOpaqueColour;
+					let backgoundColour: OpaqueColour = part.getBackgroundOpacityColour(colourIndex);
 
-					if(part.backgroundColours[colourIndex]) {
-						backgoundColour = new OpaqueColour(this.pencil.colourMap, part.backgroundColours[colourIndex]);
-					}
 					// now draw the indicator
 					svgString += `<rect x="${startX + part.internalOffset * 5 + 10}" ` +
 						`y="${midY - (part.endHeight / 4 * 5)}" ` +
@@ -666,11 +642,7 @@ export abstract class SVGRenderer {
 					// now draw the indicator
 
 					// TODO - this should be at the top of the method
-					let backgroundColour: OpaqueColour = defaultOpaqueColour;
-
-					if(part.backgroundColours[colourIndex]) {
-						backgroundColour = new OpaqueColour(this.pencil.colourMap, part.backgroundColours[colourIndex]);
-					}
+					let backgroundColour: OpaqueColour = part.getBackgroundOpacityColour(colourIndex);
 
 					// horizontal
 					svgString += `<rect x="${startX + part.internalOffset * 5}" ` +

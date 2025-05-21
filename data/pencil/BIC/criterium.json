@@ -1,11 +1,16 @@
 {
 	"brand": "BIC",
-	"model": "Criterium",
+	"model_name": "Criterium",
 	"lead_size": "2.0",
 	"text": "BIC CRITERIUM 2 mm",
 	"colour_component": "body",
+	"colours": [ "silver", "white", "black" ],
+	"colour_map": {
+		"white": "#ffffff",
+		"black": "#000000"
+	},
 	"mechanism": "clutch",
-	"measured": true,
+	"accurate": true,
 	"features": [
 		{ "type":  "eraser", "location":  "internal - inside cap" },
 		{ "type":  "sharpener", "location":  "external - inside cap" }
@@ -21,6 +26,18 @@
 			"type": "jaws",
 			"parts": [
 				{ "shape": "cone", "dimensions": [ 2.25, 3.0, 3.5 ] }
+			],
+			"internal_end": [
+				{ "shape": "cone", "dimensions": [ 5.25, 3.5, 3.0 ] },
+				{ "shape": "cylinder", "dimensions": [ 6.25, 2.75 ], "finish": "spring" },
+				{ "shape": "cylinder", "dimensions": [ 1.75, 4.0 ] },
+				{ "shape": "cylinder", "dimensions": [ 0.75, 5.0 ] },
+				{ "shape": "cylinder", "dimensions": [ 4.5, 4.0 ] },
+				{ "shape": "cylinder", "dimensions": [ 13.5, 5.25 ], "colours": [ "white%20" ], "internal_offset": -4.5 },
+				{ "shape": "cylinder", "dimensions": [ 75.25, 4.0 ], "colours": [ "white%20" ] },
+				{ "shape": "cylinder", "dimensions": [ 1.0, 6.25 ], "colours": [ "white%90" ] },
+				{ "shape": "cylinder", "dimensions": [ 10.25, 5.5 ], "colours": [ "white%90" ] },
+				{ "shape": "cylinder", "dimensions": [ 12.75, 6.5 ], "colours": [ "white%90" ] }
 			],
 			"material": "metal",
 			"colours": [ "silver" ]
@@ -92,7 +109,8 @@
 				{ "shape": "hexagonal", "dimensions": [ 6.75, 9.0 ] }
 			],
 			"extras": [
-				{ "dimensions": [ 37.5, 4.75, 3.5 ],
+				{
+					"dimensions": [ 37.5, 4.75, 3.5 ],
 					"offset":  [ -27.5, 4.5 ],
 					"parts": [
 						{ "shape": "curve", "points": [ 0.5, -1.25, 7.0, -2.0, 5.0, 2.0 ] },

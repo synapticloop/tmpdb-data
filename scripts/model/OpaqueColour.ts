@@ -9,21 +9,23 @@ export class OpaqueColour {
 	opacity: number = 1;
 	definition: string;
 
-	constructor(colourMap: { [ id: string ] : string }, colour: string) {
+	constructor(colourMap: Map<string, string>, colour: string) {
 		if(colourMap === null) {
-			colourMap = {};
+			colourMap = new Map<string, string>();
 		}
 
-		this.colourName = colour;
-
 		const splits: string[] = colour.split("%");
+
+		this.colourName = splits[0];
+
 		switch(splits.length) {
 			case 2:
-				if(colourMap[splits[0]]) {
-					this.colour = colourMap[splits[0]];
+				if(colourMap.get(splits[0])) {
+					this.colour = colourMap.get(splits[0]);
 				} else {
 					this.colour = splits[0];
 				}
+
 				let opacityTemp: number = parseInt(splits[1]);
 				if (opacityTemp > 1) {
 					this.opacity = opacityTemp/100;
@@ -32,11 +34,12 @@ export class OpaqueColour {
 				}
 				break;
 			case 1:
-				if(colourMap[splits[0]]) {
-					this.colour = colourMap[splits[0]];
+				if(colourMap.get(splits[0])) {
+					this.colour = colourMap.get(splits[0]);
 				} else {
 					this.colour = splits[0];
 				}
+
 				break;
 			default:
 				this.colour = colour;
