@@ -92,8 +92,7 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 					startX -= partLength;
 
 					for (let internalPart of component.internalStart) {
-						startX += internalPart.length * 5;
-						startX += internalPart.internalOffset * 5;
+						startX -= internalPart.length * 5;
 					}
 
 					svgString += lineHorizontal(startX - 40, midY, 30, "1.0", "#0f0f0f");
@@ -115,11 +114,10 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 					svgString += lineVertical(startX - 40, midY - 50, 50, "1.0", "#0f0f0f");
 
 
-					let prevStartX: number = startX;
+					let prevStartX = startX;
 
 					for (let internalPart of component.internalStart) {
 						colour = this.getMappedColour(internalPart.colours, colourIndex, colour.colour);
-						// startX += internalPart.internalOffset * 5;
 						svgString += super.renderPart(startX, midY, component, internalPart, colourIndex, colour);
 						startX += internalPart.length * 5
 					}
@@ -163,19 +161,16 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 					let previousPart:Part = null;
 					for (let internalPart of component.internalEnd) {
 						colour = this.getMappedColour(internalPart.colours, colourIndex, colour.colour);
-						// startX += internalPart.internalOffset * 5;
 						svgString += super.renderPart(startX, midY, component, internalPart, colourIndex, colour);
 						totalLength += internalPart.length;
-						totalLength += internalPart.internalOffset;
-
 						startX += internalPart.length * 5
 
 						// if we have an offset (which we only have on an end internal)
 						if(previousPart !== null && internalPart.internalOffset !== 0) {
-							startX -= internalPart.length * 5;
+							startX += internalPart.internalOffset * 5;
 							startX -= previousPart.length * 5;
 							svgString += super.renderPart(startX, midY, component, previousPart, colourIndex, colour);
-							startX += internalPart.length * 5;
+							startX -= internalPart.internalOffset * 5;
 							startX += previousPart.length * 5;
 						}
 						previousPart = internalPart;
@@ -237,8 +232,9 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 				}
 			} else {
 
-
+				// This part is not hidden - i.e. a hidden component is only rendered internally
 				for (let part of component.parts) {
+					// render the visible part
 					svgString += super.renderPart(startX, midY, component, part, colourIndex, colour);
 
 					colour = this.getMappedColour(part.colours, colourIndex, colour.colour);
@@ -246,17 +242,17 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 					svgString += super.renderTaper(startX, midY, part, colourIndex, colour.colour);
 
 					startX += part.length * 5;
+					// for internal start parts we will need this value to go back
 					partLength += part.length * 5;
 
-
+					// we are going to render
 					for (let internalEnd of component.internalEnd) {
 						colour = this.getMappedColour(internalEnd.colours, colourIndex, colour.colour);
-						// startX += internalEnd.internalOffset * 5;
+						startX += internalEnd.internalOffset * 5;
 						svgString += super.renderPart(startX, midY, component, internalEnd, colourIndex, colour);
 						startX += internalEnd.length * 5;
 						endPartLength += internalEnd.length * 5;
 						endPartLength += internalEnd.internalOffset * 5;
-
 					}
 				}
 
@@ -298,8 +294,7 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 					startX -= partLength;
 
 					for (let internalPart of component.internalStart) {
-						startX += internalPart.length * 5;
-						startX += internalPart.internalOffset * 5;
+						startX -= internalPart.length * 5;
 					}
 
 					svgString += lineHorizontal(startX - 40, midY, 30, "2.0", "white");
@@ -314,10 +309,8 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 
 					for (let internalPart of component.internalStart) {
 						colour = this.getMappedColour(internalPart.colours, colourIndex, colour.colour);
-						// startX += internalPart.internalOffset * 5;
 						svgString += super.renderPart(startX, midY, component, internalPart, colourIndex, colour);
 						totalLength += internalPart.length;
-						totalLength += internalPart.internalOffset;
 						startX += internalPart.length * 5
 					}
 
