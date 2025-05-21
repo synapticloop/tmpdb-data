@@ -17,7 +17,7 @@ import {
 } from "../utils/svg-helper.ts";
 import {Part} from "../model/Part.ts";
 import {formatToTwoPlaces} from "../utils/formatter.ts";
-import {OpacityColour} from "../model/OpacityColour.ts";
+import {OpaqueColour} from "../model/OpaqueColour.ts";
 
 export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 	SVG_WIDTH: number = 1200;
@@ -71,7 +71,7 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 		let startX: number = this.SVG_WIDTH/2 - (this.pencil.totalLength*5/2);
 		let midY: number = 120;
 
-		let colour: OpacityColour = new OpacityColour(this.pencil.colourMap, "white");
+		let colour: OpaqueColour = new OpaqueColour(this.pencil.colourMap, "white");
 
 		for (let [index, component] of this.pencil.components.entries()) {
 			if(index !== 0) {

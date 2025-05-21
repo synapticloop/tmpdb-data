@@ -2,7 +2,7 @@
 import {Part} from "../model/Part.ts";
 import {Extra} from "../model/Extra.ts";
 import {ExtraPart} from "../model/ExtraPart.ts";
-import {OpacityColour} from "../model/OpacityColour.ts";
+import {OpaqueColour} from "../model/OpaqueColour.ts";
 
 const DIMENSION_MARKER_LENGTH = 22;
 
@@ -28,7 +28,7 @@ export function drawText(text, x, y, fontSize) {
 			`${text}</text>\n`);
 }
 
-export function drawOutlineHexagon(x, y, height:number, fillColour: OpacityColour) {
+export function drawOutlineHexagon(x, y, height:number, fillColour: OpaqueColour) {
 	let strokeColour: string = "black";
 	if(fillColour.colour === "black") {
 		strokeColour = "dimgray";
@@ -72,7 +72,7 @@ export function drawOutlineOctagon(x, y, height, fillColour) {
 			`" stroke="${strokeColour}" stroke-width="1" fill="${fillColour.colour}" fill-opacity="${fillColour.opacity}"/>\n`);
 }
 
-export function drawOutlineCircle(radius: number, x: number, y:number, fillColour: OpacityColour) {
+export function drawOutlineCircle(radius: number, x: number, y:number, fillColour: OpaqueColour) {
 	let strokeColour: string = "black";
 	if(fillColour.colour === "black") {
 		strokeColour = "dimgray";
@@ -282,7 +282,7 @@ export function lineVerticalGuide(x: number, y: number, height: number, strokeWi
 	return(lineVertical(x, y, height, strokeWidth, "#cfcfcf"));
 }
 
-export function circle(x: number, y: number, radius: number, strokeWidth: string, strokeColour: string, fillColour: OpacityColour=new OpacityColour({}, "white%0")): string {
+export function circle(x: number, y: number, radius: number, strokeWidth: string, strokeColour: string, fillColour: OpaqueColour=new OpaqueColour({}, "white%0")): string {
 	return(`<circle r="${radius}" `+
 			`cx="${x}" ` +
 			`cy="${y}" ` +
@@ -588,7 +588,7 @@ export function dimensionsHorizontal(x: number, y:number, width:number, text: st
 	}
 	return(svgString);
 }
-export function rectangle(x:number, y:number, width:number, height:number, strokeColour:string, opaqueColour: OpacityColour): string {
+export function rectangle(x:number, y:number, width:number, height:number, strokeColour:string, opaqueColour: OpaqueColour): string {
 	let svgString = "";
 	svgString += `<rect x="${x}" ` +
 		`y="${y}" ` +

@@ -5,6 +5,10 @@
 	"text": "BIC CRITERIUM 2 mm",
 	"colour_component": "body",
 	"colours": [ "silver", "white", "black" ],
+	"colourMap": {
+		"white": "#ffffff",
+		"black": "#ae00f0"
+	},
 	"mechanism": "clutch",
 	"accurate": true,
 	"features": [

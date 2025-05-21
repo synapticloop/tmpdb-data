@@ -1,10 +1,11 @@
 import { Component } from "./Component.ts";
 import {JsonIgnore, JsonProperty, ObjectMapper, Deserializer } from "json-object-mapper";
 import "reflect-metadata";
-import {OpacityColour} from "./OpacityColour.ts";
+import {OpaqueColour} from "./OpaqueColour.ts";
 import {Feature} from "./Feature.ts";
 import {FrontBack} from "./FrontBack.ts";
 import {ComponentDeserialiser} from "./deserialisers/ComponentDeserialiser.ts";
+import {Base} from "./Base.ts";
 
 export class Pencil extends Base {
 	@JsonProperty({ name: "brand", required: true })
@@ -50,7 +51,7 @@ export class Pencil extends Base {
 	//
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-	colourComponents: OpacityColour[] = [];
+	colourComponents: OpaqueColour[] = [];
 	maxWidth:number = 0; // the maximum width of the pencil (generated)
 	maxHeight:number = 0; // the maximum height of the pencil (generated)
 	totalLength:number = 0; // the total length of the pencil (generated)
@@ -66,7 +67,7 @@ export class Pencil extends Base {
 	postConstruct(colours: string[], colourMap: { [id: string]: string}): void {
 		// first up we need to parse the colours
 		for(const colour of this.colours) {
-			this.colourComponents.push(new OpacityColour(this.colourMap, colour));
+			this.colourComponents.push(new OpaqueColour(this.colourMap, colour));
 		}
 
 		const materialsSet: Set<string> = new Set();

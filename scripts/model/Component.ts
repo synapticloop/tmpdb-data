@@ -2,9 +2,10 @@ import {Part} from "./Part.ts";
 import {Extra} from "./Extra.ts";
 import {JsonIgnore, JsonProperty} from "json-object-mapper";
 import "reflect-metadata";
-import {OpacityColour} from "./OpacityColour.ts";
+import {OpaqueColour} from "./OpaqueColour.ts";
 import {PartDeserialiser} from "./deserialisers/PartDeserialiser.ts";
 import {ExtraDeserialiser} from "./deserialisers/ExtraDeserialiser.ts";
+import {Base} from "./Base.ts";
 
 export class Component extends Base {
 
@@ -37,7 +38,6 @@ export class Component extends Base {
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 	materials:string[] = []; // the materials that this component is made out of
-	opacityColours: OpacityColour[] = [];
 
 	// the length of the component - which is when you are looking at it
 	// sideways...
@@ -56,13 +56,15 @@ export class Component extends Base {
 	isHidden: boolean = false;
 
 	postConstruct(colours: string[], colourMap: { [id: string]: string}): void {
-		if(!this.colours) {
-			this.colours = colours;
+		// first up we want to cascade the postConstruct
+		super.mergeOpacityColours(this.colours, colours, colourMap);
+
+		for(const part of this.parts) {
+			part.postConstruct(this.mergedColours, colourMap);
 		}
 
-		// now go through and map the colours
-		for(const colour of this.colours) {
-			this.opacityColours.push(new OpacityColour(colourMap, colour));
+		for(const extra of this.extras) {
+			extra.postConstruct(colours, colourMap);
 		}
 
 		this.materials.push(this.material);
@@ -76,45 +78,37 @@ export class Component extends Base {
 		}
 
 		for(const part of this.parts) {
-				this.length += part.length;
+			this.length += part.length;
 
-				if(part.material) {
-					this.materials.push(part.material);
-				}
-
-				let tempMaxWidth:number = part.getMaxWidth();
-				if(tempMaxWidth >= this.maxWidth) {
-					this.maxWidth = tempMaxWidth;
-				}
-
-				let tempMinWidth:number = part.getMinWidth();
-				if(tempMinWidth >= this.minWidth) {
-					this.minWidth = tempMinWidth;
-				}
-
-				let tempMaxHeight = part.getMaxHeight();
-				if(tempMaxHeight >= this.maxHeight) {
-					this.maxHeight = tempMaxHeight;
-				}
-
-				let tempMinHeight = part.getMinHeight();
-				if(tempMinHeight >= this.minHeight) {
-					this.minHeight = tempMinHeight;
-				}
+			if(part.material) {
+				this.materials.push(part.material);
 			}
+
+			let tempMaxWidth:number = part.getMaxWidth();
+			if(tempMaxWidth >= this.maxWidth) {
+				this.maxWidth = tempMaxWidth;
+			}
+
+			let tempMinWidth:number = part.getMinWidth();
+			if(tempMinWidth >= this.minWidth) {
+				this.minWidth = tempMinWidth;
+			}
+
+			let tempMaxHeight = part.getMaxHeight();
+			if(tempMaxHeight >= this.maxHeight) {
+				this.maxHeight = tempMaxHeight;
+			}
+
+			let tempMinHeight = part.getMinHeight();
+			if(tempMinHeight >= this.minHeight) {
+				this.minHeight = tempMinHeight;
+			}
+		}
 
 		// this component is only hidden if it has a length of 0 and one, or both
 		// internal parts
 		if(this.parts.length === 0 && (this.internalStart.length !== 0 || this.internalEnd.length !== 0)) {
 			this.isHidden = true;
 		}
-	}
-
-	getSomething() {
-
-	}
-
-	somethingElse() {
-
 	}
 }

@@ -16,7 +16,7 @@ import {
 } from "../utils/svg-helper.ts";
 import {Part} from "../model/Part.ts";
 import {Extra} from "../model/Extra.ts";
-import {OpacityColour} from "../model/OpacityColour.ts";
+import {OpaqueColour} from "../model/OpaqueColour.ts";
 
 export class SVGTechnicalRenderer extends SVGRenderer {
 	SVG_WIDTH: number = 1500;
@@ -269,7 +269,7 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 		let startX = 160;
 		let midY = this.SVG_HEIGHT/2;
 
-		let colour: OpacityColour = new OpacityColour(this.pencil.colourMap, "white%0");
+		let colour: OpaqueColour = new OpaqueColour(this.pencil.colourMap, "white%0");
 
 		// we want to render them back to front so that the last component is on
 		// the bottom
@@ -307,13 +307,13 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 		for(let front of this.pencil.front) {
 			// only care about the first dimension - which is the width
 			let dimensions: number[] = front.dimensions;
-			let frontFillColour: OpacityColour = new OpacityColour(this.pencil.colourMap, "white");
+			let frontFillColour: OpaqueColour = new OpaqueColour(this.pencil.colourMap, "white");
 
 			if(colourIndex !== -1) {
 				if (this.pencil.colourMap[front.fill]) {
-					frontFillColour = new OpacityColour(this.pencil.colourMap, this.pencil.colourMap[front.fill]);
+					frontFillColour = new OpaqueColour(this.pencil.colourMap, this.pencil.colourMap[front.fill]);
 				} else {
-					frontFillColour = new OpacityColour(this.pencil.colourMap, front.fill);
+					frontFillColour = new OpaqueColour(this.pencil.colourMap, front.fill);
 				}
 			}
 			// render the front piece
@@ -333,7 +333,7 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 		let midY = this.SVG_HEIGHT/2;
 
 
-		let colour: OpacityColour = new OpacityColour(this.pencil.colourMap, "white");
+		let colour: OpaqueColour = new OpaqueColour(this.pencil.colourMap, "white");
 		// go through the components and render them
 		for(const component of this.pencil.components) {
 			colour = this.getMappedColour(component.colours, colourIndex, colour.colour);
@@ -358,14 +358,14 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 		}
 
 		for(let back of this.pencil.back) {
-			let backFillColour: OpacityColour = new OpacityColour(this.pencil.colourMap, "white");
+			let backFillColour: OpaqueColour = new OpaqueColour(this.pencil.colourMap, "white");
 
 			if(colourIndex !== -1) {
 				// TODO mapped colour
 				if (this.pencil.colourMap[back.fill]) {
-					backFillColour = new OpacityColour(this.pencil.colourMap, this.pencil.colourMap[back.fill]);
+					backFillColour = new OpaqueColour(this.pencil.colourMap, this.pencil.colourMap[back.fill]);
 				} else {
-					backFillColour = new OpacityColour(this.pencil.colourMap, back.fill);
+					backFillColour = new OpaqueColour(this.pencil.colourMap, back.fill);
 				}
 			}
 

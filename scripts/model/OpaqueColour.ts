@@ -1,16 +1,20 @@
 import {JsonProperty} from "json-object-mapper";
 import "reflect-metadata";
 
-export class OpacityColour {
+export class OpaqueColour {
 	@JsonProperty({ name: "colour", required: true })
-	colour:string; // the colour
-	opacity:number = 1;
+	colour: string; // the hex code of the colour (if found in the colour map), else the name
+
+	colourName: string; // the name of the colour
+	opacity: number = 1;
 	definition: string;
 
 	constructor(colourMap: { [ id: string ] : string }, colour: string) {
 		if(colourMap === null) {
 			colourMap = {};
 		}
+
+		this.colourName = colour;
 
 		const splits: string[] = colour.split("%");
 		switch(splits.length) {
@@ -20,7 +24,7 @@ export class OpacityColour {
 				} else {
 					this.colour = splits[0];
 				}
-				let opacityTemp = parseInt(splits[1]);
+				let opacityTemp: number = parseInt(splits[1]);
 				if (opacityTemp > 1) {
 					this.opacity = opacityTemp/100;
 				} else {

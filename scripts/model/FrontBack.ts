@@ -1,6 +1,6 @@
 import {JsonIgnore, JsonProperty} from "json-object-mapper";
 import "reflect-metadata";
-import {OpacityColour} from "./OpacityColour.ts";
+import {OpaqueColour} from "./OpaqueColour.ts";
 
 export class FrontBack {
 	@JsonProperty({ name: "shape", required: true })
@@ -10,5 +10,5 @@ export class FrontBack {
 	dimensions: number[]; // the dimensions of the front/back piece
 
 	@JsonIgnore()
-	fill: OpacityColour;
+	fill: OpaqueColour;
 }

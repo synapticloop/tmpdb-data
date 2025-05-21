@@ -2,6 +2,7 @@ import {JsonIgnore, JsonProperty} from "json-object-mapper";
 import "reflect-metadata";
 import {Taper} from "./Taper.ts";
 import {TaperDeserialiser} from "./deserialisers/TaperDeserialiser.ts";
+import {Base} from "./Base.ts";
 
 export class Part extends Base {
 	@JsonProperty({ name: "shape", required: true })
@@ -14,11 +15,11 @@ export class Part extends Base {
 	@JsonProperty({ name: "finish", required: false })
 	finish: string = ""; // The finish that is applied to the part
 	@JsonProperty({ name: "offset", required: false })
-	offset: number[]; // the offset for this part
-	@JsonProperty({ name: "taper_start", required: false, type: Taper, deserializer: TaperDeserialiser })
+	offset: number[] = []; // the offset for this part
+	@JsonProperty({ name: "taper_start", required: false, type: Taper })
 	taperStart: Taper;
-	@JsonProperty({ name: "taper_end", required: false, type: Taper, deserializer: TaperDeserialiser })
-	taperEnd:any;
+	@JsonProperty({ name: "taper_end", required: false, type: Taper })
+	taperEnd: Taper;
 	@JsonProperty({ name: "internal_offset", required: false })
 	internalOffset: number = 0; // the internal offset (for tapering only)
 	@JsonProperty({ name: "colours", required: false })
@@ -46,8 +47,19 @@ export class Part extends Base {
 
 	postConstruct(colours: string[], colourMap: { [id: string]: string; }): void {
 		// contribute to the length
+		super.mergeOpacityColours(this.colours, colours, colourMap);
+
+		if(this.taperStart) {
+			this.taperStart.postConstruct(this.mergedColours, colourMap);
+		}
+
+		if(this.taperEnd) {
+			this.taperEnd.postConstruct(this.mergedColours, colourMap);
+		}
+
 		this.length = this.dimensions[0];
 		this.startHeight = this.dimensions[1];
+
 		if(this.dimensions.length > 2) {
 			this.endHeight = this.dimensions[2];
 		} else {

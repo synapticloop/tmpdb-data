@@ -18,7 +18,7 @@ import {formatToTwoPlaces} from "../utils/formatter.ts";
 
 import {Component} from "../model/Component.ts";
 import {Pencil} from "../model/Pencil.ts";
-import {OpacityColour} from "../model/OpacityColour.ts";
+import {OpaqueColour} from "../model/OpaqueColour.ts";
 
 
 export abstract class SVGRenderer {
@@ -160,18 +160,12 @@ export abstract class SVGRenderer {
 			`</text>\n`
 
 		for(let colourComponent of this.pencil.colourComponents) {
-			let fillColour = colourComponent;
-
-			if (this.pencil.colourMap[colourComponent]) {
-				fillColour = this.pencil.colourMap[colourComponent];
-			}
-
-			svgString += `<rect x="${colourOffset}" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="${fillColour}" />\n`;
+			svgString += `<rect x="${colourOffset}" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="${colourComponent.colour}" />\n`;
 			svgString += `<text x="${colourOffset + 20}" ` +
 				`y="100" ` +
 				`transform="rotate(-90, ${colourOffset + 20}, 100)" ` +
 				`font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">` +
-				`${colourComponent}` +
+				`${colourComponent.colour}` +
 				`</text>\n`
 
 			colourOffset -= 60;
@@ -236,19 +230,17 @@ export abstract class SVGRenderer {
 		let xOffsetTaperStart: number = 0;
 		let xOffsetTaperStartScale: number = 1;
 
-		if(part.taperStart?.offset[0]) {
-			xOffsetTaperStart = part.taperStart.offset[0];
+		if(part.taperStart?.xOffset) {
+			xOffsetTaperStart = part.taperStart.xOffset;
 		}
-		if(part.taperStart?.offset[1]) {
-			xOffsetTaperStartScale = part.taperStart.offset[1];
+
+		if(part.taperStart?.xScale) {
+			xOffsetTaperStartScale = part.taperStart.xScale;
 		}
 
 
 		if(part.taperStart) {
-			let backgroundColour: OpacityColour = this.getMappedColour(part.colours, colourIndex, colour);
-			if(part.taperStart?.backgroundColours) {
-				backgroundColour = this.getMappedColour(part.taperStart?.backgroundColours, colourIndex, colour);
-			}
+			let backgroundColour: OpaqueColour = part.taperStart.getBackgroundOpacityColour(colourIndex);
 
 			// now we get to draw the taper
 			switch (part.shape) {
@@ -287,18 +279,16 @@ export abstract class SVGRenderer {
 		let xOffsetTaperEnd: number = 0;
 		let xOffsetTaperEndScale: number = 1;
 
-		if(part.taperEnd?.offset[0]) {
-			xOffsetTaperEnd = part.taperEnd.offset[0];
+		if(part.taperEnd?.xOffset) {
+			xOffsetTaperEnd = part.taperEnd.xOffset;
 		}
-		if(part.taperEnd?.offset[1]) {
-			xOffsetTaperEndScale = part.taperEnd.offset[1];
+		if(part.taperEnd?.xScale) {
+			xOffsetTaperEndScale = part.taperEnd.xScale;
 		}
 
 		if(part.taperEnd) {
-			let backgroundColour: OpacityColour = this.getMappedColour(part.colours, colourIndex, colour);
-			if(part.taperEnd?.backgroundColours) {
-				backgroundColour = this.getMappedColour(part.taperEnd?.backgroundColours, colourIndex, colour);
-			}
+			let backgroundColour: OpaqueColour = part.taperEnd.getBackgroundOpacityColour(colourIndex);
+
 			// now we get to draw the taper
 			switch (part.shape) {
 				case "hexagonal":
@@ -418,11 +408,10 @@ export abstract class SVGRenderer {
 			midY = midYOverride;
 		}
 
-		let colourOpacity: OpacityColour = new OpacityColour(this.pencil.colourMap, "white");
-
+		let colourOpacity: OpaqueColour = new OpaqueColour(this.pencil.colourMap, "white");
 
 		for (let component of this.pencil.components) {
-			colourOpacity = this.getMappedColour(component.colours, colourIndex, "white");
+			colourOpacity = component.getOpacityColour(colourIndex);
 
 			for(let part of component.parts) {
 				svgString += this.renderPart(startX, midY, component, part, colourIndex, colourOpacity);
@@ -435,7 +424,7 @@ export abstract class SVGRenderer {
 		startX = this._width/2 - (this.pencil.totalLength*5/2);
 
 		for (let component of this.pencil.components) {
-			colourOpacity = this.getMappedColour(component.colours, colourIndex, colourOpacity.colour);
+			colourOpacity = component.getOpacityColour(colourIndex);
 
 			for(let part of component.parts) {
 				svgString += this.renderTaper(startX, midY, part, colourIndex, colourOpacity.colour);
@@ -479,26 +468,29 @@ export abstract class SVGRenderer {
 		));
 	}
 
-	protected renderPart(startX:number, midY:number, component:Component, part: Part, colourIndex: number, defaultOpaqueColour: OpacityColour):string {
-
+	protected renderPart(startX:number, midY:number, component:Component, part: Part, colourIndex: number, defaultOpaqueColour: OpaqueColour):string {
 		let svgString:string = "";
+
 		// get the stroke colour
 		let strokeColour:string = "black"
-		if (component.colours[colourIndex] === "black") {
+		if(component.getOpacityColour(colourIndex).colour === "black") {
 			strokeColour = "dimgray";
 		}
 
 		for(const extra of component.extras) {
 			let backgroundColour = "black";
-			if(component.colours[colourIndex] == "black") {
+
+			// TODO - do we need this
+			if(component.getOpacityColour(colourIndex).colour === "black") {
 				backgroundColour = "dimgray";
 			}
+
 			svgString += drawExtraBackground(startX + extra.offset[0] * 5, midY - extra.offset[1] * 5, extra.extraParts, backgroundColour);
 			break;
 		}
 
 		// maybe we have an over-ride colour and material
-		let opaqueColour: OpacityColour = this.getMappedColour(part.colours, colourIndex, defaultOpaqueColour.colour);
+		let opaqueColour: OpaqueColour = part.getOpacityColour(colourIndex);
 
 		switch (part.shape) {
 			case "cylinder":
@@ -602,7 +594,7 @@ export abstract class SVGRenderer {
 						offset += (part.length / 13) * 5;
 					}
 
-					svgString += drawOutlineCircle(4, startX + part.internalOffset * 5 + 15, midY - part.startHeight / 4 * 5, new OpacityColour(null, "dimgray"));
+					svgString += drawOutlineCircle(4, startX + part.internalOffset * 5 + 15, midY - part.startHeight / 4 * 5, new OpaqueColour(null, "dimgray"));
 
 					break;
 				case "knurled":
@@ -651,10 +643,10 @@ export abstract class SVGRenderer {
 					}
 					break;
 				case "indicator":
-					let backgoundColour: OpacityColour = defaultOpaqueColour;
+					let backgoundColour: OpaqueColour = defaultOpaqueColour;
 
 					if(part.backgroundColours[colourIndex]) {
-						backgoundColour = new OpacityColour(this.pencil.colourMap, part.backgroundColours[colourIndex]);
+						backgoundColour = new OpaqueColour(this.pencil.colourMap, part.backgroundColours[colourIndex]);
 					}
 					// now draw the indicator
 					svgString += `<rect x="${startX + part.internalOffset * 5 + 10}" ` +
@@ -674,10 +666,10 @@ export abstract class SVGRenderer {
 					// now draw the indicator
 
 					// TODO - this should be at the top of the method
-					let backgroundColour: OpacityColour = defaultOpaqueColour;
+					let backgroundColour: OpaqueColour = defaultOpaqueColour;
 
 					if(part.backgroundColours[colourIndex]) {
-						backgroundColour = new OpacityColour(this.pencil.colourMap, part.backgroundColours[colourIndex]);
+						backgroundColour = new OpaqueColour(this.pencil.colourMap, part.backgroundColours[colourIndex]);
 					}
 
 					// horizontal
@@ -723,7 +715,7 @@ export abstract class SVGRenderer {
 		}
 
 		for(const extra of component.extras) {
-			let colour: OpacityColour = this.getMappedColour(component.colours, colourIndex, extra.colours[colourIndex]);
+			let colour: OpaqueColour = extra.getOpacityColour(colourIndex)
 			svgString += drawExtraForeground(startX + extra.offset[0] * 5, midY - extra.offset[1] * 5, extra.extraParts, colour.colour);
 			break;
 		}
@@ -731,9 +723,9 @@ export abstract class SVGRenderer {
 		return(svgString);
 	}
 
-	protected getMappedColour(colours: string[], colourIndex: number, defaultColour: string ): OpacityColour {
+	protected getMappedColour(colours: string[], colourIndex: number, defaultColour: string ): OpaqueColour {
 		if(colourIndex == -1) {
-			return(new OpacityColour(this.pencil.colourMap, "white"));
+			return(new OpaqueColour(this.pencil.colourMap, "white"));
 		}
 
 		let colourComponent:string;
@@ -745,16 +737,16 @@ export abstract class SVGRenderer {
 		}
 
 		if (colourComponent) {
-			let colourOpacity = new OpacityColour(this.pencil.colourMap, colourComponent);
+			let colourOpacity = new OpaqueColour(this.pencil.colourMap, colourComponent);
 
 			if(this.pencil.colourMap[colourOpacity.colour]) {
 				return(colourOpacity);
 			} else {
-				return(new OpacityColour(this.pencil.colourMap, colourComponent));
+				return(new OpaqueColour(this.pencil.colourMap, colourComponent));
 			}
 		}
 
-		return(new OpacityColour(this.pencil.colourMap, defaultColour));
+		return(new OpaqueColour(this.pencil.colourMap, defaultColour));
 	}
 
 	protected renderGuidelines(): string {
