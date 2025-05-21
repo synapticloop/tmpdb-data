@@ -1,7 +1,39 @@
-export class Part {
+import {JsonIgnore, JsonProperty} from "json-object-mapper";
+import "reflect-metadata";
+import {Base} from "./Base.ts";
+import {Taper} from "./Taper.ts";
 
-	// the shape of this part
-	shape: string = "";
+export class Part extends Base {
+	@JsonProperty({ name: "shape", required: true })
+	shape: string; // the shape of this part
+	@JsonProperty({ name: "dimensions", required: true })
+	dimensions: number[]; // the dimensions for this part
+	@JsonProperty({ name: "joined", required: false })
+	joined: boolean=false; // whether this part is joined to the previous part
+	@JsonProperty({ name: "finish", required: false })
+	finish: string[] = []; // The finish that is applied to the part
+
+	@JsonProperty({ name: "offset", required: true })
+	offset: number[]; // the offset for this part
+
+	@JsonProperty({ name: "taper_start", required: false })
+	taperStart: Taper;
+	@JsonProperty({ name: "taper_end", required: false })
+	taperEnd:any;
+	@JsonProperty({ name: "internal_offset", required: false })
+	internalOffset: number = 0; // the internal offset (for tapering only)
+	@JsonProperty({ name: "colours", required: false })
+	private colours: string[] = [];
+
+	@JsonProperty({ name: "background_colours", required: false })
+	private backgroundColours: string[] = [];
+
+
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	//
+	// GENERATED METADATA BY THE postConstruct METHOD
+	//
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 	// the length of this part
 	length: number = 0;
@@ -10,56 +42,11 @@ export class Part {
 	startHeight: number = 0;
 	endHeight: number = 0;
 
-	// the offset
-	offset: number[] = [ 0, 0 ];
-
-	// the finish of the
-	finish: string = "";
-
-	// the colours
-	colours: string[] = [];
-	backgroundColours: string[] = [];
-	dimensions: number[] = [];
 	material: string = null;
 
-	taperStart:any;
-	taperEnd:any;
 
-	joined: false;
-
-	internalOffset: number;
-
-	constructor(jsonObject, colours) {
-		this.shape = jsonObject.shape;
-		this.material = jsonObject.material;
-		this.internalOffset = jsonObject.internal_offset ?? 0;
-		this.joined = jsonObject.joined ?? false;
-
-		this.taperStart = jsonObject.taper_start;
-		this.taperEnd = jsonObject.taper_end;
-
-		if(jsonObject.offset) {
-			this.offset = jsonObject.offset;
-		}
-
-		this.finish = jsonObject.finish ?? this.finish;
-
-		if(jsonObject.colours) {
-			this.colours = jsonObject.colours;
-		} else if(colours) {
-			this.colours = colours;
-		} else {
-			this.colours.push("white");
-		}
-
-		if(jsonObject.background_colours) {
-			this.backgroundColours = jsonObject.background_colours;
-		} else {
-			this.backgroundColours = colours;
-		}
-
+	postConstruct(colours: string[], colourMap: { [id: string]: string; }): void {
 		// contribute to the length
-		this.dimensions = jsonObject.dimensions;
 		this.length = this.dimensions[0];
 		this.startHeight = this.dimensions[1];
 		if(this.dimensions.length > 2) {
@@ -80,7 +67,7 @@ export class Part {
 		return(this.getMinWidth());
 	}
 
-	getMaxWidth() {
+	getMaxWidth():number {
 		switch (this.shape) {
 			case "hexagonal":
 				let apothem = this.startHeight/2;

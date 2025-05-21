@@ -6,7 +6,9 @@
 		"target": "es2022",
 		"moduleResolution": "node",
 		"sourceMap": true,
-		"outDir": "dist"
+		"outDir": "dist",
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true
 	},
 	"lib": ["2022"]
 }

@@ -1,11 +1,12 @@
 {
 	"brand": "BIC",
-	"model": "Criterium",
+	"model_name": "Criterium",
 	"lead_size": "2.0",
 	"text": "BIC CRITERIUM 2 mm",
 	"colour_component": "body",
+	"colours": [ "silver", "white", "black" ],
 	"mechanism": "clutch",
-	"measured": true,
+	"accurate": true,
 	"features": [
 		{ "type":  "eraser", "location":  "internal - inside cap" },
 		{ "type":  "sharpener", "location":  "external - inside cap" }

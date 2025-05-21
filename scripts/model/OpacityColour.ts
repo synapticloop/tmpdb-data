@@ -1,7 +1,9 @@
-import {Pencil} from "./Pencil.ts";
+import {JsonProperty} from "json-object-mapper";
+import "reflect-metadata";
 
 export class OpacityColour {
-	colour:string;
+	@JsonProperty({ name: "colour", required: true })
+	colour:string; // the colour
 	opacity:number = 1;
 	definition: string;
 

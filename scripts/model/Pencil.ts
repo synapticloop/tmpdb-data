@@ -1,124 +1,111 @@
 import { Component } from "./Component.ts";
+import {JsonIgnore, JsonProperty} from "json-object-mapper";
+import "reflect-metadata";
+import {OpacityColour} from "./OpacityColour.ts";
+import {Feature} from "./Feature.ts";
+import {Base} from "./Base.ts";
+import {FrontBack} from "./FrontBack.ts";
 
-export class Pencil {
-	// the name of the pencil
-	modelName:string = "";
-	modelNumber:string = "";
-	// the brand of the pencil
-	brand:string = "";
-	// the lead size
-	leadSize:string = "";
-	// the lead shape - which defaults to 'cylindrical'
-	leadShape: string = "cylindrical";
-	maximumLeadLength: number;
-	// the components that make up the pencil
-	components:Component[] = [];
-	// the text that is written on the pencil
-	text:string = "";
+export class Pencil extends Base {
+	@JsonProperty({ name: "brand", required: true })
+	brand: string; // the brand of the pencil
+	@JsonProperty({ name: "model_name", required: true })
+	modelName: string; // the name of the pencil
+	@JsonProperty({ name: "model_number", required: false })
+	modelNumber: string; // the model number of the pencil
+	@JsonProperty({ name: "lead_size", required: true })
+	leadSize: number; // the lead size
+	@JsonProperty({ name: "lead_shape", required: false })
+	leadShape: string = "cylindrical"; // the lead shape - which defaults to 'cylindrical'
+	@JsonProperty({ name: "text", required: false })
+	text:string = ""; // the text that is written on the pencil
+	@JsonProperty({ name: "maximum_lead_length", required: false })
+	maximumLeadLength: number; // the maximum length of lead that will fit in the pencil
+	@JsonProperty({ name: "mechanism", required: true })
+	mechanism: string = "";
+	@JsonProperty({ name: "weight", required: false })
+	weight: number;
+	@JsonProperty({ name: "colour_component", required: true })
+	colourComponent: string = ""; // the colour component that defines the differences
+	@JsonProperty({ name: "colours", required: true })
+	private colours: string[] = []; // the colours of the pencil
+	@JsonProperty({ name: "colour_map", required: false })
+	colourMap: { [id: string]: string} = {}; // the map of named colours to hex colour codes
+	@JsonProperty({ name: "accurate", required: false })
+	accurate: boolean = false;
+	@JsonProperty({ name: "features", required: false })
+	features: Feature[] = [];
+	@JsonProperty({ name: "front", required: false })
+	front: FrontBack[];
+	@JsonProperty({ name: "back", required: false })
+	back: FrontBack[];
+	@JsonProperty({ name: "components", required: false })
+	components: Component[] = []; // the components that make up the pencil
+	@JsonProperty({ name: "skus", required: false })
+	skus: string[] = []; // the components that make up the pencil
 
-	mechanism:string = "";
-	// the maximum width of the pencil (generated)
-	maxWidth:number = 0;
-	// the maximum height of the pencil (generated)
-	maxHeight:number = 0;
-	// the total length of the pencil (generated)
-	totalLength:number = 0
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	//
+	// GENERATED METADATA BY THE postConstruct METHOD
+	//
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-	// The materials that make up this pencil - to keep them in order of definition
-	materials:string[] = [];
-	// the set of materials for this pencil - which is used to de-duplicate
-	materialsSet = new Set();
-	// the colour component that defines the differences
-	colourComponent:string = "";
-	// the colour components
-	colourComponents:string[] = [ "white" ];
-	// the weight of the pencil
-	weight:number = null;
-	front = [];
-	back = [];
-	// a map of colour names to HTML # values
-	colourMap: { [id: string]: string; } = { };
-	model = {};
-	skus:string[] = [];
+	colourComponents: OpacityColour[] = [];
+	maxWidth:number = 0; // the maximum width of the pencil (generated)
+	maxHeight:number = 0; // the maximum height of the pencil (generated)
+	totalLength:number = 0; // the total length of the pencil (generated)
+	materials:string[] = []; // The materials that make up this pencil - to keep them in order of definition
 
 	// whether the pencil has internal parts chich means that the pencil can be
 	// disassembled (possibly) - maybe someone is just keen and has ruined the
 	// pencil
-	hasInternal:boolean = false;
-	hasHidden:boolean = false;
 
-	/**
-	 * <p></p>
-	 *
-	 * @param pencilDataString The JSON data of the Pencil
-	 */
-	constructor(pencilDataString: string) {
-		const pencilJSONData:any = JSON.parse(pencilDataString);
+	hasInternal:boolean = false; // whether this has internal parts
+	hasHidden:boolean = false; // whether this pencil has hidden parts
 
-		this.colourComponent = pencilJSONData.colour_component ?? this.colourComponent;
-		this.colourMap = pencilJSONData.colour_map ?? this.colourMap;
-
-		this.modelName = pencilJSONData.model_name ?? this.modelName;
-		this.modelNumber = pencilJSONData.model_number ?? this.modelNumber;
-		this.mechanism = pencilJSONData.mechanism ?? this.mechanism;
-
-		this.front = pencilJSONData.front ?? this.front;
-		this.back = pencilJSONData.back ?? this.back;
-		this.skus = pencilJSONData.skus ?? this.skus;
-		this.weight = pencilJSONData.weight ?? this.weight;
-
-		// go through and look for the colour component, this will be the
-		// base colours if not over-ridden
-		for(const component of pencilJSONData.components) {
-			if (component.type === this.colourComponent) {
-				this.colourComponents = component.colours;
-			}
+	postConstruct(colours: string[], colourMap: { [id: string]: string}): void {
+		// first up we need to parse the colours
+		for(const colour of this.colours) {
+			this.colourComponents.push(new OpacityColour(this.colourMap, colour));
 		}
 
-		for(const component of pencilJSONData.components) {
-			const thisComponent = new Component(component, this.colourComponents);
+		const materialsSet: Set<string> = new Set();
 
-			if(thisComponent.hasInternalStart || thisComponent.hasInternalEnd) {
+		for(const component of this.components) {
+			component.postConstruct(this.colours, this.colourMap);
+
+			if(component.hasInternalStart || component.hasInternalEnd) {
 				this.hasInternal = true;
 			}
 
-			if(thisComponent.isHidden) {
+			if(component.isHidden) {
 				this.hasHidden = true;
 			}
 
-			this.components.push(thisComponent);
-			this.totalLength += thisComponent.length;
+			this.totalLength += component.length;
 
-			if(thisComponent.type === this.colourComponent) {
-				this.colourComponents = thisComponent.colours;
-			}
-
-			let tempWidth:number = thisComponent.maxWidth;
+			let tempWidth:number = component.maxWidth;
 			if(tempWidth > this.maxWidth) {
 				this.maxWidth = tempWidth;
 			}
 
-			let tempHeight: number = thisComponent.maxHeight;
+			let tempHeight: number = component.maxHeight;
 			if(tempHeight > this.maxHeight) {
 				this.maxHeight = tempHeight;
 			}
 
-			const componentMaterials = thisComponent.materials;
+			const componentMaterials: string[] = component.materials;
 
 			for(const componentMaterial of componentMaterials) {
-				if(!this.materialsSet.has(componentMaterial)) {
+				if(!materialsSet.has(componentMaterial)) {
 					this.materials.push(componentMaterial);
-					this.materialsSet.add(componentMaterial);
+					materialsSet.add(componentMaterial);
 				}
 			}
 		}
+	}
 
-		this.brand = pencilJSONData.brand ?? this.brand;
-		this.model = pencilJSONData.model ?? this.model;
-
-		this.leadSize = pencilJSONData.lead_size ?? this.leadSize;
-		this.leadShape = pencilJSONData.lead_shape ?? this.leadShape;
-		this.maximumLeadLength = pencilJSONData.maximum_lead_length ?? this.maximumLeadLength;
-		this.text = pencilJSONData.text ?? this.text;
+	getColours(): string[] {
+		return(this.colours);
 	}
 }

@@ -12,6 +12,8 @@ import {SVGTechnicalComponentRenderer} from "./renderer/SVGTechnicalComponentRen
 import {SVGTechnicalExplodedRenderer} from "./renderer/SVGTechnicalExplodedRenderer.ts";
 import {SVGPencilAllRenderer} from "./renderer/SVGPencilAllRenderer.ts";
 import {SVGPencil45Renderer} from "./renderer/SVGPencil45Renderer.ts";
+import {ObjectMapper} from "json-object-mapper";
+import deserialize = ObjectMapper.deserialize;
 
 let baseDir:string = './data/pencil';
 
@@ -36,34 +38,36 @@ for (const pencilDirectory of pencilDirectories) {
 			const pencilFileFull = path.join(pencilDir, pencilFile);
 			const pencilFileName = path.parse(path.join(pencilDir, pencilFile)).name;
 
-			const pencil: Pencil = new Pencil(fs.readFileSync(pencilFileFull, "utf8"));
+			const pencilFileContents = JSON.parse(fs.readFileSync(pencilFileFull, "utf8"));
+			const pencil: Pencil = deserialize(Pencil, pencilFileContents);
+			pencil.postConstruct(pencil.getColours(), pencil.colourMap);
 
 			let fileNumber = 1;
 
 			fileNumber = await renderSVGAndPNG(new SVGTechnicalRenderer(pencil), -1, "technical", pencilDirectory, pencilFileName, fileNumber);
-			fileNumber = await renderSVGAndPNG(new SVGTechnicalComponentRenderer(pencil), -1, "technical", pencilDirectory, pencilFileName + "-components", fileNumber);
-			fileNumber = await renderSVGAndPNG(new SVGPencilRenderer(pencil), -1, "pencil", pencilDirectory, pencilFileName, fileNumber);
-			fileNumber = await renderSVGAndPNG(new SVGPencilAllRenderer(pencil), -1, "pencil", pencilDirectory, pencilFileName + "-all-variants", fileNumber);
-			fileNumber = await renderSVGAndPNG(new SVGPencil45Renderer(pencil), -1, "pencil", pencilDirectory, pencilFileName + "-45", fileNumber);
-			fileNumber = await renderSVGAndPNG(new SVGTechnicalExplodedRenderer(pencil), -1, "technical", pencilDirectory, pencilFileName + "-exploded", fileNumber);
-
-			// now go through the colours
-			for(let [ index, colourComponent ] of pencil.colourComponents.entries()) {
-				const pencilColourOutputFileName: string = pencilFileName + "-colour-" + colourComponent;
-				const pencilExplodedColourOutputFileName: string = pencilFileName + "-exploded-colour-" + colourComponent;
-
-				fileNumber = await renderSVGAndPNG(new SVGTechnicalRenderer(pencil), index, "technical", pencilDirectory, pencilColourOutputFileName, fileNumber);
-				fileNumber = await renderSVGAndPNG(new SVGTechnicalExplodedRenderer(pencil), index, "technical", pencilDirectory, pencilExplodedColourOutputFileName, fileNumber);
-				fileNumber = await renderSVGAndPNG(new SVGPencil45Renderer(pencil), index, "pencil", pencilDirectory, pencilColourOutputFileName + "-45", fileNumber);
-				fileNumber = await renderSVGAndPNG(new SVGPencilRenderer(pencil), index, "pencil", pencilDirectory, pencilColourOutputFileName, fileNumber);
-			}
-
-			const pdfOutputDir: string = path.join("./output/pdf/datasheet/");
-			fs.mkdirSync(pdfOutputDir, { "recursive": true });
-			const outputPdfFie: string = path.join(pdfOutputDir, pencilDirectory + "-" + pencilFileName + ".pdf");
-			new PDFDatasheetRenderer(pencil, pencilDirectory, pencilFileName).render(outputPdfFie);
-			console.log(`       PDF: [${fileNumber}] (datasheet) ${pencilFile} -> ${outputPdfFie}`);
-			fileNumber++;
+			// fileNumber = await renderSVGAndPNG(new SVGTechnicalComponentRenderer(pencil), -1, "technical", pencilDirectory, pencilFileName + "-components", fileNumber);
+			// fileNumber = await renderSVGAndPNG(new SVGPencilRenderer(pencil), -1, "pencil", pencilDirectory, pencilFileName, fileNumber);
+			// fileNumber = await renderSVGAndPNG(new SVGPencilAllRenderer(pencil), -1, "pencil", pencilDirectory, pencilFileName + "-all-variants", fileNumber);
+			// fileNumber = await renderSVGAndPNG(new SVGPencil45Renderer(pencil), -1, "pencil", pencilDirectory, pencilFileName + "-45", fileNumber);
+			// fileNumber = await renderSVGAndPNG(new SVGTechnicalExplodedRenderer(pencil), -1, "technical", pencilDirectory, pencilFileName + "-exploded", fileNumber);
+			//
+			// // now go through the colours
+			// for(let [ index, colourComponent ] of pencil.colourComponents.entries()) {
+			// 	const pencilColourOutputFileName: string = pencilFileName + "-colour-" + colourComponent.colour;
+			// 	const pencilExplodedColourOutputFileName: string = pencilFileName + "-exploded-colour-" + colourComponent.colour;
+			//
+			// 	fileNumber = await renderSVGAndPNG(new SVGTechnicalRenderer(pencil), index, "technical", pencilDirectory, pencilColourOutputFileName, fileNumber);
+			// 	fileNumber = await renderSVGAndPNG(new SVGTechnicalExplodedRenderer(pencil), index, "technical", pencilDirectory, pencilExplodedColourOutputFileName, fileNumber);
+			// 	fileNumber = await renderSVGAndPNG(new SVGPencil45Renderer(pencil), index, "pencil", pencilDirectory, pencilColourOutputFileName + "-45", fileNumber);
+			// 	fileNumber = await renderSVGAndPNG(new SVGPencilRenderer(pencil), index, "pencil", pencilDirectory, pencilColourOutputFileName, fileNumber);
+			// }
+			//
+			// const pdfOutputDir: string = path.join("./output/pdf/datasheet/");
+			// fs.mkdirSync(pdfOutputDir, { "recursive": true });
+			// const outputPdfFie: string = path.join(pdfOutputDir, pencilDirectory + "-" + pencilFileName + ".pdf");
+			// new PDFDatasheetRenderer(pencil, pencilDirectory, pencilFileName).render(outputPdfFie);
+			// console.log(`       PDF: [${fileNumber}] (datasheet) ${pencilFile} -> ${outputPdfFie}`);
+			// fileNumber++;
 		}
 	}
 }

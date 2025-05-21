@@ -1,16 +1,42 @@
 import {Part} from "./Part.ts";
 import {Extra} from "./Extra.ts";
+import {JsonIgnore, JsonProperty} from "json-object-mapper";
+import "reflect-metadata";
+import {Base} from "./Base.ts";
+import {OpacityColour} from "./OpacityColour.ts";
 
-export class Component {
+export class Component extends Base {
+
+	@JsonProperty({ name: "material", required: false })
+	private material:string; // the materials that this component is made out of
+
+	@JsonProperty({ name: "color", required: false })
+	private colours:string[]; // the colours of this component
+
+	@JsonProperty({ name: "type", required: true })
+	type:string; // the type of this component
+
+	@JsonProperty({ name: "parts", required: false })
 	parts: Part[] = [];
+
+	@JsonProperty({ name: "extras", required: false })
 	extras:Extra[] = [];
 
-	// the materials that this component is made out of
-	materials:string[] = [];
-	// the colours of this component
-	colours:string[] = [ "white" ];
-	// the type of this component
-	type:string = "unknown";
+	@JsonProperty({ name: "internal_start", required: false })
+	internalStart:Part[] = []; // the type of this component
+
+	@JsonProperty({ name: "internal_end", required: false })
+	internalEnd:Part[] = []; // the type of this component
+
+
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	//
+	// GENERATED METADATA BY THE postConstruct METHOD
+	//
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+	materials:string[] = []; // the materials that this component is made out of
+	opacityColours: OpacityColour[] = [];
 
 	// the length of the component - which is when you are looking at it
 	// sideways...
@@ -26,106 +52,55 @@ export class Component {
 	hasInternalStart:boolean = false;
 	hasInternalEnd:boolean = false;
 
-	internalStart:Part[] = [];
-	internalEnd:Part[] = [];
-
 	isHidden: boolean = false;
 
-	constructor(jsonObject: any, colours: string[]) {
-		this.type = jsonObject.type ?? this.type;
-
-		if(jsonObject.material) {
-			this.materials.length = 0;
-			this.materials.push(jsonObject.material);
-		} else {
-			this.materials.push("unknown");
-		}
-
-		if(jsonObject.colours) {
-			this.colours = jsonObject.colours;
-		} else {
-			// use the base colours
+	postConstruct(colours: string[], colourMap: { [id: string]: string}): void {
+		if(this.colours.length === 0) {
 			this.colours = colours;
 		}
 
-		if(jsonObject.internal_start) {
+		// now go through and map the colours
+		for(const colour of this.colours) {
+			this.opacityColours.push(new OpacityColour(colourMap, colour));
+		}
+
+		this.materials.push(this.material);
+
+		if(this.internalStart.length > 0) {
 			this.hasInternalStart = true;
 		}
 
-		if(jsonObject.internal_end) {
+		if(this.internalEnd.length > 0) {
 			this.hasInternalEnd = true;
 		}
 
-		if(jsonObject.parts) {
-			for(let part of jsonObject.parts) {
-				const thisPart = new Part(part, this.colours);
-
-				this.parts.push(thisPart);
-				this.length += thisPart.length;
+		for(const part of this.parts) {
+				this.length += part.length;
 
 				if(part.material) {
 					this.materials.push(part.material);
 				}
 
-				if(part.colours) {
-					for(const colour of part.colours) {
-						this.colours.push(colour);
-					}
-				}
-
-				let tempMaxWidth:number = thisPart.getMaxWidth();
+				let tempMaxWidth:number = part.getMaxWidth();
 				if(tempMaxWidth >= this.maxWidth) {
 					this.maxWidth = tempMaxWidth;
 				}
 
-				let tempMinWidth:number = thisPart.getMinWidth();
+				let tempMinWidth:number = part.getMinWidth();
 				if(tempMinWidth >= this.minWidth) {
 					this.minWidth = tempMinWidth;
 				}
 
-				let tempMaxHeight = thisPart.getMaxHeight();
+				let tempMaxHeight = part.getMaxHeight();
 				if(tempMaxHeight >= this.maxHeight) {
 					this.maxHeight = tempMaxHeight;
 				}
 
-				let tempMinHeight = thisPart.getMinHeight();
+				let tempMinHeight = part.getMinHeight();
 				if(tempMinHeight >= this.minHeight) {
 					this.minHeight = tempMinHeight;
 				}
 			}
-		}
-
-		if(jsonObject.extras) {
-			for(let extra of jsonObject.extras) {
-				const thisExtra: Extra = new Extra(extra, this.colours);
-
-				this.extras.push(thisExtra);
-
-				// if(thisExtra.material) {
-				// 	this.materials.push(thisExtra.material);
-				// }
-
-				// if(thisExtra.colours) {
-				// 	for(const colour of extraPart.colours) {
-				// 		this.colours.push(colour);
-				// 	}
-				// }
-			}
-		}
-
-		if(jsonObject.internal_start) {
-			for(let internal of jsonObject.internal_start) {
-				const thisInternal = new Part(internal, this.colours);
-				this.internalStart.push(thisInternal);
-			}
-		}
-
-		if(jsonObject.internal_end) {
-			for(let internal of jsonObject.internal_end) {
-				const thisInternal = new Part(internal, this.colours);
-				this.internalEnd.push(thisInternal);
-			}
-		}
 
 		// this component is only hidden if it has a length of 0 and one, or both
 		// internal parts
