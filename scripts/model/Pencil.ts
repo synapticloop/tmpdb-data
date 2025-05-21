@@ -1,10 +1,10 @@
 import { Component } from "./Component.ts";
-import {JsonIgnore, JsonProperty} from "json-object-mapper";
+import {JsonIgnore, JsonProperty, ObjectMapper, Deserializer } from "json-object-mapper";
 import "reflect-metadata";
 import {OpacityColour} from "./OpacityColour.ts";
 import {Feature} from "./Feature.ts";
-import {Base} from "./Base.ts";
 import {FrontBack} from "./FrontBack.ts";
+import {ComponentDeserialiser} from "./deserialisers/ComponentDeserialiser.ts";
 
 export class Pencil extends Base {
 	@JsonProperty({ name: "brand", required: true })
@@ -39,8 +39,8 @@ export class Pencil extends Base {
 	front: FrontBack[];
 	@JsonProperty({ name: "back", required: false })
 	back: FrontBack[];
-	@JsonProperty({ name: "components", required: false })
-	components: Component[] = []; // the components that make up the pencil
+	@JsonProperty({ name: "components", required: true, type: Component, deserializer: ComponentDeserialiser})
+	components: Component[]; // the components that make up the pencil
 	@JsonProperty({ name: "skus", required: false })
 	skus: string[] = []; // the components that make up the pencil
 

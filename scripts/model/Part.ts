@@ -1,24 +1,23 @@
 import {JsonIgnore, JsonProperty} from "json-object-mapper";
 import "reflect-metadata";
-import {Base} from "./Base.ts";
 import {Taper} from "./Taper.ts";
+import {TaperDeserialiser} from "./deserialisers/TaperDeserialiser.ts";
 
 export class Part extends Base {
 	@JsonProperty({ name: "shape", required: true })
 	shape: string; // the shape of this part
 	@JsonProperty({ name: "dimensions", required: true })
 	dimensions: number[]; // the dimensions for this part
+
 	@JsonProperty({ name: "joined", required: false })
 	joined: boolean=false; // whether this part is joined to the previous part
 	@JsonProperty({ name: "finish", required: false })
-	finish: string[] = []; // The finish that is applied to the part
-
-	@JsonProperty({ name: "offset", required: true })
+	finish: string = ""; // The finish that is applied to the part
+	@JsonProperty({ name: "offset", required: false })
 	offset: number[]; // the offset for this part
-
-	@JsonProperty({ name: "taper_start", required: false })
+	@JsonProperty({ name: "taper_start", required: false, type: Taper, deserializer: TaperDeserialiser })
 	taperStart: Taper;
-	@JsonProperty({ name: "taper_end", required: false })
+	@JsonProperty({ name: "taper_end", required: false, type: Taper, deserializer: TaperDeserialiser })
 	taperEnd:any;
 	@JsonProperty({ name: "internal_offset", required: false })
 	internalOffset: number = 0; // the internal offset (for tapering only)

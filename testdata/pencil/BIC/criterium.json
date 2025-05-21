@@ -105,7 +105,8 @@
 				{ "shape": "hexagonal", "dimensions": [ 6.75, 9.0 ] }
 			],
 			"extras": [
-				{ "dimensions": [ 37.5, 4.75, 3.5 ],
+				{
+					"dimensions": [ 37.5, 4.75, 3.5 ],
 					"offset":  [ -27.5, 4.5 ],
 					"parts": [
 						{ "shape": "curve", "points": [ 0.5, -1.25, 7.0, -2.0, 5.0, 2.0 ] },

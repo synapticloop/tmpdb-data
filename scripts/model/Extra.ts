@@ -12,7 +12,7 @@ export class Extra {
 	extraParts:ExtraPart[] = [];
 	offset: number[] = [];
 
-	constructor(jsonObject, colours) {
+	oldconstructor(jsonObject, colours) {
 		this.length = jsonObject.dimensions[0];
 		this.width = jsonObject.dimensions[1];
 		this.height = jsonObject.dimensions[2];
@@ -25,7 +25,7 @@ export class Extra {
 		}
 
 		for(const part of jsonObject.parts) {
-			this.extraParts.push(new ExtraPart(part, this.colours));
+			// this.extraParts.push(new ExtraPart(part, this.colours));
 		}
 	}
 }

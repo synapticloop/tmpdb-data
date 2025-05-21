@@ -2,8 +2,9 @@ import {Part} from "./Part.ts";
 import {Extra} from "./Extra.ts";
 import {JsonIgnore, JsonProperty} from "json-object-mapper";
 import "reflect-metadata";
-import {Base} from "./Base.ts";
 import {OpacityColour} from "./OpacityColour.ts";
+import {PartDeserialiser} from "./deserialisers/PartDeserialiser.ts";
+import {ExtraDeserialiser} from "./deserialisers/ExtraDeserialiser.ts";
 
 export class Component extends Base {
 
@@ -13,13 +14,13 @@ export class Component extends Base {
 	@JsonProperty({ name: "color", required: false })
 	private colours:string[]; // the colours of this component
 
-	@JsonProperty({ name: "type", required: true })
+	@JsonProperty({ name: "type", required: false })
 	type:string; // the type of this component
 
-	@JsonProperty({ name: "parts", required: false })
+	@JsonProperty({ name: "parts", required: false, type: Part, deserializer: PartDeserialiser })
 	parts: Part[] = [];
 
-	@JsonProperty({ name: "extras", required: false })
+	@JsonProperty({ name: "extras", required: false, type: Extra, deserializer: ExtraDeserialiser })
 	extras:Extra[] = [];
 
 	@JsonProperty({ name: "internal_start", required: false })
@@ -49,13 +50,13 @@ export class Component extends Base {
 	maxHeight:number = 0;
 	minHeight:number = 0;
 
-	hasInternalStart:boolean = false;
-	hasInternalEnd:boolean = false;
+	hasInternalStart: boolean = false;
+	hasInternalEnd: boolean = false;
 
 	isHidden: boolean = false;
 
 	postConstruct(colours: string[], colourMap: { [id: string]: string}): void {
-		if(this.colours.length === 0) {
+		if(!this.colours) {
 			this.colours = colours;
 		}
 
@@ -107,5 +108,13 @@ export class Component extends Base {
 		if(this.parts.length === 0 && (this.internalStart.length !== 0 || this.internalEnd.length !== 0)) {
 			this.isHidden = true;
 		}
+	}
+
+	getSomething() {
+
+	}
+
+	somethingElse() {
+
 	}
 }

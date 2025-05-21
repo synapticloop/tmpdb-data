@@ -14,6 +14,7 @@ import {SVGPencilAllRenderer} from "./renderer/SVGPencilAllRenderer.ts";
 import {SVGPencil45Renderer} from "./renderer/SVGPencil45Renderer.ts";
 import {ObjectMapper} from "json-object-mapper";
 import deserialize = ObjectMapper.deserialize;
+import {Component} from "./model/Component.ts";
 
 let baseDir:string = './data/pencil';
 

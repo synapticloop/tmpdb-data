@@ -39,7 +39,7 @@ export abstract class SVGRenderer {
 		this._height = height;
 	}
 
-	abstract render(colourInder:number): string;
+	public abstract render(colourInder:number): string;
 
 	private addOutlineBox(width: number, height: number, transparent:boolean):string {
 		if(!transparent) {
