@@ -599,35 +599,76 @@ export function rectangle(x:number, y:number, width:number, height:number, strok
 
 export function arrowLeft(x: number, y:number): string {
 	let svgString: string = "";
+	let xOffset: number = 14;
+	let yOffset: number = 8;
+	let xInset: number = 7;
+
 	svgString += `<line x1="${x}" ` +
-		`y1="${y}" ` +
-		`x2="${x + 10}" ` +
-		`y2="${y - 10}" ` +
-		`stroke-linecap="round" ` +
-		`stroke="#ffffff" ` +
-		`stroke-width="2.0" />\n`;
+			`y1="${y}" ` +
+			`x2="${x + xInset}" ` +
+			`y2="${y}" ` +
+			`stroke-linecap="round" ` +
+			`stroke="#ffffff" ` +
+			`stroke-width="2.0" />\n`;
 	svgString += `<line x1="${x}" ` +
-		`y1="${y}" ` +
-		`x2="${x + 10}" ` +
-		`y2="${y + 10}" ` +
-		`stroke-linecap="round" ` +
-		`stroke="#ffffff" ` +
-		`stroke-width="2.0" />\n`;
+			`y1="${y}" ` +
+			`x2="${x + xOffset}" ` +
+			`y2="${y - yOffset}" ` +
+			`stroke-linecap="round" ` +
+			`stroke="#ffffff" ` +
+			`stroke-width="2.0" />\n`;
+	svgString += `<line x1="${x + xOffset}" ` +
+			`y1="${y - yOffset}" ` +
+			`x2="${x + xInset}" ` +
+			`y2="${y}" ` +
+			`stroke-linecap="round" ` +
+			`stroke="#ffffff" ` +
+			`stroke-width="2.0" />\n`;
+	svgString += `<line x1="${x}" ` +
+			`y1="${y}" ` +
+			`x2="${x + xOffset}" ` +
+			`y2="${y + yOffset}" ` +
+			`stroke-linecap="round" ` +
+			`stroke="#ffffff" ` +
+			`stroke-width="2.0" />\n`;
+	svgString += `<line x1="${x + xOffset}" ` +
+			`y1="${y + yOffset}" ` +
+			`x2="${x + xInset}" ` +
+			`y2="${y}" ` +
+			`stroke-linecap="round" ` +
+			`stroke="#ffffff" ` +
+			`stroke-width="2.0" />\n`;
+
 
 	svgString += `<line x1="${x}" ` +
 		`y1="${y}" ` +
-		`x2="${x + 10}" ` +
-		`y2="${y - 10}" ` +
+		`x2="${x + xOffset}" ` +
+		`y2="${y - yOffset}" ` +
 		`stroke-linecap="round" ` +
 		`stroke="#0f0f0f" ` +
 		`stroke-width="1.0" />\n`;
+	svgString += `<line x1="${x + xOffset}" ` +
+			`y1="${y - yOffset}" ` +
+			`x2="${x + xInset}" ` +
+			`y2="${y}" ` +
+			`stroke-linecap="round" ` +
+			`stroke="#0f0f0f" ` +
+			`stroke-width="1.0" />\n`;
 	svgString += `<line x1="${x}" ` +
 		`y1="${y}" ` +
-		`x2="${x + 10}" ` +
-		`y2="${y + 10}" ` +
+		`x2="${x + xOffset}" ` +
+		`y2="${y + yOffset}" ` +
 		`stroke-linecap="round" ` +
 		`stroke="#0f0f0f" ` +
 		`stroke-width="1.0" />\n`;
+	svgString += `<line x1="${x + xOffset}" ` +
+			`y1="${y + yOffset}" ` +
+			`x2="${x + xInset}" ` +
+			`y2="${y}" ` +
+			`stroke-linecap="round" ` +
+			`stroke="#0f0f0f" ` +
+			`stroke-width="1.0" />\n`;
 
 	return(svgString);
 }
+

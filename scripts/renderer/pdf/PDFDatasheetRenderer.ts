@@ -1,11 +1,11 @@
-import {Pencil} from "../model/Pencil.ts";
+import {Pencil} from "../../model/Pencil.ts";
 import PDFDocument, {rect} from 'pdfkit';
 import fs from "fs";
 import { imageSize } from 'image-size'
 
-import { formatToTwoPlaces} from "../utils/formatter.ts";
-import {Part} from "../model/Part.ts";
-import {Component} from "../model/Component.ts";
+import { formatToTwoPlaces} from "../../utils/formatter.ts";
+import {Part} from "../../model/Part.ts";
+import {Component} from "../../model/Component.ts";
 
 enum FontFamily {
 	HEADING_LARGE,

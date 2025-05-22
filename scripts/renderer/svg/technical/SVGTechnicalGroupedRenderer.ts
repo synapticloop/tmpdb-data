@@ -1,14 +1,14 @@
-import {Pencil} from "../model/Pencil.ts";
-import {SVGRenderer} from "./SVGRenderer.ts";
+import {Pencil} from "../../../model/Pencil.ts";
+import {SVGRenderer} from "../../SVGRenderer.ts";
 import {
 	dimensionsHorizontal,
 	drawText,
 	drawTextBoldCentred,
-	lineHorizontal,
+	lineHorizontal, lineVertical,
 	TextOrientation
-} from "../utils/svg-helper.ts";
-import {formatToTwoPlaces} from "../utils/formatter.ts";
-import {Component} from "../model/Component.ts";
+} from "../../../utils/svg-helper.ts";
+import {formatToTwoPlaces} from "../../../utils/formatter.ts";
+import {Component} from "../../../model/Component.ts";
 
 /**
  * Render all the colour variants of a pencil
@@ -33,23 +33,16 @@ export class SVGTechnicalGroupedRenderer extends SVGRenderer {
 		// the first thing that we are going to do is to render the pencil with
 		// the grouped components
 		// determine the this.SVG_HEIGHT
-		this.SVG_HEIGHT = 580 + this.pencil.colourComponents.length * 120;
+		this.SVG_HEIGHT = 660 + this.pencil.colourComponents.length * 120;
 		super.resize(1000, this.SVG_HEIGHT);
 
 		// start
 		let svgString:string = super.getSvgStart();
 		svgString += super.renderOverviewText(false);
 
-		let midYOverride: number = 100;
+		let midYOverride: number = 140;
 
-		svgString += lineHorizontal(50, midYOverride + 4, 316, "2", "black");
-		svgString += drawTextBoldCentred(
-			"Measurements",
-			this.SVG_WIDTH/2,
-			midYOverride,
-			"2.4em"
-		);
-		svgString += lineHorizontal(this.SVG_WIDTH - 366, midYOverride + 4, 316, "2", "black");
+		svgString += this.renderTitle(240, midYOverride, 120, "Measurements")
 
 		midYOverride += 160;
 		// now draw the grouped components
@@ -212,16 +205,9 @@ export class SVGTechnicalGroupedRenderer extends SVGRenderer {
 			);
 		}
 
-		midYOverride = midYOverride + 200;
+		midYOverride = midYOverride + 240;
 
-		svgString += lineHorizontal(50, midYOverride + 4, 360, "2", "black");
-		svgString += drawTextBoldCentred(
-			"Variants",
-			this.SVG_WIDTH/2,
-			midYOverride,
-			"2.4em"
-		);
-		svgString += lineHorizontal(this.SVG_WIDTH - 410, midYOverride + 4, 360, "2", "black");
+		svgString += this.renderTitle(240, midYOverride, 174, "Variants")
 
 		// now we are going to draw the colour components
 		midYOverride = midYOverride + 100;
@@ -234,6 +220,23 @@ export class SVGTechnicalGroupedRenderer extends SVGRenderer {
 		}
 
 		svgString += super.getSvgEnd();
+		return(svgString);
+	}
+
+	private renderTitle(x: number, y: number, width: number, text: string): string {
+		let svgString: string = "";
+		svgString += lineVertical(x + width, y + - 16, 38, "2", "black");
+		svgString += lineHorizontal(x, y, width, "2", "black");
+		svgString += lineHorizontal(x + 6, y + 4, width - 6, "2", "black");
+		svgString += drawTextBoldCentred(
+				text,
+				this._width/2,
+				y,
+				"2.4em"
+		);
+		svgString += lineHorizontal(this._width - x - width, y, width, "2", "black");
+		svgString += lineHorizontal(this._width - x - width, y + 4, width - 6, "2", "black");
+		svgString += lineVertical(this._width - x - width, y + - 16, 38, "2", "black");
 		return(svgString);
 	}
 }

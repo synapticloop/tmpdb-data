@@ -25,8 +25,9 @@ import {Extra} from "../model/Extra.ts";
 
 export abstract class SVGRenderer {
 	protected pencil:Pencil;
-	private _width: number;
-	private _height: number;
+	protected _width: number;
+	protected _height: number;
+
 	private readonly _rendererName: string;
 
 	protected constructor(pencil:Pencil, width: number, height: number, rendererName:string = "") {

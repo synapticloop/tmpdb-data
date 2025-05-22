@@ -1,5 +1,5 @@
-import {Pencil} from "../model/Pencil.ts";
-import {SVGRenderer} from "./SVGRenderer.ts";
+import {Pencil} from "../../../model/Pencil.ts";
+import {SVGRenderer} from "../../SVGRenderer.ts";
 import {
 	circle,
 	dimensionsHorizontal,
@@ -13,10 +13,10 @@ import {
 	lineVerticalGuide, rectangle, renderExtra,
 	target,
 	TextOrientation
-} from "../utils/svg-helper.ts";
-import {Part} from "../model/Part.ts";
-import {Extra} from "../model/Extra.ts";
-import {OpaqueColour} from "../model/OpaqueColour.ts";
+} from "../../../utils/svg-helper.ts";
+import {Part} from "../../../model/Part.ts";
+import {Extra} from "../../../model/Extra.ts";
+import {OpaqueColour} from "../../../model/OpaqueColour.ts";
 
 export class SVGTechnicalRenderer extends SVGRenderer {
 	SVG_WIDTH: number = 1500;

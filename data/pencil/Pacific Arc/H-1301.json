@@ -38,7 +38,7 @@
 		{
 			"type": "grip",
 			"parts": [
-				{ "shape": "cylinder", "dimensions": [ 29.5, 10 ], "finish":  "ridged", "taper_start": { "offset": [ 20.0, 0.25 ], "backgroundColours": [ "none", "none" ] }, "taper_end": { "offset": [ -9.5, -0.3 ], "backgroundColours": [ "none", "none" ] }  }
+				{ "shape": "cylinder", "dimensions": [ 29.5, 10 ], "finish":  "ridged", "taper_start": { "offset": [ 20.0, 0.25 ], "background_colours": [ "none", "none" ] }, "taper_end": { "offset": [ -9.5, -0.3 ], "backgroundColours": [ "none", "none" ] }  }
 			],
 			"material": "rubber",
 			"internal_start": [

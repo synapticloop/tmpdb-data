@@ -1,5 +1,5 @@
-import {Pencil} from "../model/Pencil.ts";
-import {SVGRenderer} from "./SVGRenderer.ts";
+import {Pencil} from "../../../model/Pencil.ts";
+import {SVGRenderer} from "../../SVGRenderer.ts";
 
 /**
  * Render all the colour variants of a pencil
