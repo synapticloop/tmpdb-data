@@ -19,6 +19,7 @@ export class FrontBack extends Base {
 	//
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+	// TODO - sort this out
 	fillColour: OpaqueColour;
 	width: number;
 	length: number;

@@ -150,7 +150,7 @@ export function drawExtra(offsetX: number, offsetY: number, parts: Part[], strok
 	return(svgString);
 }
 
-export function drawExtraBackground(offsetX: number, offsetY: number, extraParts: ExtraPart[], strokeColour: string):string {
+export function drawExtraBackground(offsetX: number, offsetY: number, extraParts: ExtraPart[], strokeColour: string): string {
 
 	let svgString: string = "";
 	for(const extraPart of extraParts) {
@@ -212,7 +212,7 @@ export function drawExtraForeground(offsetX: number, offsetY: number, extraParts
 	return(svgString);
 }
 
-export function renderBackExtra(x, y, offsetX, offsetY, width, parts, fillColour) {
+export function renderBackExtra(x: number, y: number, offsetX:number, offsetY: number, width: number, parts: Part[], fillColour:OpaqueColour) {
 	let svgString = "";
 	let points = [];
 	let isCurve = false;
@@ -228,9 +228,9 @@ export function renderBackExtra(x, y, offsetX, offsetY, width, parts, fillColour
 		}
 
 		// don't care what it is, always top to bottom
-		let maxY = Math.max(points[1], points[3]);
-		let minY = Math.min(points[1], points[3]);
-		let height = Math.abs(maxY - minY);
+		let maxY: number = Math.max(points[1], points[3]);
+		let minY: number = Math.min(points[1], points[3]);
+		let height: number = Math.abs(maxY - minY);
 		if(height === 0) {
 			height = 3/5;
 		}
@@ -239,14 +239,14 @@ export function renderBackExtra(x, y, offsetX, offsetY, width, parts, fillColour
 				`y="${y - Math.abs(offsetY) * 5 - (height * 5)}" ` +
 				`width="${width * 5}" ` +
 				`height="${height * 5}" ` +
-				`rx="0" ry="0" stroke-width="1.0" stroke="dimgray" fill="${fillColour}"/>\n`;
+				`rx="0" ry="0" stroke-width="1.0" stroke="dimgray" fill="${fillColour.colour}"/>\n`;
 
 		if(isCurve) {
-			let from = y - Math.abs(offsetY) * 5 - (height * 5);
-			let to = from + (height * 5);
+			let from:number = y - Math.abs(offsetY) * 5 - (height * 5);
+			let to:number = from + (height * 5);
 			svgString += `<line x1="${x - width/2*5}" x2="${x + width/2*5}" y1="${from}" y2="${from+3}" stroke-width="0.5" stroke="#cfcfcf" />\n`;
 
-			for (let i = from + 3; i < to; i = i + 3) {
+			for (let i: number = from + 3; i < to; i = i + 3) {
 				svgString += `<line x1="${x - width/2*5}" x2="${x + width/2*5}" y1="${i}" y2="${i}" stroke-width="0.5" stroke="#cfcfcf" />\n`;
 				svgString += `<line x1="${x - width/2*5}" x2="${x + width/2*5}" y1="${i}" y2="${i + 3}" stroke-width="0.5" stroke="#cfcfcf" />\n`;
 			}

@@ -62,9 +62,8 @@ export class Pencil extends Base {
 	// whether the pencil has internal parts chich means that the pencil can be
 	// disassembled (possibly) - maybe someone is just keen and has ruined the
 	// pencil
-
-	hasInternal:boolean = false; // whether this has internal parts
-	hasHidden:boolean = false; // whether this pencil has hidden parts
+	hasInternal:boolean = false; // whether this has internal parts - i.e. attached to an externally visible part
+	hasHidden:boolean = false; // whether this pencil has hidden parts - i.e. not external at all
 
 	postConstruct(colours: string[], colourMap: Map<string, string>): void {
 		// first up we need to parse the colours

@@ -26,9 +26,9 @@ if(process.argv[2]) {
 const pencilDirectories:string[] = listDirectories(baseDir);
 
 for (const pencilDirectory of pencilDirectories) {
-	const pencilDir=path.join(baseDir, pencilDirectory);
+	const pencilDir: string = path.join(baseDir, pencilDirectory);
 
-	const pencilFiles = listFiles(pencilDir);
+	const pencilFiles: string[] = listFiles(pencilDir);
 
 	if (pencilFiles.length > 0) {
 		console.log(`Generating for brand '${pencilDirectory}' - ${pencilFiles.length} file(s)`)
@@ -41,16 +41,17 @@ for (const pencilDirectory of pencilDirectories) {
 
 			const pencilFileContents = JSON.parse(fs.readFileSync(pencilFileFull, "utf8"));
 			const pencil: Pencil = deserialize(Pencil, pencilFileContents);
+
 			pencil.postConstruct(pencil.getColours(), pencil.colourMap);
 
 			let fileNumber = 1;
 
 			fileNumber = await renderSVGAndPNG(new SVGTechnicalRenderer(pencil), -1, "technical", pencilDirectory, pencilFileName, fileNumber);
 			fileNumber = await renderSVGAndPNG(new SVGTechnicalComponentRenderer(pencil), -1, "technical", pencilDirectory, pencilFileName + "-components", fileNumber);
+			fileNumber = await renderSVGAndPNG(new SVGTechnicalExplodedRenderer(pencil), -1, "technical", pencilDirectory, pencilFileName + "-exploded", fileNumber);
 			fileNumber = await renderSVGAndPNG(new SVGPencilRenderer(pencil), -1, "pencil", pencilDirectory, pencilFileName, fileNumber);
 			fileNumber = await renderSVGAndPNG(new SVGPencilAllRenderer(pencil), -1, "pencil", pencilDirectory, pencilFileName + "-all-variants", fileNumber);
 			fileNumber = await renderSVGAndPNG(new SVGPencil45Renderer(pencil), -1, "pencil", pencilDirectory, pencilFileName + "-45", fileNumber);
-			fileNumber = await renderSVGAndPNG(new SVGTechnicalExplodedRenderer(pencil), -1, "technical", pencilDirectory, pencilFileName + "-exploded", fileNumber);
 
 			// // now go through the colours
 			for(let [ index, colourComponent ] of pencil.colourComponents.entries()) {

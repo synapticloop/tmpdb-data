@@ -1,9 +1,10 @@
 import {Part} from "../model/Part.ts";
 import {
-	dimensionsHorizontal,
+	circle,
+	dimensionsHorizontal, dimensionsVertical,
 	drawExtraBackground,
 	drawExtraForeground,
-	drawOutlineCircle,
+	drawOutlineCircle, drawOutlineHexagon, drawOutlineOctagon,
 	drawShapeDetails,
 	drawText,
 	drawTextBold, drawTextBoldCentred,
@@ -19,6 +20,7 @@ import {formatToTwoPlaces} from "../utils/formatter.ts";
 import {Component} from "../model/Component.ts";
 import {Pencil} from "../model/Pencil.ts";
 import {OpaqueColour} from "../model/OpaqueColour.ts";
+import {Extra} from "../model/Extra.ts";
 
 
 export abstract class SVGRenderer {
@@ -34,12 +36,21 @@ export abstract class SVGRenderer {
 		this._rendererName = rendererName;
 	}
 
+	public abstract render(colourInder:number): string;
+
+	/**
+	 * Resize the SVG - this is used when the size of the SVG is dynamically calculated,
+	 * e.g. when multiple pencils will be drawn based on colour.
+	 *
+	 * @param width The new width for the SVG
+	 * @param height The new height for the SVG
+	 *
+	 * @protected
+	 */
 	protected resize(width: number, height: number): void {
 		this._width = width;
 		this._height = height;
 	}
-
-	public abstract render(colourInder:number): string;
 
 	private addOutlineBox(width: number, height: number, transparent:boolean):string {
 		if(!transparent) {
@@ -91,33 +102,19 @@ export abstract class SVGRenderer {
 		return(svgString);
 	}
 
-	protected renderCentreLines(width: number, height: number, renderFront:boolean=true, renderBack:boolean=true, xInset: number=10, yInset: number=0): string {
+	protected renderCentreLineHorizontal(y:number, xInsetLeft: number=40, xInsetRight: number=40): string {
 		let svgString: string = "";
+		svgString += lineHorizontal(xInsetLeft, y, this._width - xInsetLeft - xInsetRight, "1", "#5f5f5f", "2");
+		svgString += target(xInsetLeft, y, 40, 10);
+		svgString += target(this._width - xInsetRight, y, 40, 10);
+		return(svgString);
+	}
 
-		// the horizontal centre line with targets
-		svgString += lineHorizontal(xInset, height / 2, width - (2 * xInset), "1", "#000000", "2");
-		svgString += target(xInset + 20, height / 2, 40, 10);
-		svgString += target(width - (xInset * 2 + 10), height / 2, 40, 10);
-
-		if (renderFront) {
-			// FRONT VIEW the left hand side targets and the dashed line
-			svgString += lineVertical(160, 140, height - 220, "1", "#000000", "2");
-			svgString += target(160, 150, 40, 10);
-			svgString += target(160, height - 100, 40, 10);
-		}
-
-		// SIDE VIEW
-		svgString += lineVertical(width / 2, 140, height - 220, "1", "#000000", "2");
-		svgString += target(width / 2, 150, 40, 10);
-		svgString += target(width / 2, height - 100, 40, 10);
-
-		if (renderBack) {
-			// BACK VIEW the right hand side targets and the dashed line
-			svgString += lineVertical(width - 100, 140, height - 220, "1", "#000000", "2");
-			svgString += target(width - 100, 150, 40, 10);
-			svgString += target(width - 100, height - 100, 40, 10);
-		}
-
+	protected renderCentreLineVertical(x:number, yInsetTop: number=40, yInsetBottom: number=40): string {
+		let svgString: string = "";
+		svgString += lineVertical(x, yInsetTop, this._height - yInsetTop - yInsetBottom, "1", "#5f5f5f", "2");
+		svgString += target(x, yInsetTop, 40, 10);
+		svgString += target(x, this._height - yInsetBottom, 40, 10);
 		return(svgString);
 	}
 
@@ -326,6 +323,139 @@ export abstract class SVGRenderer {
 		return (svgString);
 	}
 
+	protected renderFrontDimensions(x: number, y: number): string {
+		let svgString: string = "";
+		// THIS IS THE FRONT VIEW
+
+		let extrasHeight: number = 0;
+		let extrasOffset: number = 0;
+		let extrasOffsetHeight: number = 0;
+		// do we have any extras?
+
+		let thisExtraPart: Extra = null;
+		for(const component of this.pencil.components) {
+			if(component.extras.length > 0){
+
+				for(const extra of component.extras){
+					if(extra.height > extrasHeight){
+						extrasHeight = extra.height;
+						extrasOffset = extra.offset[1];
+						extrasOffsetHeight = component.maxHeight/2;
+						thisExtraPart = extra;
+					}
+				}
+			}
+		}
+
+		// we will be drawing the left dimension for the full body height - we need to take
+		// into account whether there is an extra part
+		if(thisExtraPart) {
+			// draw the dimensions for the top part of the extra
+			svgString += dimensionsHorizontal(x - thisExtraPart.width/2 * 5,
+				y - 60,
+				thisExtraPart.width * 5,
+				`${formatToTwoPlaces(thisExtraPart.width)} mm`,
+				TextOrientation.TOP,
+				true);
+
+			svgString += dimensionsVertical(x + 62,
+				y - extrasOffset * 5 - extrasHeight * 5,
+				extrasHeight * 5,
+				`${(Math.round((thisExtraPart.height) * 100) / 100).toFixed(2)} mm`,
+				TextOrientation.RIGHT);
+
+			svgString += dimensionsVertical(x + 50,
+				y - this.pencil.maxHeight/2 * 5,
+				this.pencil.maxHeight * 5,
+				`${formatToTwoPlaces(this.pencil.maxHeight)} mm`,
+				TextOrientation.RIGHT);
+
+
+			const pencilExtraHeight: number  = this.pencil.maxHeight + extrasHeight - (extrasOffsetHeight - extrasOffset);
+			// we have an extra part - the height is more than the simple body height
+			svgString += dimensionsVertical(x - 50,
+				y - extrasOffset * 5 - extrasHeight * 5,
+				pencilExtraHeight * 5,
+				`${pencilExtraHeight} mm`,
+				TextOrientation.LEFT_ROTATED,
+				true);
+		} else {
+			// no extra height here - so we can just draw the text
+			svgString += dimensionsVertical(x - 50,
+				y - this.pencil.maxHeight/2*5,
+				this.pencil.maxHeight * 5,
+				`${formatToTwoPlaces(this.pencil.maxHeight)} mm`,
+				TextOrientation.LEFT_ROTATED,
+				true);
+		}
+
+		// This is the BOTTOM WIDTH of the pencil
+		svgString += dimensionsHorizontal(x - this.pencil.maxWidth/2 * 5,
+			y + 30 + this.pencil.maxHeight/2 * 5,
+			this.pencil.maxWidth * 5,
+			`${formatToTwoPlaces(this.pencil.maxWidth)} mm`,
+			TextOrientation.BOTTOM,
+			true);
+
+		return(svgString);
+	}
+
+	protected renderFrontComponents(x: number, y: number, colourIndex:number): string {
+		let svgString: string = "";
+
+		let colour: OpaqueColour = new OpaqueColour(this.pencil.colourMap, "white%0");
+
+		// we want to render them back to front so that the last component is on
+		// the bottom
+
+		this.pencil.components.reverse()
+
+		// go through the components and render them
+		for(const component of this.pencil.components) {
+
+			svgString += `\n<!-- FRONT COMPONENT: ${component.type} -->\n`
+			component.parts.reverse();
+			for (let part of component.parts) {
+				colour = part.getOpacityColour(colourIndex);
+				switch (part.shape) {
+					case "cylinder":
+						svgString += circle(x, y, (part.startHeight / 2) * 5, "0.5", "black", colour);
+						break;
+					case "cone":
+					case "convex":
+					case "concave":
+						svgString += drawOutlineCircle((part.startHeight / 2) * 5, x, y, colour);
+						svgString += drawOutlineCircle((part.endHeight / 2) * 5, x, y, colour);
+						break;
+					case "hexagonal":
+						svgString += drawOutlineHexagon(x, y, part.startHeight, colour);
+						break;
+					case "octagonal":
+						svgString += drawOutlineOctagon(x, y, part.startHeight, colour);
+						break;
+				}
+			}
+			component.parts.reverse();
+		}
+
+		// now put it back in order
+		this.pencil.components.reverse()
+
+		for(let front of this.pencil.front) {
+			// only care about the first dimension - which is the width
+			let frontFillColour: OpaqueColour = front.getOpacityColour(colourIndex);
+
+			// render the front piece
+			switch (front.shape) {
+				case "cylinder":
+					svgString += circle(x, y, front.width/2 * 5, "0.5", "dimgray", frontFillColour);
+					break;
+			}
+		}
+
+		return(svgString);
+	}
+
 	protected renderSideDimensions(): string {
 		let svgString: string = "";
 
@@ -360,6 +490,87 @@ export abstract class SVGRenderer {
 			}
 
 			startX += component.length * 5;
+		}
+
+		return(svgString);
+	}
+
+	protected renderBackDimensions(x: number, y: number): string {
+		let svgString: string = "";
+
+		for (let component of this.pencil.components) {
+			switch (component.type) {
+				case "body":
+					svgString += dimensionsVertical(x,
+						y - component.maxHeight/2 * 5,
+						component.maxHeight * 5,
+						`${component.maxHeight} mm`,
+						TextOrientation.LEFT_ROTATED,
+						true);
+
+					svgString += dimensionsVertical(x,
+						y - component.maxHeight/2 * 5,
+						component.maxHeight * 5,
+						"body",
+						TextOrientation.BOTTOM_ROTATED,
+						true);
+					break;
+				case "grip":
+					svgString += dimensionsVertical(x - 40,
+						y - component.maxHeight/2 * 5,
+						component.maxHeight * 5,
+						`${component.maxHeight} mm`,
+						TextOrientation.LEFT_ROTATED,
+						true);
+
+					svgString += dimensionsVertical(x - 40,
+						y - component.maxHeight/2 * 5,
+						component.maxHeight * 5,
+						"grip",
+						TextOrientation.BOTTOM_ROTATED,
+						true);
+					break;
+			}
+		}
+		return(svgString);
+	}
+
+	protected renderBackComponents(x: number, y: number, colourIndex:number): string {
+		let svgString: string = "";
+
+		let colour: OpaqueColour = new OpaqueColour(this.pencil.colourMap, "white");
+		// go through the components and render them
+		for(const component of this.pencil.components) {
+			colour = component.getOpacityColour(colourIndex);
+
+			for (let part of component.parts) {
+				switch (part.shape) {
+					case "cylinder":
+						svgString += circle(x, y, (part.startHeight / 2) * 5, "0.5", "black", colour);
+						break;
+					case "cone":
+						svgString += drawOutlineCircle((part.startHeight / 2) * 5, x, y, colour);
+						svgString += drawOutlineCircle((part.endHeight / 2) * 5, x, y, colour);
+						break;
+					case "hexagonal":
+						svgString += drawOutlineHexagon(x, y, part.startHeight, colour);
+						break;
+					case "octagonal":
+						svgString += drawOutlineOctagon(x, y, part.startHeight, colour);
+						break;
+				}
+			}
+		}
+
+		for(let back of this.pencil.back) {
+			let backFillColour: OpaqueColour = back.getOpacityColour(colourIndex);
+
+			// render the back piece
+			switch (back.shape) {
+				case "cylinder":
+					svgString += circle(x, y, back.width/2 * 5, "1", "dimgray", backFillColour);
+					break;
+			}
 		}
 
 		return(svgString);
@@ -693,32 +904,6 @@ export abstract class SVGRenderer {
 		}
 
 		return(svgString);
-	}
-
-	protected getMappedColour(colours: string[], colourIndex: number, defaultColour: string ): OpaqueColour {
-		if(colourIndex == -1) {
-			return(new OpaqueColour(this.pencil.colourMap, "white"));
-		}
-
-		let colourComponent:string;
-		// if there is only one colour...
-		if(colours.length === 1) {
-			colourComponent = colours[0];
-		} else {
-			colourComponent = colours[colourIndex];
-		}
-
-		if (colourComponent) {
-			let colourOpacity = new OpaqueColour(this.pencil.colourMap, colourComponent);
-
-			if(this.pencil.colourMap[colourOpacity.colour]) {
-				return(colourOpacity);
-			} else {
-				return(new OpaqueColour(this.pencil.colourMap, colourComponent));
-			}
-		}
-
-		return(new OpaqueColour(this.pencil.colourMap, defaultColour));
 	}
 
 	protected renderGuidelines(): string {

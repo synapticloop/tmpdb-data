@@ -23,12 +23,10 @@ export class SVGTechnicalComponentRenderer extends SVGRenderer {
 		// start
 		let svgString:string = super.getSvgStart();
 
-		// centre line
-		svgString += super.renderCentreLines(
-				this.SVG_WIDTH,
-				this.SVG_HEIGHT,
-				false,
-				false);
+		// centre line for the entire pencil
+		svgString += super.renderCentreLineHorizontal(this.SVG_HEIGHT/2);
+		// centre line for the side view
+		svgString += super.renderCentreLineVertical(this.SVG_WIDTH/2, 90, 90);
 
 		// overview text
 		svgString += super.renderOverviewText(false);
