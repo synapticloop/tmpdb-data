@@ -10,7 +10,7 @@ import {
 	lineHorizontal,
 	lineHorizontalGuide,
 	lineVertical,
-	lineVerticalGuide, rectangle, renderBackExtra,
+	lineVerticalGuide, rectangle, renderExtra,
 	target,
 	TextOrientation
 } from "../utils/svg-helper.ts";

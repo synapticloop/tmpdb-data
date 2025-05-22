@@ -11,7 +11,7 @@ import {
 	lineHorizontal, lineJoined,
 	lineVertical,
 	lineVerticalGuide,
-	rectangle,
+	rectangle, renderExtra,
 	target,
 	TextOrientation
 } from "../utils/svg-helper.ts";
@@ -435,6 +435,11 @@ export abstract class SVGRenderer {
 						break;
 				}
 			}
+
+			for(const extra of component.extras) {
+				svgString += renderExtra(x, y, extra.offset[0], extra.offset[1], extra.width, extra.extraParts, extra.getBackgroundOpacityColour(colourIndex));
+			}
+
 			component.parts.reverse();
 		}
 

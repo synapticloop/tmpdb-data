@@ -212,19 +212,18 @@ export function drawExtraForeground(offsetX: number, offsetY: number, extraParts
 	return(svgString);
 }
 
-export function renderBackExtra(x: number, y: number, offsetX:number, offsetY: number, width: number, parts: Part[], fillColour:OpaqueColour) {
-	let svgString = "";
-	let points = [];
-	let isCurve = false;
+export function renderExtra(x: number, y: number, offsetX:number, offsetY: number, width: number, parts: ExtraPart[], fillColour:OpaqueColour): string {
+	let svgString: string = "";
+	let points: number[] = [];
+	let isCurve: boolean = false;
+
 	for(const part of parts) {
-		if(part["line"]) {
-			points = part["line"];
-		} else if(part["curve"]) {
-			points = part["curve"];
-			isCurve = true;
-		} else if(part["curve-fill"]) {
-			points = part["curve-fill"];
-			isCurve = true;
+		points = part.points;
+		switch(part.shape) {
+			case "curve":
+			case "curve-fill":
+				isCurve = true;
+				break;
 		}
 
 		// don't care what it is, always top to bottom
