@@ -669,6 +669,15 @@ export function arrowLeft(x: number, y:number): string {
 			`stroke="#0f0f0f" ` +
 			`stroke-width="1.0" />\n`;
 
+	// TODO - mini arrows
+	// svgString += `<line x1="${x + xOffset + 5}" ` +
+	// 		`y1="${y + yOffset - 4}" ` +
+	// 		`x2="${x + xInset + 5}" ` +
+	// 		`y2="${y}" ` +
+	// 		`stroke-linecap="round" ` +
+	// 		`stroke="#0f0f0f" ` +
+	// 		`stroke-width="1.0" />\n`;
+
 	return(svgString);
 }
 
