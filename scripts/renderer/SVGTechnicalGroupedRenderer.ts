@@ -1,6 +1,12 @@
 import {Pencil} from "../model/Pencil.ts";
 import {SVGRenderer} from "./SVGRenderer.ts";
-import {dimensionsHorizontal, TextOrientation} from "../utils/svg-helper.ts";
+import {
+	dimensionsHorizontal,
+	drawText,
+	drawTextBoldCentred,
+	lineHorizontal,
+	TextOrientation
+} from "../utils/svg-helper.ts";
 import {formatToTwoPlaces} from "../utils/formatter.ts";
 import {Component} from "../model/Component.ts";
 
@@ -27,34 +33,57 @@ export class SVGTechnicalGroupedRenderer extends SVGRenderer {
 		// the first thing that we are going to do is to render the pencil with
 		// the grouped components
 		// determine the this.SVG_HEIGHT
-		this.SVG_HEIGHT = 500 + this.pencil.colourComponents.length * 120;
+		this.SVG_HEIGHT = 580 + this.pencil.colourComponents.length * 120;
 		super.resize(1000, this.SVG_HEIGHT);
 
 		// start
 		let svgString:string = super.getSvgStart();
 		svgString += super.renderOverviewText(false);
 
-		let midYOverride: number = 200;
+		let midYOverride: number = 100;
 
+		svgString += lineHorizontal(50, midYOverride + 4, 316, "2", "black");
+		svgString += drawTextBoldCentred(
+			"Measurements",
+			this.SVG_WIDTH/2,
+			midYOverride,
+			"2.4em"
+		);
+		svgString += lineHorizontal(this.SVG_WIDTH - 366, midYOverride + 4, 316, "2", "black");
+
+		midYOverride += 160;
 		// now draw the grouped components
 		svgString += super.renderCentreLineHorizontal(midYOverride);
 		svgString += super.renderSideComponents(-1, midYOverride);
 
 		let partOffset: number = this.SVG_WIDTH/2 - this.pencil.totalLength*5/2
 		let groupLength: number = 0;
+
 		let drawComponents: Component[] = [];
+
+		let currentOffset: number = 0;
+		let gripComponent: Component = null;
+		let gripOffset: number = 0;
+		let clipComponent: Component = null;
+		let clipOffset: number = 0;
+
 		for(const component of this.pencil.components) {
-			if(component.type === "body") {
+			if(component.type === "tip") {
+				// found the tip
+
+				drawComponents.push(component);
+
 				for(const drawComponent of drawComponents) {
 					groupLength += drawComponent.length;
 				}
 
+
 				svgString += dimensionsHorizontal(partOffset,
-					midYOverride - 40 - this.pencil.maxHeight/2 * 5,
+					midYOverride - 60 - this.pencil.maxHeight/2 * 5,
 					groupLength * 5,
 					`${formatToTwoPlaces(groupLength)} mm`)
 				svgString += dimensionsHorizontal(partOffset,
-					midYOverride - 40 - this.pencil.maxHeight/2 * 5,
+					midYOverride - 60 - this.pencil.maxHeight/2 * 5,
 					groupLength * 5,
 					`tip`,
 					TextOrientation.BOTTOM,
@@ -62,6 +91,10 @@ export class SVGTechnicalGroupedRenderer extends SVGRenderer {
 				partOffset += groupLength * 5;
 				drawComponents.length = 0;
 				groupLength = 0;
+
+				// remove the tip - as it will be added back in again
+				drawComponents.pop();
+				groupLength -= component.length;
 			}
 
 			if(component.type === "cap") {
@@ -70,11 +103,11 @@ export class SVGTechnicalGroupedRenderer extends SVGRenderer {
 				}
 
 				svgString += dimensionsHorizontal(partOffset,
-					midYOverride - 40 - this.pencil.maxHeight/2 * 5,
+					midYOverride - 60 - this.pencil.maxHeight/2 * 5,
 					groupLength * 5,
 					`${formatToTwoPlaces(groupLength)} mm`)
 				svgString += dimensionsHorizontal(partOffset,
-					midYOverride - 40 - this.pencil.maxHeight/2 * 5,
+					midYOverride - 60 - this.pencil.maxHeight/2 * 5,
 					groupLength * 5,
 					`body`,
 					TextOrientation.BOTTOM,
@@ -85,7 +118,18 @@ export class SVGTechnicalGroupedRenderer extends SVGRenderer {
 				groupLength = component.length;
 			}
 
+			if(component.type === "grip") {
+				gripComponent = component;
+				gripOffset = currentOffset;
+			}
+
+			if(component.type === "clip") {
+				clipComponent = component;
+				clipOffset = currentOffset;
+			}
+
 			drawComponents.push(component);
+			currentOffset += component.length * 5;
 		}
 
 		let capLength: number = 0;
@@ -95,11 +139,11 @@ export class SVGTechnicalGroupedRenderer extends SVGRenderer {
 
 		if(capLength > 0) {
 			svgString += dimensionsHorizontal(partOffset,
-				midYOverride - 40 - this.pencil.maxHeight/2 * 5,
+				midYOverride - 60 - this.pencil.maxHeight/2 * 5,
 				capLength * 5,
 				`${formatToTwoPlaces(capLength)} mm`)
 			svgString += dimensionsHorizontal(partOffset,
-				midYOverride - 40 - this.pencil.maxHeight/2 * 5,
+				midYOverride - 60 - this.pencil.maxHeight/2 * 5,
 				capLength * 5,
 				`cap`,
 				TextOrientation.BOTTOM,
@@ -109,7 +153,7 @@ export class SVGTechnicalGroupedRenderer extends SVGRenderer {
 		// render the total length
 		svgString += dimensionsHorizontal(
 			this.SVG_WIDTH/2 - this.pencil.totalLength*5/2,
-			midYOverride + 80 + this.pencil.maxHeight/2 * 5,
+			midYOverride + 90 + this.pencil.maxHeight/2 * 5,
 			this.pencil.totalLength * 5,
 			`${formatToTwoPlaces(this.pencil.totalLength)} mm`,
 			TextOrientation.BOTTOM,
@@ -118,15 +162,69 @@ export class SVGTechnicalGroupedRenderer extends SVGRenderer {
 
 		svgString += dimensionsHorizontal(
 			this.SVG_WIDTH/2 - this.pencil.totalLength*5/2,
-			midYOverride + 80 + this.pencil.maxHeight/2 * 5,
+			midYOverride + 90 + this.pencil.maxHeight/2 * 5,
 			this.pencil.totalLength * 5,
 			`Total Length`,
 			TextOrientation.TOP,
 			true
 		);
 
-		// now we are going to draw the full length
+
+		// draw the clip dimensions
+		if(null != clipComponent) {
+			svgString += dimensionsHorizontal(
+				this.SVG_WIDTH/2 - this.pencil.totalLength*5/2 + clipOffset + clipComponent.allOffset * 5,
+				midYOverride + 30 + this.pencil.maxHeight/2 * 5,
+				clipComponent.allLength * 5,
+				`${formatToTwoPlaces(clipComponent.allLength)} mm`,
+				TextOrientation.TOP,
+				true
+			);
+
+			svgString += dimensionsHorizontal(
+				this.SVG_WIDTH/2 - this.pencil.totalLength*5/2 + clipOffset + clipComponent.allOffset * 5,
+				midYOverride + 30 + this.pencil.maxHeight/2 * 5,
+				clipComponent.allLength * 5,
+				"clip",
+				TextOrientation.BOTTOM,
+				true
+			);
+		}
+
+		// draw the grip dimensions
+		if(null != gripComponent) {
+			svgString += dimensionsHorizontal(
+				this.SVG_WIDTH/2 - this.pencil.totalLength*5/2 + gripOffset,
+				midYOverride + 30 + this.pencil.maxHeight/2 * 5,
+				gripComponent.length * 5,
+				`${formatToTwoPlaces(clipComponent.length)} mm`,
+				TextOrientation.TOP,
+				true
+			);
+
+			svgString += dimensionsHorizontal(
+				this.SVG_WIDTH/2 - this.pencil.totalLength*5/2 + gripOffset,
+				midYOverride + 30 + this.pencil.maxHeight/2 * 5,
+				gripComponent.length * 5,
+				"grip",
+				TextOrientation.BOTTOM,
+				true
+			);
+		}
+
 		midYOverride = midYOverride + 200;
+
+		svgString += lineHorizontal(50, midYOverride + 4, 360, "2", "black");
+		svgString += drawTextBoldCentred(
+			"Variants",
+			this.SVG_WIDTH/2,
+			midYOverride,
+			"2.4em"
+		);
+		svgString += lineHorizontal(this.SVG_WIDTH - 410, midYOverride + 4, 360, "2", "black");
+
+		// now we are going to draw the colour components
+		midYOverride = midYOverride + 100;
 
 		for (let i:number = 0; i < this.pencil.colourComponents.length; i++) {
 			// now it is time to render the details of the pencil

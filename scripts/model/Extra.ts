@@ -9,6 +9,8 @@ export class Extra extends Base{
 	private dimensions: number[];
 	@JsonProperty( { name: "parts", type: ExtraPart, deserializer: ExtraPartDeserialiser, required: true } )
 	extraParts:ExtraPart[] = [];
+
+	// TODO PRIVATE
 	@JsonProperty( { name: "offset", required: true } )
 	offset: number[] = [];
 
@@ -19,6 +21,8 @@ export class Extra extends Base{
 	height: number;
 	width: number;
 
+	xOffset: number;
+	yOffset: number;
 
 	postConstruct(colours: string[], colourMap: Map<string, string>): void {
 		super.mergeOpacityColours(this.colours, colours, colourMap);
@@ -26,5 +30,9 @@ export class Extra extends Base{
 		this.length = this.dimensions[0];
 		this.width = this.dimensions[1];
 		this.height = this.dimensions[2];
+
+		this.xOffset = this.offset[0];
+		this.yOffset = this.offset[1];
+
 	}
 }

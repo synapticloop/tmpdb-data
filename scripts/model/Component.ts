@@ -6,7 +6,6 @@ import {OpaqueColour} from "./OpaqueColour.ts";
 import {PartDeserialiser} from "./deserialisers/PartDeserialiser.ts";
 import {ExtraDeserialiser} from "./deserialisers/ExtraDeserialiser.ts";
 import {Base} from "./Base.ts";
-import {StringArrayDeserialiser} from "./deserialisers/StringArrayDeserialiser.ts";
 
 export class Component extends Base {
 
@@ -51,6 +50,11 @@ export class Component extends Base {
 	maxHeight:number = 0;
 	minHeight:number = 0;
 
+	// this is the length of the clip if it has extras...
+	allLength: number;
+	// this is the offset of the extras (if it has any)
+	allOffset: number;
+
 	hasInternalStart: boolean = false;
 	hasInternalEnd: boolean = false;
 
@@ -64,8 +68,19 @@ export class Component extends Base {
 			part.postConstruct(this.mergedColours, colourMap);
 		}
 
+		let minX: number = 0;
+		let maxX: number = 0;
+
 		for(const extra of this.extras) {
 			extra.postConstruct(this.mergedColours, colourMap);
+			// TODO - need to do multiple
+			if(extra.xOffset + extra.length > this.length) {
+				this.allLength = extra.length;
+				this.allOffset = extra.xOffset;
+			} else {
+				this.allLength = extra.length + extra.xOffset;
+				this.allOffset = extra.xOffset;
+			}
 		}
 
 		for(const internalEnd of this.internalEnd) {
