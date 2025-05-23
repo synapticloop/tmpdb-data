@@ -1,6 +1,5 @@
 import {JsonProperty} from "json-object-mapper";
 import "reflect-metadata";
-import {Base} from "./Base.ts";
 
 export class Feature {
 	@JsonProperty({ name: "type", required: true })

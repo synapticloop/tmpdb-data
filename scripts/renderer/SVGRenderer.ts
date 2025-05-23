@@ -21,16 +21,37 @@ import {Component} from "../model/Component.ts";
 import {Pencil} from "../model/Pencil.ts";
 import {OpaqueColour} from "../model/OpaqueColour.ts";
 import {Extra} from "../model/Extra.ts";
+import {Pattern} from "../model/Pattern.ts";
+import {listFiles} from "../utils/filesystem.ts";
+import fs from "fs";
+import {ObjectMapper} from "json-object-mapper";
 
 
 export abstract class SVGRenderer {
+	static patternMap: Map<string, Pattern> = new Map();
+	static defaultPatternLoaded: boolean = false;
+
 	protected pencil:Pencil;
 	protected _width: number;
 	protected _height: number;
 
 	private readonly _rendererName: string;
 
+	static loadDefaultPatterns(): void {
+		// load all the patterns
+		for (const listFile of listFiles("./patterns")) {
+			const patternName: string = listFile.substring(0, -4);
+			const pattern: Pattern = ObjectMapper.deserialize(Pattern, "./patterns/" + listFile);
+			this.patternMap.set(patternName, pattern);
+		}
+		this.defaultPatternLoaded = true;
+	}
+
 	protected constructor(pencil:Pencil, width: number, height: number, rendererName:string = "") {
+		if(!SVGRenderer.defaultPatternLoaded) {
+			SVGRenderer.loadDefaultPatterns();
+		}
+
 		this.pencil = pencil;
 		this._width = width;
 		this._height = height;

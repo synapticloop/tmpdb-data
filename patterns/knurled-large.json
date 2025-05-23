@@ -1,0 +1,12 @@
+{
+	"name": "knurled",
+	"description": "",
+	"pattern": [
+		"<pattern id=\"knurled\" patternUnits=\"userSpaceOnUse\" width=\"12\" height=\"12\">",
+		"<path stroke=\"dimgray\" stroke-linecap=\"round\" stroke-width=\"1\" d=\"M 6,6 L 12,12\"/>",
+		"<path stroke=\"dimgray\" stroke-linecap=\"round\" stroke-width=\"1\" d=\"M 6,6 L 0,12\"/>",
+		"<path stroke=\"gray\" stroke-linecap=\"round\" stroke-width=\"1\" d=\"M 6,6 L 12,0\" />",
+		"<path stroke=\"gray\" stroke-linecap=\"round\" stroke-width=\"1\" d=\"M 6,6 L 0,0\" />",
+		"</pattern>"
+	]
+}
