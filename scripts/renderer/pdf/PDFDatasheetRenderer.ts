@@ -187,8 +187,8 @@ export class PDFDatasheetRenderer {
 				componentExtra.push({ text: component.type + " (extra)", align: "right" });
 
 				componentExtra.push({text: `${formatToTwoPlaces(extra.length)} mm`, align: "center", border: [ 1, 1, 1, 1 ], borderColor: "#aaa"});
+				componentExtra.push({text: `${formatToTwoPlaces(extra.depth)} mm`, align: "center", colSpan: 2, border: [ 1, 1, 1, 1 ], borderColor: "#aaa" });
 				componentExtra.push({text: `${formatToTwoPlaces(extra.height)} mm`, align: "center", colSpan: 2, border: [ 1, 1, 1, 1 ], borderColor: "#aaa" });
-				componentExtra.push({text: `${formatToTwoPlaces(extra.width)} mm`, align: "center", colSpan: 2, border: [ 1, 1, 1, 1 ], borderColor: "#aaa" });
 
 				componentData.push(componentExtra);
 			}

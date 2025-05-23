@@ -67,7 +67,7 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 		svgString += super.renderFrontDimensions(160, this.SVG_HEIGHT/2);
 
 		//render the side dimensions
-		svgString += super.renderSideDimensions();
+		svgString += super.renderSideDimensions((this._width - this.pencil.totalLength * 5)/2, this.SVG_HEIGHT/2);
 
 		// render the back dimensions
 		svgString += super.renderBackDimensions(this.SVG_WIDTH - 150, this.SVG_HEIGHT/2);
@@ -94,20 +94,20 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 		// now we are going to go through each of the components and draw the shapes
 		let offset:number;
 
-		let hasExtra = false;
+		let hasExtra:boolean = false;
 		// now for the extra side components guidelines
 		for (let component of this.pencil.components) {
 			for(const extra of component.extras) {
 				// draw the straight-through line for guidance top of the extra parts
-				const y = this.SVG_HEIGHT/2 - extra.offset[1] * 5 - (extra.height) * 5;
+				const y = this.SVG_HEIGHT/2 - extra.yOffset * 5 - (extra.height) * 5;
 
 				svgString += lineHorizontalGuide(100, y, this.SVG_WIDTH - 200);
 				// draw the straight-through line for guidance bottom of the extra parts
-				svgString += lineHorizontalGuide(160, this.SVG_HEIGHT/2 - extra.offset[1] * 5, this.SVG_WIDTH - 260);
+				svgString += lineHorizontalGuide(160, this.SVG_HEIGHT/2 - extra.yOffset * 5, this.SVG_WIDTH - 260);
 				// guidelines for the extra width - left side
-				svgString += lineVerticalGuide(160 - extra.width/2 * 5, this.SVG_HEIGHT/2 - 70, 70);
+				svgString += lineVerticalGuide(160 - extra.depth/2 * 5, this.SVG_HEIGHT/2 - 70, 70);
 				// guidelines for the extra width - right side
-				svgString += lineVerticalGuide(160 + extra.width/2 * 5, this.SVG_HEIGHT/2 - 70, 70);
+				svgString += lineVerticalGuide(160 + extra.depth/2 * 5, this.SVG_HEIGHT/2 - 70, 70);
 
 				hasExtra = true;
 			}
@@ -139,10 +139,10 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 			svgString += lineVerticalGuide(offset, this.SVG_HEIGHT/2 - 120, 240);
 			// now for extraParts
 			for(const extra of component.extras) {
-				svgString += lineVerticalGuide(offset + extra.offset[0] * 5,
+				svgString += lineVerticalGuide(offset + extra.xOffset * 5,
 								this.SVG_HEIGHT/2 - 80,
 								160);
-				svgString += lineVerticalGuide(offset + extra.offset[0] * 5 + extra.length * 5,
+				svgString += lineVerticalGuide(offset + extra.xOffset * 5 + extra.length * 5,
 								this.SVG_HEIGHT/2 - 80,
 								160);
 			}

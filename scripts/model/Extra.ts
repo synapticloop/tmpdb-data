@@ -12,14 +12,14 @@ export class Extra extends Base{
 
 	// TODO PRIVATE
 	@JsonProperty( { name: "offset", required: true } )
-	offset: number[] = [];
+	private offset: number[] = [];
 
 	@JsonProperty( { name: "colours", required: false } )
 	private colours: string[] = []
 
 	length: number;
 	height: number;
-	width: number;
+	depth: number;
 
 	xOffset: number;
 	yOffset: number;
@@ -28,11 +28,10 @@ export class Extra extends Base{
 		super.mergeOpacityColours(this.colours, colours, colourMap);
 
 		this.length = this.dimensions[0];
-		this.width = this.dimensions[1];
-		this.height = this.dimensions[2];
+		this.height = this.dimensions[1];
+		this.depth = this.dimensions[2];
 
 		this.xOffset = this.offset[0];
 		this.yOffset = this.offset[1];
-
 	}
 }

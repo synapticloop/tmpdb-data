@@ -351,9 +351,9 @@ export abstract class SVGRenderer {
 			if(component.extras.length > 0){
 
 				for(const extra of component.extras){
-					if(extra.height > extrasHeight){
+					if(extra.depth > extrasHeight){
 						extrasHeight = extra.height;
-						extrasOffset = extra.offset[1];
+						extrasOffset = extra.yOffset;
 						extrasOffsetHeight = component.maxHeight/2;
 						thisExtraPart = extra;
 					}
@@ -365,10 +365,10 @@ export abstract class SVGRenderer {
 		// into account whether there is an extra part
 		if(thisExtraPart) {
 			// draw the dimensions for the top part of the extra
-			svgString += dimensionsHorizontal(x - thisExtraPart.width/2 * 5,
+			svgString += dimensionsHorizontal(x - thisExtraPart.depth/2 * 5,
 				y - 60,
-				thisExtraPart.width * 5,
-				`${formatToTwoPlaces(thisExtraPart.width)} mm`,
+				thisExtraPart.depth * 5,
+				`${formatToTwoPlaces(thisExtraPart.depth)} mm`,
 				TextOrientation.TOP,
 				true);
 
@@ -378,6 +378,7 @@ export abstract class SVGRenderer {
 				`${(Math.round((thisExtraPart.height) * 100) / 100).toFixed(2)} mm`,
 				TextOrientation.RIGHT);
 
+			// draw the dimensions for the pencil
 			svgString += dimensionsVertical(x + 50,
 				y - this.pencil.maxHeight/2 * 5,
 				this.pencil.maxHeight * 5,
@@ -451,7 +452,9 @@ export abstract class SVGRenderer {
 			}
 
 			for(const extra of component.extras) {
-				svgString += renderExtra(x, y, extra.offset[0], extra.offset[1], extra.width, extra.extraParts, extra.getBackgroundOpacityColour(colourIndex));
+				extra.extraParts.reverse();
+				svgString += renderExtra(x, y, extra.xOffset, extra.yOffset, extra.depth, extra.extraParts, extra.getBackgroundOpacityColour(colourIndex));
+				extra.extraParts.reverse();
 			}
 
 			component.parts.reverse();
@@ -475,11 +478,11 @@ export abstract class SVGRenderer {
 		return(svgString);
 	}
 
-	protected renderSideDimensions(): string {
+	protected renderSideDimensions(x: number, y: number): string {
 		let svgString: string = "";
 
-		let startX: number = (this._width - this.pencil.totalLength * 5)/2;
-		let midY: number = this._height/2;
+		// let x: number = (this._width - this.pencil.totalLength * 5)/2;
+		// let y: number = this._height/2;
 
 		// render the component dimensions
 		for (let component of this.pencil.components) {
@@ -487,8 +490,8 @@ export abstract class SVGRenderer {
 				continue;
 			}
 			// draw all the dimensions
-			svgString += dimensionsHorizontal(startX,
-				midY - 120,
+			svgString += dimensionsHorizontal(x,
+				y - 120,
 				component.length * 5,
 				`${formatToTwoPlaces(component.length)} mm${(component.length * 5 > 30 ? "\n" : " ")}${component.type}`,
 				TextOrientation.TOP_ROTATED,
@@ -500,15 +503,15 @@ export abstract class SVGRenderer {
 			for(const extra of component.extras) {
 				// draw the straight-through line for guidance
 
-				svgString += dimensionsHorizontal(startX + extra.offset[0] * 5,
-					midY - 80,
+				svgString += dimensionsHorizontal(x + extra.offset[0] * 5,
+					y - 80,
 					extra.length * 5,
 					`${formatToTwoPlaces(extra.length)} mm\n${component.type} (extra)`,
 					TextOrientation.CENTER,
 					true);
 			}
 
-			startX += component.length * 5;
+			x += component.length * 5;
 		}
 
 		return(svgString);
@@ -579,6 +582,11 @@ export abstract class SVGRenderer {
 						break;
 				}
 			}
+
+			for(const extra of component.extras) {
+				svgString += renderExtra(x, y, extra.xOffset, extra.yOffset, extra.depth, extra.extraParts, extra.getBackgroundOpacityColour(colourIndex));
+			}
+
 		}
 
 		for(let back of this.pencil.back) {
@@ -764,14 +772,14 @@ export abstract class SVGRenderer {
 
 		switch (part.shape) {
 			case "hexagonal":
-				svgString += drawShapeDetails(startX, midY, (part.length) * 5);
-				// svgString += drawShapeDetails(startX + part.internalOffset * 5, midY, (part.length) * 5);
+				// svgString += drawShapeDetails(startX, midY, (part.length) * 5);
+				svgString += drawShapeDetails(startX + part.internalOffset * 5, midY, (part.length) * 5);
 				break;
 			case "octagonal":
-				svgString += drawShapeDetails(startX, midY - ((part.startHeight / 2 * 5) * 4 / 7), (part.length) * 5);
-				svgString += drawShapeDetails(startX, midY + ((part.startHeight / 2 * 5) * 4 / 7), (part.length) * 5);
-				// svgString += drawShapeDetails(startX + part.internalOffset * 5, midY - ((part.startHeight / 2 * 5) * 4 / 7), (part.length) * 5);
-				// svgString += drawShapeDetails(startX + part.internalOffset * 5, midY + ((part.startHeight / 2 * 5) * 4 / 7), (part.length) * 5);
+				// svgString += drawShapeDetails(startX, midY - ((part.startHeight / 2 * 5) * 4 / 7), (part.length) * 5);
+				// svgString += drawShapeDetails(startX, midY + ((part.startHeight / 2 * 5) * 4 / 7), (part.length) * 5);
+				svgString += drawShapeDetails(startX + part.internalOffset * 5, midY - ((part.startHeight / 2 * 5) * 4 / 7), (part.length) * 5);
+				svgString += drawShapeDetails(startX + part.internalOffset * 5, midY + ((part.startHeight / 2 * 5) * 4 / 7), (part.length) * 5);
 				break;
 		}
 
