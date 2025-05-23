@@ -713,18 +713,12 @@ export abstract class SVGRenderer {
 			case "hexagonal":
 			case "octagonal":
 			case "cone":
-				svgString += `<path d="M${startX} ` +
+				svgString += `<path d="M${startX + part.internalOffset * 5} ` +
 					`${midY - (part.startHeight / 2 * 5)} ` +
-					`L${startX + part.length * 5} ${midY - (part.endHeight / 2 * 5)} ` +
-					`L${startX + part.length * 5} ${midY + (part.endHeight / 2 * 5)} ` +
-					`L${startX} ${midY + (part.startHeight / 2 * 5)} Z" ` +
+					`L${startX + part.internalOffset * 5 + part.length * 5} ${midY - (part.endHeight / 2 * 5)} ` +
+					`L${startX + part.internalOffset * 5 + part.length * 5} ${midY + (part.endHeight / 2 * 5)} ` +
+					`L${startX + part.internalOffset * 5} ${midY + (part.startHeight / 2 * 5)} Z" ` +
 					`stroke-width="0.5" stroke="${strokeColour}" stroke-linejoin="round" fill="${opaqueColour.colour}" fill-opacity="${opaqueColour.opacity}" />\n`
-				// svgString += `<path d="M${startX + part.internalOffset * 5} ` +
-				// 	`${midY - (part.startHeight / 2 * 5)} ` +
-				// 	`L${startX + part.internalOffset * 5 + part.length * 5} ${midY - (part.endHeight / 2 * 5)} ` +
-				// 	`L${startX + part.internalOffset * 5 + part.length * 5} ${midY + (part.endHeight / 2 * 5)} ` +
-				// 	`L${startX + part.internalOffset * 5} ${midY + (part.startHeight / 2 * 5)} Z" ` +
-				// 	`stroke-width="0.5" stroke="${strokeColour}" stroke-linejoin="round" fill="${opaqueColour.colour}" fill-opacity="${opaqueColour.opacity}" />\n`
 
 				if(part.joined) {
 					svgString += lineJoined(startX,
@@ -747,24 +741,24 @@ export abstract class SVGRenderer {
 					offsetY = (part.startHeight / 2 - part.offset[1]) * 5;
 				}
 
-				// svgString += `<path d="M${startX + part.internalOffset * 5} ${midY - (part.startHeight / 2 * 5)} ` +
-				// 	`Q${startX + part.internalOffset * 5 + offsetX} ${midY - offsetY} ` +
-				// 	`${startX + part.internalOffset * 5} ${midY + (part.startHeight / 2 * 5)}" ` +
-				// 	`stroke-width="0.5" stroke="${strokeColour}" stroke-linejoin="round" fill="${opaqueColour.colour}" fill-opacity="${opaqueColour.opacity}"/>\n`
-				svgString += `<path d="M${startX} ${midY - (part.startHeight / 2 * 5)} ` +
-					`Q${startX + offsetX} ${midY - offsetY} ` +
-					`${startX} ${midY + (part.startHeight / 2 * 5)}" ` +
+				svgString += `<path d="M${startX + part.internalOffset * 5} ${midY - (part.startHeight / 2 * 5)} ` +
+					`Q${startX + part.internalOffset * 5 + offsetX} ${midY - offsetY} ` +
+					`${startX + part.internalOffset * 5} ${midY + (part.startHeight / 2 * 5)}" ` +
 					`stroke-width="0.5" stroke="${strokeColour}" stroke-linejoin="round" fill="${opaqueColour.colour}" fill-opacity="${opaqueColour.opacity}"/>\n`
+				// svgString += `<path d="M${startX} ${midY - (part.startHeight / 2 * 5)} ` +
+				// 	`Q${startX + offsetX} ${midY - offsetY} ` +
+				// 	`${startX} ${midY + (part.startHeight / 2 * 5)}" ` +
+				// 	`stroke-width="0.5" stroke="${strokeColour}" stroke-linejoin="round" fill="${opaqueColour.colour}" fill-opacity="${opaqueColour.opacity}"/>\n`
 				break;
 			case "concave":
-				svgString += `<path d="M${startX} ${midY - (part.startHeight / 2 * 5)} ` +
-					`Q${startX + part.length * 5} ${midY} ` +
-					`${startX} ${midY + (part.startHeight / 2 * 5)}" ` +
-					`stroke-width="0.5" stroke="${strokeColour}" stroke-linejoin="round" fill="${opaqueColour.colour}" fill-opacity="${opaqueColour.opacity}"/>\n`
-				// svgString += `<path d="M${startX + part.internalOffset * 5} ${midY - (part.startHeight / 2 * 5)} ` +
-				// 	`Q${startX + part.internalOffset * 5 + part.length * 5} ${midY} ` +
-				// 	`${startX + part.internalOffset * 5} ${midY + (part.startHeight / 2 * 5)}" ` +
+				// svgString += `<path d="M${startX} ${midY - (part.startHeight / 2 * 5)} ` +
+				// 	`Q${startX + part.length * 5} ${midY} ` +
+				// 	`${startX} ${midY + (part.startHeight / 2 * 5)}" ` +
 				// 	`stroke-width="0.5" stroke="${strokeColour}" stroke-linejoin="round" fill="${opaqueColour.colour}" fill-opacity="${opaqueColour.opacity}"/>\n`
+				svgString += `<path d="M${startX + part.internalOffset * 5} ${midY - (part.startHeight / 2 * 5)} ` +
+					`Q${startX + part.internalOffset * 5 + part.length * 5} ${midY} ` +
+					`${startX + part.internalOffset * 5} ${midY + (part.startHeight / 2 * 5)}" ` +
+					`stroke-width="0.5" stroke="${strokeColour}" stroke-linejoin="round" fill="${opaqueColour.colour}" fill-opacity="${opaqueColour.opacity}"/>\n`
 				break;
 		}
 

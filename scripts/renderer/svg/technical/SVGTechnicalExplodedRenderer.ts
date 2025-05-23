@@ -97,21 +97,7 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 					}
 
 					svgString += lineHorizontal(startX - 40, midY, 30, "1.0", "#0f0f0f");
-					svgString += `<line x1="${startX - 30}" ` +
-						`y1="${midY}" ` +
-						`x2="${startX - 20}" ` +
-						`y2="${midY - 10}" ` +
-						`stroke-linecap="round" ` +
-						`stroke="#0f0f0f" ` +
-						`stroke-width="1.0" />\n`;
-					svgString += `<line x1="${startX - 30}" ` +
-						`y1="${midY}" ` +
-						`x2="${startX - 20}" ` +
-						`y2="${midY + 10}" ` +
-						`stroke-linecap="round" ` +
-						`stroke="#0f0f0f" ` +
-						`stroke-width="1.0" />\n`;
-
+					svgString += arrowLeft(startX - 30, midY);
 					svgString += lineVertical(startX - 40, midY - 50, 50, "1.0", "#0f0f0f");
 
 
@@ -139,20 +125,7 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 					svgString += lineVertical(startX + 40, midY - 100, 50, "1.0", "#0f0f0f");
 
 					svgString += lineHorizontal(startX + 10, midY - 100, 30, "1.0", "#0f0f0f");
-					svgString += `<line x1="${startX + 10}" ` +
-						`y1="${midY - 100}" ` +
-						`x2="${startX + 20}" ` +
-						`y2="${midY - 110}" ` +
-						`stroke-linecap="round" ` +
-						`stroke="#0f0f0f" ` +
-						`stroke-width="1.0" />\n`;
-					svgString += `<line x1="${startX + 10}" ` +
-						`y1="${midY - 100}" ` +
-						`x2="${startX + 20}" ` +
-						`y2="${midY - 90}" ` +
-						`stroke-linecap="round" ` +
-						`stroke="#0f0f0f" ` +
-						`stroke-width="1.0" />\n`;
+					svgString += arrowLeft(startX + 10, midY - 100);
 				}
 
 				if (component.hasInternalEnd) {
@@ -163,18 +136,19 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 					let previousPart:Part = null;
 					for (let internalPart of component.internalEnd) {
 						colour = internalPart.getOpacityColour(colourIndex);
-						// colour = this.getMappedColour(internalPart.colours, colourIndex, colour.colour);
 						svgString += super.renderPart(startX, midY, component, internalPart, colourIndex, colour);
 						totalLength += internalPart.length;
 						startX += internalPart.length * 5
 
 						// if we have an offset (which we only have on an end internal)
+						// we want to re-write the previous part - hacky, but will cover this
+						// part if it is not opaque
 						if(previousPart !== null && internalPart.internalOffset !== 0) {
-							startX += internalPart.internalOffset * 5;
+							startX -= internalPart.length * 5;
 							startX -= previousPart.length * 5;
 							svgString += super.renderPart(startX, midY, component, previousPart, colourIndex, colour);
-							startX -= internalPart.internalOffset * 5;
 							startX += previousPart.length * 5;
+							startX += internalPart.length * 5;
 						}
 						previousPart = internalPart;
 					}
@@ -184,20 +158,6 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 					// and for the arrows
 					svgString += lineHorizontal(startX + 10, midY, 30  + totalLength * 5, "1.0", "#0f0f0f");
 					svgString += arrowLeft(startX + 10, midY);
-					svgString += `<line x1="${startX + 10}" ` +
-						`y1="${midY}" ` +
-						`x2="${startX + 20}" ` +
-						`y2="${midY - 10}" ` +
-						`stroke-linecap="round" ` +
-						`stroke="#0f0f0f" ` +
-						`stroke-width="1.0" />\n`;
-					svgString += `<line x1="${startX + 10}" ` +
-						`y1="${midY}" ` +
-						`x2="${startX + 20}" ` +
-						`y2="${midY + 10}" ` +
-						`stroke-linecap="round" ` +
-						`stroke="#0f0f0f" ` +
-						`stroke-width="1.0" />\n`;
 
 					svgString += lineVertical(startX + 40 + totalLength * 5, midY, 50, "1.0", "#0f0f0f");
 
@@ -214,20 +174,7 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 					// next part horizontal line
 					svgString += lineHorizontal(startX - 40, midY + 100, 30, "1.0", "#0f0f0f");
 
-					svgString += `<line x1="${startX - 30}" ` +
-						`y1="${midY + 100}" ` +
-						`x2="${startX - 20}" ` +
-						`y2="${midY + 90}" ` +
-						`stroke-linecap="round" ` +
-						`stroke="#0f0f0f" ` +
-						`stroke-width="1.0" />\n`;
-					svgString += `<line x1="${startX - 30}" ` +
-						`y1="${midY + 100}" ` +
-						`x2="${startX - 20}" ` +
-						`y2="${midY + 110}" ` +
-						`stroke-linecap="round" ` +
-						`stroke="#0f0f0f" ` +
-						`stroke-width="1.0" />\n`;
+					svgString += arrowLeft(startX - 30, midY + 100);
 
 					svgString += lineVertical(startX - 40, midY + 50, 50, "1.0", "#0f0f0f");
 

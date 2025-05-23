@@ -2,7 +2,7 @@
 
 ## Model #: unknown
 
-[unbranded-metal-black-grouped.png](unbranded-metal-black-grouped.png)
+<img src="./unbranded-metal-black-grouped.png">
 
 ## Pencil Information
 

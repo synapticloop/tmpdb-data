@@ -2,7 +2,7 @@
 
 ## Model #: undefined
 
-[criterium-grouped.png](criterium-grouped.png)
+<img src="./criterium-grouped.png">
 
 ## Pencil Information
 

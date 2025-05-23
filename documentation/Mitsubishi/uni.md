@@ -2,7 +2,7 @@
 
 ## Model #: MH-500
 
-[uni-grouped.png](uni-grouped.png)
+<img src="./uni-grouped.png">
 
 ## Pencil Information
 

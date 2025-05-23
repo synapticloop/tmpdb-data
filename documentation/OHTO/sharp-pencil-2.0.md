@@ -2,7 +2,7 @@
 
 ## Model #: APS-680E
 
-[sharp-pencil-2.0-grouped.png](sharp-pencil-2.0-grouped.png)
+<img src="./sharp-pencil-2.0-grouped.png">
 
 ## Pencil Information
 

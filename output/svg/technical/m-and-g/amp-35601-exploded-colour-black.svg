@@ -21,6 +21,11 @@
 </pattern><pattern id="spring" patternUnits="userSpaceOnUse" width="8" height="100">
 <path stroke="dimgray" stroke-linecap="round" stroke-width="2" d="M 1,1 L 9,99"/>
 <path stroke="white" stroke-linecap="round" stroke-width="1" d="M 1,1 L 9,99"/>
+</pattern><pattern id="knurled" patternUnits="userSpaceOnUse" width="8" height="8">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,8"/>
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,8"/>
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,0" />
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,0" />
 </pattern><rect x="0" y="0" width="1200" height="449.25" fill="white" stroke="black" stroke-width="4" />
 <rect x="2" y="2" width="1196" height="445.25" fill="white" stroke="dimgray" stroke-width="1" />
 <g transform="rotate(0 0 0)">
@@ -47,6 +52,7 @@
 <line x1="280.625" y1="170" x2="280.625" y2="220" stroke="white" stroke-linecap="round"  stroke-width="2.0" />
 <line x1="280.625" y1="170" x2="280.625" y2="220" stroke="#0f0f0f" stroke-linecap="round"  stroke-width="1.0" />
 <path d="M320.625 203.75 L340.625 203.75 L340.625 236.25 L320.625 236.25 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#000000" fill-opacity="1" />
+<path d="M320.625 203.75 L340.625 203.75 L340.625 236.25 L320.625 236.25 Z" stroke-width="1.0" stroke="black" fill="url(#threaded)"/>
 <line x1="320.625" y1="201.75" x2="325.625" y2="238.25" stroke="dimgray" stroke-linecap="round" stroke-width="2" />
 <line x1="320.625" y1="201.75" x2="325.625" y2="238.25" stroke="[object Object]" stroke-linecap="round" stroke-width="1" />
 <line x1="325.625" y1="201.75" x2="330.625" y2="238.25" stroke="dimgray" stroke-linecap="round" stroke-width="2" />

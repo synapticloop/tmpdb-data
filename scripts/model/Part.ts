@@ -47,7 +47,7 @@ export class Part extends Base {
 
 	postConstruct(colours: string[], colourMap: Map<string, string>): void {
 		// contribute to the length
-		super.	mergeOpacityColours(this.colours, colours, colourMap);
+		super.mergeOpacityColours(this.colours, colours, colourMap);
 
 		if(this.taperStart) {
 			this.taperStart.postConstruct(this.mergedColours, colourMap);

@@ -2,7 +2,7 @@
 
 ## Model #: 780c
 
-[mars-technico-grouped.png](mars-technico-grouped.png)
+<img src="./mars-technico-grouped.png">
 
 ## Pencil Information
 

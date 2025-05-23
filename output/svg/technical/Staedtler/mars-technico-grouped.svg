@@ -1,21 +1,32 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="900">
- <pattern id="diagonalHatch" patternUnits="userSpaceOnUse" width="8" height="8">
+ <pattern id="knurled-large" patternUnits="userSpaceOnUse" width="12" height="12">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 6,6 L 12,12"/>
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 6,6 L 0,12"/>
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 6,6 L 12,0" />
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 6,6 L 0,0" />
+</pattern><pattern id="knurled-small" patternUnits="userSpaceOnUse" width="4" height="4">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 2,2 L 4,4"/>
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 2,2 L 0,4"/>
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 2,2 L 4,0" />
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 2,2 L 0,0" />
+</pattern><pattern id="knurled" patternUnits="userSpaceOnUse" width="8" height="8">
 <path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,8"/>
 <path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,8"/>
 <path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,0" />
 <path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,0" />
-</pattern>
-<pattern id="ridged" patternUnits="userSpaceOnUse" width="3" height="3">
-<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 0,0 L 0,3"/>
-</pattern>
-<pattern id="lined" patternUnits="userSpaceOnUse" width="3" height="3">
+</pattern><pattern id="lined" patternUnits="userSpaceOnUse" width="3" height="3">
 <path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 0,0 L 3,0"/>
-</pattern>
-<pattern id="spring" patternUnits="userSpaceOnUse" width="8" height="100">
-<path stroke="dimgray" stroke-linecap="round" stroke-width="2" d="M 0,0 L 8,100"/>
-<path stroke="white" stroke-linecap="round" stroke-width="1" d="M 0,0 L 8,100"/>
-</pattern>
-<rect x="0" y="0" width="1000" height="900" fill="white" stroke="black" stroke-width="4" />
+</pattern><pattern id="ridged" patternUnits="userSpaceOnUse" width="3" height="3">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 0,0 L 0,3"/>
+</pattern><pattern id="spring" patternUnits="userSpaceOnUse" width="8" height="100">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="2" d="M 1,1 L 9,99"/>
+<path stroke="white" stroke-linecap="round" stroke-width="1" d="M 1,1 L 9,99"/>
+</pattern><pattern id="knurled" patternUnits="userSpaceOnUse" width="8" height="8">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,8"/>
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,8"/>
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,0" />
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,0" />
+</pattern><rect x="0" y="0" width="1000" height="900" fill="white" stroke="black" stroke-width="4" />
 <rect x="2" y="2" width="996" height="896" fill="white" stroke="dimgray" stroke-width="1" />
 <g transform="rotate(0 0 0)">
 <text x="30" y="50" font-size="2.0em" font-weight="bold"> Staedtler // Mars Technico (Model #: 780c)</text>
@@ -36,7 +47,7 @@
 <path d="M124.375 293.125 L126.875 293.125 L126.875 306.875 L124.375 306.875 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
 <path d="M126.875 286.25 L173.125 282.5 L173.125 317.5 L126.875 313.75 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
 <path d="M173.125 281.25 L283.125 278.75 L283.125 321.25 L173.125 318.75 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
-<path d="M173.125 281.25 L283.125 278.75 L283.125 321.25 L173.125 318.75 Z" stroke-width="1.0" stroke="black" fill="url(#diagonalHatch)"/>
+<path d="M173.125 281.25 L283.125 278.75 L283.125 321.25 L173.125 318.75 Z" stroke-width="1.0" stroke="black" fill="url(#knurled)"/>
 <path d="M283.125 280.625 L456.875 280.625 L456.875 319.375 L283.125 319.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
 <line x1="283.125" y1="300" x2="456.875" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="283.125" y1="300" x2="456.875" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
@@ -90,13 +101,13 @@
 <line x1="875.625" y1="400.875" x2="875.625" y2="422.875" stroke="black" stroke-width="1" />
 <text x="500" y="392.875" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="black"><tspan x="500" dy="0">Total Length</tspan></text>
 <line x1="580.625" y1="340.875" x2="580.625" y2="362.875" stroke="black" stroke-width="1" />
-<line x1="580.625" y1="351.875" x2="580.625" y2="351.875" stroke="black" stroke-width="1" />
+<line x1="580.625" y1="351.875" x2="750.625" y2="351.875" stroke="black" stroke-width="1" />
+<line x1="750.625" y1="340.875" x2="750.625" y2="362.875" stroke="black" stroke-width="1" />
+<text x="665.625" y="332.875" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="black"><tspan x="665.625" dy="0">34.00 mm</tspan></text>
 <line x1="580.625" y1="340.875" x2="580.625" y2="362.875" stroke="black" stroke-width="1" />
-<text x="580.625" y="332.875" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="black"><tspan x="580.625" dy="0">0.00 mm</tspan></text>
-<line x1="580.625" y1="340.875" x2="580.625" y2="362.875" stroke="black" stroke-width="1" />
-<line x1="580.625" y1="351.875" x2="580.625" y2="351.875" stroke="black" stroke-width="1" />
-<line x1="580.625" y1="340.875" x2="580.625" y2="362.875" stroke="black" stroke-width="1" />
-<text x="580.625" y="370.875" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="black"><tspan x="580.625" dy="0">clip</tspan></text>
+<line x1="580.625" y1="351.875" x2="750.625" y2="351.875" stroke="black" stroke-width="1" />
+<line x1="750.625" y1="340.875" x2="750.625" y2="362.875" stroke="black" stroke-width="1" />
+<text x="665.625" y="370.875" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="black"><tspan x="665.625" dy="0">clip</tspan></text>
 <line x1="173.125" y1="340.875" x2="173.125" y2="362.875" stroke="black" stroke-width="1" />
 <line x1="173.125" y1="351.875" x2="283.125" y2="351.875" stroke="black" stroke-width="1" />
 <line x1="283.125" y1="340.875" x2="283.125" y2="362.875" stroke="black" stroke-width="1" />
@@ -115,7 +126,7 @@
 <path d="M124.375 633.125 L126.875 633.125 L126.875 646.875 L124.375 646.875 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
 <path d="M126.875 626.25 L173.125 622.5 L173.125 657.5 L126.875 653.75 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
 <path d="M173.125 621.25 L283.125 618.75 L283.125 661.25 L173.125 658.75 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
-<path d="M173.125 621.25 L283.125 618.75 L283.125 661.25 L173.125 658.75 Z" stroke-width="1.0" stroke="black" fill="url(#diagonalHatch)"/>
+<path d="M173.125 621.25 L283.125 618.75 L283.125 661.25 L173.125 658.75 Z" stroke-width="1.0" stroke="black" fill="url(#knurled)"/>
 <path d="M283.125 620.625 L456.875 620.625 L456.875 659.375 L283.125 659.375 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1" />
 <line x1="283.125" y1="640" x2="456.875" y2="640" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="283.125" y1="640" x2="456.875" y2="640" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
@@ -139,7 +150,7 @@
 <path d="M124.375 753.125 L126.875 753.125 L126.875 766.875 L124.375 766.875 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
 <path d="M126.875 746.25 L173.125 742.5 L173.125 777.5 L126.875 773.75 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
 <path d="M173.125 741.25 L283.125 738.75 L283.125 781.25 L173.125 778.75 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
-<path d="M173.125 741.25 L283.125 738.75 L283.125 781.25 L173.125 778.75 Z" stroke-width="1.0" stroke="black" fill="url(#diagonalHatch)"/>
+<path d="M173.125 741.25 L283.125 738.75 L283.125 781.25 L173.125 778.75 Z" stroke-width="1.0" stroke="black" fill="url(#knurled)"/>
 <path d="M283.125 740.625 L456.875 740.625 L456.875 779.375 L283.125 779.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="blue" fill-opacity="1" />
 <line x1="283.125" y1="760" x2="456.875" y2="760" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="283.125" y1="760" x2="456.875" y2="760" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>

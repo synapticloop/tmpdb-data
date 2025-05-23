@@ -15,7 +15,7 @@ export class MDRenderer {
 		mdString += `## Model #: ${this.pencil.modelNumber}\n\n`;
 
 		// image for the overview
-		mdString += `[${this.pencilFileName}-grouped.png](${this.pencilFileName}-grouped.png)\n\n`
+		mdString += `<img src="./${this.pencilFileName}-grouped.png">\n\n`
 
 		mdString += `## Pencil Information\n\n`;
 
