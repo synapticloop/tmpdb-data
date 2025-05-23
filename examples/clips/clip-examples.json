@@ -1,0 +1,106 @@
+{
+	"brand": "Synapticloop",
+	"model_name": "Clip Examples",
+	"lead_size": "2.0",
+	"colour_component": "clip",
+	"colours": [
+		"white"
+	],
+	"colour_map": {
+		"white": "#ffffff"
+	},
+	"mechanism": "clutch",
+	"accurate": true,
+	"components": [
+		{
+			"type": "BIC // Criterium (/data/BIC/criterium.json)",
+			"parts": [
+				{
+					"shape": "hexagonal",
+					"dimensions": [
+						6.75,
+						9.0
+					]
+				}
+			],
+			"extras": [
+				{
+					"dimensions": [
+						37.5,
+						4.75,
+						3.5
+					],
+					"offset": [
+						-27.5,
+						4.5
+					],
+					"parts": [
+						{
+							"shape": "curve",
+							"points": [
+								0.5,
+								-1.25,
+								7.0,
+								-2.0,
+								5.0,
+								2.0
+							]
+						},
+						{
+							"shape": "curve",
+							"points": [
+								0.5,
+								-1.5,
+								37,
+								-1.5,
+								18.5,
+								-4
+							]
+						},
+						{
+							"shape": "curve",
+							"points": [
+								37,
+								-1.5,
+								37,
+								0,
+								38,
+								-0.75
+							]
+						},
+						{
+							"shape": "line",
+							"points": [
+								37,
+								0,
+								34,
+								0
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "M&amp;G // Easy Come Easy Go! (/data/m-and-g/amp-35601.json)",
+			"parts": [
+				{ "shape": "cylinder", "dimensions":  [ 4.75, 9.25 ] }
+			],
+			"extras": [
+				{
+					"offset": [ -35.75, 4.325 ],
+					"dimensions": [ 40.5, 2.0, 4.0 ],
+					"parts": [
+						{ "shape": "line", "points": [ 0.0, -2.0, 3.0, -2.0] },
+						{ "shape": "line", "points": [ 3.0, -2.0, 7.0, -0.25] },
+						{ "shape": "line", "points": [ 7.0, -0.25, 11.0, -2.0] },
+						{ "shape": "line", "points": [ 11.0, -2.0, 39.0, -2.0] },
+						{ "shape": "curve", "points": [ 39.0, -2.0, 39.0, 0.0, 43.0, -1.0] }
+					]
+				}
+			],
+			"material": "plastic",
+			"colours": [ "silver" ]
+		}
+	]
+}
