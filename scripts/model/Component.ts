@@ -123,14 +123,15 @@ export class Component extends Base {
 
 		for(const extra of this.extras) {
 			extra.postConstruct(this.mergedColours, colourMap);
-			// TODO - need to do multiple
-			if(extra.xOffset + extra.length > this.length) {
-				this.allLength = extra.length;
-				this.allOffset = extra.xOffset;
-			} else {
-				this.allLength = extra.length + extra.xOffset;
+
+			if(extra.xOffset < this.allOffset) {
 				this.allOffset = extra.xOffset;
 			}
+
+			if(extra.length > this.allLength) {
+				this.allLength = extra.length;
+			}
+			// TODO - need to do multiple
 		}
 
 		if(this.allLength === 0) {

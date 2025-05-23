@@ -1,6 +1,6 @@
 {
 	"brand": "Synapticloop",
-	"model_name": "Pattern Examples",
+	"model_name": "In-built pattern examples",
 	"lead_size": "2.0",
 	"colour_component": "pattern",
 	"colours": [
@@ -15,37 +15,55 @@
 		{
 			"type": "knurled (/patterns/knurled)",
 			"parts": [
-				{ "shape": "cylindrical", "dimensions": [ 20, 8 ], "finish": "knurled" }
+				{ "shape": "cylindrical", "dimensions": [ 40, 8 ], "finish": "knurled" }
 			]
 		},
 		{
-			"type": "knurled (/patterns/knurled-large)",
+			"type": "knurled-large (/patterns/knurled-large)",
 			"parts": [
-				{ "shape": "cylindrical", "dimensions": [ 20, 8 ], "finish": "knurled-large" }
+				{ "shape": "cylindrical", "dimensions": [ 40, 8 ], "finish": "knurled-large" }
 			]
 		},
 		{
-			"type": "knurled (/patterns/knurled-small)",
+			"type": "knurled-small (/patterns/knurled-small)",
 			"parts": [
-				{ "shape": "cylindrical", "dimensions": [ 20, 8 ], "finish": "knurled-small" }
+				{ "shape": "cylindrical", "dimensions": [ 40, 8 ], "finish": "knurled-small" }
 			]
 		},
 		{
-			"type": "knurled (/patterns/knurled-small)",
+			"type": "spring (/patterns/spring)",
 			"parts": [
-				{ "shape": "cylindrical", "dimensions": [ 20, 8 ], "finish": "spring" }
+				{ "shape": "cylindrical", "dimensions": [ 40, 8 ], "finish": "spring" }
 			]
 		},
 		{
-			"type": "knurled (/patterns/knurled-small)",
+			"type": "lined (/patterns/lined)",
 			"parts": [
-				{ "shape": "cylindrical", "dimensions": [ 20, 8 ], "finish": "lined" }
+				{ "shape": "cylindrical", "dimensions": [ 40, 8 ], "finish": "lined" }
 			]
 		},
 		{
-			"type": "knurled (/patterns/knurled-small)",
+			"type": "ridged (/patterns/ridged)",
 			"parts": [
-				{ "shape": "cylindrical", "dimensions": [ 20, 8 ], "finish": "ridged" }
+				{ "shape": "cylindrical", "dimensions": [ 40, 8 ], "finish": "ridged" }
+			]
+		},
+		{
+			"type": "indicator (in code)",
+			"parts": [
+				{ "shape": "cylindrical", "dimensions": [ 40, 8 ], "finish": "indicator" }
+			]
+		},
+		{
+			"type": "indicator-split (in code)",
+			"parts": [
+				{ "shape": "cylindrical", "dimensions": [ 40, 8 ], "finish": "indicator-split" }
+			]
+		},
+		{
+			"type": "indicator-etched (in code)",
+			"parts": [
+				{ "shape": "cylindrical", "dimensions": [ 40, 8 ], "finish": "indicator-etched" }
 			]
 		}
 	]

@@ -1,8 +1,8 @@
 {
 	"name": "knurled",
-	"description": "",
+	"description": "A pattern of angled lines around the component, with small spacing.",
 	"pattern": [
-		"<pattern id=\"knurled\" patternUnits=\"userSpaceOnUse\" width=\"4\" height=\"4\">",
+		"<pattern id=\"knurled-small\" patternUnits=\"userSpaceOnUse\" width=\"4\" height=\"4\">",
 		"<path stroke=\"dimgray\" stroke-linecap=\"round\" stroke-width=\"1\" d=\"M 2,2 L 4,4\"/>",
 		"<path stroke=\"dimgray\" stroke-linecap=\"round\" stroke-width=\"1\" d=\"M 2,2 L 0,4\"/>",
 		"<path stroke=\"gray\" stroke-linecap=\"round\" stroke-width=\"1\" d=\"M 2,2 L 4,0\" />",

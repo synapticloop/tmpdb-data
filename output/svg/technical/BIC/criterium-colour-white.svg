@@ -1,21 +1,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1500" height="600">
- <pattern id="diagonalHatch" patternUnits="userSpaceOnUse" width="8" height="8">
+ <pattern id="knurled-large" patternUnits="userSpaceOnUse" width="12" height="12">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 6,6 L 12,12"/>
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 6,6 L 0,12"/>
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 6,6 L 12,0" />
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 6,6 L 0,0" />
+</pattern><pattern id="knurled-small" patternUnits="userSpaceOnUse" width="4" height="4">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 2,2 L 4,4"/>
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 2,2 L 0,4"/>
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 2,2 L 4,0" />
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 2,2 L 0,0" />
+</pattern><pattern id="knurled" patternUnits="userSpaceOnUse" width="8" height="8">
 <path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,8"/>
 <path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,8"/>
 <path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,0" />
 <path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,0" />
-</pattern>
-<pattern id="ridged" patternUnits="userSpaceOnUse" width="3" height="3">
-<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 0,0 L 0,3"/>
-</pattern>
-<pattern id="lined" patternUnits="userSpaceOnUse" width="3" height="3">
+</pattern><pattern id="lined" patternUnits="userSpaceOnUse" width="3" height="3">
 <path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 0,0 L 3,0"/>
-</pattern>
-<pattern id="spring" patternUnits="userSpaceOnUse" width="8" height="100">
-<path stroke="dimgray" stroke-linecap="round" stroke-width="2" d="M 0,0 L 8,100"/>
-<path stroke="white" stroke-linecap="round" stroke-width="1" d="M 0,0 L 8,100"/>
-</pattern>
-<rect x="0" y="0" width="1500" height="600" fill="white" stroke="black" stroke-width="4" />
+</pattern><pattern id="ridged" patternUnits="userSpaceOnUse" width="3" height="3">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 0,0 L 0,3"/>
+</pattern><pattern id="spring" patternUnits="userSpaceOnUse" width="8" height="100">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="2" d="M 1,1 L 9,99"/>
+<path stroke="white" stroke-linecap="round" stroke-width="1" d="M 1,1 L 9,99"/>
+</pattern><rect x="0" y="0" width="1500" height="600" fill="white" stroke="black" stroke-width="4" />
 <rect x="2" y="2" width="1496" height="596" fill="white" stroke="dimgray" stroke-width="1" />
 <g transform="rotate(0 0 0)">
 <line x1="40" y1="300" x2="1460" y2="300" stroke-linecap="round" stroke="#5f5f5f" stroke-dasharray="2" stroke-width="1" />
@@ -296,22 +302,7 @@
 <path d="M1060.625 283.75 L1093.125 283.75 L1093.125 316.25 L1060.625 316.25 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
 <path d="M1093.125 285 L1098.125 285 L1098.125 315 L1093.125 315 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
 <path d="M1098.125 283.75 L1103.125 283.75 L1103.125 316.25 L1098.125 316.25 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
-<line x1="1099.125" y1="284.75" x2="1102.125" y2="284.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="1099.125" y1="286.75" x2="1102.125" y2="286.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="1099.125" y1="288.75" x2="1102.125" y2="288.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="1099.125" y1="290.75" x2="1102.125" y2="290.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="1099.125" y1="292.75" x2="1102.125" y2="292.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="1099.125" y1="294.75" x2="1102.125" y2="294.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="1099.125" y1="296.75" x2="1102.125" y2="296.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="1099.125" y1="298.75" x2="1102.125" y2="298.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="1099.125" y1="300.75" x2="1102.125" y2="300.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="1099.125" y1="302.75" x2="1102.125" y2="302.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="1099.125" y1="304.75" x2="1102.125" y2="304.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="1099.125" y1="306.75" x2="1102.125" y2="306.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="1099.125" y1="308.75" x2="1102.125" y2="308.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="1099.125" y1="310.75" x2="1102.125" y2="310.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="1099.125" y1="312.75" x2="1102.125" y2="312.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="1099.125" y1="314.75" x2="1102.125" y2="314.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
+<path d="M1098.125 283.75 L1103.125 283.75 L1103.125 316.25 L1098.125 316.25 Z" stroke-width="1.0" stroke="black" fill="url(#lined)"/>
 <path d="M1103.125 289.375 L1104.375 289.375 L1104.375 310.625 L1103.125 310.625 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
 <rect x="455.625" y="280.25" width="22" height="38.25" rx="0" ry="0" stroke-width="0.5" stroke="none" fill="#ffffff" fill-opacity="1"/>
 <path d="M 478.125 280 C 448.3125 285, 448.3125 295, 478.125 300" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="#ffffff" /><path d="M 478.125 320 C 448.3125 315, 448.3125 305, 478.125 300" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="#ffffff" />

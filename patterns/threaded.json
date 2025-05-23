@@ -1,6 +1,6 @@
 {
-	"name": "knurled",
-	"description": "A pattern of angled lines around the component.",
+	"name": "threaded",
+	"description": "Threaded around the component for bolts.",
 	"pattern": [
 		"<pattern id=\"knurled\" patternUnits=\"userSpaceOnUse\" width=\"8\" height=\"8\">",
 		"<path stroke=\"dimgray\" stroke-linecap=\"round\" stroke-width=\"1\" d=\"M 4,4 L 8,8\"/>",

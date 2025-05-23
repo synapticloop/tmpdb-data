@@ -7,7 +7,7 @@ import {PNGRenderer} from "./renderer/png/PNGRenderer.ts";
 import {PDFDatasheetRenderer} from "./renderer/pdf/PDFDatasheetRenderer.ts";
 
 import {SVGPencilRenderer} from "./renderer/svg/pencil/SVGPencilRenderer.ts";
-import {SVGRenderer} from "./renderer/SVGRenderer.ts";
+import {SVGRenderer} from "./renderer/svg/SVGRenderer.ts";
 import {SVGTechnicalComponentRenderer} from "./renderer/svg/technical/SVGTechnicalComponentRenderer.ts";
 import {SVGTechnicalExplodedRenderer} from "./renderer/svg/technical/SVGTechnicalExplodedRenderer.ts";
 import {SVGPencilAllRenderer} from "./renderer/svg/pencil/SVGPencilAllRenderer.ts";

@@ -1,24 +1,35 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="440">
- <pattern id="diagonalHatch" patternUnits="userSpaceOnUse" width="8" height="8">
+ <pattern id="knurled-large" patternUnits="userSpaceOnUse" width="12" height="12">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 6,6 L 12,12"/>
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 6,6 L 0,12"/>
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 6,6 L 12,0" />
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 6,6 L 0,0" />
+</pattern><pattern id="knurled-small" patternUnits="userSpaceOnUse" width="4" height="4">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 2,2 L 4,4"/>
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 2,2 L 0,4"/>
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 2,2 L 4,0" />
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 2,2 L 0,0" />
+</pattern><pattern id="knurled" patternUnits="userSpaceOnUse" width="8" height="8">
 <path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,8"/>
 <path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,8"/>
 <path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,0" />
 <path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,0" />
-</pattern>
-<pattern id="ridged" patternUnits="userSpaceOnUse" width="3" height="3">
-<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 0,0 L 0,3"/>
-</pattern>
-<pattern id="lined" patternUnits="userSpaceOnUse" width="3" height="3">
+</pattern><pattern id="lined" patternUnits="userSpaceOnUse" width="3" height="3">
 <path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 0,0 L 3,0"/>
-</pattern>
-<pattern id="spring" patternUnits="userSpaceOnUse" width="8" height="100">
-<path stroke="dimgray" stroke-linecap="round" stroke-width="2" d="M 0,0 L 8,100"/>
-<path stroke="white" stroke-linecap="round" stroke-width="1" d="M 0,0 L 8,100"/>
-</pattern>
-<rect x="0" y="0" width="1000" height="440" fill="white" stroke="black" stroke-width="4" />
+</pattern><pattern id="ridged" patternUnits="userSpaceOnUse" width="3" height="3">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 0,0 L 0,3"/>
+</pattern><pattern id="spring" patternUnits="userSpaceOnUse" width="8" height="100">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="2" d="M 1,1 L 9,99"/>
+<path stroke="white" stroke-linecap="round" stroke-width="1" d="M 1,1 L 9,99"/>
+</pattern><pattern id="knurled" patternUnits="userSpaceOnUse" width="8" height="8">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,8"/>
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,8"/>
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,0" />
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,0" />
+</pattern><rect x="0" y="0" width="1000" height="440" fill="white" stroke="black" stroke-width="4" />
 <rect x="2" y="2" width="996" height="436" fill="white" stroke="dimgray" stroke-width="1" />
 <g transform="rotate(0 0 0)">
-<text x="30" y="50" font-size="2.0em" font-weight="bold"> Synapticloop // Clip Examples </text>
+<text x="30" y="50" font-size="2.0em" font-weight="bold"> Synapticloop // Clip examples </text>
 <line x1="500" y1="40" x2="500" y2="400" stroke="#5f5f5f" stroke-linecap="round" stroke-dasharray="2" stroke-width="1" />
 <line x1="480" y1="40" x2="520" y2="40" stroke-linecap="round" stroke="#000000"  stroke-width="1" />
 <line x1="500" y1="20" x2="500" y2="60" stroke="#000000" stroke-linecap="round"  stroke-width="1" />
@@ -26,30 +37,30 @@
 <line x1="480" y1="400" x2="520" y2="400" stroke-linecap="round" stroke="#000000"  stroke-width="1" />
 <line x1="500" y1="380" x2="500" y2="420" stroke="#000000" stroke-linecap="round"  stroke-width="1" />
 <circle r="10" cx="500" cy="400" fill="white" fill-opacity="0" stroke="#000000" stroke-width="1"  />
-<text x="500" y="90" font-size="1.0em" font-weight="bold" text-anchor="middle" dominant-baseline="central">BIC // Criterium (BIC/criterium.json)</text>
-<path d="M390 122.25 Q412.5 138.5 422.5 118.5" stroke-width="4" stroke="black" fill="none" stroke-linecap="round" />
-<path d="M390 121 Q480 108.5 572.5 121" stroke-width="4" stroke="black" fill="none" stroke-linecap="round" />
-<path d="M572.5 121 Q577.5 124.75 572.5 128.5" stroke-width="4" stroke="black" fill="none" stroke-linecap="round" />
-<line x1="572.5" y1="128.5" x2="557.5" y2="128.5" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
-<path d="M525 127.5 L558.75 127.5 L558.75 172.5 L525 172.5 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
-<line x1="525" y1="150" x2="558.75" y2="150" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
-<line x1="525" y1="150" x2="558.75" y2="150" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
-<path d="M390 122.25 Q412.5 138.5 422.5 118.5" stroke-width="3" stroke="white" fill="none" stroke-linecap="round" />
-<path d="M390 121 Q480 108.5 572.5 121" stroke-width="3" stroke="white" fill="none" stroke-linecap="round" />
-<path d="M572.5 121 Q577.5 124.75 572.5 128.5" stroke-width="3" stroke="white" fill="none" stroke-linecap="round" />
-<line x1="572.5" y1="128.5" x2="557.5" y2="128.5" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
-<text x="500" y="210" font-size="1.0em" font-weight="bold" text-anchor="middle" dominant-baseline="central">M&amp;G // Easy Come Easy Go! (m-and-g/amp-35601.json)</text>
-<line x1="243.75" y1="239.375" x2="258.75" y2="239.375" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
-<line x1="258.75" y1="239.375" x2="278.75" y2="248.125" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
-<line x1="278.75" y1="248.125" x2="298.75" y2="239.375" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
-<line x1="298.75" y1="239.375" x2="438.75" y2="239.375" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
-<path d="M438.75 239.375 Q458.75 244.375 438.75 249.375" stroke-width="4" stroke="black" fill="none" stroke-linecap="round" />
-<path d="M422.5 246.875 L446.25 246.875 L446.25 293.125 L422.5 293.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
-<line x1="243.75" y1="239.375" x2="258.75" y2="239.375" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
-<line x1="258.75" y1="239.375" x2="278.75" y2="248.125" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
-<line x1="278.75" y1="248.125" x2="298.75" y2="239.375" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
-<line x1="298.75" y1="239.375" x2="438.75" y2="239.375" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
-<path d="M438.75 239.375 Q458.75 244.375 438.75 249.375" stroke-width="3" stroke="white" fill="none" stroke-linecap="round" />
+<text x="500" y="120" font-size="1.0em" font-weight="bold" text-anchor="middle" dominant-baseline="central">BIC // Criterium (/data/BIC/criterium.json)</text>
+<path d="M348.125 152.25 Q370.625 168.5 380.625 148.5" stroke-width="4" stroke="black" fill="none" stroke-linecap="round" />
+<path d="M348.125 151 Q438.125 138.5 530.625 151" stroke-width="4" stroke="black" fill="none" stroke-linecap="round" />
+<path d="M530.625 151 Q535.625 154.75 530.625 158.5" stroke-width="4" stroke="black" fill="none" stroke-linecap="round" />
+<line x1="530.625" y1="158.5" x2="515.625" y2="158.5" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
+<path d="M483.125 157.5 L516.875 157.5 L516.875 202.5 L483.125 202.5 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
+<line x1="483.125" y1="180" x2="516.875" y2="180" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
+<line x1="483.125" y1="180" x2="516.875" y2="180" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
+<path d="M348.125 152.25 Q370.625 168.5 380.625 148.5" stroke-width="3" stroke="white" fill="none" stroke-linecap="round" />
+<path d="M348.125 151 Q438.125 138.5 530.625 151" stroke-width="3" stroke="white" fill="none" stroke-linecap="round" />
+<path d="M530.625 151 Q535.625 154.75 530.625 158.5" stroke-width="3" stroke="white" fill="none" stroke-linecap="round" />
+<line x1="530.625" y1="158.5" x2="515.625" y2="158.5" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
+<text x="500" y="240" font-size="1.0em" font-weight="bold" text-anchor="middle" dominant-baseline="central">M&amp;G // Easy Come Easy Go! (/data/m-and-g/amp-35601.json)</text>
+<line x1="309.375" y1="269.375" x2="324.375" y2="269.375" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
+<line x1="324.375" y1="269.375" x2="344.375" y2="278.125" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
+<line x1="344.375" y1="278.125" x2="364.375" y2="269.375" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
+<line x1="364.375" y1="269.375" x2="504.375" y2="269.375" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
+<path d="M504.375 269.375 Q524.375 274.375 504.375 279.375" stroke-width="4" stroke="black" fill="none" stroke-linecap="round" />
+<path d="M488.125 276.875 L511.875 276.875 L511.875 323.125 L488.125 323.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
+<line x1="309.375" y1="269.375" x2="324.375" y2="269.375" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
+<line x1="324.375" y1="269.375" x2="344.375" y2="278.125" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
+<line x1="344.375" y1="278.125" x2="364.375" y2="269.375" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
+<line x1="364.375" y1="269.375" x2="504.375" y2="269.375" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
+<path d="M504.375 269.375 Q524.375 274.375 504.375 279.375" stroke-width="3" stroke="white" fill="none" stroke-linecap="round" />
 </g><text x="50%" y="400" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb)</text>
 <text x="50%" y="420" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
 <text x="990" y="430" font-size="0.5em" font-weight="bold" text-anchor="end" dominant-baseline="middle">SVGExampleRenderer</text>

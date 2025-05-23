@@ -3,7 +3,7 @@ import * as path from "node:path";
 import { Pencil } from "./model/Pencil.ts";
 import fs from "fs";
 import {PNGRenderer} from "./renderer/png/PNGRenderer.ts";
-import {SVGRenderer} from "./renderer/SVGRenderer.ts";
+import {SVGRenderer} from "./renderer/svg/SVGRenderer.ts";
 import {ObjectMapper} from "json-object-mapper";
 import deserialize = ObjectMapper.deserialize;
 import {SVGExampleRenderer} from "./renderer/svg/example/SVGExampleRenderer.ts";

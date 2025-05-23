@@ -1,5 +1,5 @@
 import {Pencil} from "../../../model/Pencil.ts";
-import {SVGRenderer} from "../../SVGRenderer.ts";
+import {SVGRenderer} from "../SVGRenderer.ts";
 
 /**
  * Render a single pencil rotated at an angle of -45 degrees

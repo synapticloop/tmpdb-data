@@ -1,21 +1,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="200">
- <pattern id="diagonalHatch" patternUnits="userSpaceOnUse" width="8" height="8">
+ <pattern id="knurled-large" patternUnits="userSpaceOnUse" width="12" height="12">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 6,6 L 12,12"/>
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 6,6 L 0,12"/>
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 6,6 L 12,0" />
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 6,6 L 0,0" />
+</pattern><pattern id="knurled-small" patternUnits="userSpaceOnUse" width="4" height="4">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 2,2 L 4,4"/>
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 2,2 L 0,4"/>
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 2,2 L 4,0" />
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 2,2 L 0,0" />
+</pattern><pattern id="knurled" patternUnits="userSpaceOnUse" width="8" height="8">
 <path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,8"/>
 <path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,8"/>
 <path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,0" />
 <path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,0" />
-</pattern>
-<pattern id="ridged" patternUnits="userSpaceOnUse" width="3" height="3">
-<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 0,0 L 0,3"/>
-</pattern>
-<pattern id="lined" patternUnits="userSpaceOnUse" width="3" height="3">
+</pattern><pattern id="lined" patternUnits="userSpaceOnUse" width="3" height="3">
 <path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 0,0 L 3,0"/>
-</pattern>
-<pattern id="spring" patternUnits="userSpaceOnUse" width="8" height="100">
-<path stroke="dimgray" stroke-linecap="round" stroke-width="2" d="M 0,0 L 8,100"/>
-<path stroke="white" stroke-linecap="round" stroke-width="1" d="M 0,0 L 8,100"/>
-</pattern>
-<g transform="rotate(0 0 0)">
+</pattern><pattern id="ridged" patternUnits="userSpaceOnUse" width="3" height="3">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 0,0 L 0,3"/>
+</pattern><pattern id="spring" patternUnits="userSpaceOnUse" width="8" height="100">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="2" d="M 1,1 L 9,99"/>
+<path stroke="white" stroke-linecap="round" stroke-width="1" d="M 1,1 L 9,99"/>
+</pattern><g transform="rotate(0 0 0)">
 <path d="M145.625 92.5 L156.875 91.25 L156.875 108.75 L145.625 107.5 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
 <path d="M156.875 86.875 L205.625 80.625 L205.625 119.375 L156.875 113.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
 <path d="M205.625 80.625 L238.125 80 L238.125 120 L205.625 119.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
@@ -119,22 +125,7 @@
 <path d="M810.625 83.75 L843.125 83.75 L843.125 116.25 L810.625 116.25 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
 <path d="M843.125 85 L848.125 85 L848.125 115 L843.125 115 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
 <path d="M848.125 83.75 L853.125 83.75 L853.125 116.25 L848.125 116.25 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
-<line x1="849.125" y1="84.75" x2="852.125" y2="84.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="849.125" y1="86.75" x2="852.125" y2="86.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="849.125" y1="88.75" x2="852.125" y2="88.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="849.125" y1="90.75" x2="852.125" y2="90.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="849.125" y1="92.75" x2="852.125" y2="92.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="849.125" y1="94.75" x2="852.125" y2="94.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="849.125" y1="96.75" x2="852.125" y2="96.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="849.125" y1="98.75" x2="852.125" y2="98.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="849.125" y1="100.75" x2="852.125" y2="100.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="849.125" y1="102.75" x2="852.125" y2="102.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="849.125" y1="104.75" x2="852.125" y2="104.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="849.125" y1="106.75" x2="852.125" y2="106.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="849.125" y1="108.75" x2="852.125" y2="108.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="849.125" y1="110.75" x2="852.125" y2="110.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="849.125" y1="112.75" x2="852.125" y2="112.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
-<line x1="849.125" y1="114.75" x2="852.125" y2="114.75" stroke="dimgray" stroke-linecap="round" stroke-width="1" />
+<path d="M848.125 83.75 L853.125 83.75 L853.125 116.25 L848.125 116.25 Z" stroke-width="1.0" stroke="black" fill="url(#lined)"/>
 <path d="M853.125 89.375 L854.375 89.375 L854.375 110.625 L853.125 110.625 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
 <rect x="205.625" y="80.25" width="22" height="38.25" rx="0" ry="0" stroke-width="0.5" stroke="none" fill="silver" fill-opacity="1"/>
 <path d="M 228.125 80 C 198.3125 85, 198.3125 95, 228.125 100" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="silver" /><path d="M 228.125 120 C 198.3125 115, 198.3125 105, 228.125 100" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="silver" /></g><text x="50%" y="160" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb)</text>

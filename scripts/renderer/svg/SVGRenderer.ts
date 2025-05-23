@@ -1,4 +1,4 @@
-import {Part} from "../model/Part.ts";
+import {Part} from "../../model/Part.ts";
 import {
 	circle,
 	dimensionsHorizontal, dimensionsVertical,
@@ -14,22 +14,24 @@ import {
 	rectangle, renderExtra,
 	target,
 	TextOrientation
-} from "../utils/svg-helper.ts";
-import {formatToTwoPlaces} from "../utils/formatter.ts";
+} from "../../utils/svg-helper.ts";
+import {formatToTwoPlaces} from "../../utils/formatter.ts";
 
-import {Component} from "../model/Component.ts";
-import {Pencil} from "../model/Pencil.ts";
-import {OpaqueColour} from "../model/OpaqueColour.ts";
-import {Extra} from "../model/Extra.ts";
-import {Pattern} from "../model/Pattern.ts";
-import {listFiles} from "../utils/filesystem.ts";
+import {Component} from "../../model/Component.ts";
+import {Pencil} from "../../model/Pencil.ts";
+import {OpaqueColour} from "../../model/OpaqueColour.ts";
+import {Extra} from "../../model/Extra.ts";
+import {Pattern} from "../../model/Pattern.ts";
+import {listFiles} from "../../utils/filesystem.ts";
 import fs from "fs";
 import {ObjectMapper} from "json-object-mapper";
 
 
 export abstract class SVGRenderer {
-	static patternMap: Map<string, Pattern> = new Map();
+	static inBuiltPatternMap: Map<string, Pattern> = new Map();
 	static defaultPatternLoaded: boolean = false;
+
+	private patternMap: Map<string, Pencil> = new Map();
 
 	protected pencil:Pencil;
 	protected _width: number;
@@ -40,9 +42,10 @@ export abstract class SVGRenderer {
 	static loadDefaultPatterns(): void {
 		// load all the patterns
 		for (const listFile of listFiles("./patterns")) {
-			const patternName: string = listFile.substring(0, -4);
-			const pattern: Pattern = ObjectMapper.deserialize(Pattern, "./patterns/" + listFile);
-			this.patternMap.set(patternName, pattern);
+			const patternName: string = listFile.substring(0, listFile.lastIndexOf("."));
+			const pattern: Pattern = ObjectMapper.deserialize(Pattern, JSON.parse(fs.readFileSync("./patterns/" + listFile, "utf8")));
+			console.log(`Statically loaded pattern ${listFile} (${pattern.name} - ${pattern.description})`);
+			this.inBuiltPatternMap.set(patternName, pattern);
 		}
 		this.defaultPatternLoaded = true;
 	}
@@ -85,24 +88,13 @@ export abstract class SVGRenderer {
 	protected getSvgStart(transparent:boolean=false, rotate:number=0): string {
 		let svgString:string = `<svg xmlns="http://www.w3.org/2000/svg" ` +
 			`width="${this._width}" ` +
-			`height="${this._height}">\n ` +
-			`<pattern id="diagonalHatch" patternUnits="userSpaceOnUse" width="8" height="8">\n` +
-			`<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,8"/>\n` +
-			`<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,8"/>\n` +
-			`<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,0" />\n` +
-			`<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,0" />\n` +
-			`</pattern>\n` +
-			`<pattern id="ridged" patternUnits="userSpaceOnUse" width="3" height="3">\n` +
-			`<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 0,0 L 0,3"/>\n` +
-			`</pattern>\n` +
-			`<pattern id="lined" patternUnits="userSpaceOnUse" width="3" height="3">\n` +
-			`<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 0,0 L 3,0"/>\n` +
-			`</pattern>\n` +
-			`<pattern id="spring" patternUnits="userSpaceOnUse" width="8" height="100">\n` +
-			`<path stroke="dimgray" stroke-linecap="round" stroke-width="2" d="M 0,0 L 8,100"/>\n` +
-			`<path stroke="white" stroke-linecap="round" stroke-width="1" d="M 0,0 L 8,100"/>\n` +
-			`</pattern>\n` +
-			this.addOutlineBox(this._width, this._height, transparent) +
+			`height="${this._height}">\n `;
+
+		for(const pattern of SVGRenderer.inBuiltPatternMap.values()) {
+			svgString += pattern.pattern.join("\n");
+		}
+
+		svgString += this.addOutlineBox(this._width, this._height, transparent) +
 			`<g transform="rotate(${rotate} ${(rotate !== 0 ? this._width/2 : 0)} ${(rotate !== 0 ? this._height/2 : 0)})">\n`;
 
 		return(svgString);
@@ -802,6 +794,18 @@ export abstract class SVGRenderer {
 			let yEndTop: number = midY - (part.endHeight / 2 * 5);
 			let yEndBottom: number = midY + (part.endHeight / 2 * 5);
 
+			// TODO - do specific lookup for the pattern
+			if(this.patternMap.has(finish)) {
+				svgString += `<path d="M${xStart} ${yStartTop} ` +
+					`L${xEnd} ${yEndTop} ` +
+					`L${xEnd} ${yEndBottom} ` +
+					`L${xStart} ${yStartBottom} Z" stroke-width="1.0" stroke="black" fill="url(#${finish})"/>\n`;
+			} else if(SVGRenderer.inBuiltPatternMap.has(finish)) {
+				svgString += `<path d="M${xStart} ${yStartTop} ` +
+					`L${xEnd} ${yEndTop} ` +
+					`L${xEnd} ${yEndBottom} ` +
+					`L${xStart} ${yStartBottom} Z" stroke-width="1.0" stroke="black" fill="url(#${finish})"/>\n`;
+			}
 
 			switch (finish) {
 				case "ferrule":
@@ -820,18 +824,6 @@ export abstract class SVGRenderer {
 
 					svgString += drawOutlineCircle(4, startX + part.internalOffset * 5 + 15, midY - part.startHeight / 4 * 5, new OpaqueColour(null, "dimgray"));
 
-					break;
-				case "knurled":
-					svgString += `<path d="M${xStart} ${yStartTop} ` +
-						`L${xEnd} ${yEndTop} ` +
-						`L${xEnd} ${yEndBottom} ` +
-						`L${xStart} ${yStartBottom} Z" stroke-width="1.0" stroke="black" fill="url(#diagonalHatch)"/>\n`;
-					break;
-				case "ridged":
-					svgString += `<path d="M${xStart} ${yStartTop} ` +
-						`L${xEnd} ${yEndTop} ` +
-						`L${xEnd} ${yEndBottom} ` +
-						`L${xStart} ${yStartBottom} Z" stroke-width="1.0" stroke="black" fill="url(#ridged)"/>\n`;
 					break;
 				case "spring":
 
@@ -922,12 +914,6 @@ export abstract class SVGRenderer {
 						`HB` +
 						`</tspan>` +
 						`</text>`;
-					break;
-				case "lined":
-					for (let i:number = 0; i < part.startHeight * 5/2 - 1; i++) {
-						svgString += `<line x1="${startX + part.internalOffset * 5 + 1}" y1="${midY - (part.startHeight / 2 * 5) + i * 2 + 1}" ` +
-							`x2="${startX + (part.internalOffset + part.length) * 5  - 1}" y2="${midY - (part.startHeight / 2 * 5) + i * 2 + 1}" stroke="dimgray" stroke-linecap="round" stroke-width="1" />\n`;
-					}
 					break;
 			}
 		}

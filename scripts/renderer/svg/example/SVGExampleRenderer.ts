@@ -1,5 +1,5 @@
 import {Pencil} from "../../../model/Pencil.ts";
-import {SVGRenderer} from "../../SVGRenderer.ts";
+import {SVGRenderer} from "../SVGRenderer.ts";
 import {
 	dimensionsHorizontal,
 	drawText,
@@ -38,11 +38,14 @@ export class SVGExampleRenderer extends SVGRenderer {
 		let svgString:string = super.getSvgStart();
 		svgString += super.renderOverviewText(false);
 		svgString += super.renderCentreLineVertical(this._width/2);
+		// svgString += super.renderCentreLineVertical(400);
 
-		let midY: number = 150;
+		let midY: number = 180;
 		for(const component of this.pencil.components){
 			svgString += drawTextBoldCentred(component.type, this._width/2, midY - 60, "1.0em");
-			svgString += super.renderComponent(this._width/2 + (component.allLength + component.allOffset)/2 * 5, midY, component, colourIndex);
+			// TODO - fix this and the component
+			// svgString += super.renderComponent(this._width/2 + ((component.allLength + component.allOffset)/2 * 5), midY, component, colourIndex);
+			svgString += super.renderComponent(this._width/2 - component.length/2 * 5, midY, component, colourIndex);
 			midY += 120;
 		}
 

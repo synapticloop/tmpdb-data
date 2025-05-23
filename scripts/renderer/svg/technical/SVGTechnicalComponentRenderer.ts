@@ -1,5 +1,5 @@
 import {Pencil} from "../../../model/Pencil.ts";
-import {SVGRenderer} from "../../SVGRenderer.ts";
+import {SVGRenderer} from "../SVGRenderer.ts";
 import {
 	lineVerticalGuide,
 } from "../../../utils/svg-helper.ts";
