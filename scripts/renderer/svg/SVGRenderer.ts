@@ -1,17 +1,23 @@
 import {Part} from "../../model/Part.ts";
 import {
 	circle,
-	dimensionsHorizontal, dimensionsVertical,
+	dimensionsHorizontal,
+	dimensionsVertical,
 	drawExtraBackground,
 	drawExtraForeground,
-	drawOutlineCircle, drawOutlineHexagon, drawOutlineOctagon,
+	drawOutlineCircle,
+	drawOutlineHexagon,
+	drawOutlineOctagon,
 	drawShapeDetails,
 	drawText,
-	drawTextBold, drawTextBoldCentred,
-	lineHorizontal, lineJoined,
+	drawTextBold,
+	drawTextBoldCentred,
+	lineHorizontal,
+	lineJoined,
 	lineVertical,
 	lineVerticalGuide,
-	rectangle, renderExtra,
+	rectangle,
+	renderExtra,
 	target,
 	TextOrientation
 } from "../../utils/svg-helper.ts";
@@ -33,7 +39,7 @@ export abstract class SVGRenderer {
 
 	private patternMap: Map<string, Pencil> = new Map();
 
-	protected pencil:Pencil;
+	protected pencil: Pencil;
 	protected _width: number;
 	protected _height: number;
 
@@ -228,8 +234,9 @@ export abstract class SVGRenderer {
 
 		// TODO - need to add in the colourIndex and remove the colour string
 
+		let opaqueColour: OpaqueColour = part.getOpacityColour(colourIndex);
 		let strokeColor:string = "black";
-		if(colour === "black") {
+		if(opaqueColour.colour === "black") {
 			strokeColor = "dimgray";
 		}
 
@@ -265,12 +272,15 @@ export abstract class SVGRenderer {
 						`stroke-width="0.5" ` +
 						`stroke="${strokeColor}" ` +
 						`stroke-linecap="round" ` +
-						`fill="${colour}" />`
+						`fill-opacity="${opaqueColour.opacity}" ` +
+						`fill="${opaqueColour.colour}" />`
 					svgString += `<path d="M ${startX + xOffsetTaperStart * 5} ${midY + part.endHeight / 2 * 5} ` +
 						`C ${startX + xOffsetTaperStart * (xOffsetTaperStartScale * -5)} ${midY + part.endHeight / 2 * 5 * 3 / 4}, ` +
 						`${startX + xOffsetTaperStart * (xOffsetTaperStartScale * -5)} ${midY + part.endHeight / 2 * 5 / 4}, ` +
 						`${startX + xOffsetTaperStart * 5} ${midY}" ` +
-						`stroke-width="0.5" stroke="${strokeColor}" stroke-linecap="round" fill="${colour}" />`
+						`stroke-width="0.5" stroke="${strokeColor}" stroke-linecap="round" ` +
+						`fill-opacity="${opaqueColour.opacity}" ` +
+						`fill="${opaqueColour.colour}" />`
 
 					break;
 				case "cylinder":
@@ -282,7 +292,8 @@ export abstract class SVGRenderer {
 						`stroke-width="0.5" ` +
 						`stroke="${strokeColor}" ` +
 						`stroke-linecap="round" ` +
-						`fill="${colour}" />`
+							`fill-opacity="${opaqueColour.opacity}" ` +
+							`fill="${opaqueColour.colour}" />`;
 					break;
 			}
 		}
@@ -303,35 +314,45 @@ export abstract class SVGRenderer {
 			// now we get to draw the taper
 			switch (part.shape) {
 				case "hexagonal":
-					svgString += rectangle(startX + part.length * 5 - xOffsetTaperEnd * 5, midY - part.endHeight / 2 * 5 + 0.25, xOffsetTaperEnd * -5 - 0.5, part.startHeight * 5 - 0.5, "none", backgroundColour);
-					svgString += `<path d="M ${startX - xOffsetTaperEnd * 5} ${midY - part.endHeight / 2 * 5} ` +
+					svgString += rectangle(
+							startX - xOffsetTaperEnd * 5,
+							midY - part.endHeight / 2 * 5 + 0.25,
+							(part.length + xOffsetTaperEnd) * 5 - 0.5,
+							part.startHeight * 5 - 0.5,
+							"none",
+							backgroundColour);
+
+					svgString += `<path d="M ${startX + (part.length + xOffsetTaperEnd) * 5} ${midY - part.endHeight / 2 * 5} ` +
 						`C ${startX + ((part.length - xOffsetTaperEnd) * 5 * xOffsetTaperEndScale)} ${midY - part.endHeight / 2 * 5 * 3 / 4}, ` +
 						`${startX + ((part.length - xOffsetTaperEnd) * 5 * xOffsetTaperEndScale)} ${midY - part.endHeight / 2 * 5 / 4}, ` +
-						`${startX - xOffsetTaperEnd * 5} ${midY}" ` +
+						`${startX + (part.length + xOffsetTaperEnd) * 5} ${midY}" ` +
 						`stroke-width="0.5" ` +
 						`stroke="${strokeColor}" ` +
 						`stroke-linecap="round" ` +
-						`fill="${colour}" />\n`;
+							`fill-opacity="${backgroundColour.opacity}" ` +
+							`fill="${backgroundColour.colour}" />\n`;
 
-					svgString += `<path d="M ${startX - xOffsetTaperEnd * 5} ${midY + part.endHeight / 2 * 5} ` +
+					svgString += `<path d="M ${startX + (part.length + xOffsetTaperEnd) * 5} ${midY + part.endHeight / 2 * 5} ` +
 						`C ${startX + ((part.length - xOffsetTaperEnd) * 5 * xOffsetTaperEndScale)} ${midY + part.endHeight / 2 * 5 * 3 / 4}, ` +
 						`${startX + ((part.length - xOffsetTaperEnd) * 5 * xOffsetTaperEndScale)} ${midY + part.endHeight / 2 * 5 / 4}, ` +
-						`${startX - xOffsetTaperEnd * 5} ${midY}" ` +
+						`${startX + (part.length + xOffsetTaperEnd) * 5} ${midY}" ` +
 						`stroke-width="0.5" ` +
 						`stroke="${strokeColor}" ` +
 						`stroke-linecap="round" ` +
-						`fill="${colour}" />\n`;
+							`fill-opacity="${backgroundColour.opacity}" ` +
+							`fill="${backgroundColour.colour}" />\n`;
 				break;
 				case "cylinder":
-					svgString += rectangle(startX + part.length * 5 - xOffsetTaperEnd * 5, midY - part.endHeight / 2 * 5 + 0.25, xOffsetTaperEnd * -5 - 0.5, part.startHeight * 5 - 0.5, "none", backgroundColour);
-					svgString += `<path d="M ${startX + part.length * 5 - xOffsetTaperEnd * 5} ${midY - part.endHeight / 2 * 5} ` +
+					svgString += rectangle(startX + part.length * 5 + xOffsetTaperEnd * 5, midY - part.endHeight / 2 * 5 + 0.25, xOffsetTaperEnd * -5 - 0.5, part.startHeight * 5 - 0.5, "none", backgroundColour);
+					svgString += `<path d="M ${startX + part.length * 5 + xOffsetTaperEnd * 5} ${midY - part.endHeight / 2 * 5} ` +
 						`C ${startX + ((part.length) * 5 - (xOffsetTaperEndScale * xOffsetTaperEnd) * 5)} ${midY - part.endHeight/2 * 5}, ` +
 						`${startX + ((part.length) * 5 - (xOffsetTaperEndScale * xOffsetTaperEnd) * 5)} ${midY + part.endHeight/2 * 5}, ` +
-						`${startX + part.length * 5 - xOffsetTaperEnd * 5} ${midY + part.endHeight / 2 * 5}, " ` +
+						`${startX + part.length * 5 + xOffsetTaperEnd * 5} ${midY + part.endHeight / 2 * 5}, " ` +
 						`stroke-width="0.5" ` +
 						`stroke="${strokeColor}" ` +
 						`stroke-linecap="round" ` +
-						`fill="${colour}" />\n`;
+							`fill-opacity="${backgroundColour.opacity}" ` +
+							`fill="${backgroundColour.colour}" />\n`;
 					break;
 			}
 		}
@@ -504,7 +525,7 @@ export abstract class SVGRenderer {
 			for(const extra of component.extras) {
 				// draw the straight-through line for guidance
 
-				svgString += dimensionsHorizontal(x + extra.offset[0] * 5,
+				svgString += dimensionsHorizontal(x + extra.xOffset * 5,
 					y - 80,
 					extra.length * 5,
 					`${formatToTwoPlaces(extra.length)} mm\n${component.type} (extra)`,
@@ -616,7 +637,7 @@ export abstract class SVGRenderer {
 			// extra parts are always rendered first
 			for(const extra of component.extras) {
 				svgString += dimensionsHorizontal(
-					xOffset + extra.offset[0] * 5,
+					xOffset + extra.xOffset * 5,
 					this._height/2 + 80,
 					extra.length * 5,
 					`${component.materials.join("\n")}`,
@@ -638,14 +659,8 @@ export abstract class SVGRenderer {
 		return(svgString);
 	}
 
-	protected renderSideComponents(colourIndex:number, midYOverride: number=null): string {
+	protected renderSideComponents(x: number, y: number, colourIndex:number): string {
 		let svgString: string = "";
-		let startX: number = this._width/2 - (this.pencil.totalLength*5/2);
-		let midY: number = this._height/2;
-
-		if(null != midYOverride) {
-			midY = midYOverride;
-		}
 
 		let colourOpacity: OpaqueColour = new OpaqueColour(this.pencil.colourMap, "white");
 
@@ -653,21 +668,57 @@ export abstract class SVGRenderer {
 			colourOpacity = component.getOpacityColour(colourIndex);
 
 			for(let part of component.parts) {
-				svgString += this.renderPart(startX, midY, component, part, colourIndex, colourOpacity);
-				startX += part.length * 5;
+				svgString += this.renderPart(x, y, component, part, colourIndex, colourOpacity);
+				x += part.length * 5;
 			}
 		}
 
 
 		// reset to draw the taper lines last
-		startX = this._width/2 - (this.pencil.totalLength*5/2);
+		x = this._width/2 - (this.pencil.totalLength*5/2);
 
 		for (let component of this.pencil.components) {
 			colourOpacity = component.getOpacityColour(colourIndex);
 
 			for(let part of component.parts) {
-				svgString += this.renderTaper(startX, midY, part, colourIndex, colourOpacity.colour);
-				startX += part.length * 5;
+				svgString += this.renderTaper(x, y, part, colourIndex, colourOpacity.colour);
+				x += part.length * 5;
+			}
+		}
+
+		return(svgString);
+	}
+
+	protected renderHiddenSideComponents(x: number, y: number, colourIndex:number): string {
+		let svgString: string = "";
+
+		let colourOpacity: OpaqueColour = new OpaqueColour(this.pencil.colourMap, "white");
+
+		for (let component of this.pencil.components) {
+			if(component.isHidden) {
+				colourOpacity = component.getOpacityColour(colourIndex);
+
+				for(const part of component.internalStart) {
+					svgString += this.renderPart(x, y, component, part, colourIndex, colourOpacity);
+					x += part.length * 5;
+				}
+				for(const part of component.internalEnd) {
+					svgString += this.renderPart(x, y, component, part, colourIndex, colourOpacity);
+					x += part.length * 5;
+				}
+			}
+		}
+
+
+		// reset to draw the taper lines last
+		x = this._width/2 - (this.pencil.totalLength*5/2);
+
+		for (let component of this.pencil.components) {
+			colourOpacity = component.getOpacityColour(colourIndex);
+
+			for(let part of component.parts) {
+				svgString += this.renderTaper(x, y, part, colourIndex, colourOpacity.colour);
+				x += part.length * 5;
 			}
 		}
 
@@ -710,7 +761,7 @@ export abstract class SVGRenderer {
 				backgroundColour = "dimgray";
 			}
 
-			svgString += drawExtraBackground(startX + extra.offset[0] * 5, midY - extra.offset[1] * 5, extra.extraParts, backgroundColour);
+			svgString += drawExtraBackground(startX + extra.xOffset * 5, midY - extra.yOffset * 5, extra.extraParts, backgroundColour);
 			break;
 		}
 
@@ -732,7 +783,7 @@ export abstract class SVGRenderer {
 				if(part.joined) {
 					svgString += lineJoined(startX,
 						midY - (part.endHeight / 2 * 5) + 0.25,
-						part.startHeight * 5 - 0.5, "3", opaqueColour.colour);
+						part.startHeight * 5 - 0.5, "3", opaqueColour);
 					// svgString += lineJoined(startX + part.internalOffset * 5,
 					// 	midY - (part.endHeight / 2 * 5) + 0.25,
 					// 	part.startHeight * 5 - 0.5, "3", opaqueColour.colour);
@@ -771,10 +822,14 @@ export abstract class SVGRenderer {
 				break;
 		}
 
+		let taperStartOffset: number = (part.taperStart?.xOffset ? part.taperStart.xOffset : 0);
+		let taperEndOffset: number = (part.taperEnd?.xOffset ? part.taperEnd.xOffset : 0);
 		switch (part.shape) {
+
 			case "hexagonal":
 				// svgString += drawShapeDetails(startX, midY, (part.length) * 5);
-				svgString += drawShapeDetails(startX + part.internalOffset * 5, midY, (part.length) * 5);
+				// startX - xOffsetTaperEnd * 5
+				svgString += drawShapeDetails(startX + (part.internalOffset - taperStartOffset) * 5, midY, (part.length + taperEndOffset) * 5);
 				break;
 			case "octagonal":
 				// svgString += drawShapeDetails(startX, midY - ((part.startHeight / 2 * 5) * 4 / 7), (part.length) * 5);
@@ -923,7 +978,7 @@ export abstract class SVGRenderer {
 
 		for(const extra of component.extras) {
 			let colour: OpaqueColour = extra.getOpacityColour(colourIndex)
-			svgString += drawExtraForeground(startX + extra.offset[0] * 5, midY - extra.offset[1] * 5, extra.extraParts, colour.colour);
+			svgString += drawExtraForeground(startX + extra.xOffset * 5, midY - extra.yOffset * 5, extra.extraParts, colour.colour);
 			break;
 		}
 
@@ -950,10 +1005,10 @@ export abstract class SVGRenderer {
 
 			// now for extraParts
 			for(const extra of component.extras) {
-				svgString += lineVerticalGuide(offset + extra.offset[0] * 5,
+				svgString += lineVerticalGuide(offset + extra.xOffset * 5,
 						this._height/2 - 80,
 						80);
-				svgString += lineVerticalGuide(offset + extra.offset[0] * 5 + extra.length * 5,
+				svgString += lineVerticalGuide(offset + extra.xOffset * 5 + extra.length * 5,
 						this._height/2 - 80,
 						80);
 			}

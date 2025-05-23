@@ -83,15 +83,15 @@ export function drawOutlineCircle(radius: number, x: number, y:number, fillColou
 			`stroke="${strokeColour}" stroke-width="0.5" fill="${fillColour.colour}" fill-opacity="${fillColour.opacity}"/>\n`);
 }
 
-export function drawShapeDetails(xStart, y, width) {
-	return(`<line x1="${xStart}" ` +
+export function drawShapeDetails(x: number, y: number, width: number) {
+	return(`<line x1="${x}" ` +
 			`y1="${y}" ` +
-			`x2="${xStart + width}" ` +
+			`x2="${x + width}" ` +
 			`y2="${y}" ` +
 			`stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>\n` +
-			`<line x1="${xStart}" ` +
+			`<line x1="${x}" ` +
 			`y1="${y}" ` +
-			`x2="${xStart + width}" ` +
+			`x2="${x + width}" ` +
 			`y2="${y}" ` +
 			`stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>\n`);
 }
@@ -231,7 +231,6 @@ export function renderExtra(x: number, y: number, offsetX: number, offsetY: numb
 		let minY: number = Math.min(points[1], points[3]);
 		let height: number = Math.abs(maxY - minY);
 
-		console.log(height);
 		if(height === 0) {
 			height = 3/5;
 		}
@@ -306,13 +305,14 @@ export function lineVertical(x: number, y: number, height: number, strokeWidth: 
 	return(svgString);
 }
 
-export function lineJoined(x: number, y: number, height: number, strokeWidth: string, strokeColour: string): string {
+export function lineJoined(x: number, y: number, height: number, strokeWidth: string, strokeColour: OpaqueColour): string {
 	let svgString: string = "";
 	svgString += `<line x1="${x}" ` +
 		`y1="${y}" ` +
 		`x2="${x}" ` +
 		`y2="${y + height}" ` +
-		`stroke="${strokeColour}" ` +
+		`stroke="${strokeColour.colour}" ` +
+		`stroke-opacity="${strokeColour.opacity}" ` +
 		`stroke-width="${strokeWidth}" />\n`;
 	return(svgString);
 }

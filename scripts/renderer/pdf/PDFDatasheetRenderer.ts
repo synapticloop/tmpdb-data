@@ -313,7 +313,7 @@ export class PDFDatasheetRenderer {
 			for (const colourComponent of this.pencil.colourComponents) {
 				this.setFontFamily(doc, FontFamily.HEADING_SMALL);
 				doc.text("").moveDown(1);
-				this.centreImage(doc, `./output/png/technical/${this.pencilFileDirectory}/${this.pencilFileName}-exploded-colour-${colourComponent}.png`, 500);
+				this.centreImage(doc, `./output/png/technical/${this.pencilFileDirectory}/${this.pencilFileName}-exploded-colour-${colourComponent.colourName}.png`, 500);
 			}
 		}
 	}
@@ -328,18 +328,18 @@ export class PDFDatasheetRenderer {
 		data.push(["Colour", "SKU", "Render colour"]);
 		for(const [index, colourComponent ] of this.pencil.colourComponents.entries()) {
 			let colourData:string[] = [];
-			colourData.push(colourComponent);
+			colourData.push(colourComponent.colour);
 			if(this.pencil.skus[index]) {
 				colourData.push(this.pencil.skus[index]);
 			} else {
 				colourData.push("not recorded");
 			}
 
-			let renderColour = this.pencil.colourMap[colourComponent];
+			let renderColour = this.pencil.colourMap[colourComponent.colour];
 			if(renderColour) {
 				colourData.push(renderColour);
 			} else {
-				colourData.push(colourComponent);
+				colourData.push(colourComponent.colour);
 			}
 			data.push(colourData);
 		}
@@ -375,10 +375,10 @@ export class PDFDatasheetRenderer {
 		for(const [index, colourComponent ] of this.pencil.colourComponents.entries()) {
 			this.setFontFamily(doc, FontFamily.HEADING_SMALL);
 
-			doc.text(`${this.pencil.colourComponent} colour - ${colourComponent}`, { align: "center"} );
+			doc.text(`${this.pencil.colourComponent} colour - ${colourComponent.colourName}`, { align: "center"} );
 
 			this.centreImage(doc,
-					`./output/png/pencil/${this.pencilFileDirectory}/${this.pencilFileName}-colour-${colourComponent}.png`,
+					`./output/png/pencil/${this.pencilFileDirectory}/${this.pencilFileName}-colour-${colourComponent.colourName}.png`,
 					400);
 			doc.text('').moveDown(1);
 
@@ -386,9 +386,13 @@ export class PDFDatasheetRenderer {
 
 			const componentData:any[] = [];
 			componentData.push({ text: "Component", align: "right" });
+
 			for(const component of this.pencil.components) {
-				if(this.pencil.colourComponents.length != component.colours.length) {
-					componentData.push({text: component.type, colSpan: component.colours.length, align: "center", valign: "top"});
+				if(component.isHidden) {
+					continue;
+				}
+				if(this.pencil.colourComponents.length != component.opacityColours.length) {
+					componentData.push({text: component.type, colSpan: component.opacityColours.length, align: "center", valign: "top"});
 				} else {
 					componentData.push({text: component.type});
 				}
@@ -399,11 +403,14 @@ export class PDFDatasheetRenderer {
 			const colourData:any[] = [];
 			colourData.push("Colour");
 			for(const component of this.pencil.components) {
+				if(component.isHidden) {
+					continue;
+				}
 				// we have more colours than the number of components - meaning that
 				// the parts also have an additional colour
-				if(this.pencil.colourComponents.length != component.colours.length) {
-					for(const partColour of component.colours) {
-						let renderColour = this.pencil.colourMap[partColour];
+				if(this.pencil.colourComponents.length != component.opacityColours.length) {
+					for(const partColour of component.opacityColours) {
+						let renderColour = partColour.colour;
 
 						if (renderColour) {
 							colourData.push({text: "", backgroundColor: renderColour, border: [1, 1, 1, 1], borderColor: "#aaa"});
@@ -417,14 +424,14 @@ export class PDFDatasheetRenderer {
 						}
 					}
 				} else {
-					let renderColour = this.pencil.colourMap[component.colours[index]];
+					let renderColour = this.pencil.getOpacityColour(index);
 
 					if (renderColour) {
 						colourData.push({text: "", backgroundColor: renderColour, border: [1, 1, 1, 1], borderColor: "#aaa"});
 					} else {
 						colourData.push({
 							text: "",
-							backgroundColor: component.colours[index],
+							backgroundColor: component.getBackgroundOpacityColour(index).colour,
 							border: [1, 1, 1, 1],
 							borderColor: "#aaa"
 						});
@@ -437,10 +444,15 @@ export class PDFDatasheetRenderer {
 			const colourNameData:any[] = [];
 			colourNameData.push("Colour name");
 			for(const component of this.pencil.components) {
-				if(this.pencil.colourComponents.length != component.colours.length) {
-					colourNameData.push({text: component.colours.join("\n"), align: "center", colSpan: component.colours.length });
+				if(component.isHidden) {
+					continue;
+				}
+				if(this.pencil.colourComponents.length != component.opacityColours.length) {
+					// TODO
+					// colourNameData.push({text: component.colours.join("\n"), align: "center", colSpan: component.colours.length });
 				} else {
-					colourNameData.push({text: component.colours[index]});
+					// TODO
+					// colourNameData.push({text: component.colours[index]});
 				}
 			}
 			colourNameData.push("");
@@ -448,28 +460,32 @@ export class PDFDatasheetRenderer {
 			const renderData:any[] = [];
 			renderData.push("Render colour");
 			for(const component of this.pencil.components) {
-				if(this.pencil.colourComponents.length != component.colours.length) {
+				if(component.isHidden) {
+					continue;
+				}
+				if(this.pencil.colourComponents.length != component.opacityColours.length) {
 
 					let multiPartColours: string[] = [];
 
-					for(const partColour of component.colours) {
-						let renderColour = this.pencil.colourMap[partColour];
+					for(const partColour of component.opacityColours) {
+						let renderColour = partColour.colour;
 
 						if (renderColour) {
 							multiPartColours.push(renderColour);
 						} else {
-							multiPartColours.push(partColour);
+							multiPartColours.push(partColour.colourName);
 						}
 					}
 
-					renderData.push({text: multiPartColours.join("\n"), colSpan: component.colours.length, align:"center" });
+					// TODO
+					// renderData.push({text: multiPartColours.join("\n"), colSpan: component.colours.length, align:"center" });
 
 				} else {
-					let renderColour = this.pencil.colourMap[component.colours[index]];
+					let renderColour = component.getOpacityColour(index).colourName;
 					if (renderColour) {
 						renderData.push({text: renderColour});
 					} else {
-						renderData.push({text: component.colours[index]});
+						renderData.push({text: component.getOpacityColour(index)});
 					}
 				}
 			}

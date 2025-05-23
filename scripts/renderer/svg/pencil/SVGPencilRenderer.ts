@@ -21,7 +21,7 @@ export class SVGPencilRenderer extends SVGRenderer {
 		let svgString:string = super.getSvgStart(true);
 
 		// now it is time to render the details of the pencil
-		svgString += super.renderSideComponents(colourIndex);
+		svgString += super.renderSideComponents(this._width/2 - (this.pencil.totalLength*5/2), this._height/2, colourIndex);
 
 		// end the end of the SVG
 		svgString += super.getSvgEnd();

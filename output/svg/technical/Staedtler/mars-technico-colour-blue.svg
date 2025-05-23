@@ -63,7 +63,7 @@
 <text x="1480" y="30" font-size="1.6em" font-weight="bold" text-anchor="end" dominant-baseline="central">Colour variants of the body</text>
 <rect x="1440" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="black" fill-opacity="1"/>
 <text x="1460" y="100" transform="rotate(-90, 1460, 100)" font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">black</text>
-<rect x="1380" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="blue" fill-opacity="0.1"/>
+<rect x="1380" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="blue" fill-opacity="1"/>
 <text x="1400" y="100" transform="rotate(-90, 1400, 100)" font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">blue</text>
 <text x="30" y="136" font-size="1.2em" font-weight="bold" text-anchor="start" dominant-baseline="central">Materials:</text>
 <text x="50" y="156" font-size="1.2em" text-anchor="start" dominant-baseline="central"> - metal</text>
@@ -197,11 +197,11 @@
 <path d="M376.875 286.25 L423.125 282.5 L423.125 317.5 L376.875 313.75 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
 <path d="M423.125 281.25 L533.125 278.75 L533.125 321.25 L423.125 318.75 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
 <path d="M423.125 281.25 L533.125 278.75 L533.125 321.25 L423.125 318.75 Z" stroke-width="1.0" stroke="black" fill="url(#knurled)"/>
-<path d="M533.125 280.625 L706.875 280.625 L706.875 319.375 L533.125 319.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="blue" fill-opacity="0" />
-<line x1="533.125" y1="300" x2="706.875" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
-<line x1="533.125" y1="300" x2="706.875" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
-<path d="M706.875 280.625 L1000.625 280.625 L1000.625 319.375 L706.875 319.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="blue" fill-opacity="0" />
-<line x1="706.875" y1="280.875" x2="706.875" y2="319.125" stroke="blue" stroke-width="3" />
+<path d="M533.125 280.625 L706.875 280.625 L706.875 319.375 L533.125 319.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="blue" fill-opacity="1" />
+<line x1="533.125" y1="300" x2="636.875" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
+<line x1="533.125" y1="300" x2="636.875" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
+<path d="M706.875 280.625 L1000.625 280.625 L1000.625 319.375 L706.875 319.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="blue" fill-opacity="1" />
+<line x1="706.875" y1="280.875" x2="706.875" y2="319.125" stroke="blue" stroke-opacity="1" stroke-width="3" />
 <path d="M833.125 274.125 Q825.625 271.625 833.125 266.625" stroke-width="4" stroke="black" fill="none" stroke-linecap="round" />
 <line x1="833.125" y1="266.625" x2="993.125" y2="266.625" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
 <line x1="848.125" y1="279.125" x2="833.125" y2="274.125" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
@@ -213,17 +213,17 @@
 <line x1="848.125" y1="279.125" x2="833.125" y2="274.125" stroke-width="3" stroke="silver" fill="silver" stroke-linecap="round" />
 <line x1="864.375" y1="274.125" x2="848.125" y2="279.125" stroke-width="3" stroke="silver" fill="silver" stroke-linecap="round" />
 <line x1="993.125" y1="266.625" x2="1000.625" y2="281.625" stroke-width="3" stroke="silver" fill="silver" stroke-linecap="round" />
-<path d="M1030.625 280.625 L1065.625 280.625 L1065.625 319.375 L1030.625 319.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="blue" fill-opacity="0" />
+<path d="M1030.625 280.625 L1065.625 280.625 L1065.625 319.375 L1030.625 319.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="blue" fill-opacity="1" />
 <path d="M1065.625 285.625 L1125.625 285.625 L1125.625 314.375 L1065.625 314.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1" />
-<rect x="776.875" y="280.875" width="69.5" height="38.25" rx="0" ry="0" stroke-width="0.5" stroke="none" fill="blue" fill-opacity="0.1"/>
-<path d="M 603.125 280.625 C 736.65625 285.46875, 736.65625 295.15625, 603.125 300" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="blue" />
-<path d="M 603.125 319.375 C 736.65625 314.53125, 736.65625 304.84375, 603.125 300" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="blue" />
+<rect x="603.125" y="280.875" width="103.25" height="38.25" rx="0" ry="0" stroke-width="0.5" stroke="none" fill="blue" fill-opacity="0.1"/>
+<path d="M 636.875 280.625 C 728.125 285.46875, 728.125 295.15625, 636.875 300" stroke-width="0.5" stroke="black" stroke-linecap="round" fill-opacity="0.1" fill="blue" />
+<path d="M 636.875 319.375 C 728.125 314.53125, 728.125 304.84375, 636.875 300" stroke-width="0.5" stroke="black" stroke-linecap="round" fill-opacity="0.1" fill="blue" />
 
 <!-- FRONT COMPONENT: cap -->
 <circle r="14.375" cx="160" cy="300" fill="silver" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 
 <!-- FRONT COMPONENT: tail -->
-<circle r="19.375" cx="160" cy="300" fill="blue" fill-opacity="0" stroke="black" stroke-width="0.5"  />
+<circle r="19.375" cx="160" cy="300" fill="blue" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 
 <!-- FRONT COMPONENT: clip -->
 <circle r="21.875" cx="160" cy="300" fill="silver" fill-opacity="1" stroke="black" stroke-width="0.5"  />
@@ -239,8 +239,8 @@
 <rect x="150" y="273.125" width="20" height="7.5" rx="0" ry="0" stroke-width="1.0" stroke="dimgray" fill="none"/>
 
 <!-- FRONT COMPONENT: body -->
-<circle r="19.375" cx="160" cy="300" fill="blue" fill-opacity="0" stroke="black" stroke-width="0.5"  />
-<polygon points="148.813838534451,280.625 171.186161465549,280.625 182.37232293109798,300 171.186161465549,319.375 148.813838534451,319.375 137.62767706890202,300 " stroke="black" stroke-width="0.5" fill="blue" fill-opacity="0"/>
+<circle r="19.375" cx="160" cy="300" fill="blue" fill-opacity="1" stroke="black" stroke-width="0.5"  />
+<polygon points="148.813838534451,280.625 171.186161465549,280.625 182.37232293109798,300 171.186161465549,319.375 148.813838534451,319.375 137.62767706890202,300 " stroke="black" stroke-width="0.5" fill="blue" fill-opacity="1"/>
 
 <!-- FRONT COMPONENT: grip -->
 <circle r="18.75" cx="160" cy="300" stroke="black" stroke-width="0.5" fill="silver" fill-opacity="1"/>
@@ -258,8 +258,8 @@
 <circle r="17.5" cx="1400" cy="300" stroke="black" stroke-width="0.5" fill="silver" fill-opacity="1"/>
 <circle r="18.75" cx="1400" cy="300" stroke="black" stroke-width="0.5" fill="silver" fill-opacity="1"/>
 <circle r="21.25" cx="1400" cy="300" stroke="black" stroke-width="0.5" fill="silver" fill-opacity="1"/>
-<polygon points="1388.813838534451,280.625 1411.186161465549,280.625 1422.372322931098,300 1411.186161465549,319.375 1388.813838534451,319.375 1377.627677068902,300 " stroke="black" stroke-width="0.5" fill="blue" fill-opacity="0.1"/>
-<circle r="19.375" cx="1400" cy="300" fill="blue" fill-opacity="0.1" stroke="black" stroke-width="0.5"  />
+<polygon points="1388.813838534451,280.625 1411.186161465549,280.625 1422.372322931098,300 1411.186161465549,319.375 1388.813838534451,319.375 1377.627677068902,300 " stroke="black" stroke-width="0.5" fill="blue" fill-opacity="1"/>
+<circle r="19.375" cx="1400" cy="300" fill="blue" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 <circle r="21.875" cx="1400" cy="300" fill="silver" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 <!-- WxH 4 1.5 --><rect x="1390" y="273.125" width="20" height="7.5" rx="0" ry="0" stroke-width="1.0" stroke="dimgray" fill="silver"/>
 <rect x="1390" y="273.125" width="20" height="7.5" rx="0" ry="0" stroke-width="1.0" stroke="dimgray" fill="none"/>
@@ -271,7 +271,7 @@
 <rect x="1390" y="275.625" width="20" height="5" rx="0" ry="0" stroke-width="1.0" stroke="dimgray" fill="none"/>
 <!-- WxH 4 3 --><rect x="1390" y="265.625" width="20" height="15" rx="0" ry="0" stroke-width="1.0" stroke="dimgray" fill="silver"/>
 <rect x="1390" y="265.625" width="20" height="15" rx="0" ry="0" stroke-width="1.0" stroke="dimgray" fill="none"/>
-<circle r="19.375" cx="1400" cy="300" fill="blue" fill-opacity="0.1" stroke="black" stroke-width="0.5"  />
+<circle r="19.375" cx="1400" cy="300" fill="blue" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 <circle r="14.375" cx="1400" cy="300" fill="silver" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 <circle r="5" cx="1400" cy="300" fill="l" fill-opacity="1" stroke="dimgray" stroke-width="1"  />
 </g><text x="50%" y="580" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb) // Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>

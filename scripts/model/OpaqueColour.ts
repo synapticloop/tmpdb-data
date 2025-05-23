@@ -6,8 +6,8 @@ export class OpaqueColour {
 	colour: string; // the hex code of the colour (if found in the colour map), else the name
 
 	colourName: string; // the name of the colour
-	opacity: number = 1;
-	definition: string;
+	opacity: number = 1; // the opacity - from a value of 0 to 1
+	definition: string; // The definition which is the colour name % opacity (from 0 to 100)
 
 	constructor(colourMap: Map<string, string>, colour: string) {
 		if(colourMap === null) {

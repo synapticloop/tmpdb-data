@@ -2,18 +2,8 @@ import {Pencil} from "../../../model/Pencil.ts";
 import {SVGRenderer} from "../SVGRenderer.ts";
 import {
 	arrowLeft,
-	circle,
-	dimensionsHorizontal,
-	dimensionsVertical, drawExtra, drawOutlineCircle, drawOutlineHexagon, drawOutlineOctagon, drawShapeDetails,
-	drawText,
-	drawTextBold,
-	drawTextBoldCentred,
 	lineHorizontal,
-	lineHorizontalGuide,
 	lineVertical,
-	lineVerticalGuide, rectangle, renderExtra,
-	target,
-	TextOrientation
 } from "../../../utils/svg-helper.ts";
 import {Part} from "../../../model/Part.ts";
 import {formatToTwoPlaces} from "../../../utils/formatter.ts";

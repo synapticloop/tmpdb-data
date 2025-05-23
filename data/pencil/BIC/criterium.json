@@ -3,18 +3,21 @@
 	"model_name": "Criterium",
 	"lead_size": "2.0",
 	"text": "BIC CRITERIUM 2 mm",
+
+	"mechanism": "clutch",
+	"accurate": true,
+
+	"features": [
+		{ "type":  "eraser", "location":  "internal - inside cap" },
+		{ "type":  "sharpener", "location":  "external - inside cap" }
+	],
+
 	"colour_component": "body",
 	"colours": [ "silver", "white", "black" ],
 	"colour_map": {
 		"white": "#ffffff",
 		"black": "#000000"
 	},
-	"mechanism": "clutch",
-	"accurate": true,
-	"features": [
-		{ "type":  "eraser", "location":  "internal - inside cap" },
-		{ "type":  "sharpener", "location":  "external - inside cap" }
-	],
 	"front": [
 		{ "shape": "cylinder", "dimensions": [ 1.25, 10.0 ], "fill":  "black" }
 	],

@@ -47,7 +47,7 @@ export class SVGTechnicalGroupedRenderer extends SVGRenderer {
 		midYOverride += 160;
 		// now draw the grouped components
 		svgString += super.renderCentreLineHorizontal(midYOverride);
-		svgString += super.renderSideComponents(-1, midYOverride);
+		svgString += super.renderSideComponents(this._width/2 - (this.pencil.totalLength*5/2), midYOverride, -1);
 
 		let partOffset: number = this.SVG_WIDTH/2 - this.pencil.totalLength*5/2
 		let groupLength: number = 0;
@@ -214,7 +214,7 @@ export class SVGTechnicalGroupedRenderer extends SVGRenderer {
 
 		for (let i:number = 0; i < this.pencil.colourComponents.length; i++) {
 			// now it is time to render the details of the pencil
-			svgString += super.renderSideComponents(i, midYOverride);
+			svgString += super.renderSideComponents(this._width/2 - (this.pencil.totalLength*5/2), midYOverride, -1);
 
 			midYOverride = midYOverride + 120;
 		}
