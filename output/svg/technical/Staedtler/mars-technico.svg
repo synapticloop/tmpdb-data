@@ -63,7 +63,7 @@
 <text x="1480" y="30" font-size="1.6em" font-weight="bold" text-anchor="end" dominant-baseline="central">Colour variants of the body</text>
 <rect x="1440" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="black" fill-opacity="1"/>
 <text x="1460" y="100" transform="rotate(-90, 1460, 100)" font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">black</text>
-<rect x="1380" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="blue" fill-opacity="1"/>
+<rect x="1380" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="blue" fill-opacity="0.1"/>
 <text x="1400" y="100" transform="rotate(-90, 1400, 100)" font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">blue</text>
 <text x="30" y="136" font-size="1.2em" font-weight="bold" text-anchor="start" dominant-baseline="central">Materials:</text>
 <text x="50" y="156" font-size="1.2em" text-anchor="start" dominant-baseline="central"> - metal</text>
@@ -215,6 +215,7 @@
 <line x1="993.125" y1="266.625" x2="1000.625" y2="281.625" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
 <path d="M1030.625 280.625 L1065.625 280.625 L1065.625 319.375 L1030.625 319.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
 <path d="M1065.625 285.625 L1125.625 285.625 L1125.625 314.375 L1065.625 314.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
+<rect x="776.875" y="280.875" width="69.5" height="38.25" rx="0" ry="0" stroke-width="0.5" stroke="none" fill="white" fill-opacity="1"/>
 <path d="M 603.125 280.625 C 736.65625 285.46875, 736.65625 295.15625, 603.125 300" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="white" />
 <path d="M 603.125 319.375 C 736.65625 314.53125, 736.65625 304.84375, 603.125 300" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="white" />
 

@@ -8,4 +8,6 @@ export class Pattern {
 	description: string; // The display description for the pattern
 	@JsonProperty({ name: "pattern", required: true })
 	pattern: string[]; // The SVG pattern definition
+	@JsonProperty({ name: "ignored", required: false })
+	ignored: boolean = false;
 }

@@ -303,30 +303,31 @@ export abstract class SVGRenderer {
 			// now we get to draw the taper
 			switch (part.shape) {
 				case "hexagonal":
-					svgString += `<path d="M ${startX + xOffsetTaperEnd * 5} ${midY - part.endHeight / 2 * 5} ` +
-						`C ${startX + ((part.length + xOffsetTaperEnd) * 5 * xOffsetTaperEndScale)} ${midY - part.endHeight / 2 * 5 * 3 / 4}, ` +
-						`${startX + ((part.length + xOffsetTaperEnd) * 5 * xOffsetTaperEndScale)} ${midY - part.endHeight / 2 * 5 / 4}, ` +
-						`${startX + xOffsetTaperEnd * 5} ${midY}" ` +
+					svgString += rectangle(startX + part.length * 5 - xOffsetTaperEnd * 5, midY - part.endHeight / 2 * 5 + 0.25, xOffsetTaperEnd * -5 - 0.5, part.startHeight * 5 - 0.5, "none", backgroundColour);
+					svgString += `<path d="M ${startX - xOffsetTaperEnd * 5} ${midY - part.endHeight / 2 * 5} ` +
+						`C ${startX + ((part.length - xOffsetTaperEnd) * 5 * xOffsetTaperEndScale)} ${midY - part.endHeight / 2 * 5 * 3 / 4}, ` +
+						`${startX + ((part.length - xOffsetTaperEnd) * 5 * xOffsetTaperEndScale)} ${midY - part.endHeight / 2 * 5 / 4}, ` +
+						`${startX - xOffsetTaperEnd * 5} ${midY}" ` +
 						`stroke-width="0.5" ` +
 						`stroke="${strokeColor}" ` +
 						`stroke-linecap="round" ` +
 						`fill="${colour}" />\n`;
 
-					svgString += `<path d="M ${startX + xOffsetTaperEnd * 5} ${midY + part.endHeight / 2 * 5} ` +
-						`C ${startX + ((part.length + xOffsetTaperEnd) * 5 * xOffsetTaperEndScale)} ${midY + part.endHeight / 2 * 5 * 3 / 4}, ` +
-						`${startX + ((part.length + xOffsetTaperEnd) * 5 * xOffsetTaperEndScale)} ${midY + part.endHeight / 2 * 5 / 4}, ` +
-						`${startX + xOffsetTaperEnd * 5} ${midY}" ` +
+					svgString += `<path d="M ${startX - xOffsetTaperEnd * 5} ${midY + part.endHeight / 2 * 5} ` +
+						`C ${startX + ((part.length - xOffsetTaperEnd) * 5 * xOffsetTaperEndScale)} ${midY + part.endHeight / 2 * 5 * 3 / 4}, ` +
+						`${startX + ((part.length - xOffsetTaperEnd) * 5 * xOffsetTaperEndScale)} ${midY + part.endHeight / 2 * 5 / 4}, ` +
+						`${startX - xOffsetTaperEnd * 5} ${midY}" ` +
 						`stroke-width="0.5" ` +
 						`stroke="${strokeColor}" ` +
 						`stroke-linecap="round" ` +
 						`fill="${colour}" />\n`;
 				break;
 				case "cylinder":
-					svgString += rectangle(startX + part.length * 5 + xOffsetTaperEnd * 5, midY - part.endHeight / 2 * 5 + 0.25, xOffsetTaperEnd * -5 - 0.5, part.startHeight * 5 - 0.5, "none", backgroundColour);
-					svgString += `<path d="M ${startX + part.length * 5 + xOffsetTaperEnd * 5} ${midY - part.endHeight / 2 * 5} ` +
-						`C ${startX + ((part.length) * 5 + (xOffsetTaperEndScale * xOffsetTaperEnd) * 5)} ${midY - part.endHeight/2 * 5}, ` +
-						`${startX + ((part.length) * 5 + (xOffsetTaperEndScale * xOffsetTaperEnd) * 5)} ${midY + part.endHeight/2 * 5}, ` +
-						`${startX + part.length * 5 + xOffsetTaperEnd * 5} ${midY + part.endHeight / 2 * 5}, " ` +
+					svgString += rectangle(startX + part.length * 5 - xOffsetTaperEnd * 5, midY - part.endHeight / 2 * 5 + 0.25, xOffsetTaperEnd * -5 - 0.5, part.startHeight * 5 - 0.5, "none", backgroundColour);
+					svgString += `<path d="M ${startX + part.length * 5 - xOffsetTaperEnd * 5} ${midY - part.endHeight / 2 * 5} ` +
+						`C ${startX + ((part.length) * 5 - (xOffsetTaperEndScale * xOffsetTaperEnd) * 5)} ${midY - part.endHeight/2 * 5}, ` +
+						`${startX + ((part.length) * 5 - (xOffsetTaperEndScale * xOffsetTaperEnd) * 5)} ${midY + part.endHeight/2 * 5}, ` +
+						`${startX + part.length * 5 - xOffsetTaperEnd * 5} ${midY + part.endHeight / 2 * 5}, " ` +
 						`stroke-width="0.5" ` +
 						`stroke="${strokeColor}" ` +
 						`stroke-linecap="round" ` +

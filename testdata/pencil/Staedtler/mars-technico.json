@@ -6,7 +6,7 @@
 	"lead_size": "2.0",
 	"text": "STAEDTLER Mars technico",
 	"colour_component": "body",
-	"colours": [ "black", "blue" ],
+	"colours": [ "black", "blue%10" ],
 	"mechanism": "clutch",
 	"front": [
 		{ "shape":"cylinder", "dimensions": [ 2.0, 10.0 ], "fill":  "black" }
@@ -42,7 +42,7 @@
 		{
 			"type": "body",
 			"parts": [
-				{ "shape":"hexagonal", "dimensions": [ 34.75, 7.75], "taper_end": { "offset": [ 14, 0.835 ] } },
+				{ "shape":"hexagonal", "dimensions": [ 34.75, 7.75], "taper_end": { "offset": [ -14, 0.835 ], "background_colours": [ "black", "blue%10" ] } },
 				{ "shape":"cylinder", "dimensions": [ 58.75, 7.75], "joined": true }
 			],
 			"material": "plastic"
