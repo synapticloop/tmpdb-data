@@ -51,12 +51,6 @@ for (const [dirIndex, pencilDirectory] of pencilDirectories.entries()) {
 
 			let fileNumber = 1;
 
-			const mdIndividualDirectory: string = path.join("./information/md/", pencilDirectory);
-			fs.mkdirSync(mdIndividualDirectory, { "recursive": true });
-			fs.writeFileSync(mdIndividualDirectory + "/" + pencilFileName + ".md", new MDRenderer(pencil).render());
-			console.log(`        MD: [${fileNumber}] (individual) ${mdIndividualDirectory + pencilFileName + ".md"}`);
-			fileNumber++;
-
 			fileNumber = await renderSVGAndPNG(new SVGTechnicalRenderer(pencil), -1, "technical", pencilDirectory, pencilFileName, fileNumber);
 			fileNumber = await renderSVGAndPNG(new SVGTechnicalGroupedRenderer(pencil), -1, "technical", pencilDirectory, pencilFileName + "-grouped", fileNumber);
 			fileNumber = await renderSVGAndPNG(new SVGTechnicalComponentRenderer(pencil), -1, "technical", pencilDirectory, pencilFileName + "-components", fileNumber);

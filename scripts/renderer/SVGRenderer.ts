@@ -663,12 +663,20 @@ export abstract class SVGRenderer {
 		));
 	}
 
+	protected renderComponent(startX:number, midY:number, component:Component, colourIndex: number): string {
+		let svgString: string = "";
+		for(const part of component.parts) {
+			svgString += this.renderPart(startX, midY, component, part, colourIndex, null);
+		}
+		return(svgString);
+	}
+
 	protected renderPart(startX:number, midY:number, component:Component, part: Part, colourIndex: number, defaultOpaqueColour: OpaqueColour):string {
 		let svgString:string = "";
 
 		// get the stroke colour
 		let strokeColour:string = "black"
-		if(component.getOpacityColour(colourIndex).colour === "black") {
+		if(part.getOpacityColour(colourIndex).colour === "black") {
 			strokeColour = "dimgray";
 		}
 

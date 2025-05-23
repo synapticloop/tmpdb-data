@@ -1,0 +1,52 @@
+{
+	"brand": "Synapticloop",
+	"model_name": "Pattern Examples",
+	"lead_size": "2.0",
+	"colour_component": "pattern",
+	"colours": [
+		"white"
+	],
+	"colour_map": {
+		"white": "#ffffff"
+	},
+	"mechanism": "clutch",
+	"accurate": true,
+	"components": [
+		{
+			"type": "knurled (/patterns/knurled)",
+			"parts": [
+				{ "shape": "cylindrical", "dimensions": [ 20, 8 ], "finish": "knurled" }
+			]
+		},
+		{
+			"type": "knurled (/patterns/knurled-large)",
+			"parts": [
+				{ "shape": "cylindrical", "dimensions": [ 20, 8 ], "finish": "knurled-large" }
+			]
+		},
+		{
+			"type": "knurled (/patterns/knurled-small)",
+			"parts": [
+				{ "shape": "cylindrical", "dimensions": [ 20, 8 ], "finish": "knurled-small" }
+			]
+		},
+		{
+			"type": "knurled (/patterns/knurled-small)",
+			"parts": [
+				{ "shape": "cylindrical", "dimensions": [ 20, 8 ], "finish": "spring" }
+			]
+		},
+		{
+			"type": "knurled (/patterns/knurled-small)",
+			"parts": [
+				{ "shape": "cylindrical", "dimensions": [ 20, 8 ], "finish": "lined" }
+			]
+		},
+		{
+			"type": "knurled (/patterns/knurled-small)",
+			"parts": [
+				{ "shape": "cylindrical", "dimensions": [ 20, 8 ], "finish": "ridged" }
+			]
+		}
+	]
+}

@@ -11,10 +11,27 @@ export class MDRenderer {
 
 	render(): string {
 		let mdString: string = "";
-		mdString += `# ${this.pencil.brand} // ${this.pencil.modelName} (Model #: ${this.pencil.modelNumber})\n`;
+		mdString += `# ${this.pencil.brand} // ${this.pencil.modelName} ${this.pencil.leadSize} mm\n\n`;
+		mdString += `## Model #: ${this.pencil.modelNumber}\n\n`;
 
 		// image for the overview
-		mdString += `[${this.pencil.brand} // ${this.pencil.modelName}](./${this.pencilFileName}-grouped.png)`
+		mdString += `[${this.pencilFileName}-grouped.png](${this.pencilFileName}-grouped.png)\n\n`
+
+		mdString += `## Pencil Information\n\n`;
+
+		mdString += "|     |     |\n";
+		mdString += "| ---: | :--- |\n";
+		mdString += this.addTableRow("Brand", this.pencil.brand);
+		mdString += this.addTableRow("Model name", this.pencil.modelName);
+		mdString += this.addTableRow("Model number", this.pencil.modelNumber);
+		mdString += this.addTableRow("Mechanism", this.pencil.mechanism);
+		mdString += this.addTableRow("Lead size", this.pencil.leadSize);
+		mdString += this.addTableRow("Lead shape", this.pencil.leadShape);
+		mdString += this.addTableRow("Maximum lead length", this.pencil.maximumLeadLength);
 		return(mdString);
+	}
+
+	private addTableRow(item: string, value: any): string {
+		return(`| **${item}** | ${value} |\n`);
 	}
 }

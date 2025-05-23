@@ -51,9 +51,9 @@ export class Component extends Base {
 	minHeight:number = 0;
 
 	// this is the length of the clip if it has extras...
-	allLength: number;
+	allLength: number = 0;
 	// this is the offset of the extras (if it has any)
-	allOffset: number;
+	allOffset: number = 0;
 
 	hasInternalStart: boolean = false;
 	hasInternalEnd: boolean = false;
@@ -66,21 +66,6 @@ export class Component extends Base {
 
 		for(const part of this.parts) {
 			part.postConstruct(this.mergedColours, colourMap);
-		}
-
-		let minX: number = 0;
-		let maxX: number = 0;
-
-		for(const extra of this.extras) {
-			extra.postConstruct(this.mergedColours, colourMap);
-			// TODO - need to do multiple
-			if(extra.xOffset + extra.length > this.length) {
-				this.allLength = extra.length;
-				this.allOffset = extra.xOffset;
-			} else {
-				this.allLength = extra.length + extra.xOffset;
-				this.allOffset = extra.xOffset;
-			}
 		}
 
 		for(const internalEnd of this.internalEnd) {
@@ -133,6 +118,23 @@ export class Component extends Base {
 		// internal parts
 		if(this.parts.length === 0 && (this.internalStart.length !== 0 || this.internalEnd.length !== 0)) {
 			this.isHidden = true;
+		}
+
+
+		for(const extra of this.extras) {
+			extra.postConstruct(this.mergedColours, colourMap);
+			// TODO - need to do multiple
+			if(extra.xOffset + extra.length > this.length) {
+				this.allLength = extra.length;
+				this.allOffset = extra.xOffset;
+			} else {
+				this.allLength = extra.length + extra.xOffset;
+				this.allOffset = extra.xOffset;
+			}
+		}
+
+		if(this.allLength === 0) {
+			this.allLength = this.length;
 		}
 	}
 }
