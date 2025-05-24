@@ -9,9 +9,9 @@
 	"weight": 11.0,
 	"mechanism": "click",
 	"colour_component": "body",
-	"colours": [ "yellow", "blue", "green", "red", "wood", "black" ],
+	"colours": [ "yellow%50", "blue%50", "green%50", "burgundy%50", "wood%50", "black%50" ],
 	"features": [
-		{ "type": "eraser", "location": "End of pencil, attached to Ferrule" }
+		{ "type": "eraser", "location": "End of pencil, attached to ferrule" }
 	],
 	"colour_map": {
 		"yellow": "#e38f0f",
@@ -29,12 +29,23 @@
 	"components": [
 		{
 			"type": "tip",
+			"material": "metal",
+			"colours": [ "brass" ],
 			"parts": [
 				{ "shape": "cylinder", "dimensions": [ 2.5, 3.25 ] },
 				{ "shape": "cone", "dimensions": [ 5.0, 3.25, 7.5 ] }
 			],
-			"material": "metal",
-			"colours": [ "brass" ]
+			"internal_end": [
+				{ "shape": "cylinder", "dimensions": [ 10.25, 5.5 ] },
+				{ "shape": "cylinder", "dimensions": [ 3.0, 5.5 ] },
+				{ "shape": "cylinder", "dimensions": [ 0.75, 5.75 ] },
+				{ "shape": "cylinder", "dimensions": [ 1.5, 5.5 ] },
+				{ "shape": "cylinder", "dimensions": [ 0.75, 5.75 ] },
+				{ "shape": "cylinder", "dimensions": [ 1.5, 5.5 ] },
+				{ "shape": "cylinder", "dimensions": [ 0.75, 5.75 ] },
+				{ "shape": "cylinder", "dimensions": [ 5.75, 5.5 ] },
+				{ "shape": "cylinder", "dimensions": [ 89.5, 4.25 ], "material": "plastic", "colours": [ "white%50" ] }
+			]
 		},
 		{
 			"type": "head",

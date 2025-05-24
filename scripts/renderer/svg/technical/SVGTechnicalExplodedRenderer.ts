@@ -95,8 +95,7 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 
 					for (let internalPart of component.internalStart) {
 						colour = internalPart.getOpacityColour(colourIndex);
-						// colour = this.getMappedColour(internalPart.colours, colourIndex, colour.colour);
-						svgString += super.renderPart(startX, midY, component, internalPart, colourIndex, colour);
+						svgString += super.renderPart(startX, midY, internalPart, colourIndex);
 						startX += internalPart.length * 5
 					}
 
@@ -126,7 +125,7 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 					let previousPart:Part = null;
 					for (let internalPart of component.internalEnd) {
 						colour = internalPart.getOpacityColour(colourIndex);
-						svgString += super.renderPart(startX, midY, component, internalPart, colourIndex, colour);
+						svgString += super.renderPart(startX, midY, internalPart, colourIndex);
 						totalLength += internalPart.length;
 						startX += internalPart.length * 5
 
@@ -136,7 +135,7 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 						if(previousPart !== null && internalPart.internalOffset !== 0) {
 							startX -= internalPart.length * 5;
 							startX -= previousPart.length * 5;
-							svgString += super.renderPart(startX, midY, component, previousPart, colourIndex, colour);
+							svgString += super.renderPart(startX, midY, previousPart, colourIndex);
 							startX += previousPart.length * 5;
 							startX += internalPart.length * 5;
 						}
@@ -175,7 +174,8 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 				// This part is not hidden - i.e. a hidden component is only rendered internally
 				for (let part of component.parts) {
 					// render the visible part
-					svgString += super.renderPart(startX, midY, component, part, colourIndex, colour);
+					svgString += `<!-- part ${part.shape} -->`;
+					svgString += super.renderPart(startX, midY, part, colourIndex);
 
 					colour = part.getOpacityColour(colourIndex);
 					// colour = this.getMappedColour(part.colours, colourIndex, colour.colour);
@@ -185,18 +185,17 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 					startX += part.length * 5;
 					// for internal start parts we will need this value to go back
 					partLength += part.length * 5;
-
-					// we are going to render
-					for (let internalEnd of component.internalEnd) {
-						colour = internalEnd.getOpacityColour(colourIndex);
-						// colour = this.getMappedColour(internalEnd.colours, colourIndex, colour.colour);
-						startX += internalEnd.internalOffset * 5;
-						svgString += "<!-- here -->";
-						svgString += super.renderPart(startX, midY, component, internalEnd, colourIndex, colour);
-						startX += internalEnd.length * 5;
-						endPartLength += internalEnd.length * 5;
-						endPartLength += internalEnd.internalOffset * 5;
-					}
+				}
+				// we are going to render
+				for (let internalEnd of component.internalEnd) {
+					colour = internalEnd.getOpacityColour(colourIndex);
+					// colour = this.getMappedColour(internalEnd.colours, colourIndex, colour.colour);
+					startX += internalEnd.internalOffset * 5;
+					svgString += `<!-- end ${internalEnd.shape} -->`;
+					svgString += super.renderPart(startX, midY,  internalEnd, colourIndex);
+					startX += internalEnd.length * 5;
+					endPartLength += internalEnd.length * 5;
+					endPartLength += internalEnd.internalOffset * 5;
 				}
 
 				if (component.hasInternalEnd) {
@@ -253,7 +252,7 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 					for (let internalPart of component.internalStart) {
 						colour = internalPart.getOpacityColour(colourIndex);
 						// colour = this.getMappedColour(internalPart.colours, colourIndex, colour.colour);
-						svgString += super.renderPart(startX, midY, component, internalPart, colourIndex, colour);
+						svgString += super.renderPart(startX, midY, internalPart, colourIndex);
 						totalLength += internalPart.length;
 						startX += internalPart.length * 5
 					}

@@ -288,7 +288,7 @@ export abstract class SVGRenderer {
 					svgString += `<path d="M ${startX + xOffsetTaperStart * 5} ${midY - part.endHeight / 2 * 5} ` +
 						`C ${startX + xOffsetTaperStart * (xOffsetTaperStartScale * -5)} ${midY - part.endHeight/2 * 5}, ` +
 						`${startX + xOffsetTaperStart * (xOffsetTaperStartScale * -5)} ${midY + part.endHeight/2 * 5}, ` +
-						`${startX + xOffsetTaperStart * 5} ${midY + part.endHeight / 2 * 5}, " ` +
+						`${startX + xOffsetTaperStart * 5} ${midY + part.endHeight / 2 * 5}" ` +
 						`stroke-width="0.5" ` +
 						`stroke="${strokeColor}" ` +
 						`stroke-linecap="round" ` +
@@ -347,7 +347,7 @@ export abstract class SVGRenderer {
 					svgString += `<path d="M ${startX + part.length * 5 + xOffsetTaperEnd * 5} ${midY - part.endHeight / 2 * 5} ` +
 						`C ${startX + ((part.length) * 5 - (xOffsetTaperEndScale * xOffsetTaperEnd) * 5)} ${midY - part.endHeight/2 * 5}, ` +
 						`${startX + ((part.length) * 5 - (xOffsetTaperEndScale * xOffsetTaperEnd) * 5)} ${midY + part.endHeight/2 * 5}, ` +
-						`${startX + part.length * 5 + xOffsetTaperEnd * 5} ${midY + part.endHeight / 2 * 5}, " ` +
+						`${startX + part.length * 5 + xOffsetTaperEnd * 5} ${midY + part.endHeight / 2 * 5}" ` +
 						`stroke-width="0.5" ` +
 						`stroke="${strokeColor}" ` +
 						`stroke-linecap="round" ` +
@@ -659,35 +659,68 @@ export abstract class SVGRenderer {
 		return(svgString);
 	}
 
+	/**
+	 * Render all side components
+	 *
+	 * @param x The x co-ordinate to start rendering the components
+	 * @param y The y co-ordinate to start rendering the components
+	 * @param colourIndex The colour index of the Pencil
+	 *
+	 * @protected
+	 */
 	protected renderSideComponents(x: number, y: number, colourIndex:number): string {
 		let svgString: string = "";
-
-		let colourOpacity: OpaqueColour = new OpaqueColour(this.pencil.colourMap, "white");
+		let xStart: number = x;
 
 		for (let component of this.pencil.components) {
-			colourOpacity = component.getOpacityColour(colourIndex);
-
-			for(let part of component.parts) {
-				svgString += this.renderPart(x, y, component, part, colourIndex, colourOpacity);
-				x += part.length * 5;
-			}
+			svgString += this.renderSideComponent(x, y, component, colourIndex);
+			x += component.length * 5;
 		}
 
-
-		// reset to draw the taper lines last
-		x = this._width/2 - (this.pencil.totalLength*5/2);
-
+		// now for the tapering...
 		for (let component of this.pencil.components) {
-			colourOpacity = component.getOpacityColour(colourIndex);
+			let colourOpacity:OpaqueColour = component.getOpacityColour(colourIndex);
 
 			for(let part of component.parts) {
-				svgString += this.renderTaper(x, y, part, colourIndex, colourOpacity.colour);
-				x += part.length * 5;
+				svgString += this.renderTaper(xStart, y, part, colourIndex, colourOpacity.colour);
+				xStart += part.length * 5;
 			}
 		}
 
 		return(svgString);
 	}
+
+	private renderSideComponent(x: number, y: number, component: Component, colourIndex:number): string {
+		let svgString: string = "";
+		let xStart: number = x;
+
+		for(const extra of component.extras) {
+			let backgroundColour: string = "black";
+			if(component.getOpacityColour(colourIndex).colour === "black") {
+				backgroundColour = "dimgray";
+			}
+
+			svgString += drawExtraBackground(x + extra.xOffset * 5, y - extra.yOffset * 5, extra.extraParts, backgroundColour);
+			break;
+		}
+
+		for(let part of component.parts) {
+			svgString += this.renderPart(x, y, part, colourIndex);
+			x += part.length * 5;
+		}
+
+
+		for(const extra of component.extras) {
+			let colour: OpaqueColour = extra.getOpacityColour(colourIndex)
+			svgString += drawExtraForeground(xStart + extra.xOffset * 5, y - extra.yOffset * 5, extra.extraParts, colour.colour);
+			break;
+		}
+
+		return(svgString);
+	}
+
+
+
 
 	protected renderHiddenSideComponents(x: number, y: number, colourIndex:number): string {
 		let svgString: string = "";
@@ -699,11 +732,11 @@ export abstract class SVGRenderer {
 				colourOpacity = component.getOpacityColour(colourIndex);
 
 				for(const part of component.internalStart) {
-					svgString += this.renderPart(x, y, component, part, colourIndex, colourOpacity);
+					svgString += this.renderPart(x, y, part, colourIndex);
 					x += part.length * 5;
 				}
 				for(const part of component.internalEnd) {
-					svgString += this.renderPart(x, y, component, part, colourIndex, colourOpacity);
+					svgString += this.renderPart(x, y, part, colourIndex);
 					x += part.length * 5;
 				}
 			}
@@ -739,12 +772,32 @@ export abstract class SVGRenderer {
 	protected renderComponent(startX:number, midY:number, component:Component, colourIndex: number): string {
 		let svgString: string = "";
 		for(const part of component.parts) {
-			svgString += this.renderPart(startX, midY, component, part, colourIndex, null);
+			svgString += this.renderPart(startX, midY, part, colourIndex);
 		}
 		return(svgString);
 	}
 
-	protected renderPart(startX:number, midY:number, component:Component, part: Part, colourIndex: number, defaultOpaqueColour: OpaqueColour):string {
+	/**
+	 * Render a specific part, <strong>WITHOUT</strong> any extras that are
+	 * attached to it, the order of rendering for a part is as follows:
+	 *
+	 *  - The background colour for the shape of the part
+	 *  - The outline of the part - if this part is joined then the left line is
+	 *    not drawn, if the next part is joined, then the right hand line is no
+	 *    joined
+	 *  - The details of the shape (i.e. whether it is hexagonal, octagonal etc.)
+	 *  - The finish for the part - in order of the comma separated list of
+	 *    finishes
+	 *
+	 * @param x The x co-ordinate at which to start the drawing of the part
+	 * @param y The y co-ordinate at which to start the drawing of trhe part
+	 * @param part The part to render
+	 * @param colourIndex The colour Index for the pencil colour
+	 * @param nextPartJoined Whether the next part is joined to this part
+	 *
+	 * @protected
+	 */
+	protected renderPart(x: number, y:number, part: Part, colourIndex: number, nextPartJoined: boolean=false):string {
 		let svgString:string = "";
 
 		// get the stroke colour
@@ -753,40 +806,30 @@ export abstract class SVGRenderer {
 			strokeColour = "dimgray";
 		}
 
-		for(const extra of component.extras) {
-			let backgroundColour = "black";
-
-			// TODO - do we need this
-			if(component.getOpacityColour(colourIndex).colour === "black") {
-				backgroundColour = "dimgray";
-			}
-
-			svgString += drawExtraBackground(startX + extra.xOffset * 5, midY - extra.yOffset * 5, extra.extraParts, backgroundColour);
-			break;
-		}
-
 		// maybe we have an over-ride colour and material
 		let opaqueColour: OpaqueColour = part.getOpacityColour(colourIndex);
 
+		// draw the background colour first
 		switch (part.shape) {
 			case "cylinder":
 			case "hexagonal":
 			case "octagonal":
 			case "cone":
-				svgString += `<path d="M${startX + part.internalOffset * 5} ` +
-						`${midY - (part.startHeight / 2 * 5)} ` +
-						`L${startX + part.internalOffset * 5 + part.length * 5} ${midY - (part.endHeight / 2 * 5)} ` +
-						`L${startX + part.internalOffset * 5 + part.length * 5} ${midY + (part.endHeight / 2 * 5)} ` +
-						`L${startX + part.internalOffset * 5} ${midY + (part.startHeight / 2 * 5)} Z" ` +
-						`stroke-width="0.5" ` +
-						`stroke="${strokeColour}" ` +
-						`stroke-linejoin="round" ` +
-						`fill="${opaqueColour.colour}" ` +
-						`fill-opacity="${opaqueColour.opacity}" />\n`
+				svgString += `<path d="M${x + part.internalOffset * 5} ` +
+						`${y - (part.startHeight / 2 * 5)} ` +
+						`L${x + part.internalOffset * 5 + part.length * 5} ${y - (part.endHeight / 2 * 5)} ` +
+						`L${x + part.internalOffset * 5 + part.length * 5} ${y + (part.endHeight / 2 * 5)} ` +
+						`L${x + part.internalOffset * 5} ${y + (part.startHeight / 2 * 5)} Z" ` +
+					`stroke-width="0.5" ` +
+					`stroke="${strokeColour}" ` +
+					`stroke-linejoin="round" ` +
+					`fill="${opaqueColour.colour}" ` +
+					`fill-opacity="${opaqueColour.opacity}"/>\n`
 
+				// TODO - move to later....
 				if(part.joined) {
-					svgString += lineJoined(startX,
-						midY - (part.endHeight / 2 * 5) + 0.25,
+					svgString += lineJoined(x,
+						y - (part.endHeight / 2 * 5) + 0.25,
 						part.startHeight * 5 - 0.5, "3", opaqueColour);
 					// svgString += lineJoined(startX + part.internalOffset * 5,
 					// 	midY - (part.endHeight / 2 * 5) + 0.25,
@@ -805,24 +848,24 @@ export abstract class SVGRenderer {
 					offsetY = (part.startHeight / 2 - part.offset[1]) * 5;
 				}
 
-				svgString += `<path d="M${startX + part.internalOffset * 5} ${midY - (part.startHeight / 2 * 5)} ` +
-					`Q${startX + part.internalOffset * 5 + offsetX} ${midY - offsetY} ` +
-					`${startX + part.internalOffset * 5} ${midY + (part.startHeight / 2 * 5)}" ` +
-					`stroke-width="0.5" stroke="${strokeColour}" stroke-linejoin="round" fill="${opaqueColour.colour}" fill-opacity="${opaqueColour.opacity}"/>\n`
-				// svgString += `<path d="M${startX} ${midY - (part.startHeight / 2 * 5)} ` +
-				// 	`Q${startX + offsetX} ${midY - offsetY} ` +
-				// 	`${startX} ${midY + (part.startHeight / 2 * 5)}" ` +
-				// 	`stroke-width="0.5" stroke="${strokeColour}" stroke-linejoin="round" fill="${opaqueColour.colour}" fill-opacity="${opaqueColour.opacity}"/>\n`
+				svgString += `<path d="M${x + part.internalOffset * 5} ${y - (part.startHeight / 2 * 5)} ` +
+					`Q${x + part.internalOffset * 5 + offsetX} ${y - offsetY} ` +
+					`${x + part.internalOffset * 5} ${y + (part.startHeight / 2 * 5)}" ` +
+					`stroke-width="0.5" ` +
+					`stroke="${strokeColour}" ` +
+					`stroke-linejoin="round" ` +
+					`fill="${opaqueColour.colour}" ` +
+					`fill-opacity="${opaqueColour.opacity}"/>\n`
 				break;
 			case "concave":
-				// svgString += `<path d="M${startX} ${midY - (part.startHeight / 2 * 5)} ` +
-				// 	`Q${startX + part.length * 5} ${midY} ` +
-				// 	`${startX} ${midY + (part.startHeight / 2 * 5)}" ` +
-				// 	`stroke-width="0.5" stroke="${strokeColour}" stroke-linejoin="round" fill="${opaqueColour.colour}" fill-opacity="${opaqueColour.opacity}"/>\n`
-				svgString += `<path d="M${startX + part.internalOffset * 5} ${midY - (part.startHeight / 2 * 5)} ` +
-					`Q${startX + part.internalOffset * 5 + part.length * 5} ${midY} ` +
-					`${startX + part.internalOffset * 5} ${midY + (part.startHeight / 2 * 5)}" ` +
-					`stroke-width="0.5" stroke="${strokeColour}" stroke-linejoin="round" fill="${opaqueColour.colour}" fill-opacity="${opaqueColour.opacity}"/>\n`
+				svgString += `<path d="M${x + part.internalOffset * 5} ${y - (part.startHeight / 2 * 5)} ` +
+					`Q${x + part.internalOffset * 5 + part.length * 5} ${y} ` +
+					`${x + part.internalOffset * 5} ${y + (part.startHeight / 2 * 5)}" ` +
+					`stroke-width="0.5" ` +
+					`stroke="${strokeColour}" ` +
+					`stroke-linejoin="round" ` +
+					`fill="${opaqueColour.colour}" ` +
+					`fill-opacity="${opaqueColour.opacity}"/>\n`
 				break;
 		}
 
@@ -833,13 +876,13 @@ export abstract class SVGRenderer {
 			case "hexagonal":
 				// svgString += drawShapeDetails(startX, midY, (part.length) * 5);
 				// startX - xOffsetTaperEnd * 5
-				svgString += drawShapeDetails(startX + (part.internalOffset - taperStartOffset) * 5, midY, (part.length + taperEndOffset) * 5);
+				svgString += drawShapeDetails(x + (part.internalOffset + taperStartOffset) * 5, y, (part.length + taperEndOffset) * 5);
 				break;
 			case "octagonal":
 				// svgString += drawShapeDetails(startX, midY - ((part.startHeight / 2 * 5) * 4 / 7), (part.length) * 5);
 				// svgString += drawShapeDetails(startX, midY + ((part.startHeight / 2 * 5) * 4 / 7), (part.length) * 5);
-				svgString += drawShapeDetails(startX + part.internalOffset * 5, midY - ((part.startHeight / 2 * 5) * 4 / 7), (part.length) * 5);
-				svgString += drawShapeDetails(startX + part.internalOffset * 5, midY + ((part.startHeight / 2 * 5) * 4 / 7), (part.length) * 5);
+				svgString += drawShapeDetails(x + part.internalOffset * 5, y - ((part.startHeight / 2 * 5) * 4 / 7), (part.length) * 5);
+				svgString += drawShapeDetails(x + part.internalOffset * 5, y + ((part.startHeight / 2 * 5) * 4 / 7), (part.length) * 5);
 				break;
 		}
 
@@ -847,14 +890,14 @@ export abstract class SVGRenderer {
 		// the question becomes whether there will be other finishes on different
 		// objects
 		for(const finish of part.finish.split(",")) {
-			let xStart: number = startX + (part.internalOffset)* 5;
-			let xEnd: number = startX + part.length * 5;
+			let xStart: number = x + (part.internalOffset)* 5;
+			let xEnd: number = x + part.length * 5;
 
-			let yStartTop: number = midY - (part.startHeight / 2 * 5);
-			let yStartBottom: number = midY + (part.startHeight / 2 * 5);
+			let yStartTop: number = y - (part.startHeight / 2 * 5);
+			let yStartBottom: number = y + (part.startHeight / 2 * 5);
 
-			let yEndTop: number = midY - (part.endHeight / 2 * 5);
-			let yEndBottom: number = midY + (part.endHeight / 2 * 5);
+			let yEndTop: number = y - (part.endHeight / 2 * 5);
+			let yEndBottom: number = y + (part.endHeight / 2 * 5);
 
 			// TODO - do specific lookup for the pattern
 			if(this.patternMap.has(finish)) {
@@ -875,35 +918,35 @@ export abstract class SVGRenderer {
 
 					for (let i = 0; i < 13; i++) {
 						if (i !== 0 && i !== 6 && i < 12) {
-							svgString += `<line x1="${startX + part.internalOffset * 5 + offset}" ` +
-								`y1="${midY + 1.0 - part.startHeight / 2 * 5}" ` +
-								`x2="${startX + part.internalOffset * 5 + offset}" ` +
-								`y2="${midY - 1.0 + part.startHeight / 2 * 5}" ` +
+							svgString += `<line x1="${x + part.internalOffset * 5 + offset}" ` +
+								`y1="${y + 1.0 - part.startHeight / 2 * 5}" ` +
+								`x2="${x + part.internalOffset * 5 + offset}" ` +
+								`y2="${y - 1.0 + part.startHeight / 2 * 5}" ` +
 								`stroke-width="1" stroke="gray" />\n`
 						}
 						offset += (part.length / 13) * 5;
 					}
 
-					svgString += drawOutlineCircle(4, startX + part.internalOffset * 5 + 15, midY - part.startHeight / 4 * 5, new OpaqueColour(null, "dimgray"));
+					svgString += drawOutlineCircle(4, x + part.internalOffset * 5 + 15, y - part.startHeight / 4 * 5, new OpaqueColour(null, "dimgray"));
 
 					break;
 				case "spring":
 
-					svgString += `<rect x="${startX + part.internalOffset * 5 + 5}" ` +
-						`y="${midY - (part.endHeight / 2 * 5) - 5}" ` +
+					svgString += `<rect x="${x + part.internalOffset * 5 + 5}" ` +
+						`y="${y - (part.endHeight / 2 * 5) - 5}" ` +
 						`width="${part.length * 5 - 10}" ` +
 						`height="${part.startHeight * 5 + 10}" ` +
 						`stroke-width="0.0" stroke="black" fill="url(#spring)"/>\n`
 					for (let i:number = 0; i < 4; i++) {
-						svgString += `<line x1="${startX + part.internalOffset * 5 + i * 2 + 0.5}" y1="${midY - (part.endHeight / 2 * 5) - 5}" ` +
-							`x2="${startX + part.internalOffset * 5 + i * 2 + 0.5}" y2="${midY + (part.endHeight / 2 * 5) + 5}" stroke="dimgray" stroke-linecap="round" stroke-width="2" />\n`;
-						svgString += `<line x1="${startX + part.internalOffset * 5 + i * 2 + 0.5}" y1="${midY - (part.endHeight / 2 * 5) - 5}" ` +
-							`x2="${startX + part.internalOffset * 5 + i * 2 + 0.5}" y2="${midY + (part.endHeight / 2 * 5) + 5}" stroke="white" stroke-linecap="round" stroke-width="1" />\n`;
+						svgString += `<line x1="${x + part.internalOffset * 5 + i * 2 + 0.5}" y1="${y - (part.endHeight / 2 * 5) - 5}" ` +
+							`x2="${x + part.internalOffset * 5 + i * 2 + 0.5}" y2="${y + (part.endHeight / 2 * 5) + 5}" stroke="dimgray" stroke-linecap="round" stroke-width="2" />\n`;
+						svgString += `<line x1="${x + part.internalOffset * 5 + i * 2 + 0.5}" y1="${y - (part.endHeight / 2 * 5) - 5}" ` +
+							`x2="${x + part.internalOffset * 5 + i * 2 + 0.5}" y2="${y + (part.endHeight / 2 * 5) + 5}" stroke="white" stroke-linecap="round" stroke-width="1" />\n`;
 
-						svgString += `<line x1="${startX + part.internalOffset * 5 + part.length * 5 - i * 2 - 0.5}" y1="${midY - (part.endHeight / 2 * 5) - 5}" ` +
-							`x2="${startX + part.internalOffset * 5 + part.length * 5 - i * 2 -0.5}" y2="${midY + (part.endHeight / 2 * 5) + 5}" stroke="dimgray" stroke-linecap="round" stroke-width="2" />\n`;
-						svgString += `<line x1="${startX + part.internalOffset * 5 + part.length * 5 - i * 2 -0.5}" y1="${midY - (part.endHeight / 2 * 5) - 5}" ` +
-							`x2="${startX + part.internalOffset * 5 + part.length * 5 - i * 2 -0.5}" y2="${midY + (part.endHeight / 2 * 5) + 5}" stroke="white" stroke-linecap="round" stroke-width="1" />\n`;
+						svgString += `<line x1="${x + part.internalOffset * 5 + part.length * 5 - i * 2 - 0.5}" y1="${y - (part.endHeight / 2 * 5) - 5}" ` +
+							`x2="${x + part.internalOffset * 5 + part.length * 5 - i * 2 -0.5}" y2="${y + (part.endHeight / 2 * 5) + 5}" stroke="dimgray" stroke-linecap="round" stroke-width="2" />\n`;
+						svgString += `<line x1="${x + part.internalOffset * 5 + part.length * 5 - i * 2 -0.5}" y1="${y - (part.endHeight / 2 * 5) - 5}" ` +
+							`x2="${x + part.internalOffset * 5 + part.length * 5 - i * 2 -0.5}" y2="${y + (part.endHeight / 2 * 5) + 5}" stroke="white" stroke-linecap="round" stroke-width="1" />\n`;
 
 					}
 					break;
@@ -914,10 +957,10 @@ export abstract class SVGRenderer {
 							// TODO - half a line
 							break;
 						}
-						svgString += `<line x1="${startX + part.internalOffset * 5 + i*5}" y1="${midY - (part.endHeight / 2 * 5) - 2}" ` +
-							`x2="${startX + part.internalOffset * 5 + (i + 1) * 5}" y2="${midY + (part.endHeight / 2 * 5) + 2}" stroke="dimgray" stroke-linecap="round" stroke-width="2" />\n`;
-						svgString += `<line x1="${startX + part.internalOffset * 5 + i*5}" y1="${midY - (part.endHeight / 2 * 5) - 2}" ` +
-							`x2="${startX + part.internalOffset * 5 + (i + 1) * 5}" y2="${midY + (part.endHeight / 2 * 5) + 2}" stroke="${opaqueColour}" stroke-linecap="round" stroke-width="1" />\n`;
+						svgString += `<line x1="${x + part.internalOffset * 5 + i*5}" y1="${y - (part.endHeight / 2 * 5) - 2}" ` +
+							`x2="${x + part.internalOffset * 5 + (i + 1) * 5}" y2="${y + (part.endHeight / 2 * 5) + 2}" stroke="dimgray" stroke-linecap="round" stroke-width="2" />\n`;
+						svgString += `<line x1="${x + part.internalOffset * 5 + i*5}" y1="${y - (part.endHeight / 2 * 5) - 2}" ` +
+							`x2="${x + part.internalOffset * 5 + (i + 1) * 5}" y2="${y + (part.endHeight / 2 * 5) + 2}" stroke="${opaqueColour}" stroke-linecap="round" stroke-width="1" />\n`;
 					}
 					break;
 				case "indicator":
@@ -925,13 +968,13 @@ export abstract class SVGRenderer {
 					let backgoundColour: OpaqueColour = part.getBackgroundOpacityColour(colourIndex);
 
 					// now draw the indicator
-					svgString += `<rect x="${startX + part.internalOffset * 5 + 10}" ` +
-						`y="${midY - (part.endHeight / 4 * 5)}" ` +
+					svgString += `<rect x="${x + part.internalOffset * 5 + 10}" ` +
+						`y="${y - (part.endHeight / 4 * 5)}" ` +
 						`width="${part.length * 5 - 20}" ` +
 						`height="${part.startHeight / 2 * 5}" ` +
 						`rx="3" ry="3" stroke-width="1" stroke="black" fill="${backgoundColour.colour}"/>\n`;
-					svgString += `<text x="${startX + part.internalOffset * 5 + (part.length * 5) / 2}" ` +
-						`y="${midY}" ` +
+					svgString += `<text x="${x + part.internalOffset * 5 + (part.length * 5) / 2}" ` +
+						`y="${y}" ` +
 						`text-anchor="middle" dominant-baseline="central">` +
 						`<tspan stroke="dimgray" stroke-width="0.5" font-family="sans-serif" fill="black" textLength="{this.width * 5 - 24}" > ` +
 						`HB` +
@@ -945,23 +988,23 @@ export abstract class SVGRenderer {
 					let backgroundColour: OpaqueColour = part.getBackgroundOpacityColour(colourIndex);
 
 					// horizontal
-					svgString += `<rect x="${startX + part.internalOffset * 5}" ` +
-						`y="${midY - 4}" ` +
+					svgString += `<rect x="${x + part.internalOffset * 5}" ` +
+						`y="${y - 4}" ` +
 						`width="${part.length * 5}" ` +
 						`height="${8}" ` +
 						`rx="0" ry="0" stroke-width="1" stroke="black" fill="${backgroundColour.colour}"/>\n`;
-					svgString += `<rect x="${startX + part.internalOffset * 5 + 6}" ` +
-						`y="${midY - (part.endHeight / 4 * 5)}" ` +
+					svgString += `<rect x="${x + part.internalOffset * 5 + 6}" ` +
+						`y="${y - (part.endHeight / 4 * 5)}" ` +
 						`width="${part.length * 5 - 12}" ` +
 						`height="${part.startHeight / 2 * 5}" ` +
 						`rx="3" ry="3" stroke-width="1" stroke="black" fill="${backgroundColour.colour}"/>\n`;
-					svgString += `<rect x="${startX + part.internalOffset * 5 + 0.25}" ` +
-						`y="${midY - 3.75}" ` +
+					svgString += `<rect x="${x + part.internalOffset * 5 + 0.25}" ` +
+						`y="${y - 3.75}" ` +
 						`width="${part.length * 5 - 0.5}" ` +
 						`height="${7.5}" ` +
 						`rx="0" ry="0" stroke-width="1" stroke="none" fill="${backgroundColour.colour}"/>\n`;
-					svgString += `<text x="${startX + part.internalOffset * 5 + (part.length * 5) / 2}" ` +
-						`y="${midY}" ` +
+					svgString += `<text x="${x + part.internalOffset * 5 + (part.length * 5) / 2}" ` +
+						`y="${y}" ` +
 						`text-anchor="middle" dominant-baseline="central">` +
 						`<tspan stroke="dimgray" stroke-width="0.5" font-family="sans-serif" fill="black" textLength="{this.width * 5 - 14}" > ` +
 						`HB` +
@@ -969,8 +1012,8 @@ export abstract class SVGRenderer {
 						`</text>`;
 					break;
 				case "indicator-etched":
-					svgString += `<text x="${startX + part.internalOffset * 5 + (part.length * 5) / 2}" ` +
-						`y="${midY}" ` +
+					svgString += `<text x="${x + part.internalOffset * 5 + (part.length * 5) / 2}" ` +
+						`y="${y}" ` +
 						`text-anchor="middle" dominant-baseline="central">` +
 						`<tspan stroke="dimgray" stroke-width="0.5" font-family="sans-serif" fill="black" textLength="{this.width * 5 - 12}" > ` +
 						`HB` +
@@ -978,12 +1021,6 @@ export abstract class SVGRenderer {
 						`</text>`;
 					break;
 			}
-		}
-
-		for(const extra of component.extras) {
-			let colour: OpaqueColour = extra.getOpacityColour(colourIndex)
-			svgString += drawExtraForeground(startX + extra.xOffset * 5, midY - extra.yOffset * 5, extra.extraParts, colour.colour);
-			break;
 		}
 
 		return(svgString);

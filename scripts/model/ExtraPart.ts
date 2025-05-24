@@ -26,7 +26,7 @@ export class ExtraPart extends Base {
 
 	isCurve: boolean = false;
 
-	postConstruct(colours: string[], colourMap: { [id: string]: string; }): void {
+	postConstruct(colours: string[], colourMap: Map<string, string>): void {
 		switch (this.shape) {
 			case "curve":
 			case "curve-fill":

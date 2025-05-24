@@ -72,11 +72,11 @@
 <line x1="256.25" y1="170" x2="256.25" y2="220" stroke="white" stroke-linecap="round"  stroke-width="2.0" />
 <line x1="256.25" y1="170" x2="256.25" y2="220" stroke="#0f0f0f" stroke-linecap="round"  stroke-width="1.0" />
 <!-- part cone --><path d="M296.25 200 L321.25 192.5 L321.25 247.5 L296.25 240 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b88160" fill-opacity="1"/>
-<!-- part hexagonal --><path d="M321.25 192.5 L811.25 192.5 L811.25 247.5 L321.25 247.5 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#1a4b88" fill-opacity="0.5"/>
+<!-- part hexagonal --><path d="M321.25 192.5 L811.25 192.5 L811.25 247.5 L321.25 247.5 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="burgundy" fill-opacity="0.5"/>
 <line x1="333.75" y1="220" x2="823.75" y2="220" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="333.75" y1="220" x2="823.75" y2="220" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
 <rect x="321.25" y="192.75" width="12" height="54.5" rx="0" ry="0" stroke-width="0.5" stroke="none" fill="#b88160" fill-opacity="1"/>
-<path d="M 333.75 192.5 C 317.1875 199.375, 317.1875 213.125, 333.75 220" stroke-width="0.5" stroke="black" stroke-linecap="round" fill-opacity="0.5" fill="#1a4b88" /><path d="M 333.75 247.5 C 317.1875 240.625, 317.1875 226.875, 333.75 220" stroke-width="0.5" stroke="black" stroke-linecap="round" fill-opacity="0.5" fill="#1a4b88" /><!-- end cylinder --><path d="M811.25 196.875 L853.75 196.875 L853.75 243.125 L811.25 243.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b88160" fill-opacity="1"/>
+<path d="M 333.75 192.5 C 317.1875 199.375, 317.1875 213.125, 333.75 220" stroke-width="0.5" stroke="black" stroke-linecap="round" fill-opacity="0.5" fill="burgundy" /><path d="M 333.75 247.5 C 317.1875 240.625, 317.1875 226.875, 333.75 220" stroke-width="0.5" stroke="black" stroke-linecap="round" fill-opacity="0.5" fill="burgundy" /><!-- end cylinder --><path d="M811.25 196.875 L853.75 196.875 L853.75 243.125 L811.25 243.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b88160" fill-opacity="1"/>
 <line x1="811.25" y1="180" x2="811.25" y2="260" stroke="white" stroke-linecap="round"  stroke-width="1.0" />
 <line x1="811.25" y1="180" x2="811.25" y2="260" stroke="black" stroke-linecap="round" stroke-dasharray="2,3" stroke-width="1.0" />
 <line x1="821.25" y1="220" x2="893.75" y2="220" stroke-linecap="round" stroke="white"  stroke-width="2.0" />
