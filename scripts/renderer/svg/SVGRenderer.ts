@@ -329,8 +329,8 @@ export abstract class SVGRenderer {
 						`stroke-width="0.5" ` +
 						`stroke="${strokeColor}" ` +
 						`stroke-linecap="round" ` +
-							`fill-opacity="${backgroundColour.opacity}" ` +
-							`fill="${backgroundColour.colour}" />\n`;
+							`fill-opacity="${opaqueColour.opacity}" ` +
+							`fill="${opaqueColour.colour}" />\n`;
 
 					svgString += `<path d="M ${startX + (part.length + xOffsetTaperEnd) * 5} ${midY + part.endHeight / 2 * 5} ` +
 						`C ${startX + ((part.length - xOffsetTaperEnd) * 5 * xOffsetTaperEndScale)} ${midY + part.endHeight / 2 * 5 * 3 / 4}, ` +
@@ -339,8 +339,8 @@ export abstract class SVGRenderer {
 						`stroke-width="0.5" ` +
 						`stroke="${strokeColor}" ` +
 						`stroke-linecap="round" ` +
-							`fill-opacity="${backgroundColour.opacity}" ` +
-							`fill="${backgroundColour.colour}" />\n`;
+							`fill-opacity="${opaqueColour.opacity}" ` +
+							`fill="${opaqueColour.colour}" />\n`;
 				break;
 				case "cylinder":
 					svgString += rectangle(startX + part.length * 5 + xOffsetTaperEnd * 5, midY - part.endHeight / 2 * 5 + 0.25, xOffsetTaperEnd * -5 - 0.5, part.startHeight * 5 - 0.5, "none", backgroundColour);
@@ -351,8 +351,8 @@ export abstract class SVGRenderer {
 						`stroke-width="0.5" ` +
 						`stroke="${strokeColor}" ` +
 						`stroke-linecap="round" ` +
-							`fill-opacity="${backgroundColour.opacity}" ` +
-							`fill="${backgroundColour.colour}" />\n`;
+							`fill-opacity="${opaqueColour.opacity}" ` +
+							`fill="${opaqueColour.colour}" />\n`;
 					break;
 			}
 		}
