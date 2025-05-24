@@ -55,8 +55,11 @@ export class Component extends Base {
 	// this is the offset of the extras (if it has any)
 	allOffset: number = 0;
 
+	internalStartLength: number = 0;
+	internalEndLength: number = 0;
 	hasInternalStart: boolean = false;
 	hasInternalEnd: boolean = false;
+	hasInternal: boolean = false;
 
 	isHidden: boolean = false;
 
@@ -70,10 +73,12 @@ export class Component extends Base {
 
 		for(const internalEnd of this.internalEnd) {
 			internalEnd.postConstruct(this.mergedColours, colourMap);
+			this.internalEndLength += internalEnd.length;
 		}
 
 		for(const internalStart of this.internalStart) {
 			internalStart.postConstruct(this.mergedColours, colourMap);
+			this.internalStartLength += internalStart.length;
 		}
 
 		this.materials.push(this.material);
@@ -85,6 +90,8 @@ export class Component extends Base {
 		if(this.internalEnd.length > 0) {
 			this.hasInternalEnd = true;
 		}
+
+		this.hasInternal = this.hasInternalStart || this.hasInternalEnd;
 
 		for(const part of this.parts) {
 			this.length += part.length;

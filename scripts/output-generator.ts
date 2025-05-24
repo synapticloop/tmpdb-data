@@ -52,9 +52,9 @@ for (const [dirIndex, pencilDirectory] of pencilDirectories.entries()) {
 			let fileNumber = 1;
 
 			// fileNumber = await renderSVGAndPNG(new SVGTechnicalRenderer(pencil), -1, "technical", pencilDirectory, pencilFileName, fileNumber);
-			fileNumber = await renderSVGAndPNG(new SVGTechnicalGroupedRenderer(pencil), -1, "technical", pencilDirectory, pencilFileName + "-grouped", fileNumber);
+			// fileNumber = await renderSVGAndPNG(new SVGTechnicalGroupedRenderer(pencil), -1, "technical", pencilDirectory, pencilFileName + "-grouped", fileNumber);
 			// fileNumber = await renderSVGAndPNG(new SVGTechnicalComponentRenderer(pencil), -1, "technical", pencilDirectory, pencilFileName + "-components", fileNumber);
-			// fileNumber = await renderSVGAndPNG(new SVGTechnicalExplodedRenderer(pencil), -1, "technical", pencilDirectory, pencilFileName + "-exploded", fileNumber);
+			fileNumber = await renderSVGAndPNG(new SVGTechnicalExplodedRenderer(pencil), -1, "technical", pencilDirectory, pencilFileName + "-exploded", fileNumber);
 
 			// fileNumber = await renderSVGAndPNG(new SVGPencilRenderer(pencil), -1, "pencil", pencilDirectory, pencilFileName, fileNumber);
 			// fileNumber = await renderSVGAndPNG(new SVGPencilAllRenderer(pencil), -1, "pencil", pencilDirectory, pencilFileName + "-all-variants", fileNumber);
@@ -66,7 +66,7 @@ for (const [dirIndex, pencilDirectory] of pencilDirectories.entries()) {
 				const pencilExplodedColourOutputFileName: string = pencilFileName + "-exploded-colour-" + colourComponent.colourName;
 
 				// fileNumber = await renderSVGAndPNG(new SVGTechnicalRenderer(pencil), index, "technical", pencilDirectory, pencilColourOutputFileName, fileNumber);
-				// fileNumber = await renderSVGAndPNG(new SVGTechnicalExplodedRenderer(pencil), index, "technical", pencilDirectory, pencilExplodedColourOutputFileName, fileNumber);
+				fileNumber = await renderSVGAndPNG(new SVGTechnicalExplodedRenderer(pencil), index, "technical", pencilDirectory, pencilExplodedColourOutputFileName, fileNumber);
 				// fileNumber = await renderSVGAndPNG(new SVGPencil45Renderer(pencil), index, "pencil", pencilDirectory, pencilColourOutputFileName + "-45", fileNumber);
 				// fileNumber = await renderSVGAndPNG(new SVGPencilRenderer(pencil), index, "pencil", pencilDirectory, pencilColourOutputFileName, fileNumber);
 				// numColours++;

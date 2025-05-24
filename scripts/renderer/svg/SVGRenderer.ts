@@ -697,7 +697,7 @@ export abstract class SVGRenderer {
 	}
 
 	private renderSideComponent(x: number, y: number, component: Component, colourIndex:number): string {
-		let svgString: string = "";
+		let svgString: string = `\n\n<!-- renderSideComponent: ${component.type} -->\n`;
 		let xStart: number = x;
 
 		for(const extra of component.extras) {
@@ -823,7 +823,7 @@ export abstract class SVGRenderer {
 	 * @protected
 	 */
 	protected renderPart(x: number, y:number, part: Part, colourIndex: number, nextPartJoined: boolean=false):string {
-		let svgString:string = "";
+		let svgString: string = `\n\n<!-- renderPart: ${part.shape} -->\n`;
 
 		// get the stroke colour
 		let strokeColour:string = "black"
