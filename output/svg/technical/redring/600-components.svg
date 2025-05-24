@@ -51,19 +51,19 @@
 <line x1="600" y1="630" x2="600" y2="670" stroke="#000000" stroke-linecap="round"  stroke-width="1" />
 <circle r="10" cx="600" cy="650" fill="white" fill-opacity="0" stroke="#000000" stroke-width="1"  />
 <text x="30" y="50" font-size="2.0em" font-weight="bold"> Redring // 600 (Model #: 600)</text>
-<line x1="235.625" y1="189.5" x2="235.625" y2="300" stroke="#cfcfcf" stroke-linecap="round"  stroke-width="1" />
+<line x1="235.625" y1="188.875" x2="235.625" y2="300" stroke="#cfcfcf" stroke-linecap="round"  stroke-width="1" />
 <line x1="235.625" y1="180" x2="235.625" y2="300" stroke="#cfcfcf" stroke-linecap="round"  stroke-width="1" />
 <line x1="303.125" y1="180" x2="303.125" y2="300" stroke="#cfcfcf" stroke-linecap="round"  stroke-width="1" />
 <line x1="453.125" y1="180" x2="453.125" y2="300" stroke="#cfcfcf" stroke-linecap="round"  stroke-width="1" />
 <line x1="453.125" y1="180" x2="453.125" y2="300" stroke="#cfcfcf" stroke-linecap="round"  stroke-width="1" />
 <line x1="786.875" y1="180" x2="786.875" y2="300" stroke="#cfcfcf" stroke-linecap="round"  stroke-width="1" />
-<line x1="629.375" y1="220" x2="629.375" y2="300" stroke="#cfcfcf" stroke-linecap="round"  stroke-width="1" />
-<line x1="824.375" y1="220" x2="824.375" y2="300" stroke="#cfcfcf" stroke-linecap="round"  stroke-width="1" />
+<line x1="635.625" y1="220" x2="635.625" y2="300" stroke="#cfcfcf" stroke-linecap="round"  stroke-width="1" />
+<line x1="814.375" y1="220" x2="814.375" y2="300" stroke="#cfcfcf" stroke-linecap="round"  stroke-width="1" />
 <line x1="814.375" y1="180" x2="814.375" y2="300" stroke="#cfcfcf" stroke-linecap="round"  stroke-width="1" />
 <line x1="834.375" y1="180" x2="834.375" y2="300" stroke="#cfcfcf" stroke-linecap="round"  stroke-width="1" />
 <line x1="881.875" y1="180" x2="881.875" y2="300" stroke="#cfcfcf" stroke-linecap="round"  stroke-width="1" />
 <line x1="899.375" y1="180" x2="899.375" y2="300" stroke="#cfcfcf" stroke-linecap="round"  stroke-width="1" />
-<line x1="964.375" y1="189.5" x2="964.375" y2="300" stroke="#cfcfcf" stroke-linecap="round"  stroke-width="1" />
+<line x1="964.375" y1="188.875" x2="964.375" y2="300" stroke="#cfcfcf" stroke-linecap="round"  stroke-width="1" />
 <line x1="235.625" y1="169" x2="235.625" y2="191" stroke="black" stroke-width="1" />
 <line x1="235.625" y1="180" x2="303.125" y2="180" stroke="black" stroke-width="1" />
 <line x1="303.125" y1="169" x2="303.125" y2="191" stroke="black" stroke-width="1" />
@@ -80,10 +80,10 @@
 <line x1="786.875" y1="180" x2="814.375" y2="180" stroke="black" stroke-width="1" />
 <line x1="814.375" y1="169" x2="814.375" y2="191" stroke="black" stroke-width="1" />
 <text x="800.625" y="161" font-size="1.2em" transform="rotate(-90, 800.625, 161)" font-weight="bold" text-anchor="start" dominant-baseline="central" fill="black"><tspan x="800.625" dy="0">5.50 mm clip</tspan></text>
-<line x1="629.375" y1="209" x2="629.375" y2="231" stroke="black" stroke-width="1" />
-<line x1="629.375" y1="220" x2="824.375" y2="220" stroke="black" stroke-width="1" />
-<line x1="824.375" y1="209" x2="824.375" y2="231" stroke="black" stroke-width="1" />
-<text x="726.875" y="212" font-weight="bold" font-size="1.2em" stroke="white" stroke-width="0.25" text-anchor="middle" dominant-baseline="middle" fill="black"><tspan x="718.875" dy="0">39.00 mm</tspan><tspan x="718.875" dy="1em">clip (extra)</tspan></text>
+<line x1="635.625" y1="209" x2="635.625" y2="231" stroke="black" stroke-width="1" />
+<line x1="635.625" y1="220" x2="814.375" y2="220" stroke="black" stroke-width="1" />
+<line x1="814.375" y1="209" x2="814.375" y2="231" stroke="black" stroke-width="1" />
+<text x="725" y="212" font-weight="bold" font-size="1.2em" stroke="white" stroke-width="0.25" text-anchor="middle" dominant-baseline="middle" fill="black"><tspan x="717" dy="0">35.75 mm</tspan><tspan x="717" dy="1em">clip (extra)</tspan></text>
 <line x1="814.375" y1="169" x2="814.375" y2="191" stroke="black" stroke-width="1" />
 <line x1="814.375" y1="180" x2="834.375" y2="180" stroke="black" stroke-width="1" />
 <line x1="834.375" y1="169" x2="834.375" y2="191" stroke="black" stroke-width="1" />
@@ -134,16 +134,16 @@
 
 
 <!-- renderSideComponent: clip -->
-<path d="M631.625 265.875 Q654.375 289.375 664.375 265.875 Z" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
-<line x1="629.375" y1="264.375" x2="811.875" y2="264.375" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
-<path d="M811.875 264.375 Q831.875 271.875 811.875 278.125" stroke-width="4" stroke="black" fill="none" stroke-linecap="round" />
+<path d="M637.875 266.875 Q660.625 289.375 670.625 266.875" stroke-width="4" stroke="black" fill="none" stroke-linecap="round" />
+<line x1="635.625" y1="264.375" x2="818.125" y2="264.375" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
+<path d="M818.125 264.375 Q838.125 271.875 818.125 278.125" stroke-width="4" stroke="black" fill="none" stroke-linecap="round" />
 
 
 <!-- renderPart: cylinder -->
-<path d="M786.875 277.5 L814.375 277.5 L814.375 322.5 L786.875 322.5 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<path d="M631.625 265.875 Q654.375 288.375 664.375 265.875 Z" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
-<line x1="629.375" y1="264.375" x2="811.875" y2="264.375" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
-<path d="M811.875 264.375 Q831.875 271.875 811.875 278.125" stroke-width="3" stroke="white" fill="none" stroke-linecap="round" />
+<path d="M786.875 276.875 L814.375 276.875 L814.375 323.125 L786.875 323.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<path d="M637.875 266.875 Q660.625 289.375 670.625 266.875" stroke-width="3" stroke="white" fill="none" stroke-linecap="round" />
+<line x1="635.625" y1="264.375" x2="818.125" y2="264.375" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
+<path d="M818.125 264.375 Q838.125 271.875 818.125 278.125" stroke-width="3" stroke="white" fill="none" stroke-linecap="round" />
 
 
 <!-- renderSideComponent: tail -->
@@ -158,7 +158,7 @@
 
 <!-- renderPart: cylinder -->
 <path d="M834.375 279.375 L881.875 279.375 L881.875 320.625 L834.375 320.625 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<path d="M834.375 279.375 L881.875 279.375 L881.875 320.625 L834.375 320.625 Z" stroke-width="1.0" stroke="black" fill="url(#knurled)"/>
+<path d="M834.375 279.375 L881.875 279.375 L881.875 320.625 L834.375 320.625 Z" stroke-width="1.0" stroke="black" fill="url(#knurled-small)"/>
 <rect x="844.375" y="289.6875" width="27.5" height="20.625" rx="3" ry="3" stroke-width="1" stroke="black" fill="white"/>
 <text x="858.125" y="300" text-anchor="middle" dominant-baseline="central"><tspan stroke="dimgray" stroke-width="0.5" font-family="sans-serif" fill="black" textLength="{this.width * 5 - 24}" > HB</tspan></text>
 

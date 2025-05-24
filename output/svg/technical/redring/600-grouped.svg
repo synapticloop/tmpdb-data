@@ -78,16 +78,16 @@
 
 
 <!-- renderSideComponent: clip -->
-<path d="M531.625 265.875 Q554.375 289.375 564.375 265.875 Z" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
-<line x1="529.375" y1="264.375" x2="711.875" y2="264.375" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
-<path d="M711.875 264.375 Q731.875 271.875 711.875 278.125" stroke-width="4" stroke="black" fill="none" stroke-linecap="round" />
+<path d="M537.875 266.875 Q560.625 289.375 570.625 266.875" stroke-width="4" stroke="black" fill="none" stroke-linecap="round" />
+<line x1="535.625" y1="264.375" x2="718.125" y2="264.375" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
+<path d="M718.125 264.375 Q738.125 271.875 718.125 278.125" stroke-width="4" stroke="black" fill="none" stroke-linecap="round" />
 
 
 <!-- renderPart: cylinder -->
-<path d="M686.875 277.5 L714.375 277.5 L714.375 322.5 L686.875 322.5 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<path d="M531.625 265.875 Q554.375 288.375 564.375 265.875 Z" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
-<line x1="529.375" y1="264.375" x2="711.875" y2="264.375" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
-<path d="M711.875 264.375 Q731.875 271.875 711.875 278.125" stroke-width="3" stroke="white" fill="none" stroke-linecap="round" />
+<path d="M686.875 276.875 L714.375 276.875 L714.375 323.125 L686.875 323.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<path d="M537.875 266.875 Q560.625 289.375 570.625 266.875" stroke-width="3" stroke="white" fill="none" stroke-linecap="round" />
+<line x1="535.625" y1="264.375" x2="718.125" y2="264.375" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
+<path d="M718.125 264.375 Q738.125 271.875 718.125 278.125" stroke-width="3" stroke="white" fill="none" stroke-linecap="round" />
 
 
 <!-- renderSideComponent: tail -->
@@ -102,7 +102,7 @@
 
 <!-- renderPart: cylinder -->
 <path d="M734.375 279.375 L781.875 279.375 L781.875 320.625 L734.375 320.625 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<path d="M734.375 279.375 L781.875 279.375 L781.875 320.625 L734.375 320.625 Z" stroke-width="1.0" stroke="black" fill="url(#knurled)"/>
+<path d="M734.375 279.375 L781.875 279.375 L781.875 320.625 L734.375 320.625 Z" stroke-width="1.0" stroke="black" fill="url(#knurled-small)"/>
 <rect x="744.375" y="289.6875" width="27.5" height="20.625" rx="3" ry="3" stroke-width="1" stroke="black" fill="white"/>
 <text x="758.125" y="300" text-anchor="middle" dominant-baseline="central"><tspan stroke="dimgray" stroke-width="0.5" font-family="sans-serif" fill="black" textLength="{this.width * 5 - 24}" > HB</tspan></text>
 
@@ -150,54 +150,54 @@
 
 <!-- renderPart: cylinder -->
 <path d="M855.625 286.25 L864.375 286.25 L864.375 313.75 L855.625 313.75 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<line x1="135.625" y1="206.5" x2="135.625" y2="228.5" stroke="black" stroke-width="1" />
-<line x1="135.625" y1="217.5" x2="203.125" y2="217.5" stroke="black" stroke-width="1" />
-<line x1="203.125" y1="206.5" x2="203.125" y2="228.5" stroke="black" stroke-width="1" />
-<text x="169.375" y="198.5" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="black"><tspan x="169.375" dy="0">13.50 mm</tspan></text>
-<line x1="135.625" y1="206.5" x2="135.625" y2="228.5" stroke="black" stroke-width="1" />
-<line x1="135.625" y1="217.5" x2="203.125" y2="217.5" stroke="black" stroke-width="1" />
-<line x1="203.125" y1="206.5" x2="203.125" y2="228.5" stroke="black" stroke-width="1" />
-<text x="169.375" y="236.5" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="black"><tspan x="169.375" dy="0">tip</tspan></text>
-<line x1="203.125" y1="206.5" x2="203.125" y2="228.5" stroke="black" stroke-width="1" />
-<line x1="203.125" y1="217.5" x2="799.375" y2="217.5" stroke="black" stroke-width="1" />
-<line x1="799.375" y1="206.5" x2="799.375" y2="228.5" stroke="black" stroke-width="1" />
-<text x="501.25" y="198.5" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="black"><tspan x="501.25" dy="0">119.25 mm</tspan></text>
-<line x1="203.125" y1="206.5" x2="203.125" y2="228.5" stroke="black" stroke-width="1" />
-<line x1="203.125" y1="217.5" x2="799.375" y2="217.5" stroke="black" stroke-width="1" />
-<line x1="799.375" y1="206.5" x2="799.375" y2="228.5" stroke="black" stroke-width="1" />
-<text x="501.25" y="236.5" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="black"><tspan x="501.25" dy="0">body</tspan></text>
-<line x1="799.375" y1="206.5" x2="799.375" y2="228.5" stroke="black" stroke-width="1" />
-<line x1="799.375" y1="217.5" x2="864.375" y2="217.5" stroke="black" stroke-width="1" />
-<line x1="864.375" y1="206.5" x2="864.375" y2="228.5" stroke="black" stroke-width="1" />
-<text x="831.875" y="198.5" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="black"><tspan x="831.875" dy="0">13.00 mm</tspan></text>
-<line x1="799.375" y1="206.5" x2="799.375" y2="228.5" stroke="black" stroke-width="1" />
-<line x1="799.375" y1="217.5" x2="864.375" y2="217.5" stroke="black" stroke-width="1" />
-<line x1="864.375" y1="206.5" x2="864.375" y2="228.5" stroke="black" stroke-width="1" />
-<text x="831.875" y="236.5" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="black"><tspan x="831.875" dy="0">cap</tspan></text>
-<line x1="135.625" y1="401.5" x2="135.625" y2="423.5" stroke="black" stroke-width="1" />
-<line x1="135.625" y1="412.5" x2="864.375" y2="412.5" stroke="black" stroke-width="1" />
-<line x1="864.375" y1="401.5" x2="864.375" y2="423.5" stroke="black" stroke-width="1" />
-<text x="500" y="431.5" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="black"><tspan x="500" dy="0">145.75 mm</tspan></text>
-<line x1="135.625" y1="401.5" x2="135.625" y2="423.5" stroke="black" stroke-width="1" />
-<line x1="135.625" y1="412.5" x2="864.375" y2="412.5" stroke="black" stroke-width="1" />
-<line x1="864.375" y1="401.5" x2="864.375" y2="423.5" stroke="black" stroke-width="1" />
-<text x="500" y="393.5" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="black"><tspan x="500" dy="0">Total Length</tspan></text>
-<line x1="529.375" y1="341.5" x2="529.375" y2="363.5" stroke="black" stroke-width="1" />
-<line x1="529.375" y1="352.5" x2="724.375" y2="352.5" stroke="black" stroke-width="1" />
-<line x1="724.375" y1="341.5" x2="724.375" y2="363.5" stroke="black" stroke-width="1" />
-<text x="626.875" y="333.5" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="black"><tspan x="626.875" dy="0">39.00 mm</tspan></text>
-<line x1="529.375" y1="341.5" x2="529.375" y2="363.5" stroke="black" stroke-width="1" />
-<line x1="529.375" y1="352.5" x2="724.375" y2="352.5" stroke="black" stroke-width="1" />
-<line x1="724.375" y1="341.5" x2="724.375" y2="363.5" stroke="black" stroke-width="1" />
-<text x="626.875" y="371.5" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="black"><tspan x="626.875" dy="0">clip</tspan></text>
-<line x1="203.125" y1="341.5" x2="203.125" y2="363.5" stroke="black" stroke-width="1" />
-<line x1="203.125" y1="352.5" x2="353.125" y2="352.5" stroke="black" stroke-width="1" />
-<line x1="353.125" y1="341.5" x2="353.125" y2="363.5" stroke="black" stroke-width="1" />
-<text x="278.125" y="333.5" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="black"><tspan x="278.125" dy="0">5.50 mm</tspan></text>
-<line x1="203.125" y1="341.5" x2="203.125" y2="363.5" stroke="black" stroke-width="1" />
-<line x1="203.125" y1="352.5" x2="353.125" y2="352.5" stroke="black" stroke-width="1" />
-<line x1="353.125" y1="341.5" x2="353.125" y2="363.5" stroke="black" stroke-width="1" />
-<text x="278.125" y="371.5" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="black"><tspan x="278.125" dy="0">grip</tspan></text>
+<line x1="135.625" y1="205.875" x2="135.625" y2="227.875" stroke="black" stroke-width="1" />
+<line x1="135.625" y1="216.875" x2="203.125" y2="216.875" stroke="black" stroke-width="1" />
+<line x1="203.125" y1="205.875" x2="203.125" y2="227.875" stroke="black" stroke-width="1" />
+<text x="169.375" y="197.875" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="black"><tspan x="169.375" dy="0">13.50 mm</tspan></text>
+<line x1="135.625" y1="205.875" x2="135.625" y2="227.875" stroke="black" stroke-width="1" />
+<line x1="135.625" y1="216.875" x2="203.125" y2="216.875" stroke="black" stroke-width="1" />
+<line x1="203.125" y1="205.875" x2="203.125" y2="227.875" stroke="black" stroke-width="1" />
+<text x="169.375" y="235.875" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="black"><tspan x="169.375" dy="0">tip</tspan></text>
+<line x1="203.125" y1="205.875" x2="203.125" y2="227.875" stroke="black" stroke-width="1" />
+<line x1="203.125" y1="216.875" x2="799.375" y2="216.875" stroke="black" stroke-width="1" />
+<line x1="799.375" y1="205.875" x2="799.375" y2="227.875" stroke="black" stroke-width="1" />
+<text x="501.25" y="197.875" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="black"><tspan x="501.25" dy="0">119.25 mm</tspan></text>
+<line x1="203.125" y1="205.875" x2="203.125" y2="227.875" stroke="black" stroke-width="1" />
+<line x1="203.125" y1="216.875" x2="799.375" y2="216.875" stroke="black" stroke-width="1" />
+<line x1="799.375" y1="205.875" x2="799.375" y2="227.875" stroke="black" stroke-width="1" />
+<text x="501.25" y="235.875" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="black"><tspan x="501.25" dy="0">body</tspan></text>
+<line x1="799.375" y1="205.875" x2="799.375" y2="227.875" stroke="black" stroke-width="1" />
+<line x1="799.375" y1="216.875" x2="864.375" y2="216.875" stroke="black" stroke-width="1" />
+<line x1="864.375" y1="205.875" x2="864.375" y2="227.875" stroke="black" stroke-width="1" />
+<text x="831.875" y="197.875" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="black"><tspan x="831.875" dy="0">13.00 mm</tspan></text>
+<line x1="799.375" y1="205.875" x2="799.375" y2="227.875" stroke="black" stroke-width="1" />
+<line x1="799.375" y1="216.875" x2="864.375" y2="216.875" stroke="black" stroke-width="1" />
+<line x1="864.375" y1="205.875" x2="864.375" y2="227.875" stroke="black" stroke-width="1" />
+<text x="831.875" y="235.875" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="black"><tspan x="831.875" dy="0">cap</tspan></text>
+<line x1="135.625" y1="402.125" x2="135.625" y2="424.125" stroke="black" stroke-width="1" />
+<line x1="135.625" y1="413.125" x2="864.375" y2="413.125" stroke="black" stroke-width="1" />
+<line x1="864.375" y1="402.125" x2="864.375" y2="424.125" stroke="black" stroke-width="1" />
+<text x="500" y="432.125" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="black"><tspan x="500" dy="0">145.75 mm</tspan></text>
+<line x1="135.625" y1="402.125" x2="135.625" y2="424.125" stroke="black" stroke-width="1" />
+<line x1="135.625" y1="413.125" x2="864.375" y2="413.125" stroke="black" stroke-width="1" />
+<line x1="864.375" y1="402.125" x2="864.375" y2="424.125" stroke="black" stroke-width="1" />
+<text x="500" y="394.125" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="black"><tspan x="500" dy="0">Total Length</tspan></text>
+<line x1="535.625" y1="342.125" x2="535.625" y2="364.125" stroke="black" stroke-width="1" />
+<line x1="535.625" y1="353.125" x2="714.375" y2="353.125" stroke="black" stroke-width="1" />
+<line x1="714.375" y1="342.125" x2="714.375" y2="364.125" stroke="black" stroke-width="1" />
+<text x="625" y="334.125" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="black"><tspan x="625" dy="0">35.75 mm</tspan></text>
+<line x1="535.625" y1="342.125" x2="535.625" y2="364.125" stroke="black" stroke-width="1" />
+<line x1="535.625" y1="353.125" x2="714.375" y2="353.125" stroke="black" stroke-width="1" />
+<line x1="714.375" y1="342.125" x2="714.375" y2="364.125" stroke="black" stroke-width="1" />
+<text x="625" y="372.125" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="black"><tspan x="625" dy="0">clip</tspan></text>
+<line x1="203.125" y1="342.125" x2="203.125" y2="364.125" stroke="black" stroke-width="1" />
+<line x1="203.125" y1="353.125" x2="353.125" y2="353.125" stroke="black" stroke-width="1" />
+<line x1="353.125" y1="342.125" x2="353.125" y2="364.125" stroke="black" stroke-width="1" />
+<text x="278.125" y="334.125" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="black"><tspan x="278.125" dy="0">5.50 mm</tspan></text>
+<line x1="203.125" y1="342.125" x2="203.125" y2="364.125" stroke="black" stroke-width="1" />
+<line x1="203.125" y1="353.125" x2="353.125" y2="353.125" stroke="black" stroke-width="1" />
+<line x1="353.125" y1="342.125" x2="353.125" y2="364.125" stroke="black" stroke-width="1" />
+<text x="278.125" y="372.125" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="black"><tspan x="278.125" dy="0">grip</tspan></text>
 <line x1="414" y1="524" x2="414" y2="562" stroke="black" stroke-linecap="round"  stroke-width="2" />
 <line x1="240" y1="540" x2="414" y2="540" stroke-linecap="round" stroke="black"  stroke-width="2" />
 <line x1="246" y1="544" x2="414" y2="544" stroke-linecap="round" stroke="black"  stroke-width="2" />
@@ -239,16 +239,16 @@
 
 
 <!-- renderSideComponent: clip -->
-<path d="M531.625 605.875 Q554.375 629.375 564.375 605.875 Z" stroke-width="4" stroke="dimgray" fill="dimgray" stroke-linecap="round" />
-<line x1="529.375" y1="604.375" x2="711.875" y2="604.375" stroke-width="4" stroke="dimgray" fill="dimgray" stroke-linecap="round" />
-<path d="M711.875 604.375 Q731.875 611.875 711.875 618.125" stroke-width="4" stroke="dimgray" fill="none" stroke-linecap="round" />
+<path d="M537.875 606.875 Q560.625 629.375 570.625 606.875" stroke-width="4" stroke="dimgray" fill="none" stroke-linecap="round" />
+<line x1="535.625" y1="604.375" x2="718.125" y2="604.375" stroke-width="4" stroke="dimgray" fill="dimgray" stroke-linecap="round" />
+<path d="M718.125 604.375 Q738.125 611.875 718.125 618.125" stroke-width="4" stroke="dimgray" fill="none" stroke-linecap="round" />
 
 
 <!-- renderPart: cylinder -->
-<path d="M686.875 617.5 L714.375 617.5 L714.375 662.5 L686.875 662.5 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1"/>
-<path d="M531.625 605.875 Q554.375 628.375 564.375 605.875 Z" stroke-width="3" stroke="black" fill="black" stroke-linecap="round" />
-<line x1="529.375" y1="604.375" x2="711.875" y2="604.375" stroke-width="3" stroke="black" fill="black" stroke-linecap="round" />
-<path d="M711.875 604.375 Q731.875 611.875 711.875 618.125" stroke-width="3" stroke="black" fill="none" stroke-linecap="round" />
+<path d="M686.875 616.875 L714.375 616.875 L714.375 663.125 L686.875 663.125 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1"/>
+<path d="M537.875 606.875 Q560.625 629.375 570.625 606.875" stroke-width="3" stroke="black" fill="none" stroke-linecap="round" />
+<line x1="535.625" y1="604.375" x2="718.125" y2="604.375" stroke-width="3" stroke="black" fill="black" stroke-linecap="round" />
+<path d="M718.125 604.375 Q738.125 611.875 718.125 618.125" stroke-width="3" stroke="black" fill="none" stroke-linecap="round" />
 
 
 <!-- renderSideComponent: tail -->
@@ -263,7 +263,7 @@
 
 <!-- renderPart: cylinder -->
 <path d="M734.375 619.375 L781.875 619.375 L781.875 660.625 L734.375 660.625 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1"/>
-<path d="M734.375 619.375 L781.875 619.375 L781.875 660.625 L734.375 660.625 Z" stroke-width="1.0" stroke="black" fill="url(#knurled)"/>
+<path d="M734.375 619.375 L781.875 619.375 L781.875 660.625 L734.375 660.625 Z" stroke-width="1.0" stroke="black" fill="url(#knurled-small)"/>
 <rect x="744.375" y="629.6875" width="27.5" height="20.625" rx="3" ry="3" stroke-width="1" stroke="black" fill="black"/>
 <text x="758.125" y="640" text-anchor="middle" dominant-baseline="central"><tspan stroke="dimgray" stroke-width="0.5" font-family="sans-serif" fill="black" textLength="{this.width * 5 - 24}" > HB</tspan></text>
 
@@ -275,7 +275,7 @@
 
 
 <!-- renderPart: cylinder -->
-<path d="M786.875 620 L793.125 620 L793.125 660 L786.875 660 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#e1c16e" fill-opacity="1"/>
+<path d="M786.875 620 L793.125 620 L793.125 660 L786.875 660 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#680000" fill-opacity="1"/>
 
 
 <!-- renderPart: cylinder -->

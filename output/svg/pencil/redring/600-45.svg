@@ -63,16 +63,16 @@
 
 
 <!-- renderSideComponent: clip -->
-<path d="M531.625 465.875 Q554.375 489.375 564.375 465.875 Z" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
-<line x1="529.375" y1="464.375" x2="711.875" y2="464.375" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
-<path d="M711.875 464.375 Q731.875 471.875 711.875 478.125" stroke-width="4" stroke="black" fill="none" stroke-linecap="round" />
+<path d="M537.875 466.875 Q560.625 489.375 570.625 466.875" stroke-width="4" stroke="black" fill="none" stroke-linecap="round" />
+<line x1="535.625" y1="464.375" x2="718.125" y2="464.375" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
+<path d="M718.125 464.375 Q738.125 471.875 718.125 478.125" stroke-width="4" stroke="black" fill="none" stroke-linecap="round" />
 
 
 <!-- renderPart: cylinder -->
-<path d="M686.875 477.5 L714.375 477.5 L714.375 522.5 L686.875 522.5 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<path d="M531.625 465.875 Q554.375 488.375 564.375 465.875 Z" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
-<line x1="529.375" y1="464.375" x2="711.875" y2="464.375" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
-<path d="M711.875 464.375 Q731.875 471.875 711.875 478.125" stroke-width="3" stroke="white" fill="none" stroke-linecap="round" />
+<path d="M686.875 476.875 L714.375 476.875 L714.375 523.125 L686.875 523.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<path d="M537.875 466.875 Q560.625 489.375 570.625 466.875" stroke-width="3" stroke="white" fill="none" stroke-linecap="round" />
+<line x1="535.625" y1="464.375" x2="718.125" y2="464.375" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
+<path d="M718.125 464.375 Q738.125 471.875 718.125 478.125" stroke-width="3" stroke="white" fill="none" stroke-linecap="round" />
 
 
 <!-- renderSideComponent: tail -->
@@ -87,7 +87,7 @@
 
 <!-- renderPart: cylinder -->
 <path d="M734.375 479.375 L781.875 479.375 L781.875 520.625 L734.375 520.625 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<path d="M734.375 479.375 L781.875 479.375 L781.875 520.625 L734.375 520.625 Z" stroke-width="1.0" stroke="black" fill="url(#knurled)"/>
+<path d="M734.375 479.375 L781.875 479.375 L781.875 520.625 L734.375 520.625 Z" stroke-width="1.0" stroke="black" fill="url(#knurled-small)"/>
 <rect x="744.375" y="489.6875" width="27.5" height="20.625" rx="3" ry="3" stroke-width="1" stroke="black" fill="white"/>
 <text x="758.125" y="500" text-anchor="middle" dominant-baseline="central"><tspan stroke="dimgray" stroke-width="0.5" font-family="sans-serif" fill="black" textLength="{this.width * 5 - 24}" > HB</tspan></text>
 

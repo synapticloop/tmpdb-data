@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="809">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="809.25">
  <pattern id="knurled-large" patternUnits="userSpaceOnUse" width="12" height="12">
 <path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 6,6 L 12,12"/>
 <path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 6,6 L 0,12"/>
@@ -26,8 +26,8 @@
 <path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,8"/>
 <path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,0" />
 <path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,0" />
-</pattern><rect x="0" y="0" width="1200" height="809" fill="white" stroke="black" stroke-width="4" />
-<rect x="2" y="2" width="1196" height="805" fill="white" stroke="dimgray" stroke-width="1" />
+</pattern><rect x="0" y="0" width="1200" height="809.25" fill="white" stroke="black" stroke-width="4" />
+<rect x="2" y="2" width="1196" height="805.25" fill="white" stroke="dimgray" stroke-width="1" />
 <g transform="rotate(0 0 0)">
 <text x="30" y="50" font-size="2.0em" font-weight="bold"> Redring // 600 (Model #: 600)</text>
 
@@ -178,7 +178,7 @@
 
 
 <!-- renderPart: cylinder -->
-<path d="M426.875 461.25 L453.125 461.25 L453.125 498.75 L426.875 498.75 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1"/>
+<path d="M426.875 461.25 L453.125 461.25 L453.125 498.75 L426.875 498.75 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1"/>
 <path d="M426.875 461.25 L453.125 461.25 L453.125 498.75 L426.875 498.75 Z" stroke-width="1.0" stroke="black" fill="url(#threaded)"/>
 <line x1="426.875" y1="459.25" x2="431.875" y2="500.75" stroke="dimgray" stroke-linecap="round" stroke-width="2" />
 <line x1="426.875" y1="459.25" x2="431.875" y2="500.75" stroke="[object Object]" stroke-linecap="round" stroke-width="1" />
@@ -204,16 +204,16 @@
 
 
 <!-- renderSideComponent: clip -->
-<path d="M631.625 445.875 Q654.375 469.375 664.375 445.875 Z" stroke-width="4" stroke="dimgray" fill="dimgray" stroke-linecap="round" />
-<line x1="629.375" y1="444.375" x2="811.875" y2="444.375" stroke-width="4" stroke="dimgray" fill="dimgray" stroke-linecap="round" />
-<path d="M811.875 444.375 Q831.875 451.875 811.875 458.125" stroke-width="4" stroke="dimgray" fill="none" stroke-linecap="round" />
+<path d="M637.875 446.875 Q660.625 469.375 670.625 446.875" stroke-width="4" stroke="dimgray" fill="none" stroke-linecap="round" />
+<line x1="635.625" y1="444.375" x2="818.125" y2="444.375" stroke-width="4" stroke="dimgray" fill="dimgray" stroke-linecap="round" />
+<path d="M818.125 444.375 Q838.125 451.875 818.125 458.125" stroke-width="4" stroke="dimgray" fill="none" stroke-linecap="round" />
 
 
 <!-- renderPart: cylinder -->
-<path d="M786.875 457.5 L814.375 457.5 L814.375 502.5 L786.875 502.5 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1"/>
-<path d="M631.625 445.875 Q654.375 468.375 664.375 445.875 Z" stroke-width="3" stroke="black" fill="black" stroke-linecap="round" />
-<line x1="629.375" y1="444.375" x2="811.875" y2="444.375" stroke-width="3" stroke="black" fill="black" stroke-linecap="round" />
-<path d="M811.875 444.375 Q831.875 451.875 811.875 458.125" stroke-width="3" stroke="black" fill="none" stroke-linecap="round" />
+<path d="M786.875 456.875 L814.375 456.875 L814.375 503.125 L786.875 503.125 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1"/>
+<path d="M637.875 446.875 Q660.625 469.375 670.625 446.875" stroke-width="3" stroke="black" fill="none" stroke-linecap="round" />
+<line x1="635.625" y1="444.375" x2="818.125" y2="444.375" stroke-width="3" stroke="black" fill="black" stroke-linecap="round" />
+<path d="M818.125 444.375 Q838.125 451.875 818.125 458.125" stroke-width="3" stroke="black" fill="none" stroke-linecap="round" />
 
 
 <!-- renderSideComponent: tail -->
@@ -228,7 +228,7 @@
 
 <!-- renderPart: cylinder -->
 <path d="M834.375 459.375 L881.875 459.375 L881.875 500.625 L834.375 500.625 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1"/>
-<path d="M834.375 459.375 L881.875 459.375 L881.875 500.625 L834.375 500.625 Z" stroke-width="1.0" stroke="black" fill="url(#knurled)"/>
+<path d="M834.375 459.375 L881.875 459.375 L881.875 500.625 L834.375 500.625 Z" stroke-width="1.0" stroke="black" fill="url(#knurled-small)"/>
 <rect x="844.375" y="469.6875" width="27.5" height="20.625" rx="3" ry="3" stroke-width="1" stroke="black" fill="black"/>
 <text x="858.125" y="480" text-anchor="middle" dominant-baseline="central"><tspan stroke="dimgray" stroke-width="0.5" font-family="sans-serif" fill="black" textLength="{this.width * 5 - 24}" > HB</tspan></text>
 
@@ -240,7 +240,7 @@
 
 
 <!-- renderPart: cylinder -->
-<path d="M886.875 460 L893.125 460 L893.125 500 L886.875 500 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#e1c16e" fill-opacity="1"/>
+<path d="M886.875 460 L893.125 460 L893.125 500 L886.875 500 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#680000" fill-opacity="1"/>
 
 
 <!-- renderPart: cylinder -->
@@ -315,6 +315,6 @@
 
 <!-- renderPart: cylinder -->
 <path d="M955.625 586.25 L964.375 586.25 L964.375 613.75 L955.625 613.75 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1"/>
-</g><text x="50%" y="789" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb) // Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
-<text x="1190" y="799" font-size="0.5em" font-weight="bold" text-anchor="end" dominant-baseline="middle">SVGTechnicalExplodedRenderer</text>
+</g><text x="50%" y="789.25" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb) // Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
+<text x="1190" y="799.25" font-size="0.5em" font-weight="bold" text-anchor="end" dominant-baseline="middle">SVGTechnicalExplodedRenderer</text>
 </svg>

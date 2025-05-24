@@ -7,9 +7,10 @@
 	"colour_component": "body",
 	"mechanism": "click",
 	"colours": [ "black" ],
+	"comments": "need to define from the clip onwards",
 	"colour_map": {
 		"silver": "#b4b8b9",
-		"red": "#e1c16e",
+		"red": "#680000",
 		"brass": "#e1c16e"
 	},
 	"features": [
@@ -59,21 +60,21 @@
 				{ "shape": "hexagonal", "dimensions": [ 66.75, 8.0 ] }
 			],
 			"internal_start": [
-				{ "shape": "cylinder", "dimensions": [ 5.25, 7.5 ], "finish": "threaded" }
+				{ "shape": "cylinder", "dimensions": [ 5.25, 7.5 ], "colours": [ "silver" ], "finish": "threaded" }
 			],
 			"material": "metal"
 		},
 		{
 			"type": "clip",
 			"parts": [
-				{ "shape": "cylinder", "dimensions": [ 5.5, 9.0 ] }
+				{ "shape": "cylinder", "dimensions": [ 5.5, 9.25 ] }
 			],
 			"extras": [
 				{
-					"dimensions": [ 39.0, 2.75, 4.5 ],
-					"offset": [ -31.5, 4.325 ],
+					"dimensions": [ 35.75, 2.75, 4.5 ],
+					"offset": [ -30.25, 4.325 ],
 					"parts": [
-						{ "shape": "curve-fill", "points": [ 0.45, -2.5, 7.0,-2.5,5.0,2.0 ] },
+						{ "shape": "curve", "points": [ 0.45, -2.5, 7.0,-2.5,5.0,2.0 ] },
 						{ "shape": "line", "points": [ 0.0, -3.0, 36.5, -3.0 ] },
 						{ "shape": "curve", "points": [ 36.5, -3.0, 36.5, -0.25, 40.5, -1.5 ] }
 					]
@@ -91,7 +92,7 @@
 		{
 			"type": "indicator",
 			"parts": [
-				{ "shape": "cylinder", "dimensions": [ 9.5, 8.25 ], "finish": "knurled,indicator" }
+				{ "shape": "cylinder", "dimensions": [ 9.5, 8.25 ], "finish": "knurled-small,indicator" }
 			],
 			"material": "plastic"
 		},
@@ -99,7 +100,7 @@
 			"type": "foot",
 			"parts": [
 				{ "shape": "cylinder", "dimensions": [ 1.0, 8.0 ] },
-				{ "shape": "cylinder", "dimensions": [ 1.25, 8.0 ], "material": "rubber", "colours": [ "red"] },
+				{ "shape": "cylinder", "dimensions": [ 1.25, 8.0 ], "material": "rubber", "colours": [ "red" ] },
 				{ "shape": "cylinder", "dimensions": [ 1.25, 8.0 ] }
 			],
 			"material": "metal"
