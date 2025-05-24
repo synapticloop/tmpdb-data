@@ -69,7 +69,7 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 	private renderExplodedSideComponents(colourIndex:number): string {
 		let svgString: string = `\n\n<!-- renderExplodedSideComponents -->\n`;
 		let x: number = this.SVG_WIDTH/2 - (this.pencil.totalLength*5/2);
-		let y: number = 120;
+		let y: number = 160;
 
 		let colour: OpaqueColour = new OpaqueColour(this.pencil.colourMap, "white");
 

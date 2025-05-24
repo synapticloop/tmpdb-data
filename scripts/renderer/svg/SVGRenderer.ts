@@ -107,15 +107,15 @@ export abstract class SVGRenderer {
 	}
 
 	protected getSvgEnd(): string {
-		// todo - need to switch on height
-		if(this._width <= 1000) {
-			return(`</g><text x="50%" y="${this._height - 40}" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb)</text>\n` +
+		// TODO - need to determine the height
+		if(this._width <= 1400) {
+			return(`</g><text x="50%" y="${this._height - 40}" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // Synapticloop and The Mechanical Pencil Database (tmpdb)</text>\n` +
 				`<text x="50%" y="${this._height - 20}" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>\n` +
 				`<text x="${this._width - 10}" y="${this._height - 10}" font-size="0.5em" font-weight="bold" text-anchor="end" dominant-baseline="middle">${this._rendererName}</text>\n` +
 				`</svg>`);
 		}
 
-		let svgString: string = `</g><text x="50%" y="${this._height - 20}" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb) // Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>\n` +
+		let svgString: string = `</g><text x="50%" y="${this._height - 20}" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // Synapticloop and The Mechanical Pencil Database (tmpdb) // Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>\n` +
 			`<text x="${this._width - 10}" y="${this._height - 10}" font-size="0.5em" font-weight="bold" text-anchor="end" dominant-baseline="middle">${this._rendererName}</text>\n` +
 			`</svg>`;
 

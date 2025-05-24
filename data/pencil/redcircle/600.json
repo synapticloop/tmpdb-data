@@ -1,0 +1,121 @@
+{
+	"brand": "Redcircle",
+	"model_name": "600",
+	"model_number": "600",
+	"lead_size": "2.0",
+	"text": "Redcircle (R) 600 2.0mm",
+	"colour_component": "body",
+	"mechanism": "click",
+	"colours": [ "black", "silver", "gold" ],
+	"comments": "need to define from the clip onwards",
+	"colour_map": {
+		"silver": "#b4b8b9",
+		"red": "#680000",
+		"brass": "#e1c16e"
+	},
+	"features": [
+		{ "type":  "sharpener", "location":  "inside cap" },
+		{ "type":  "indicator", "location":  "rotational - near clip" }
+	],
+	"front": [
+		{ "shape": "cylinder", "dimensions": [ 2.0, 10.0 ], "fill":  [ "black" ] }
+	],
+	"back":[
+		{ "shape": "cylinder", "dimensions": [ 2.0, 10.0 ] , "fill":  [ "black" ] }
+	],
+	"components": [
+		{
+			"type": "tip",
+			"parts": [
+				{ "shape": "cone", "dimensions": [ 1.0, 3.25, 4.0 ] },
+				{ "shape": "cone", "dimensions": [ 12.5, 5.0, 7.5 ] }
+			],
+			"internal_end": [
+				{ "shape": "cylinder", "dimensions": [ 4.75, 6.5 ], "finish": "threaded" }
+			],
+			"material": "metal"
+		},
+		{
+			"type": "grip",
+			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 30.0, 8.25 ], "finish":  "knurled-small" }
+			],
+			"material": "metal"
+		},
+		{
+			"type": "shaft",
+			"internal_start": [
+				{ "shape": "cylinder", "dimensions": [ 4.5, 4.75 ], "material": "metal", "internal_offset": 0.75 },
+				{ "shape": "cylinder", "dimensions": [ 18.5, 5.75 ], "colours": [ "white%90" ] }
+			],
+			"internal_end": [
+				{ "shape": "cylinder", "dimensions": [ 3.5, 5.75 ], "colours": [ "white%90" ] },
+				{ "shape": "cylinder", "dimensions": [ 89.0, 4.25 ], "colours": [ "white%30" ]  }
+			],
+			"material": "plastic",
+			"colours": [ "brass" ]
+		},
+		{
+			"type": "body",
+			"parts": [
+				{ "shape": "hexagonal", "dimensions": [ 66.75, 8.0 ] }
+			],
+			"internal_start": [
+				{ "shape": "cylinder", "dimensions": [ 5.25, 7.5 ], "colours": [ "silver" ], "finish": "threaded" }
+			],
+			"material": "metal"
+		},
+		{
+			"type": "clip",
+			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 5.5, 9.25 ] }
+			],
+			"extras": [
+				{
+					"dimensions": [ 35.75, 2.75, 3.75 ],
+					"offset": [ -30.25, 4.325 ],
+					"parts": [
+						{ "shape": "curve", "points": [ 0.0, -2.5, 7.5, -2.5, 5.0, 2.0 ] },
+						{ "shape": "line", "points": [ 0.0, -2.75, 35.75, -2.75 ] },
+						{ "shape": "curve", "points": [ 35.75, -2.75, 35.75, -0.25, 38.5, -1.375 ] }
+					]
+				}
+			],
+			"material": "metal"
+		},
+		{
+			"type": "tail",
+			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 5.0, 8.0 ] }
+			],
+			"material": "metal"
+		},
+		{
+			"type": "indicator",
+			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 9.5, 8.0 ], "finish": "knurled-small,indicator" }
+			],
+			"material": "plastic"
+		},
+		{
+			"type": "foot",
+			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 0.75, 8.0 ] },
+				{ "shape": "cylinder", "dimensions": [ 1.75, 8.25 ], "material": "rubber", "colours": [ "red" ] },
+				{ "shape": "cylinder", "dimensions": [ 0.75, 8.0 ] }
+			],
+			"material": "metal"
+		},
+		{
+			"type": "cap",
+			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 12.0, 5.5 ] }
+			],
+			"internal_start": [
+				{ "shape": "cylinder", "dimensions": [ 8.75, 4.75 ] },
+				{ "shape": "cylinder", "dimensions": [ 2.5, 5.5 ] }
+			],
+			"material": "metal"
+		}
+	]
+}

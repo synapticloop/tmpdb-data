@@ -8,6 +8,7 @@ import {ComponentDeserialiser} from "./deserialisers/ComponentDeserialiser.ts";
 import {MapDeserialiser} from "./deserialisers/MapDeserialiser.ts";
 import {Base} from "./Base.ts";
 import {FrontBackDeserialiser} from "./deserialisers/FrontBackDeserialiser.ts";
+import {FeatureDeserialiser} from "./deserialisers/FeatureDeserialiser.ts";
 
 export class Pencil extends Base {
 	@JsonProperty({ name: "brand", required: true })
@@ -36,7 +37,7 @@ export class Pencil extends Base {
 	colourMap: Map<string, string> = new Map<string, string>(); // the map of named colours to hex colour codes
 	@JsonProperty({ name: "accurate", required: false })
 	accurate: boolean = false;
-	@JsonProperty({ name: "features", required: false })
+	@JsonProperty({ name: "features", required: false, type: Feature, deserializer: FeatureDeserialiser })
 	features: Feature[] = [];
 	@JsonProperty({ name: "front", required: false, type: FrontBack, deserializer: FrontBackDeserialiser })
 	front: FrontBack[] = [];
@@ -53,7 +54,11 @@ export class Pencil extends Base {
 	//
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+	colourVariants: String[] = [];
 	colourComponents: OpaqueColour[] = [];
+
+	featureDescriptions: string[] = [];
+
 	maxWidth:number = 0; // the maximum width of the pencil (generated)
 	maxHeight:number = 0; // the maximum height of the pencil (generated)
 	totalLength:number = 0; // the total length of the pencil (generated)
@@ -68,9 +73,15 @@ export class Pencil extends Base {
 	postConstruct(colours: string[], colourMap: Map<string, string>): void {
 		// first up we need to parse the colours
 		for(const colour of this.colours) {
-			this.colourComponents.push(new OpaqueColour(this.colourMap, colour));
+			const opaqueColour = new OpaqueColour(this.colourMap, colour);
+			this.colourComponents.push(opaqueColour);
+			this.colourVariants.push(opaqueColour.colourName);
 		}
 
+		for(const feature of this.features) {
+			this.featureDescriptions.push(feature.featureDescription());
+
+		}
 		const materialsSet: Set<string> = new Set();
 
 		for(const component of this.components) {

@@ -72,11 +72,11 @@ for (const [dirIndex, pencilDirectory] of pencilDirectories.entries()) {
 				numColours++;
 			}
 			//
-			// const pdfOutputDir: string = path.join("./output/pdf/datasheet/");
-			// fs.mkdirSync(pdfOutputDir, { "recursive": true });
-			// const outputPdfFie: string = path.join(pdfOutputDir, pencilDirectory + "-" + pencilFileName + ".pdf");
-			// new PDFDatasheetRenderer(pencil, pencilDirectory, pencilFileName).render(outputPdfFie);
-			// console.log(`       PDF: [${fileNumber}] (datasheet) ${pencilFile} -> ${outputPdfFie}`);
+			const pdfOutputDir: string = path.join("./output/pdf/datasheet/");
+			fs.mkdirSync(pdfOutputDir, { "recursive": true });
+			const outputPdfFie: string = path.join(pdfOutputDir, pencilDirectory + "-" + pencilFileName + ".pdf");
+			new PDFDatasheetRenderer(pencil, pencilDirectory, pencilFileName).render(outputPdfFie);
+			console.log(`       PDF: [${fileNumber}] (datasheet) ${pencilFile} -> ${outputPdfFie}`);
 			// fileNumber++;
 
 			numPencils++;

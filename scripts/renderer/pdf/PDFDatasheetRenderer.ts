@@ -145,8 +145,8 @@ export class PDFDatasheetRenderer {
 				],
 				[ "Weight", `${(this.pencil.weight ? this.pencil.weight + " grams" : "")}` ],
 				[ "Materials", `${this.pencil.materials.join("\n")}` ],
-				[ `Colour variants`, `${this.pencil.colourComponents.join("\n")}` ],
-				[ "Features", `` ],
+				[ `Colour variants`, `${this.pencil.colourVariants.join("\n")}` ],
+				[ "Features", `${this.pencil.featureDescriptions.join("\n")}` ],
 			]
 		});
 	}

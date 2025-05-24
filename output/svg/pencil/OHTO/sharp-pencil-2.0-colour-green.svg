@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="200">
+ <pattern id="knurled-large" patternUnits="userSpaceOnUse" width="12" height="12">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 6,6 L 12,12"/>
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 6,6 L 0,12"/>
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 6,6 L 12,0" />
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 6,6 L 0,0" />
+</pattern><pattern id="knurled-small" patternUnits="userSpaceOnUse" width="4" height="4">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 2,2 L 4,4"/>
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 2,2 L 0,4"/>
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 2,2 L 4,0" />
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 2,2 L 0,0" />
+</pattern><pattern id="knurled" patternUnits="userSpaceOnUse" width="8" height="8">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,8"/>
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,8"/>
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,0" />
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,0" />
+</pattern><pattern id="lined" patternUnits="userSpaceOnUse" width="3" height="3">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 0,0 L 3,0"/>
+</pattern><pattern id="ridged" patternUnits="userSpaceOnUse" width="3" height="3">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 0,0 L 0,3"/>
+</pattern><pattern id="spring" patternUnits="userSpaceOnUse" width="8" height="100">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="2" d="M 1,1 L 9,99"/>
+<path stroke="white" stroke-linecap="round" stroke-width="1" d="M 1,1 L 9,99"/>
+</pattern><pattern id="knurled" patternUnits="userSpaceOnUse" width="8" height="8">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,8"/>
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,8"/>
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,0" />
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,0" />
+</pattern><g transform="rotate(0 0 0)">
+
+
+<!-- renderSideComponent: tip -->
+
+
+<!-- renderPart: cylinder -->
+<path d="M158.75 91.875 L171.25 91.875 L171.25 108.125 L158.75 108.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#E1C16E" fill-opacity="1"/>
+
+
+<!-- renderPart: cone -->
+<path d="M171.25 91.875 L196.25 81.25 L196.25 118.75 L171.25 108.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#E1C16E" fill-opacity="1"/>
+
+
+<!-- renderSideComponent: head -->
+
+
+<!-- renderPart: cone -->
+<path d="M196.25 80 L221.25 72.5 L221.25 127.5 L196.25 120 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b88160" fill-opacity="1"/>
+
+
+<!-- renderSideComponent: body -->
+
+
+<!-- renderPart: hexagonal -->
+<path d="M221.25 72.5 L711.25 72.5 L711.25 127.5 L221.25 127.5 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#053439" fill-opacity="0.5"/>
+<line x1="233.75" y1="100" x2="723.75" y2="100" stroke-width="1.5" stroke="gray" fill="gray" stroke-opacity="1.0"/>
+<line x1="233.75" y1="100" x2="723.75" y2="100" stroke-width="0.5" stroke="black" fill="none" stroke-opacity="0.5"/>
+
+
+<!-- renderSideComponent: ferrule -->
+
+
+<!-- renderPart: cylinder -->
+<path d="M711.25 74.375 L781.25 74.375 L781.25 125.625 L711.25 125.625 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#E1C16E" fill-opacity="1"/>
+<line x1="719.3269230769231" y1="75.375" x2="719.3269230769231" y2="124.625" stroke-width="1" stroke="gray" />
+<line x1="724.7115384615385" y1="75.375" x2="724.7115384615385" y2="124.625" stroke-width="1" stroke="gray" />
+<line x1="730.0961538461538" y1="75.375" x2="730.0961538461538" y2="124.625" stroke-width="1" stroke="gray" />
+<line x1="735.4807692307693" y1="75.375" x2="735.4807692307693" y2="124.625" stroke-width="1" stroke="gray" />
+<line x1="740.8653846153846" y1="75.375" x2="740.8653846153846" y2="124.625" stroke-width="1" stroke="gray" />
+<line x1="751.6346153846154" y1="75.375" x2="751.6346153846154" y2="124.625" stroke-width="1" stroke="gray" />
+<line x1="757.0192307692307" y1="75.375" x2="757.0192307692307" y2="124.625" stroke-width="1" stroke="gray" />
+<line x1="762.4038461538462" y1="75.375" x2="762.4038461538462" y2="124.625" stroke-width="1" stroke="gray" />
+<line x1="767.7884615384615" y1="75.375" x2="767.7884615384615" y2="124.625" stroke-width="1" stroke="gray" />
+<line x1="773.1730769230769" y1="75.375" x2="773.1730769230769" y2="124.625" stroke-width="1" stroke="gray" />
+<circle r="4" cx="726.25" cy="87.1875" stroke="black" stroke-width="0.5" fill="dimgray" fill-opacity="1"/>
+
+
+<!-- renderSideComponent: cap -->
+
+
+<!-- renderPart: cylinder -->
+<path d="M781.25 76.25 L806.25 76.25 L806.25 123.75 L781.25 123.75 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#E1C16E" fill-opacity="1"/>
+
+
+<!-- renderPart: cylinder -->
+<path d="M806.25 75 L816.25 75 L816.25 125 L806.25 125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#E1C16E" fill-opacity="1"/>
+
+
+<!-- renderSideComponent: eraser -->
+
+
+<!-- renderPart: cylinder -->
+<path d="M816.25 76.875 L841.25 76.875 L841.25 123.125 L816.25 123.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#db756d" fill-opacity="1"/>
+
+<!-- TAPER START: hexagonal -->
+<path d="M 233.75 72.5 C 217.1875 79.375, 217.1875 93.125, 233.75 100" stroke-width="1.0" stroke="black" stroke-linecap="round" fill-opacity="0.5" fill="none" /><path d="M 233.75 127.5 C 217.1875 120.625, 217.1875 106.875, 233.75 100" stroke-width="1.0" stroke="black" stroke-linecap="round" fill-opacity="0.5" fill="none" /></g><text x="50%" y="160" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // Synapticloop and The Mechanical Pencil Database (tmpdb)</text>
+<text x="50%" y="180" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
+<text x="990" y="190" font-size="0.5em" font-weight="bold" text-anchor="end" dominant-baseline="middle">SVGPencilRenderer</text>
+</svg>

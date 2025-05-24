@@ -1,0 +1,282 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="480">
+ <pattern id="knurled-large" patternUnits="userSpaceOnUse" width="12" height="12">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 6,6 L 12,12"/>
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 6,6 L 0,12"/>
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 6,6 L 12,0" />
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 6,6 L 0,0" />
+</pattern><pattern id="knurled-small" patternUnits="userSpaceOnUse" width="4" height="4">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 2,2 L 4,4"/>
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 2,2 L 0,4"/>
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 2,2 L 4,0" />
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 2,2 L 0,0" />
+</pattern><pattern id="knurled" patternUnits="userSpaceOnUse" width="8" height="8">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,8"/>
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,8"/>
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,0" />
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,0" />
+</pattern><pattern id="lined" patternUnits="userSpaceOnUse" width="3" height="3">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 0,0 L 3,0"/>
+</pattern><pattern id="ridged" patternUnits="userSpaceOnUse" width="3" height="3">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 0,0 L 0,3"/>
+</pattern><pattern id="spring" patternUnits="userSpaceOnUse" width="8" height="100">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="2" d="M 1,1 L 9,99"/>
+<path stroke="white" stroke-linecap="round" stroke-width="1" d="M 1,1 L 9,99"/>
+</pattern><pattern id="knurled" patternUnits="userSpaceOnUse" width="8" height="8">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,8"/>
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,8"/>
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,0" />
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,0" />
+</pattern><rect x="0" y="0" width="1000" height="480" fill="white" stroke="black" stroke-width="4" />
+<rect x="2" y="2" width="996" height="476" fill="white" stroke="dimgray" stroke-width="1" />
+<g transform="rotate(0 0 0)">
+<text x="30" y="50" font-size="2.0em" font-weight="bold"> Redcircle // 600 (Model #: 600)</text>
+
+
+<!-- renderSideComponent: tip -->
+
+
+<!-- renderPart: cone -->
+<path d="M136.25 111.875 L141.25 110 L141.25 130 L136.25 128.125 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1"/>
+
+
+<!-- renderPart: cone -->
+<path d="M141.25 107.5 L203.75 101.25 L203.75 138.75 L141.25 132.5 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1"/>
+
+
+<!-- renderSideComponent: grip -->
+
+
+<!-- renderPart: cylinder -->
+<path d="M203.75 99.375 L353.75 99.375 L353.75 140.625 L203.75 140.625 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1"/>
+<path d="M203.75 99.375 L353.75 99.375 L353.75 140.625 L203.75 140.625 Z" stroke-width="1.0" stroke="black" fill="url(#knurled-small)"/>
+
+
+<!-- renderSideComponent: shaft -->
+
+
+<!-- renderSideComponent: body -->
+
+
+<!-- renderPart: hexagonal -->
+<path d="M353.75 100 L687.5 100 L687.5 140 L353.75 140 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1"/>
+<line x1="353.75" y1="120" x2="687.5" y2="120" stroke-width="1.5" stroke="gray" fill="gray" stroke-opacity="1.0"/>
+<line x1="353.75" y1="120" x2="687.5" y2="120" stroke-width="0.5" stroke="black" fill="none" stroke-opacity="0.5"/>
+
+
+<!-- renderSideComponent: clip -->
+<path d="M536.25 86.875 Q561.25 109.375 573.75 86.875" stroke-width="4" stroke="dimgray" fill="none" stroke-linecap="round" />
+<line x1="536.25" y1="85.625" x2="715" y2="85.625" stroke-width="4" stroke="dimgray" fill="dimgray" stroke-linecap="round" />
+<path d="M715 85.625 Q728.75 92.5 715 98.125" stroke-width="4" stroke="dimgray" fill="none" stroke-linecap="round" />
+
+
+<!-- renderPart: cylinder -->
+<path d="M687.5 96.875 L715 96.875 L715 143.125 L687.5 143.125 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1"/>
+<path d="M536.25 86.875 Q561.25 109.375 573.75 86.875" stroke-width="3" stroke="black" fill="none" stroke-linecap="round" />
+<line x1="536.25" y1="85.625" x2="715" y2="85.625" stroke-width="3" stroke="black" fill="black" stroke-linecap="round" />
+<path d="M715 85.625 Q728.75 92.5 715 98.125" stroke-width="3" stroke="black" fill="none" stroke-linecap="round" />
+
+
+<!-- renderSideComponent: tail -->
+
+
+<!-- renderPart: cylinder -->
+<path d="M715 100 L740 100 L740 140 L715 140 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1"/>
+
+
+<!-- renderSideComponent: indicator -->
+
+
+<!-- renderPart: cylinder -->
+<path d="M740 100 L787.5 100 L787.5 140 L740 140 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1"/>
+<path d="M740 100 L787.5 100 L787.5 140 L740 140 Z" stroke-width="1.0" stroke="black" fill="url(#knurled-small)"/>
+<rect x="750" y="110" width="27.5" height="20" rx="3" ry="3" stroke-width="1" stroke="black" fill="black"/>
+<text x="763.75" y="120" text-anchor="middle" dominant-baseline="central"><tspan stroke="dimgray" stroke-width="0.5" font-family="sans-serif" fill="black" textLength="{this.width * 5 - 24}" > HB</tspan></text>
+
+<!-- renderSideComponent: foot -->
+
+
+<!-- renderPart: cylinder -->
+<path d="M787.5 100 L791.25 100 L791.25 140 L787.5 140 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1"/>
+
+
+<!-- renderPart: cylinder -->
+<path d="M791.25 99.375 L800 99.375 L800 140.625 L791.25 140.625 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#680000" fill-opacity="1"/>
+
+
+<!-- renderPart: cylinder -->
+<path d="M800 100 L803.75 100 L803.75 140 L800 140 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1"/>
+
+
+<!-- renderSideComponent: cap -->
+
+
+<!-- renderPart: cylinder -->
+<path d="M803.75 106.25 L863.75 106.25 L863.75 133.75 L803.75 133.75 Z" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1"/>
+
+
+<!-- renderSideComponent: tip -->
+
+
+<!-- renderPart: cone -->
+<path d="M136.25 231.875 L141.25 230 L141.25 250 L136.25 248.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1"/>
+
+
+<!-- renderPart: cone -->
+<path d="M141.25 227.5 L203.75 221.25 L203.75 258.75 L141.25 252.5 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1"/>
+
+
+<!-- renderSideComponent: grip -->
+
+
+<!-- renderPart: cylinder -->
+<path d="M203.75 219.375 L353.75 219.375 L353.75 260.625 L203.75 260.625 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1"/>
+<path d="M203.75 219.375 L353.75 219.375 L353.75 260.625 L203.75 260.625 Z" stroke-width="1.0" stroke="black" fill="url(#knurled-small)"/>
+
+
+<!-- renderSideComponent: shaft -->
+
+
+<!-- renderSideComponent: body -->
+
+
+<!-- renderPart: hexagonal -->
+<path d="M353.75 220 L687.5 220 L687.5 260 L353.75 260 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1"/>
+<line x1="353.75" y1="240" x2="687.5" y2="240" stroke-width="1.5" stroke="gray" fill="gray" stroke-opacity="1.0"/>
+<line x1="353.75" y1="240" x2="687.5" y2="240" stroke-width="0.5" stroke="black" fill="none" stroke-opacity="0.5"/>
+
+
+<!-- renderSideComponent: clip -->
+<path d="M536.25 206.875 Q561.25 229.375 573.75 206.875" stroke-width="4" stroke="black" fill="none" stroke-linecap="round" />
+<line x1="536.25" y1="205.625" x2="715" y2="205.625" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
+<path d="M715 205.625 Q728.75 212.5 715 218.125" stroke-width="4" stroke="black" fill="none" stroke-linecap="round" />
+
+
+<!-- renderPart: cylinder -->
+<path d="M687.5 216.875 L715 216.875 L715 263.125 L687.5 263.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1"/>
+<path d="M536.25 206.875 Q561.25 229.375 573.75 206.875" stroke-width="3" stroke="#b4b8b9" fill="none" stroke-linecap="round" />
+<line x1="536.25" y1="205.625" x2="715" y2="205.625" stroke-width="3" stroke="#b4b8b9" fill="#b4b8b9" stroke-linecap="round" />
+<path d="M715 205.625 Q728.75 212.5 715 218.125" stroke-width="3" stroke="#b4b8b9" fill="none" stroke-linecap="round" />
+
+
+<!-- renderSideComponent: tail -->
+
+
+<!-- renderPart: cylinder -->
+<path d="M715 220 L740 220 L740 260 L715 260 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1"/>
+
+
+<!-- renderSideComponent: indicator -->
+
+
+<!-- renderPart: cylinder -->
+<path d="M740 220 L787.5 220 L787.5 260 L740 260 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1"/>
+<path d="M740 220 L787.5 220 L787.5 260 L740 260 Z" stroke-width="1.0" stroke="black" fill="url(#knurled-small)"/>
+<rect x="750" y="230" width="27.5" height="20" rx="3" ry="3" stroke-width="1" stroke="black" fill="#b4b8b9"/>
+<text x="763.75" y="240" text-anchor="middle" dominant-baseline="central"><tspan stroke="dimgray" stroke-width="0.5" font-family="sans-serif" fill="black" textLength="{this.width * 5 - 24}" > HB</tspan></text>
+
+<!-- renderSideComponent: foot -->
+
+
+<!-- renderPart: cylinder -->
+<path d="M787.5 220 L791.25 220 L791.25 260 L787.5 260 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1"/>
+
+
+<!-- renderPart: cylinder -->
+<path d="M791.25 219.375 L800 219.375 L800 260.625 L791.25 260.625 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#680000" fill-opacity="1"/>
+
+
+<!-- renderPart: cylinder -->
+<path d="M800 220 L803.75 220 L803.75 260 L800 260 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1"/>
+
+
+<!-- renderSideComponent: cap -->
+
+
+<!-- renderPart: cylinder -->
+<path d="M803.75 226.25 L863.75 226.25 L863.75 253.75 L803.75 253.75 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1"/>
+
+
+<!-- renderSideComponent: tip -->
+
+
+<!-- renderPart: cone -->
+<path d="M136.25 351.875 L141.25 350 L141.25 370 L136.25 368.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="gold" fill-opacity="1"/>
+
+
+<!-- renderPart: cone -->
+<path d="M141.25 347.5 L203.75 341.25 L203.75 378.75 L141.25 372.5 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="gold" fill-opacity="1"/>
+
+
+<!-- renderSideComponent: grip -->
+
+
+<!-- renderPart: cylinder -->
+<path d="M203.75 339.375 L353.75 339.375 L353.75 380.625 L203.75 380.625 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="gold" fill-opacity="1"/>
+<path d="M203.75 339.375 L353.75 339.375 L353.75 380.625 L203.75 380.625 Z" stroke-width="1.0" stroke="black" fill="url(#knurled-small)"/>
+
+
+<!-- renderSideComponent: shaft -->
+
+
+<!-- renderSideComponent: body -->
+
+
+<!-- renderPart: hexagonal -->
+<path d="M353.75 340 L687.5 340 L687.5 380 L353.75 380 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="gold" fill-opacity="1"/>
+<line x1="353.75" y1="360" x2="687.5" y2="360" stroke-width="1.5" stroke="gray" fill="gray" stroke-opacity="1.0"/>
+<line x1="353.75" y1="360" x2="687.5" y2="360" stroke-width="0.5" stroke="black" fill="none" stroke-opacity="0.5"/>
+
+
+<!-- renderSideComponent: clip -->
+<path d="M536.25 326.875 Q561.25 349.375 573.75 326.875" stroke-width="4" stroke="black" fill="none" stroke-linecap="round" />
+<line x1="536.25" y1="325.625" x2="715" y2="325.625" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
+<path d="M715 325.625 Q728.75 332.5 715 338.125" stroke-width="4" stroke="black" fill="none" stroke-linecap="round" />
+
+
+<!-- renderPart: cylinder -->
+<path d="M687.5 336.875 L715 336.875 L715 383.125 L687.5 383.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="gold" fill-opacity="1"/>
+<path d="M536.25 326.875 Q561.25 349.375 573.75 326.875" stroke-width="3" stroke="gold" fill="none" stroke-linecap="round" />
+<line x1="536.25" y1="325.625" x2="715" y2="325.625" stroke-width="3" stroke="gold" fill="gold" stroke-linecap="round" />
+<path d="M715 325.625 Q728.75 332.5 715 338.125" stroke-width="3" stroke="gold" fill="none" stroke-linecap="round" />
+
+
+<!-- renderSideComponent: tail -->
+
+
+<!-- renderPart: cylinder -->
+<path d="M715 340 L740 340 L740 380 L715 380 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="gold" fill-opacity="1"/>
+
+
+<!-- renderSideComponent: indicator -->
+
+
+<!-- renderPart: cylinder -->
+<path d="M740 340 L787.5 340 L787.5 380 L740 380 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="gold" fill-opacity="1"/>
+<path d="M740 340 L787.5 340 L787.5 380 L740 380 Z" stroke-width="1.0" stroke="black" fill="url(#knurled-small)"/>
+<rect x="750" y="350" width="27.5" height="20" rx="3" ry="3" stroke-width="1" stroke="black" fill="gold"/>
+<text x="763.75" y="360" text-anchor="middle" dominant-baseline="central"><tspan stroke="dimgray" stroke-width="0.5" font-family="sans-serif" fill="black" textLength="{this.width * 5 - 24}" > HB</tspan></text>
+
+<!-- renderSideComponent: foot -->
+
+
+<!-- renderPart: cylinder -->
+<path d="M787.5 340 L791.25 340 L791.25 380 L787.5 380 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="gold" fill-opacity="1"/>
+
+
+<!-- renderPart: cylinder -->
+<path d="M791.25 339.375 L800 339.375 L800 380.625 L791.25 380.625 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#680000" fill-opacity="1"/>
+
+
+<!-- renderPart: cylinder -->
+<path d="M800 340 L803.75 340 L803.75 380 L800 380 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="gold" fill-opacity="1"/>
+
+
+<!-- renderSideComponent: cap -->
+
+
+<!-- renderPart: cylinder -->
+<path d="M803.75 346.25 L863.75 346.25 L863.75 373.75 L803.75 373.75 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="gold" fill-opacity="1"/>
+</g><text x="50%" y="440" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // Synapticloop and The Mechanical Pencil Database (tmpdb)</text>
+<text x="50%" y="460" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
+<text x="990" y="470" font-size="0.5em" font-weight="bold" text-anchor="end" dominant-baseline="middle">SVGPencilAllRenderer</text>
+</svg>
