@@ -62,17 +62,17 @@
 <text x="30" y="100" font-size="1.1em"> Lead size: 2 mm</text>
 <text x="30" y="120" font-size="1.1em"> Weight: 11g</text>
 <text x="1480" y="30" font-size="1.6em" font-weight="bold" text-anchor="end" dominant-baseline="central">Colour variants of the body</text>
-<rect x="1440" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="#e38f0f" fill-opacity="0.1"/>
+<rect x="1440" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="#e38f0f" fill-opacity="0.5"/>
 <text x="1460" y="100" transform="rotate(-90, 1460, 100)" font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">yellow</text>
-<rect x="1380" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="#1a4b88" fill-opacity="0.1"/>
+<rect x="1380" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="#1a4b88" fill-opacity="0.5"/>
 <text x="1400" y="100" transform="rotate(-90, 1400, 100)" font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">blue</text>
-<rect x="1320" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="#053439" fill-opacity="0.1"/>
+<rect x="1320" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="#053439" fill-opacity="0.5"/>
 <text x="1340" y="100" transform="rotate(-90, 1340, 100)" font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">green</text>
-<rect x="1260" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="#5d191d" fill-opacity="0.1"/>
-<text x="1280" y="100" transform="rotate(-90, 1280, 100)" font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">red</text>
-<rect x="1200" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="#b88160" fill-opacity="0.1"/>
+<rect x="1260" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="burgundy" fill-opacity="0.5"/>
+<text x="1280" y="100" transform="rotate(-90, 1280, 100)" font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">burgundy</text>
+<rect x="1200" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="#b88160" fill-opacity="0.5"/>
 <text x="1220" y="100" transform="rotate(-90, 1220, 100)" font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">wood</text>
-<rect x="1140" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="black" fill-opacity="0.1"/>
+<rect x="1140" y="55" width="40" rx="50%" ry="50%" height="40" stroke="black" stroke-width="2" fill="black" fill-opacity="0.5"/>
 <text x="1160" y="100" transform="rotate(-90, 1160, 100)" font-size="1.2em" font-weight="bold" text-anchor="end" dominant-baseline="central">black</text>
 <text x="30" y="136" font-size="1.2em" font-weight="bold" text-anchor="start" dominant-baseline="central">Materials:</text>
 <text x="50" y="156" font-size="1.2em" text-anchor="start" dominant-baseline="central"> - metal</text>
@@ -160,13 +160,13 @@
 <line x1="1066.25" y1="420" x2="1091.25" y2="420" stroke="black" stroke-width="1" />
 <line x1="1091.25" y1="409" x2="1091.25" y2="431" stroke="black" stroke-width="1" />
 <text x="1078.75" y="439" font-size="1.2em" transform="rotate(-90, 1078.75, 439)"  text-anchor="end" dominant-baseline="middle" fill="black"><tspan x="1078.75" dy="0">rubber</tspan></text>
-<path d="M408.75 291.875 L421.25 291.875 L421.25 308.125 L408.75 308.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#E1C16E" fill-opacity="1" />
-<path d="M421.25 291.875 L446.25 281.25 L446.25 318.75 L421.25 308.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#E1C16E" fill-opacity="1" />
-<path d="M446.25 280 L471.25 272.5 L471.25 327.5 L446.25 320 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b88160" fill-opacity="1" />
-<path d="M471.25 272.5 L961.25 272.5 L961.25 327.5 L471.25 327.5 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#e38f0f" fill-opacity="0" />
-<line x1="458.75" y1="300" x2="948.75" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
-<line x1="458.75" y1="300" x2="948.75" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
-<path d="M961.25 274.375 L1031.25 274.375 L1031.25 325.625 L961.25 325.625 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#E1C16E" fill-opacity="1" />
+<path d="M408.75 291.875 L421.25 291.875 L421.25 308.125 L408.75 308.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#E1C16E" fill-opacity="1"/>
+<path d="M421.25 291.875 L446.25 281.25 L446.25 318.75 L421.25 308.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#E1C16E" fill-opacity="1"/>
+<path d="M446.25 280 L471.25 272.5 L471.25 327.5 L446.25 320 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b88160" fill-opacity="1"/>
+<path d="M471.25 272.5 L961.25 272.5 L961.25 327.5 L471.25 327.5 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#e38f0f" fill-opacity="0.5"/>
+<line x1="483.75" y1="300" x2="973.75" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
+<line x1="483.75" y1="300" x2="973.75" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
+<path d="M961.25 274.375 L1031.25 274.375 L1031.25 325.625 L961.25 325.625 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#E1C16E" fill-opacity="1"/>
 <line x1="969.3269230769231" y1="275.375" x2="969.3269230769231" y2="324.625" stroke-width="1" stroke="gray" />
 <line x1="974.7115384615385" y1="275.375" x2="974.7115384615385" y2="324.625" stroke-width="1" stroke="gray" />
 <line x1="980.0961538461538" y1="275.375" x2="980.0961538461538" y2="324.625" stroke-width="1" stroke="gray" />
@@ -178,11 +178,12 @@
 <line x1="1017.7884615384615" y1="275.375" x2="1017.7884615384615" y2="324.625" stroke-width="1" stroke="gray" />
 <line x1="1023.1730769230769" y1="275.375" x2="1023.1730769230769" y2="324.625" stroke-width="1" stroke="gray" />
 <circle r="4" cx="976.25" cy="287.1875" stroke="black" stroke-width="0.5" fill="dimgray" fill-opacity="1"/>
-<path d="M1031.25 276.25 L1056.25 276.25 L1056.25 323.75 L1031.25 323.75 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#E1C16E" fill-opacity="1" />
-<path d="M1056.25 275 L1066.25 275 L1066.25 325 L1056.25 325 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#E1C16E" fill-opacity="1" />
-<path d="M1066.25 276.875 L1091.25 276.875 L1091.25 323.125 L1066.25 323.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#db756d" fill-opacity="1" />
-<rect x="471.25" y="272.75" width="12" height="54.5" rx="0" ry="0" stroke-width="0.5" stroke="none" fill="#b88160" fill-opacity="1"/>
-<path d="M 483.75 272.5 C 467.1875 279.375, 467.1875 293.125, 483.75 300" stroke-width="0.5" stroke="black" stroke-linecap="round" fill-opacity="0" fill="#e38f0f" /><path d="M 483.75 327.5 C 467.1875 320.625, 467.1875 306.875, 483.75 300" stroke-width="0.5" stroke="black" stroke-linecap="round" fill-opacity="0" fill="#e38f0f" />
+<path d="M1031.25 276.25 L1056.25 276.25 L1056.25 323.75 L1031.25 323.75 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#E1C16E" fill-opacity="1"/>
+<path d="M1056.25 275 L1066.25 275 L1066.25 325 L1056.25 325 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#E1C16E" fill-opacity="1"/>
+<path d="M1066.25 276.875 L1091.25 276.875 L1091.25 323.125 L1066.25 323.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#db756d" fill-opacity="1"/>
+
+<!-- TAPER START: hexagonal -->
+<path d="M 483.75 272.5 C 467.1875 279.375, 467.1875 293.125, 483.75 300" stroke-width="0.5" stroke="black" stroke-linecap="round" fill-opacity="0.5" fill="none" /><path d="M 483.75 327.5 C 467.1875 320.625, 467.1875 306.875, 483.75 300" stroke-width="0.5" stroke="black" stroke-linecap="round" fill-opacity="0.5" fill="none" />
 <!-- FRONT COMPONENT: eraser -->
 <circle r="23.125" cx="160" cy="300" fill="#db756d" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 
@@ -194,7 +195,7 @@
 <circle r="25.625" cx="160" cy="300" fill="#E1C16E" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 
 <!-- FRONT COMPONENT: body -->
-<polygon points="144.12286759728528,272.5 175.87713240271472,272.5 191.75426480542941,300 175.87713240271472,327.5 144.12286759728528,327.5 128.24573519457059,300 " stroke="black" stroke-width="0.5" fill="#e38f0f" fill-opacity="0"/>
+<polygon points="144.12286759728528,272.5 175.87713240271472,272.5 191.75426480542941,300 175.87713240271472,327.5 144.12286759728528,327.5 128.24573519457059,300 " stroke="black" stroke-width="0.5" fill="#e38f0f" fill-opacity="0.5"/>
 
 <!-- FRONT COMPONENT: head -->
 <circle r="20" cx="160" cy="300" stroke="black" stroke-width="0.5" fill="#b88160" fill-opacity="1"/>
@@ -210,7 +211,7 @@
 <circle r="18.75" cx="1400" cy="300" stroke="black" stroke-width="0.5" fill="#E1C16E" fill-opacity="1"/>
 <circle r="20" cx="1400" cy="300" stroke="black" stroke-width="0.5" fill="#b88160" fill-opacity="1"/>
 <circle r="27.5" cx="1400" cy="300" stroke="black" stroke-width="0.5" fill="#b88160" fill-opacity="1"/>
-<polygon points="1384.1228675972852,272.5 1415.8771324027148,272.5 1431.7542648054293,300 1415.8771324027148,327.5 1384.1228675972852,327.5 1368.2457351945707,300 " stroke="black" stroke-width="0.5" fill="#e38f0f" fill-opacity="0.1"/>
+<polygon points="1384.1228675972852,272.5 1415.8771324027148,272.5 1431.7542648054293,300 1415.8771324027148,327.5 1384.1228675972852,327.5 1368.2457351945707,300 " stroke="black" stroke-width="0.5" fill="#e38f0f" fill-opacity="0.5"/>
 <circle r="25.625" cx="1400" cy="300" fill="#E1C16E" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 <circle r="23.75" cx="1400" cy="300" fill="#E1C16E" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 <circle r="25" cx="1400" cy="300" fill="#E1C16E" fill-opacity="1" stroke="black" stroke-width="0.5"  />

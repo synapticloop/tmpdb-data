@@ -589,13 +589,13 @@ export function dimensionsHorizontal(x: number, y:number, width:number, text: st
 	}
 	return(svgString);
 }
-export function rectangle(x:number, y:number, width:number, height:number, strokeColour:string, opaqueColour: OpaqueColour): string {
+export function rectangle(x:number, y:number, width:number, height:number, strokeColour:string, fillColour: OpaqueColour): string {
 	let svgString = "";
 	svgString += `<rect x="${x}" ` +
 		`y="${y}" ` +
 		`width="${width}" ` +
 		`height="${height}" ` +
-		`rx="0" ry="0" stroke-width="0.5" stroke="${strokeColour}" fill="${opaqueColour.colour}" fill-opacity="${opaqueColour.opacity}"/>\n`
+		`rx="0" ry="0" stroke-width="0.5" stroke="${strokeColour}" fill="${fillColour.colour}" fill-opacity="${fillColour.opacity}"/>\n`
 	return(svgString);
 }
 

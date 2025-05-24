@@ -160,13 +160,13 @@
 <line x1="1066.25" y1="420" x2="1091.25" y2="420" stroke="black" stroke-width="1" />
 <line x1="1091.25" y1="409" x2="1091.25" y2="431" stroke="black" stroke-width="1" />
 <text x="1078.75" y="439" font-size="1.2em" transform="rotate(-90, 1078.75, 439)"  text-anchor="end" dominant-baseline="middle" fill="black"><tspan x="1078.75" dy="0">rubber</tspan></text>
-<path d="M408.75 291.875 L421.25 291.875 L421.25 308.125 L408.75 308.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<path d="M421.25 291.875 L446.25 281.25 L446.25 318.75 L421.25 308.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<path d="M446.25 280 L471.25 272.5 L471.25 327.5 L446.25 320 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<path d="M471.25 272.5 L961.25 272.5 L961.25 327.5 L471.25 327.5 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<path d="M408.75 291.875 L421.25 291.875 L421.25 308.125 L408.75 308.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#E1C16E" fill-opacity="1"/>
+<path d="M421.25 291.875 L446.25 281.25 L446.25 318.75 L421.25 308.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#E1C16E" fill-opacity="1"/>
+<path d="M446.25 280 L471.25 272.5 L471.25 327.5 L446.25 320 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b88160" fill-opacity="1"/>
+<path d="M471.25 272.5 L961.25 272.5 L961.25 327.5 L471.25 327.5 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="burgundy" fill-opacity="0.5"/>
 <line x1="483.75" y1="300" x2="973.75" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="483.75" y1="300" x2="973.75" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
-<path d="M961.25 274.375 L1031.25 274.375 L1031.25 325.625 L961.25 325.625 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<path d="M961.25 274.375 L1031.25 274.375 L1031.25 325.625 L961.25 325.625 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#E1C16E" fill-opacity="1"/>
 <line x1="969.3269230769231" y1="275.375" x2="969.3269230769231" y2="324.625" stroke-width="1" stroke="gray" />
 <line x1="974.7115384615385" y1="275.375" x2="974.7115384615385" y2="324.625" stroke-width="1" stroke="gray" />
 <line x1="980.0961538461538" y1="275.375" x2="980.0961538461538" y2="324.625" stroke-width="1" stroke="gray" />
@@ -178,42 +178,44 @@
 <line x1="1017.7884615384615" y1="275.375" x2="1017.7884615384615" y2="324.625" stroke-width="1" stroke="gray" />
 <line x1="1023.1730769230769" y1="275.375" x2="1023.1730769230769" y2="324.625" stroke-width="1" stroke="gray" />
 <circle r="4" cx="976.25" cy="287.1875" stroke="black" stroke-width="0.5" fill="dimgray" fill-opacity="1"/>
-<path d="M1031.25 276.25 L1056.25 276.25 L1056.25 323.75 L1031.25 323.75 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<path d="M1056.25 275 L1066.25 275 L1066.25 325 L1056.25 325 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<path d="M1066.25 276.875 L1091.25 276.875 L1091.25 323.125 L1066.25 323.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<!-- TAPER START: hexagonal --><path d="M 483.75 272.5 C 467.1875 279.375, 467.1875 293.125, 483.75 300" stroke-width="0.5" stroke="black" stroke-linecap="round" fill-opacity="1" fill="none" /><path d="M 483.75 327.5 C 467.1875 320.625, 467.1875 306.875, 483.75 300" stroke-width="0.5" stroke="black" stroke-linecap="round" fill-opacity="1" fill="white" />
+<path d="M1031.25 276.25 L1056.25 276.25 L1056.25 323.75 L1031.25 323.75 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#E1C16E" fill-opacity="1"/>
+<path d="M1056.25 275 L1066.25 275 L1066.25 325 L1056.25 325 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#E1C16E" fill-opacity="1"/>
+<path d="M1066.25 276.875 L1091.25 276.875 L1091.25 323.125 L1066.25 323.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#db756d" fill-opacity="1"/>
+
+<!-- TAPER START: hexagonal -->
+<path d="M 483.75 272.5 C 467.1875 279.375, 467.1875 293.125, 483.75 300" stroke-width="0.5" stroke="black" stroke-linecap="round" fill-opacity="0.5" fill="none" /><path d="M 483.75 327.5 C 467.1875 320.625, 467.1875 306.875, 483.75 300" stroke-width="0.5" stroke="black" stroke-linecap="round" fill-opacity="0.5" fill="none" />
 <!-- FRONT COMPONENT: eraser -->
-<circle r="23.125" cx="160" cy="300" fill="white" fill-opacity="1" stroke="black" stroke-width="0.5"  />
+<circle r="23.125" cx="160" cy="300" fill="#db756d" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 
 <!-- FRONT COMPONENT: cap -->
-<circle r="25" cx="160" cy="300" fill="white" fill-opacity="1" stroke="black" stroke-width="0.5"  />
-<circle r="23.75" cx="160" cy="300" fill="white" fill-opacity="1" stroke="black" stroke-width="0.5"  />
+<circle r="25" cx="160" cy="300" fill="#E1C16E" fill-opacity="1" stroke="black" stroke-width="0.5"  />
+<circle r="23.75" cx="160" cy="300" fill="#E1C16E" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 
 <!-- FRONT COMPONENT: ferrule -->
-<circle r="25.625" cx="160" cy="300" fill="white" fill-opacity="1" stroke="black" stroke-width="0.5"  />
+<circle r="25.625" cx="160" cy="300" fill="#E1C16E" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 
 <!-- FRONT COMPONENT: body -->
-<polygon points="144.12286759728528,272.5 175.87713240271472,272.5 191.75426480542941,300 175.87713240271472,327.5 144.12286759728528,327.5 128.24573519457059,300 " stroke="black" stroke-width="0.5" fill="white" fill-opacity="1"/>
+<polygon points="144.12286759728528,272.5 175.87713240271472,272.5 191.75426480542941,300 175.87713240271472,327.5 144.12286759728528,327.5 128.24573519457059,300 " stroke="black" stroke-width="0.5" fill="burgundy" fill-opacity="0.5"/>
 
 <!-- FRONT COMPONENT: head -->
-<circle r="20" cx="160" cy="300" stroke="black" stroke-width="0.5" fill="white" fill-opacity="1"/>
-<circle r="27.5" cx="160" cy="300" stroke="black" stroke-width="0.5" fill="white" fill-opacity="1"/>
+<circle r="20" cx="160" cy="300" stroke="black" stroke-width="0.5" fill="#b88160" fill-opacity="1"/>
+<circle r="27.5" cx="160" cy="300" stroke="black" stroke-width="0.5" fill="#b88160" fill-opacity="1"/>
 
 <!-- FRONT COMPONENT: tip -->
-<circle r="8.125" cx="160" cy="300" stroke="black" stroke-width="0.5" fill="white" fill-opacity="1"/>
-<circle r="18.75" cx="160" cy="300" stroke="black" stroke-width="0.5" fill="white" fill-opacity="1"/>
-<circle r="8.125" cx="160" cy="300" fill="white" fill-opacity="1" stroke="black" stroke-width="0.5"  />
-<circle r="5" cx="160" cy="300" fill="white" fill-opacity="1" stroke="dimgray" stroke-width="0.5"  />
-<circle r="8.125" cx="1400" cy="300" fill="white" fill-opacity="1" stroke="black" stroke-width="0.5"  />
-<circle r="8.125" cx="1400" cy="300" stroke="black" stroke-width="0.5" fill="white" fill-opacity="1"/>
-<circle r="18.75" cx="1400" cy="300" stroke="black" stroke-width="0.5" fill="white" fill-opacity="1"/>
-<circle r="20" cx="1400" cy="300" stroke="black" stroke-width="0.5" fill="white" fill-opacity="1"/>
-<circle r="27.5" cx="1400" cy="300" stroke="black" stroke-width="0.5" fill="white" fill-opacity="1"/>
-<polygon points="1384.1228675972852,272.5 1415.8771324027148,272.5 1431.7542648054293,300 1415.8771324027148,327.5 1384.1228675972852,327.5 1368.2457351945707,300 " stroke="black" stroke-width="0.5" fill="white" fill-opacity="1"/>
-<circle r="25.625" cx="1400" cy="300" fill="white" fill-opacity="1" stroke="black" stroke-width="0.5"  />
-<circle r="23.75" cx="1400" cy="300" fill="white" fill-opacity="1" stroke="black" stroke-width="0.5"  />
-<circle r="25" cx="1400" cy="300" fill="white" fill-opacity="1" stroke="black" stroke-width="0.5"  />
-<circle r="23.125" cx="1400" cy="300" fill="white" fill-opacity="1" stroke="black" stroke-width="0.5"  />
+<circle r="8.125" cx="160" cy="300" stroke="black" stroke-width="0.5" fill="#E1C16E" fill-opacity="1"/>
+<circle r="18.75" cx="160" cy="300" stroke="black" stroke-width="0.5" fill="#E1C16E" fill-opacity="1"/>
+<circle r="8.125" cx="160" cy="300" fill="#E1C16E" fill-opacity="1" stroke="black" stroke-width="0.5"  />
+<circle r="5" cx="160" cy="300" fill="c" fill-opacity="1" stroke="dimgray" stroke-width="0.5"  />
+<circle r="8.125" cx="1400" cy="300" fill="#E1C16E" fill-opacity="1" stroke="black" stroke-width="0.5"  />
+<circle r="8.125" cx="1400" cy="300" stroke="black" stroke-width="0.5" fill="#E1C16E" fill-opacity="1"/>
+<circle r="18.75" cx="1400" cy="300" stroke="black" stroke-width="0.5" fill="#E1C16E" fill-opacity="1"/>
+<circle r="20" cx="1400" cy="300" stroke="black" stroke-width="0.5" fill="#b88160" fill-opacity="1"/>
+<circle r="27.5" cx="1400" cy="300" stroke="black" stroke-width="0.5" fill="#b88160" fill-opacity="1"/>
+<polygon points="1384.1228675972852,272.5 1415.8771324027148,272.5 1431.7542648054293,300 1415.8771324027148,327.5 1384.1228675972852,327.5 1368.2457351945707,300 " stroke="black" stroke-width="0.5" fill="burgundy" fill-opacity="0.5"/>
+<circle r="25.625" cx="1400" cy="300" fill="#E1C16E" fill-opacity="1" stroke="black" stroke-width="0.5"  />
+<circle r="23.75" cx="1400" cy="300" fill="#E1C16E" fill-opacity="1" stroke="black" stroke-width="0.5"  />
+<circle r="25" cx="1400" cy="300" fill="#E1C16E" fill-opacity="1" stroke="black" stroke-width="0.5"  />
+<circle r="23.125" cx="1400" cy="300" fill="#db756d" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 </g><text x="50%" y="580" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb) // Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
 <text x="1490" y="590" font-size="0.5em" font-weight="bold" text-anchor="end" dominant-baseline="middle">SVGTechnicalRenderer</text>
 </svg>

@@ -259,12 +259,15 @@ export abstract class SVGRenderer {
 
 		if(part.taperStart) {
 			let backgroundColour: OpaqueColour = part.taperStart.getBackgroundOpacityColour(colourIndex);
+			svgString += `\n<!-- TAPER START: ${part.shape} -->\n`
 
 			// now we get to draw the taper
 			switch (part.shape) {
 				case "hexagonal":
-					// rectangle first
-					svgString += rectangle(startX, midY - part.endHeight / 2 * 5 + 0.25, xOffsetTaperStart * 5 - 0.5, part.startHeight * 5 - 0.5, "none", backgroundColour);
+					// Draw the intersection of the path
+
+					// TODO - should be an intersection
+					// svgString += rectangle(startX, midY - part.endHeight / 2 * 5 + 0.25, xOffsetTaperStart * 5 - 0.5, part.startHeight * 5 - 0.5, "none", backgroundColour);
 					svgString += `<path d="M ${startX + xOffsetTaperStart * 5} ${midY - part.endHeight / 2 * 5} ` +
 						`C ${startX + xOffsetTaperStart * (xOffsetTaperStartScale * -5)} ${midY - part.endHeight / 2 * 5 * 3 / 4}, ` +
 						`${startX + xOffsetTaperStart * (xOffsetTaperStartScale * -5)} ${midY - part.endHeight / 2 * 5 / 4}, ` +
@@ -273,14 +276,14 @@ export abstract class SVGRenderer {
 						`stroke="${strokeColor}" ` +
 						`stroke-linecap="round" ` +
 						`fill-opacity="${opaqueColour.opacity}" ` +
-						`fill="${opaqueColour.colour}" />`
+						`fill="none" />`
 					svgString += `<path d="M ${startX + xOffsetTaperStart * 5} ${midY + part.endHeight / 2 * 5} ` +
 						`C ${startX + xOffsetTaperStart * (xOffsetTaperStartScale * -5)} ${midY + part.endHeight / 2 * 5 * 3 / 4}, ` +
 						`${startX + xOffsetTaperStart * (xOffsetTaperStartScale * -5)} ${midY + part.endHeight / 2 * 5 / 4}, ` +
 						`${startX + xOffsetTaperStart * 5} ${midY}" ` +
 						`stroke-width="0.5" stroke="${strokeColor}" stroke-linecap="round" ` +
 						`fill-opacity="${opaqueColour.opacity}" ` +
-						`fill="${opaqueColour.colour}" />`
+						`fill="none" />`
 
 					break;
 				case "cylinder":
@@ -310,17 +313,19 @@ export abstract class SVGRenderer {
 
 		if(part.taperEnd) {
 			let backgroundColour: OpaqueColour = part.taperEnd.getBackgroundOpacityColour(colourIndex);
+			svgString += `\n<!-- TAPER END: ${part.shape} -->\n`
 
 			// now we get to draw the taper
 			switch (part.shape) {
 				case "hexagonal":
-					svgString += rectangle(
-							startX - xOffsetTaperEnd * 5,
-							midY - part.endHeight / 2 * 5 + 0.25,
-							(part.length + xOffsetTaperEnd) * 5 - 0.5,
-							part.startHeight * 5 - 0.5,
-							"none",
-							backgroundColour);
+					// TODO - need to intersect between the two
+					// svgString += rectangle(
+					// 		startX - xOffsetTaperEnd * 5,
+					// 		midY - part.endHeight / 2 * 5 + 0.25,
+					// 		(part.length + xOffsetTaperEnd) * 5 - 0.5,
+					// 		part.startHeight * 5 - 0.5,
+					// 		"none",
+					// 		backgroundColour);
 
 					svgString += `<path d="M ${startX + (part.length + xOffsetTaperEnd) * 5} ${midY - part.endHeight / 2 * 5} ` +
 						`C ${startX + ((part.length - xOffsetTaperEnd) * 5 * xOffsetTaperEndScale)} ${midY - part.endHeight / 2 * 5 * 3 / 4}, ` +
@@ -683,6 +688,7 @@ export abstract class SVGRenderer {
 
 			for(let part of component.parts) {
 				svgString += this.renderTaper(xStart, y, part, colourIndex, colourOpacity.colour);
+
 				xStart += part.length * 5;
 			}
 		}
@@ -706,6 +712,23 @@ export abstract class SVGRenderer {
 
 		for(let part of component.parts) {
 			svgString += this.renderPart(x, y, part, colourIndex);
+			// finally the shape
+			let taperStartOffset: number = (part.taperStart?.xOffset ? part.taperStart.xOffset : 0);
+			let taperEndOffset: number = (part.taperEnd?.xOffset ? part.taperEnd.xOffset : 0);
+			switch (part.shape) {
+
+				case "hexagonal":
+					// svgString += drawShapeDetails(startX, midY, (part.length) * 5);
+					// startX - xOffsetTaperEnd * 5
+					svgString += drawShapeDetails(x + (part.internalOffset + taperStartOffset) * 5, y, (part.length + taperEndOffset) * 5);
+					break;
+				case "octagonal":
+					// svgString += drawShapeDetails(startX, midY - ((part.startHeight / 2 * 5) * 4 / 7), (part.length) * 5);
+					// svgString += drawShapeDetails(startX, midY + ((part.startHeight / 2 * 5) * 4 / 7), (part.length) * 5);
+					svgString += drawShapeDetails(x + part.internalOffset * 5, y - ((part.startHeight / 2 * 5) * 4 / 7), (part.length) * 5);
+					svgString += drawShapeDetails(x + part.internalOffset * 5, y + ((part.startHeight / 2 * 5) * 4 / 7), (part.length) * 5);
+					break;
+			}
 			x += part.length * 5;
 		}
 
@@ -773,6 +796,8 @@ export abstract class SVGRenderer {
 		let svgString: string = "";
 		for(const part of component.parts) {
 			svgString += this.renderPart(startX, midY, part, colourIndex);
+
+			// now we need to draw the part shap
 		}
 		return(svgString);
 	}
@@ -866,23 +891,6 @@ export abstract class SVGRenderer {
 					`stroke-linejoin="round" ` +
 					`fill="${opaqueColour.colour}" ` +
 					`fill-opacity="${opaqueColour.opacity}"/>\n`
-				break;
-		}
-
-		let taperStartOffset: number = (part.taperStart?.xOffset ? part.taperStart.xOffset : 0);
-		let taperEndOffset: number = (part.taperEnd?.xOffset ? part.taperEnd.xOffset : 0);
-		switch (part.shape) {
-
-			case "hexagonal":
-				// svgString += drawShapeDetails(startX, midY, (part.length) * 5);
-				// startX - xOffsetTaperEnd * 5
-				svgString += drawShapeDetails(x + (part.internalOffset + taperStartOffset) * 5, y, (part.length + taperEndOffset) * 5);
-				break;
-			case "octagonal":
-				// svgString += drawShapeDetails(startX, midY - ((part.startHeight / 2 * 5) * 4 / 7), (part.length) * 5);
-				// svgString += drawShapeDetails(startX, midY + ((part.startHeight / 2 * 5) * 4 / 7), (part.length) * 5);
-				svgString += drawShapeDetails(x + part.internalOffset * 5, y - ((part.startHeight / 2 * 5) * 4 / 7), (part.length) * 5);
-				svgString += drawShapeDetails(x + part.internalOffset * 5, y + ((part.startHeight / 2 * 5) * 4 / 7), (part.length) * 5);
 				break;
 		}
 
