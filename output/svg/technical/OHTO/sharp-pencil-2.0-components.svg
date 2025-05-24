@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500">
  <pattern id="knurled-large" patternUnits="userSpaceOnUse" width="12" height="12">
 <path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 6,6 L 12,12"/>
 <path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 6,6 L 0,12"/>
@@ -26,8 +26,8 @@
 <path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,8"/>
 <path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,0" />
 <path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,0" />
-</pattern><rect x="0" y="0" width="1200" height="600" fill="white" stroke="black" stroke-width="4" />
-<rect x="2" y="2" width="1196" height="596" fill="white" stroke="dimgray" stroke-width="1" />
+</pattern><rect x="0" y="0" width="1200" height="500" fill="white" stroke="black" stroke-width="4" />
+<rect x="2" y="2" width="1196" height="496" fill="white" stroke="dimgray" stroke-width="1" />
 <g transform="rotate(0 0 0)">
 <line x1="40" y1="300" x2="1160" y2="300" stroke-linecap="round" stroke="#5f5f5f" stroke-dasharray="2" stroke-width="1" />
 <line x1="20" y1="300" x2="60" y2="300" stroke-linecap="round" stroke="#000000"  stroke-width="1" />
@@ -36,13 +36,13 @@
 <line x1="1140" y1="300" x2="1180" y2="300" stroke-linecap="round" stroke="#000000"  stroke-width="1" />
 <line x1="1160" y1="280" x2="1160" y2="320" stroke="#000000" stroke-linecap="round"  stroke-width="1" />
 <circle r="10" cx="1160" cy="300" fill="white" fill-opacity="0" stroke="#000000" stroke-width="1"  />
-<line x1="600" y1="90" x2="600" y2="510" stroke="#5f5f5f" stroke-linecap="round" stroke-dasharray="2" stroke-width="1" />
+<line x1="600" y1="90" x2="600" y2="410" stroke="#5f5f5f" stroke-linecap="round" stroke-dasharray="2" stroke-width="1" />
 <line x1="580" y1="90" x2="620" y2="90" stroke-linecap="round" stroke="#000000"  stroke-width="1" />
 <line x1="600" y1="70" x2="600" y2="110" stroke="#000000" stroke-linecap="round"  stroke-width="1" />
 <circle r="10" cx="600" cy="90" fill="white" fill-opacity="0" stroke="#000000" stroke-width="1"  />
-<line x1="580" y1="510" x2="620" y2="510" stroke-linecap="round" stroke="#000000"  stroke-width="1" />
-<line x1="600" y1="490" x2="600" y2="530" stroke="#000000" stroke-linecap="round"  stroke-width="1" />
-<circle r="10" cx="600" cy="510" fill="white" fill-opacity="0" stroke="#000000" stroke-width="1"  />
+<line x1="580" y1="410" x2="620" y2="410" stroke-linecap="round" stroke="#000000"  stroke-width="1" />
+<line x1="600" y1="390" x2="600" y2="430" stroke="#000000" stroke-linecap="round"  stroke-width="1" />
+<circle r="10" cx="600" cy="410" fill="white" fill-opacity="0" stroke="#000000" stroke-width="1"  />
 <text x="30" y="50" font-size="2.0em" font-weight="bold"> OHTO // Sharp Pencil 2.0 (Model #: APS-680E)</text>
 <line x1="258.75" y1="184.5" x2="258.75" y2="300" stroke="#cfcfcf" stroke-linecap="round"  stroke-width="1" />
 <line x1="258.75" y1="180" x2="258.75" y2="300" stroke="#cfcfcf" stroke-linecap="round"  stroke-width="1" />
@@ -80,8 +80,8 @@
 <path d="M271.25 291.875 L296.25 281.25 L296.25 318.75 L271.25 308.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
 <path d="M296.25 280 L321.25 272.5 L321.25 327.5 L296.25 320 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
 <path d="M321.25 272.5 L811.25 272.5 L811.25 327.5 L321.25 327.5 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
-<line x1="321.25" y1="300" x2="811.25" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
-<line x1="321.25" y1="300" x2="811.25" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
+<line x1="308.75" y1="300" x2="798.75" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
+<line x1="308.75" y1="300" x2="798.75" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
 <path d="M811.25 274.375 L881.25 274.375 L881.25 325.625 L811.25 325.625 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
 <line x1="819.3269230769231" y1="275.375" x2="819.3269230769231" y2="324.625" stroke-width="1" stroke="gray" />
 <line x1="824.7115384615385" y1="275.375" x2="824.7115384615385" y2="324.625" stroke-width="1" stroke="gray" />
@@ -98,6 +98,6 @@
 <path d="M906.25 275 L916.25 275 L916.25 325 L906.25 325 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
 <path d="M916.25 276.875 L941.25 276.875 L941.25 323.125 L916.25 323.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1" />
 <rect x="321.25" y="272.75" width="12" height="54.5" rx="0" ry="0" stroke-width="0.5" stroke="none" fill="white" fill-opacity="1"/>
-<path d="M 333.75 272.5 C 317.1875 279.375, 317.1875 293.125, 333.75 300" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="white" /><path d="M 333.75 327.5 C 317.1875 320.625, 317.1875 306.875, 333.75 300" stroke-width="0.5" stroke="black" stroke-linecap="round" fill="white" /></g><text x="50%" y="580" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb) // Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
-<text x="1190" y="590" font-size="0.5em" font-weight="bold" text-anchor="end" dominant-baseline="middle">SVGTechnicalComponentRenderer</text>
+<path d="M 333.75 272.5 C 317.1875 279.375, 317.1875 293.125, 333.75 300" stroke-width="0.5" stroke="black" stroke-linecap="round" fill-opacity="1" fill="white" /><path d="M 333.75 327.5 C 317.1875 320.625, 317.1875 306.875, 333.75 300" stroke-width="0.5" stroke="black" stroke-linecap="round" fill-opacity="1" fill="white" /></g><text x="50%" y="480" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // The Mechanical Pencil Database (tmpdb) // Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
+<text x="1190" y="490" font-size="0.5em" font-weight="bold" text-anchor="end" dominant-baseline="middle">SVGTechnicalComponentRenderer</text>
 </svg>

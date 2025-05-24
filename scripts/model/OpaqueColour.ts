@@ -45,6 +45,6 @@ export class OpaqueColour {
 				this.colour = colour;
 		}
 
-		this.definition = this.colour + "%" + this.opacity;
+		this.definition = this.colourName + "%" + this.opacity * 100;
 	}
 }

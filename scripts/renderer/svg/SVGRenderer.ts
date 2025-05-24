@@ -774,11 +774,15 @@ export abstract class SVGRenderer {
 			case "octagonal":
 			case "cone":
 				svgString += `<path d="M${startX + part.internalOffset * 5} ` +
-					`${midY - (part.startHeight / 2 * 5)} ` +
-					`L${startX + part.internalOffset * 5 + part.length * 5} ${midY - (part.endHeight / 2 * 5)} ` +
-					`L${startX + part.internalOffset * 5 + part.length * 5} ${midY + (part.endHeight / 2 * 5)} ` +
-					`L${startX + part.internalOffset * 5} ${midY + (part.startHeight / 2 * 5)} Z" ` +
-					`stroke-width="0.5" stroke="${strokeColour}" stroke-linejoin="round" fill="${opaqueColour.colour}" fill-opacity="${opaqueColour.opacity}" />\n`
+						`${midY - (part.startHeight / 2 * 5)} ` +
+						`L${startX + part.internalOffset * 5 + part.length * 5} ${midY - (part.endHeight / 2 * 5)} ` +
+						`L${startX + part.internalOffset * 5 + part.length * 5} ${midY + (part.endHeight / 2 * 5)} ` +
+						`L${startX + part.internalOffset * 5} ${midY + (part.startHeight / 2 * 5)} Z" ` +
+						`stroke-width="0.5" ` +
+						`stroke="${strokeColour}" ` +
+						`stroke-linejoin="round" ` +
+						`fill="${opaqueColour.colour}" ` +
+						`fill-opacity="${opaqueColour.opacity}" />\n`
 
 				if(part.joined) {
 					svgString += lineJoined(startX,
