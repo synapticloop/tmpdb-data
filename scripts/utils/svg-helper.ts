@@ -88,12 +88,12 @@ export function drawShapeDetails(x: number, y: number, width: number) {
 			`y1="${y}" ` +
 			`x2="${x + width}" ` +
 			`y2="${y}" ` +
-			`stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>\n` +
+			`stroke-width="1.5" stroke="gray" fill="gray" stroke-opacity="1.0"/>\n` +
 			`<line x1="${x}" ` +
 			`y1="${y}" ` +
 			`x2="${x + width}" ` +
 			`y2="${y}" ` +
-			`stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>\n`);
+			`stroke-width="0.5" stroke="black" fill="none" stroke-opacity="0.5"/>\n`);
 }
 
 export function drawExtra(offsetX: number, offsetY: number, parts: Part[], strokeColour: string):string {
@@ -605,6 +605,7 @@ export function arrowLeft(x: number, y:number): string {
 	let yOffset: number = 8;
 	let xInset: number = 7;
 
+	svgString += `\n\n<!-- ARROW START -->\n`
 	svgString += `<line x1="${x}" ` +
 			`y1="${y}" ` +
 			`x2="${x + xInset}" ` +

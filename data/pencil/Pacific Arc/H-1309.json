@@ -7,6 +7,7 @@
 	"accurate": true,
 	"skus":[ "H-1309SLV", "H-1309BLK"],
 	"mechanism": "",
+	"TODO": "check colours on pacific arc black...",
 	"features": [
 		{ "type":  "sharpener", "location":  "inside cap" }
 	],
@@ -14,7 +15,8 @@
 	"colours": [ "silver", "black" ],
 	"colour_map": {
 		"black": "#000000",
-		"silver": "#b4b8b9"
+		"silver": "#b4b8b9",
+		"brass": "#e1c16e"
 	},
 	"front": [
 		{ "shape": "cylinder", "dimensions": [ 2.0, 10.0 ], "fill":  "black" }
@@ -27,6 +29,12 @@
 			"type": "jaws",
 			"parts": [
 				{ "shape": "cone", "dimensions": [ 2.25, 3.25, 4.0 ] }
+			],
+			"internal_end": [
+				{ "shape": "cylinder", "dimensions": [ 16.26, 4.0, 4.0 ], "colours": [ "silver" ] },
+				{ "shape": "cylinder", "dimensions": [ 26.25, 4.0, 4.0 ], "colours": [ "brass" ], "finish": "spring" },
+				{ "shape": "cylinder", "dimensions": [ 0.75, 5.5, 5.5 ], "colours": [ "brass" ] },
+				{ "shape": "cylinder", "dimensions": [ 93.5, 4.0, 4.0 ], "colours": [ "brass" ] }
 			],
 			"material": "metal"
 		},
@@ -48,6 +56,9 @@
 			"type": "body",
 			"parts": [
 				{ "shape": "hexagonal", "dimensions": [ 67.5, 8.0 ] }
+			],
+			"internal_start": [
+				{ "shape": "cylinder", "dimensions": [ 5.75, 6.5 ], "finish": "threaded" }
 			],
 			"material": "metal"
 		},
@@ -103,6 +114,10 @@
 				{ "shape": "cylinder", "dimensions": [ 1.5, 5.5 ] },
 				{ "shape": "cylinder", "dimensions": [ 0.75, 5.0 ] },
 				{ "shape": "cylinder", "dimensions": [ 1.75, 5.5 ] }
+			],
+			"internal_start": [
+				{ "shape": "cylinder", "dimensions": [ 14.5, 5.5 ], "colours": [ "black" ]  },
+				{ "shape": "cylinder", "dimensions": [ 5.75, 5.5 ]  }
 			],
 			"material": "plastic"
 		}

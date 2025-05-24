@@ -204,96 +204,207 @@
 <line x1="1060.625" y1="420" x2="1104.375" y2="420" stroke="black" stroke-width="1" />
 <line x1="1104.375" y1="409" x2="1104.375" y2="431" stroke="black" stroke-width="1" />
 <text x="1082.5" y="439" font-size="1.2em" transform="rotate(-90, 1082.5, 439)"  text-anchor="end" dominant-baseline="middle" fill="black"><tspan x="1082.5" dy="0">metal</tspan></text>
+
+
+<!-- renderSideComponent: jaws -->
+
+
+<!-- renderPart: cone -->
 <path d="M395.625 292.5 L406.875 291.25 L406.875 308.75 L395.625 307.5 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+
+
+<!-- renderSideComponent: tip -->
+
+
+<!-- renderPart: cone -->
 <path d="M406.875 286.875 L455.625 280.625 L455.625 319.375 L406.875 313.125 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+
+
+<!-- renderSideComponent: head -->
+
+
+<!-- renderPart: hexagonal -->
 <path d="M455.625 280.625 L488.125 280 L488.125 320 L455.625 319.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <line x1="478.125" y1="300" x2="510.625" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="478.125" y1="300" x2="510.625" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
+
+
+<!-- renderSideComponent: grip -->
+
+
+<!-- renderPart: hexagonal -->
 <path d="M488.125 280 L494.375 280 L494.375 320 L488.125 320 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <line x1="488.125" y1="300" x2="494.375" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="488.125" y1="300" x2="494.375" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
+
+
+<!-- renderPart: hexagonal -->
 <path d="M494.375 280.625 L500.625 280.625 L500.625 319.375 L494.375 319.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <line x1="494.375" y1="300" x2="500.625" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="494.375" y1="300" x2="500.625" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
+
+
+<!-- renderPart: hexagonal -->
 <path d="M500.625 280 L506.875 280 L506.875 320 L500.625 320 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <line x1="500.625" y1="300" x2="506.875" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="500.625" y1="300" x2="506.875" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
+
+
+<!-- renderPart: hexagonal -->
 <path d="M506.875 280.625 L513.125 280.625 L513.125 319.375 L506.875 319.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <line x1="506.875" y1="300" x2="513.125" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="506.875" y1="300" x2="513.125" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
+
+
+<!-- renderPart: hexagonal -->
 <path d="M513.125 280 L519.375 280 L519.375 320 L513.125 320 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <line x1="513.125" y1="300" x2="519.375" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="513.125" y1="300" x2="519.375" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
+
+
+<!-- renderPart: hexagonal -->
 <path d="M519.375 280.625 L525.625 280.625 L525.625 319.375 L519.375 319.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <line x1="519.375" y1="300" x2="525.625" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="519.375" y1="300" x2="525.625" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
+
+
+<!-- renderPart: hexagonal -->
 <path d="M525.625 280 L531.875 280 L531.875 320 L525.625 320 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <line x1="525.625" y1="300" x2="531.875" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="525.625" y1="300" x2="531.875" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
+
+
+<!-- renderPart: hexagonal -->
 <path d="M531.875 280.625 L538.125 280.625 L538.125 319.375 L531.875 319.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <line x1="531.875" y1="300" x2="538.125" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="531.875" y1="300" x2="538.125" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
+
+
+<!-- renderPart: hexagonal -->
 <path d="M538.125 280 L544.375 280 L544.375 320 L538.125 320 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <line x1="538.125" y1="300" x2="544.375" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="538.125" y1="300" x2="544.375" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
+
+
+<!-- renderPart: hexagonal -->
 <path d="M544.375 280.625 L550.625 280.625 L550.625 319.375 L544.375 319.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <line x1="544.375" y1="300" x2="550.625" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="544.375" y1="300" x2="550.625" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
+
+
+<!-- renderPart: hexagonal -->
 <path d="M550.625 280 L556.875 280 L556.875 320 L550.625 320 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <line x1="550.625" y1="300" x2="556.875" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="550.625" y1="300" x2="556.875" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
+
+
+<!-- renderPart: hexagonal -->
 <path d="M556.875 280.625 L563.125 280.625 L563.125 319.375 L556.875 319.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <line x1="556.875" y1="300" x2="563.125" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="556.875" y1="300" x2="563.125" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
+
+
+<!-- renderPart: hexagonal -->
 <path d="M563.125 280 L569.375 280 L569.375 320 L563.125 320 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <line x1="563.125" y1="300" x2="569.375" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="563.125" y1="300" x2="569.375" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
+
+
+<!-- renderPart: hexagonal -->
 <path d="M569.375 280.625 L575.625 280.625 L575.625 319.375 L569.375 319.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <line x1="569.375" y1="300" x2="575.625" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="569.375" y1="300" x2="575.625" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
+
+
+<!-- renderPart: hexagonal -->
 <path d="M575.625 280 L581.875 280 L581.875 320 L575.625 320 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <line x1="575.625" y1="300" x2="581.875" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="575.625" y1="300" x2="581.875" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
+
+
+<!-- renderPart: hexagonal -->
 <path d="M581.875 280.625 L588.125 280.625 L588.125 319.375 L581.875 319.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <line x1="581.875" y1="300" x2="588.125" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="581.875" y1="300" x2="588.125" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
+
+
+<!-- renderPart: hexagonal -->
 <path d="M588.125 280 L594.375 280 L594.375 320 L588.125 320 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <line x1="588.125" y1="300" x2="594.375" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="588.125" y1="300" x2="594.375" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
+
+
+<!-- renderPart: hexagonal -->
 <path d="M594.375 280.625 L600.625 280.625 L600.625 319.375 L594.375 319.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <line x1="594.375" y1="300" x2="600.625" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="594.375" y1="300" x2="600.625" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
+
+
+<!-- renderPart: hexagonal -->
 <path d="M600.625 280 L606.875 280 L606.875 320 L600.625 320 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <line x1="600.625" y1="300" x2="606.875" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="600.625" y1="300" x2="606.875" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
+
+
+<!-- renderPart: hexagonal -->
 <path d="M606.875 280.625 L613.125 280.625 L613.125 319.375 L606.875 319.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <line x1="606.875" y1="300" x2="613.125" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="606.875" y1="300" x2="613.125" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
+
+
+<!-- renderPart: hexagonal -->
 <path d="M613.125 280 L619.375 280 L619.375 320 L613.125 320 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <line x1="613.125" y1="300" x2="619.375" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="613.125" y1="300" x2="619.375" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
+
+
+<!-- renderPart: hexagonal -->
 <path d="M619.375 280.625 L625.625 280.625 L625.625 319.375 L619.375 319.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <line x1="619.375" y1="300" x2="625.625" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="619.375" y1="300" x2="625.625" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
+
+
+<!-- renderPart: hexagonal -->
 <path d="M625.625 280 L631.875 280 L631.875 320 L625.625 320 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <line x1="625.625" y1="300" x2="631.875" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="625.625" y1="300" x2="631.875" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
+
+
+<!-- renderPart: hexagonal -->
 <path d="M631.875 280.625 L638.125 280.625 L638.125 319.375 L631.875 319.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <line x1="631.875" y1="300" x2="638.125" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="631.875" y1="300" x2="638.125" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
+
+
+<!-- renderPart: hexagonal -->
 <path d="M638.125 280 L644.375 280 L644.375 320 L638.125 320 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <line x1="638.125" y1="300" x2="644.375" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="638.125" y1="300" x2="644.375" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
+
+
+<!-- renderPart: hexagonal -->
 <path d="M644.375 280.625 L650.625 280.625 L650.625 319.375 L644.375 319.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <line x1="644.375" y1="300" x2="650.625" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="644.375" y1="300" x2="650.625" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
+
+
+<!-- renderSideComponent: body -->
+
+
+<!-- renderPart: hexagonal -->
 <path d="M650.625 280 L970.625 280 L970.625 320 L650.625 320 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <line x1="650.625" y1="300" x2="970.625" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="650.625" y1="300" x2="970.625" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
+
+
+<!-- renderSideComponent: clip -->
 <path d="M835.625 272.25 Q858.125 288.5 868.125 268.5" stroke-width="4" stroke="black" fill="none" stroke-linecap="round" />
 <path d="M835.625 271 Q925.625 258.5 1018.125 271" stroke-width="4" stroke="black" fill="none" stroke-linecap="round" />
 <path d="M1018.125 271 Q1023.125 274.75 1018.125 278.5" stroke-width="4" stroke="black" fill="none" stroke-linecap="round" />
 <line x1="1018.125" y1="278.5" x2="1003.125" y2="278.5" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
+
+
+<!-- renderPart: hexagonal -->
 <path d="M970.625 277.5 L1004.375 277.5 L1004.375 322.5 L970.625 322.5 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <line x1="970.625" y1="300" x2="1004.375" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="970.625" y1="300" x2="1004.375" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
@@ -301,15 +412,38 @@
 <path d="M835.625 271 Q925.625 258.5 1018.125 271" stroke-width="3" stroke="white" fill="none" stroke-linecap="round" />
 <path d="M1018.125 271 Q1023.125 274.75 1018.125 278.5" stroke-width="3" stroke="white" fill="none" stroke-linecap="round" />
 <line x1="1018.125" y1="278.5" x2="1003.125" y2="278.5" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
+
+
+<!-- renderSideComponent: tail -->
+
+
+<!-- renderPart: hexagonal -->
 <path d="M1004.375 280 L1060.625 280 L1060.625 320 L1004.375 320 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <line x1="1004.375" y1="300" x2="1060.625" y2="300" stroke-width="1.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <line x1="1004.375" y1="300" x2="1060.625" y2="300" stroke-width="0.5" stroke="gray" fill="none" stroke-opacity="0.5"/>
+
+
+<!-- renderSideComponent: cap -->
+
+
+<!-- renderPart: cylinder -->
 <path d="M1060.625 283.75 L1093.125 283.75 L1093.125 316.25 L1060.625 316.25 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+
+
+<!-- renderPart: cylinder -->
 <path d="M1093.125 285 L1098.125 285 L1098.125 315 L1093.125 315 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+
+
+<!-- renderPart: cylinder -->
 <path d="M1098.125 283.75 L1103.125 283.75 L1103.125 316.25 L1098.125 316.25 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <path d="M1098.125 283.75 L1103.125 283.75 L1103.125 316.25 L1098.125 316.25 Z" stroke-width="1.0" stroke="black" fill="url(#lined)"/>
+
+
+<!-- renderPart: cylinder -->
 <path d="M1103.125 289.375 L1104.375 289.375 L1104.375 310.625 L1103.125 310.625 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<!-- TAPER START: hexagonal --><path d="M 478.125 280 C 448.3125 285, 448.3125 295, 478.125 300" stroke-width="0.5" stroke="black" stroke-linecap="round" fill-opacity="1" fill="none" /><path d="M 478.125 320 C 448.3125 315, 448.3125 305, 478.125 300" stroke-width="0.5" stroke="black" stroke-linecap="round" fill-opacity="1" fill="white" />
+
+<!-- TAPER START: hexagonal -->
+<path d="M 478.125 280 C 448.3125 285, 448.3125 295, 478.125 300" stroke-width="0.5" stroke="black" stroke-linecap="round" fill-opacity="1" fill="none" /><path d="M 478.125 320 C 448.3125 315, 448.3125 305, 478.125 300" stroke-width="0.5" stroke="black" stroke-linecap="round" fill-opacity="1" fill="none" />
 <!-- FRONT COMPONENT: cap -->
 <circle r="10.625" cx="160" cy="300" fill="white" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 <circle r="16.25" cx="160" cy="300" fill="white" fill-opacity="1" stroke="black" stroke-width="0.5"  />

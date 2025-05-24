@@ -8,18 +8,15 @@ import {
 import {Part} from "../../../model/Part.ts";
 import {formatToTwoPlaces} from "../../../utils/formatter.ts";
 import {OpaqueColour} from "../../../model/OpaqueColour.ts";
+import {Component} from "../../../model/Component.ts";
 
 class ComponentSplitter {
 	x: number = 0;
-	y: number = 0;
-	length: number = 0;
-	shouldDash: boolean;
+	component: Component;
 
-	constructor(x, y, length: number, shouldDash: boolean) {
+	constructor(x: number, component: Component) {
 		this.x = x;
-		this.y = y;
-		this.length = length;
-		this.shouldDash = shouldDash;
+		this.component = component;
 	}
 }
 
@@ -52,7 +49,7 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 			}
 		}
 
-		super.resize(this.SVG_WIDTH, this.SVG_HEIGHT);
+		super.resize(1200, this.SVG_HEIGHT);
 
 		let svgString:string = this.getSvgStart();
 
@@ -76,23 +73,21 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 
 		let colour: OpaqueColour = new OpaqueColour(this.pencil.colourMap, "white");
 
-		let componentSplitters: ComponentSplitter[] = [];
-
-		// get the last part ( if we have an internal end with an offset, then we
-		// re-draw the previous part..)  a little bit hacky...
-
 		// draw the components
-		let componentsLength: number = 0;
+
+		let previousComponent: Component = null;
 		for (let [index, component] of this.pencil.components.entries()) {
-			let componentsLength: number = component.length * 5;
 
 			if(index !== 0) {
 				if(component.hasInternalStart) {
-					svgString += arrowLeft(x + 10, y);
-
+					if(previousComponent.isHidden) {
+						svgString += this.drawJoinedLine(x + 5, y, component.internalStartLength, previousComponent.internalEndLength);
+					} else {
+						svgString += this.drawJoinedLine(x + 5, y, component.internalStartLength, 0);
+					}
+					svgString += arrowLeft(x + 5, y);
 					y += 120;
-					componentSplitters.push(new ComponentSplitter(x, y, componentsLength, true));
-					componentsLength = 0;
+					svgString += arrowLeft(x - 30 - component.internalStartLength * 5, y);
 				}
 			}
 
@@ -106,87 +101,108 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 				x += internalStart.length * 5;
 			}
 
+			if(component.hasInternalStart) {
+				svgString += this.drawDashedLine(x, y);
+			}
+
 			// render the parts
+
 			svgString += this.renderSideComponent(x, y, component, colourIndex);
+			for(let part of component.parts) {
+				svgString += this.renderTaper(x, y, part, colourIndex);
 
-			x += component.length * 5;
-
+				x += part.length * 5;
+			}
 
 			let previousPart: Part = null;
 			for(const internalEnd of component.internalEnd) {
-				x += internalEnd.internalOffset * 5;
 				svgString += super.renderPart(x, y, internalEnd, colourIndex);
 
-
-				x -= internalEnd.internalOffset * 5;
-
 				if(previousPart !== null && internalEnd.internalOffset < 0) {
-					// redraw the part
-					x -= previousPart.length * 5;
-					svgString += super.renderPart(x, y, previousPart, colourIndex);
-					x += previousPart.length * 5;
+					// only draw the part if this part is not opaque and the previous one is
+
+					const isPreviousOpaque: boolean = previousPart.getOpacityColour(colourIndex).opacity !== 1;
+					const isInternalOpaque: boolean = internalEnd.getOpacityColour(colourIndex).opacity !== 1;
+
+					if(!isInternalOpaque && isPreviousOpaque) {
+						// redraw the part
+						x -= previousPart.length * 5;
+						svgString += super.renderPart(x, y, previousPart, colourIndex);
+						x += previousPart.length * 5;
+					}
+
+					if(colourIndex === -1) {
+						// x -= internalEnd.length * 5;
+						x -= previousPart.length * 5;
+						x -= previousPart.internalOffset * 5;
+						svgString += "\n\n<!-- Previous part white -->\n";
+						svgString += super.renderPart(x, y, previousPart, colourIndex);
+						x += previousPart.length * 5;
+						x += previousPart.internalOffset * 5;
+						// x += previousPart.length - previousPart.internalOffset * 5;
+					}
 				}
 
-				x += internalEnd.internalOffset * 5;
-
 				x += internalEnd.length * 5;
+				x += internalEnd.internalOffset * 5;
 				previousPart = internalEnd;
 			}
 
-			if(component.hasInternalEnd) {
-				svgString += arrowLeft(x - 10);
+			if(component.hasInternalEnd  && !component.isHidden) {
+				x -= component.internalEndLength * 5;
+				svgString += this.drawDashedLine(x, y);
+				svgString += this.drawJoinedLine(x, y, 0, component.internalEndLength);
+				svgString += arrowLeft(x + 10, y);
 				y += 120;
-				componentSplitters.push(new ComponentSplitter(x - (component.length + component.internalEndLength) * 5, y, componentsLength, false));
-				componentsLength = 0;
+				svgString += arrowLeft(x - 30, y);
 			}
 
-			if(component.hasInternalEnd) {
+			if(component.isHidden) {
 				x -= component.internalEndLength * 5;
 			}
+
+			previousComponent = component;
 		}
 
-		// now we are going to go through and draw the arrows and dashed lines
-		for(const [ index, dashedLine ] of componentSplitters.entries()) {
-			if(dashedLine.shouldDash) {
-				svgString += lineVertical(dashedLine.x, dashedLine.y - 40, 80, "1.0", "white");
-				svgString += lineVertical(dashedLine.x, dashedLine.y - 40, 80, "1.0", "black", "2,3");
-			} else {
-				svgString += lineVertical(dashedLine.x, dashedLine.y + 20, 80, "2.0", "pink");
-			}
-		}
+		return(svgString);
+	}
 
-		for (let [index, component] of this.pencil.components.entries()) {
-			if(index !== 0) {
-				if(component.hasInternalStart) {
-					svgString += arrowLeft(x + 10, y);
-					y += 120;
-				}
-			}
+	private drawJoinedLine(x: number, y: number, startLength: number, endLength: number): string {
+		let svgString: string = "\n\n<!-- DASHED JOIN -->\n";
+		svgString += `<path d="M ${x + 10} ${y} ` +
+				`L ${x + 30 + endLength * 5} ${y} ` + // top horizontal
+				`L ${x + 30 + endLength * 5} ${y + 60} ` + // right vertical
+				`L ${x - 50 - startLength * 5 } ${y + 60} ` + // middle horizontal
+				`L ${x - 50 - startLength * 5 } ${y + 120} ` + // left vertical
+				`L ${x - 5 - startLength * 5} ${y + 120} ` + // bottom horizontal
+				`" ` +
+				`fill="none" ` +
+				`stroke="white" ` +
+				`stroke-width="2" ` +
+				`stroke-dasharray="8,4" ` +
+				`stroke-linecap="round" ` +
+				` />\n`;
+		svgString += `<path d="M ${x + 10} ${y} ` +
+				`L ${x + 30 + endLength * 5} ${y} ` + // top horizontal
+				`L ${x + 30 + endLength * 5} ${y + 60} ` + // right vertical
+				`L ${x - 50 - startLength * 5 } ${y + 60} ` + // middle horizontal
+				`L ${x - 50 - startLength * 5 } ${y + 120} ` + // left vertical
+				`L ${x - 5 - startLength * 5} ${y + 120} ` + // bottom horizontal
+				`" ` +
+				`fill="none" ` +
+				`stroke="black" ` +
+				`stroke-width="1" ` +
+				`stroke-dasharray="8,4" ` +
+				`stroke-linecap="round" ` +
+				` />\n`;
 
-			x -= component.internalStartLength * 5;
+		return(svgString);
+	}
 
-			for(const internalStart of component.internalStart) {
-				x += internalStart.length * 5;
-			}
-
-			x += component.length * 5;
-
-			for(const internalEnd of component.internalEnd) {
-				x += internalEnd.internalOffset * 5;
-				x += internalEnd.length * 5;
-			}
-
-			if(component.hasInternalEnd) {
-				svgString += arrowLeft(x, y);
-				svgString += arrowLeft(x - 10);
-				y += 120;
-			}
-
-			if(component.hasInternalEnd) {
-				x -= component.internalEndLength * 5;
-			}
-		}
-
+	private drawDashedLine(x: number, y: number): string {
+		let svgString: string = "";
+		svgString += lineVertical(x, y - 40, 80, "1", "white");
+		svgString += lineVertical(x, y - 40, 80, "1", "black", "4,2");
 		return(svgString);
 	}
 }

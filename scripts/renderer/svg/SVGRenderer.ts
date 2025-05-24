@@ -228,22 +228,25 @@ export abstract class SVGRenderer {
 		return(svgString);
 	}
 
-	protected renderTaper(startX:number, midY:number, part: Part, colourIndex: number, colour:string):string {
-		// TODO - need a nice way to determine what shade of black/grey -
-		//   thinking grayscale inverse
-
-		// TODO - need to add in the colourIndex and remove the colour string
-
-		let opaqueColour: OpaqueColour = part.getOpacityColour(colourIndex);
-		let strokeColor:string = "black";
-		if(opaqueColour.colour === "black") {
-			strokeColor = "dimgray";
-		}
+	protected renderTaper(startX:number, midY:number, part: Part, colourIndex: number):string {
 
 		let svgString:string = "";
+
+		// no point doing anything if there is no taper
 		if(!(part.taperStart || part.taperEnd)){
 			return("");
 		}
+
+		let opaqueColour: OpaqueColour = part.getOpacityColour(colourIndex);
+		let strokeColor:string = "black";
+
+		// TODO - need a nice way to determine what shade of black/grey -
+		//   thinking grayscale inverse
+
+		if(opaqueColour.colourName === "black") {
+			strokeColor = "gray";
+		}
+
 
 		let xOffsetTaperStart: number = 0;
 		let xOffsetTaperStartScale: number = 1;
@@ -272,7 +275,7 @@ export abstract class SVGRenderer {
 						`C ${startX + xOffsetTaperStart * (xOffsetTaperStartScale * -5)} ${midY - part.endHeight / 2 * 5 * 3 / 4}, ` +
 						`${startX + xOffsetTaperStart * (xOffsetTaperStartScale * -5)} ${midY - part.endHeight / 2 * 5 / 4}, ` +
 						`${startX + xOffsetTaperStart * 5} ${midY}" ` +
-						`stroke-width="0.5" ` +
+						`stroke-width="1.0" ` +
 						`stroke="${strokeColor}" ` +
 						`stroke-linecap="round" ` +
 						`fill-opacity="${opaqueColour.opacity}" ` +
@@ -281,7 +284,7 @@ export abstract class SVGRenderer {
 						`C ${startX + xOffsetTaperStart * (xOffsetTaperStartScale * -5)} ${midY + part.endHeight / 2 * 5 * 3 / 4}, ` +
 						`${startX + xOffsetTaperStart * (xOffsetTaperStartScale * -5)} ${midY + part.endHeight / 2 * 5 / 4}, ` +
 						`${startX + xOffsetTaperStart * 5} ${midY}" ` +
-						`stroke-width="0.5" stroke="${strokeColor}" stroke-linecap="round" ` +
+						`stroke-width="1.0" stroke="${strokeColor}" stroke-linecap="round" ` +
 						`fill-opacity="${opaqueColour.opacity}" ` +
 						`fill="none" />`
 
@@ -292,7 +295,7 @@ export abstract class SVGRenderer {
 						`C ${startX + xOffsetTaperStart * (xOffsetTaperStartScale * -5)} ${midY - part.endHeight/2 * 5}, ` +
 						`${startX + xOffsetTaperStart * (xOffsetTaperStartScale * -5)} ${midY + part.endHeight/2 * 5}, ` +
 						`${startX + xOffsetTaperStart * 5} ${midY + part.endHeight / 2 * 5}" ` +
-						`stroke-width="0.5" ` +
+						`stroke-width="1.0" ` +
 						`stroke="${strokeColor}" ` +
 						`stroke-linecap="round" ` +
 							`fill-opacity="${opaqueColour.opacity}" ` +
@@ -687,7 +690,7 @@ export abstract class SVGRenderer {
 			let colourOpacity:OpaqueColour = component.getOpacityColour(colourIndex);
 
 			for(let part of component.parts) {
-				svgString += this.renderTaper(xStart, y, part, colourIndex, colourOpacity.colour);
+				svgString += this.renderTaper(xStart, y, part, colourIndex);
 
 				xStart += part.length * 5;
 			}
@@ -696,7 +699,7 @@ export abstract class SVGRenderer {
 		return(svgString);
 	}
 
-	private renderSideComponent(x: number, y: number, component: Component, colourIndex:number): string {
+	protected renderSideComponent(x: number, y: number, component: Component, colourIndex:number): string {
 		let svgString: string = `\n\n<!-- renderSideComponent: ${component.type} -->\n`;
 		let xStart: number = x;
 
@@ -770,10 +773,8 @@ export abstract class SVGRenderer {
 		x = this._width/2 - (this.pencil.totalLength*5/2);
 
 		for (let component of this.pencil.components) {
-			colourOpacity = component.getOpacityColour(colourIndex);
-
 			for(let part of component.parts) {
-				svgString += this.renderTaper(x, y, part, colourIndex, colourOpacity.colour);
+				svgString += this.renderTaper(x, y, part, colourIndex);
 				x += part.length * 5;
 			}
 		}

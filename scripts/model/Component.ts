@@ -74,6 +74,7 @@ export class Component extends Base {
 		for(const internalEnd of this.internalEnd) {
 			internalEnd.postConstruct(this.mergedColours, colourMap);
 			this.internalEndLength += internalEnd.length;
+			this.internalEndLength += internalEnd.internalOffset;
 		}
 
 		for(const internalStart of this.internalStart) {
