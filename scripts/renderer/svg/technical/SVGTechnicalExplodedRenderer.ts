@@ -1,20 +1,52 @@
 import {Pencil} from "../../../model/Pencil.ts";
 import {SVGRenderer} from "../SVGRenderer.ts";
 import {
-	arrowLeft,
-	lineHorizontal,
+	arrowLeft, lineHorizontal,
 	lineVertical,
 } from "../../../utils/svg-helper.ts";
 import {Part} from "../../../model/Part.ts";
 import {Component} from "../../../model/Component.ts";
 
+class ComponentMarker {
+	xLeft: number;
+	yLeft: number;
+	lengthLeft: number;
+
+	xRight: number;
+	yRight: number;
+	lengthRight: number;
+
+	public addMarker(x: number, y: number, length: number): void {
+		if(length <= 0) {
+			this.xLeft = x;
+			this.yLeft = y;
+			if(length === -Infinity) {
+				this.lengthLeft = 0;
+			} else {
+				this.lengthLeft = length;
+			}
+		} else {
+			this.xRight = x;
+			this.yRight = y;
+
+			if(length === Infinity) {
+				this.lengthRight = 0;
+			} else {
+				this.lengthRight = length;
+			}
+		}
+	}
+
+	toString(): string {
+		return(`Left ${this.xLeft},${this.yLeft} [${this.lengthLeft}] => ${this.xRight},${this.yRight} [${this.lengthRight}] Right`);
+	}
+}
 
 export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 	SVG_WIDTH: number = 1200;
-	SVG_HEIGHT: number = 200;
+	SVG_HEIGHT: number = 120;
 
-	private markers: [x: number, y: number, start:number, end:number][] = [];
-	private markerSet: Set<string> = new Set();
+	private markerMap: Map<number, ComponentMarker> = new Map<number, ComponentMarker>();
 
 	constructor(pencil: Pencil) {
 		super(pencil, 1200, 200, "SVGTechnicalExplodedRenderer");
@@ -28,18 +60,30 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 	 * @returns {string} The SVG data as a String
 	 */
 	render(colourIndex: number):string {
-		// start
 		// determine the this.SVG_HEIGHT
-		this.SVG_HEIGHT += this.pencil.maxHeight
+
+		let previousComponent: Component = null;
 		for(const [index, component] of this.pencil.components.entries()) {
-			if(component.hasInternalStart || component.hasInternalEnd ) {
+			if(index !== 0) {
+				if ((component.hasInternalStart || component.isHidden) && !previousComponent.isHidden) {
+					this.SVG_HEIGHT += 120;
+				}
+			}
+
+			if(component.hasInternalEnd && !component.isHidden) {
 				this.SVG_HEIGHT += 120;
 			}
 
 			if(component.isHidden) {
 				this.SVG_HEIGHT += 120;
 			}
+
+			previousComponent = component;
 		}
+
+		// TODO - fix the above...
+
+		this.SVG_HEIGHT += 120
 
 		super.resize(1200, this.SVG_HEIGHT);
 
@@ -65,28 +109,27 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 
 		// draw the components
 		let previousComponent: Component = null;
-		let hiddenOffset: number = 0;
 
 		let startNonInternal: boolean = false;
 
 		for (let [index, component] of this.pencil.components.entries()) {
+			let incremented: boolean = false;
 
 			if(index !== 0) {
 				if((component.hasInternalStart || component.isHidden) && !previousComponent.isHidden) {
-					// if(previousComponent.isHidden) {
-					// 	svgString += this.drawJoinedLine(x + 5, y, component.internalStartLength, previousComponent.internalEndLength, hiddenOffset);
-					// } else {
-					// 	svgString += this.drawJoinedLine(x + 5, y, component.internalStartLength, 0);
-					// }
-					// svgString += arrowLeft(x + 5, y);
-					this.markInternal(x, y, component.internalStartLength, component.internalEndLength);
+
+					if(!previousComponent.hasInternal || component.hasInternalStart) {
+						this.markComponent(y + 60, x, y, Infinity)
+						svgString += lineHorizontal(x, y, 40, "2", "orange");
+						svgString += lineVertical(x + 40, y, 60, "2", "orange");
+					}
+
+					incremented = true;
 					y += 120;
-					// svgString += arrowLeft(x - 30 - component.internalStartLength * 5, y);
 				}
 
 				if(!component.hasInternal && !startNonInternal) {
 					startNonInternal = true;
-					this.markInternal(x, y, component.internalStartLength, component.internalEndLength);
 				}
 			}
 
@@ -108,12 +151,11 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 			}
 
 			if(component.hasInternalStart) {
-				this.markInternal(x, y, component.internalStartLength, component.internalEndLength);
-				svgString += this.drawDashedLine(x, y);
+				this.markComponent(y - 60, x, y, -component.internalStartLength);
+				svgString += lineHorizontal(x, y, component.internalStartLength * -5 - 40, "2", "green");
+				svgString += lineVertical(x - component.internalStartLength * 5 - 40 , y, -60, "2", "green");
 			}
 
-
-			// render the parts
 
 			svgString += this.renderSideComponent(x, y, component, colourIndex);
 			for(let part of component.parts) {
@@ -139,14 +181,12 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 					}
 
 					if(colourIndex === -1) {
-						// x -= internalEnd.length * 5;
 						x -= previousPart.length * 5;
 						x -= previousPart.internalOffset * 5;
 						svgString += "\n\n<!-- Previous part white -->\n";
 						svgString += super.renderPart(x, y, previousPart, colourIndex);
 						x += previousPart.length * 5;
 						x += previousPart.internalOffset * 5;
-						// x += previousPart.length - previousPart.internalOffset * 5;
 					}
 				}
 
@@ -155,147 +195,110 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 				previousPart = internalEnd;
 			}
 
+			if(component.hasInternalEnd) {
+				this.markComponent(y + 60, x - component.internalEndLength * 5, y, component.internalEndLength);
+					svgString += lineHorizontal(x - component.internalEndLength * 5, y, component.internalEndLength * 5 + 40, "2", "blue");
+				svgString += lineVertical(x + 40, y, 60, "2", "blue");
+			}
+
 			if(component.hasInternalEnd  && !component.isHidden) {
 				x -= component.internalEndLength * 5;
-
-				svgString += this.drawDashedLine(x, y);
-				// svgString += this.drawJoinedLine(x, y, 0, component.internalEndLength);
-				// svgString += arrowLeft(x + 10, y);
-				this.markInternal(x, y, 0, component.internalEndLength);
+				incremented = true;
 				y += 120;
-				this.markInternal(x, y, 0, component.internalEndLength);
-				// svgString += arrowLeft(x - 30, y);
 			}
 
 			previousComponent = component;
 
 			if(component.isHidden) {
 				x -= component.internalEndLength * 5;
-
-				if(component.hasInternalEnd) {
-					// x += component.internalEnd[0].internalOffset * 5;
-					// markers.push([x, y]);
-					// svgString += this.drawDashedLineTest(x, y);
-					// x -= component.internalEnd[0].internalOffset * 5;
-				} else {
-					this.markInternal(x, y, component.internalStartLength, component.internalEndLength);
-					svgString += this.drawDashedLine(x, y);
-				}
 				x -= internalStartOffset;
 
-				// svgString += this.drawJoinedLineStart(x, y, 0, component.internalEndLength, hiddenOffset);
-				// svgString += arrowLeft(x + 10, y);
+				incremented = true;
 				y += 120;
 			}
-		}
 
-		// console.log(this.markers);
-		// now go through the markers
-		const sortedMarkers:[x: number, y: number, start: number, end: number][] = this.markers.sort(function(a:[x: number, y: number, start: number, end: number], b:[x: number, y: number, start: number, end: number ]){
-			if (a[1] === b[1]) {
-				return a[0] - b[0];
-			}
-			return a[1] - b[1];
-		});
-
-		for (let i: number = 0; i < sortedMarkers.length; i++) {
-			const startMarker: number[] = sortedMarkers[i];
-			svgString += lineHorizontal(startMarker[0], startMarker[1], 20, "5", "pink");
-			i++;
-			if(i >= sortedMarkers.length) {
-				break;
+			if(!component.hasInternalStart && incremented) {
+				this.markComponent(y - 60, x, y, -Infinity)
+				svgString += lineHorizontal(x - 40, y, 40, "2", "red");
+				svgString += lineVertical(x - 40 , y, -60, "2", "red");
 			}
 
-			const endMarker: number[] = this.markers[i];
-			svgString += lineHorizontal(endMarker[0], endMarker[1], 20, "5", "pink");
-			i--;
+			if(incremented && previousComponent.isHidden) {
+				// is the next component hidden?
+				const nextComponent: Component = this.pencil.components[index + 1];
+				if(nextComponent && !nextComponent.isHidden && !nextComponent.hasInternalStart) {
+					this.markComponent(y - 60, x, y, -Infinity);
+					svgString += lineHorizontal(x - 40, y, 40, "2", "purple");
+					svgString += lineVertical(x - 40 , y, -60, "2", "purple");
+				}
+			}
+		}
 
-			svgString += this.drawJoinedLine(startMarker[0], endMarker[0], startMarker[1], endMarker[1], endMarker[3], startMarker[2]);
+		for (const key of this.markerMap.keys()) {
+			const componentMarker:ComponentMarker = this.markerMap.get(key);
+			svgString += this.drawExplodedConnectionDetails(componentMarker);
 		}
 
 		return(svgString);
 	}
 
-	private drawJoinedLine(x1: number, x2: number, y1: number, y2: number, start: number, end: number): string {
+	private drawExplodedConnectionDetails(componentMarker: ComponentMarker): string {
 		let svgString: string = "\n\n<!-- DASHED JOIN -->\n";
-		if(y1 === y2) {
-			return("");
-		}
+		svgString += `<path d="M ${componentMarker.xRight} ${componentMarker.yRight} ` +
+				`L ${componentMarker.xRight + 40 + componentMarker.lengthRight * 5} ${componentMarker.yRight} ` + // top horizontal
+				`L ${componentMarker.xRight + 40 + componentMarker.lengthRight * 5} ${componentMarker.yRight + 60} ` + // right vertical
+				`L ${componentMarker.xLeft + componentMarker.lengthLeft * 5 - 40} ${componentMarker.yRight + 60} ` + // middle horizontal
+				`L ${componentMarker.xLeft + componentMarker.lengthLeft * 5 - 40} ${componentMarker.yLeft} ` + // left vertical
+				`L ${componentMarker.xLeft} ${componentMarker.yLeft} ` + // bottom horizontal
+				`" ` +
+				`fill="none" ` +
+				`stroke="white" ` +
+				`stroke-width="1" ` +
+				`stroke-linecap="round" ` +
+				` />\n`;
+		svgString += `<path d="M ${componentMarker.xRight} ${componentMarker.yRight} ` +
+				`L ${componentMarker.xRight + 40 + componentMarker.lengthRight * 5} ${componentMarker.yRight} ` + // top horizontal
+				`L ${componentMarker.xRight + 40 + componentMarker.lengthRight * 5} ${componentMarker.yRight + 60} ` + // right vertical
+				`L ${componentMarker.xLeft + componentMarker.lengthLeft * 5 - 40} ${componentMarker.yRight + 60} ` + // middle horizontal
+				`L ${componentMarker.xLeft + componentMarker.lengthLeft * 5 - 40} ${componentMarker.yLeft} ` + // left vertical
+				`L ${componentMarker.xLeft} ${componentMarker.yLeft} ` + // bottom horizontal
+				`" ` +
+				`fill="none" ` +
+				`stroke="black" ` +
+				`stroke-width="1" ` +
+				`stroke-dasharray="8,4" ` +
+				`stroke-linecap="round" ` +
+				` />\n`;
 
-		svgString += `<path d="M ${x1 + 10} ${y1} ` +
-			`L ${x1 + 50 + end * 5} ${y1} ` + // top horizontal
-			`L ${x1 + 50 + end * 5} ${y1 + 60} ` + // right vertical
-			`L ${x1 - 50 - (x1 - x2) - start} ${y1 + 60} ` + // middle horizontal
-			`L ${x1 - 50 - (x1 - x2) - start} ${y1 + 120} ` + // left vertical
-			`L ${x1 - 5 - (x1 - x2)} ${y1 + 120} ` + // bottom horizontal
-			`" ` +
-			`fill="none" ` +
-			`stroke="black" ` +
-			`stroke-width="1" ` +
-			`stroke-dasharray="8,4" ` +
-			`stroke-linecap="round" ` +
-			` />\n`;
-			// svgString += `<path d="M ${x1 + 10} ${y1} ` +
-			// 	`L ${x1 + 30 + (x1 - x2)} ${y1} ` + // top horizontal
-			// 	`L ${x1 + 30 + (x1 - x2)} ${y1 + 60} ` + // right vertical
-			// 	// `L ${x1 - 50 - startLength * 5 + hiddenOffset * 5} ${y1 + 60} ` + // middle horizontal
-			// 	// `L ${x1 - 50 - startLength * 5 + hiddenOffset * 5} ${y1 + 120} ` + // left vertical
-			// 	// `L ${x1 - 5 - startLength * 5 + hiddenOffset * 5} ${y1 + 120} ` + // bottom horizontal
-			// 	`" ` +
-			// 	`fill="none" ` +
-			// 	`stroke="black" ` +
-			// 	`stroke-width="1" ` +
-			// 	`stroke-dasharray="8,4" ` +
-			// 	`stroke-linecap="round" ` +
-			// 	` />\n`;
+		// add the arrows
+		svgString += arrowLeft(componentMarker.xRight + 5, componentMarker.yRight);
+		svgString += arrowLeft(componentMarker.xLeft - 20 + componentMarker.lengthLeft * 5, componentMarker.yLeft);
+
+		if(componentMarker.lengthLeft < 0) {
+			svgString += this.drawDashedJoin(componentMarker);
+		}
 
 		return(svgString);
 	}
 
-	private markInternal(x: number, y: number, start: number, end: number): void {
-		const testValue = x + ":" + y;
-		if(!this.markerSet.has(testValue)) {
-			this.markers.push([x, y, start, end]);
-			this.markerSet.add(testValue);
+	private markComponent(yMarker: number, x: number, y: number, length: number) {
+		if(this.markerMap.has(yMarker)) {
+			const componentMarker: ComponentMarker = this.markerMap.get(yMarker);
+			componentMarker.addMarker(x, y, length);
+		} else {
+			const componentMarker: ComponentMarker = new ComponentMarker();
+			componentMarker.addMarker(x, y, length);
+			this.markerMap.set(yMarker, componentMarker);
 		}
 	}
 
-	private drawJoinedLineStart(x: number, y: number, startLength: number, endLength: number, hiddenOffset: number=0): string {
-		let svgString: string = "\n\n<!-- DASHED JOIN -->\n";
-		svgString += `<path d="M ${x + 10} ${y} ` +
-			`L ${x + 30 + endLength * 5} ${y} ` + // top horizontal
-			`L ${x + 30 + endLength * 5} ${y + 60} ` + // right vertical
-			`L ${x - 50 - startLength * 5 + hiddenOffset * 5} ${y + 60} ` + // middle horizontal
-			`L ${x - 50 - startLength * 5  + hiddenOffset * 5} ${y + 120} ` + // left vertical
-			`L ${x - 5 - startLength * 5 + hiddenOffset * 5} ${y + 120} ` + // bottom horizontal
-			`" ` +
-			`fill="none" ` +
-			`stroke="white" ` +
-			`stroke-width="2" ` +
-			`stroke-dasharray="8,4" ` +
-			`stroke-linecap="round" ` +
-			` />\n`;
-		svgString += `<path d="M ${x + 10} ${y} ` +
-			`L ${x + 30 + endLength * 5} ${y} ` + // top horizontal
-			`L ${x + 30 + endLength * 5} ${y + 60} ` + // right vertical
-			`L ${x - 50 - startLength * 5 + hiddenOffset * 5} ${y + 60} ` + // middle horizontal
-			`L ${x - 50 - startLength * 5 + hiddenOffset * 5} ${y + 120} ` + // left vertical
-			`L ${x - 5 - startLength * 5 + hiddenOffset * 5} ${y + 120} ` + // bottom horizontal
-			`" ` +
-			`fill="none" ` +
-			`stroke="green" ` +
-			`stroke-width="1" ` +
-			`stroke-dasharray="8,4" ` +
-			`stroke-linecap="round" ` +
-			` />\n`;
-
-		return(svgString);
-	}
-
-	private drawDashedLine(x: number, y: number): string {
+	private drawDashedJoin(componentMarker: ComponentMarker): string {
 		let svgString: string = "";
-		svgString += lineVertical(x, y - 40, 80, "1", "white");
-		svgString += lineVertical(x, y - 40, 80, "1", "dimgray", "3,3");
+		svgString += lineVertical(componentMarker.xLeft, componentMarker.yLeft - 40, 80, "1", "white");
+		svgString += lineVertical(componentMarker.xLeft, componentMarker.yLeft - 40, 80, "1", "dimgray", "3,3");
+
+		// svgString += lineVertical(componentMarker.xRight, componentMarker.yRight - 40, 80, "1", "white");
+		// svgString += lineVertical(componentMarker.xRight, componentMarker.yRight - 40, 80, "1", "dimgray", "3,3");
 		return(svgString);
 	}
 }

@@ -1,0 +1,112 @@
+{
+	"brand": "Mr. Pen",
+	"model_name": "2.0",
+	"model_number": "2.0",
+	"skus": [ ],
+	"lead_size": "2.0",
+	"text": "[LOGO] Mr. Pen (R) 2.0",
+	"colour_component": "body",
+	"mechanism": "click",
+	"colours": [ "silver" ],
+	"comments": "",
+	"colour_map": {
+		"silver": "#b4b8b9",
+		"brass": "#e1c16e"
+	},
+	"features": [
+		{ "type":  "sharpener", "location":  "inside cap" },
+		{ "type":  "eraser", "location":  "inside shaft" }
+	],
+	"front": [
+		{ "shape": "cylinder", "dimensions": [ 2.0, 10.0 ], "fill":  [ "black" ] }
+	],
+	"back":[
+		{ "shape": "cylinder", "dimensions": [ 2.0, 10.0 ] , "fill":  [ "black" ] }
+	],
+	"components": [
+		{
+			"type": "tip",
+			"parts": [
+				{ "shape": "cone", "dimensions": [ 15.0, 3.5, 7.25 ] },
+				{ "shape": "cone", "dimensions": [ 5.5, 7.75, 8.25 ] }
+			],
+			"material": "metal"
+		},
+		{
+			"type": "shaft",
+			"internal_start": [
+				{ "shape": "cylinder", "dimensions": [ 3.25, 6.75 ], "finish": "threaded" }
+			],
+			"internal_end": [
+				{ "shape": "cylinder", "dimensions": [ 1.5, 6.0 ] },
+				{ "shape": "cylinder", "dimensions": [ 0.75, 7.25 ] },
+				{ "shape": "cylinder", "dimensions": [ 1.5, 6.0 ] },
+				{ "shape": "cylinder", "dimensions": [ 3.5, 7.25 ], "finish": "threaded" },
+				{ "shape": "cylinder", "dimensions": [ 6.0, 6.0 ] },
+				{ "shape": "cylinder", "dimensions": [ 1.5, 3.0 ] },
+				{ "shape": "cylinder", "dimensions": [ 98.5, 4.0 ], "material": "plastic" ,"colours": [ "white%30" ], "internal_offset": -1.5 }
+			],
+			"material": "metal",
+			"colours": [ "brass" ]
+		},
+		{
+			"type": "shaft cap",
+			"internal_start": [
+				{ "shape": "cylinder", "dimensions": [ 13.0, 6.0 ], "internal_offset": 112.5 }
+			],
+			"internal_end": [
+				{ "shape": "cylinder", "dimensions": [ 6.25, 5.5 ] }
+			],
+			"material": "plastic",
+			"colours": [ "black" ]
+		},
+		{
+			"type": "shaft eraser",
+			"internal_start": [
+				{ "shape": "cylinder", "dimensions": [ 5.25, 4.5 ], "internal_offset": 119.0 }
+			],
+			"internal_end": [
+				{ "shape": "cylinder", "dimensions": [ 6.0, 4.5 ] }
+			],
+			"material": "rubber",
+			"colours": [ "white" ]
+		},
+		{
+			"type": "grip",
+			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 31.0, 8.5 ], "finish":  "knurled" }
+			],
+			"material": "metal"
+		},
+		{
+			"type": "body",
+			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 66.25, 8.25 ] }
+			],
+			"material": "metal"
+		},
+		{
+			"type": "clip",
+
+			"material": "metal"
+		},
+		{
+			"type": "tail",
+			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 17.25, 8.25 ] },
+				{ "shape": "cylinder", "dimensions": [ 3.25, 8.0 ] }
+			],
+			"material": "metal"
+		},
+		{
+			"type": "cap",
+			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 15.5, 6.25 ] }
+			],
+			"internal_start": [
+				{ "shape": "cylinder", "dimensions": [ 4.5, 6.25 ] }
+			],
+			"material": "metal"
+		}
+	]
+}
