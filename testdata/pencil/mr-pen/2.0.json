@@ -41,7 +41,6 @@
 				{ "shape": "cylinder", "dimensions": [ 1.5, 6.0 ] },
 				{ "shape": "cylinder", "dimensions": [ 0.75, 7.25 ] },
 				{ "shape": "cylinder", "dimensions": [ 1.5, 6.0 ] },
-
 				{ "shape": "cylinder", "dimensions": [ 3.5, 7.25 ], "finish": "threaded" },
 				{ "shape": "cylinder", "dimensions": [ 6.0, 6.0 ] },
 				{ "shape": "cylinder", "dimensions": [ 1.5, 3.0 ] },
@@ -52,8 +51,10 @@
 		},
 		{
 			"type": "shaft cap",
+			"internal_start": [
+				{ "shape": "cylinder", "dimensions": [ 13.0, 6.0 ], "internal_offset": 112.5 }
+			],
 			"internal_end": [
-				{ "shape": "cylinder", "dimensions": [ 13.0, 6.0 ], "internal_offset": 99.0 },
 				{ "shape": "cylinder", "dimensions": [ 6.25, 5.5 ] }
 			],
 			"material": "plastic",
@@ -62,10 +63,10 @@
 		{
 			"type": "shaft eraser",
 			"internal_start": [
-				{ "shape": "cylinder", "dimensions": [ 5.25, 4.5 ]  }
+				{ "shape": "cylinder", "dimensions": [ 5.25, 4.5 ], "internal_offset": 119.0 }
 			],
 			"internal_end": [
-				{ "shape": "cylinder", "dimensions": [ 6.0, 4.5 ], "internal_offset": 106.0 }
+				{ "shape": "cylinder", "dimensions": [ 6.0, 4.5 ] }
 			],
 			"material": "rubber",
 			"colours": [ "white" ]
@@ -80,62 +81,30 @@
 		{
 			"type": "body",
 			"parts": [
-				{ "shape": "hexagonal", "dimensions": [ 66.75, 8.0 ] }
-			],
-			"internal_start": [
-				{ "shape": "cylinder", "dimensions": [ 5.25, 7.5 ], "colours": [ "silver" ], "finish": "threaded" }
+				{ "shape": "cylinder", "dimensions": [ 66.25, 8.25 ] }
 			],
 			"material": "metal"
 		},
 		{
 			"type": "clip",
-			"parts": [
-				{ "shape": "cylinder", "dimensions": [ 5.5, 9.25 ] }
-			],
-			"extras": [
-				{
-					"dimensions": [ 35.75, 2.75, 3.75 ],
-					"offset": [ -30.25, 4.325 ],
-					"parts": [
-						{ "shape": "curve", "points": [ 0.0, -2.5, 7.5, -2.5, 5.0, 2.0 ] },
-						{ "shape": "line", "points": [ 0.0, -2.75, 35.75, -2.75 ] },
-						{ "shape": "curve", "points": [ 35.75, -2.75, 35.75, -0.25, 38.5, -1.375 ] }
-					]
-				}
-			],
+
 			"material": "metal"
 		},
 		{
 			"type": "tail",
 			"parts": [
-				{ "shape": "cylinder", "dimensions": [ 5.0, 8.0 ] }
-			],
-			"material": "metal"
-		},
-		{
-			"type": "indicator",
-			"parts": [
-				{ "shape": "cylinder", "dimensions": [ 9.5, 8.0 ], "finish": "knurled-small,indicator" }
-			],
-			"material": "plastic"
-		},
-		{
-			"type": "foot",
-			"parts": [
-				{ "shape": "cylinder", "dimensions": [ 0.75, 8.0 ] },
-				{ "shape": "cylinder", "dimensions": [ 1.75, 8.25 ], "material": "rubber", "colours": [ "red" ] },
-				{ "shape": "cylinder", "dimensions": [ 0.75, 8.0 ] }
+				{ "shape": "cylinder", "dimensions": [ 17.25, 8.25 ] },
+				{ "shape": "cylinder", "dimensions": [ 3.25, 8.0 ] }
 			],
 			"material": "metal"
 		},
 		{
 			"type": "cap",
 			"parts": [
-				{ "shape": "cylinder", "dimensions": [ 12.0, 5.5 ] }
+				{ "shape": "cylinder", "dimensions": [ 15.5, 6.25 ] }
 			],
 			"internal_start": [
-				{ "shape": "cylinder", "dimensions": [ 8.75, 4.75 ] },
-				{ "shape": "cylinder", "dimensions": [ 2.5, 5.5 ] }
+				{ "shape": "cylinder", "dimensions": [ 4.5, 6.25 ] }
 			],
 			"material": "metal"
 		}

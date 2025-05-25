@@ -21,7 +21,7 @@ export class Part extends Base {
 	@JsonProperty({ name: "taper_end", required: false, type: Taper })
 	taperEnd: Taper;
 	@JsonProperty({ name: "internal_offset", required: false })
-	internalOffset: number = 0; // the internal offset (for tapering only)
+	internalOffset: number = 0; // the internal offset
 	@JsonProperty({ name: "colours", required: false })
 	private colours: string[] = [];
 
