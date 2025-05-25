@@ -44,8 +44,9 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 			if(component.hasInternalStart || component.hasInternalEnd ) {
 				this.SVG_HEIGHT += 120;
 			}
+
 			if(component.isHidden) {
-				this.SVG_HEIGHT += 120;
+				this.SVG_HEIGHT += 240;
 			}
 		}
 
@@ -79,7 +80,7 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 		for (let [index, component] of this.pencil.components.entries()) {
 
 			if(index !== 0) {
-				if(component.hasInternalStart) {
+				if((component.hasInternalStart || component.isHidden) && !previousComponent.isHidden) {
 					if(previousComponent.isHidden) {
 						svgString += this.drawJoinedLine(x + 5, y, component.internalStartLength, previousComponent.internalEndLength);
 					} else {
@@ -155,13 +156,18 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 				svgString += arrowLeft(x + 10, y);
 				y += 120;
 				svgString += arrowLeft(x - 30, y);
-			}
 
-			if(component.isHidden) {
-				x -= component.internalEndLength * 5;
 			}
 
 			previousComponent = component;
+
+			if(component.isHidden) {
+				x -= component.internalEndLength * 5;
+				svgString += this.drawDashedLine(x, y);
+				svgString += this.drawJoinedLine(x, y, 0, component.internalEndLength);
+				svgString += arrowLeft(x + 10, y);
+				y += 120;
+			}
 		}
 
 		return(svgString);

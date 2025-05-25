@@ -1,21 +1,21 @@
 {
-	"brand": "Redcircle",
-	"model_name": "600",
-	"model_number": "600",
+	"brand": "Mr. Pen",
+	"model_name": "2.0",
+	"model_number": "2.0",
+	"skus": [ ],
 	"lead_size": "2.0",
-	"text": "Redcircle (R) 600 2.0mm",
+	"text": "[LOGO] Mr. Pen (R) 2.0",
 	"colour_component": "body",
 	"mechanism": "click",
-	"colours": [ "black", "silver", "gold" ],
+	"colours": [ "silver" ],
 	"comments": "",
 	"colour_map": {
 		"silver": "#b4b8b9",
-		"red": "#680000",
 		"brass": "#e1c16e"
 	},
 	"features": [
 		{ "type":  "sharpener", "location":  "inside cap" },
-		{ "type":  "indicator", "location":  "rotational - near clip" }
+		{ "type":  "eraser", "location":  "inside shaft" }
 	],
 	"front": [
 		{ "shape": "cylinder", "dimensions": [ 2.0, 10.0 ], "fill":  [ "black" ] }
@@ -27,33 +27,55 @@
 		{
 			"type": "tip",
 			"parts": [
-				{ "shape": "cone", "dimensions": [ 1.0, 3.25, 4.0 ] },
-				{ "shape": "cone", "dimensions": [ 12.5, 5.0, 7.5 ] }
-			],
-			"internal_end": [
-				{ "shape": "cylinder", "dimensions": [ 4.75, 6.5 ], "finish": "threaded" }
-			],
-			"material": "metal"
-		},
-		{
-			"type": "grip",
-			"parts": [
-				{ "shape": "cylinder", "dimensions": [ 30.0, 8.25 ], "finish":  "knurled-small" }
+				{ "shape": "cone", "dimensions": [ 15.0, 3.5, 7.25 ] },
+				{ "shape": "cone", "dimensions": [ 5.5, 7.75, 8.25 ] }
 			],
 			"material": "metal"
 		},
 		{
 			"type": "shaft",
 			"internal_start": [
-				{ "shape": "cylinder", "dimensions": [ 4.5, 4.75 ], "material": "metal", "internal_offset": 0.75 },
-				{ "shape": "cylinder", "dimensions": [ 18.5, 5.75 ], "colours": [ "white%90" ] }
+				{ "shape": "cylinder", "dimensions": [ 3.25, 6.75 ], "finish": "threaded" }
 			],
 			"internal_end": [
-				{ "shape": "cylinder", "dimensions": [ 3.5, 5.75 ], "colours": [ "white%90" ] },
-				{ "shape": "cylinder", "dimensions": [ 89.0, 4.25 ], "colours": [ "white%30" ]  }
+				{ "shape": "cylinder", "dimensions": [ 1.5, 6.0 ] },
+				{ "shape": "cylinder", "dimensions": [ 0.75, 7.25 ] },
+				{ "shape": "cylinder", "dimensions": [ 1.5, 6.0 ] },
+
+				{ "shape": "cylinder", "dimensions": [ 3.5, 7.25 ], "finish": "threaded" },
+				{ "shape": "cylinder", "dimensions": [ 6.0, 6.0 ] },
+				{ "shape": "cylinder", "dimensions": [ 1.5, 3.0 ] },
+				{ "shape": "cylinder", "dimensions": [ 98.5, 4.0 ], "material": "plastic" ,"colours": [ "white%30" ], "internal_offset": -1.5 }
+			],
+			"material": "metal",
+			"colours": [ "brass" ]
+		},
+		{
+			"type": "shaft cap",
+			"internal_end": [
+				{ "shape": "cylinder", "dimensions": [ 13.0, 6.0 ], "internal_offset": 99.0 },
+				{ "shape": "cylinder", "dimensions": [ 6.25, 5.5 ] }
 			],
 			"material": "plastic",
-			"colours": [ "brass" ]
+			"colours": [ "black" ]
+		},
+		{
+			"type": "shaft eraser",
+			"internal_start": [
+				{ "shape": "cylinder", "dimensions": [ 5.25, 4.5 ]  }
+			],
+			"internal_end": [
+				{ "shape": "cylinder", "dimensions": [ 6.0, 4.5 ], "internal_offset": 106.0 }
+			],
+			"material": "rubber",
+			"colours": [ "white" ]
+		},
+		{
+			"type": "grip",
+			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 31.0, 8.5 ], "finish":  "knurled" }
+			],
+			"material": "metal"
 		},
 		{
 			"type": "body",
