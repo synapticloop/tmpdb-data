@@ -33,18 +33,19 @@ _(To regenerate the list - and this `README.md` file, run `npm run readme-genera
 | ---: | :--- | :--- | ---: |
 | **BIC** | **Criterium** | undefined | 3 |
 | **Küelox** | **3308** | 3308 | 1 |
-| **M &amp; G** | **Easy Come Easy Go!** | amp-35601 | 3 |
 | **Mitsubishi** | **uni** | MH-500 | 1 |
-| **Mr. Pen** | **2.0** | 2.0 | 1 |
 | **OHTO** | **Sharp Pencil 2.0** | APS-680E | 6 |
 | **Pacific Arc** | **COLLEGIATE** | H-1301 | 2 |
 | **Pacific Arc** | **TECH PRO** | H-1305 | 5 |
 | **Pacific Arc** | **Premium** | H-1309 | 2 |
-| **Redcircle** | **600** | 600 | 3 |
-| **Staedtler** | **Mars Technico** | 780c | 2 |
 | **STUDMARK** | **3750** | undefined | 1 |
+| **Staedtler** | **Mars Technico** | 780c | 2 |
+| **Alvin** | **"TECH DA"** | "TECH DA" | 2 |
+| **M &amp; G** | **Easy Come Easy Go!** | amp-35601 | 3 |
+| **Mr. Pen** | **2.0** | 2.0 | 1 |
+| **Redcircle** | **600** | 600 | 3 |
 | **Unbranded** | **Metal Black** | unknown | 1 |
-| | | **13 Pencils** | **31 Variants**<br />_(colours)_  |
+| | | **14 Pencils** | **33 Variants**<br />_(colours)_  |
 
 # Technical Details
 

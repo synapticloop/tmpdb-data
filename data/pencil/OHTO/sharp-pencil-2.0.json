@@ -52,7 +52,8 @@
 			"parts": [
 				{
 					"shape": "cone",
-					"dimensions": [ 5.0, 8.0, 11.0 ]
+					"dimensions": [ 5.0, 8.0, 11.0 ],
+					"joined": "right"
 				}
 			],
 			"material": "wood",
@@ -64,7 +65,8 @@
 				{
 					"shape": "hexagonal",
 					"dimensions": [ 98.0, 11.0 ],
-					"taper_start": { "offset": [ 2.5, 0.325 ], "background_colours": [ "wood" ] }
+					"taper_start": { "offset": [ 2.5, 0.325 ], "background_colours": [ "wood" ],
+					"joined": "left"}
 				}
 			],
 			"internal_end": [

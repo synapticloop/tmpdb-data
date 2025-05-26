@@ -852,12 +852,13 @@ export abstract class SVGRenderer {
 			case "hexagonal":
 			case "octagonal":
 			case "cone":
-				// draw the background colour first
-				svgString += `<path d="M${x + part.internalOffset * 5} ` +
-						`${y - (part.startHeight / 2 * 5)} ` +
-						`L${x + part.internalOffset * 5 + part.length * 5} ${y - (part.endHeight / 2 * 5)} ` +
-						`L${x + part.internalOffset * 5 + part.length * 5} ${y + (part.endHeight / 2 * 5)} ` +
-						`L${x + part.internalOffset * 5} ${y + (part.startHeight / 2 * 5)} Z" ` +
+				// draw the background colour first - we do just a slight adjustment
+				// to fill in the colour completely (0.05)... (this will be overwritten
+				// by the stroke perhaps)
+				svgString += `<path d="M${x + part.internalOffset * 5 - 0.05} ${y - (part.startHeight / 2 * 5)} ` + // move to top right
+						`L${x + part.internalOffset * 5 + part.length * 5 + 0.05} ${y - (part.endHeight / 2 * 5)} ` + // line to top right
+						`L${x + part.internalOffset * 5 + part.length * 5 + 0.05} ${y + (part.endHeight / 2 * 5)} ` + //
+						`L${x + part.internalOffset * 5 - 0.05} ${y + (part.startHeight / 2 * 5)} Z" ` +
 					`stroke-width="0" ` +
 					`stroke="none" ` +
 					`stroke-linejoin="round" ` +
@@ -877,7 +878,7 @@ export abstract class SVGRenderer {
 
 				if(part.joined !== "left" && part.joined !== "both") {
 					// draw the left hand line
-					svgString += `<path d="M${x + part.internalOffset * 5} ${y - (part.startHeight / 2 * 5)} ` + // move to top-left
+					svgString += `<!-- !left !both--><path d="M${x + part.internalOffset * 5} ${y - (part.startHeight / 2 * 5)} ` + // move to top-left
 						`L${x + part.internalOffset * 5} ${y + (part.startHeight / 2 * 5)}" ` + // line to bottom left
 						`stroke-width="0.5" ` +
 						`stroke="${strokeColour}" ` +
@@ -888,7 +889,7 @@ export abstract class SVGRenderer {
 
 				if(part.joined !== "right" && part.joined !== "both") {
 					// draw the right hand line
-					svgString += `<path d="M${x + part.internalOffset * 5 + part.length * 5} ${y - (part.endHeight / 2 * 5)} ` + // move to top-right
+					svgString += `<!-- !right !both --><path d="M${x + part.internalOffset * 5 + part.length * 5} ${y - (part.endHeight / 2 * 5)} ` + // move to top-right
 						`L${x + part.internalOffset * 5 + part.length * 5} ${y + (part.endHeight / 2 * 5)}" ` + // line to bottom right
 						`stroke-width="0.5" ` +
 						`stroke="${strokeColour}" ` +
