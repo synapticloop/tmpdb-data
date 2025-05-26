@@ -22,10 +22,10 @@
 		{
 			"type": "jaws",
 			"parts": [
-				{ "shape": "cone", "dimensions": [ 3.5, 3.0, 5.75 ] },
-				{ "shape": "cylinder", "dimensions": [ 0.5, 5.75 ], "joined": "right" }
+				{ "shape": "cone", "dimensions": [ 3.5, 3.0, 5.75 ] }
 			],
 			"internal_end": [
+				{ "shape": "cylinder", "dimensions": [ 0.5, 5.75 ], "joined": "right" },
 				{ "shape": "cone", "dimensions": [ 5.5, 5.75, 4.5 ], "joined": "left" },
 				{ "shape": "cylinder", "dimensions": [ 16.5, 4.5 ] },
 				{ "shape": "cylinder", "dimensions": [ 8.5, 4.75 ] }
@@ -94,16 +94,21 @@
 		},
 		{
 			"type": "cap",
-			"parts": [
-				{ "shape": "cylinder", "dimensions": [ 8.0, 5.5 ] }
-			],
 			"internal_start": [
 				{ "shape": "cylinder", "dimensions": [ 6, 4.25 ], "colours": [ "silver"], "finish": "threaded" },
 				{ "shape": "cylinder", "dimensions": [ 74.25, 4.25 ], "colours": [ "silver"] },
 				{ "shape": "cylinder", "dimensions": [ 31.5, 4.25 ], "finish": "spring" },
-				{ "shape": "cylinder", "dimensions": [ 1.5, 5.5 ] }
+				{ "shape": "cylinder", "dimensions": [ 1.5, 5.5 ], "joined": "right" }
+			],
+			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 7.25, 5.5 ], "joined": "left" }
 			],
 			"material": "metal"
 		}
+	],
+	"sources": [
+		{ "name":  "Visual Planning",  "href":  "https://www.visualplanning.com/PDFPages/Visual2010CDN_PencilsErasersCatwUSpricesPgs80-107.pdf" },
+		{ "name":  "BCI Imaging Supplies",  "href":  "https://bciimage.com/wp-content/uploads/2015/08/Alvin-Drafting-Design-Brochure.pdf" }
+
 	]
 }

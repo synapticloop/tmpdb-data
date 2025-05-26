@@ -1,0 +1,90 @@
+{
+	"brand": "Alvin",
+	"model_name": "PRO-MATIC",
+	"model_number": "MC5",
+	"lead_size": "2.0",
+	"text": "[LOGO|Alvin] \"PRO-MATIC\" MC5 ITALY",
+	"colour_component": "body",
+	"mechanism": "clutch",
+	"features": [
+		{ "type": "indicator", "location": "End of body." }
+	],
+	"colours": [ "blue" ],
+	"colour_map": {
+		"blue": "#24549C"
+	},
+	"front": [
+		{ "shape": "cylinder", "dimensions": [ 2.0, 10.0 ], "fill":  [ "black" ] }
+	],
+	"components": [
+		{
+			"type": "jaws",
+			"parts": [
+				{ "shape": "cone", "dimensions": [ 3.5, 3.0, 5.75 ] }
+			],
+			"internal_end": [
+				{ "shape": "cylinder", "dimensions": [ 0.5, 5.75 ], "joined": "right" },
+				{ "shape": "cone", "dimensions": [ 5.5, 5.75, 4.5 ], "joined": "left" },
+				{ "shape": "cylinder", "dimensions": [ 16.5, 4.5 ] },
+				{ "shape": "cylinder", "dimensions": [ 8.5, 4.75 ] }
+			],
+			"material": "metal",
+			"colours": [ "silver" ]
+		},
+		{
+			"type": "tip",
+			"parts": [
+				{ "shape": "cone", "dimensions": [ 14.5, 6.75, 7.5 ] }
+			],
+			"material": "metal",
+			"colours": [ "silver" ]
+		},
+		{
+			"type": "grip",
+			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 25.75, 8.0 ], "finish":  "knurled-small" }
+			],
+			"material": "metal",
+			"colours": [ "silver" ]
+		},
+		{
+			"type": "body",
+			"parts": [
+				{ "shape": "hexagonal", "dimensions": [ 83.25, 8.0 ] }
+			],
+			"material": "metal",
+			"colours": [ "blue" ]
+		},
+		{
+			"type": "indicator",
+			"parts": [
+				{ "shape": "cone", "dimensions": [ 2.5, 8.5, 8.0 ] },
+				{ "shape": "cylinder", "dimensions": [ 9.25, 8.0 ], "finish": "indicator" }
+			],
+			"material": "metal",
+			"colours": [ "silver" ]
+		},
+		{
+			"type": "tail",
+			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 2.75, 7.75 ], "finish": "lined" }
+			],
+			"material": "plastic",
+			"colours": [ "black" ]
+		},
+		{
+			"type": "cap",
+			"internal_start": [
+				{ "shape": "cylinder", "dimensions": [ 6, 4.25 ], "finish": "threaded" },
+				{ "shape": "cylinder", "dimensions": [ 74.25, 4.25 ] },
+				{ "shape": "cylinder", "dimensions": [ 31.5, 4.25 ], "finish": "spring" },
+				{ "shape": "cylinder", "dimensions": [ 0.25, 5.5 ], "joined": "right" }
+			],
+			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 8.5, 5.5 ], "joined": "left" }
+			],
+			"material": "metal",
+			"colours": [ "silver" ]
+		}
+	]
+}

@@ -31,6 +31,7 @@ _(To regenerate the list - and this `README.md` file, run `npm run readme-genera
 
 | Brand | Name | Model # | # Variants<br />_(colours)_ |
 | ---: | :--- | :--- | ---: |
+| **Alvin** | **PRO-MATIC** | MC5 | 1 |
 | **Alvin** | **DA** | TECH | 3 |
 | **BIC** | **Criterium** | undefined | 3 |
 | **Küelox** | **3308** | 3308 | 1 |
@@ -45,7 +46,7 @@ _(To regenerate the list - and this `README.md` file, run `npm run readme-genera
 | **Staedtler** | **Mars Technico** | 780c | 2 |
 | **STUDMARK** | **3750** | undefined | 1 |
 | **Unbranded** | **Metal Black** | unknown | 1 |
-| | | **14 Pencils** | **34 Variants**<br />_(colours)_  |
+| | | **15 Pencils** | **35 Variants**<br />_(colours)_  |
 
 # Technical Details
 
