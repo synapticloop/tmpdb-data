@@ -43,7 +43,7 @@
 			"type": "body",
 			"parts": [
 				{ "shape":"hexagonal", "dimensions": [ 34.75, 7.75], "taper_end": { "offset": [ -14, 0.8 ], "background_colours": [ "none", "none" ] } },
-				{ "shape":"cylinder", "dimensions": [ 58.75, 7.75], "joined": true }
+				{ "shape":"cylinder", "dimensions": [ 58.75, 7.75], "joined": "left" }
 			],
 			"material": "plastic"
 		},

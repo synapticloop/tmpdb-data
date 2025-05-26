@@ -11,7 +11,7 @@ export class Part extends Base {
 	dimensions: number[]; // the dimensions for this part
 
 	@JsonProperty({ name: "joined", required: false })
-	joined: boolean=false; // whether this part is joined to the previous part
+	joined: string=""; // whether this part is joined to the previous part
 	@JsonProperty({ name: "finish", required: false })
 	finish: string = ""; // The finish that is applied to the part
 	@JsonProperty({ name: "offset", required: false })

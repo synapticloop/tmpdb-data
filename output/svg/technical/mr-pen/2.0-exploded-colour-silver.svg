@@ -174,7 +174,7 @@
 <path d="M473.125 579.375 L804.375 579.375 L804.375 620.625 L473.125 620.625 Z" stroke-width="0" stroke="none" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1"/>
 <path d="M473.125 579.375 L804.375 579.375 M804.375 620.625 L473.125 620.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1"/>
 <path d="M473.125 579.375 L473.125 620.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1"/>
-<path d="M804.375 579.375 L804.375 620.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1"/>
+<line x1="473.125" y1="579.625" x2="473.125" y2="620.375" stroke="#b4b8b9" stroke-opacity="1" stroke-width="3" />
 
 
 <!-- renderSideComponent: clip -->
@@ -186,8 +186,8 @@
 <!-- renderPart: cylinder -->
 <path d="M804.375 579.375 L890.625 579.375 L890.625 620.625 L804.375 620.625 Z" stroke-width="0" stroke="none" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1"/>
 <path d="M804.375 579.375 L890.625 579.375 M890.625 620.625 L804.375 620.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1"/>
-<path d="M804.375 579.375 L804.375 620.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1"/>
 <path d="M890.625 579.375 L890.625 620.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1"/>
+<line x1="804.375" y1="579.625" x2="804.375" y2="620.375" stroke="#b4b8b9" stroke-opacity="1" stroke-width="3" />
 
 
 <!-- renderPart: cylinder -->

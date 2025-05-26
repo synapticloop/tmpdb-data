@@ -725,7 +725,7 @@ export abstract class SVGRenderer {
 		}
 
 		for(let [ index, part ] of component.parts.entries()) {
-			svgString += this.renderPart(x, y, part, colourIndex, component.parts[index + 1]?.joined);
+			svgString += this.renderPart(x, y, part, colourIndex);
 			// finally the shape
 			let taperStartOffset: number = (part.taperStart?.xOffset ? part.taperStart.xOffset : 0);
 			let taperEndOffset: number = (part.taperEnd?.xOffset ? part.taperEnd.xOffset : 0);
@@ -769,11 +769,11 @@ export abstract class SVGRenderer {
 				colourOpacity = component.getOpacityColour(colourIndex);
 
 				for(const [ index, part ] of component.internalStart.entries()) {
-					svgString += this.renderPart(x, y, part, colourIndex, component.internalStart[index + 1]?.joined);
+					svgString += this.renderPart(x, y, part, colourIndex);
 					x += part.length * 5;
 				}
 				for(const [ index, part ] of component.internalEnd.entries()) {
-					svgString += this.renderPart(x, y, part, colourIndex, component.internalEnd[index + 1]?.joined);
+					svgString += this.renderPart(x, y, part, colourIndex);
 					x += part.length * 5;
 				}
 			}
@@ -807,7 +807,7 @@ export abstract class SVGRenderer {
 	protected renderComponent(startX:number, midY:number, component:Component, colourIndex: number): string {
 		let svgString: string = "";
 		for(const [ index, part ] of component.parts.entries()) {
-			svgString += this.renderPart(startX, midY, part, colourIndex, component.parts[index + 1]?.joined);
+			svgString += this.renderPart(startX, midY, part, colourIndex);
 
 			// now we need to draw the part shap
 		}
@@ -834,7 +834,7 @@ export abstract class SVGRenderer {
 	 *
 	 * @protected
 	 */
-	protected renderPart(x: number, y:number, part: Part, colourIndex: number, nextPartJoined: boolean=false):string {
+	protected renderPart(x: number, y:number, part: Part, colourIndex: number):string {
 		let svgString: string = `\n\n<!-- renderPart: ${part.shape} -->\n`;
 
 		// get the stroke colour
@@ -875,7 +875,7 @@ export abstract class SVGRenderer {
 					`fill="${opaqueColour.colour}" ` +
 					`fill-opacity="${opaqueColour.opacity}"/>\n`
 
-				if(!part.joined) {
+				if(part.joined !== "left" && part.joined !== "both") {
 					// draw the left hand line
 					svgString += `<path d="M${x + part.internalOffset * 5} ${y - (part.startHeight / 2 * 5)} ` + // move to top-left
 						`L${x + part.internalOffset * 5} ${y + (part.startHeight / 2 * 5)}" ` + // line to bottom left
@@ -886,7 +886,7 @@ export abstract class SVGRenderer {
 						`fill-opacity="${opaqueColour.opacity}"/>\n`
 				}
 
-				if(!nextPartJoined) {
+				if(part.joined !== "right" && part.joined !== "both") {
 					// draw the right hand line
 					svgString += `<path d="M${x + part.internalOffset * 5 + part.length * 5} ${y - (part.endHeight / 2 * 5)} ` + // move to top-right
 						`L${x + part.internalOffset * 5 + part.length * 5} ${y + (part.endHeight / 2 * 5)}" ` + // line to bottom right
@@ -897,18 +897,9 @@ export abstract class SVGRenderer {
 						`fill-opacity="${opaqueColour.opacity}"/>\n`
 				}
 
-				// TODO - move to later....
-				if(part.joined) {
-					svgString += lineJoined(x,
-						y - (part.endHeight / 2 * 5) + 0.25,
-						part.startHeight * 5 - 0.5, "3", opaqueColour);
-					// svgString += lineJoined(startX + part.internalOffset * 5,
-					// 	midY - (part.endHeight / 2 * 5) + 0.25,
-					// 	part.startHeight * 5 - 0.5, "3", opaqueColour.colour);
-				}
-
 				break;
 			case "convex":
+				// TODO - need to update as per above
 				let offsetX = part.length * 5;
 				if (part.offset[0] !== 0) {
 					offsetX = part.offset[0] * 5;

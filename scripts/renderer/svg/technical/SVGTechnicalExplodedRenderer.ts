@@ -142,7 +142,7 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 
 			let internalStartOffset: number = 0;
 			for(const [ index, internalStart ] of component.internalStart.entries()) {
-				svgString += super.renderPart(x, y, internalStart, colourIndex, component.internalStart[index + 1]?.joined);
+				svgString += super.renderPart(x, y, internalStart, colourIndex);
 				x += internalStart.length * 5;
 				if(component.isHidden) {
 					internalStartOffset += internalStart.internalOffset * 5
@@ -165,7 +165,7 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 
 			let previousPart: Part = null;
 			for(const [ index, internalEnd ] of component.internalEnd.entries()) {
-				svgString += super.renderPart(x, y, internalEnd, colourIndex, component.internalEnd[index + 1]?.joined);
+				svgString += super.renderPart(x, y, internalEnd, colourIndex);
 
 				if(previousPart !== null && internalEnd.internalOffset < 0) {
 					// only draw the part if this part is not opaque and the previous one is
@@ -176,7 +176,7 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 					if(!isInternalOpaque && isPreviousOpaque) {
 						// redraw the part
 						x -= previousPart.length * 5;
-						svgString += super.renderPart(x, y, previousPart, colourIndex, component.internalEnd[index]?.joined);
+						svgString += super.renderPart(x, y, previousPart, colourIndex);
 						x += previousPart.length * 5;
 					}
 
@@ -184,7 +184,7 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 						x -= previousPart.length * 5;
 						x -= previousPart.internalOffset * 5;
 						svgString += "\n\n<!-- Previous part white -->\n";
-						svgString += super.renderPart(x, y, previousPart, colourIndex, component.internalEnd[index]?.joined);
+						svgString += super.renderPart(x, y, previousPart, colourIndex);
 						x += previousPart.length * 5;
 						x += previousPart.internalOffset * 5;
 					}
