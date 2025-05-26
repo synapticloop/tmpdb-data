@@ -24,11 +24,8 @@
     "doc": "docs"
   },
   "scripts": {
-    "compile-typescript": "tsc",
     "generate-readme": "tsx ./scripts/readme-generator.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "svg": "node scripts/svg-builder.ts",
-    "generate": "node scripts/output-generator.ts"
+    "generate-output": "tsx ./scripts/output-generator.ts"
   },
   "dependencies": {
     "@types/node": "22.15.17",
