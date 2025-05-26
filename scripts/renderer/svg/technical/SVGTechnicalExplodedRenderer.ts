@@ -120,8 +120,8 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 
 					if(!previousComponent.hasInternal || component.hasInternalStart) {
 						this.markComponent(y + 60, x, y, Infinity)
-						svgString += lineHorizontal(x, y, 40, "2", "orange");
-						svgString += lineVertical(x + 40, y, 60, "2", "orange");
+						// svgString += lineHorizontal(x, y, 40, "2", "orange");
+						// svgString += lineVertical(x + 40, y, 60, "2", "orange");
 					}
 
 					incremented = true;
@@ -152,8 +152,8 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 
 			if(component.hasInternalStart) {
 				this.markComponent(y - 60, x, y, -component.internalStartLength);
-				svgString += lineHorizontal(x, y, component.internalStartLength * -5 - 40, "2", "green");
-				svgString += lineVertical(x - component.internalStartLength * 5 - 40 , y, -60, "2", "green");
+				// svgString += lineHorizontal(x, y, component.internalStartLength * -5 - 40, "2", "green");
+				// svgString += lineVertical(x - component.internalStartLength * 5 - 40 , y, -60, "2", "green");
 			}
 
 
@@ -197,8 +197,8 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 
 			if(component.hasInternalEnd) {
 				this.markComponent(y + 60, x - component.internalEndLength * 5, y, component.internalEndLength);
-					svgString += lineHorizontal(x - component.internalEndLength * 5, y, component.internalEndLength * 5 + 40, "2", "blue");
-				svgString += lineVertical(x + 40, y, 60, "2", "blue");
+				// 	svgString += lineHorizontal(x - component.internalEndLength * 5, y, component.internalEndLength * 5 + 40, "2", "blue");
+				// svgString += lineVertical(x + 40, y, 60, "2", "blue");
 			}
 
 			if(component.hasInternalEnd  && !component.isHidden) {
@@ -219,8 +219,8 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 
 			if(!component.hasInternalStart && incremented) {
 				this.markComponent(y - 60, x, y, -Infinity)
-				svgString += lineHorizontal(x - 40, y, 40, "2", "red");
-				svgString += lineVertical(x - 40 , y, -60, "2", "red");
+				// svgString += lineHorizontal(x - 40, y, 40, "2", "red");
+				// svgString += lineVertical(x - 40 , y, -60, "2", "red");
 			}
 
 			if(incremented && previousComponent.isHidden) {
@@ -228,8 +228,8 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 				const nextComponent: Component = this.pencil.components[index + 1];
 				if(nextComponent && !nextComponent.isHidden && !nextComponent.hasInternalStart) {
 					this.markComponent(y - 60, x, y, -Infinity);
-					svgString += lineHorizontal(x - 40, y, 40, "2", "purple");
-					svgString += lineVertical(x - 40 , y, -60, "2", "purple");
+					// svgString += lineHorizontal(x - 40, y, 40, "2", "purple");
+					// svgString += lineVertical(x - 40 , y, -60, "2", "purple");
 				}
 			}
 		}

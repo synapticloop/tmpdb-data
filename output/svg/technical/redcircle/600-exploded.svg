@@ -57,10 +57,6 @@
 <line x1="313.75" y1="101.75" x2="318.75" y2="138.25" stroke="[object Object]" stroke-linecap="round" stroke-width="1" />
 <line x1="318.75" y1="101.75" x2="323.75" y2="138.25" stroke="dimgray" stroke-linecap="round" stroke-width="2" />
 <line x1="318.75" y1="101.75" x2="323.75" y2="138.25" stroke="[object Object]" stroke-linecap="round" stroke-width="1" />
-<line x1="303.75" y1="120" x2="367.5" y2="120" stroke-linecap="round" stroke="blue"  stroke-width="2" />
-<line x1="367.5" y1="120" x2="367.5" y2="180" stroke="blue" stroke-linecap="round"  stroke-width="2" />
-<line x1="263.75" y1="240" x2="303.75" y2="240" stroke-linecap="round" stroke="red"  stroke-width="2" />
-<line x1="263.75" y1="240" x2="263.75" y2="180" stroke="red" stroke-linecap="round"  stroke-width="2" />
 
 
 <!-- renderSideComponent: grip -->
@@ -69,8 +65,6 @@
 <!-- renderPart: cylinder -->
 <path d="M303.75 219.375 L453.75 219.375 L453.75 260.625 L303.75 260.625 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <path d="M303.75 219.375 L453.75 219.375 L453.75 260.625 L303.75 260.625 Z" stroke-width="1.0" stroke="black" fill="url(#knurled-small)"/>
-<line x1="453.75" y1="240" x2="493.75" y2="240" stroke-linecap="round" stroke="orange"  stroke-width="2" />
-<line x1="493.75" y1="240" x2="493.75" y2="300" stroke="orange" stroke-linecap="round"  stroke-width="2" />
 
 
 <!-- renderPart: cylinder -->
@@ -79,8 +73,6 @@
 
 <!-- renderPart: cylinder -->
 <path d="M365 345.625 L457.5 345.625 L457.5 374.375 L365 374.375 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<line x1="457.5" y1="360" x2="302.5" y2="360" stroke-linecap="round" stroke="green"  stroke-width="2" />
-<line x1="302.5" y1="360" x2="302.5" y2="300" stroke="green" stroke-linecap="round"  stroke-width="2" />
 
 
 <!-- renderSideComponent: shaft -->
@@ -92,8 +84,6 @@
 
 <!-- renderPart: cylinder -->
 <path d="M475 349.375 L920 349.375 L920 370.625 L475 370.625 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<line x1="457.5" y1="360" x2="960" y2="360" stroke-linecap="round" stroke="blue"  stroke-width="2" />
-<line x1="960" y1="360" x2="960" y2="420" stroke="blue" stroke-linecap="round"  stroke-width="2" />
 
 
 <!-- renderPart: cylinder -->
@@ -109,8 +99,6 @@
 <line x1="442.5" y1="459.25" x2="447.5" y2="500.75" stroke="[object Object]" stroke-linecap="round" stroke-width="1" />
 <line x1="447.5" y1="459.25" x2="452.5" y2="500.75" stroke="dimgray" stroke-linecap="round" stroke-width="2" />
 <line x1="447.5" y1="459.25" x2="452.5" y2="500.75" stroke="[object Object]" stroke-linecap="round" stroke-width="1" />
-<line x1="453.75" y1="480" x2="387.5" y2="480" stroke-linecap="round" stroke="green"  stroke-width="2" />
-<line x1="387.5" y1="480" x2="387.5" y2="420" stroke="green" stroke-linecap="round"  stroke-width="2" />
 
 
 <!-- renderSideComponent: body -->
@@ -164,8 +152,6 @@
 
 <!-- renderPart: cylinder -->
 <path d="M900 460 L903.75 460 L903.75 500 L900 500 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<line x1="903.75" y1="480" x2="943.75" y2="480" stroke-linecap="round" stroke="orange"  stroke-width="2" />
-<line x1="943.75" y1="480" x2="943.75" y2="540" stroke="orange" stroke-linecap="round"  stroke-width="2" />
 
 
 <!-- renderPart: cylinder -->
@@ -174,8 +160,6 @@
 
 <!-- renderPart: cylinder -->
 <path d="M891.25 586.25 L903.75 586.25 L903.75 613.75 L891.25 613.75 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<line x1="903.75" y1="600" x2="807.5" y2="600" stroke-linecap="round" stroke="green"  stroke-width="2" />
-<line x1="807.5" y1="600" x2="807.5" y2="540" stroke="green" stroke-linecap="round"  stroke-width="2" />
 
 
 <!-- renderSideComponent: cap -->

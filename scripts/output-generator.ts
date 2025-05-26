@@ -66,7 +66,7 @@ for (const [dirIndex, pencilDirectory] of pencilDirectories.entries()) {
 				const pencilExplodedColourOutputFileName: string = pencilFileName + "-exploded-colour-" + colourComponent.colourName;
 
 				// fileNumber = await renderSVGAndPNG(new SVGTechnicalRenderer(pencil), index, "technical", pencilDirectory, pencilColourOutputFileName, fileNumber);
-				// fileNumber = await renderSVGAndPNG(new SVGTechnicalExplodedRenderer(pencil), index, "technical", pencilDirectory, pencilExplodedColourOutputFileName, fileNumber);
+				fileNumber = await renderSVGAndPNG(new SVGTechnicalExplodedRenderer(pencil), index, "technical", pencilDirectory, pencilExplodedColourOutputFileName, fileNumber);
 				// fileNumber = await renderSVGAndPNG(new SVGPencil45Renderer(pencil), index, "pencil", pencilDirectory, pencilColourOutputFileName + "-45", fileNumber);
 				// fileNumber = await renderSVGAndPNG(new SVGPencilRenderer(pencil), index, "pencil", pencilDirectory, pencilColourOutputFileName, fileNumber);
 				numColours++;
