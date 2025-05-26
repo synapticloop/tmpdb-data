@@ -10,7 +10,7 @@ export class MDReadmeRenderer {
 	render(): string {
 		let mdString: string = "";
 		mdString += "| Brand | Name | Model # | # Colours |\n";
-		mdString += "| ---: | :--- | :--- | :--- |\n";
+		mdString += "| ---: | :--- | :--- | ---: |\n";
 		for(const pencil of this.pencils) {
 			mdString += `| **${pencil.brand}** | **${pencil.modelName}** | ${pencil.modelNumber} | ${pencil.colourComponents.length} |\n`;
 		}

@@ -26,12 +26,12 @@ unfortunate but a design decision.
 
 ## Pencil definitions that are included in this repository
 
-_(To regenerate the list - and this `README.md` file, run the 
-`readme-generator` script)._
+_(To regenerate the list - and this `README.md` file, run  
+`npm run readme-generator` from the root of the project.)_
 
 
 | Brand | Name | Model # | # Colours |
-| ---: | :--- | :--- | :--- |
+| ---: | :--- | :--- | ---: |
 | **BIC** | **Criterium** | undefined | 3 |
 | **Küelox** | **3308** | 3308 | 1 |
 | **M &amp; G** | **Easy Come Easy Go!** | amp-35601 | 3 |
@@ -46,7 +46,8 @@ _(To regenerate the list - and this `README.md` file, run the
 | **STUDMARK** | **3750** | undefined | 1 |
 | **Unbranded** | **Metal Black** | unknown | 1 |
 
----
+# Technical Details
+
 
 
 ## Directory structure
