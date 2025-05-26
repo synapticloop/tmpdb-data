@@ -25,8 +25,6 @@ for (const [dirIndex, pencilDirectory] of pencilDirectories.entries()) {
 
 	if (pencilFiles.length > 0) {
 		for (const [index, pencilFile] of pencilFiles.entries()) {
-			console.log(`    ${numPencils + 1}. ${pencilFile}`);
-
 			const pencilFileFull = path.join(pencilDir, pencilFile);
 
 			const pencilFileContents = JSON.parse(fs.readFileSync(pencilFileFull, "utf8"));

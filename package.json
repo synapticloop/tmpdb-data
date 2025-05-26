@@ -25,7 +25,7 @@
   },
   "scripts": {
     "compile-typescript": "tsc",
-    "generate-readme": "npm run compile-typescript && node --es-module-specifier-resolution=node dist/readme-generator.js",
+    "generate-readme": "tsx ./scripts/readme-generator.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "svg": "node scripts/svg-builder.ts",
     "generate": "node scripts/output-generator.ts"
