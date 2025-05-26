@@ -150,7 +150,7 @@
 				{ "shape": "cylinder", "dimensions": [ 0.25, 4.25 ], "fill":  "black" }
 			],
 			"internal_start": [
-				{ "shape": "cylinder", "dimensions": [ 6.0, 5.0 ], "colours":  [ "silver" ] },
+				{ "shape": "cylinder", "dimensions": [ 6.0, 5.0 ], "colours":  [ "silver" ], "internal_offset": 8.0 },
 				{ "shape": "cylinder", "dimensions": [ 3.75, 6.5 ], "colours":  [ "silver" ] }
 			],
 			"material": "metal",

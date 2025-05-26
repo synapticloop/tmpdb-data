@@ -3,16 +3,24 @@
 	"model_name": "Metal Black",
 	"model_number": "unknown",
 	"text": "",
+	"mechanism": "click",
+	"lead_size": 2.0,
+	"accuracy": "high",
+
+	"features": [
+		{ "type": "Lead size indicator", "location": "Embossed on top of body within the clip component." }
+	],
+
 	"colour_component": "body",
 	"colours": [ "black"],
 	"colour_map": {
 		"brass": "#e1c16e"
 	},
-	"mechanism": "click",
-	"lead_size": 2.0,
+
 	"front": [
 		{ "shape": "cylinder", "dimensions": [ 2.0, 10.0 ], "fill":  "black" }
 	],
+
 	"components": [
 		{
 			"type": "tip",
@@ -106,6 +114,12 @@
 				{ "shape": "cylinder", "dimensions": [ 2.25, 6.25 ] },
 				{ "shape": "cone", "dimensions": [ 2.75, 6.25, 5.75 ] },
 				{ "shape": "cylinder", "dimensions": [ 7.25, 5.75 ] }
+			],
+			"internal_start": [
+				{ "shape": "cylinder", "dimensions": [ 1.25, 6.0 ] },
+				{ "shape": "cylinder", "dimensions": [ 1.75, 5.0 ] },
+				{ "shape": "cylinder", "dimensions": [ 1.25, 6.25 ] }
+
 			],
 			"material": "plastic"
 		}

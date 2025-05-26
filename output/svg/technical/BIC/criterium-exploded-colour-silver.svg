@@ -335,31 +335,31 @@
 
 
 <!-- renderPart: cylinder -->
-<path d="M861.875 587.5 L891.875 587.5 L891.875 612.5 L861.875 612.5 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
+<path d="M901.875 587.5 L931.875 587.5 L931.875 612.5 L901.875 612.5 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
 
 
 <!-- renderPart: cylinder -->
-<path d="M891.875 583.75 L910.625 583.75 L910.625 616.25 L891.875 616.25 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
+<path d="M931.875 583.75 L950.625 583.75 L950.625 616.25 L931.875 616.25 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
 
 
 <!-- renderSideComponent: cap -->
 
 
 <!-- renderPart: cylinder -->
-<path d="M910.625 583.75 L943.125 583.75 L943.125 616.25 L910.625 616.25 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
+<path d="M950.625 583.75 L983.125 583.75 L983.125 616.25 L950.625 616.25 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
 
 
 <!-- renderPart: cylinder -->
-<path d="M943.125 585 L948.125 585 L948.125 615 L943.125 615 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
+<path d="M983.125 585 L988.125 585 L988.125 615 L983.125 615 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
 
 
 <!-- renderPart: cylinder -->
-<path d="M948.125 583.75 L953.125 583.75 L953.125 616.25 L948.125 616.25 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
-<path d="M948.125 583.75 L953.125 583.75 L953.125 616.25 L948.125 616.25 Z" stroke-width="1.0" stroke="black" fill="url(#lined)"/>
+<path d="M988.125 583.75 L993.125 583.75 L993.125 616.25 L988.125 616.25 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
+<path d="M988.125 583.75 L993.125 583.75 L993.125 616.25 L988.125 616.25 Z" stroke-width="1.0" stroke="black" fill="url(#lined)"/>
 
 
 <!-- renderPart: cylinder -->
-<path d="M953.125 589.375 L954.375 589.375 L954.375 610.625 L953.125 610.625 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
+<path d="M993.125 589.375 L994.375 589.375 L994.375 610.625 L993.125 610.625 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
 
 
 <!-- DASHED JOIN -->
@@ -452,8 +452,8 @@
 
 
 <!-- DASHED JOIN -->
-<path d="M 910.625 480 L 990.625 480 L 990.625 540 L 821.875 540 L 821.875 600 L 910.625 600 " fill="none" stroke="white" stroke-width="1" stroke-linecap="round"  />
-<path d="M 910.625 480 L 990.625 480 L 990.625 540 L 821.875 540 L 821.875 600 L 910.625 600 " fill="none" stroke="black" stroke-width="1" stroke-dasharray="8,4" stroke-linecap="round"  />
+<path d="M 910.625 480 L 990.625 480 L 990.625 540 L 861.875 540 L 861.875 600 L 950.625 600 " fill="none" stroke="white" stroke-width="1" stroke-linecap="round"  />
+<path d="M 910.625 480 L 990.625 480 L 990.625 540 L 861.875 540 L 861.875 600 L 950.625 600 " fill="none" stroke="black" stroke-width="1" stroke-dasharray="8,4" stroke-linecap="round"  />
 
 
 <!-- ARROW START -->
@@ -469,17 +469,17 @@
 
 
 <!-- ARROW START -->
-<line x1="841.875" y1="600" x2="848.875" y2="600" stroke-linecap="round" stroke="#ffffff" stroke-width="2.0" />
-<line x1="841.875" y1="600" x2="855.875" y2="592" stroke-linecap="round" stroke="#ffffff" stroke-width="2.0" />
-<line x1="855.875" y1="592" x2="848.875" y2="600" stroke-linecap="round" stroke="#ffffff" stroke-width="2.0" />
-<line x1="841.875" y1="600" x2="855.875" y2="608" stroke-linecap="round" stroke="#ffffff" stroke-width="2.0" />
-<line x1="855.875" y1="608" x2="848.875" y2="600" stroke-linecap="round" stroke="#ffffff" stroke-width="2.0" />
-<line x1="841.875" y1="600" x2="855.875" y2="592" stroke-linecap="round" stroke="#0f0f0f" stroke-width="1.0" />
-<line x1="855.875" y1="592" x2="848.875" y2="600" stroke-linecap="round" stroke="#0f0f0f" stroke-width="1.0" />
-<line x1="841.875" y1="600" x2="855.875" y2="608" stroke-linecap="round" stroke="#0f0f0f" stroke-width="1.0" />
-<line x1="855.875" y1="608" x2="848.875" y2="600" stroke-linecap="round" stroke="#0f0f0f" stroke-width="1.0" />
-<line x1="910.625" y1="560" x2="910.625" y2="640" stroke="white" stroke-linecap="round"  stroke-width="1" />
-<line x1="910.625" y1="560" x2="910.625" y2="640" stroke="dimgray" stroke-linecap="round" stroke-dasharray="3,3" stroke-width="1" />
+<line x1="881.875" y1="600" x2="888.875" y2="600" stroke-linecap="round" stroke="#ffffff" stroke-width="2.0" />
+<line x1="881.875" y1="600" x2="895.875" y2="592" stroke-linecap="round" stroke="#ffffff" stroke-width="2.0" />
+<line x1="895.875" y1="592" x2="888.875" y2="600" stroke-linecap="round" stroke="#ffffff" stroke-width="2.0" />
+<line x1="881.875" y1="600" x2="895.875" y2="608" stroke-linecap="round" stroke="#ffffff" stroke-width="2.0" />
+<line x1="895.875" y1="608" x2="888.875" y2="600" stroke-linecap="round" stroke="#ffffff" stroke-width="2.0" />
+<line x1="881.875" y1="600" x2="895.875" y2="592" stroke-linecap="round" stroke="#0f0f0f" stroke-width="1.0" />
+<line x1="895.875" y1="592" x2="888.875" y2="600" stroke-linecap="round" stroke="#0f0f0f" stroke-width="1.0" />
+<line x1="881.875" y1="600" x2="895.875" y2="608" stroke-linecap="round" stroke="#0f0f0f" stroke-width="1.0" />
+<line x1="895.875" y1="608" x2="888.875" y2="600" stroke-linecap="round" stroke="#0f0f0f" stroke-width="1.0" />
+<line x1="950.625" y1="560" x2="950.625" y2="640" stroke="white" stroke-linecap="round"  stroke-width="1" />
+<line x1="950.625" y1="560" x2="950.625" y2="640" stroke="dimgray" stroke-linecap="round" stroke-dasharray="3,3" stroke-width="1" />
 </g><text x="50%" y="680" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // Synapticloop and The Mechanical Pencil Database (tmpdb)</text>
 <text x="50%" y="700" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
 <text x="1190" y="710" font-size="0.5em" font-weight="bold" text-anchor="end" dominant-baseline="middle">SVGTechnicalExplodedRenderer</text>

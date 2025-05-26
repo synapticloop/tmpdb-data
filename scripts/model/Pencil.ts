@@ -25,6 +25,8 @@ export class Pencil extends Base {
 	text:string = ""; // the text that is written on the pencil
 	@JsonProperty({ name: "maximum_lead_length", required: false })
 	maximumLeadLength: number; // the maximum length of lead that will fit in the pencil
+	@JsonProperty({ name: "number_leads", required: false })
+	numberLeads: number = 1; // the maximum length of lead that will fit in the pencil
 	@JsonProperty({ name: "mechanism", required: true })
 	mechanism: string = "";
 	@JsonProperty({ name: "weight", required: false })
