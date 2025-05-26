@@ -26,11 +26,10 @@ unfortunate but a design decision.
 
 ## Pencil definitions that are included in this repository
 
-_(To regenerate the list - and this `README.md` file, run  
-`npm run readme-generator` from the root of the project.)_
+_(To regenerate the list - and this `README.md` file, run `npm run readme-generator` from the root of the project.)_
 
 
-| Brand | Name | Model # | # Colours |
+| Brand | Name | Model # | # Variants<br />_(colours)_ |
 | ---: | :--- | :--- | ---: |
 | **BIC** | **Criterium** | undefined | 3 |
 | **Küelox** | **3308** | 3308 | 1 |
@@ -45,6 +44,7 @@ _(To regenerate the list - and this `README.md` file, run
 | **Staedtler** | **Mars Technico** | 780c | 2 |
 | **STUDMARK** | **3750** | undefined | 1 |
 | **Unbranded** | **Metal Black** | unknown | 1 |
+| | | **13 Pencils** | **31 Variants**<br />_(colours)_  |
 
 # Technical Details
 

@@ -26,7 +26,6 @@ unfortunate but a design decision.
 
 ## Pencil definitions that are included in this repository
 
-_(To regenerate the list - and this `README.md` file, run  
-`npm run readme-generator` from the root of the project.)_
+_(To regenerate the list - and this `README.md` file, run `npm run readme-generator` from the root of the project.)_
 
 
