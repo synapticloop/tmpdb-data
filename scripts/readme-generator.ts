@@ -36,7 +36,12 @@ for (const [dirIndex, pencilDirectory] of pencilDirectories.entries()) {
 
 		pencils.sort()
 		pencils.sort((a: Pencil, b: Pencil): number => {
-			return a.brand.localeCompare(b.brand)
+			if(a.brand === b.brand) {
+				// same brand
+				return(a.modelName.localeCompare(b.modelName));
+			} else {
+				return a.brand.localeCompare(b.brand)
+			}
 		});
 		let mdString: string = fs.readFileSync("./README-start.md", "utf8");
 
