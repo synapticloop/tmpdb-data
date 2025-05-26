@@ -34,6 +34,10 @@ for (const [dirIndex, pencilDirectory] of pencilDirectories.entries()) {
 			pencils.push(pencil);
 		}
 
+		pencils.sort()
+		pencils.sort((a: Pencil, b: Pencil): number => {
+			return a.brand.localeCompare(b.brand)
+		});
 		let mdString: string = fs.readFileSync("./README-start.md", "utf8");
 
 		mdString += new MDReadmeRenderer(pencils).render();
