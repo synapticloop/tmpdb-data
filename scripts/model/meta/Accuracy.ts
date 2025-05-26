@@ -9,7 +9,7 @@ export class Accuracy {
 		if(Accuracy.ACCURACY_DESCRIPTION.has(level)) {
 			return(Accuracy.ACCURACY_DESCRIPTION.get(level));
 		} else {
-			return("the accuracy level for this mechanical pencil could not be determined.");
+			return("The accuracy level for this mechanical pencil could not be determined.");
 		}
 	}
 }

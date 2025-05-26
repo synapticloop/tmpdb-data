@@ -724,8 +724,8 @@ export abstract class SVGRenderer {
 			break;
 		}
 
-		for(let part of component.parts) {
-			svgString += this.renderPart(x, y, part, colourIndex);
+		for(let [ index, part ] of component.parts.entries()) {
+			svgString += this.renderPart(x, y, part, colourIndex, component.parts[index + 1]?.joined);
 			// finally the shape
 			let taperStartOffset: number = (part.taperStart?.xOffset ? part.taperStart.xOffset : 0);
 			let taperEndOffset: number = (part.taperEnd?.xOffset ? part.taperEnd.xOffset : 0);
@@ -768,12 +768,12 @@ export abstract class SVGRenderer {
 			if(component.isHidden) {
 				colourOpacity = component.getOpacityColour(colourIndex);
 
-				for(const part of component.internalStart) {
-					svgString += this.renderPart(x, y, part, colourIndex);
+				for(const [ index, part ] of component.internalStart.entries()) {
+					svgString += this.renderPart(x, y, part, colourIndex, component.internalStart[index + 1]?.joined);
 					x += part.length * 5;
 				}
-				for(const part of component.internalEnd) {
-					svgString += this.renderPart(x, y, part, colourIndex);
+				for(const [ index, part ] of component.internalEnd.entries()) {
+					svgString += this.renderPart(x, y, part, colourIndex, component.internalEnd[index + 1]?.joined);
 					x += part.length * 5;
 				}
 			}
@@ -806,8 +806,8 @@ export abstract class SVGRenderer {
 
 	protected renderComponent(startX:number, midY:number, component:Component, colourIndex: number): string {
 		let svgString: string = "";
-		for(const part of component.parts) {
-			svgString += this.renderPart(startX, midY, part, colourIndex);
+		for(const [ index, part ] of component.parts.entries()) {
+			svgString += this.renderPart(startX, midY, part, colourIndex, component.parts[index + 1]?.joined);
 
 			// now we need to draw the part shap
 		}
@@ -852,16 +852,50 @@ export abstract class SVGRenderer {
 			case "hexagonal":
 			case "octagonal":
 			case "cone":
+				// draw the background colour first
 				svgString += `<path d="M${x + part.internalOffset * 5} ` +
 						`${y - (part.startHeight / 2 * 5)} ` +
 						`L${x + part.internalOffset * 5 + part.length * 5} ${y - (part.endHeight / 2 * 5)} ` +
 						`L${x + part.internalOffset * 5 + part.length * 5} ${y + (part.endHeight / 2 * 5)} ` +
 						`L${x + part.internalOffset * 5} ${y + (part.startHeight / 2 * 5)} Z" ` +
+					`stroke-width="0" ` +
+					`stroke="none" ` +
+					`stroke-linejoin="round" ` +
+					`fill="${opaqueColour.colour}" ` +
+					`fill-opacity="${opaqueColour.opacity}"/>\n`
+
+				// now draw the top and bottom lines
+				svgString += `<path d="M${x + part.internalOffset * 5} ${y - (part.startHeight / 2 * 5)} ` + // move to top-left
+					`L${x + part.internalOffset * 5 + part.length * 5} ${y - (part.endHeight / 2 * 5)} ` + // line to top right
+					`M${x + part.internalOffset * 5 + part.length * 5} ${y + (part.endHeight / 2 * 5)} ` + // move to bottom right
+					`L${x + part.internalOffset * 5} ${y + (part.startHeight / 2 * 5)}" ` + // line to bottom left
 					`stroke-width="0.5" ` +
 					`stroke="${strokeColour}" ` +
 					`stroke-linejoin="round" ` +
 					`fill="${opaqueColour.colour}" ` +
 					`fill-opacity="${opaqueColour.opacity}"/>\n`
+
+				if(!part.joined) {
+					// draw the left hand line
+					svgString += `<path d="M${x + part.internalOffset * 5} ${y - (part.startHeight / 2 * 5)} ` + // move to top-left
+						`L${x + part.internalOffset * 5} ${y + (part.startHeight / 2 * 5)}" ` + // line to bottom left
+						`stroke-width="0.5" ` +
+						`stroke="${strokeColour}" ` +
+						`stroke-linejoin="round" ` +
+						`fill="${opaqueColour.colour}" ` +
+						`fill-opacity="${opaqueColour.opacity}"/>\n`
+				}
+
+				if(!nextPartJoined) {
+					// draw the right hand line
+					svgString += `<path d="M${x + part.internalOffset * 5 + part.length * 5} ${y - (part.endHeight / 2 * 5)} ` + // move to top-right
+						`L${x + part.internalOffset * 5 + part.length * 5} ${y + (part.endHeight / 2 * 5)}" ` + // line to bottom right
+						`stroke-width="0.5" ` +
+						`stroke="${strokeColour}" ` +
+						`stroke-linejoin="round" ` +
+						`fill="${opaqueColour.colour}" ` +
+						`fill-opacity="${opaqueColour.opacity}"/>\n`
+				}
 
 				// TODO - move to later....
 				if(part.joined) {
