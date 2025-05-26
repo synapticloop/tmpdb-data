@@ -1,4 +1,4 @@
-import {OpaqueColour} from "./OpaqueColour.ts";
+import {OpaqueColour} from "./meta/OpaqueColour.ts";
 
 export abstract class Base {
 	static OPACITY_COLOUR_WHITE: OpaqueColour = new OpaqueColour(new Map<string, string>(), "white");

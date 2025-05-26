@@ -6,20 +6,15 @@ mechanical pencils (including clutch pencils and leadholders) for posterity.
 The data of the pencil in itself should be enough, however included in this 
 repository are renderers that will parse this data and output various formats.
 
-The base output format is SVG which can then be used to generate - which may 
-then be included in other formats. 
+The base output format is SVG which can then be used to generate other 
+formats, for example 
 
-For example:
-
- - The svg file is used to generate the png files.
- - The png files are then included in the pdf files.
+ - The svg file is used to generate a png file.
+ - The png file is then included in a pdf file.
 
 The renderings and output files and formats are included in this repository, 
 although they will probably disappear as the list of pencils becomes too large 
 and unwieldly.
-
-Contains data for mechanical pencils in JSON format which can then be utilised 
-to generate all sorts of images and output data.
 
 Despite the rendered outputs, the primary goal os to capture the data that the 
 pencil comprises. 
@@ -28,6 +23,28 @@ pencil comprises.
 is applicable to the SVG rendering output (and some others), which is 
 then mixing up the technical pencil data with display data - this is 
 unfortunate but a design decision.
+
+## Pencil definitions that are included in this repository
+
+_(To regenerate the list - and this `README.md` file, run the 
+`readme-generator` script)._
+
+
+| Brand | Name | Model # | # Colours |
+| ---: | :--- | :--- | :--- |
+| **BIC** | **Criterium** | undefined | 3 |
+| **Küelox** | **3308** | 3308 | 1 |
+| **M &amp; G** | **Easy Come Easy Go!** | amp-35601 | 3 |
+| **Mitsubishi** | **uni** | MH-500 | 1 |
+| **Mr. Pen** | **2.0** | 2.0 | 1 |
+| **OHTO** | **Sharp Pencil 2.0** | APS-680E | 6 |
+| **Pacific Arc** | **COLLEGIATE** | H-1301 | 2 |
+| **Pacific Arc** | **TECH PRO** | H-1305 | 5 |
+| **Pacific Arc** | **Premium** | H-1309 | 2 |
+| **Redcircle** | **600** | 600 | 3 |
+| **Staedtler** | **Mars Technico** | 780c | 2 |
+| **STUDMARK** | **3750** | undefined | 1 |
+| **Unbranded** | **Metal Black** | unknown | 1 |
 
 ## Directory structure
 

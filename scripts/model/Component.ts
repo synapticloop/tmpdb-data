@@ -2,7 +2,7 @@ import {Part} from "./Part.ts";
 import {Extra} from "./Extra.ts";
 import {JsonIgnore, JsonProperty} from "json-object-mapper";
 import "reflect-metadata";
-import {OpaqueColour} from "./OpaqueColour.ts";
+import {OpaqueColour} from "./meta/OpaqueColour.ts";
 import {PartDeserialiser} from "./deserialisers/PartDeserialiser.ts";
 import {ExtraDeserialiser} from "./deserialisers/ExtraDeserialiser.ts";
 import {Base} from "./Base.ts";

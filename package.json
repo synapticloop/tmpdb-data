@@ -24,9 +24,11 @@
     "doc": "docs"
   },
   "scripts": {
+    "compile-typescript": "tsc",
+    "generate-readme": "npm run compile-typescript && node --es-module-specifier-resolution=node dist/readme-generator.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "svg": "node scripts/svg-builder.ts",
-    "renderer": "node scripts/output-generator.ts"
+    "generate": "node scripts/output-generator.ts"
   },
   "dependencies": {
     "@types/node": "22.15.17",
@@ -42,6 +44,7 @@
   },
   "devDependencies": {
     "@types/pdfkit": "0.13.9",
-    "jsdoc": "4.0.4"
+    "jsdoc": "4.0.4",
+    "tsx": "^4.19.4"
   }
 }

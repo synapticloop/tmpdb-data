@@ -1,7 +1,7 @@
 import { Component } from "./Component.ts";
 import {JsonIgnore, JsonProperty, ObjectMapper, Deserializer } from "json-object-mapper";
 import "reflect-metadata";
-import {OpaqueColour} from "./OpaqueColour.ts";
+import {OpaqueColour} from "./meta/OpaqueColour.ts";
 import {Feature} from "./Feature.ts";
 import {FrontBack} from "./FrontBack.ts";
 import {ComponentDeserialiser} from "./deserialisers/ComponentDeserialiser.ts";

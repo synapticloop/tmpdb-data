@@ -16,7 +16,7 @@ import {
 } from "../../../utils/svg-helper.ts";
 import {Part} from "../../../model/Part.ts";
 import {Extra} from "../../../model/Extra.ts";
-import {OpaqueColour} from "../../../model/OpaqueColour.ts";
+import {OpaqueColour} from "../../../model/meta/OpaqueColour.ts";
 
 export class SVGTechnicalRenderer extends SVGRenderer {
 	SVG_WIDTH: number = 1500;

@@ -1,0 +1,88 @@
+export class Part {
+    type = "";
+    length = 0;
+    startHeight = 0;
+    endHeight = 0;
+    offset = [0, 0];
+    finish = "";
+    colours = [];
+    extraParts = [];
+    extraOffset = [0, 0];
+    extraLength = 0;
+    extraHeight = 0;
+    extraWidth = 0;
+    dimensions = [];
+    material = null;
+    taperStart;
+    taperEnd;
+    constructor(jsonObject, colours) {
+        this.type = jsonObject.type;
+        this.dimensions = jsonObject.dimensions;
+        this.material = jsonObject.material;
+        this.taperStart = jsonObject.taper_start;
+        this.taperEnd = jsonObject.taper_end;
+        if (jsonObject.offset) {
+            let offsetTemp = jsonObject.offset.split("x") ?? ["0", "0"];
+            this.offset = [parseFloat(offsetTemp[0]), parseFloat(offsetTemp[1])];
+        }
+        this.finish = jsonObject.finish ?? this.finish;
+        if (jsonObject.colours) {
+            this.colours = jsonObject.colours;
+        }
+        else if (colours) {
+            this.colours = colours;
+        }
+        else {
+            this.colours.push("white");
+        }
+        if (this.type === "extra") {
+            this.extraParts = jsonObject.parts ?? this.extraParts;
+            let extraOffsetTemp = jsonObject?.offset.split("x") ?? ["0", "0"];
+            this.extraOffset = [parseFloat(extraOffsetTemp[0]), parseFloat(extraOffsetTemp[1])];
+            let extraDimensions = ["0", "0", "0"];
+            extraDimensions = jsonObject?.dimensions.split("x") ?? extraDimensions;
+            this.extraLength = parseFloat(extraDimensions[0]);
+            this.extraHeight = parseFloat(extraDimensions[1]);
+            this.extraWidth = parseFloat(extraDimensions[2]);
+        }
+        else {
+            // only parse dimensions for non-extra things
+            this.#parseDimensions(jsonObject.dimensions);
+        }
+    }
+    #parseDimensions(dimensions) {
+        const split = dimensions.split("x");
+        this.length = Number.parseFloat(split[0]);
+        this.startHeight = Number.parseFloat(split[1]);
+        if (split.length > 2) {
+            this.endHeight = Number.parseFloat(split[2]);
+        }
+        else {
+            this.endHeight = this.startHeight;
+        }
+    }
+    getMaxHeight() {
+        if (this.startHeight > this.endHeight) {
+            return (this.startHeight);
+        }
+        return (this.endHeight);
+    }
+    getMinHeight() {
+        return (this.getMinWidth());
+    }
+    getMaxWidth() {
+        switch (this.type) {
+            case "hexagonal":
+                let apothem = this.startHeight / 2;
+                return (apothem / Math.cos(30 * Math.PI / 180) * 2);
+        }
+        return (this.getMaxHeight());
+    }
+    getMinWidth() {
+        if (this.startHeight < this.endHeight) {
+            return (this.startHeight);
+        }
+        return (this.endHeight);
+    }
+}
+//# sourceMappingURL=Part.js.map

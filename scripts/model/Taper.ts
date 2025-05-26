@@ -1,6 +1,6 @@
 import {JsonIgnore, JsonProperty} from "json-object-mapper";
 import "reflect-metadata";
-import {OpaqueColour} from "./OpaqueColour.ts";
+import {OpaqueColour} from "./meta/OpaqueColour.ts";
 import {Base} from "./Base.ts";
 
 export class Taper extends Base {

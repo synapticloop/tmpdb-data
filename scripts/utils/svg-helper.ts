@@ -1,9 +1,9 @@
-// the height/width of the dimension marker
 import {Part} from "../model/Part.ts";
 import {Extra} from "../model/Extra.ts";
 import {ExtraPart} from "../model/ExtraPart.ts";
-import {OpaqueColour} from "../model/OpaqueColour.ts";
+import {OpaqueColour} from "../model/meta/OpaqueColour.ts";
 
+// the height/width of the dimension marker
 const DIMENSION_MARKER_LENGTH = 22;
 
 export function drawTextBoldCentred(text: string, x: number, y:number, fontSize:string) {

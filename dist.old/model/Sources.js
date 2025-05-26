@@ -1,0 +1,111 @@
+import { Part } from "./Part.ts";
+import { Extra } from "./Extra.ts";
+export class Source {
+    parts = [];
+    extras = [];
+    // the materials that this component is made out of
+    materials = [];
+    // the colours of this component
+    colours = ["white"];
+    // the type of this component
+    type = "unknown";
+    // the length of the component - which is when you are looking at it
+    // sideways...
+    length = 0;
+    // the width
+    maxWidth = 0;
+    minWidth = 0;
+    maxHeight = 0;
+    minHeight = 0;
+    hasInternalStart = false;
+    hasInternalEnd = false;
+    internalStart = [];
+    internalEnd = [];
+    isHidden = false;
+    constructor(jsonObject, colours) {
+        this.type = jsonObject.type ?? this.type;
+        if (jsonObject.material) {
+            this.materials.length = 0;
+            this.materials.push(jsonObject.material);
+        }
+        else {
+            this.materials.push("unknown");
+        }
+        if (jsonObject.colours) {
+            this.colours = jsonObject.colours;
+        }
+        else {
+            // use the base colours
+            this.colours = colours;
+        }
+        if (jsonObject.internal_start) {
+            this.hasInternalStart = true;
+        }
+        if (jsonObject.internal_end) {
+            this.hasInternalEnd = true;
+        }
+        if (jsonObject.parts) {
+            for (let part of jsonObject.parts) {
+                const thisPart = new Part(part, this.colours);
+                this.parts.push(thisPart);
+                this.length += thisPart.length;
+                if (part.material) {
+                    this.materials.push(part.material);
+                }
+                if (part.colours) {
+                    for (const colour of part.colours) {
+                        this.colours.push(colour);
+                    }
+                }
+                let tempMaxWidth = thisPart.getMaxWidth();
+                if (tempMaxWidth >= this.maxWidth) {
+                    this.maxWidth = tempMaxWidth;
+                }
+                let tempMinWidth = thisPart.getMinWidth();
+                if (tempMinWidth >= this.minWidth) {
+                    this.minWidth = tempMinWidth;
+                }
+                let tempMaxHeight = thisPart.getMaxHeight();
+                if (tempMaxHeight >= this.maxHeight) {
+                    this.maxHeight = tempMaxHeight;
+                }
+                let tempMinHeight = thisPart.getMinHeight();
+                if (tempMinHeight >= this.minHeight) {
+                    this.minHeight = tempMinHeight;
+                }
+            }
+        }
+        if (jsonObject.extras) {
+            for (let extra of jsonObject.extras) {
+                const thisExtra = new Extra(extra, this.colours);
+                this.extras.push(thisExtra);
+                // if(thisExtra.material) {
+                // 	this.materials.push(thisExtra.material);
+                // }
+                // if(thisExtra.colours) {
+                // 	for(const colour of extraPart.colours) {
+                // 		this.colours.push(colour);
+                // 	}
+                // }
+            }
+        }
+        if (jsonObject.internal_start) {
+            for (let internal of jsonObject.internal_start) {
+                const thisInternal = new Part(internal, this.colours);
+                this.internalStart.push(thisInternal);
+            }
+        }
+        if (jsonObject.internal_end) {
+            for (let internal of jsonObject.internal_end) {
+                const thisInternal = new Part(internal, this.colours);
+                this.internalEnd.push(thisInternal);
+            }
+        }
+        // this component is only hidden if it has a length of 0 and one, or both
+        // internal parts
+        if (this.parts.length === 0 && (this.internalStart.length !== 0 || this.internalEnd.length !== 0)) {
+            this.isHidden = true;
+        }
+    }
+}
+//# sourceMappingURL=Sources.js.map

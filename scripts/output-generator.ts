@@ -36,11 +36,7 @@ for (const [dirIndex, pencilDirectory] of pencilDirectories.entries()) {
 	const pencilFiles: string[] = listFiles(pencilDir);
 
 	if (pencilFiles.length > 0) {
-		console.log(`Generating for brand '${pencilDirectory}' - ${pencilFiles.length} file(s)`)
-
 		for (const [index, pencilFile] of pencilFiles.entries()) {
-			console.log(`    ${numPencils + 1}. ${pencilFile}`);
-
 			const pencilFileFull = path.join(pencilDir, pencilFile);
 			const pencilFileName = path.parse(path.join(pencilDir, pencilFile)).name;
 

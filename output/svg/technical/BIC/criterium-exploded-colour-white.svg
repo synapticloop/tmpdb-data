@@ -18,9 +18,6 @@
 <path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 0,0 L 3,0"/>
 </pattern><pattern id="ridged" patternUnits="userSpaceOnUse" width="3" height="3">
 <path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 0,0 L 0,3"/>
-</pattern><pattern id="spring" patternUnits="userSpaceOnUse" width="8" height="100">
-<path stroke="dimgray" stroke-linecap="round" stroke-width="2" d="M 1,1 L 9,99"/>
-<path stroke="white" stroke-linecap="round" stroke-width="1" d="M 1,1 L 9,99"/>
 </pattern><pattern id="knurled" patternUnits="userSpaceOnUse" width="8" height="8">
 <path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,8"/>
 <path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,8"/>
@@ -48,7 +45,6 @@
 
 <!-- renderPart: cylinder -->
 <path d="M283.125 113.125 L314.375 113.125 L314.375 126.875 L283.125 126.875 Z" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
-<path d="M283.125 113.125 L314.375 113.125 L314.375 126.875 L283.125 126.875 Z" stroke-width="1.0" stroke="black" fill="url(#spring)"/>
 <rect x="288.125" y="108.125" width="21.25" height="23.75" stroke-width="0.0" stroke="black" fill="url(#spring)"/>
 <line x1="283.625" y1="108.125" x2="283.625" y2="131.875" stroke="dimgray" stroke-linecap="round" stroke-width="2" />
 <line x1="283.625" y1="108.125" x2="283.625" y2="131.875" stroke="white" stroke-linecap="round" stroke-width="1" />

@@ -25,16 +25,18 @@ import {formatToTwoPlaces} from "../../utils/formatter.ts";
 
 import {Component} from "../../model/Component.ts";
 import {Pencil} from "../../model/Pencil.ts";
-import {OpaqueColour} from "../../model/OpaqueColour.ts";
+import {OpaqueColour} from "../../model/meta/OpaqueColour.ts";
 import {Extra} from "../../model/Extra.ts";
-import {Pattern} from "../../model/Pattern.ts";
+import {Pattern} from "../../model/meta/Pattern.ts";
 import {listFiles} from "../../utils/filesystem.ts";
 import fs from "fs";
 import {ObjectMapper} from "json-object-mapper";
 
 
 export abstract class SVGRenderer {
-	static inBuiltPatternMap: Map<string, Pattern> = new Map();
+	static defaultPatternMap: Map<string, Pattern> = new Map();
+	static allPatternMap: Map<string, Pattern> = new Map();
+
 	static defaultPatternLoaded: boolean = false;
 
 	private patternMap: Map<string, Pencil> = new Map();
@@ -50,8 +52,13 @@ export abstract class SVGRenderer {
 		for (const listFile of listFiles("./patterns")) {
 			const patternName: string = listFile.substring(0, listFile.lastIndexOf("."));
 			const pattern: Pattern = ObjectMapper.deserialize(Pattern, JSON.parse(fs.readFileSync("./patterns/" + listFile, "utf8")));
-			console.log(`Statically loaded pattern ${listFile} (${pattern.name} - ${pattern.description})`);
-			this.inBuiltPatternMap.set(patternName, pattern);
+			console.log(`Statically loaded pattern ${listFile} (${pattern.name} - ${pattern.description}) ${pattern.inBuilt ? "In built into the system as code." : ""}`);
+
+			if(!pattern.inBuilt) {
+				this.defaultPatternMap.set(patternName, pattern);
+			}
+
+			this.allPatternMap.set(patternName, pattern);
 		}
 		this.defaultPatternLoaded = true;
 	}
@@ -67,6 +74,11 @@ export abstract class SVGRenderer {
 		this._rendererName = rendererName;
 	}
 
+	/**
+	 * Render
+	 *
+	 * @param colourInder
+	 */
 	public abstract render(colourInder:number): string;
 
 	/**
@@ -96,7 +108,7 @@ export abstract class SVGRenderer {
 			`width="${this._width}" ` +
 			`height="${this._height}">\n `;
 
-		for(const pattern of SVGRenderer.inBuiltPatternMap.values()) {
+		for(const pattern of SVGRenderer.defaultPatternMap.values()) {
 			svgString += pattern.pattern.join("\n");
 		}
 
@@ -246,7 +258,6 @@ export abstract class SVGRenderer {
 		if(opaqueColour.colourName === "black") {
 			strokeColor = "gray";
 		}
-
 
 		let xOffsetTaperStart: number = 0;
 		let xOffsetTaperStartScale: number = 1;
@@ -914,7 +925,7 @@ export abstract class SVGRenderer {
 					`L${xEnd} ${yEndTop} ` +
 					`L${xEnd} ${yEndBottom} ` +
 					`L${xStart} ${yStartBottom} Z" stroke-width="1.0" stroke="black" fill="url(#${finish})"/>\n`;
-			} else if(SVGRenderer.inBuiltPatternMap.has(finish)) {
+			} else if(SVGRenderer.defaultPatternMap.has(finish)) {
 				svgString += `<path d="M${xStart} ${yStartTop} ` +
 					`L${xEnd} ${yEndTop} ` +
 					`L${xEnd} ${yEndBottom} ` +

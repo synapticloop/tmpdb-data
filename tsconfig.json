@@ -9,7 +9,9 @@
 		"outDir": "dist",
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
-		"noEmit": true
+		"emitDeclarationOnly": true,
+		"composite": true
 	},
-	"lib": ["2022"]
+	"lib": ["2022"],
+	"include": ["**/*"]
 }

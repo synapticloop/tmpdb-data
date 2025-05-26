@@ -1,7 +1,7 @@
 import {JsonIgnore, JsonProperty} from "json-object-mapper";
 import "reflect-metadata";
 import {Base} from "./Base.ts";
-import {OpaqueColour} from "./OpaqueColour.ts";
+import {OpaqueColour} from "./meta/OpaqueColour.ts";
 
 export class ExtraPart extends Base {
 	// private properties

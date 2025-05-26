@@ -1,0 +1,104 @@
+{
+    "brand";
+    "Mitsubishi",
+        "model";
+    "uni",
+        "model_number";
+    "MH-500",
+        "skus";
+    [],
+        "lead_size";
+    "2.0",
+        "text";
+    "MITSUBISHI / uni /",
+        "colour_component";
+    "body",
+        "mechanism";
+    "clutch",
+        "weight";
+    11.0,
+        "front";
+    [
+        { "shape": "cylinder", "dimensions": [2.0, 10.0], "fill": "black" }
+    ],
+        "components";
+    [
+        {
+            "type": "jaws",
+            "parts": [
+                { "shape": "cone", "dimensions": [1.0, 2.75, 4.25] }
+            ],
+            "material": "metal",
+            "colours": ["silver"],
+            "internal_end": [
+                { "shape": "cone", "dimensions": [5.25, 4.25, 3.5] },
+                { "shape": "cylinder", "dimensions": [11.5, 3.25], "finish": "spring" },
+                { "shape": "cylinder", "dimensions": [3.25, 4.0] },
+                { "shape": "cylinder", "dimensions": [7.0, 6.0], "colours": ["black"] },
+                { "shape": "cylinder", "dimensions": [104.75, 5.0], "colours": ["black"] }
+            ]
+        },
+        {
+            "type": "tip",
+            "parts": [
+                { "shape": "cone", "dimensions": [11.5, 5.25, 7.5] }
+            ],
+            "material": "metal",
+            "colours": ["silver"]
+        },
+        {
+            "type": "grip",
+            "parts": [
+                { "shape": "cylinder", "dimensions": [25.5, 8.0], "finish": "knurled" }
+            ],
+            "material": "metal",
+            "colours": ["silver"]
+        },
+        {
+            "type": "body",
+            "parts": [
+                { "shape": "hexagonal", "dimensions": [84.0, 8.25] }
+            ],
+            "internal_start": [
+                { "shape": "cylinder", "dimensions": [2.0, 6.25] },
+                { "shape": "cylinder", "dimensions": [4.25, 7.0], "finish": "threaded" }
+            ],
+            "material": "plastic",
+            "colours": ["maroon"]
+        },
+        {
+            "type": "clip",
+            "parts": [
+                { "shape": "cylinder", "dimensions": [6.75, 9.25] }
+            ],
+            "extras": [
+                {
+                    "dimensions": [29.5, 2.25, 4.0],
+                    "offset": [-29.5, 4.375],
+                    "parts": [
+                        { "shape": "curve", "points": [8.5, -1.5, 1.5, -1.25, 4.0, 1] },
+                        { "shape": "curve", "points": [1.5, -1.25, 1.5, -2.25, 0.0, -2.0] },
+                        { "shape": "line", "points": [1.5, -2.25, 28.5, -2.25] },
+                        { "shape": "line", "points": [28.5, -2.25, 29.5, 0] }
+                    ]
+                }
+            ],
+            "material": "plastic",
+            "colours": ["silver"]
+        },
+        {
+            "type": "cap",
+            "parts": [
+                { "shape": "cylinder", "dimensions": [9.75, 6.0] },
+                { "shape": "cylinder", "dimensions": [2.0, 7.5] }
+            ],
+            "internal_start": [
+                { "shape": "cylinder", "dimensions": [4.25, 6] },
+                { "shape": "cylinder", "dimensions": [1.0, 6.25] }
+            ],
+            "material": "plastic",
+            "colours": ["black"]
+        }
+    ];
+}
+//# sourceMappingURL=mars-technico.js.map
