@@ -131,6 +131,17 @@
 			"material": "plastic"
 		},
 		{
+			"type": "eraser",
+			"internal_start": [
+				{ "shape": "cylinder", "dimensions": [ 4.0, 4.75 ] }
+			],
+			"internal_end": [
+				{ "shape": "cylinder", "dimensions": [ 8.0, 4.75 ] }
+			],
+			"material": "rubber",
+			"colours": [ "white" ]
+		},
+		{
 			"type": "cap",
 			"parts": [
 				{ "shape": "cylinder", "dimensions": [ 6.5, 6.5 ] },
@@ -139,9 +150,8 @@
 				{ "shape": "cylinder", "dimensions": [ 0.25, 4.25 ], "fill":  "black" }
 			],
 			"internal_start": [
-				{ "shape": "cylinder", "dimensions": [ 4.0, 4.75 ], "colours":  [ "white" ] },
-				{ "shape": "cylinder", "dimensions": [ 6.0, 5.0 ], "colours":  [ "silver" ]  },
-				{ "shape": "cylinder", "dimensions": [ 3.75, 6.5 ], "colours":  [ "silver" ]  }
+				{ "shape": "cylinder", "dimensions": [ 6.0, 5.0 ], "colours":  [ "silver" ] },
+				{ "shape": "cylinder", "dimensions": [ 3.75, 6.5 ], "colours":  [ "silver" ] }
 			],
 			"material": "metal",
 			"colours": [ "silver" ]
