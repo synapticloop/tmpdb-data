@@ -978,7 +978,7 @@ export abstract class SVGRenderer {
 					break;
 				case "spring":
 
-					svgString += `<rect x="${x + part.internalOffset * 5 + 5}" ` +
+					svgString += `<!-- feature: spring --><rect x="${x + part.internalOffset * 5 + 5}" ` +
 						`y="${y - (part.endHeight / 2 * 5) - 5}" ` +
 						`width="${part.length * 5 - 10}" ` +
 						`height="${part.startHeight * 5 + 10}" ` +
@@ -1003,10 +1003,10 @@ export abstract class SVGRenderer {
 							// TODO - half a line
 							break;
 						}
-						svgString += `<line x1="${x + part.internalOffset * 5 + i*5}" y1="${y - (part.endHeight / 2 * 5) - 2}" ` +
-							`x2="${x + part.internalOffset * 5 + (i + 1) * 5}" y2="${y + (part.endHeight / 2 * 5) + 2}" stroke="dimgray" stroke-linecap="round" stroke-width="2" />\n`;
-						svgString += `<line x1="${x + part.internalOffset * 5 + i*5}" y1="${y - (part.endHeight / 2 * 5) - 2}" ` +
-							`x2="${x + part.internalOffset * 5 + (i + 1) * 5}" y2="${y + (part.endHeight / 2 * 5) + 2}" stroke="${opaqueColour}" stroke-linecap="round" stroke-width="1" />\n`;
+						svgString += `<line x1="${x + part.internalOffset * 5 + i*5}" y1="${y - (part.endHeight / 2 * 5)}" ` +
+							`x2="${x + part.internalOffset * 5 + (i + 1) * 5}" y2="${y + (part.endHeight / 2 * 5)}" stroke="dimgray" stroke-linecap="round" stroke-width="2" />\n`;
+						svgString += `<line x1="${x + part.internalOffset * 5 + i*5}" y1="${y - (part.endHeight / 2 * 5)}" ` +
+							`x2="${x + part.internalOffset * 5 + (i + 1) * 5}" y2="${y + (part.endHeight / 2 * 5)}" stroke="${opaqueColour}" stroke-linecap="round" stroke-width="1" />\n`;
 					}
 					break;
 				case "indicator":

@@ -26,8 +26,8 @@
 				{ "shape": "cylinder", "dimensions": [ 0.5, 5.75 ] }
 			],
 			"internal_end": [
-				{ "shape": "cone", "dimensions": [ 5.5, 5.75, 4.5 ] },
-				{ "shape": "cylinder", "dimensions": [ 16.5, 4.5 ] },
+				{ "shape": "cone", "dimensions": [ 5.5, 5.75, 4.5 ], "joined": "right" },
+				{ "shape": "cylinder", "dimensions": [ 16.5, 4.5 ], "joined": "left" },
 				{ "shape": "cylinder", "dimensions": [ 8.5, 4.75 ] }
 			],
 			"material": "metal",
