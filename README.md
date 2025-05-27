@@ -33,19 +33,19 @@ _(To regenerate the list - and this `README.md` file, run `npm run readme-genera
 | ---: | :--- | :--- | ---: | :--- |
 | **Alvin** | **DA** | TECH | 3 | high |
 | **Alvin** | **PRO-MATIC** | MC5 | 1 | high |
-| **BIC** | **Criterium** | undefined | 3 | unknown |
+| **BIC** | **Criterium** | undefined | 3 | high |
 | **Koh-i-Noor** | **TECHNIGRAPH** | 5611 | 7 | low |
-| **Küelox** | **3308** | 3308 | 1 | unknown |
-| **M &amp; G** | **Easy Come Easy Go!** | amp-35601 | 3 | unknown |
-| **Mitsubishi** | **uni** | MH-500 | 1 | unknown |
-| **Mr. Pen** | **2.0** | 2.0 | 1 | unknown |
-| **OHTO** | **Sharp Pencil 2.0** | APS-680E | 6 | unknown |
-| **Pacific Arc** | **COLLEGIATE** | H-1301 | 2 | unknown |
-| **Pacific Arc** | **Premium** | H-1309 | 2 | unknown |
-| **Pacific Arc** | **TECH PRO** | H-1305 | 5 | unknown |
+| **Küelox** | **3308** | 3308 | 1 | high |
+| **M &amp; G** | **Easy Come Easy Go!** | amp-35601 | 3 | high |
+| **Mitsubishi** | **uni** | MH-500 | 1 | high |
+| **Mr. Pen** | **2.0** | 2.0 | 1 | high |
+| **OHTO** | **Sharp Pencil 2.0** | APS-680E | 6 | high |
+| **Pacific Arc** | **COLLEGIATE** | H-1301 | 2 | high |
+| **Pacific Arc** | **Premium** | H-1309 | 2 | high |
+| **Pacific Arc** | **TECH PRO** | H-1305 | 5 | high |
 | **Redcircle** | **600** | 600 | 3 | high |
-| **Staedtler** | **Mars Technico** | 780c | 2 | unknown |
-| **STUDMARK** | **3750** | undefined | 1 | unknown |
+| **Staedtler** | **Mars Technico** | 780c | 2 | high |
+| **STUDMARK** | **3750** | 3750 | 1 | high |
 | **Unbranded** | **Metal Black** | unknown | 1 | high |
 | | | **16 Pencils** | **42 Variants**<br />_(colours / patterns)_  |
 
@@ -72,6 +72,7 @@ _(To regenerate the list - and this `README.md` file, run `npm run readme-genera
 #### high
 
  - Physical pencil used for measurements.
+ - Physical pencil not present, but source technical documents used for measurements.
  - Pencil measurements taken with a high precision tool.
  - Internal measurements may not be available due to disassembly challenges.
  - The accuracy of the colours of the pencil's parts may not be reflected by the rendered images.
