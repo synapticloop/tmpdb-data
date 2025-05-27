@@ -8,7 +8,7 @@ import {ObjectMapper} from "json-object-mapper";
 import deserialize = ObjectMapper.deserialize;
 import {SVGExampleRenderer} from "./renderer/svg/example/SVGExampleRenderer.ts";
 
-let baseDir:string = './examples';
+let baseDir:string = './meta/examples';
 
 if(process.argv[2]) {
 	baseDir = process.argv[2];

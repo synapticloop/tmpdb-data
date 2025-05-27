@@ -44,11 +44,11 @@ for (const [dirIndex, pencilDirectory] of pencilDirectories.entries()) {
 			}
 		});
 
-		let mdString: string = fs.readFileSync("./README-start.md", "utf8");
+		let mdString: string = fs.readFileSync("./data/documentation/README-start.md", "utf8");
 
 		mdString += new MDReadmeRenderer(pencils).render();
 
-		mdString += fs.readFileSync("./README-end.md", "utf8");
+		mdString += fs.readFileSync("./data/documentation/README-end.md", "utf8");
 
 		fs.writeFileSync("./README.md", mdString);
 	}

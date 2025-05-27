@@ -1,6 +1,8 @@
 {
 	"name": "lined",
 	"description": "Small, horizontal ridges along the length of the component.",
+	"ignored": false,
+	"in_built": false,
 	"pattern": [
 		"<pattern id=\"lined\" patternUnits=\"userSpaceOnUse\" width=\"3\" height=\"3\">",
 		"<path stroke=\"dimgray\" stroke-linecap=\"round\" stroke-width=\"1\" d=\"M 0,0 L 3,0\"/>",

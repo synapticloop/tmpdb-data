@@ -1,6 +1,8 @@
 {
 	"name": "knurled",
 	"description": "A pattern of angled lines around the component, with large spacing.",
+	"ignored": false,
+	"in_built": false,
 	"pattern": [
 		"<pattern id=\"knurled-large\" patternUnits=\"userSpaceOnUse\" width=\"12\" height=\"12\">",
 		"<path stroke=\"dimgray\" stroke-linecap=\"round\" stroke-width=\"1\" d=\"M 6,6 L 12,12\"/>",

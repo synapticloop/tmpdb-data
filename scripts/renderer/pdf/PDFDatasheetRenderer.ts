@@ -113,7 +113,7 @@ export class PDFDatasheetRenderer {
 		doc.table({
 			columnStyles: (i) => {
 				if(i % 2 == 0) {
-					return({ width: 160, textColor: "black", align: "right", font: { src: "./fonts/LibreBaskerville-Bold.ttf" }} );
+					return({ width: 160, textColor: "black", align: "right", font: { src: "./meta/fonts/LibreBaskerville-Bold.ttf" }} );
 				} else {
 					return({ width: "*" });
 				}
@@ -196,7 +196,7 @@ export class PDFDatasheetRenderer {
 		}
 		componentData.push([
 			{ text: "Total length", align: "right",  backgroundColor: "#cfcfcf" },
-			{ text: `${formatToTwoPlaces(this.pencil.totalLength)} mm`,  backgroundColor: "#cfcfcf", font: { src: "./fonts/LibreBaskerville-Bold.ttf" }, align: "center" },
+			{ text: `${formatToTwoPlaces(this.pencil.totalLength)} mm`,  backgroundColor: "#cfcfcf", font: { src: "./meta/fonts/LibreBaskerville-Bold.ttf" }, align: "center" },
 			{text: "", colSpan: 4,  backgroundColor: "#cfcfcf" }
 		]);
 
@@ -204,18 +204,18 @@ export class PDFDatasheetRenderer {
 		doc.table({
 			columnStyles: (i) => {
 				if(i === 0) {
-					return({ width: 100, textColor: "black", align: "right", font: { src: "./fonts/LibreBaskerville-Bold.ttf" }} );
+					return({ width: 100, textColor: "black", align: "right", font: { src: "./meta/fonts/LibreBaskerville-Bold.ttf" }} );
 				} else {
 					return({ width: "*" });
 				}
 			},
 			rowStyles: (i) => {
 				if(i === 0) {
-					return({ border: [1, 0, 0, 0], borderColor: "#aaa", backgroundColor: "#cfcfcf", font: { src: "./fonts/LibreBaskerville-Bold.ttf" }} );
+					return({ border: [1, 0, 0, 0], borderColor: "#aaa", backgroundColor: "#cfcfcf", font: { src: "./meta/fonts/LibreBaskerville-Bold.ttf" }} );
 				}
 
 				if(i === 1) {
-					return({ border: [0, 0, 1, 0], borderColor: "#aaa", backgroundColor: "#cfcfcf", align: "center", font: { src: "./fonts/LibreBaskerville-Bold.ttf" }} );
+					return({ border: [0, 0, 1, 0], borderColor: "#aaa", backgroundColor: "#cfcfcf", align: "center", font: { src: "./meta/fonts/LibreBaskerville-Bold.ttf" }} );
 				}
 
 				if(i % 2 === 0) {
@@ -265,14 +265,14 @@ export class PDFDatasheetRenderer {
 		doc.table({
 			columnStyles: (i) => {
 				if(i === 0) {
-					return({ width: 100, textColor: "black", align: "right", font: { src: "./fonts/LibreBaskerville-Bold.ttf" }} );
+					return({ width: 100, textColor: "black", align: "right", font: { src: "./meta/fonts/LibreBaskerville-Bold.ttf" }} );
 				} else {
 					return({ width: "*" });
 				}
 			},
 			rowStyles: (i) => {
 				if(i === 0) {
-					return({ border: [1, 0, 1, 0], borderColor: "#aaa", backgroundColor: "#cfcfcf", align: "center", font: { src: "./fonts/LibreBaskerville-Bold.ttf" }} );
+					return({ border: [1, 0, 1, 0], borderColor: "#aaa", backgroundColor: "#cfcfcf", align: "center", font: { src: "./meta/fonts/LibreBaskerville-Bold.ttf" }} );
 				}
 
 				if(i % 2 === 0) {
@@ -349,16 +349,16 @@ export class PDFDatasheetRenderer {
 			columnStyles: (i) => {
 				switch(i % 3) {
 					case 0:
-						return({ width: 140, align: "right", font: { src: "./fonts/LibreBaskerville-Bold.ttf" } } );
+						return({ width: 140, align: "right", font: { src: "./meta/fonts/LibreBaskerville-Bold.ttf" } } );
 					case 1:
 						return({ width: "140", textColor: "black"} );
 					case 2:
-						return({ width: "*", align: "left", textColor: "black", font: { src: "./fonts/Inconsolata-Medium.ttf" } } );
+						return({ width: "*", align: "left", textColor: "black", font: { src: "./meta/fonts/Inconsolata-Medium.ttf" } } );
 				}
 			},
 			rowStyles: (i) => {
 				if(i === 0) {
-					return({ border: [1, 0, 1, 0], borderColor: "#aaa", backgroundColor: "#cfcfcf", font: { src: "./fonts/LibreBaskerville-Bold.ttf" }} );
+					return({ border: [1, 0, 1, 0], borderColor: "#aaa", backgroundColor: "#cfcfcf", font: { src: "./meta/fonts/LibreBaskerville-Bold.ttf" }} );
 				}
 
 				if(i % 2 === 0) {
@@ -492,7 +492,7 @@ export class PDFDatasheetRenderer {
 			renderData.push("");
 
 			const headingData: any[] = [];
-			headingData.push({ text: "Colours for individual components", colSpan: numColumns, align: "center", font: { size: 14, src: "./fonts/LibreBaskerville-Bold.ttf" } });
+			headingData.push({ text: "Colours for individual components", colSpan: numColumns, align: "center", font: { size: 14, src: "./meta/fonts/LibreBaskerville-Bold.ttf" } });
 
 			// now a table for the components
 			// @ts-ignore
@@ -500,16 +500,16 @@ export class PDFDatasheetRenderer {
 				columnStyles: (i) => {
 					switch(i) {
 						case 0:
-							return({ width: "*", align: "right", font: { src: "./fonts/LibreBaskerville-Bold.ttf" } } );
+							return({ width: "*", align: "right", font: { src: "./meta/fonts/LibreBaskerville-Bold.ttf" } } );
 						case numColumns - 1:
 							return({ width: "*", align: "right" } );
 						default:
-							return({ width: 24, padding: 5, textOptions: { rotation: 90, valign: "center" }, textColor: "black", font: { src: "./fonts/Inconsolata-Medium.ttf" } } );
+							return({ width: 24, padding: 5, textOptions: { rotation: 90, valign: "center" }, textColor: "black", font: { src: "./meta/fonts/Inconsolata-Medium.ttf" } } );
 					}
 				},
 				rowStyles: (i) => {
 					if(i === 4) {
-						return({ border: [1, 0, 1, 0], align: "right", valign: "top", borderColor: "#aaa", backgroundColor: "#cfcfcf", font: { src: "./fonts/LibreBaskerville-Bold.ttf" }} );
+						return({ border: [1, 0, 1, 0], align: "right", valign: "top", borderColor: "#aaa", backgroundColor: "#cfcfcf", font: { src: "./meta/fonts/LibreBaskerville-Bold.ttf" }} );
 					}
 
 					if(i % 2 === 0) {
@@ -623,7 +623,7 @@ export class PDFDatasheetRenderer {
 			if(currentTitle === previousTitle) {
 				doc.fillColor("black")
 					.text(currentTitle, {continued: true})
-					.font("./fonts/LibreBaskerville-Italic.ttf")
+					.font("./meta/fonts/LibreBaskerville-Italic.ttf")
 					.fontSize(12)
 					.text(" (cont.)", { continued: true });
 			} else {
@@ -709,27 +709,27 @@ export class PDFDatasheetRenderer {
 		switch(fontFamily) {
 			case FontFamily.HEADING_LARGE:
 				pdfDocument.fontSize(36);
-				pdfDocument.font("./fonts/LibreBaskerville-Bold.ttf");
+				pdfDocument.font("./meta/fonts/LibreBaskerville-Bold.ttf");
 				break;
 			case FontFamily.HEADING_MEDIUM:
 				pdfDocument.fontSize(24);
-				pdfDocument.font("./fonts/LibreBaskerville-Bold.ttf");
+				pdfDocument.font("./meta/fonts/LibreBaskerville-Bold.ttf");
 				break;
 			case FontFamily.HEADING_SMALL:
 				pdfDocument.fontSize(18);
-				pdfDocument.font("./fonts/LibreBaskerville-Bold.ttf");
+				pdfDocument.font("./meta/fonts/LibreBaskerville-Bold.ttf");
 				break;
 			case FontFamily.HEADING_TINY:
 				pdfDocument.fontSize(14);
-				pdfDocument.font("./fonts/LibreBaskerville-Bold.ttf");
+				pdfDocument.font("./meta/fonts/LibreBaskerville-Bold.ttf");
 				break;
 			case FontFamily.PARAGRAPH:
 				pdfDocument.fontSize(10);
-				pdfDocument.font("./fonts/LibreBaskerville-Regular.ttf");
+				pdfDocument.font("./meta/fonts/LibreBaskerville-Regular.ttf");
 				break;
 			case FontFamily.FOOTER_COPYRIGHT:
 				pdfDocument.fontSize(10);
-				pdfDocument.font("./fonts/LibreBaskerville-Italic.ttf");
+				pdfDocument.font("./meta/fonts/LibreBaskerville-Italic.ttf");
 				break;
 		}
 	}

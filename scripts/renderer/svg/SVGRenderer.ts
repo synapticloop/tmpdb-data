@@ -49,9 +49,9 @@ export abstract class SVGRenderer {
 
 	static loadDefaultPatterns(): void {
 		// load all the patterns
-		for (const listFile of listFiles("./patterns")) {
+		for (const listFile of listFiles("./meta/patterns")) {
 			const patternName: string = listFile.substring(0, listFile.lastIndexOf("."));
-			const pattern: Pattern = ObjectMapper.deserialize(Pattern, JSON.parse(fs.readFileSync("./patterns/" + listFile, "utf8")));
+			const pattern: Pattern = ObjectMapper.deserialize(Pattern, JSON.parse(fs.readFileSync("./meta/patterns/" + listFile, "utf8")));
 			console.log(`Statically loaded pattern ${listFile} (${pattern.name} - ${pattern.description}) ${pattern.inBuilt ? "In built into the system as code." : ""}`);
 
 			if(!pattern.inBuilt) {

@@ -1,6 +1,8 @@
 {
 	"name": "ridged",
 	"description": "Small, vertical ridges across the height of the component.",
+	"ignored": false,
+	"in_built": false,
 	"pattern": [
 		"<pattern id=\"ridged\" patternUnits=\"userSpaceOnUse\" width=\"3\" height=\"3\">",
 		"<path stroke=\"dimgray\" stroke-linecap=\"round\" stroke-width=\"1\" d=\"M 0,0 L 0,3\"/>",
