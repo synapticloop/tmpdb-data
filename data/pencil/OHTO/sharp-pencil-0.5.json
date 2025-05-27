@@ -1,16 +1,18 @@
 {
 	"brand": "OHTO",
-	"model_name": "Sharp Pencil 2.0",
-	"model_number": "APS-680E",
+	"model_name": "Sharp Pencil",
+	"model_number": "APS-280E",
 	"skus": [ "APS-680E-YL", "APS-680E-BL", "APS-680E-GN", "APS-680E-EN", "APS-680E-NT", "APS-680E-BK"],
 
 	"text": "OHTO Sharp Pencil 2.0 JAPAN",
 
-	"accuracy": "high",
+	"accuracy": "medium",
 
 	"mechanism": "click",
 	"lead_size": 2.0,
-	"weight": 11.0,
+	"weight": 5.4,
+
+	"TODO": "need to get the dimensions - 162mm shaft diameter 7.8mm",
 
 	"features": [
 		{ "type": "eraser", "location": "End of pencil, attached to cap" }
@@ -118,5 +120,10 @@
 			"material": "rubber",
 			"colours": [ "pink" ]
 		}
+	],
+
+	"sources": [
+		{ "name": "Cult Pens", "href": "https://cultpens.com/products/ohto-sharp-pencil-aps-280e" },
+		{ "name": "OHTO", "href": "https://www.ohto.co.jp/english/product/aps280e/" }
 	]
 }

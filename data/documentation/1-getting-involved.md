@@ -1,6 +1,9 @@
 # Welcome to the Mechanical Pencil Database _(data section)_
 
-This repository contains data on collected mechanical pencils
+This repository contains data on collected mechanical pencils, which can 
+then be used to render various outputs (thing `svg`, `png`, `pdf`, etc.).
+
+The file format is JSON 
 
 ## Getting involved
 
