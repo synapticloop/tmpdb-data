@@ -2,17 +2,24 @@
 	"brand": "Alvin",
 	"model_name": "PRO-MATIC",
 	"model_number": "MC5",
-	"lead_size": "2.0",
+
 	"text": "[LOGO|Alvin] \"PRO-MATIC\" MC5 ITALY",
-	"colour_component": "body",
+
 	"mechanism": "clutch",
+	"lead_size": "2.0",
+
+	"accuracy": "high",
+
 	"features": [
 		{ "type": "indicator", "location": "End of body." }
 	],
+
+	"colour_component": "body",
 	"colours": [ "blue" ],
 	"colour_map": {
 		"blue": "#24549C"
 	},
+
 	"front": [
 		{ "shape": "cylinder", "dimensions": [ 2.0, 10.0 ], "fill":  [ "black" ] }
 	],

@@ -25,7 +25,7 @@ for (const [dirIndex, pencilDirectory] of pencilDirectories.entries()) {
 
 	if (pencilFiles.length > 0) {
 		for (const [index, pencilFile] of pencilFiles.entries()) {
-			const pencilFileFull = path.join(pencilDir, pencilFile);
+			const pencilFileFull: string = path.join(pencilDir, pencilFile);
 
 			const pencilFileContents = JSON.parse(fs.readFileSync(pencilFileFull, "utf8"));
 			const pencil: Pencil = deserialize(Pencil, pencilFileContents);
@@ -43,6 +43,7 @@ for (const [dirIndex, pencilDirectory] of pencilDirectories.entries()) {
 				return a.brand.localeCompare(b.brand)
 			}
 		});
+
 		let mdString: string = fs.readFileSync("./README-start.md", "utf8");
 
 		mdString += new MDReadmeRenderer(pencils).render();

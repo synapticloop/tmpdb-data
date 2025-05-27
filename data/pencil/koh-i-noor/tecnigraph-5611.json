@@ -1,0 +1,81 @@
+{
+	"brand": "Koh-i-Noor",
+	"model_name": "TECHNIGRAPH",
+	"model_number": "5611",
+
+	"text": "ITALY KOH-I-NOOR TECNIGRAPH 5611",
+
+	"mechanism": "clutch",
+	"lead_size": "2.0",
+
+	"accuracy": "low",
+
+	"features": [
+		{ "type": "none" }
+	],
+
+	"colour_component": "cap",
+	"colours": [ "black", "brows", "green", "silver", "pink", "red", "brass" ],
+	"colour_map": {
+		"body_red": "#8a3232"
+	},
+
+	"front": [
+		{ "shape": "cylinder", "dimensions": [ 2.0, 10.0 ], "fill":  [ "black" ] }
+	],
+
+	"components": [
+		{
+			"type": "jaws",
+			"parts": [
+				{ "shape": "cone", "dimensions": [ 3.5, 3.0, 5.75 ] }
+			],
+			"material": "metal",
+			"colours": [ "silver" ]
+		},
+		{
+			"type": "tip",
+			"parts": [
+				{ "shape": "cone", "dimensions": [ 14.5, 6.75, 7.5 ] }
+			],
+			"material": "metal",
+			"colours": [ "silver" ]
+		},
+		{
+			"type": "grip",
+			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 30.75, 8.0 ], "finish":  "knurled-small" }
+			],
+			"material": "metal",
+			"colours": [ "silver" ]
+		},
+		{
+			"type": "body",
+			"parts": [
+				{ "shape": "hexagonal", "dimensions": [ 90.0, 8.0, 8.25 ] }
+			],
+			"material": "metal",
+			"colours": [ "body_red" ]
+		},
+		{
+			"type": "tail",
+			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 1.75, 8.25 ] }
+			],
+			"material": "metal",
+			"colours": [ "silver" ]
+		},
+		{
+			"type": "cap",
+			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 7.25, 5.5 ] }
+			],
+			"material": "metal"
+		}
+	],
+	"sources": [
+		{ "name":  "Book of Joe", "href": "https://bookofjoe.typepad.com/.a/6a00d8341c5dea53ef0163057a022d970d-pi" },
+		{ "name":  "WorthPoint", "href": "https://www.worthpoint.com/worthopedia/vintage-italian-made-koh-noor-lead-476140355" }
+
+	]
+}

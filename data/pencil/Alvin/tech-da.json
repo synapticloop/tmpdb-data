@@ -2,19 +2,26 @@
 	"brand": "Alvin",
 	"model_name": "DA",
 	"model_number": "TECH",
-	"lead_size": "2.0",
+
 	"text": "[LOGO|Alvin] \"TECH DA\" ITALY",
-	"colour_component": "cap",
+
 	"mechanism": "clutch",
+	"lead_size": "2.0",
+
+	"accuracy": "high",
+
 	"features": [
 		{ "type": "none" }
 	],
+
+	"colour_component": "cap",
 	"colours": [ "red", "green", "white" ],
 	"colour_map": {
 		"blue": "#0F5FF0",
 		"red": "#CC2318",
 		"green": "#1d2e28"
 	},
+
 	"front": [
 		{ "shape": "cylinder", "dimensions": [ 2.0, 10.0 ], "fill":  [ "black" ] }
 	],

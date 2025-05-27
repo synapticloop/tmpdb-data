@@ -25,7 +25,9 @@
   },
   "scripts": {
     "generate-readme": "tsx ./scripts/readme-generator.js",
-    "generate-output": "tsx ./scripts/output-generator.ts"
+    "generate-output": "tsx ./scripts/output-generator.ts",
+    "generate-documentation": "tsx ./scripts/documentation-generator.ts",
+    "generate-example": "tsx ./scripts/example-generator.ts"
   },
   "dependencies": {
     "@types/node": "22.15.17",

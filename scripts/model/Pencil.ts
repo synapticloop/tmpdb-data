@@ -37,8 +37,8 @@ export class Pencil extends Base {
 	private colours: string[] = []; // the colours of the pencil
 	@JsonProperty({ name: "colour_map", required: false, deserializer: MapDeserialiser })
 	colourMap: Map<string, string> = new Map<string, string>(); // the map of named colours to hex colour codes
-	@JsonProperty({ name: "accurate", required: false })
-	accurate: boolean = false;
+	@JsonProperty({ name: "accuracy", required: false })
+	accuracy: string = "unknown";
 	@JsonProperty({ name: "features", required: false, type: Feature, deserializer: FeatureDeserialiser })
 	features: Feature[] = [];
 	@JsonProperty({ name: "front", required: false, type: FrontBack, deserializer: FrontBackDeserialiser })

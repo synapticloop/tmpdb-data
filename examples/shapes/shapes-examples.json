@@ -1,0 +1,34 @@
+{
+	"brand": "Synapticloop",
+	"model_name": "In-built shape examples",
+	"lead_size": "2.0",
+	"colour_component": "shape",
+	"colours": [
+		"white"
+	],
+	"colour_map": {
+		"white": "#ffffff"
+	},
+	"mechanism": "clutch",
+	"accurate": true,
+	"components": [
+		{
+			"type": "cylindrical",
+			"parts": [
+				{ "shape": "cylindrical", "dimensions": [ 40, 8 ] }
+			]
+		},
+		{
+			"type": "cone",
+			"parts": [
+				{ "shape": "cone", "dimensions": [ 40, 8, 12 ] }
+			]
+		},
+		{
+			"type": "hexagonal",
+			"parts": [
+				{ "shape": "hexagonal", "dimensions": [ 40, 8 ] }
+			]
+		}
+	]
+}

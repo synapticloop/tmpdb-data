@@ -29,24 +29,55 @@ unfortunate but a design decision.
 _(To regenerate the list - and this `README.md` file, run `npm run readme-generator` from the root of the project.)_
 
 
-| Brand | Name | Model # | # Variants<br />_(colours)_ |
-| ---: | :--- | :--- | ---: |
-| **Alvin** | **DA** | TECH | 3 |
-| **Alvin** | **PRO-MATIC** | MC5 | 1 |
-| **BIC** | **Criterium** | undefined | 3 |
-| **Küelox** | **3308** | 3308 | 1 |
-| **M &amp; G** | **Easy Come Easy Go!** | amp-35601 | 3 |
-| **Mitsubishi** | **uni** | MH-500 | 1 |
-| **Mr. Pen** | **2.0** | 2.0 | 1 |
-| **OHTO** | **Sharp Pencil 2.0** | APS-680E | 6 |
-| **Pacific Arc** | **COLLEGIATE** | H-1301 | 2 |
-| **Pacific Arc** | **Premium** | H-1309 | 2 |
-| **Pacific Arc** | **TECH PRO** | H-1305 | 5 |
-| **Redcircle** | **600** | 600 | 3 |
-| **Staedtler** | **Mars Technico** | 780c | 2 |
-| **STUDMARK** | **3750** | undefined | 1 |
-| **Unbranded** | **Metal Black** | unknown | 1 |
-| | | **15 Pencils** | **35 Variants**<br />_(colours)_  |
+| Brand | Name | Model # | # Variants<br />_(colours / patterns)_ | Accuracy |
+| ---: | :--- | :--- | ---: | :--- |
+| **Alvin** | **DA** | TECH | 3 | high |
+| **Alvin** | **PRO-MATIC** | MC5 | 1 | high |
+| **BIC** | **Criterium** | undefined | 3 | unknown |
+| **Koh-i-Noor** | **TECHNIGRAPH** | 5611 | 7 | low |
+| **Küelox** | **3308** | 3308 | 1 | unknown |
+| **M &amp; G** | **Easy Come Easy Go!** | amp-35601 | 3 | unknown |
+| **Mitsubishi** | **uni** | MH-500 | 1 | unknown |
+| **Mr. Pen** | **2.0** | 2.0 | 1 | unknown |
+| **OHTO** | **Sharp Pencil 2.0** | APS-680E | 6 | unknown |
+| **Pacific Arc** | **COLLEGIATE** | H-1301 | 2 | unknown |
+| **Pacific Arc** | **Premium** | H-1309 | 2 | unknown |
+| **Pacific Arc** | **TECH PRO** | H-1305 | 5 | unknown |
+| **Redcircle** | **600** | 600 | 3 | high |
+| **Staedtler** | **Mars Technico** | 780c | 2 | unknown |
+| **STUDMARK** | **3750** | undefined | 1 | unknown |
+| **Unbranded** | **Metal Black** | unknown | 1 | high |
+| | | **16 Pencils** | **42 Variants**<br />_(colours / patterns)_  |
+
+
+### Accuracy Designations
+
+#### low
+
+ - Measurements of the pencil were not taken with a precision tool, and/or may have been estimated from supplied images.
+ - The overall look of the pencil and the relative dimensions should be within reasonable and relative bounds.
+ - It is unlikely that internal measurements have any level of relative accuracy, and, where supplied have been estimated.
+ - There may be a low level of accuracy of the colours of the pencil's parts.
+
+#### medium
+
+ - Not all pencil measurements were taken with a precision tool, (especially where there are internal components which access could not be gained).
+ - External measurements may have been accurately measured, however internal components may not have been measured.
+ - The pencil may be based on a third party branded model that is identical to the original.
+ - The accuracy of the colours of the pencil's parts may not be reflected by the rendered images.
+
+#### high
+
+ - Physical pencil used for measurements.
+ - Pencil measurements taken with a high precision tool.
+ - Internal measurements may not be available due to disassembly challenges.
+ - The accuracy of the colours of the pencil's parts may not be reflected by the rendered images.
+
+#### unknown
+
+ - The accuracy level for this mechanical pencil could not be determined.
+ - The accuracy of the colours of the pencil's parts may not be reflected by the rendered images.
+
 
 # Technical Details
 
@@ -54,8 +85,12 @@ _(To regenerate the list - and this `README.md` file, run `npm run readme-genera
 
 ## Directory structure
 
-- `/docs/` - for documentations
 - `/data/` - for mechanical pencil data
+- `/documentation/` - for documentation output, or written
+- `/meta/` - directory for meta information about the generation of pencils
+- `/scripts/` - scripts for running the various generators
+
+
 - `/output/` - For generated files, the subdirectories are named for the output 
   file format type and will have subdirectories beneath it that are more 
   descriptive of 
@@ -78,9 +113,9 @@ For the file `/data/ohto/sharp-pencil-2.0.json`, one of the SVG files that is ge
 
 and colour variants too (as PNGs)
 
-<img src="./output/png/technical/ohto/sharp-pencil-2.0-colour-black.png">
+<img src="./output/png/technical/OHTO/sharp-pencil-2.0-colour-black.png">
 
-<img src="./output/png/technical/ohto/sharp-pencil-2.0-colour-blue.png">
+<img src="./output/png/technical/OHTO/sharp-pencil-2.0-colour-blue.png">
 
 <img src="./output/png/technical/ohto/sharp-pencil-2.0-colour-green.png">
 

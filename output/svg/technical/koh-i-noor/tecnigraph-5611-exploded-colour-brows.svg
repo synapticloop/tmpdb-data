@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="240">
+ <pattern id="knurled-large" patternUnits="userSpaceOnUse" width="12" height="12">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 6,6 L 12,12"/>
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 6,6 L 0,12"/>
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 6,6 L 12,0" />
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 6,6 L 0,0" />
+</pattern><pattern id="knurled-small" patternUnits="userSpaceOnUse" width="4" height="4">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 2,2 L 4,4"/>
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 2,2 L 0,4"/>
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 2,2 L 4,0" />
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 2,2 L 0,0" />
+</pattern><pattern id="knurled" patternUnits="userSpaceOnUse" width="8" height="8">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,8"/>
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,8"/>
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,0" />
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,0" />
+</pattern><pattern id="lined" patternUnits="userSpaceOnUse" width="3" height="3">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 0,0 L 3,0"/>
+</pattern><pattern id="ridged" patternUnits="userSpaceOnUse" width="3" height="3">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 0,0 L 0,3"/>
+</pattern><pattern id="spring" patternUnits="userSpaceOnUse" width="8" height="60">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="2" d="M 1,1 L 8,60"/>
+<path stroke="white" stroke-linecap="round" stroke-width="1" d="M 1,1 L 8,60"/>
+</pattern><pattern id="knurled" patternUnits="userSpaceOnUse" width="8" height="8">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,8"/>
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,8"/>
+<path stroke="dimgray" stroke-linecap="round" stroke-width="5" d="M 0,4 L 4,8"/>
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,0" />
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,0" />
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 0,4 L 4,8"/>
+</pattern><rect x="0" y="0" width="1200" height="240" fill="white" stroke="black" stroke-width="4" />
+<rect x="2" y="2" width="1196" height="236" fill="white" stroke="dimgray" stroke-width="1" />
+<g transform="rotate(0 0 0)">
+<text x="30" y="50" font-size="2.0em" font-weight="bold"> Koh-i-Noor // TECHNIGRAPH (Model #: 5611)</text>
+
+
+<!-- renderExplodedSideComponents -->
+
+
+<!-- renderSideComponent: jaws -->
+
+
+<!-- renderPart: cone -->
+<path d="M230.575 112.5 L248.175 105.625 L248.175 134.375 L230.575 127.5 Z" stroke-width="0" stroke="none" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
+<path d="M230.625 112.5 L248.125 105.625 M248.125 134.375 L230.625 127.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
+<!-- !left !both--><path d="M230.625 112.5 L230.625 127.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
+<!-- !right !both --><path d="M248.125 105.625 L248.125 134.375" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
+
+
+<!-- renderSideComponent: tip -->
+
+
+<!-- renderPart: cone -->
+<path d="M248.075 103.125 L320.675 101.25 L320.675 138.75 L248.075 136.875 Z" stroke-width="0" stroke="none" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
+<path d="M248.125 103.125 L320.625 101.25 M320.625 138.75 L248.125 136.875" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
+<!-- !left !both--><path d="M248.125 103.125 L248.125 136.875" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
+<!-- !right !both --><path d="M320.625 101.25 L320.625 138.75" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
+
+
+<!-- renderSideComponent: grip -->
+
+
+<!-- renderPart: cylinder -->
+<path d="M320.575 100 L474.425 100 L474.425 140 L320.575 140 Z" stroke-width="0" stroke="none" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
+<path d="M320.625 100 L474.375 100 M474.375 140 L320.625 140" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
+<!-- !left !both--><path d="M320.625 100 L320.625 140" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
+<!-- !right !both --><path d="M474.375 100 L474.375 140" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
+<path d="M320.625 100 L474.375 100 L474.375 140 L320.625 140 Z" stroke-width="1.0" stroke="black" fill="url(#knurled-small)"/>
+
+
+<!-- renderSideComponent: body -->
+
+
+<!-- renderPart: hexagonal -->
+<path d="M474.325 100 L924.425 99.375 L924.425 140.625 L474.325 140 Z" stroke-width="0" stroke="none" stroke-linejoin="round" fill="#8a3232" fill-opacity="1"/>
+<path d="M474.375 100 L924.375 99.375 M924.375 140.625 L474.375 140" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#8a3232" fill-opacity="1"/>
+<!-- !left !both--><path d="M474.375 100 L474.375 140" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#8a3232" fill-opacity="1"/>
+<!-- !right !both --><path d="M924.375 99.375 L924.375 140.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#8a3232" fill-opacity="1"/>
+<line x1="474.375" y1="120" x2="924.375" y2="120" stroke-width="1.5" stroke="gray" fill="gray" stroke-opacity="1.0"/>
+<line x1="474.375" y1="120" x2="924.375" y2="120" stroke-width="0.5" stroke="black" fill="none" stroke-opacity="0.5"/>
+
+
+<!-- renderSideComponent: tail -->
+
+
+<!-- renderPart: cylinder -->
+<path d="M924.325 99.375 L933.175 99.375 L933.175 140.625 L924.325 140.625 Z" stroke-width="0" stroke="none" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
+<path d="M924.375 99.375 L933.125 99.375 M933.125 140.625 L924.375 140.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
+<!-- !left !both--><path d="M924.375 99.375 L924.375 140.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
+<!-- !right !both --><path d="M933.125 99.375 L933.125 140.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
+
+
+<!-- renderSideComponent: cap -->
+
+
+<!-- renderPart: cylinder -->
+<path d="M933.075 106.25 L969.425 106.25 L969.425 133.75 L933.075 133.75 Z" stroke-width="0" stroke="none" stroke-linejoin="round" fill="brows" fill-opacity="1"/>
+<path d="M933.125 106.25 L969.375 106.25 M969.375 133.75 L933.125 133.75" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="brows" fill-opacity="1"/>
+<!-- !right !both --><path d="M969.375 106.25 L969.375 133.75" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="brows" fill-opacity="1"/>
+</g><text x="50%" y="200" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // Synapticloop and The Mechanical Pencil Database (tmpdb)</text>
+<text x="50%" y="220" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
+<text x="1190" y="230" font-size="0.5em" font-weight="bold" text-anchor="end" dominant-baseline="middle">SVGTechnicalExplodedRenderer</text>
+</svg>

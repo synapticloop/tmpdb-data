@@ -5,8 +5,12 @@
 
 ## Directory structure
 
-- `/docs/` - for documentations
 - `/data/` - for mechanical pencil data
+- `/documentation/` - for documentation output, or written
+- `/meta/` - directory for meta information about the generation of pencils
+- `/scripts/` - scripts for running the various generators
+
+
 - `/output/` - For generated files, the subdirectories are named for the output 
   file format type and will have subdirectories beneath it that are more 
   descriptive of 
@@ -29,9 +33,9 @@ For the file `/data/ohto/sharp-pencil-2.0.json`, one of the SVG files that is ge
 
 and colour variants too (as PNGs)
 
-<img src="./output/png/technical/ohto/sharp-pencil-2.0-colour-black.png">
+<img src="./output/png/technical/OHTO/sharp-pencil-2.0-colour-black.png">
 
-<img src="./output/png/technical/ohto/sharp-pencil-2.0-colour-blue.png">
+<img src="./output/png/technical/OHTO/sharp-pencil-2.0-colour-blue.png">
 
 <img src="./output/png/technical/ohto/sharp-pencil-2.0-colour-green.png">
 
