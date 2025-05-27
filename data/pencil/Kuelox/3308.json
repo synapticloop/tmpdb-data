@@ -2,15 +2,25 @@
 	"brand": "Küelox",
 	"model_name": "3308",
 	"model_number": "3308",
-	"lead_size": "2.0",
+
 	"text": "Küelox 3308 2.0",
-	"colour_component": "body",
+
 	"mechanism": "clutch",
+	"lead_size": "2.0",
+	"accuracy": "high",
+
+	"features": [
+		{ "type": "sharpener", "location": "Inside cap" },
+		{ "type": "lead size indicator", "location": "Tail" }
+	],
+
+	"colour_component": "body",
 	"colours": [ "silver" ],
 	"colour_map": {
 		"silver": "#b4b8b9",
 		"brass": "#e1c16e"
 	},
+
 	"front": [
 		{ "shape": "cylinder", "dimensions": [ 2.0, 10.0 ], "fill":  [ "black" ] }
 	],

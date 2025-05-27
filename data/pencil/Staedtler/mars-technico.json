@@ -3,17 +3,26 @@
 	"model_name": "Mars Technico",
 	"model_number": "780c",
 	"skus": [ ],
-	"lead_size": "2.0",
+
 	"text": "STAEDTLER Mars technico",
+
+	"mechanism": "clutch",
+	"lead_size": "2.0",
+
 	"colour_component": "body",
 	"colours": [ "black", "blue" ],
-	"mechanism": "clutch",
+
+	"features": [
+		{ "type": "sharpener", "location": "inside cap" }
+	],
+
 	"front": [
 		{ "shape":"cylinder", "dimensions": [ 2.0, 10.0 ], "fill":  "black" }
 	],
 	"back": [
 		{ "shape":"cylinder", "dimensions": [ 2.0, 10.0 ], "fill":  "black" }
 	],
+
 	"components": [
 		{
 			"type": "jaws",

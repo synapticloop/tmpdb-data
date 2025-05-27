@@ -3,19 +3,25 @@
 	"model_name": "COLLEGIATE",
 	"model_number": "H-1301",
 	"skus": [ "H-1301BLK", "H-1301BLUE" ],
-	"lead_size": "2.0",
+
 	"text": "PACIFIC ARC H-1301",
-	"colour_component": "body",
+
 	"mechanism": "click",
-	"accurate": true,
-	"colours": [ "black", "blue" ],
+	"lead_size": "2.0",
+
+	"accuracy": "high",
+
 	"features": [
 		{ "type": "sharpener", "location":  "Inside cap"}
 	],
+
+	"colour_component": "body",
+	"colours": [ "black", "blue" ],
 	"colour_map": {
 		"silver": "#b4b8b9",
 		"blue": "#0174bd"
 	},
+
 	"front": [
 		{ "shape": "cylinder", "dimensions": [ 2.0, 10.0 ], "fill":  "black" }
 	],

@@ -3,9 +3,10 @@
 	"model_name": "Criterium",
 	"lead_size": "2.0",
 	"text": "BIC CRITERIUM 2 mm",
+	"skus": [ ],
 
 	"mechanism": "clutch",
-	"accurate": true,
+	"accuracy": "high",
 
 	"features": [
 		{ "type":  "eraser", "location":  "internal - inside cap" },

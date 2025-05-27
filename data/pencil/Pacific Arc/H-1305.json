@@ -3,15 +3,20 @@
 	"model_name": "TECH PRO",
 	"model_number": "H-1305",
 	"skus": [ "H-1305BLK", "H-1305BLU", "H-1304GRN", "H-1305RED", "H-1305BRN"],
-	"lead_size": "2.0",
+
 	"text": "PACIFIC ARC H-1305",
-	"colour_component": "body",
-	"accurate": true,
-	"mechanism": "",
-	"colours": [ "black", "blue", "green", "red", "brown" ],
+
+	"mechanism": "clutch",
+	"lead_size": "2.0",
+
+	"accuracy": "high",
+
 	"features": [
 		{ "type": "sharpener", "location":  "Inside cap"}
 	],
+
+	"colour_component": "body",
+	"colours": [ "black", "blue", "green", "red", "brown" ],
 	"colour_map": {
 		"silver": "#b4b8b9",
 		"brass": "#e1c16e",
@@ -20,6 +25,7 @@
 		"green": "#404f4c",
 		"red": "#be3f39"
 	},
+
 	"front": [
 		{ "shape": "cylinder", "dimensions": [ 2.0, 10.0 ], "fill":  "black" }
 	],

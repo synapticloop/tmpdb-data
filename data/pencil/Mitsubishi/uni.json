@@ -3,12 +3,19 @@
 	"model_name": "uni",
 	"model_number": "MH-500",
 	"skus": [ ],
-	"lead_size": "2.0",
+
 	"text": "MITSUBISHI / uni /",
+
+	"mechanism": "clutch",
+	"lead_size": "2.0",
+
+	"weight": 11.0,
+
+	"accuracy": "high",
+
 	"colour_component": "body",
 	"colours": [ "maroon" ],
-	"mechanism": "clutch",
-	"weight": 11.0,
+
 	"front": [
 		{ "shape":"cylinder", "dimensions": [ 2.0, 10.0 ], "fill":  "black" }
 	],

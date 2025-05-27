@@ -1,13 +1,24 @@
 {
 	"brand": "STUDMARK",
-	"model": "3750",
 	"model_name": "3750",
-	"lead_size": "2.0",
+	"model_number": "3750",
+	"skus": [ "ST-03750" ],
+
 	"text": "STUDMARK(R) 3750 2.0mm",
+
+	"mechanism": "click",
+	"lead_size": "2.0",
+
+	"accuracy": "high",
+
+	"features": [
+		{ "type":  "sharpener", "location": "inside cap" },
+		{ "type":  "lead grade indicator", "location": "tail" }
+	],
+
 	"colour_component": "body",
 	"colours": [ "royalblue" ],
-	"mechanism": "click",
-	"skus": [ "ST-03750" ],
+
 	"front": [
 		{ "shape": "cylinder", "dimensions": [ 2.0, 10.0 ], "fill":  "black" }
 	],

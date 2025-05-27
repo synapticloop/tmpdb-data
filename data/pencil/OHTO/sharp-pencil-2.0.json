@@ -3,16 +3,21 @@
 	"model_name": "Sharp Pencil 2.0",
 	"model_number": "APS-680E",
 	"skus": [ "APS-680E-YL", "APS-680E-BL", "APS-680E-GN", "APS-680E-EN", "APS-680E-NT", "APS-680E-BK"],
-	"accurate": true,
-	"lead_size": 2.0,
+
 	"text": "OHTO Sharp Pencil 2.0 JAPAN",
-	"weight": 11.0,
+
+	"accuracy": "high",
+
 	"mechanism": "click",
-	"colour_component": "body",
-	"colours": [ "yellow%50", "blue%50", "green%50", "burgundy%50", "wood%50", "black%50" ],
+	"lead_size": 2.0,
+	"weight": 11.0,
+
 	"features": [
 		{ "type": "eraser", "location": "End of pencil, attached to ferrule" }
 	],
+
+	"colour_component": "body",
+	"colours": [ "yellow%50", "blue%50", "green%50", "burgundy%50", "wood%50", "black%50" ],
 	"colour_map": {
 		"yellow": "#e38f0f",
 		"red": "#5d191d",
@@ -23,6 +28,7 @@
 		"pink": "#db756d",
 		"silver": "#b4b8b9"
 	},
+
 	"front": [
 		{ "shape": "cylinder", "dimensions": [ 2.0, 10.0 ], "fill":  "black" }
 	],

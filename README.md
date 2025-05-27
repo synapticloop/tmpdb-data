@@ -54,13 +54,16 @@ _(To regenerate the list - and this `README.md` file, run `npm run readme-genera
 
 #### low
 
- - Measurements of the pencil were not taken with a precision tool, and/or may have been estimated from supplied images.
+ - Physical pencil not present
+ - Measurements of the pencil were not taken with a precision tool, and may have been estimated from supplied images.
  - The overall look of the pencil and the relative dimensions should be within reasonable and relative bounds.
+ - The pencil may be based on a third party branded model that is identical to the original.
  - It is unlikely that internal measurements have any level of relative accuracy, and, where supplied have been estimated.
  - There may be a low level of accuracy of the colours of the pencil's parts.
 
 #### medium
 
+ - Physical pencil present, however no precision measurement tool was used, or physical pencil not present and image used.  Where an image is used for measurements, an accurate measuring scale is included with the image.
  - Not all pencil measurements were taken with a precision tool, (especially where there are internal components which access could not be gained).
  - External measurements may have been accurately measured, however internal components may not have been measured.
  - The pencil may be based on a third party branded model that is identical to the original.

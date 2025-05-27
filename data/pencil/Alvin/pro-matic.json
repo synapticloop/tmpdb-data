@@ -2,6 +2,7 @@
 	"brand": "Alvin",
 	"model_name": "PRO-MATIC",
 	"model_number": "MC5",
+	"skus": [ ],
 
 	"text": "[LOGO|Alvin] \"PRO-MATIC\" MC5 ITALY",
 
@@ -11,7 +12,7 @@
 	"accuracy": "high",
 
 	"features": [
-		{ "type": "indicator", "location": "End of body." }
+		{ "type": "indicator", "location": "end of body" }
 	],
 
 	"colour_component": "body",

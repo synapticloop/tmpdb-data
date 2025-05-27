@@ -2,9 +2,12 @@
 	"brand": "Redcircle",
 	"model_name": "600",
 	"model_number": "600",
-	"lead_size": "2.0",
+
 	"text": "Redcircle (R) 600 2.0mm",
+
 	"mechanism": "click",
+	"lead_size": "2.0",
+
 	"accuracy": "high",
 
 	"features": [
@@ -12,7 +15,7 @@
 		{ "type":  "indicator", "location":  "rotational - near clip" }
 	],
 
-	"comments": "",
+	"TODO": "",
 
 	"colours": [ "black", "silver", "gold" ],
 	"colour_component": "body",

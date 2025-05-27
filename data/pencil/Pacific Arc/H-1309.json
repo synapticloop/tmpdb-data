@@ -2,15 +2,21 @@
 	"brand": "Pacific Arc",
 	"model_name": "Premium",
 	"model_number": "H-1309",
-	"lead_size": "2.0",
-	"text": "PACIFIC ARC H-1309",
-	"accurate": true,
 	"skus":[ "H-1309SLV", "H-1309BLK"],
+
+	"text": "PACIFIC ARC H-1309",
+
 	"mechanism": "",
+	"lead_size": "2.0",
+
+	"accuracy": "high",
+
 	"TODO": "check colours on pacific arc black...",
+
 	"features": [
 		{ "type":  "sharpener", "location":  "inside cap" }
 	],
+
 	"colour_component" : "body",
 	"colours": [ "silver", "black" ],
 	"colour_map": {
@@ -18,6 +24,7 @@
 		"silver": "#b4b8b9",
 		"brass": "#e1c16e"
 	},
+
 	"front": [
 		{ "shape": "cylinder", "dimensions": [ 2.0, 10.0 ], "fill":  "black" }
 	],
