@@ -14,7 +14,26 @@ There are many ways to get involved:
    add them (through a pull request, or raising of an issue).
 1. Add new pencil with measurements (at whatever accuracy)
 
-## Adding pencil details
+# Adding Pencil Details
+
+## Directory (brand) naming
+
+For any new brands, the directory name should 
+
+ - be **ALL** lowercased
+ - **NO** non alphanumeric characters.
+ - Have **NO** whitespace - replace all whitespace with hyphens ('-')
+ - Have **NO** diacritical marks (e.g. à, è, ç, ô, Ä, ŭ, ō, ñ) 
+
+This is to provide naming consistency and to avoid any issues with reading or 
+writing files on various operating systems.
+
+## File naming
+
+Each pencil should reside in the brand directory and named as follows
+
+`<model_name>-<model_number>-<lead_size>.json`
+
 
 ### Accuracy levels
 
@@ -32,5 +51,5 @@ schematics/designs are available and are used for the measurements.
 
 #### 'Unknown' accuracy
 
-Where the JSON file does not include the `accuracy` key.
+Where the JSON file does not include the `accuracy` key, it will be set to this.
 
