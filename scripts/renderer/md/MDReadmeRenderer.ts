@@ -10,11 +10,11 @@ export class MDReadmeRenderer {
 
 	render(): string {
 		let mdString: string = "";
-		mdString += "| Brand | Name | Model # | # Variants<br />_(colours / patterns)_ | Accuracy |\n";
-		mdString += "| ---: | :--- | :--- | ---: | :--- |\n";
+		mdString += "| Brand | Name | Model # | Lead Size<br />_(mm)_ | # Variants<br />_(colours / patterns)_ | Accuracy |\n";
+		mdString += "| ---: | :--- | :--- | ---: | ---: | :--- |\n";
 		let numVariants: number = 0;
 		for(const pencil of this.pencils) {
-			mdString += `| **${pencil.brand}** | **${pencil.modelName}** | ${pencil.modelNumber} | ${pencil.colourComponents.length} | ${pencil.accuracy} |\n`;
+			mdString += `| **${pencil.brand}** | **${pencil.modelName}** | ${pencil.modelNumber} | ${pencil.leadSize} | ${pencil.colourComponents.length} | ${pencil.accuracy} |\n`;
 			numVariants += pencil.colourVariants.length;
 		}
 		mdString += `| | | **${this.pencils.length} Pencils** | **${numVariants} Variants**<br />_(colours / patterns)_  |\n\n\n`;

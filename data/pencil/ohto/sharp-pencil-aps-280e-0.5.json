@@ -2,30 +2,30 @@
 	"brand": "OHTO",
 	"model_name": "Sharp Pencil",
 	"model_number": "APS-280E",
-	"skus": [ "APS-680E-YL", "APS-680E-BL", "APS-680E-GN", "APS-680E-EN", "APS-680E-NT", "APS-680E-BK"],
+	"skus": [ "APS-280ES-NT", "APS-280E-EN","APS-280ES-GN", "APS-280E-BN", "APS-280E-YL" ],
 
-	"text": "OHTO Sharp Pencil 2.0 JAPAN",
+	"text": "ESTABLISHED 1929 OHTO SHARP PENCIL APS-280E JAPAN",
 
 	"accuracy": "medium",
 
 	"mechanism": "click",
-	"lead_size": 2.0,
-	"weight": 5.4,
-
-	"TODO": "need to get the dimensions - 162mm shaft diameter 7.8mm",
+	"lead_size": 0.5,
+	"weight": 4.8,
 
 	"features": [
 		{ "type": "eraser", "location": "End of pencil, attached to cap" }
 	],
 
 	"colour_component": "body",
-	"colours": [ "yellow%50", "blue%50", "green%50", "burgundy%50", "wood%50", "black%50" ],
+	"colours": [ "natural", "burgundy", "green", "brown", "yellow" ],
 	"colour_map": {
-		"yellow": "#e38f0f",
-		"red": "#5d191d",
-		"blue": "#1a4b88",
-		"green": "#053439",
-		"wood": "#b88160",
+		"natural": "#c38066",
+		"burgundy": "#67171a",
+		"green": "#063604",
+		"brown": "#892600",
+		"yellow": "#e78b06",
+
+		"wood": "#c38066",
 		"brass": "#E1C16E",
 		"pink": "#db756d",
 		"silver": "#b4b8b9"
@@ -40,29 +40,14 @@
 			"material": "metal",
 			"colours": [ "brass" ],
 			"parts": [
-				{ "shape": "cylinder", "dimensions": [ 2.5, 3.25 ] },
-				{ "shape": "cone", "dimensions": [ 5.0, 3.25, 7.5 ] }
-			],
-			"internal_end": [
-				{ "shape": "cylinder", "dimensions": [ 10.25, 5.5 ] },
-				{ "shape": "cylinder", "dimensions": [ 3.0, 5.5 ] },
-				{ "shape": "cylinder", "dimensions": [ 0.75, 5.75 ] },
-				{ "shape": "cylinder", "dimensions": [ 1.5, 5.5 ] },
-				{ "shape": "cylinder", "dimensions": [ 0.75, 5.75 ] },
-				{ "shape": "cylinder", "dimensions": [ 1.5, 5.5 ] },
-				{ "shape": "cylinder", "dimensions": [ 0.75, 5.75 ] },
-				{ "shape": "cylinder", "dimensions": [ 5.75, 5.5 ] },
-				{ "shape": "cylinder", "dimensions": [ 89.5, 4.25 ], "material": "plastic", "colours": [ "white%50" ] }
+				{ "shape": "cylinder", "dimensions": [ 1.75, 1.5 ] },
+				{ "shape": "cone", "dimensions": [ 4, 1.5, 5.5 ] }
 			]
 		},
 		{
 			"type": "head",
 			"parts": [
-				{
-					"shape": "cone",
-					"dimensions": [ 5.0, 8.0, 11.0 ],
-					"joined": "right"
-				}
+				{ "shape": "cone", "dimensions": [ 3, 5.5, 8 ], "joined": "right" }
 			],
 			"material": "wood",
 			"colours": [ "wood" ]
@@ -71,17 +56,7 @@
 			"type": "body",
 			"parts": [
 				{
-					"shape": "hexagonal",
-					"dimensions": [ 98.0, 11.0 ],
-					"taper_start": { "offset": [ 2.5, 0.325 ], "background_colours": [ "wood" ],
-					"joined": "left"}
-				}
-			],
-			"internal_end": [
-				{
-					"shape": "cylinder",
-					"dimensions": [ 8.5, 9.25 ],
-					"colours": [ "wood" ]
+					"shape": "hexagonal", "dimensions": [ 131.75, 8 ], "taper_start": { "offset": [ 1.25, 0.325 ], "background_colours": [ "wood" ], "joined": "left" }
 				}
 			],
 			"material": "wood"
@@ -89,33 +64,24 @@
 		{
 			"type": "ferrule",
 			"parts": [
-				{ "shape": "cylinder", "dimensions": [ 14.0, 10.25 ], "finish": "ferrule" }
+				{ "shape": "cylinder", "dimensions": [ 13.5, 8 ], "finish": "ferrule" }
 			],
 			"material": "metal",
-			"colours": [ "brass" ]
+			"colours": [ "silver" ]
 		},
 		{
 			"type": "cap",
 			"parts": [
-				{ "shape": "cylinder", "dimensions": [ 5.0, 9.5 ] },
-				{ "shape": "cylinder", "dimensions": [ 2.0, 10.0 ] }
-			],
-			"internal_start": [
-				{ "shape": "cylinder", "dimensions": [ 2.75, 2.75 ] },
-				{ "shape": "cylinder", "dimensions": [ 0.5, 3.0 ] },
-				{ "shape": "cylinder", "dimensions": [ 3.0, 2.75 ] },
-				{ "shape": "cylinder", "dimensions": [ 2.75, 9.5 ] }
+				{ "shape": "cylinder", "dimensions": [ 3.5, 6.75 ] },
+				{ "shape": "cylinder", "dimensions": [ 1.75, 8 ] }
 			],
 			"material": "metal",
-			"colours": [ "brass" ]
+			"colours": [ "silver" ]
 		},
 		{
 			"type": "eraser",
 			"parts": [
-				{ "shape": "cylinder", "dimensions": [ 5.0, 9.25 ] }
-			],
-			"internal_start": [
-				{ "shape": "cylinder", "dimensions": [ 6.0, 9.25 ] }
+				{ "shape": "cylinder", "dimensions": [ 3.75, 6.25 ] }
 			],
 			"material": "rubber",
 			"colours": [ "pink" ]
@@ -125,6 +91,7 @@
 	"sources": [
 		{ "name": "Cult Pens", "href": "https://cultpens.com/products/ohto-sharp-pencil-aps-280e" },
 		{ "name": "OHTO", "href": "https://www.ohto.co.jp/english/product/aps280e/" },
-		{ "name": "Moku Bungu", "href": "https://mokubungu.com.au/collections/ohto" }
+		{ "name": "Moku Bungu", "href": "https://mokubungu.com.au/collections/ohto" },
+		{ "name": "dyc", "href": "https://dooyang21.com/product/ohto-%EC%98%A4%ED%86%A0-%EB%AA%A9%EC%9E%AC%ED%99%80%EB%8D%94%EC%83%A4%ED%94%84-05-aps-280e/328/" }
 	]
 }

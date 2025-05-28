@@ -13,6 +13,13 @@ export function drawTextBoldCentred(text: string, x: number, y:number, fontSize:
 			`dominant-baseline="central">${text}</text>\n`);
 }
 
+export function drawTextCentred(text: string, x: number, y:number, fontSize:string) {
+	return(`<text x="${x}" ` +
+		`y="${y}" ` +
+		`font-size="${fontSize}" text-anchor="middle" ` +
+		`dominant-baseline="central">${text}</text>\n`);
+}
+
 export function drawTextBold(text, x, y, fontSize) {
 	return(`<text x="${x}" ` +
 			`y="${y}" ` +

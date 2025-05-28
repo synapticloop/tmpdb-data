@@ -35,6 +35,8 @@ Each pencil should reside in the brand directory and named as follows
 `<model_name>-<model_number>-<lead_size>.json`
 
 
+## File format
+
 ### Accuracy levels
 
 #### 'High' accuracy 

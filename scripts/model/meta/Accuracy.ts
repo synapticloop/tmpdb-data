@@ -15,7 +15,7 @@ export class Accuracy {
 				"Physical pencil present, however no precision measurement tool was used, or physical pencil not present and image used.  Where an image is used for measurements, an accurate measuring scale is included with the image.",
 				"Not all pencil measurements were taken with a precision tool, (especially where there are internal components which access could not be gained)." ,
 				"External measurements may have been accurately measured, however internal components may not have been measured.",
-				"The pencil may be based on a third party branded model that is identical to the original.",
+				"The pencil may be based on a first/third party branded model that is identical to the original.",
 				"The accuracy of the colours of the pencil's parts may not be reflected by the rendered images."
 			]
 		],

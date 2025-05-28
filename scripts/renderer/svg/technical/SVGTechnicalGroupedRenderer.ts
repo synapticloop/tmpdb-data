@@ -3,7 +3,7 @@ import {SVGRenderer} from "../SVGRenderer.ts";
 import {
 	dimensionsHorizontal,
 	drawText,
-	drawTextBoldCentred,
+	drawTextBoldCentred, drawTextCentred,
 	lineHorizontal, lineVertical,
 	TextOrientation
 } from "../../../utils/svg-helper.ts";
@@ -217,6 +217,12 @@ export class SVGTechnicalGroupedRenderer extends SVGRenderer {
 			// now it is time to render the details of the pencil
 			svgString += super.renderSideComponents(this._width/2 - (this.pencil.totalLength*5/2), y, i);
 
+			// now draw the text
+			let text: string = this.pencil.colourComponents[i].colourName;
+			if(this.pencil.skus[i]) {
+				text += ` (${this.pencil.skus[i]})`;
+			}
+			svgString += drawTextBoldCentred(text, this._width/2, y + 50, "1.2em");
 			y = y + 120;
 		}
 

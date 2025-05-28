@@ -29,25 +29,28 @@ unfortunate but a design decision.
 _(To regenerate the list - and this `README.md` file, run `npm run readme-generator` from the root of the project.)_
 
 
-| Brand | Name | Model # | # Variants<br />_(colours / patterns)_ | Accuracy |
-| ---: | :--- | :--- | ---: | :--- |
-| **Alvin** | **DA** | TECH | 3 | high |
-| **Alvin** | **PRO-MATIC** | MC5 | 1 | high |
-| **BIC** | **Criterium** | undefined | 3 | high |
-| **Koh-i-Noor** | **TECHNIGRAPH** | 5611 | 7 | low |
-| **Küelox** | **3308** | 3308 | 1 | high |
-| **M &amp; G** | **Easy Come Easy Go!** | amp-35601 | 3 | high |
-| **Mitsubishi** | **uni** | MH-500 | 1 | high |
-| **Mr. Pen** | **2.0** | 2.0 | 1 | high |
-| **OHTO** | **Sharp Pencil 2.0** | APS-680E | 6 | high |
-| **Pacific Arc** | **COLLEGIATE** | H-1301 | 2 | high |
-| **Pacific Arc** | **Premium** | H-1309 | 2 | high |
-| **Pacific Arc** | **TECH PRO** | H-1305 | 5 | high |
-| **Redcircle** | **600** | 600 | 3 | high |
-| **Staedtler** | **Mars Technico** | 780c | 2 | high |
-| **STUDMARK** | **3750** | 3750 | 1 | high |
-| **Unbranded** | **Metal Black** | unknown | 1 | high |
-| | | **16 Pencils** | **42 Variants**<br />_(colours / patterns)_  |
+|           Brand | Name                   | Model #        |                       Lead Size<br />_(mm)_ | # Variants<br />_(colours / patterns)_ | Accuracy |
+|----------------:|:-----------------------|:---------------|--------------------------------------------:|---------------------------------------:|:---------|
+|       **Alvin** | **DA**                 | TECH           |                                           2 |                                      3 | high     |
+|       **Alvin** | **PRO-MATIC**          | MC5            |                                           2 |                                      1 | high     |
+|         **BIC** | **Criterium**          | undefined      |                                           2 |                                      3 | high     |
+|  **Koh-i-Noor** | **TECHNIGRAPH**        | 5611           |                                           2 |                                      7 | low      |
+|      **Küelox** | **3308**               | 3308           |                                           2 |                                      1 | high     |
+|   **M &amp; G** | **Easy Come Easy Go!** | amp-35601      |                                           2 |                                      3 | high     |
+|  **Mitsubishi** | **uni**                | MH-500         |                                           2 |                                      1 | high     |
+|     **Mr. Pen** | **2.0**                | 2.0            |                                           2 |                                      1 | high     |
+|        **OHTO** | **Sharp Pencil**       | APS-280E       |                                         0.5 |                                      5 | medium   |
+|        **OHTO** | **Sharp Pencil 2.0**   | APS-680E       |                                           2 |                                      6 | high     |
+|        **OHTO** | **Wooden Pencil**      | WN03-SP20      |                                           2 |                                      5 | high     |
+|        **OHTO** | **Wooden Sharp**       | WN01-SP5       |                                         0.5 |                                      5 | medium   |
+| **Pacific Arc** | **COLLEGIATE**         | H-1301         |                                           2 |                                      2 | high     |
+| **Pacific Arc** | **Premium**            | H-1309         |                                           2 |                                      2 | high     |
+| **Pacific Arc** | **TECH PRO**           | H-1305         |                                           2 |                                      5 | high     |
+|   **Redcircle** | **600**                | 600            |                                           2 |                                      3 | high     |
+|   **Staedtler** | **Mars Technico**      | 780c           |                                           2 |                                      2 | high     |
+|    **STUDMARK** | **3750**               | 3750           |                                           2 |                                      1 | high     |
+|   **Unbranded** | **Metal Black**        | unknown        |                                           2 |                                      1 | high     |
+|                 |                        | **19 Pencils** | **57 Variants**<br />_(colours / patterns)_ |
 
 
 ### Accuracy Designations

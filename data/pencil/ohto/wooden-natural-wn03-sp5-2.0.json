@@ -1,0 +1,135 @@
+{
+	"brand": "OHTO",
+	"model_name": "Wooden Pencil",
+	"model_number": "WN03-SP20",
+
+	"text": "[LOGO|OHTO] OHTO JAPAN WN03 Mechanical Pencil 2.0",
+
+	"skus": [ "WN03-SP20-YL", "WN03-SP20-BL", "WN03-SP20-GN", "WN03-SP20-EN", "WN03-SP20-NT", "WN03-SP20-BK"],
+
+	"manufactured_in": "Japan",
+	"manufactured_from": [],
+	"manufactured_to": [],
+
+	"accuracy": "high",
+
+	"mechanism": "click",
+	"lead_size": 2.0,
+	"weight": 11.0,
+
+	"features": [
+		{ "type": "eraser", "location": "End of pencil, attached to cap" }
+	],
+
+	"colour_component": "body",
+	"colours": [ "yellow", "blue", "green", "burgundy", "natural" ],
+	"colour_map": {
+		"yellow": "#e78b06",
+		"burgundy": "#67171a",
+		"blue": "#014fa1",
+		"green": "#063604",
+		"natural": "#c38066",
+
+		"wood": "#c38066",
+		"brass": "#E1C16E",
+		"pink": "#db756d",
+		"silver": "#b4b8b9"
+	},
+
+	"front": [
+		{ "shape": "cylinder", "dimensions": [ 2.0, 10.0 ], "fill":  "black" }
+	],
+	"components": [
+		{
+			"type": "tip",
+			"material": "metal",
+			"colours": [ "brass" ],
+			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 2.5, 3.25 ] },
+				{ "shape": "cone", "dimensions": [ 5.0, 3.25, 7.5 ] }
+			],
+			"internal_end": [
+				{ "shape": "cylinder", "dimensions": [ 10.25, 5.5 ] },
+				{ "shape": "cylinder", "dimensions": [ 3.0, 5.5 ] },
+				{ "shape": "cylinder", "dimensions": [ 0.75, 5.75 ] },
+				{ "shape": "cylinder", "dimensions": [ 1.5, 5.5 ] },
+				{ "shape": "cylinder", "dimensions": [ 0.75, 5.75 ] },
+				{ "shape": "cylinder", "dimensions": [ 1.5, 5.5 ] },
+				{ "shape": "cylinder", "dimensions": [ 0.75, 5.75 ] },
+				{ "shape": "cylinder", "dimensions": [ 5.75, 5.5 ] },
+				{ "shape": "cylinder", "dimensions": [ 89.5, 4.25 ], "material": "plastic", "colours": [ "white%50" ] }
+			]
+		},
+		{
+			"type": "head",
+			"parts": [
+				{
+					"shape": "cone",
+					"dimensions": [ 5.0, 8.0, 11.0 ],
+					"joined": "right"
+				}
+			],
+			"material": "wood",
+			"colours": [ "wood" ]
+		},
+		{
+			"type": "body",
+			"parts": [
+				{
+					"shape": "hexagonal",
+					"dimensions": [ 98.0, 11.0 ],
+					"taper_start": { "offset": [ 2.5, 0.325 ], "background_colours": [ "wood" ],
+					"joined": "left"}
+				}
+			],
+			"internal_end": [
+				{
+					"shape": "cylinder",
+					"dimensions": [ 8.5, 9.25 ],
+					"colours": [ "wood" ]
+				}
+			],
+			"material": "wood"
+		},
+		{
+			"type": "ferrule",
+			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 14.0, 10.25 ], "finish": "ferrule" }
+			],
+			"material": "metal",
+			"colours": [ "brass" ]
+		},
+		{
+			"type": "cap",
+			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 5.0, 9.5 ] },
+				{ "shape": "cylinder", "dimensions": [ 2.0, 10.0 ] }
+			],
+			"internal_start": [
+				{ "shape": "cylinder", "dimensions": [ 2.75, 2.75 ] },
+				{ "shape": "cylinder", "dimensions": [ 0.5, 3.0 ] },
+				{ "shape": "cylinder", "dimensions": [ 3.0, 2.75 ] },
+				{ "shape": "cylinder", "dimensions": [ 2.75, 9.5 ] }
+			],
+			"material": "metal",
+			"colours": [ "brass" ]
+		},
+		{
+			"type": "eraser",
+			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 5.0, 9.25 ] }
+			],
+			"internal_start": [
+				{ "shape": "cylinder", "dimensions": [ 6.0, 9.25 ] }
+			],
+			"material": "rubber",
+			"colours": [ "pink" ]
+		}
+	],
+
+	"sources": [
+		{ "name": "OHTO", "href": "https://www.ohto.co.jp/english/product/aps680e/" },
+		{ "name": "Jet Pens", "href": "https://www.jetpens.com/OHTO-Wooden-Mechanical-Pencil-Lead-Holder-2.0-mm-Dark-Red/pd/20731" },
+		{ "name": "DYC", "href": "https://dooyang21.com/product/ohto-%EC%98%A4%ED%86%A0-%EB%AA%A9%EC%9E%AC%ED%99%80%EB%8D%94%EC%83%A4%ED%94%8420-aps-680e/30/category/52/display/1/" }
+	]
+}
