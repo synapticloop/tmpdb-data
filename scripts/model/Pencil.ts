@@ -184,6 +184,7 @@ export class Pencil extends Base {
 	 */
 	private groupComponents(): void {
 		let currentOffset: number = 0;
+		let currentLength: number = 0;
 
 		let drawComponents: Component[] = [];
 
@@ -194,6 +195,7 @@ export class Pencil extends Base {
 			// push the component into the array
 			drawComponents.push(component);
 			currentOffset += component.length;
+			currentLength += component.length;
 
 			if(component.type === "tip") {
 				// found the tip, push all drawcomponents to the tip component
@@ -202,6 +204,8 @@ export class Pencil extends Base {
 				this.bodyGroupedComponentOffset = currentOffset;
 
 				drawComponents.length = 0;
+				this.tipGroupedComponentLength = currentLength;
+				currentLength = 0;
 			}
 
 			if(component.type === "cap") {
@@ -210,26 +214,34 @@ export class Pencil extends Base {
 
 				// need to remove the cap
 				drawComponents.pop();
+
+
 				this.bodyGroupedComponent = drawComponents;
-				this.capGroupedComponentOffset = currentOffset;
+				this.bodyGroupedComponentLength = currentLength - component.length;
+				this.capGroupedComponentOffset = currentOffset - component.length;
+
+				currentLength = component.length;
+
 				// we need to add it back
 				drawComponents.push(component);
 			}
 
 			if(component.type === "grip") {
 				this.gripGroupedComponent = component;
+				this.gripGroupedComponentLength = component.length;
 				this.gripGroupedComponentOffset = currentOffset - component.length;
 			}
 
 			if(component.type === "clip") {
 				this.clipGroupedComponent = component;
+				this.clipGroupedComponentLength = component.allLength;
 				this.clipGroupedComponentOffset = currentOffset - component.length;
 			}
-
 		}
 
 		// now whatever is left is the cap
 		this.capGroupedComponent = drawComponents;
+		this.capGroupedComponentLength = currentLength;
 	}
 
 	getColours(): string[] {

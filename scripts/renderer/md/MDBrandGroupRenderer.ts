@@ -49,10 +49,26 @@ export class MDBrandGroupRenderer {
 				mdString += this.addTableRow(`${feature.type}`, `${feature.location}`);
 			}
 
-			mdString += `### Pencil Measurements\n\n`
-			mdString += "| `---Item---` | `---Information---` | `---Offset---` |\n";
-			mdString += "| ---: | :--- | :--- |\n";
+			mdString += `### Pencil Measurements\n\n_(Note: all offsets are from the start of the pencil)_\n\n`
+			mdString += "| `---Item---` | `---Offset---` | `---Length---` |\n";
+			mdString += "| ---: | ---: | ---: |\n";
+			mdString += this.addTableRowThree("tip",  `${pencil.tipGroupedComponentOffset} mm`,  `${pencil.tipGroupedComponentLength} mm`);
+			mdString += this.addTableRowThree("body", `${pencil.bodyGroupedComponentOffset} mm`,  `${pencil.bodyGroupedComponentLength} mm`);
+			if(pencil.capGroupedComponentOffset !== 0) {
+				mdString += this.addTableRowThree("cap", `${pencil.capGroupedComponentOffset} mm`,  `${pencil.capGroupedComponentLength} mm`);
+			}
 
+			if(pencil.gripGroupedComponentOffset !== 0) {
+				mdString += this.addTableRowThree("grip", `${pencil.gripGroupedComponentOffset} mm`,  `${pencil.gripGroupedComponentLength} mm`);
+			}
+
+			if(pencil.clipGroupedComponentOffset !== 0) {
+				mdString += this.addTableRowThree("clip", `${pencil.clipGroupedComponentOffset} mm`,  `${pencil.clipGroupedComponentLength} mm`);
+			}
+
+			mdString += this.addTableRowThree("", "Pencil length", `${pencil.totalLength} mm`);
+
+			mdString += "\n\n";
 
 
 			mdString += `\n\n<img src="./${this.pencilFileDirectories[index]}/${this.pencilFileNames[index]}-grouped.png" />\n\n`
@@ -86,6 +102,15 @@ export class MDBrandGroupRenderer {
 
 	private addTableRow(item: string, value: any): string {
 		return(`| **${item}** | ${value} |\n`);
+	}
+
+	// TODO - refactor to accept an array (with the above)
+	private addTableRowThree(item: string, value: any, value2: any): string {
+		if(item !== "") {
+			return (`| **${item}** | ${value} | ${value2} |\n`);
+		} else {
+			return (`| | ${value} | ${value2} |\n`);
+		}
 	}
 
 }

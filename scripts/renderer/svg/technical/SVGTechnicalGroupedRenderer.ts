@@ -29,25 +29,25 @@ export class SVGTechnicalGroupedRenderer extends SVGRenderer {
 	 * @returns {string} The SVG data as a String
 	 */
 
-	render(context: number): string {
-		this.SVG_HEIGHT = 660 + this.pencil.colourComponents.length * 120;
-		super.resize(1000, this.SVG_HEIGHT);
-		let svgString:string = super.getSvgStart();
-		svgString += super.renderOverviewText(false);
+	// render(context: number): string {
+	// 	this.SVG_HEIGHT = 660 + this.pencil.colourComponents.length * 120;
+	// 	super.resize(1000, this.SVG_HEIGHT);
+	// 	let svgString:string = super.getSvgStart();
+	// 	svgString += super.renderOverviewText(false);
+	//
+	// 	let y: number = 140;
+	//
+	// 	svgString += this.renderTitle(240, y, 120, "Measurements")
+	//
+	// 	y += 160;
+	// 	// now draw the grouped components
+	// 	svgString += super.renderCentreLineHorizontal(y);
+	// 	svgString += super.renderSideComponents(this._width/2 - (this.pencil.totalLength*5/2), y, -1);
+	//
+	// 	return(svgString);
+	// }
 
-		let y: number = 140;
-
-		svgString += this.renderTitle(240, y, 120, "Measurements")
-
-		y += 160;
-		// now draw the grouped components
-		svgString += super.renderCentreLineHorizontal(y);
-		svgString += super.renderSideComponents(this._width/2 - (this.pencil.totalLength*5/2), y, -1);
-
-		return(svgString);
-	}
-
-	oldrender(colourIndex: number):string {
+	render(colourIndex: number):string {
 
 		// the first thing that we are going to do is to render the pencil with
 		// the grouped components

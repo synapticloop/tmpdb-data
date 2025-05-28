@@ -26,8 +26,18 @@ Accuracy level for information on this pencil: `high`
 | **sharpener** | external - inside cap |
 ### Pencil Measurements
 
-| `---Item---` | `---Information---` | `---Offset---` |
-| ---: | :--- | :--- |
+_(Note: all offsets are from the start of the pensil)_
+
+| `---Item---` | `---Offset---` | `---Length---` |
+| ---: | ---: | ---: |
+| **tip** | 0 mm | 12 mm |
+| **body** | 12 mm | 121 mm |
+| **cap** | 133 mm | 8.75 mm |
+| **grip** | 18.5 mm | 32.5 mm |
+| **clip** | 115 mm | 37.5 mm |
+| | Pencil length | 141.75 mm |
+
+
 
 
 <img src="./bic/criterium-grouped.png" />
@@ -51,7 +61,8 @@ Accuracy level for information on this pencil: `high`
 
 #### low
 
- - Physical pencil not present
+ - Where any one of these things are true.
+ - Physical pencil not present for measurement
  - Measurements of the pencil were not taken with a precision tool, and may have been estimated from supplied images.
  - The overall look of the pencil and the relative dimensions should be within reasonable and relative bounds.
  - The pencil may be based on a third party branded model that is identical to the original.
@@ -60,7 +71,9 @@ Accuracy level for information on this pencil: `high`
 
 #### medium
 
- - Physical pencil present, however no precision measurement tool was used, or physical pencil not present and image used.  Where an image is used for measurements, an accurate measuring scale is included with the image.
+ - Where any one of these things are true.
+ - Physical pencil present, however no precision measurement tool was used.
+ - Physical pencil not present and image used for measurements, an accurate measuring scale is included with the image.
  - Not all pencil measurements were taken with a precision tool, (especially where there are internal components which access could not be gained).
  - External measurements may have been accurately measured, however internal components may not have been measured.
  - The pencil may be based on a first/third party branded model that is identical to the original.
@@ -68,8 +81,8 @@ Accuracy level for information on this pencil: `high`
 
 #### high
 
- - Physical pencil used for measurements.
- - Physical pencil not present, but source technical documents used for measurements.
+ - Where all of these things are true (with caveats).
+ - Physical pencil used for measurements, or physical pencil not present, but source technical documents used for measurements.
  - Pencil measurements taken with a high precision tool.
  - Internal measurements may not be available due to disassembly challenges.
  - The accuracy of the colours of the pencil's parts may not be reflected by the rendered images.
