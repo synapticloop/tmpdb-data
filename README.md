@@ -29,28 +29,28 @@ unfortunate but a design decision.
 _(To regenerate the list - and this `README.md` file, run `npm run readme-generator` from the root of the project.)_
 
 
-|           Brand | Name                   | Model #        |                       Lead Size<br />_(mm)_ | # Variants<br />_(colours / patterns)_ | Accuracy |
-|----------------:|:-----------------------|:---------------|--------------------------------------------:|---------------------------------------:|:---------|
-|       **Alvin** | **DA**                 | TECH           |                                           2 |                                      3 | high     |
-|       **Alvin** | **PRO-MATIC**          | MC5            |                                           2 |                                      1 | high     |
-|         **BIC** | **Criterium**          | undefined      |                                           2 |                                      3 | high     |
-|  **Koh-i-Noor** | **TECHNIGRAPH**        | 5611           |                                           2 |                                      7 | low      |
-|      **Küelox** | **3308**               | 3308           |                                           2 |                                      1 | high     |
-|   **M &amp; G** | **Easy Come Easy Go!** | amp-35601      |                                           2 |                                      3 | high     |
-|  **Mitsubishi** | **uni**                | MH-500         |                                           2 |                                      1 | high     |
-|     **Mr. Pen** | **2.0**                | 2.0            |                                           2 |                                      1 | high     |
-|        **OHTO** | **Sharp Pencil**       | APS-280E       |                                         0.5 |                                      5 | medium   |
-|        **OHTO** | **Sharp Pencil 2.0**   | APS-680E       |                                           2 |                                      6 | high     |
-|        **OHTO** | **Wooden Pencil**      | WN03-SP20      |                                           2 |                                      5 | high     |
-|        **OHTO** | **Wooden Sharp**       | WN01-SP5       |                                         0.5 |                                      5 | medium   |
-| **Pacific Arc** | **COLLEGIATE**         | H-1301         |                                           2 |                                      2 | high     |
-| **Pacific Arc** | **Premium**            | H-1309         |                                           2 |                                      2 | high     |
-| **Pacific Arc** | **TECH PRO**           | H-1305         |                                           2 |                                      5 | high     |
-|   **Redcircle** | **600**                | 600            |                                           2 |                                      3 | high     |
-|   **Staedtler** | **Mars Technico**      | 780c           |                                           2 |                                      2 | high     |
-|    **STUDMARK** | **3750**               | 3750           |                                           2 |                                      1 | high     |
-|   **Unbranded** | **Metal Black**        | unknown        |                                           2 |                                      1 | high     |
-|                 |                        | **19 Pencils** | **57 Variants**<br />_(colours / patterns)_ |
+| Brand | Name | Model # | Lead Size<br />_(mm)_ | # Variants<br />_(colours / patterns)_ | Accuracy |
+| ---: | :--- | :--- | ---: | ---: | :--- |
+| **Alvin** | **DA** | TECH | 2.0 | 3 | high |
+| **Alvin** | **PRO-MATIC** | MC5 | 2.0 | 1 | high |
+| **BIC** | **Criterium** | undefined | 2.0 | 3 | high |
+| **Koh-i-Noor** | **TECHNIGRAPH** | 5611 | 2.0 | 7 | low |
+| **Küelox** | **3308** | 3308 | 2.0 | 1 | high |
+| **M &amp; G** | **Easy Come Easy Go!** | amp-35601 | 2.0 | 3 | high |
+| **Mitsubishi** | **uni** | MH-500 | 2.0 | 1 | high |
+| **Mr. Pen** | **2.0** | 2.0 | 2.0 | 1 | high |
+| **OHTO** | **Sharp Pencil** | APS-280E | 0.5 | 5 | medium |
+| **OHTO** | **Sharp Pencil 2.0** | APS-680E | 2.0 | 6 | high |
+| **OHTO** | **Wooden Pencil** | WN03-SP20 | 2.0 | 5 | high |
+| **OHTO** | **Wooden Sharp** | WN01-SP5 | 0.5 | 5 | medium |
+| **Pacific Arc** | **COLLEGIATE** | H-1301 | 2.0 | 2 | high |
+| **Pacific Arc** | **Premium** | H-1309 | 2.0 | 2 | high |
+| **Pacific Arc** | **TECH PRO** | H-1305 | 2.0 | 5 | high |
+| **Redcircle** | **600** | 600 | 2.0 | 3 | high |
+| **Staedtler** | **Mars Technico** | 780c | 2.0 | 2 | high |
+| **STUDMARK** | **3750** | 3750 | 2.0 | 1 | high |
+| **Unbranded** | **Metal Black** | unknown | 2.0 | 1 | high |
+| | | **19 Pencils** | **57 Variants**<br />_(colours / patterns)_  |
 
 
 ### Accuracy Designations
@@ -69,7 +69,7 @@ _(To regenerate the list - and this `README.md` file, run `npm run readme-genera
  - Physical pencil present, however no precision measurement tool was used, or physical pencil not present and image used.  Where an image is used for measurements, an accurate measuring scale is included with the image.
  - Not all pencil measurements were taken with a precision tool, (especially where there are internal components which access could not be gained).
  - External measurements may have been accurately measured, however internal components may not have been measured.
- - The pencil may be based on a third party branded model that is identical to the original.
+ - The pencil may be based on a first/third party branded model that is identical to the original.
  - The accuracy of the colours of the pencil's parts may not be reflected by the rendered images.
 
 #### high

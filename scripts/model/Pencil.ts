@@ -17,38 +17,53 @@ export class Pencil extends Base {
 	modelName: string; // the name of the pencil
 	@JsonProperty({ name: "model_number", required: false })
 	modelNumber: string; // the model number of the pencil
+	@JsonProperty({ name: "skus", required: false })
+	skus: string[] = []; // the components that make up the pencil
+
+	@JsonProperty({ name: "text", required: false })
+	text:string = ""; // the text that is written on the pencil
+
+	@JsonProperty({ name: "manufactured_in", required: false })
+	manufacturedIn: string = "unknown";
+	@JsonProperty({ name: "manufactured_from", required: false })
+	manufacturedFrom: string[] = [];
+	@JsonProperty({ name: "manufactured_to", required: false })
+	manufacturedTo: string[] = [];
+
+	@JsonProperty({ name: "accuracy", required: false })
+	accuracy: string = "unknown";
+
+	@JsonProperty({ name: "mechanism", required: true })
+	mechanism: string = "";
 	@JsonProperty({ name: "lead_size", required: true })
 	leadSize: number; // the lead size
 	@JsonProperty({ name: "lead_shape", required: false })
 	leadShape: string = "cylindrical"; // the lead shape - which defaults to 'cylindrical'
-	@JsonProperty({ name: "text", required: false })
-	text:string = ""; // the text that is written on the pencil
+
 	@JsonProperty({ name: "maximum_lead_length", required: false })
 	maximumLeadLength: number; // the maximum length of lead that will fit in the pencil
 	@JsonProperty({ name: "number_leads", required: false })
 	numberLeads: number = 1; // the maximum length of lead that will fit in the pencil
-	@JsonProperty({ name: "mechanism", required: true })
-	mechanism: string = "";
 	@JsonProperty({ name: "weight", required: false })
 	weight: number;
+
+	@JsonProperty({ name: "features", required: false, type: Feature, deserializer: FeatureDeserialiser })
+	features: Feature[] = [];
+
 	@JsonProperty({ name: "colour_component", required: true })
 	colourComponent: string = ""; // the colour component that defines the differences
 	@JsonProperty({ name: "colours", required: true })
 	private colours: string[] = []; // the colours of the pencil
 	@JsonProperty({ name: "colour_map", required: false, deserializer: MapDeserialiser })
 	colourMap: Map<string, string> = new Map<string, string>(); // the map of named colours to hex colour codes
-	@JsonProperty({ name: "accuracy", required: false })
-	accuracy: string = "unknown";
-	@JsonProperty({ name: "features", required: false, type: Feature, deserializer: FeatureDeserialiser })
-	features: Feature[] = [];
+
 	@JsonProperty({ name: "front", required: false, type: FrontBack, deserializer: FrontBackDeserialiser })
 	front: FrontBack[] = [];
 	@JsonProperty({ name: "back", required: false, type: FrontBack, deserializer: FrontBackDeserialiser })
 	back: FrontBack[] = [];
+
 	@JsonProperty({ name: "components", required: true, type: Component, deserializer: ComponentDeserialiser})
 	components: Component[] = []; // the components that make up the pencil
-	@JsonProperty({ name: "skus", required: false })
-	skus: string[] = []; // the components that make up the pencil
 
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	//

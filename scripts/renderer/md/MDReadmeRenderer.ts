@@ -1,5 +1,6 @@
 import {Pencil} from "../../model/Pencil.ts";
 import {Accuracy} from "../../model/meta/Accuracy.ts";
+import {formatToOnePlace} from "../../utils/formatter.ts";
 
 export class MDReadmeRenderer {
 	pencils: Pencil[];
@@ -14,7 +15,7 @@ export class MDReadmeRenderer {
 		mdString += "| ---: | :--- | :--- | ---: | ---: | :--- |\n";
 		let numVariants: number = 0;
 		for(const pencil of this.pencils) {
-			mdString += `| **${pencil.brand}** | **${pencil.modelName}** | ${pencil.modelNumber} | ${pencil.leadSize} | ${pencil.colourComponents.length} | ${pencil.accuracy} |\n`;
+			mdString += `| **${pencil.brand}** | **${pencil.modelName}** | ${pencil.modelNumber} | ${formatToOnePlace(pencil.leadSize)} | ${pencil.colourComponents.length} | ${pencil.accuracy} |\n`;
 			numVariants += pencil.colourVariants.length;
 		}
 		mdString += `| | | **${this.pencils.length} Pencils** | **${numVariants} Variants**<br />_(colours / patterns)_  |\n\n\n`;

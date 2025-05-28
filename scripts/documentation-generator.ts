@@ -17,6 +17,7 @@ import deserialize = ObjectMapper.deserialize;
 import {Component} from "./model/Component.ts";
 import {SVGTechnicalGroupedRenderer} from "./renderer/svg/technical/SVGTechnicalGroupedRenderer.ts";
 import {MDRenderer} from "./renderer/md/MDIndividualRenderer.ts";
+import {MDBrandGroupRenderer} from "./renderer/md/MDBrandGroupRenderer.ts";
 
 let baseDir:string = './data/pencil';
 
@@ -35,19 +36,32 @@ for (const [dirIndex, pencilDirectory] of pencilDirectories.entries()) {
 
 	const pencilFiles: string[] = listFiles(pencilDir);
 
+	const brandPencilMap: Map<string, Pencil[]> = new Map<string, Pencil[]>();
+	const brandPencilFileMap: Map<string, string[]> = new Map<string, string[]>();
+	const brandPencilDirectoryMap: Map<string, string[]> = new Map<string, string[]>();
+
 	if (pencilFiles.length > 0) {
 		console.log(`Generating for brand '${pencilDirectory}' - ${pencilFiles.length} file(s)`)
 
 		for (const [index, pencilFile] of pencilFiles.entries()) {
 			console.log(`    ${numPencils + 1}. ${pencilFile}`);
 
-			const pencilFileFull = path.join(pencilDir, pencilFile);
-			const pencilFileName = path.parse(path.join(pencilDir, pencilFile)).name;
+			const pencilFileFull: string = path.join(pencilDir, pencilFile);
+			const pencilFileName: string = path.parse(path.join(pencilDir, pencilFile)).name;
 
 			const pencilFileContents = JSON.parse(fs.readFileSync(pencilFileFull, "utf8"));
 			const pencil: Pencil = deserialize(Pencil, pencilFileContents);
 
 			pencil.postConstruct(pencil.getColours(), pencil.colourMap);
+			if(brandPencilMap.has(pencilDirectory)) {
+				brandPencilMap.get(pencilDirectory).push(pencil);
+				brandPencilFileMap.get(pencilDirectory).push(pencilFileName);
+				brandPencilDirectoryMap.get(pencilDirectory).push(pencilDirectory);
+			} else {
+				brandPencilMap.set(pencilDirectory, [ pencil ]);
+				brandPencilFileMap.set(pencilDirectory, [ pencilFileName ]);
+				brandPencilDirectoryMap.set(pencilDirectory, [ pencilDirectory ]);
+			}
 
 			let fileNumber = 1;
 
@@ -60,6 +74,17 @@ for (const [dirIndex, pencilDirectory] of pencilDirectories.entries()) {
 			fileNumber = await renderSVGAndPNG(new SVGTechnicalGroupedRenderer(pencil), -1, "", pencilDirectory, pencilFileName + "-grouped", fileNumber);
 
 			numPencils++;
+		}
+
+		for(const pencilKey of brandPencilMap.keys()) {
+			const mdIndividualDirectory: string = path.join("./documentation/");
+			fs.mkdirSync(mdIndividualDirectory, { "recursive": true });
+			fs.writeFileSync(mdIndividualDirectory + "/" + pencilKey + ".md",
+				new MDBrandGroupRenderer(
+					brandPencilMap.get(pencilKey),
+					brandPencilFileMap.get(pencilKey),
+					brandPencilDirectoryMap.get(pencilKey)
+				).render());
 		}
 	}
 }

@@ -191,7 +191,7 @@ export class SVGTechnicalGroupedRenderer extends SVGRenderer {
 				this.SVG_WIDTH/2 - this.pencil.totalLength*5/2 + gripOffset,
 				y + 30 + this.pencil.maxHeight/2 * 5,
 				gripComponent.length * 5,
-				`${formatToTwoPlaces(clipComponent.length)} mm`,
+				`${formatToTwoPlaces(gripComponent.length)} mm`,
 				TextOrientation.TOP,
 				true
 			);
