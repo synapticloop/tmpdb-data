@@ -128,7 +128,7 @@
 <line x1="333.75" y1="240" x2="823.75" y2="240" stroke-width="0.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 
 <!-- TAPER START: hexagonal -->
-<path d="M 333.75 212.5 C 317.1875 219.375, 317.1875 233.125, 333.75 240" stroke-width="1.0" stroke="gray" stroke-linecap="round" fill-opacity="1" fill="none" /><path d="M 333.75 267.5 C 317.1875 260.625, 317.1875 246.875, 333.75 240" stroke-width="1.0" stroke="gray" stroke-linecap="round" fill-opacity="1" fill="none" />
+<path d="M 321.25 212.75 L 333.75 212.75 C 317.8125 219.375, 317.8125 233.125, 333.75 240 C 317.8125 246.875, 317.8125 260.625, 333.75 267.25 L 321.25 267.25 Z" stroke-width="0" stroke="0" stroke-linecap="round" fill-opacity="1" fill="#c38066" /><path d="M 333.75 212.75 C 317.8125 219.375, 317.8125 233.125, 333.75 240 C 317.8125 246.875, 317.8125 260.625, 333.75 267.25" stroke-width="1.5" stroke="gray" stroke-linecap="round" fill-opacity="0" fill="none" /><path d="M 333.75 212.75 C 317.8125 219.375, 317.8125 233.125, 333.75 240 C 317.8125 246.875, 317.8125 260.625, 333.75 267.25" stroke-width="0.5" stroke="black" stroke-opacity="0.5" stroke-linecap="round" fill-opacity="0" fill="none" />
 
 <!-- renderPart: cylinder -->
 <path d="M811.2 216.875 L853.8 216.875 L853.8 263.125 L811.2 263.125 Z" stroke-width="0" stroke="none" stroke-linejoin="round" fill="#c38066" fill-opacity="1"/>

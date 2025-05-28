@@ -279,28 +279,51 @@ export abstract class SVGRenderer {
 			switch (part.shape) {
 				case "hexagonal":
 					// Draw the intersection of the path
-
-					// TODO - should be an intersection
-					// svgString += rectangle(startX, midY - part.endHeight / 2 * 5 + 0.25, xOffsetTaperStart * 5 - 0.5, part.startHeight * 5 - 0.5, "none", backgroundColour);
-					svgString += `<path d="M ${startX + xOffsetTaperStart * 5} ${midY - part.endHeight / 2 * 5} ` +
+					// first thing is the background colour
+					svgString += `<path d="M ${startX} ${midY - part.endHeight / 2 * 5 + 0.25} ` +
+						`L ${startX + xOffsetTaperStart * 5} ${midY - part.endHeight / 2 * 5 + 0.25} ` +
 						`C ${startX + xOffsetTaperStart * (xOffsetTaperStartScale * -5)} ${midY - part.endHeight / 2 * 5 * 3 / 4}, ` +
 						`${startX + xOffsetTaperStart * (xOffsetTaperStartScale * -5)} ${midY - part.endHeight / 2 * 5 / 4}, ` +
-						`${startX + xOffsetTaperStart * 5} ${midY}" ` +
-						`stroke-width="1.0" ` +
-						`stroke="${strokeColor}" ` +
+						`${startX + xOffsetTaperStart * 5} ${midY} ` +
+						`C ${startX + xOffsetTaperStart * (xOffsetTaperStartScale * -5)} ${midY + part.endHeight / 2 * 5 / 4}, ` +
+						`${startX + xOffsetTaperStart * (xOffsetTaperStartScale * -5)} ${midY + part.endHeight / 2 * 5 * 3 / 4}, ` +
+						`${startX + xOffsetTaperStart * 5} ${midY + part.endHeight / 2 * 5 - 0.25} ` +
+						`L ${startX} ${midY + part.endHeight /2 * 5 - 0.25} Z" ` +
+						`stroke-width="0" ` +
+						`stroke="0" ` +
 						`stroke-linecap="round" ` +
-						`fill-opacity="${opaqueColour.opacity}" ` +
-						`fill="none" />`
-					svgString += `<path d="M ${startX + xOffsetTaperStart * 5} ${midY + part.endHeight / 2 * 5} ` +
-						`C ${startX + xOffsetTaperStart * (xOffsetTaperStartScale * -5)} ${midY + part.endHeight / 2 * 5 * 3 / 4}, ` +
-						`${startX + xOffsetTaperStart * (xOffsetTaperStartScale * -5)} ${midY + part.endHeight / 2 * 5 / 4}, ` +
-						`${startX + xOffsetTaperStart * 5} ${midY}" ` +
-						`stroke-width="1.0" stroke="${strokeColor}" stroke-linecap="round" ` +
-						`fill-opacity="${opaqueColour.opacity}" ` +
-						`fill="none" />`
+						`fill-opacity="${backgroundColour.opacity}" ` +
+						`fill="${backgroundColour.colour}" />`;
 
+					svgString += `<path d="M ${startX + xOffsetTaperStart * 5} ${midY - part.endHeight / 2 * 5 + 0.5} ` +
+						`C ${startX + xOffsetTaperStart * (xOffsetTaperStartScale * -5)} ${midY - part.endHeight / 2 * 5 * 3 / 4}, ` +
+						`${startX + xOffsetTaperStart * (xOffsetTaperStartScale * -5)} ${midY - part.endHeight / 2 * 5 / 4}, ` +
+						`${startX + xOffsetTaperStart * 5} ${midY} ` +
+						`C ${startX + xOffsetTaperStart * (xOffsetTaperStartScale * -5)} ${midY + part.endHeight / 2 * 5 / 4}, ` +
+						`${startX + xOffsetTaperStart * (xOffsetTaperStartScale * -5)} ${midY + part.endHeight / 2 * 5 * 3 / 4}, ` +
+						`${startX + xOffsetTaperStart * 5} ${midY + part.endHeight / 2 * 5 - 0.55}" ` +
+						`stroke-width="1.5" ` +
+						`stroke="gray" ` +
+						`stroke-linecap="round" ` +
+						`fill-opacity="0" ` +
+						`fill="none" />`;
+
+					svgString += `<path d="M ${startX + xOffsetTaperStart * 5} ${midY - part.endHeight / 2 * 5 + 0.5} ` +
+						`C ${startX + xOffsetTaperStart * (xOffsetTaperStartScale * -5)} ${midY - part.endHeight / 2 * 5 * 3 / 4}, ` +
+						`${startX + xOffsetTaperStart * (xOffsetTaperStartScale * -5)} ${midY - part.endHeight / 2 * 5 / 4}, ` +
+						`${startX + xOffsetTaperStart * 5} ${midY} ` +
+						`C ${startX + xOffsetTaperStart * (xOffsetTaperStartScale * -5)} ${midY + part.endHeight / 2 * 5 / 4}, ` +
+						`${startX + xOffsetTaperStart * (xOffsetTaperStartScale * -5)} ${midY + part.endHeight / 2 * 5 * 3 / 4}, ` +
+						`${startX + xOffsetTaperStart * 5} ${midY + part.endHeight / 2 * 5 - 0.5}" ` +
+						`stroke-width="0.5" ` +
+						`stroke="black" ` +
+						`stroke-opacity="0.5" ` +
+						`stroke-linecap="round" ` +
+						`fill-opacity="0" ` +
+						`fill="none" />`;
 					break;
 				case "cylinder":
+					// TODO - as per above
 					svgString += rectangle(startX, midY - part.endHeight / 2 * 5 + 0.25, xOffsetTaperStart * 5 - 0.5, part.startHeight * 5 - 0.5, "none", backgroundColour);
 					svgString += `<path d="M ${startX + xOffsetTaperStart * 5} ${midY - part.endHeight / 2 * 5} ` +
 						`C ${startX + xOffsetTaperStart * (xOffsetTaperStartScale * -5)} ${midY - part.endHeight/2 * 5}, ` +
@@ -996,7 +1019,6 @@ export abstract class SVGRenderer {
 
 					}
 					break;
-
 				case "threaded":
 					for (let i:number = 0; i < part.length; i++) {
 						if((i + 1) > part.length) {
@@ -1065,6 +1087,26 @@ export abstract class SVGRenderer {
 						`HB` +
 						`</tspan>` +
 						`</text>`;
+					break;
+				case "shine":
+					svgString += "\n<!-- shine -->\n";
+					switch(part.shape) {
+						case "hexagonal":
+							svgString += `<line x1="${xStart}" y1="${yStartTop + part.startHeight/2 * 5 - 3}" x2="${xEnd}" y2="${yEndTop + part.endHeight/2 * 5 - 3}" stroke-width="4" stroke-opacity="0.2" stroke="white" />`;
+							svgString += `<line x1="${xStart}" y1="${yStartTop + part.startHeight/2 * 5 - 2}" x2="${xEnd}" y2="${yEndTop + part.endHeight/2 * 5 - 2}" stroke-width="1" stroke-opacity="0.2" stroke="white" />`;
+							svgString += `<line x1="${xStart}" y1="${yStartTop + part.startHeight/2 * 5 - 6}" x2="${xEnd}" y2="${yEndTop + part.endHeight/2 * 5 - 6}" stroke-width="1" stroke-opacity="0.1" stroke="white" />`;
+							svgString += `<line x1="${xStart}" y1="${yStartTop + 1}" x2="${xEnd}" y2="${yEndTop + 1}" stroke-width="2" stroke-opacity="0.3" stroke="black" />`;
+							svgString += `<line x1="${xStart}" y1="${yStartTop + 2}" x2="${xEnd}" y2="${yEndTop + 4}" stroke-width="2" stroke-opacity="0.1" stroke="black" />`;
+
+							svgString += `<line x1="${xStart}" y1="${yStartBottom - part.startHeight/2 * 5 + 3}" x2="${xEnd}" y2="${yEndBottom - part.endHeight/2 * 5 + 3}" stroke-width="4" stroke-opacity="0.2" stroke="white" />`;
+							svgString += `<line x1="${xStart}" y1="${yStartBottom - part.startHeight/2 * 5 + 2}" x2="${xEnd}" y2="${yEndBottom - part.endHeight/2 * 5 + 2}" stroke-width="1" stroke-opacity="0.2" stroke="white" />`;
+							svgString += `<line x1="${xStart}" y1="${yStartBottom - part.startHeight/2 * 5 + 6}" x2="${xEnd}" y2="${yEndBottom - part.endHeight/2 * 5 + 6}" stroke-width="1" stroke-opacity="0.1" stroke="white" />`;
+							svgString += `<line x1="${xStart}" y1="${yStartBottom - 4}" x2="${xEnd}" y2="${yEndBottom - 4}" stroke-width="2" stroke-opacity="0.1" stroke="black" />`;
+							svgString += `<line x1="${xStart}" y1="${yStartBottom - 1}" x2="${xEnd}" y2="${yEndBottom - 1}" stroke-width="2" stroke-opacity="0.3" stroke="black" />`;
+							svgString += `<line x1="${xStart}" y1="${yStartBottom - 2}" x2="${xEnd}" y2="${yEndBottom - 4}" stroke-width="2" stroke-opacity="0.1" stroke="black" />`;
+
+							break;
+					}
 					break;
 			}
 		}

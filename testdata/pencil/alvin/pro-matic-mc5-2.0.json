@@ -60,7 +60,8 @@
 			"parts": [
 				{
 					"shape": "hexagonal", "dimensions": [ 83.25, 8.0 ],
-					"taper_start": { "offset": [ 0.5, 0.125 ] }
+					"taper_start": { "offset": [ 0.5, 0.125 ] },
+					"finish": "shine"
 				}
 			],
 			"material": "metal",
