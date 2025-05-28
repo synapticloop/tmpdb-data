@@ -27,19 +27,19 @@ import {Component} from "../../model/Component.ts";
 import {Pencil} from "../../model/Pencil.ts";
 import {OpaqueColour} from "../../model/meta/OpaqueColour.ts";
 import {Extra} from "../../model/Extra.ts";
-import {Pattern} from "../../model/meta/Pattern.ts";
+import {Finish} from "../../model/meta/Finish.ts";
 import {listFiles} from "../../utils/filesystem.ts";
 import fs from "fs";
 import {ObjectMapper} from "json-object-mapper";
 
 
 export abstract class SVGRenderer {
-	static defaultPatternMap: Map<string, Pattern> = new Map();
-	static allPatternMap: Map<string, Pattern> = new Map();
+	static defaultFinishMap: Map<string, Finish> = new Map();
+	static allFinishMap: Map<string, Finish> = new Map();
 
-	static defaultPatternLoaded: boolean = false;
+	static defaultFinishLoaded: boolean = false;
 
-	private patternMap: Map<string, Pencil> = new Map();
+	private finishMap: Map<string, Pencil> = new Map();
 
 	protected pencil: Pencil;
 	protected _width: number;
@@ -49,22 +49,22 @@ export abstract class SVGRenderer {
 
 	static loadDefaultPatterns(): void {
 		// load all the patterns
-		for (const listFile of listFiles("./meta/patterns")) {
+		for (const listFile of listFiles("./meta/finishes")) {
 			const patternName: string = listFile.substring(0, listFile.lastIndexOf("."));
-			const pattern: Pattern = ObjectMapper.deserialize(Pattern, JSON.parse(fs.readFileSync("./meta/patterns/" + listFile, "utf8")));
+			const pattern: Finish = ObjectMapper.deserialize(Finish, JSON.parse(fs.readFileSync("./meta/finishes/" + listFile, "utf8")));
 			console.log(`Statically loaded pattern ${listFile} (${pattern.name} - ${pattern.description}) ${pattern.inBuilt ? "In built into the system as code." : ""}`);
 
 			if(!pattern.inBuilt) {
-				this.defaultPatternMap.set(patternName, pattern);
+				this.defaultFinishMap.set(patternName, pattern);
 			}
 
-			this.allPatternMap.set(patternName, pattern);
+			this.allFinishMap.set(patternName, pattern);
 		}
-		this.defaultPatternLoaded = true;
+		this.defaultFinishLoaded = true;
 	}
 
 	protected constructor(pencil:Pencil, width: number, height: number, rendererName:string = "") {
-		if(!SVGRenderer.defaultPatternLoaded) {
+		if(!SVGRenderer.defaultFinishLoaded) {
 			SVGRenderer.loadDefaultPatterns();
 		}
 
@@ -108,7 +108,7 @@ export abstract class SVGRenderer {
 			`width="${this._width}" ` +
 			`height="${this._height}">\n `;
 
-		for(const pattern of SVGRenderer.defaultPatternMap.values()) {
+		for(const pattern of SVGRenderer.defaultFinishMap.values()) {
 			svgString += pattern.pattern.join("\n");
 		}
 
@@ -969,12 +969,12 @@ export abstract class SVGRenderer {
 			let yEndBottom: number = y + (part.endHeight / 2 * 5);
 
 			// TODO - do specific lookup for the pattern
-			if(this.patternMap.has(finish)) {
+			if(this.finishMap.has(finish)) {
 				svgString += `<path d="M${xStart} ${yStartTop} ` +
 					`L${xEnd} ${yEndTop} ` +
 					`L${xEnd} ${yEndBottom} ` +
 					`L${xStart} ${yStartBottom} Z" stroke-width="1.0" stroke="black" fill="url(#${finish})"/>\n`;
-			} else if(SVGRenderer.defaultPatternMap.has(finish)) {
+			} else if(SVGRenderer.defaultFinishMap.has(finish)) {
 				svgString += `<path d="M${xStart} ${yStartTop} ` +
 					`L${xEnd} ${yEndTop} ` +
 					`L${xEnd} ${yEndBottom} ` +

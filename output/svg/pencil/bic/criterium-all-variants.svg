@@ -372,7 +372,7 @@
 <!-- !right !both --><path d="M854.375 109.375 L854.375 130.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
 
 <!-- TAPER START: hexagonal -->
-<path d="M 228.125 100 C 198.3125 105, 198.3125 115, 228.125 120" stroke-width="1.0" stroke="black" stroke-linecap="round" fill-opacity="1" fill="none" /><path d="M 228.125 140 C 198.3125 135, 198.3125 125, 228.125 120" stroke-width="1.0" stroke="black" stroke-linecap="round" fill-opacity="1" fill="none" />
+<path d="M 205.625 100.25 L 228.125 100.25 C 198.3125 105, 198.3125 115, 228.125 120 C 198.3125 125, 198.3125 135, 228.125 139.75 L 205.625 139.75 Z" stroke-width="0" stroke="0" stroke-linecap="round" fill-opacity="1" fill="silver" /><path d="M 228.125 100.5 C 198.3125 105, 198.3125 115, 228.125 120 C 198.3125 125, 198.3125 135, 228.125 139.45" stroke-width="1.5" stroke="gray" stroke-linecap="round" fill-opacity="0" fill="none" /><path d="M 228.125 100.5 C 198.3125 105, 198.3125 115, 228.125 120 C 198.3125 125, 198.3125 135, 228.125 139.5" stroke-width="0.5" stroke="black" stroke-opacity="0.5" stroke-linecap="round" fill-opacity="0" fill="none" />
 
 <!-- renderSideComponent: jaws -->
 
@@ -722,7 +722,7 @@
 <!-- !right !both --><path d="M854.375 229.375 L854.375 250.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
 
 <!-- TAPER START: hexagonal -->
-<path d="M 228.125 220 C 198.3125 225, 198.3125 235, 228.125 240" stroke-width="1.0" stroke="black" stroke-linecap="round" fill-opacity="1" fill="none" /><path d="M 228.125 260 C 198.3125 255, 198.3125 245, 228.125 240" stroke-width="1.0" stroke="black" stroke-linecap="round" fill-opacity="1" fill="none" />
+<path d="M 205.625 220.25 L 228.125 220.25 C 198.3125 225, 198.3125 235, 228.125 240 C 198.3125 245, 198.3125 255, 228.125 259.75 L 205.625 259.75 Z" stroke-width="0" stroke="0" stroke-linecap="round" fill-opacity="1" fill="#ffffff" /><path d="M 228.125 220.5 C 198.3125 225, 198.3125 235, 228.125 240 C 198.3125 245, 198.3125 255, 228.125 259.45" stroke-width="1.5" stroke="gray" stroke-linecap="round" fill-opacity="0" fill="none" /><path d="M 228.125 220.5 C 198.3125 225, 198.3125 235, 228.125 240 C 198.3125 245, 198.3125 255, 228.125 259.5" stroke-width="0.5" stroke="black" stroke-opacity="0.5" stroke-linecap="round" fill-opacity="0" fill="none" />
 
 <!-- renderSideComponent: jaws -->
 
@@ -1072,7 +1072,7 @@
 <!-- !right !both --><path d="M854.375 349.375 L854.375 370.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
 
 <!-- TAPER START: hexagonal -->
-<path d="M 228.125 340 C 198.3125 345, 198.3125 355, 228.125 360" stroke-width="1.0" stroke="gray" stroke-linecap="round" fill-opacity="1" fill="none" /><path d="M 228.125 380 C 198.3125 375, 198.3125 365, 228.125 360" stroke-width="1.0" stroke="gray" stroke-linecap="round" fill-opacity="1" fill="none" /></g><text x="50%" y="440" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // Synapticloop // The Mechanical Pencil Database (tmpdb)</text>
+<path d="M 205.625 340.25 L 228.125 340.25 C 198.3125 345, 198.3125 355, 228.125 360 C 198.3125 365, 198.3125 375, 228.125 379.75 L 205.625 379.75 Z" stroke-width="0" stroke="0" stroke-linecap="round" fill-opacity="1" fill="#000000" /><path d="M 228.125 340.5 C 198.3125 345, 198.3125 355, 228.125 360 C 198.3125 365, 198.3125 375, 228.125 379.45" stroke-width="1.5" stroke="gray" stroke-linecap="round" fill-opacity="0" fill="none" /><path d="M 228.125 340.5 C 198.3125 345, 198.3125 355, 228.125 360 C 198.3125 365, 198.3125 375, 228.125 379.5" stroke-width="0.5" stroke="black" stroke-opacity="0.5" stroke-linecap="round" fill-opacity="0" fill="none" /></g><text x="50%" y="440" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // Synapticloop // The Mechanical Pencil Database (tmpdb)</text>
 <text x="50%" y="460" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
 <text x="990" y="470" font-size="0.5em" font-weight="bold" text-anchor="end" dominant-baseline="middle">SVGPencilAllRenderer</text>
 </svg>

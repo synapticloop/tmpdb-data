@@ -1,7 +1,7 @@
 import {JsonProperty} from "json-object-mapper";
 import "reflect-metadata";
 
-export class Pattern {
+export class Finish {
 	@JsonProperty({ name: "name", required: true })
 	name: string; // The display name of the pattern
 	@JsonProperty({ name: "description", required: true })

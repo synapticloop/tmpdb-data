@@ -85,7 +85,7 @@
 <line x1="345.625" y1="240" x2="844.375" y2="240" stroke-width="0.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 
 <!-- TAPER START: hexagonal -->
-<path d="M 345.625 220 C 339.375 225, 339.375 235, 345.625 240" stroke-width="1.0" stroke="black" stroke-linecap="round" fill-opacity="1" fill="none" /><path d="M 345.625 260 C 339.375 255, 339.375 245, 345.625 240" stroke-width="1.0" stroke="black" stroke-linecap="round" fill-opacity="1" fill="none" />
+<path d="M 340.625 220.25 L 345.625 220.25 C 339.375 225, 339.375 235, 345.625 240 C 339.375 245, 339.375 255, 345.625 259.75 L 340.625 259.75 Z" stroke-width="0" stroke="0" stroke-linecap="round" fill-opacity="1" fill="#FFA07A" /><path d="M 345.625 220.5 C 339.375 225, 339.375 235, 345.625 240 C 339.375 245, 339.375 255, 345.625 259.45" stroke-width="1.5" stroke="gray" stroke-linecap="round" fill-opacity="0" fill="none" /><path d="M 345.625 220.5 C 339.375 225, 339.375 235, 345.625 240 C 339.375 245, 339.375 255, 345.625 259.5" stroke-width="0.5" stroke="black" stroke-opacity="0.5" stroke-linecap="round" fill-opacity="0" fill="none" />
 
 <!-- renderSideComponent: clip -->
 <line x1="660.625" y1="209.375" x2="675.625" y2="209.375" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />

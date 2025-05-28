@@ -548,7 +548,7 @@
 <!-- !right !both --><path d="M1104.375 289.375 L1104.375 310.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
 
 <!-- TAPER START: hexagonal -->
-<path d="M 478.125 280 C 448.3125 285, 448.3125 295, 478.125 300" stroke-width="1.0" stroke="black" stroke-linecap="round" fill-opacity="1" fill="none" /><path d="M 478.125 320 C 448.3125 315, 448.3125 305, 478.125 300" stroke-width="1.0" stroke="black" stroke-linecap="round" fill-opacity="1" fill="none" />
+<path d="M 455.625 280.25 L 478.125 280.25 C 448.3125 285, 448.3125 295, 478.125 300 C 448.3125 305, 448.3125 315, 478.125 319.75 L 455.625 319.75 Z" stroke-width="0" stroke="0" stroke-linecap="round" fill-opacity="1" fill="silver" /><path d="M 478.125 280.5 C 448.3125 285, 448.3125 295, 478.125 300 C 448.3125 305, 448.3125 315, 478.125 319.45" stroke-width="1.5" stroke="gray" stroke-linecap="round" fill-opacity="0" fill="none" /><path d="M 478.125 280.5 C 448.3125 285, 448.3125 295, 478.125 300 C 448.3125 305, 448.3125 315, 478.125 319.5" stroke-width="0.5" stroke="black" stroke-opacity="0.5" stroke-linecap="round" fill-opacity="0" fill="none" />
 <!-- FRONT COMPONENT: cap -->
 <circle r="10.625" cx="160" cy="300" fill="silver" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 <circle r="16.25" cx="160" cy="300" fill="silver" fill-opacity="1" stroke="black" stroke-width="0.5"  />

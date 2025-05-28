@@ -442,7 +442,7 @@
 <!-- !right !both --><path d="M954.375 289.375 L954.375 310.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 
 <!-- TAPER START: hexagonal -->
-<path d="M 328.125 280 C 298.3125 285, 298.3125 295, 328.125 300" stroke-width="1.0" stroke="black" stroke-linecap="round" fill-opacity="1" fill="none" /><path d="M 328.125 320 C 298.3125 315, 298.3125 305, 328.125 300" stroke-width="1.0" stroke="black" stroke-linecap="round" fill-opacity="1" fill="none" />
+<path d="M 305.625 280.25 L 328.125 280.25 C 298.3125 285, 298.3125 295, 328.125 300 C 298.3125 305, 298.3125 315, 328.125 319.75 L 305.625 319.75 Z" stroke-width="0" stroke="0" stroke-linecap="round" fill-opacity="1" fill="white" /><path d="M 328.125 280.5 C 298.3125 285, 298.3125 295, 328.125 300 C 298.3125 305, 298.3125 315, 328.125 319.45" stroke-width="1.5" stroke="gray" stroke-linecap="round" fill-opacity="0" fill="none" /><path d="M 328.125 280.5 C 298.3125 285, 298.3125 295, 328.125 300 C 298.3125 305, 298.3125 315, 328.125 319.5" stroke-width="0.5" stroke="black" stroke-opacity="0.5" stroke-linecap="round" fill-opacity="0" fill="none" />
 
 <!-- renderPart: cylinder -->
 <path d="M890.575 488.125 L910.675 488.125 L910.675 511.875 L890.575 511.875 Z" stroke-width="0" stroke="none" stroke-linejoin="round" fill="white" fill-opacity="1"/>
@@ -458,7 +458,7 @@
 <!-- !right !both --><path d="M950.625 488.125 L950.625 511.875" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 
 <!-- TAPER START: hexagonal -->
-<path d="M 328.125 480 C 298.3125 485, 298.3125 495, 328.125 500" stroke-width="1.0" stroke="black" stroke-linecap="round" fill-opacity="1" fill="none" /><path d="M 328.125 520 C 298.3125 515, 298.3125 505, 328.125 500" stroke-width="1.0" stroke="black" stroke-linecap="round" fill-opacity="1" fill="none" /></g><text x="50%" y="700" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // Synapticloop // The Mechanical Pencil Database (tmpdb)</text>
+<path d="M 305.625 480.25 L 328.125 480.25 C 298.3125 485, 298.3125 495, 328.125 500 C 298.3125 505, 298.3125 515, 328.125 519.75 L 305.625 519.75 Z" stroke-width="0" stroke="0" stroke-linecap="round" fill-opacity="1" fill="white" /><path d="M 328.125 480.5 C 298.3125 485, 298.3125 495, 328.125 500 C 298.3125 505, 298.3125 515, 328.125 519.45" stroke-width="1.5" stroke="gray" stroke-linecap="round" fill-opacity="0" fill="none" /><path d="M 328.125 480.5 C 298.3125 485, 298.3125 495, 328.125 500 C 298.3125 505, 298.3125 515, 328.125 519.5" stroke-width="0.5" stroke="black" stroke-opacity="0.5" stroke-linecap="round" fill-opacity="0" fill="none" /></g><text x="50%" y="700" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // Synapticloop // The Mechanical Pencil Database (tmpdb)</text>
 <text x="50%" y="720" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
 <text x="1190" y="730" font-size="0.5em" font-weight="bold" text-anchor="end" dominant-baseline="middle">SVGTechnicalComponentRenderer</text>
 </svg>

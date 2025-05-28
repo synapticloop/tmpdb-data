@@ -37,7 +37,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Pattern = void 0;
 var json_object_mapper_1 = require("json-object-mapper");
 require("reflect-metadata");
-var Pattern = function () {
+var Finish = function () {
     var _a;
     var _name_decorators;
     var _name_initializers = [];
@@ -75,4 +75,4 @@ var Pattern = function () {
         })(),
         _a;
 }();
-exports.Pattern = Pattern;
+exports.Pattern = Finish;

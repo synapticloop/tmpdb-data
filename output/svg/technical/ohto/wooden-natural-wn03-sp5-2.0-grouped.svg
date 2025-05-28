@@ -124,7 +124,7 @@
 <!-- !right !both --><path d="M841.25 276.875 L841.25 323.125" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 
 <!-- TAPER START: hexagonal -->
-<path d="M 233.75 272.5 C 217.1875 279.375, 217.1875 293.125, 233.75 300" stroke-width="1.0" stroke="black" stroke-linecap="round" fill-opacity="1" fill="none" /><path d="M 233.75 327.5 C 217.1875 320.625, 217.1875 306.875, 233.75 300" stroke-width="1.0" stroke="black" stroke-linecap="round" fill-opacity="1" fill="none" /><line x1="158.75" y1="201.5" x2="158.75" y2="223.5" stroke="black" stroke-width="1" />
+<path d="M 221.25 272.75 L 233.75 272.75 C 217.1875 279.375, 217.1875 293.125, 233.75 300 C 217.1875 306.875, 217.1875 320.625, 233.75 327.25 L 221.25 327.25 Z" stroke-width="0" stroke="0" stroke-linecap="round" fill-opacity="1" fill="white" /><path d="M 233.75 273 C 217.1875 279.375, 217.1875 293.125, 233.75 300 C 217.1875 306.875, 217.1875 320.625, 233.75 326.95" stroke-width="1.5" stroke="gray" stroke-linecap="round" fill-opacity="0" fill="none" /><path d="M 233.75 273 C 217.1875 279.375, 217.1875 293.125, 233.75 300 C 217.1875 306.875, 217.1875 320.625, 233.75 327" stroke-width="0.5" stroke="black" stroke-opacity="0.5" stroke-linecap="round" fill-opacity="0" fill="none" /><line x1="158.75" y1="201.5" x2="158.75" y2="223.5" stroke="black" stroke-width="1" />
 <line x1="158.75" y1="212.5" x2="196.25" y2="212.5" stroke="black" stroke-width="1" />
 <line x1="196.25" y1="201.5" x2="196.25" y2="223.5" stroke="black" stroke-width="1" />
 <text x="177.5" y="193.5" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="black"><tspan x="177.5" dy="0">7.50 mm</tspan></text>
@@ -251,7 +251,7 @@
 <!-- !right !both --><path d="M841.25 616.875 L841.25 663.125" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#db756d" fill-opacity="1"/>
 
 <!-- TAPER START: hexagonal -->
-<path d="M 233.75 612.5 C 217.1875 619.375, 217.1875 633.125, 233.75 640" stroke-width="1.0" stroke="black" stroke-linecap="round" fill-opacity="1" fill="none" /><path d="M 233.75 667.5 C 217.1875 660.625, 217.1875 646.875, 233.75 640" stroke-width="1.0" stroke="black" stroke-linecap="round" fill-opacity="1" fill="none" /><text x="500" y="690" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central">yellow (WN03-SP20-YL)</text>
+<path d="M 221.25 612.75 L 233.75 612.75 C 217.1875 619.375, 217.1875 633.125, 233.75 640 C 217.1875 646.875, 217.1875 660.625, 233.75 667.25 L 221.25 667.25 Z" stroke-width="0" stroke="0" stroke-linecap="round" fill-opacity="1" fill="#c38066" /><path d="M 233.75 613 C 217.1875 619.375, 217.1875 633.125, 233.75 640 C 217.1875 646.875, 217.1875 660.625, 233.75 666.95" stroke-width="1.5" stroke="gray" stroke-linecap="round" fill-opacity="0" fill="none" /><path d="M 233.75 613 C 217.1875 619.375, 217.1875 633.125, 233.75 640 C 217.1875 646.875, 217.1875 660.625, 233.75 667" stroke-width="0.5" stroke="black" stroke-opacity="0.5" stroke-linecap="round" fill-opacity="0" fill="none" /><text x="500" y="690" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central">yellow (WN03-SP20-YL)</text>
 
 
 <!-- renderSideComponent: tip -->
@@ -340,7 +340,7 @@
 <!-- !right !both --><path d="M841.25 736.875 L841.25 783.125" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#db756d" fill-opacity="1"/>
 
 <!-- TAPER START: hexagonal -->
-<path d="M 233.75 732.5 C 217.1875 739.375, 217.1875 753.125, 233.75 760" stroke-width="1.0" stroke="black" stroke-linecap="round" fill-opacity="1" fill="none" /><path d="M 233.75 787.5 C 217.1875 780.625, 217.1875 766.875, 233.75 760" stroke-width="1.0" stroke="black" stroke-linecap="round" fill-opacity="1" fill="none" /><text x="500" y="810" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central">blue (WN03-SP20-BL)</text>
+<path d="M 221.25 732.75 L 233.75 732.75 C 217.1875 739.375, 217.1875 753.125, 233.75 760 C 217.1875 766.875, 217.1875 780.625, 233.75 787.25 L 221.25 787.25 Z" stroke-width="0" stroke="0" stroke-linecap="round" fill-opacity="1" fill="#c38066" /><path d="M 233.75 733 C 217.1875 739.375, 217.1875 753.125, 233.75 760 C 217.1875 766.875, 217.1875 780.625, 233.75 786.95" stroke-width="1.5" stroke="gray" stroke-linecap="round" fill-opacity="0" fill="none" /><path d="M 233.75 733 C 217.1875 739.375, 217.1875 753.125, 233.75 760 C 217.1875 766.875, 217.1875 780.625, 233.75 787" stroke-width="0.5" stroke="black" stroke-opacity="0.5" stroke-linecap="round" fill-opacity="0" fill="none" /><text x="500" y="810" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central">blue (WN03-SP20-BL)</text>
 
 
 <!-- renderSideComponent: tip -->
@@ -429,7 +429,7 @@
 <!-- !right !both --><path d="M841.25 856.875 L841.25 903.125" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#db756d" fill-opacity="1"/>
 
 <!-- TAPER START: hexagonal -->
-<path d="M 233.75 852.5 C 217.1875 859.375, 217.1875 873.125, 233.75 880" stroke-width="1.0" stroke="black" stroke-linecap="round" fill-opacity="1" fill="none" /><path d="M 233.75 907.5 C 217.1875 900.625, 217.1875 886.875, 233.75 880" stroke-width="1.0" stroke="black" stroke-linecap="round" fill-opacity="1" fill="none" /><text x="500" y="930" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central">green (WN03-SP20-GN)</text>
+<path d="M 221.25 852.75 L 233.75 852.75 C 217.1875 859.375, 217.1875 873.125, 233.75 880 C 217.1875 886.875, 217.1875 900.625, 233.75 907.25 L 221.25 907.25 Z" stroke-width="0" stroke="0" stroke-linecap="round" fill-opacity="1" fill="#c38066" /><path d="M 233.75 853 C 217.1875 859.375, 217.1875 873.125, 233.75 880 C 217.1875 886.875, 217.1875 900.625, 233.75 906.95" stroke-width="1.5" stroke="gray" stroke-linecap="round" fill-opacity="0" fill="none" /><path d="M 233.75 853 C 217.1875 859.375, 217.1875 873.125, 233.75 880 C 217.1875 886.875, 217.1875 900.625, 233.75 907" stroke-width="0.5" stroke="black" stroke-opacity="0.5" stroke-linecap="round" fill-opacity="0" fill="none" /><text x="500" y="930" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central">green (WN03-SP20-GN)</text>
 
 
 <!-- renderSideComponent: tip -->
@@ -518,7 +518,7 @@
 <!-- !right !both --><path d="M841.25 976.875 L841.25 1023.125" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#db756d" fill-opacity="1"/>
 
 <!-- TAPER START: hexagonal -->
-<path d="M 233.75 972.5 C 217.1875 979.375, 217.1875 993.125, 233.75 1000" stroke-width="1.0" stroke="black" stroke-linecap="round" fill-opacity="1" fill="none" /><path d="M 233.75 1027.5 C 217.1875 1020.625, 217.1875 1006.875, 233.75 1000" stroke-width="1.0" stroke="black" stroke-linecap="round" fill-opacity="1" fill="none" /><text x="500" y="1050" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central">burgundy (WN03-SP20-EN)</text>
+<path d="M 221.25 972.75 L 233.75 972.75 C 217.1875 979.375, 217.1875 993.125, 233.75 1000 C 217.1875 1006.875, 217.1875 1020.625, 233.75 1027.25 L 221.25 1027.25 Z" stroke-width="0" stroke="0" stroke-linecap="round" fill-opacity="1" fill="#c38066" /><path d="M 233.75 973 C 217.1875 979.375, 217.1875 993.125, 233.75 1000 C 217.1875 1006.875, 217.1875 1020.625, 233.75 1026.95" stroke-width="1.5" stroke="gray" stroke-linecap="round" fill-opacity="0" fill="none" /><path d="M 233.75 973 C 217.1875 979.375, 217.1875 993.125, 233.75 1000 C 217.1875 1006.875, 217.1875 1020.625, 233.75 1027" stroke-width="0.5" stroke="black" stroke-opacity="0.5" stroke-linecap="round" fill-opacity="0" fill="none" /><text x="500" y="1050" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central">burgundy (WN03-SP20-EN)</text>
 
 
 <!-- renderSideComponent: tip -->
@@ -607,7 +607,7 @@
 <!-- !right !both --><path d="M841.25 1096.875 L841.25 1143.125" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#db756d" fill-opacity="1"/>
 
 <!-- TAPER START: hexagonal -->
-<path d="M 233.75 1092.5 C 217.1875 1099.375, 217.1875 1113.125, 233.75 1120" stroke-width="1.0" stroke="black" stroke-linecap="round" fill-opacity="1" fill="none" /><path d="M 233.75 1147.5 C 217.1875 1140.625, 217.1875 1126.875, 233.75 1120" stroke-width="1.0" stroke="black" stroke-linecap="round" fill-opacity="1" fill="none" /><text x="500" y="1170" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central">natural (WN03-SP20-NT)</text>
+<path d="M 221.25 1092.75 L 233.75 1092.75 C 217.1875 1099.375, 217.1875 1113.125, 233.75 1120 C 217.1875 1126.875, 217.1875 1140.625, 233.75 1147.25 L 221.25 1147.25 Z" stroke-width="0" stroke="0" stroke-linecap="round" fill-opacity="1" fill="#c38066" /><path d="M 233.75 1093 C 217.1875 1099.375, 217.1875 1113.125, 233.75 1120 C 217.1875 1126.875, 217.1875 1140.625, 233.75 1146.95" stroke-width="1.5" stroke="gray" stroke-linecap="round" fill-opacity="0" fill="none" /><path d="M 233.75 1093 C 217.1875 1099.375, 217.1875 1113.125, 233.75 1120 C 217.1875 1126.875, 217.1875 1140.625, 233.75 1147" stroke-width="0.5" stroke="black" stroke-opacity="0.5" stroke-linecap="round" fill-opacity="0" fill="none" /><text x="500" y="1170" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central">natural (WN03-SP20-NT)</text>
 </g><text x="50%" y="1220" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // Synapticloop // The Mechanical Pencil Database (tmpdb)</text>
 <text x="50%" y="1240" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
 <text x="990" y="1250" font-size="0.5em" font-weight="bold" text-anchor="end" dominant-baseline="middle">SVGTechnicalGroupedRenderer</text>

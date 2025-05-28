@@ -386,7 +386,7 @@
 <!-- !right !both --><path d="M854.375 289.375 L854.375 310.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 
 <!-- TAPER START: hexagonal -->
-<path d="M 228.125 280 C 198.3125 285, 198.3125 295, 228.125 300" stroke-width="1.0" stroke="black" stroke-linecap="round" fill-opacity="1" fill="none" /><path d="M 228.125 320 C 198.3125 315, 198.3125 305, 228.125 300" stroke-width="1.0" stroke="black" stroke-linecap="round" fill-opacity="1" fill="none" /><line x1="145.625" y1="206.5" x2="145.625" y2="228.5" stroke="black" stroke-width="1" />
+<path d="M 205.625 280.25 L 228.125 280.25 C 198.3125 285, 198.3125 295, 228.125 300 C 198.3125 305, 198.3125 315, 228.125 319.75 L 205.625 319.75 Z" stroke-width="0" stroke="0" stroke-linecap="round" fill-opacity="1" fill="white" /><path d="M 228.125 280.5 C 198.3125 285, 198.3125 295, 228.125 300 C 198.3125 305, 198.3125 315, 228.125 319.45" stroke-width="1.5" stroke="gray" stroke-linecap="round" fill-opacity="0" fill="none" /><path d="M 228.125 280.5 C 198.3125 285, 198.3125 295, 228.125 300 C 198.3125 305, 198.3125 315, 228.125 319.5" stroke-width="0.5" stroke="black" stroke-opacity="0.5" stroke-linecap="round" fill-opacity="0" fill="none" /><line x1="145.625" y1="206.5" x2="145.625" y2="228.5" stroke="black" stroke-width="1" />
 <line x1="145.625" y1="217.5" x2="205.625" y2="217.5" stroke="black" stroke-width="1" />
 <line x1="205.625" y1="206.5" x2="205.625" y2="228.5" stroke="black" stroke-width="1" />
 <text x="175.625" y="198.5" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central" fill="black"><tspan x="175.625" dy="0">12.00 mm</tspan></text>
@@ -791,7 +791,7 @@
 <!-- !right !both --><path d="M854.375 629.375 L854.375 650.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
 
 <!-- TAPER START: hexagonal -->
-<path d="M 228.125 620 C 198.3125 625, 198.3125 635, 228.125 640" stroke-width="1.0" stroke="black" stroke-linecap="round" fill-opacity="1" fill="none" /><path d="M 228.125 660 C 198.3125 655, 198.3125 645, 228.125 640" stroke-width="1.0" stroke="black" stroke-linecap="round" fill-opacity="1" fill="none" /><text x="500" y="690" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central">silver</text>
+<path d="M 205.625 620.25 L 228.125 620.25 C 198.3125 625, 198.3125 635, 228.125 640 C 198.3125 645, 198.3125 655, 228.125 659.75 L 205.625 659.75 Z" stroke-width="0" stroke="0" stroke-linecap="round" fill-opacity="1" fill="silver" /><path d="M 228.125 620.5 C 198.3125 625, 198.3125 635, 228.125 640 C 198.3125 645, 198.3125 655, 228.125 659.45" stroke-width="1.5" stroke="gray" stroke-linecap="round" fill-opacity="0" fill="none" /><path d="M 228.125 620.5 C 198.3125 625, 198.3125 635, 228.125 640 C 198.3125 645, 198.3125 655, 228.125 659.5" stroke-width="0.5" stroke="black" stroke-opacity="0.5" stroke-linecap="round" fill-opacity="0" fill="none" /><text x="500" y="690" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central">silver</text>
 
 
 <!-- renderSideComponent: jaws -->
@@ -1142,7 +1142,7 @@
 <!-- !right !both --><path d="M854.375 749.375 L854.375 770.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
 
 <!-- TAPER START: hexagonal -->
-<path d="M 228.125 740 C 198.3125 745, 198.3125 755, 228.125 760" stroke-width="1.0" stroke="black" stroke-linecap="round" fill-opacity="1" fill="none" /><path d="M 228.125 780 C 198.3125 775, 198.3125 765, 228.125 760" stroke-width="1.0" stroke="black" stroke-linecap="round" fill-opacity="1" fill="none" /><text x="500" y="810" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central">white</text>
+<path d="M 205.625 740.25 L 228.125 740.25 C 198.3125 745, 198.3125 755, 228.125 760 C 198.3125 765, 198.3125 775, 228.125 779.75 L 205.625 779.75 Z" stroke-width="0" stroke="0" stroke-linecap="round" fill-opacity="1" fill="#ffffff" /><path d="M 228.125 740.5 C 198.3125 745, 198.3125 755, 228.125 760 C 198.3125 765, 198.3125 775, 228.125 779.45" stroke-width="1.5" stroke="gray" stroke-linecap="round" fill-opacity="0" fill="none" /><path d="M 228.125 740.5 C 198.3125 745, 198.3125 755, 228.125 760 C 198.3125 765, 198.3125 775, 228.125 779.5" stroke-width="0.5" stroke="black" stroke-opacity="0.5" stroke-linecap="round" fill-opacity="0" fill="none" /><text x="500" y="810" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central">white</text>
 
 
 <!-- renderSideComponent: jaws -->
@@ -1493,7 +1493,7 @@
 <!-- !right !both --><path d="M854.375 869.375 L854.375 890.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
 
 <!-- TAPER START: hexagonal -->
-<path d="M 228.125 860 C 198.3125 865, 198.3125 875, 228.125 880" stroke-width="1.0" stroke="gray" stroke-linecap="round" fill-opacity="1" fill="none" /><path d="M 228.125 900 C 198.3125 895, 198.3125 885, 228.125 880" stroke-width="1.0" stroke="gray" stroke-linecap="round" fill-opacity="1" fill="none" /><text x="500" y="930" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central">black</text>
+<path d="M 205.625 860.25 L 228.125 860.25 C 198.3125 865, 198.3125 875, 228.125 880 C 198.3125 885, 198.3125 895, 228.125 899.75 L 205.625 899.75 Z" stroke-width="0" stroke="0" stroke-linecap="round" fill-opacity="1" fill="#000000" /><path d="M 228.125 860.5 C 198.3125 865, 198.3125 875, 228.125 880 C 198.3125 885, 198.3125 895, 228.125 899.45" stroke-width="1.5" stroke="gray" stroke-linecap="round" fill-opacity="0" fill="none" /><path d="M 228.125 860.5 C 198.3125 865, 198.3125 875, 228.125 880 C 198.3125 885, 198.3125 895, 228.125 899.5" stroke-width="0.5" stroke="black" stroke-opacity="0.5" stroke-linecap="round" fill-opacity="0" fill="none" /><text x="500" y="930" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central">black</text>
 </g><text x="50%" y="980" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // Synapticloop // The Mechanical Pencil Database (tmpdb)</text>
 <text x="50%" y="1000" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
 <text x="990" y="1010" font-size="0.5em" font-weight="bold" text-anchor="end" dominant-baseline="middle">SVGTechnicalGroupedRenderer</text>

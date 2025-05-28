@@ -114,8 +114,10 @@
 <path d="M443.75 280 L860 280 M860 320 L443.75 320" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !left !both--><path d="M443.75 280 L443.75 320" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !right !both --><path d="M860 280 L860 320" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<line x1="443.75" y1="300" x2="860" y2="300" stroke-width="1.5" stroke="gray" fill="gray" stroke-opacity="1.0"/>
-<line x1="443.75" y1="300" x2="860" y2="300" stroke-width="0.5" stroke="black" fill="none" stroke-opacity="0.5"/>
+
+<!-- shine -->
+<line x1="443.75" y1="297" x2="860" y2="297" stroke-width="4" stroke-opacity="0.2" stroke="white" /><line x1="443.75" y1="298" x2="860" y2="298" stroke-width="1" stroke-opacity="0.2" stroke="white" /><line x1="443.75" y1="294" x2="860" y2="294" stroke-width="1" stroke-opacity="0.1" stroke="white" /><line x1="443.75" y1="281" x2="860" y2="281" stroke-width="2" stroke-opacity="0.3" stroke="black" /><line x1="443.75" y1="282" x2="860" y2="284" stroke-width="2" stroke-opacity="0.1" stroke="black" /><line x1="443.75" y1="303" x2="860" y2="303" stroke-width="4" stroke-opacity="0.2" stroke="white" /><line x1="443.75" y1="302" x2="860" y2="302" stroke-width="1" stroke-opacity="0.2" stroke="white" /><line x1="443.75" y1="306" x2="860" y2="306" stroke-width="1" stroke-opacity="0.1" stroke="white" /><line x1="443.75" y1="316" x2="860" y2="316" stroke-width="2" stroke-opacity="0.1" stroke="black" /><line x1="443.75" y1="319" x2="860" y2="319" stroke-width="2" stroke-opacity="0.3" stroke="black" /><line x1="443.75" y1="318" x2="860" y2="316" stroke-width="2" stroke-opacity="0.1" stroke="black" /><line x1="446.25" y1="300" x2="862.5" y2="300" stroke-width="1.5" stroke="gray" fill="gray" stroke-opacity="1.0"/>
+<line x1="446.25" y1="300" x2="862.5" y2="300" stroke-width="0.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 
 
 <!-- renderSideComponent: indicator -->
@@ -154,7 +156,9 @@
 <path d="M932.45 286.25 L975.05 286.25 L975.05 313.75 L932.45 313.75 Z" stroke-width="0" stroke="none" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <path d="M932.5 286.25 L975 286.25 M975 313.75 L932.5 313.75" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !right !both --><path d="M975 286.25 L975 313.75" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-</g><text x="50%" y="460" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // Synapticloop // The Mechanical Pencil Database (tmpdb)</text>
+
+<!-- TAPER START: hexagonal -->
+<path d="M 443.75 280.25 L 446.25 280.25 C 443.4375 285, 443.4375 295, 446.25 300 C 443.4375 305, 443.4375 315, 446.25 319.75 L 443.75 319.75 Z" stroke-width="0" stroke="0" stroke-linecap="round" fill-opacity="1" fill="white" /><path d="M 446.25 280.5 C 443.4375 285, 443.4375 295, 446.25 300 C 443.4375 305, 443.4375 315, 446.25 319.45" stroke-width="1.5" stroke="gray" stroke-linecap="round" fill-opacity="0" fill="none" /><path d="M 446.25 280.5 C 443.4375 285, 443.4375 295, 446.25 300 C 443.4375 305, 443.4375 315, 446.25 319.5" stroke-width="0.5" stroke="black" stroke-opacity="0.5" stroke-linecap="round" fill-opacity="0" fill="none" /></g><text x="50%" y="460" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // Synapticloop // The Mechanical Pencil Database (tmpdb)</text>
 <text x="50%" y="480" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
 <text x="1190" y="490" font-size="0.5em" font-weight="bold" text-anchor="end" dominant-baseline="middle">SVGTechnicalComponentRenderer</text>
 </svg>
