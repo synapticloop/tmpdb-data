@@ -65,7 +65,7 @@ for (const [dirIndex, pencilDirectory] of pencilDirectories.entries()) {
 
 			let fileNumber = 1;
 
-			const mdIndividualDirectory: string = path.join("./documentation/", pencilDirectory);
+			const mdIndividualDirectory: string = path.join("./documentation/pencil/", pencilDirectory);
 			fs.mkdirSync(mdIndividualDirectory, { "recursive": true });
 			fs.writeFileSync(mdIndividualDirectory + "/" + pencilFileName + ".md", new MDRenderer(pencil, pencilFileName).render());
 			console.log(`        MD: [${fileNumber}] (individual) ${mdIndividualDirectory + pencilFileName + ".md"}`);
@@ -77,7 +77,7 @@ for (const [dirIndex, pencilDirectory] of pencilDirectories.entries()) {
 		}
 
 		for(const pencilKey of brandPencilMap.keys()) {
-			const mdIndividualDirectory: string = path.join("./documentation/");
+			const mdIndividualDirectory: string = path.join("./documentation/pencil/");
 			fs.mkdirSync(mdIndividualDirectory, { "recursive": true });
 			fs.writeFileSync(mdIndividualDirectory + "/" + pencilKey + ".md",
 				new MDBrandGroupRenderer(
@@ -123,7 +123,7 @@ function renderSVG(svgRenderer: SVGRenderer,
 									 pencilDirectory: string,
 									 pencilFileName: string,
 									 fileNumber: number): string {
-	const svgOutputDir = path.join("./documentation/", outputDirectoryType, pencilDirectory);
+	const svgOutputDir = path.join("./documentation/pencil/", outputDirectoryType, pencilDirectory);
 	fs.mkdirSync(svgOutputDir, { "recursive": true });
 	const outputSvgFile = path.join(svgOutputDir, pencilFileName + ".svg");
 	const svgString = svgRenderer.render(offsetIndex);
@@ -138,7 +138,7 @@ async function renderPNG(inputSVGFile:string,
 												 pencilDirectory: string,
 												 pencilFileName: string,
 												 fileNumber: number): Promise<void> {
-	const pngOutputDir = path.join("./documentation/", outputDirectoryType, pencilDirectory);
+	const pngOutputDir = path.join("./documentation/pencil/", outputDirectoryType, pencilDirectory);
 	fs.mkdirSync(pngOutputDir, { "recursive": true });
 	const outputPngFile = path.join(pngOutputDir, pencilFileName + ".png");
 

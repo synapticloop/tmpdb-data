@@ -41,7 +41,7 @@ for (const [dirIndex, pencilDirectory] of pencilDirectories.entries()) {
 
 			let fileNumber = 1;
 
-			const exampleDirectory: string = path.join("./docs/", pencilDirectory);
+			const exampleDirectory: string = path.join("./documentation/examples/", pencilDirectory);
 			fs.mkdirSync(exampleDirectory, { "recursive": true });
 
 			fileNumber = await renderSVGAndPNG(new SVGExampleRenderer(pencil), -1, "", pencilDirectory, pencilFileName, fileNumber);
@@ -88,7 +88,7 @@ function renderSVG(svgRenderer: SVGRenderer,
 									 pencilDirectory: string,
 									 pencilFileName: string,
 									 fileNumber: number): string {
-	const svgOutputDir = path.join("./docs/", outputDirectoryType, pencilDirectory);
+	const svgOutputDir = path.join("./documentation/examples/", outputDirectoryType, pencilDirectory);
 	fs.mkdirSync(svgOutputDir, { "recursive": true });
 	const outputSvgFile = path.join(svgOutputDir, pencilFileName + ".svg");
 	const svgString = svgRenderer.render(offsetIndex);
@@ -103,7 +103,7 @@ async function renderPNG(inputSVGFile:string,
 												 pencilDirectory: string,
 												 pencilFileName: string,
 												 fileNumber: number): Promise<void> {
-	const pngOutputDir = path.join("./docs/", outputDirectoryType, pencilDirectory);
+	const pngOutputDir = path.join("./documentation/examples/", outputDirectoryType, pencilDirectory);
 	fs.mkdirSync(pngOutputDir, { "recursive": true });
 	const outputPngFile = path.join(pngOutputDir, pencilFileName + ".png");
 

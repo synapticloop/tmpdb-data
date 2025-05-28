@@ -1,1 +1,0 @@
-# BIC // Criterium (Model #: undefined)

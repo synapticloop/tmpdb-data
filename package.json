@@ -21,7 +21,7 @@
   "type": "module",
   "main": "index.js",
   "directories": {
-    "doc": "docs"
+    "doc": "documentation"
   },
   "scripts": {
     "generate-readme": "tsx ./scripts/readme-generator.js",

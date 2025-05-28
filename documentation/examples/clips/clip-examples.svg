@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="440">
+ <pattern id="knurled-large" patternUnits="userSpaceOnUse" width="12" height="12">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 6,6 L 12,12"/>
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 6,6 L 0,12"/>
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 6,6 L 12,0" />
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 6,6 L 0,0" />
+</pattern><pattern id="knurled-small" patternUnits="userSpaceOnUse" width="4" height="4">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 2,2 L 4,4"/>
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 2,2 L 0,4"/>
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 2,2 L 4,0" />
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 2,2 L 0,0" />
+</pattern><pattern id="knurled" patternUnits="userSpaceOnUse" width="8" height="8">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,8"/>
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,8"/>
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,0" />
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,0" />
+</pattern><pattern id="lined" patternUnits="userSpaceOnUse" width="3" height="3">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 0,0 L 3,0"/>
+</pattern><pattern id="ridged" patternUnits="userSpaceOnUse" width="3" height="3">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 0,0 L 0,3"/>
+</pattern><rect x="0" y="0" width="1000" height="440" fill="white" stroke="black" stroke-width="4" />
+<rect x="2" y="2" width="996" height="436" fill="white" stroke="dimgray" stroke-width="1" />
+<g transform="rotate(0 0 0)">
+<text x="30" y="50" font-size="2.0em" font-weight="bold"> Synapticloop // Clip examples </text>
+<line x1="500" y1="40" x2="500" y2="400" stroke="#5f5f5f" stroke-linecap="round" stroke-dasharray="2" stroke-width="1" />
+<line x1="480" y1="40" x2="520" y2="40" stroke-linecap="round" stroke="#000000"  stroke-width="1" />
+<line x1="500" y1="20" x2="500" y2="60" stroke="#000000" stroke-linecap="round"  stroke-width="1" />
+<circle r="10" cx="500" cy="40" fill="white" fill-opacity="0" stroke="#000000" stroke-width="1"  />
+<line x1="480" y1="400" x2="520" y2="400" stroke-linecap="round" stroke="#000000"  stroke-width="1" />
+<line x1="500" y1="380" x2="500" y2="420" stroke="#000000" stroke-linecap="round"  stroke-width="1" />
+<circle r="10" cx="500" cy="400" fill="white" fill-opacity="0" stroke="#000000" stroke-width="1"  />
+<text x="500" y="120" font-size="1.0em" font-weight="bold" text-anchor="middle" dominant-baseline="central">BIC // Criterium (/data/BIC/criterium.json)</text>
+
+
+<!-- renderPart: hexagonal -->
+<path d="M483.075 157.5 L516.925 157.5 L516.925 202.5 L483.075 202.5 Z" stroke-width="0" stroke="none" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<path d="M483.125 157.5 L516.875 157.5 M516.875 202.5 L483.125 202.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<!-- !right !both --><path d="M516.875 157.5 L516.875 202.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<!-- !left !both --><path d="M483.125 157.5 L483.125 202.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<text x="500" y="240" font-size="1.0em" font-weight="bold" text-anchor="middle" dominant-baseline="central">M&amp;G // Easy Come Easy Go! (/data/m-and-g/amp-35601.json)</text>
+
+
+<!-- renderPart: cylinder -->
+<path d="M488.075 276.875 L511.925 276.875 L511.925 323.125 L488.075 323.125 Z" stroke-width="0" stroke="none" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<path d="M488.125 276.875 L511.875 276.875 M511.875 323.125 L488.125 323.125" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<!-- !right !both --><path d="M511.875 276.875 L511.875 323.125" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<!-- !left !both --><path d="M488.125 276.875 L488.125 323.125" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+</g><text x="50%" y="400" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // Synapticloop // The Mechanical Pencil Database (tmpdb)</text>
+<text x="50%" y="420" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
+<text x="990" y="430" font-size="0.5em" font-weight="bold" text-anchor="end" dominant-baseline="middle">SVGExampleRenderer</text>
+</svg>

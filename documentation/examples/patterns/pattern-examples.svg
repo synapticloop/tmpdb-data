@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1280">
+ <pattern id="knurled-large" patternUnits="userSpaceOnUse" width="12" height="12">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 6,6 L 12,12"/>
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 6,6 L 0,12"/>
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 6,6 L 12,0" />
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 6,6 L 0,0" />
+</pattern><pattern id="knurled-small" patternUnits="userSpaceOnUse" width="4" height="4">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 2,2 L 4,4"/>
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 2,2 L 0,4"/>
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 2,2 L 4,0" />
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 2,2 L 0,0" />
+</pattern><pattern id="knurled" patternUnits="userSpaceOnUse" width="8" height="8">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,8"/>
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,8"/>
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 8,0" />
+<path stroke="gray" stroke-linecap="round" stroke-width="1" d="M 4,4 L 0,0" />
+</pattern><pattern id="lined" patternUnits="userSpaceOnUse" width="3" height="3">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 0,0 L 3,0"/>
+</pattern><pattern id="ridged" patternUnits="userSpaceOnUse" width="3" height="3">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 0,0 L 0,3"/>
+</pattern><rect x="0" y="0" width="1000" height="1280" fill="white" stroke="black" stroke-width="4" />
+<rect x="2" y="2" width="996" height="1276" fill="white" stroke="dimgray" stroke-width="1" />
+<g transform="rotate(0 0 0)">
+<text x="30" y="50" font-size="2.0em" font-weight="bold"> Synapticloop // In-built pattern examples </text>
+<line x1="500" y1="40" x2="500" y2="1240" stroke="#5f5f5f" stroke-linecap="round" stroke-dasharray="2" stroke-width="1" />
+<line x1="480" y1="40" x2="520" y2="40" stroke-linecap="round" stroke="#000000"  stroke-width="1" />
+<line x1="500" y1="20" x2="500" y2="60" stroke="#000000" stroke-linecap="round"  stroke-width="1" />
+<circle r="10" cx="500" cy="40" fill="white" fill-opacity="0" stroke="#000000" stroke-width="1"  />
+<line x1="480" y1="1240" x2="520" y2="1240" stroke-linecap="round" stroke="#000000"  stroke-width="1" />
+<line x1="500" y1="1220" x2="500" y2="1260" stroke="#000000" stroke-linecap="round"  stroke-width="1" />
+<circle r="10" cx="500" cy="1240" fill="white" fill-opacity="0" stroke="#000000" stroke-width="1"  />
+<text x="500" y="120" font-size="1.0em" font-weight="bold" text-anchor="middle" dominant-baseline="central">knurled (/patterns/knurled)</text>
+
+
+<!-- renderPart: cylindrical -->
+<path d="M400 160 L600 160 L600 200 L400 200 Z" stroke-width="1.0" stroke="black" fill="url(#knurled)"/>
+<text x="500" y="240" font-size="1.0em" font-weight="bold" text-anchor="middle" dominant-baseline="central">knurled-large (/patterns/knurled-large)</text>
+
+
+<!-- renderPart: cylindrical -->
+<path d="M400 280 L600 280 L600 320 L400 320 Z" stroke-width="1.0" stroke="black" fill="url(#knurled-large)"/>
+<text x="500" y="360" font-size="1.0em" font-weight="bold" text-anchor="middle" dominant-baseline="central">knurled-small (/patterns/knurled-small)</text>
+
+
+<!-- renderPart: cylindrical -->
+<path d="M400 400 L600 400 L600 440 L400 440 Z" stroke-width="1.0" stroke="black" fill="url(#knurled-small)"/>
+<text x="500" y="480" font-size="1.0em" font-weight="bold" text-anchor="middle" dominant-baseline="central">spring (/patterns/spring)</text>
+
+
+<!-- renderPart: cylindrical -->
+<!-- feature: spring --><rect x="405" y="515" width="190" height="50" stroke-width="0.0" stroke="black" fill="url(#spring)"/>
+<line x1="400.5" y1="515" x2="400.5" y2="565" stroke="dimgray" stroke-linecap="round" stroke-width="2" />
+<line x1="400.5" y1="515" x2="400.5" y2="565" stroke="white" stroke-linecap="round" stroke-width="1" />
+<line x1="599.5" y1="515" x2="599.5" y2="565" stroke="dimgray" stroke-linecap="round" stroke-width="2" />
+<line x1="599.5" y1="515" x2="599.5" y2="565" stroke="white" stroke-linecap="round" stroke-width="1" />
+<line x1="402.5" y1="515" x2="402.5" y2="565" stroke="dimgray" stroke-linecap="round" stroke-width="2" />
+<line x1="402.5" y1="515" x2="402.5" y2="565" stroke="white" stroke-linecap="round" stroke-width="1" />
+<line x1="597.5" y1="515" x2="597.5" y2="565" stroke="dimgray" stroke-linecap="round" stroke-width="2" />
+<line x1="597.5" y1="515" x2="597.5" y2="565" stroke="white" stroke-linecap="round" stroke-width="1" />
+<line x1="404.5" y1="515" x2="404.5" y2="565" stroke="dimgray" stroke-linecap="round" stroke-width="2" />
+<line x1="404.5" y1="515" x2="404.5" y2="565" stroke="white" stroke-linecap="round" stroke-width="1" />
+<line x1="595.5" y1="515" x2="595.5" y2="565" stroke="dimgray" stroke-linecap="round" stroke-width="2" />
+<line x1="595.5" y1="515" x2="595.5" y2="565" stroke="white" stroke-linecap="round" stroke-width="1" />
+<line x1="406.5" y1="515" x2="406.5" y2="565" stroke="dimgray" stroke-linecap="round" stroke-width="2" />
+<line x1="406.5" y1="515" x2="406.5" y2="565" stroke="white" stroke-linecap="round" stroke-width="1" />
+<line x1="593.5" y1="515" x2="593.5" y2="565" stroke="dimgray" stroke-linecap="round" stroke-width="2" />
+<line x1="593.5" y1="515" x2="593.5" y2="565" stroke="white" stroke-linecap="round" stroke-width="1" />
+<text x="500" y="600" font-size="1.0em" font-weight="bold" text-anchor="middle" dominant-baseline="central">lined (/patterns/lined)</text>
+
+
+<!-- renderPart: cylindrical -->
+<path d="M400 640 L600 640 L600 680 L400 680 Z" stroke-width="1.0" stroke="black" fill="url(#lined)"/>
+<text x="500" y="720" font-size="1.0em" font-weight="bold" text-anchor="middle" dominant-baseline="central">ridged (/patterns/ridged)</text>
+
+
+<!-- renderPart: cylindrical -->
+<path d="M400 760 L600 760 L600 800 L400 800 Z" stroke-width="1.0" stroke="black" fill="url(#ridged)"/>
+<text x="500" y="840" font-size="1.0em" font-weight="bold" text-anchor="middle" dominant-baseline="central">indicator (in code)</text>
+
+
+<!-- renderPart: cylindrical -->
+<rect x="410" y="890" width="180" height="20" rx="3" ry="3" stroke-width="1" stroke="black" fill="white"/>
+<text x="500" y="900" text-anchor="middle" dominant-baseline="central"><tspan stroke="dimgray" stroke-width="0.5" font-family="sans-serif" fill="black" textLength="{this.width * 5 - 24}" > HB</tspan></text><text x="500" y="960" font-size="1.0em" font-weight="bold" text-anchor="middle" dominant-baseline="central">indicator-split (in code)</text>
+
+
+<!-- renderPart: cylindrical -->
+<rect x="400" y="1016" width="200" height="8" rx="0" ry="0" stroke-width="1" stroke="black" fill="white"/>
+<rect x="406" y="1010" width="188" height="20" rx="3" ry="3" stroke-width="1" stroke="black" fill="white"/>
+<rect x="400.25" y="1016.25" width="199.5" height="7.5" rx="0" ry="0" stroke-width="1" stroke="none" fill="white"/>
+<text x="500" y="1020" text-anchor="middle" dominant-baseline="central"><tspan stroke="dimgray" stroke-width="0.5" font-family="sans-serif" fill="black" textLength="{this.width * 5 - 14}" > HB</tspan></text><text x="500" y="1080" font-size="1.0em" font-weight="bold" text-anchor="middle" dominant-baseline="central">indicator-etched (in code)</text>
+
+
+<!-- renderPart: cylindrical -->
+<text x="500" y="1140" text-anchor="middle" dominant-baseline="central"><tspan stroke="dimgray" stroke-width="0.5" font-family="sans-serif" fill="black" textLength="{this.width * 5 - 12}" > HB</tspan></text></g><text x="50%" y="1240" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // Synapticloop // The Mechanical Pencil Database (tmpdb)</text>
+<text x="50%" y="1260" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
+<text x="990" y="1270" font-size="0.5em" font-weight="bold" text-anchor="end" dominant-baseline="middle">SVGExampleRenderer</text>
+</svg>
