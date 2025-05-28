@@ -2,9 +2,9 @@
 
 Available pencil definitions:
 
- - 3750 3750 - (2.0mm) 
+ - 3750 // Model #: 3750 - (2.0mm) 
 
-## STUDMARK 3750 3750 - (2.0mm) 
+## STUDMARK 3750 // Model #: 3750 - (2.0mm) 
 
 Accuracy level for information on this pencil: `high`
 
@@ -26,7 +26,7 @@ Accuracy level for information on this pencil: `high`
 | **lead grade indicator** | tail |
 ### Pencil Measurements
 
-_(Note: all offsets are from the start of the pensil)_
+_(Note: all offsets are from the start of the pencil)_
 
 | `---Item---` | `---Offset---` | `---Length---` |
 | ---: | ---: | ---: |
@@ -35,7 +35,7 @@ _(Note: all offsets are from the start of the pensil)_
 | **cap** | 134 mm | 11.75 mm |
 | **grip** | 19 mm | 25.75 mm |
 | **clip** | 110.75 mm | 41.5 mm |
-| | Pencil length | 145.75 mm |
+| | **Pencil length** | 145.75 mm |
 
 
 

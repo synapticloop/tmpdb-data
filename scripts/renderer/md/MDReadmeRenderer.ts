@@ -18,19 +18,7 @@ export class MDReadmeRenderer {
 			mdString += `| **${pencil.brand}** | **${pencil.modelName}** | ${pencil.modelNumber} | ${formatToOnePlace(pencil.leadSize)} | ${pencil.colourComponents.length} | ${pencil.accuracy} |\n`;
 			numVariants += pencil.colourVariants.length;
 		}
-		mdString += `| | | **${this.pencils.length} Pencils** | **${numVariants} Variants**<br />_(colours / patterns)_  |\n\n\n`;
-
-		mdString += "### Accuracy Designations\n\n"
-		for (const accuracyLevel of Accuracy.getAccuracyLevels()) {
-
-			mdString += `#### ${accuracyLevel}\n\n`;
-
-			for (const accuracyDescription of Accuracy.getAccuracyDescription(accuracyLevel)) {
-				mdString += ` - ${accuracyDescription}\n`;
-			}
-
-			mdString += `\n`;
-		}
+		mdString += `| | | **${this.pencils.length} Pencils** | | **${numVariants} Variants**<br />_(colours / patterns)_  | |\n\n\n`;
 
 		return(mdString);
 	}

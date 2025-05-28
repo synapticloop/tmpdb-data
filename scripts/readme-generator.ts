@@ -8,6 +8,7 @@ import {ObjectMapper} from "json-object-mapper";
 import deserialize = ObjectMapper.deserialize;
 import {SVGExampleRenderer} from "./renderer/svg/example/SVGExampleRenderer.ts";
 import {MDReadmeRenderer} from "./renderer/md/MDReadmeRenderer.ts";
+import {Accuracy} from "./model/meta/Accuracy.ts";
 
 let baseDir:string = './data/pencil';
 
@@ -18,6 +19,9 @@ let numPencils: number = 0;
 let numColours: number = 0;
 
 const pencils: Pencil[] = []
+let mdString: string = fs.readFileSync("./data/documentation/README-start.md", "utf8");
+
+let individualOverviewString: string = "";
 
 for (const [dirIndex, pencilDirectory] of pencilDirectories.entries()) {
 	const pencilDir: string = path.join(baseDir, pencilDirectory);
@@ -33,23 +37,35 @@ for (const [dirIndex, pencilDirectory] of pencilDirectories.entries()) {
 			pencil.postConstruct(pencil.getColours(), pencil.colourMap);
 			pencils.push(pencil);
 		}
-
-		pencils.sort()
-		pencils.sort((a: Pencil, b: Pencil): number => {
-			if(a.brand === b.brand) {
-				// same brand
-				return(a.modelName.localeCompare(b.modelName));
-			} else {
-				return a.brand.localeCompare(b.brand)
-			}
-		});
-
-		let mdString: string = fs.readFileSync("./data/documentation/README-start.md", "utf8");
-
-		mdString += new MDReadmeRenderer(pencils).render();
-
-		mdString += fs.readFileSync("./data/documentation/README-end.md", "utf8");
-
-		fs.writeFileSync("./README.md", mdString);
 	}
 }
+
+pencils.sort((a: Pencil, b: Pencil): number => {
+	if(a.brand === b.brand) {
+		// same brand
+		return(a.modelName.localeCompare(b.modelName));
+	} else {
+		return a.brand.localeCompare(b.brand)
+	}
+});
+
+mdString += new MDReadmeRenderer(pencils).render();
+
+mdString += "\n\n## Individual pencil's overview\n\n"
+
+
+mdString += "### Accuracy Designations\n\n"
+for (const accuracyLevel of Accuracy.getAccuracyLevels()) {
+
+	mdString += `#### ${accuracyLevel}\n\n`;
+
+	for (const accuracyDescription of Accuracy.getAccuracyDescription(accuracyLevel)) {
+		mdString += ` - ${accuracyDescription}\n`;
+	}
+
+	mdString += `\n`;
+}
+
+mdString += fs.readFileSync("./data/documentation/README-end.md", "utf8");
+
+fs.writeFileSync("./README.md", mdString);

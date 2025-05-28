@@ -2,9 +2,9 @@
 
 Available pencil definitions:
 
- - Easy Come Easy Go! amp-35601 - (2.0mm) 
+ - Easy Come Easy Go! // Model #: amp-35601 - (2.0mm) 
 
-## M &amp; G Easy Come Easy Go! amp-35601 - (2.0mm) 
+## M &amp; G Easy Come Easy Go! // Model #: amp-35601 - (2.0mm) 
 
 Accuracy level for information on this pencil: `high`
 
@@ -23,7 +23,7 @@ Accuracy level for information on this pencil: `high`
 | **Manufactured in** | unknown |
 ### Pencil Measurements
 
-_(Note: all offsets are from the start of the pensil)_
+_(Note: all offsets are from the start of the pencil)_
 
 | `---Item---` | `---Offset---` | `---Length---` |
 | ---: | ---: | ---: |
@@ -31,7 +31,7 @@ _(Note: all offsets are from the start of the pensil)_
 | **body** | 19.75 mm | 108 mm |
 | **cap** | 127.75 mm | 15.5 mm |
 | **clip** | 119.5 mm | 40.5 mm |
-| | Pencil length | 143.25 mm |
+| | **Pencil length** | 143.25 mm |
 
 
 

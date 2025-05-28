@@ -2,9 +2,9 @@
 
 Available pencil definitions:
 
- - Criterium LUXE - (2.0mm) 
+ - Criterium // Model #: LUXE - (2.0mm) 
 
-## BIC Criterium LUXE - (2.0mm) 
+## BIC Criterium // Model #: LUXE - (2.0mm) 
 
 Accuracy level for information on this pencil: `high`
 
@@ -26,7 +26,7 @@ Accuracy level for information on this pencil: `high`
 | **sharpener** | external - inside cap |
 ### Pencil Measurements
 
-_(Note: all offsets are from the start of the pensil)_
+_(Note: all offsets are from the start of the pencil)_
 
 | `---Item---` | `---Offset---` | `---Length---` |
 | ---: | ---: | ---: |
@@ -35,7 +35,7 @@ _(Note: all offsets are from the start of the pensil)_
 | **cap** | 133 mm | 8.75 mm |
 | **grip** | 18.5 mm | 32.5 mm |
 | **clip** | 115 mm | 37.5 mm |
-| | Pencil length | 141.75 mm |
+| | **Pencil length** | 141.75 mm |
 
 
 

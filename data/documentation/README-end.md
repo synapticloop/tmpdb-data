@@ -27,34 +27,57 @@
 
 ### OHTO Sharp Pencil 2.0
 
-For the file `/data/ohto/sharp-pencil-2.0.json`, one of the SVG files that is generated.
+For the file `/data/ohto/sharp-pencil-aps-680e-2.0.json`, one of the SVG files 
+that is generated.
 
-![OHTO Sharp Pencil 2.0 SVG rendering](./output/svg/technical/ohto/sharp-pencil-2.0.svg)
+![OHTO Sharp Pencil 2.0 SVG rendering](./output/svg/technical/ohto/sharp-pencil-aps-680e-2.0.svg)
 
-and colour variants too (as PNGs)
+and colour variants too (both as PNGs and SVGs) - one for each colour
 
-<img src="./output/png/technical/OHTO/sharp-pencil-2.0-colour-black.png">
+<img src="./output/png/technical/ohto/sharp-pencil-aps-680e-2.0-colour-black.png">
 
-<img src="./output/png/technical/OHTO/sharp-pencil-2.0-colour-blue.png">
+<img src="./output/png/technical/ohto/sharp-pencil-aps-680e-2.0-colour-blue.png">
 
-<img src="./output/png/technical/ohto/sharp-pencil-2.0-colour-green.png">
+<img src="./output/png/technical/ohto/sharp-pencil-aps-680e-2.0-colour-green.png">
 
-<img src="./output/png/technical/ohto/sharp-pencil-2.0-colour-red.png">
+<img src="./output/png/technical/ohto/sharp-pencil-aps-680e-2.0-colour-red.png">
 
-<img src="./output/png/technical/ohto/sharp-pencil-2.0-colour-wood.png">
+<img src="./output/png/technical/ohto/sharp-pencil-aps-680e-2.0-colour-wood.png">
 
-<img src="./output/png/technical/ohto/sharp-pencil-2.0-colour-yellow.png">
+<img src="./output/png/technical/ohto/sharp-pencil-aps-680e-2.0-colour-yellow.png">
 
-### Mitsubishi Uni 
+### Additional output files (both as PNGs and SVGs)
 
-For the file `/data/mitsubishi/uni.json`, one of the SVG files that is 
-generated.
+For the file `/data/mitsubishi/uni-mh-500-2.0.json`, examples of some of the 
+output renderings.
 
-![Mitsubishi UNI pencil SVG Rendering](./output/svg/technical/mitsubishi/uni.svg)
+#### Technical Component Renderer
 
-and colour variants too (as PNGs)
+<img src="./output/png/technical/alvin/da-tech-2.0-colour-green.png">
 
-<img src="./output/png/technical/mitsubishi/uni-colour-maroon.png">
+#### Technical Exploded Renderer
+
+<img src="./output/png/technical/alvin/da-tech-2.0-exploded-colour-red.png">
+
+#### Technical Grouped Renderer
+
+<img src="./output/png/technical/alvin/da-tech-2.0-grouped.png">
+
+### Technical Renderer
+
+<img src="./output/png/technical/alvin/da-tech-2.0.png">
+
+#### Pencil Renderer
+
+<img src="./output/png/pencil/alvin/da-tech-2.0-colour-white.png">
+
+#### Pencil 45 Renderer
+
+<img src="./output/png/pencil/alvin/da-tech-2.0-colour-green-45.png">
+
+#### All variants
+
+<img src="./output/png/pencil/alvin/da-tech-2.0-all-variants.png">
 
 
 ## Updating CustomVector Images

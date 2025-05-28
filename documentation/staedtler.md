@@ -2,9 +2,9 @@
 
 Available pencil definitions:
 
- - Mars Technico 780c - (2.0mm) 
+ - Mars Technico // Model #: 780c - (2.0mm) 
 
-## Staedtler Mars Technico 780c - (2.0mm) 
+## Staedtler Mars Technico // Model #: 780c - (2.0mm) 
 
 Accuracy level for information on this pencil: `high`
 
@@ -25,7 +25,7 @@ Accuracy level for information on this pencil: `high`
 | **sharpener** | inside cap |
 ### Pencil Measurements
 
-_(Note: all offsets are from the start of the pensil)_
+_(Note: all offsets are from the start of the pencil)_
 
 | `---Item---` | `---Offset---` | `---Length---` |
 | ---: | ---: | ---: |
@@ -34,7 +34,7 @@ _(Note: all offsets are from the start of the pensil)_
 | **cap** | 138.25 mm | 12 mm |
 | **grip** | 9.75 mm | 22 mm |
 | **clip** | 125.25 mm | 34 mm |
-| | Pencil length | 150.25 mm |
+| | **Pencil length** | 150.25 mm |
 
 
 

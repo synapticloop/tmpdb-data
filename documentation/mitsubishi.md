@@ -2,9 +2,9 @@
 
 Available pencil definitions:
 
- - uni MH-500 - (2.0mm) 
+ - uni // Model #: MH-500 - (2.0mm) 
 
-## Mitsubishi uni MH-500 - (2.0mm) 
+## Mitsubishi uni // Model #: MH-500 - (2.0mm) 
 
 Accuracy level for information on this pencil: `high`
 
@@ -23,7 +23,7 @@ Accuracy level for information on this pencil: `high`
 | **Manufactured in** | unknown |
 ### Pencil Measurements
 
-_(Note: all offsets are from the start of the pensil)_
+_(Note: all offsets are from the start of the pencil)_
 
 | `---Item---` | `---Offset---` | `---Length---` |
 | ---: | ---: | ---: |
@@ -32,7 +32,7 @@ _(Note: all offsets are from the start of the pensil)_
 | **cap** | 128.75 mm | 11.75 mm |
 | **grip** | 12.5 mm | 25.5 mm |
 | **clip** | 122 mm | 29.5 mm |
-| | Pencil length | 140.5 mm |
+| | **Pencil length** | 140.5 mm |
 
 
 

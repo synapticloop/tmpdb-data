@@ -33,7 +33,7 @@ _(To regenerate the list - and this `README.md` file, run `npm run readme-genera
 | ---: | :--- | :--- | ---: | ---: | :--- |
 | **Alvin** | **DA** | TECH | 2.0 | 3 | high |
 | **Alvin** | **PRO-MATIC** | MC5 | 2.0 | 1 | high |
-| **BIC** | **Criterium** | undefined | 2.0 | 3 | high |
+| **BIC** | **Criterium** | LUXE | 2.0 | 3 | high |
 | **Koh-i-Noor** | **TECHNIGRAPH** | 5611 | 2.0 | 7 | low |
 | **Küelox** | **3308** | 3308 | 2.0 | 1 | high |
 | **M &amp; G** | **Easy Come Easy Go!** | amp-35601 | 2.0 | 3 | high |
@@ -50,14 +50,19 @@ _(To regenerate the list - and this `README.md` file, run `npm run readme-genera
 | **Staedtler** | **Mars Technico** | 780c | 2.0 | 2 | high |
 | **STUDMARK** | **3750** | 3750 | 2.0 | 1 | high |
 | **Unbranded** | **Metal Black** | unknown | 2.0 | 1 | high |
-| | | **19 Pencils** | **57 Variants**<br />_(colours / patterns)_  |
+| | | **19 Pencils** | | **57 Variants**<br />_(colours / patterns)_  | |
 
+
+
+
+## Individual pencil's overview
 
 ### Accuracy Designations
 
 #### low
 
- - Physical pencil not present
+ - Where any one of these things are true.
+ - Physical pencil not present for measurement
  - Measurements of the pencil were not taken with a precision tool, and may have been estimated from supplied images.
  - The overall look of the pencil and the relative dimensions should be within reasonable and relative bounds.
  - The pencil may be based on a third party branded model that is identical to the original.
@@ -66,7 +71,9 @@ _(To regenerate the list - and this `README.md` file, run `npm run readme-genera
 
 #### medium
 
- - Physical pencil present, however no precision measurement tool was used, or physical pencil not present and image used.  Where an image is used for measurements, an accurate measuring scale is included with the image.
+ - Where any one of these things are true.
+ - Physical pencil present, however no precision measurement tool was used.
+ - Physical pencil not present and image used for measurements, an accurate measuring scale is included with the image.
  - Not all pencil measurements were taken with a precision tool, (especially where there are internal components which access could not be gained).
  - External measurements may have been accurately measured, however internal components may not have been measured.
  - The pencil may be based on a first/third party branded model that is identical to the original.
@@ -74,8 +81,8 @@ _(To regenerate the list - and this `README.md` file, run `npm run readme-genera
 
 #### high
 
- - Physical pencil used for measurements.
- - Physical pencil not present, but source technical documents used for measurements.
+ - Where all of these things are true (with caveats).
+ - Physical pencil used for measurements, or physical pencil not present, but source technical documents used for measurements.
  - Pencil measurements taken with a high precision tool.
  - Internal measurements may not be available due to disassembly challenges.
  - The accuracy of the colours of the pencil's parts may not be reflected by the rendered images.
@@ -114,34 +121,57 @@ _(To regenerate the list - and this `README.md` file, run `npm run readme-genera
 
 ### OHTO Sharp Pencil 2.0
 
-For the file `/data/ohto/sharp-pencil-2.0.json`, one of the SVG files that is generated.
+For the file `/data/ohto/sharp-pencil-aps-680e-2.0.json`, one of the SVG files 
+that is generated.
 
-![OHTO Sharp Pencil 2.0 SVG rendering](./output/svg/technical/ohto/sharp-pencil-2.0.svg)
+![OHTO Sharp Pencil 2.0 SVG rendering](./output/svg/technical/ohto/sharp-pencil-aps-680e-2.0.svg)
 
-and colour variants too (as PNGs)
+and colour variants too (both as PNGs and SVGs) - one for each colour
 
-<img src="./output/png/technical/OHTO/sharp-pencil-2.0-colour-black.png">
+<img src="./output/png/technical/ohto/sharp-pencil-aps-680e-2.0-colour-black.png">
 
-<img src="./output/png/technical/OHTO/sharp-pencil-2.0-colour-blue.png">
+<img src="./output/png/technical/ohto/sharp-pencil-aps-680e-2.0-colour-blue.png">
 
-<img src="./output/png/technical/ohto/sharp-pencil-2.0-colour-green.png">
+<img src="./output/png/technical/ohto/sharp-pencil-aps-680e-2.0-colour-green.png">
 
-<img src="./output/png/technical/ohto/sharp-pencil-2.0-colour-red.png">
+<img src="./output/png/technical/ohto/sharp-pencil-aps-680e-2.0-colour-red.png">
 
-<img src="./output/png/technical/ohto/sharp-pencil-2.0-colour-wood.png">
+<img src="./output/png/technical/ohto/sharp-pencil-aps-680e-2.0-colour-wood.png">
 
-<img src="./output/png/technical/ohto/sharp-pencil-2.0-colour-yellow.png">
+<img src="./output/png/technical/ohto/sharp-pencil-aps-680e-2.0-colour-yellow.png">
 
-### Mitsubishi Uni 
+### Additional output files (both as PNGs and SVGs)
 
-For the file `/data/mitsubishi/uni.json`, one of the SVG files that is 
-generated.
+For the file `/data/mitsubishi/uni-mh-500-2.0.json`, examples of some of the 
+output renderings.
 
-![Mitsubishi UNI pencil SVG Rendering](./output/svg/technical/mitsubishi/uni.svg)
+#### Technical Component Renderer
 
-and colour variants too (as PNGs)
+<img src="./output/png/technical/alvin/da-tech-2.0-colour-green.png">
 
-<img src="./output/png/technical/mitsubishi/uni-colour-maroon.png">
+#### Technical Exploded Renderer
+
+<img src="./output/png/technical/alvin/da-tech-2.0-exploded-colour-red.png">
+
+#### Technical Grouped Renderer
+
+<img src="./output/png/technical/alvin/da-tech-2.0-grouped.png">
+
+### Technical Renderer
+
+<img src="./output/png/technical/alvin/da-tech-2.0.png">
+
+#### Pencil Renderer
+
+<img src="./output/png/pencil/alvin/da-tech-2.0-colour-white.png">
+
+#### Pencil 45 Renderer
+
+<img src="./output/png/pencil/alvin/da-tech-2.0-colour-green-45.png">
+
+#### All variants
+
+<img src="./output/png/pencil/alvin/da-tech-2.0-all-variants.png">
 
 
 ## Updating CustomVector Images

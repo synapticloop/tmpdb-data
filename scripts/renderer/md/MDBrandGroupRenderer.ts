@@ -21,11 +21,11 @@ export class MDBrandGroupRenderer {
 		mdString += `Available pencil definitions:\n\n`;
 		// list the pencil models
 		for(const [ index, pencil ] of this.pencils.entries()) {
-			mdString += ` - ${pencil.modelName} ${pencil.modelNumber} - (${formatToOnePlace(pencil.leadSize)}mm) \n\n`
+			mdString += ` - ${pencil.modelName} // Model #: ${pencil.modelNumber} - (${formatToOnePlace(pencil.leadSize)}mm) \n\n`
 		}
 
 		for(const [ index, pencil ] of this.pencils.entries()) {
-			mdString += `## ${pencil.brand} ${pencil.modelName} ${pencil.modelNumber} - (${formatToOnePlace(pencil.leadSize)}mm) \n\n`
+			mdString += `## ${pencil.brand} ${pencil.modelName} // Model #: ${pencil.modelNumber} - (${formatToOnePlace(pencil.leadSize)}mm) \n\n`
 			mdString += `Accuracy level for information on this pencil: \`${pencil.accuracy}\`\n\n`
 
 			mdString += `### Pencil Information\n\n`
@@ -66,7 +66,7 @@ export class MDBrandGroupRenderer {
 				mdString += this.addTableRowThree("clip", `${pencil.clipGroupedComponentOffset} mm`,  `${pencil.clipGroupedComponentLength} mm`);
 			}
 
-			mdString += this.addTableRowThree("", "Pencil length", `${pencil.totalLength} mm`);
+			mdString += this.addTableRowThree("", "**Pencil length**", `${pencil.totalLength} mm`);
 
 			mdString += "\n\n";
 

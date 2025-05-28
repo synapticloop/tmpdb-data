@@ -2,9 +2,9 @@
 
 Available pencil definitions:
 
- - Metal Black unknown - (2.0mm) 
+ - Metal Black // Model #: unknown - (2.0mm) 
 
-## Unbranded Metal Black unknown - (2.0mm) 
+## Unbranded Metal Black // Model #: unknown - (2.0mm) 
 
 Accuracy level for information on this pencil: `high`
 
@@ -25,7 +25,7 @@ Accuracy level for information on this pencil: `high`
 | **Lead size indicator** | Embossed on top of body within the clip component. |
 ### Pencil Measurements
 
-_(Note: all offsets are from the start of the pensil)_
+_(Note: all offsets are from the start of the pencil)_
 
 | `---Item---` | `---Offset---` | `---Length---` |
 | ---: | ---: | ---: |
@@ -34,7 +34,7 @@ _(Note: all offsets are from the start of the pensil)_
 | **cap** | 131.25 mm | 12.25 mm |
 | **grip** | 18.5 mm | 37 mm |
 | **clip** | 121.5 mm | 31.5 mm |
-| | Pencil length | 143.5 mm |
+| | **Pencil length** | 143.5 mm |
 
 
 

@@ -2,13 +2,13 @@
 
 Available pencil definitions:
 
- - COLLEGIATE H-1301 - (2.0mm) 
+ - COLLEGIATE // Model #: H-1301 - (2.0mm) 
 
- - Premium H-1309 - (2.0mm) 
+ - Premium // Model #: H-1309 - (2.0mm) 
 
- - TECH PRO H-1305 - (2.0mm) 
+ - TECH PRO // Model #: H-1305 - (2.0mm) 
 
-## Pacific Arc COLLEGIATE H-1301 - (2.0mm) 
+## Pacific Arc COLLEGIATE // Model #: H-1301 - (2.0mm) 
 
 Accuracy level for information on this pencil: `high`
 
@@ -29,7 +29,7 @@ Accuracy level for information on this pencil: `high`
 | **sharpener** | Inside cap |
 ### Pencil Measurements
 
-_(Note: all offsets are from the start of the pensil)_
+_(Note: all offsets are from the start of the pencil)_
 
 | `---Item---` | `---Offset---` | `---Length---` |
 | ---: | ---: | ---: |
@@ -38,7 +38,7 @@ _(Note: all offsets are from the start of the pensil)_
 | **cap** | 126.5 mm | 18.25 mm |
 | **grip** | 18.75 mm | 29.5 mm |
 | **clip** | 120 mm | 39 mm |
-| | Pencil length | 144.75 mm |
+| | **Pencil length** | 144.75 mm |
 
 
 
@@ -59,7 +59,7 @@ _(Note: all offsets are from the start of the pensil)_
 
 ---
 
-## Pacific Arc Premium H-1309 - (2.0mm) 
+## Pacific Arc Premium // Model #: H-1309 - (2.0mm) 
 
 Accuracy level for information on this pencil: `high`
 
@@ -80,7 +80,7 @@ Accuracy level for information on this pencil: `high`
 | **sharpener** | inside cap |
 ### Pencil Measurements
 
-_(Note: all offsets are from the start of the pensil)_
+_(Note: all offsets are from the start of the pencil)_
 
 | `---Item---` | `---Offset---` | `---Length---` |
 | ---: | ---: | ---: |
@@ -89,7 +89,7 @@ _(Note: all offsets are from the start of the pensil)_
 | **cap** | 135.5 mm | 13 mm |
 | **grip** | 16 mm | 29.5 mm |
 | **clip** | 113 mm | 39 mm |
-| | Pencil length | 148.5 mm |
+| | **Pencil length** | 148.5 mm |
 
 
 
@@ -110,7 +110,7 @@ _(Note: all offsets are from the start of the pensil)_
 
 ---
 
-## Pacific Arc TECH PRO H-1305 - (2.0mm) 
+## Pacific Arc TECH PRO // Model #: H-1305 - (2.0mm) 
 
 Accuracy level for information on this pencil: `high`
 
@@ -131,7 +131,7 @@ Accuracy level for information on this pencil: `high`
 | **sharpener** | Inside cap |
 ### Pencil Measurements
 
-_(Note: all offsets are from the start of the pensil)_
+_(Note: all offsets are from the start of the pencil)_
 
 | `---Item---` | `---Offset---` | `---Length---` |
 | ---: | ---: | ---: |
@@ -140,7 +140,7 @@ _(Note: all offsets are from the start of the pensil)_
 | **cap** | 135 mm | 13 mm |
 | **grip** | 16 mm | 29.5 mm |
 | **clip** | 113 mm | 39 mm |
-| | Pencil length | 148 mm |
+| | **Pencil length** | 148 mm |
 
 
 

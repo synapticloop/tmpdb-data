@@ -2,9 +2,9 @@
 
 Available pencil definitions:
 
- - 3308 3308 - (2.0mm) 
+ - 3308 // Model #: 3308 - (2.0mm) 
 
-## Küelox 3308 3308 - (2.0mm) 
+## Küelox 3308 // Model #: 3308 - (2.0mm) 
 
 Accuracy level for information on this pencil: `high`
 
@@ -26,7 +26,7 @@ Accuracy level for information on this pencil: `high`
 | **lead size indicator** | Tail |
 ### Pencil Measurements
 
-_(Note: all offsets are from the start of the pensil)_
+_(Note: all offsets are from the start of the pencil)_
 
 | `---Item---` | `---Offset---` | `---Length---` |
 | ---: | ---: | ---: |
@@ -35,7 +35,7 @@ _(Note: all offsets are from the start of the pensil)_
 | **cap** | 135.5 mm | 13 mm |
 | **grip** | 16 mm | 29.5 mm |
 | **clip** | 113 mm | 39 mm |
-| | Pencil length | 148.5 mm |
+| | **Pencil length** | 148.5 mm |
 
 
 

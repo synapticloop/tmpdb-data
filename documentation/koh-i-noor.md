@@ -2,9 +2,9 @@
 
 Available pencil definitions:
 
- - TECHNIGRAPH 5611 - (2.0mm) 
+ - TECHNIGRAPH // Model #: 5611 - (2.0mm) 
 
-## Koh-i-Noor TECHNIGRAPH 5611 - (2.0mm) 
+## Koh-i-Noor TECHNIGRAPH // Model #: 5611 - (2.0mm) 
 
 Accuracy level for information on this pencil: `low`
 
@@ -25,7 +25,7 @@ Accuracy level for information on this pencil: `low`
 | **none** | undefined |
 ### Pencil Measurements
 
-_(Note: all offsets are from the start of the pensil)_
+_(Note: all offsets are from the start of the pencil)_
 
 | `---Item---` | `---Offset---` | `---Length---` |
 | ---: | ---: | ---: |
@@ -33,7 +33,7 @@ _(Note: all offsets are from the start of the pensil)_
 | **body** | 18 mm | 122.5 mm |
 | **cap** | 140.5 mm | 7.25 mm |
 | **grip** | 18 mm | 30.75 mm |
-| | Pencil length | 147.75 mm |
+| | **Pencil length** | 147.75 mm |
 
 
 

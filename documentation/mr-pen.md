@@ -2,9 +2,9 @@
 
 Available pencil definitions:
 
- - 2.0 2.0 - (2.0mm) 
+ - 2.0 // Model #: 2.0 - (2.0mm) 
 
-## Mr. Pen 2.0 2.0 - (2.0mm) 
+## Mr. Pen 2.0 // Model #: 2.0 - (2.0mm) 
 
 Accuracy level for information on this pencil: `high`
 
@@ -26,7 +26,7 @@ Accuracy level for information on this pencil: `high`
 | **eraser** | inside shaft |
 ### Pencil Measurements
 
-_(Note: all offsets are from the start of the pensil)_
+_(Note: all offsets are from the start of the pencil)_
 
 | `---Item---` | `---Offset---` | `---Length---` |
 | ---: | ---: | ---: |
@@ -35,7 +35,7 @@ _(Note: all offsets are from the start of the pensil)_
 | **cap** | 138.25 mm | 15.5 mm |
 | **grip** | 20.5 mm | 31 mm |
 | **clip** | 117.75 mm | 0 mm |
-| | Pencil length | 153.75 mm |
+| | **Pencil length** | 153.75 mm |
 
 
 

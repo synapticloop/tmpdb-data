@@ -2,9 +2,9 @@
 
 Available pencil definitions:
 
- - 600 600 - (2.0mm) 
+ - 600 // Model #: 600 - (2.0mm) 
 
-## Redcircle 600 600 - (2.0mm) 
+## Redcircle 600 // Model #: 600 - (2.0mm) 
 
 Accuracy level for information on this pencil: `high`
 
@@ -26,7 +26,7 @@ Accuracy level for information on this pencil: `high`
 | **indicator** | rotational - near clip |
 ### Pencil Measurements
 
-_(Note: all offsets are from the start of the pensil)_
+_(Note: all offsets are from the start of the pencil)_
 
 | `---Item---` | `---Offset---` | `---Length---` |
 | ---: | ---: | ---: |
@@ -35,7 +35,7 @@ _(Note: all offsets are from the start of the pensil)_
 | **cap** | 133.5 mm | 12 mm |
 | **grip** | 13.5 mm | 30 mm |
 | **clip** | 110.25 mm | 35.75 mm |
-| | Pencil length | 145.5 mm |
+| | **Pencil length** | 145.5 mm |
 
 
 

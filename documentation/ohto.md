@@ -2,15 +2,15 @@
 
 Available pencil definitions:
 
- - Sharp Pencil APS-280E - (0.5mm) 
+ - Sharp Pencil // Model #: APS-280E - (0.5mm) 
 
- - Sharp Pencil 2.0 APS-680E - (2.0mm) 
+ - Sharp Pencil 2.0 // Model #: APS-680E - (2.0mm) 
 
- - Wooden Sharp WN01-SP5 - (0.5mm) 
+ - Wooden Sharp // Model #: WN01-SP5 - (0.5mm) 
 
- - Wooden Pencil WN03-SP20 - (2.0mm) 
+ - Wooden Pencil // Model #: WN03-SP20 - (2.0mm) 
 
-## OHTO Sharp Pencil APS-280E - (0.5mm) 
+## OHTO Sharp Pencil // Model #: APS-280E - (0.5mm) 
 
 Accuracy level for information on this pencil: `medium`
 
@@ -31,14 +31,14 @@ Accuracy level for information on this pencil: `medium`
 | **eraser** | End of pencil, attached to cap |
 ### Pencil Measurements
 
-_(Note: all offsets are from the start of the pensil)_
+_(Note: all offsets are from the start of the pencil)_
 
 | `---Item---` | `---Offset---` | `---Length---` |
 | ---: | ---: | ---: |
 | **tip** | 0 mm | 5.75 mm |
 | **body** | 5.75 mm | 148.25 mm |
 | **cap** | 154 mm | 9 mm |
-| | Pencil length | 163 mm |
+| | **Pencil length** | 163 mm |
 
 
 
@@ -62,7 +62,7 @@ _(Note: all offsets are from the start of the pensil)_
 
 ---
 
-## OHTO Sharp Pencil 2.0 APS-680E - (2.0mm) 
+## OHTO Sharp Pencil 2.0 // Model #: APS-680E - (2.0mm) 
 
 Accuracy level for information on this pencil: `high`
 
@@ -83,14 +83,14 @@ Accuracy level for information on this pencil: `high`
 | **eraser** | End of pencil, attached to cap |
 ### Pencil Measurements
 
-_(Note: all offsets are from the start of the pensil)_
+_(Note: all offsets are from the start of the pencil)_
 
 | `---Item---` | `---Offset---` | `---Length---` |
 | ---: | ---: | ---: |
 | **tip** | 0 mm | 7.5 mm |
 | **body** | 7.5 mm | 117 mm |
 | **cap** | 124.5 mm | 12 mm |
-| | Pencil length | 136.5 mm |
+| | **Pencil length** | 136.5 mm |
 
 
 
@@ -115,7 +115,7 @@ _(Note: all offsets are from the start of the pensil)_
 
 ---
 
-## OHTO Wooden Sharp WN01-SP5 - (0.5mm) 
+## OHTO Wooden Sharp // Model #: WN01-SP5 - (0.5mm) 
 
 Accuracy level for information on this pencil: `medium`
 
@@ -136,14 +136,14 @@ Accuracy level for information on this pencil: `medium`
 | **eraser** | End of pencil, attached to cap |
 ### Pencil Measurements
 
-_(Note: all offsets are from the start of the pensil)_
+_(Note: all offsets are from the start of the pencil)_
 
 | `---Item---` | `---Offset---` | `---Length---` |
 | ---: | ---: | ---: |
 | **tip** | 0 mm | 5.75 mm |
 | **body** | 5.75 mm | 148.25 mm |
 | **cap** | 154 mm | 9 mm |
-| | Pencil length | 163 mm |
+| | **Pencil length** | 163 mm |
 
 
 
@@ -167,7 +167,7 @@ _(Note: all offsets are from the start of the pensil)_
 
 ---
 
-## OHTO Wooden Pencil WN03-SP20 - (2.0mm) 
+## OHTO Wooden Pencil // Model #: WN03-SP20 - (2.0mm) 
 
 Accuracy level for information on this pencil: `high`
 
@@ -188,14 +188,14 @@ Accuracy level for information on this pencil: `high`
 | **eraser** | End of pencil, attached to cap |
 ### Pencil Measurements
 
-_(Note: all offsets are from the start of the pensil)_
+_(Note: all offsets are from the start of the pencil)_
 
 | `---Item---` | `---Offset---` | `---Length---` |
 | ---: | ---: | ---: |
 | **tip** | 0 mm | 7.5 mm |
 | **body** | 7.5 mm | 117 mm |
 | **cap** | 124.5 mm | 12 mm |
-| | Pencil length | 136.5 mm |
+| | **Pencil length** | 136.5 mm |
 
 
 

@@ -2,11 +2,11 @@
 
 Available pencil definitions:
 
- - DA TECH - (2.0mm) 
+ - DA // Model #: TECH - (2.0mm) 
 
- - PRO-MATIC MC5 - (2.0mm) 
+ - PRO-MATIC // Model #: MC5 - (2.0mm) 
 
-## Alvin DA TECH - (2.0mm) 
+## Alvin DA // Model #: TECH - (2.0mm) 
 
 Accuracy level for information on this pencil: `high`
 
@@ -27,7 +27,7 @@ Accuracy level for information on this pencil: `high`
 | **none** | undefined |
 ### Pencil Measurements
 
-_(Note: all offsets are from the start of the pensil)_
+_(Note: all offsets are from the start of the pencil)_
 
 | `---Item---` | `---Offset---` | `---Length---` |
 | ---: | ---: | ---: |
@@ -36,7 +36,7 @@ _(Note: all offsets are from the start of the pensil)_
 | **cap** | 140.5 mm | 7.25 mm |
 | **grip** | 18 mm | 30.75 mm |
 | **clip** | 138.75 mm | 39.5 mm |
-| | Pencil length | 147.75 mm |
+| | **Pencil length** | 147.75 mm |
 
 
 
@@ -58,7 +58,7 @@ _(Note: all offsets are from the start of the pensil)_
 
 ---
 
-## Alvin PRO-MATIC MC5 - (2.0mm) 
+## Alvin PRO-MATIC // Model #: MC5 - (2.0mm) 
 
 Accuracy level for information on this pencil: `high`
 
@@ -79,7 +79,7 @@ Accuracy level for information on this pencil: `high`
 | **indicator** | end of body |
 ### Pencil Measurements
 
-_(Note: all offsets are from the start of the pensil)_
+_(Note: all offsets are from the start of the pencil)_
 
 | `---Item---` | `---Offset---` | `---Length---` |
 | ---: | ---: | ---: |
@@ -87,7 +87,7 @@ _(Note: all offsets are from the start of the pensil)_
 | **body** | 18 mm | 123.5 mm |
 | **cap** | 141.5 mm | 8.5 mm |
 | **grip** | 18 mm | 25.75 mm |
-| | Pencil length | 150 mm |
+| | **Pencil length** | 150 mm |
 
 
 
