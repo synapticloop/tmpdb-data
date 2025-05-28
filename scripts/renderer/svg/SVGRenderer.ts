@@ -280,7 +280,7 @@ export abstract class SVGRenderer {
 				case "hexagonal":
 					// Draw the intersection of the path
 					// first thing is the background colour
-					svgString += `<path d="M ${startX} ${midY - part.endHeight / 2 * 5 + 0.25} ` +
+					svgString += `<path d="M ${startX - 0.1} ${midY - part.endHeight / 2 * 5 + 0.25} ` +
 						`L ${startX + xOffsetTaperStart * 5} ${midY - part.endHeight / 2 * 5 + 0.25} ` +
 						`C ${startX + xOffsetTaperStart * (xOffsetTaperStartScale * -5)} ${midY - part.endHeight / 2 * 5 * 3 / 4}, ` +
 						`${startX + xOffsetTaperStart * (xOffsetTaperStartScale * -5)} ${midY - part.endHeight / 2 * 5 / 4}, ` +
@@ -288,7 +288,7 @@ export abstract class SVGRenderer {
 						`C ${startX + xOffsetTaperStart * (xOffsetTaperStartScale * -5)} ${midY + part.endHeight / 2 * 5 / 4}, ` +
 						`${startX + xOffsetTaperStart * (xOffsetTaperStartScale * -5)} ${midY + part.endHeight / 2 * 5 * 3 / 4}, ` +
 						`${startX + xOffsetTaperStart * 5} ${midY + part.endHeight / 2 * 5 - 0.25} ` +
-						`L ${startX} ${midY + part.endHeight /2 * 5 - 0.25} Z" ` +
+						`L ${startX - 0.1} ${midY + part.endHeight /2 * 5 - 0.25} Z" ` +
 						`stroke-width="0" ` +
 						`stroke="0" ` +
 						`stroke-linecap="round" ` +
@@ -356,13 +356,6 @@ export abstract class SVGRenderer {
 			switch (part.shape) {
 				case "hexagonal":
 					// TODO - need to intersect between the two
-					// svgString += rectangle(
-					// 		startX - xOffsetTaperEnd * 5,
-					// 		midY - part.endHeight / 2 * 5 + 0.25,
-					// 		(part.length + xOffsetTaperEnd) * 5 - 0.5,
-					// 		part.startHeight * 5 - 0.5,
-					// 		"none",
-					// 		backgroundColour);
 
 					svgString += `<path d="M ${startX + (part.length + xOffsetTaperEnd) * 5} ${midY - part.endHeight / 2 * 5} ` +
 						`C ${startX + ((part.length - xOffsetTaperEnd) * 5 * xOffsetTaperEndScale)} ${midY - part.endHeight / 2 * 5 * 3 / 4}, ` +
@@ -853,7 +846,6 @@ export abstract class SVGRenderer {
 	 * @param y The y co-ordinate at which to start the drawing of trhe part
 	 * @param part The part to render
 	 * @param colourIndex The colour Index for the pencil colour
-	 * @param nextPartJoined Whether the next part is joined to this part
 	 *
 	 * @protected
 	 */
@@ -899,28 +891,48 @@ export abstract class SVGRenderer {
 					`fill="${opaqueColour.colour}" ` +
 					`fill-opacity="${opaqueColour.opacity}"/>\n`
 
-				if(part.joined !== "left" && part.joined !== "both") {
-					// draw the left hand line
-					svgString += `<!-- !left !both--><path d="M${x + part.internalOffset * 5} ${y - (part.startHeight / 2 * 5)} ` + // move to top-left
-						`L${x + part.internalOffset * 5} ${y + (part.startHeight / 2 * 5)}" ` + // line to bottom left
-						`stroke-width="0.5" ` +
-						`stroke="${strokeColour}" ` +
-						`stroke-linejoin="round" ` +
-						`fill="${opaqueColour.colour}" ` +
-						`fill-opacity="${opaqueColour.opacity}"/>\n`
+				switch(part.joined) {
+					case "both":
+						// no lines drawn
+						break;
+					case "left":
+						// draw the right line
+						svgString += `<!-- !right !both --><path d="M${x + part.internalOffset * 5 + part.length * 5} ${y - (part.endHeight / 2 * 5)} ` + // move to top-right
+							`L${x + part.internalOffset * 5 + part.length * 5} ${y + (part.endHeight / 2 * 5)}" ` + // line to bottom right
+							`stroke-width="0.5" ` +
+							`stroke="${strokeColour}" ` +
+							`stroke-linejoin="round" ` +
+							`fill="${opaqueColour.colour}" ` +
+							`fill-opacity="${opaqueColour.opacity}"/>\n`
+						break;
+					case "right":
+						// draw the left line
+						svgString += `<!-- !left !both --><path d="M${x + part.internalOffset * 5} ${y - (part.startHeight / 2 * 5)} ` + // move to top-left
+							`L${x + part.internalOffset * 5} ${y + (part.startHeight / 2 * 5)}" ` + // line to bottom left
+							`stroke-width="0.5" ` +
+							`stroke="${strokeColour}" ` +
+							`stroke-linejoin="round" ` +
+							`fill="${opaqueColour.colour}" ` +
+							`fill-opacity="${opaqueColour.opacity}"/>\n`
+						break;
+					default:
+						// draw both
+						svgString += `<!-- !right !both --><path d="M${x + part.internalOffset * 5 + part.length * 5} ${y - (part.endHeight / 2 * 5)} ` + // move to top-right
+							`L${x + part.internalOffset * 5 + part.length * 5} ${y + (part.endHeight / 2 * 5)}" ` + // line to bottom right
+							`stroke-width="0.5" ` +
+							`stroke="${strokeColour}" ` +
+							`stroke-linejoin="round" ` +
+							`fill="${opaqueColour.colour}" ` +
+							`fill-opacity="${opaqueColour.opacity}"/>\n`
+						// draw the left line
+						svgString += `<!-- !left !both --><path d="M${x + part.internalOffset * 5} ${y - (part.startHeight / 2 * 5)} ` + // move to top-left
+							`L${x + part.internalOffset * 5} ${y + (part.startHeight / 2 * 5)}" ` + // line to bottom left
+							`stroke-width="0.5" ` +
+							`stroke="${strokeColour}" ` +
+							`stroke-linejoin="round" ` +
+							`fill="${opaqueColour.colour}" ` +
+							`fill-opacity="${opaqueColour.opacity}"/>\n`
 				}
-
-				if(part.joined !== "right" && part.joined !== "both") {
-					// draw the right hand line
-					svgString += `<!-- !right !both --><path d="M${x + part.internalOffset * 5 + part.length * 5} ${y - (part.endHeight / 2 * 5)} ` + // move to top-right
-						`L${x + part.internalOffset * 5 + part.length * 5} ${y + (part.endHeight / 2 * 5)}" ` + // line to bottom right
-						`stroke-width="0.5" ` +
-						`stroke="${strokeColour}" ` +
-						`stroke-linejoin="round" ` +
-						`fill="${opaqueColour.colour}" ` +
-						`fill-opacity="${opaqueColour.opacity}"/>\n`
-				}
-
 				break;
 			case "convex":
 				// TODO - need to update as per above
