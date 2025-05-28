@@ -348,6 +348,7 @@ export abstract class SVGRenderer {
 			xOffsetTaperEndScale = part.taperEnd.xScale;
 		}
 
+		// TODO - same as taperStart
 		if(part.taperEnd) {
 			let backgroundColour: OpaqueColour = part.taperEnd.getBackgroundOpacityColour(colourIndex);
 			svgString += `\n<!-- TAPER END: ${part.shape} -->\n`
