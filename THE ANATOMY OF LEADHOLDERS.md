@@ -1,3 +1,3 @@
 # The Anatomy Of A Leadholder
 
-<img src="documentation/provector/images/anatomy-of-a-leadholder.png" />
+<img src="data/documentation/provector/images/anatomy-of-a-leadholder.png" />

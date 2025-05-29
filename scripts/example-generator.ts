@@ -7,6 +7,7 @@ import {SVGRenderer} from "./renderer/svg/SVGRenderer.ts";
 import {ObjectMapper} from "json-object-mapper";
 import deserialize = ObjectMapper.deserialize;
 import {SVGExampleRenderer} from "./renderer/svg/example/SVGExampleRenderer.ts";
+import {SVGExampleWithFrontRenderer} from "./renderer/svg/example/SVGExampleWithFrontRenderer.ts";
 
 let baseDir:string = './meta/examples';
 
@@ -44,7 +45,11 @@ for (const [dirIndex, pencilDirectory] of pencilDirectories.entries()) {
 			const exampleDirectory: string = path.join("./documentation/examples/", pencilDirectory);
 			fs.mkdirSync(exampleDirectory, { "recursive": true });
 
-			fileNumber = await renderSVGAndPNG(new SVGExampleRenderer(pencil), -1, "", pencilDirectory, pencilFileName, fileNumber);
+			if(pencilFileName.includes("shapes")) {
+				fileNumber = await renderSVGAndPNG(new SVGExampleWithFrontRenderer(pencil), -1, "", pencilDirectory, pencilFileName, fileNumber);
+			} else {
+				fileNumber = await renderSVGAndPNG(new SVGExampleRenderer(pencil), -1, "", pencilDirectory, pencilFileName, fileNumber);
+			}
 
 			fileNumber++;
 

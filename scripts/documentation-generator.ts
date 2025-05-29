@@ -16,7 +16,7 @@ import {ObjectMapper} from "json-object-mapper";
 import deserialize = ObjectMapper.deserialize;
 import {Component} from "./model/Component.ts";
 import {SVGTechnicalGroupedRenderer} from "./renderer/svg/technical/SVGTechnicalGroupedRenderer.ts";
-import {MDRenderer} from "./renderer/md/MDIndividualRenderer.ts";
+import {MDIndividualRenderer} from "./renderer/md/MDIndividualRenderer.ts";
 import {MDBrandGroupRenderer} from "./renderer/md/MDBrandGroupRenderer.ts";
 
 let baseDir:string = './data/pencil';
@@ -67,7 +67,7 @@ for (const [dirIndex, pencilDirectory] of pencilDirectories.entries()) {
 
 			const mdIndividualDirectory: string = path.join("./documentation/pencil/", pencilDirectory);
 			fs.mkdirSync(mdIndividualDirectory, { "recursive": true });
-			fs.writeFileSync(mdIndividualDirectory + "/" + pencilFileName + ".md", new MDRenderer(pencil, pencilFileName).render());
+			fs.writeFileSync(mdIndividualDirectory + "/" + pencilFileName + ".md", new MDIndividualRenderer(pencil, pencilFileName).render());
 			console.log(`        MD: [${fileNumber}] (individual) ${mdIndividualDirectory + pencilFileName + ".md"}`);
 			fileNumber++;
 
@@ -149,5 +149,4 @@ async function renderPNG(inputSVGFile:string,
 		});
 
 	console.log(`       PNG: [${fileNumber}] (${outputDirectoryType}) ${outputPngFile}`);
-
 }

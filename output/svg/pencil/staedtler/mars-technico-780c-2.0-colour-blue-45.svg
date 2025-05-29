@@ -18,6 +18,9 @@
 <path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 0,0 L 3,0"/>
 </pattern><pattern id="ridged" patternUnits="userSpaceOnUse" width="3" height="3">
 <path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 0,0 L 0,3"/>
+</pattern><pattern id="spring" patternUnits="userSpaceOnUse" width="8" height="60">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="2" d="M 1,1 L 8,60"/>
+<path stroke="white" stroke-linecap="round" stroke-width="1" d="M 1,1 L 8,60"/>
 </pattern><rect x="0" y="0" width="1000" height="1000" fill="white" stroke="black" stroke-width="4" />
 <rect x="2" y="2" width="996" height="996" fill="white" stroke="dimgray" stroke-width="1" />
 <g transform="rotate(-45 500 500)">

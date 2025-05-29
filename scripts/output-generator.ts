@@ -16,7 +16,7 @@ import {ObjectMapper} from "json-object-mapper";
 import deserialize = ObjectMapper.deserialize;
 import {Component} from "./model/Component.ts";
 import {SVGTechnicalGroupedRenderer} from "./renderer/svg/technical/SVGTechnicalGroupedRenderer.ts";
-import {MDRenderer} from "./renderer/md/MDIndividualRenderer.ts";
+import {MDIndividualRenderer} from "./renderer/md/MDIndividualRenderer.ts";
 
 let baseDir:string = './data/pencil';
 

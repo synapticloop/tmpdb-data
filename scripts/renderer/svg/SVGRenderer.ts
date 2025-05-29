@@ -473,6 +473,43 @@ export abstract class SVGRenderer {
 		return(svgString);
 	}
 
+	protected renderFrontComponent(x: number, y: number, component: Component, colourIndex:number): string {
+		let svgString: string = "";
+		let colour: OpaqueColour = new OpaqueColour(this.pencil.colourMap, "white%0");
+		svgString += `\n<!-- FRONT COMPONENT: ${component.type} -->\n`
+
+		component.parts.reverse();
+		for (let part of component.parts) {
+			colour = part.getOpacityColour(colourIndex);
+			switch (part.shape) {
+				case "cylinder":
+					svgString += circle(x, y, (part.startHeight / 2) * 5, "0.5", "black", colour);
+					break;
+				case "cone":
+				case "convex":
+				case "concave":
+					svgString += drawOutlineCircle((part.endHeight / 2) * 5, x, y, colour);
+					svgString += drawOutlineCircle((part.startHeight / 2) * 5, x, y, colour);
+					break;
+				case "hexagonal":
+					svgString += drawOutlineHexagon(x, y, part.startHeight, colour);
+					break;
+				case "octagonal":
+					svgString += drawOutlineOctagon(x, y, part.startHeight, colour);
+					break;
+			}
+		}
+
+		for(const extra of component.extras) {
+			extra.extraParts.reverse();
+			svgString += renderExtra(x, y, extra.xOffset, extra.yOffset, extra.depth, extra.extraParts, extra.getBackgroundOpacityColour(colourIndex));
+			extra.extraParts.reverse();
+		}
+
+		component.parts.reverse();
+		return(svgString);
+	}
+
 	protected renderFrontComponents(x: number, y: number, colourIndex:number): string {
 		let svgString: string = "";
 
@@ -486,7 +523,7 @@ export abstract class SVGRenderer {
 		// go through the components and render them
 		for(const component of this.pencil.components) {
 
-			svgString += `\n<!-- FRONT COMPONENT: ${component.type} -->\n`
+			svgString += `\n<!-- FRONT COMPONENTS: ${component.type} -->\n`
 			component.parts.reverse();
 			for (let part of component.parts) {
 				colour = part.getOpacityColour(colourIndex);
@@ -497,8 +534,8 @@ export abstract class SVGRenderer {
 					case "cone":
 					case "convex":
 					case "concave":
-						svgString += drawOutlineCircle((part.startHeight / 2) * 5, x, y, colour);
 						svgString += drawOutlineCircle((part.endHeight / 2) * 5, x, y, colour);
+						svgString += drawOutlineCircle((part.startHeight / 2) * 5, x, y, colour);
 						break;
 					case "hexagonal":
 						svgString += drawOutlineHexagon(x, y, part.startHeight, colour);
@@ -994,6 +1031,8 @@ export abstract class SVGRenderer {
 					`L${xStart} ${yStartBottom} Z" stroke-width="1.0" stroke="black" fill="url(#${finish})"/>\n`;
 			}
 
+			let backgoundColour: OpaqueColour = part.getBackgroundOpacityColour(colourIndex);
+
 			switch (finish) {
 				case "ferrule":
 					let offset = ((part.length / 13) * 5) / 2;
@@ -1010,6 +1049,29 @@ export abstract class SVGRenderer {
 					}
 
 					svgString += drawOutlineCircle(4, x + part.internalOffset * 5 + 15, y - part.startHeight / 4 * 5, new OpaqueColour(null, "dimgray"));
+
+					break;
+				case "sharpener-exposed":
+					let minHeight: number = part.endHeight < part.startHeight ? part.endHeight : part.startHeight;
+
+					svgString += `\n<!-- sharpener-exposed --><rect x="${x + part.internalOffset * 5 + 10}" ` +
+						`y="${y - (minHeight / 4 * 5)}" ` +
+						`width="${part.length * 5 - 20}" ` +
+						`height="${minHeight / 2 * 5}" ` +
+						`stroke-width="1" stroke="black" fill="${backgoundColour.colour}"/>\n`;
+
+					// now draw the exposed sharpener
+					svgString += `<path d="M${x + part.internalOffset * 5 + 11} ${y - (minHeight / 4 * 5) + 1} ` + // move
+						`L ${x + part.internalOffset * 5 + part.length * 5 - 11} ${y - (minHeight / 4 * 5) + 1} ` + // top line
+						`L ${x + part.internalOffset * 5 + part.length * 5 - 11} ${y - (minHeight / 4 * 5) + 6} ` + // right line
+						`L ${x + part.internalOffset * 5 + 11} ${y - (minHeight / 4 * 5) + 11} Z" ` + // bottom line
+						`stroke-width="1" stroke="gray" fill="gray" />\n`;
+
+					svgString += `<line x1="${x + part.internalOffset * 5 + 10.5}" ` +
+						`y1="${y - (minHeight / 4 * 5) + 11}" ` +
+						`x2="${x + part.internalOffset * 5 + part.length * 5 - 10.5}" ` +
+						`y2="${y - (minHeight / 4 * 5) + 6}" ` +
+						`stroke="silver" stroke-width="1" />`;
 
 					break;
 				case "spring":
@@ -1045,8 +1107,6 @@ export abstract class SVGRenderer {
 					}
 					break;
 				case "indicator":
-					// let backgoundColour: OpaqueColour = defaultOpaqueColour;
-					let backgoundColour: OpaqueColour = part.getBackgroundOpacityColour(colourIndex);
 
 					// now draw the indicator
 					svgString += `<rect x="${x + part.internalOffset * 5 + 10}" ` +

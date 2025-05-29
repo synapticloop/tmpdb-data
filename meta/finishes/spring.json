@@ -1,8 +1,8 @@
 {
 	"name": "spring",
 	"description": "A metallic spring that wraps around a component.",
-	"ignored": false,
-	"in_built": true,
+	"ignored": true,
+	"in_built": false,
 	"pattern": [
 		"<pattern id=\"spring\" patternUnits=\"userSpaceOnUse\" width=\"8\" height=\"60\">",
 		"<path stroke=\"dimgray\" stroke-linecap=\"round\" stroke-width=\"2\" d=\"M 1,1 L 8,60\"/>",

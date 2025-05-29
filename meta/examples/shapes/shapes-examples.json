@@ -13,21 +13,27 @@
 	"accurate": true,
 	"components": [
 		{
-			"type": "cylindrical",
+			"type": "cylinder",
 			"parts": [
-				{ "shape": "cylindrical", "dimensions": [ 40, 8 ] }
+				{ "shape": "cylinder", "dimensions": [ 40, 8 ] }
 			]
 		},
 		{
 			"type": "cone",
 			"parts": [
-				{ "shape": "cone", "dimensions": [ 40, 8, 12 ] }
+				{ "shape": "cone", "dimensions": [ 40, 6, 8 ] }
 			]
 		},
 		{
 			"type": "hexagonal",
 			"parts": [
 				{ "shape": "hexagonal", "dimensions": [ 40, 8 ] }
+			]
+		},
+		{
+			"type": "octagonal",
+			"parts": [
+				{ "shape": "octagonal", "dimensions": [ 40, 8 ] }
 			]
 		}
 	]

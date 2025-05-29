@@ -18,6 +18,9 @@
 <path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 0,0 L 3,0"/>
 </pattern><pattern id="ridged" patternUnits="userSpaceOnUse" width="3" height="3">
 <path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 0,0 L 0,3"/>
+</pattern><pattern id="spring" patternUnits="userSpaceOnUse" width="8" height="60">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="2" d="M 1,1 L 8,60"/>
+<path stroke="white" stroke-linecap="round" stroke-width="1" d="M 1,1 L 8,60"/>
 </pattern><rect x="0" y="0" width="1200" height="600" fill="white" stroke="black" stroke-width="4" />
 <rect x="2" y="2" width="1196" height="596" fill="white" stroke="dimgray" stroke-width="1" />
 <g transform="rotate(0 0 0)">
@@ -49,6 +52,7 @@
 <path d="M280 111.875 L337.5 111.875 M337.5 128.125 L280 128.125" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !right !both --><path d="M337.5 111.875 L337.5 128.125" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !left !both --><path d="M280 111.875 L280 128.125" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<path d="M280 111.875 L337.5 111.875 L337.5 128.125 L280 128.125 Z" stroke-width="1.0" stroke="black" fill="url(#spring)"/>
 <!-- feature: spring --><rect x="285" y="106.875" width="47.5" height="26.25" stroke-width="0.0" stroke="black" fill="url(#spring)"/>
 <line x1="280.5" y1="106.875" x2="280.5" y2="133.125" stroke="dimgray" stroke-linecap="round" stroke-width="2" />
 <line x1="280.5" y1="106.875" x2="280.5" y2="133.125" stroke="white" stroke-linecap="round" stroke-width="1" />

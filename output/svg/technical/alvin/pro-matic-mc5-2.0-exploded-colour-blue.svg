@@ -18,6 +18,9 @@
 <path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 0,0 L 3,0"/>
 </pattern><pattern id="ridged" patternUnits="userSpaceOnUse" width="3" height="3">
 <path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 0,0 L 0,3"/>
+</pattern><pattern id="spring" patternUnits="userSpaceOnUse" width="8" height="60">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="2" d="M 1,1 L 8,60"/>
+<path stroke="white" stroke-linecap="round" stroke-width="1" d="M 1,1 L 8,60"/>
 </pattern><rect x="0" y="0" width="1200" height="480" fill="white" stroke="black" stroke-width="4" />
 <rect x="2" y="2" width="1196" height="476" fill="white" stroke="dimgray" stroke-width="1" />
 <g transform="rotate(0 0 0)">
@@ -160,6 +163,7 @@
 <path d="M773.75 349.375 L931.25 349.375 M931.25 370.625 L773.75 370.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
 <!-- !right !both --><path d="M931.25 349.375 L931.25 370.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
 <!-- !left !both --><path d="M773.75 349.375 L773.75 370.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
+<path d="M773.75 349.375 L931.25 349.375 L931.25 370.625 L773.75 370.625 Z" stroke-width="1.0" stroke="black" fill="url(#spring)"/>
 <!-- feature: spring --><rect x="778.75" y="344.375" width="147.5" height="31.25" stroke-width="0.0" stroke="black" fill="url(#spring)"/>
 <line x1="774.25" y1="344.375" x2="774.25" y2="375.625" stroke="dimgray" stroke-linecap="round" stroke-width="2" />
 <line x1="774.25" y1="344.375" x2="774.25" y2="375.625" stroke="white" stroke-linecap="round" stroke-width="1" />

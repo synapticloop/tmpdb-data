@@ -1,6 +1,6 @@
 import {Pencil} from "../../model/Pencil.ts";
 
-export class MDRenderer {
+export class MDIndividualRenderer {
 	pencil: Pencil;
 	pencilFileName: string
 

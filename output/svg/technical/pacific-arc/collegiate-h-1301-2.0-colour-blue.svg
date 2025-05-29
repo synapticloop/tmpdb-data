@@ -18,6 +18,9 @@
 <path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 0,0 L 3,0"/>
 </pattern><pattern id="ridged" patternUnits="userSpaceOnUse" width="3" height="3">
 <path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 0,0 L 0,3"/>
+</pattern><pattern id="spring" patternUnits="userSpaceOnUse" width="8" height="60">
+<path stroke="dimgray" stroke-linecap="round" stroke-width="2" d="M 1,1 L 8,60"/>
+<path stroke="white" stroke-linecap="round" stroke-width="1" d="M 1,1 L 8,60"/>
 </pattern><rect x="0" y="0" width="1500" height="600" fill="white" stroke="black" stroke-width="4" />
 <rect x="2" y="2" width="1496" height="596" fill="white" stroke="dimgray" stroke-width="1" />
 <g transform="rotate(0 0 0)">
@@ -302,6 +305,9 @@
 <!-- !right !both --><path d="M1101.875 279.375 L1101.875 320.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#0174bd" fill-opacity="1"/>
 <!-- !left !both --><path d="M1046.875 279.375 L1046.875 320.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#0174bd" fill-opacity="1"/>
 
+<!-- sharpener-exposed --><rect x="1056.875" y="289.6875" width="35" height="20.625" stroke-width="1" stroke="black" fill="#0174bd"/>
+<path d="M1057.875 290.6875 L 1090.875 290.6875 L 1090.875 295.6875 L 1057.875 300.6875 Z" stroke-width="1" stroke="gray" fill="gray" />
+<line x1="1057.375" y1="300.6875" x2="1091.375" y2="295.6875" stroke="silver" stroke-width="1" />
 
 <!-- renderPart: cylinder -->
 <path d="M1101.825 280 L1104.425 280 L1104.425 320 L1101.825 320 Z" stroke-width="0" stroke="none" stroke-linejoin="round" fill="#0174bd" fill-opacity="1"/>
