@@ -68,7 +68,7 @@
 		{
 			"type": "clip",
 			"parts": [
-				{ "shape": "cylinder", "dimensions": [ 5.5, 9.0 ] }
+				{ "shape": "cylinder", "dimensions": [ 5.5, 9.0 ], "shape_offset": [ 0, 0, 0, -1.5 ] }
 			],
 			"extras": [
 				{
@@ -86,7 +86,7 @@
 		{
 			"type": "tail",
 			"parts": [
-				{ "shape": "cylinder", "dimensions": [ 4.0, 8.0 ] }
+				{ "shape": "cylinder", "dimensions": [ 4.0, 8.0 ], "shape_offset": [ 0, 0, -1.325, 0 ] }
 			],
 			"material": "metal"
 		},
