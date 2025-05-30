@@ -68,7 +68,7 @@
 		{
 			"type": "clip",
 			"parts": [
-				{ "shape": "cylinder", "dimensions": [ 5.5, 9.0 ] }
+				{ "shape": "cylinder", "dimensions": [ 5.5, 9.0 ], "shape_offset": [ 0, 0, 0, -2 ] }
 			],
 			"extras": [
 				{

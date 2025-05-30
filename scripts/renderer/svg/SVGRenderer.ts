@@ -941,10 +941,10 @@ export abstract class SVGRenderer {
 					`fill-opacity="${opaqueColour.opacity}"/>\n`
 
 				// now draw the top and bottom lines
-				svgString += `<path d="M${x + part.internalOffset * 5} ${y - (part.startHeight / 2 * 5)} ` + // move to top-left
-					`L${x + part.internalOffset * 5 + part.length * 5} ${y - (part.endHeight / 2 * 5)} ` + // line to top right
-					`M${x + part.internalOffset * 5 + part.length * 5} ${y + (part.endHeight / 2 * 5)} ` + // move to bottom right
-					`L${x + part.internalOffset * 5} ${y + (part.startHeight / 2 * 5)}" ` + // line to bottom left
+				svgString += `<path d="M${xLeftTop} ${yLeftTop} ` + // move to top-left
+					`L${xTopRight} ${yRightTop} ` + // line to top right
+					`M${xRightBottom} ${yRightBottom} ` + // move to bottom right
+					`L${xLeftBottom} ${yLeftBottom}" ` + // line to bottom left
 					`stroke-width="0.5" ` +
 					`stroke="${strokeColour}" ` +
 					`stroke-linejoin="round" ` +
@@ -958,6 +958,7 @@ export abstract class SVGRenderer {
 					case "left":
 						// draw the right line
 						svgString += `<!-- !right !both --><path d="M${x + part.internalOffset * 5 + part.length * 5} ${y - (part.endHeight / 2 * 5)} ` + // move to top-right
+							rightMidLine +
 							`L${x + part.internalOffset * 5 + part.length * 5} ${y + (part.endHeight / 2 * 5)}" ` + // line to bottom right
 							`stroke-width="0.5" ` +
 							`stroke="${strokeColour}" ` +
@@ -968,6 +969,7 @@ export abstract class SVGRenderer {
 					case "right":
 						// draw the left line
 						svgString += `<!-- !left !both --><path d="M${x + part.internalOffset * 5} ${y - (part.startHeight / 2 * 5)} ` + // move to top-left
+							leftMidLine +
 							`L${x + part.internalOffset * 5} ${y + (part.startHeight / 2 * 5)}" ` + // line to bottom left
 							`stroke-width="0.5" ` +
 							`stroke="${strokeColour}" ` +
@@ -978,6 +980,7 @@ export abstract class SVGRenderer {
 					default:
 						// draw both
 						svgString += `<!-- !right !both --><path d="M${x + part.internalOffset * 5 + part.length * 5} ${y - (part.endHeight / 2 * 5)} ` + // move to top-right
+							rightMidLine +
 							`L${x + part.internalOffset * 5 + part.length * 5} ${y + (part.endHeight / 2 * 5)}" ` + // line to bottom right
 							`stroke-width="0.5" ` +
 							`stroke="${strokeColour}" ` +
@@ -986,6 +989,7 @@ export abstract class SVGRenderer {
 							`fill-opacity="${opaqueColour.opacity}"/>\n`
 						// draw the left line
 						svgString += `<!-- !left !both --><path d="M${x + part.internalOffset * 5} ${y - (part.startHeight / 2 * 5)} ` + // move to top-left
+							leftMidLine
 							`L${x + part.internalOffset * 5} ${y + (part.startHeight / 2 * 5)}" ` + // line to bottom left
 							`stroke-width="0.5" ` +
 							`stroke="${strokeColour}" ` +
