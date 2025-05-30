@@ -1,0 +1,164 @@
+{
+	"brand": "rOtring",
+	"model_name": "Tikky",
+	"model_number": "TK12",
+	"text": "rOtring Tikky 0.5",
+
+	"skus": [ "1904700", "1904698", "1904699", "1904701", "2189063", "2189064", "2189065", "2214580", "2189067", "2214582", "2214583" ],
+
+	"manufactured_in": "",
+	"manufactured_from": [ "", "", "", "", "", "", "", "2025", "2025", "2025"],
+	"manufactured_to": [],
+
+	"accuracy": "high",
+
+	"mechanism": "click",
+	"lead_size": 0.5,
+	"weight": 0.0,
+
+	"features": [
+		{ "type": "eraser", "location":  "inside shaft" }
+	],
+
+	"colour_component": "body",
+	"colours": [ "black", "white", "red", "blue", "rose", "sea blue", "orchid", "magenta", "iris", "marigold" ],
+	"colour_map": {
+		"black": "#ffffff",
+		"white": "#000000",
+		"red": "#ff0000",
+		"blue": "#0041fe",
+		"rose": "#d6676e",
+		"sea blue": "#5ca4a0",
+		"orchid": "#b19cbb",
+		"magenta": "#cc4e88",
+		"iris": "#6681af",
+		"marigold": "#ffa101"
+	},
+
+	"front": [
+		{ "shape": "cylinder", "dimensions": [ 0.5, 10.0 ], "fill":  [ "black" ] }
+	],
+
+	"back": [
+		{ "shape": "cylinder", "dimensions": [ 0.5, 1.0 ], "fill":  [ "white" ] }
+	],
+
+	"components": [
+		{
+			"type": "lead guide",
+			"material": "metal",
+			"colours": [ "silver" ],
+			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 4.0, 1.25 ] }
+			]
+		},
+		{
+			"type": "tip",
+			"material": "metal",
+			"colours": [ "silver" ],
+			"parts": [
+				{ "shape": "cone", "dimensions": [ 12.5, 2.5, 9.25 ] }
+			],
+			"internal_end": [
+				{ "shape": "cylinder", "dimensions": [ 3.5, 7.0 ] }
+			]
+		},
+		{
+			"type": "shaft",
+			"material": "plastic",
+			"internal_start": [
+				{ "shape": "cylinder", "dimensions": [ 2.0, 4.5 ], "colours": [ "brass" ] }
+			],
+			"internal_end": [
+				{ "shape": "cylinder", "dimensions": [ 1.25, 4.75 ], "colours": [ "sea blue" ], "finish": "threaded" },
+				{ "shape": "cylinder", "dimensions": [ 3.75, 4.75 ], "colours": [ "sea blue" ], "finish": "threaded" },
+				{ "shape": "cylinder", "dimensions": [ 4.25, 7.0 ], "colours": [ "sea blue" ], "finish": "threaded" },
+				{ "shape": "cylinder", "dimensions": [ 14.0, 6.25 ], "colours": [ "sea blue" ] },
+				{ "shape": "cylinder", "dimensions": [ 80.5, 5.0 ], "colours": [ "white" ] },
+				{ "shape": "cylinder", "dimensions": [ 1.25, 5.5 ], "colours": [ "white" ] },
+				{ "shape": "cylinder", "dimensions": [ 8.75, 5.0 ], "colours": [ "white" ] }
+			]
+		},
+		{
+			"type": "eraser clip",
+			"material": "metal",
+			"colours": [ "silver" ],
+			"internal_start": [
+				{ "shape": "cylinder", "dimensions": [ 4.25, 4.0 ], "internal_offset": 113.75, "joined": "right" },
+				{ "shape": "cylinder", "dimensions": [ 1.25, 4.0 ], "finish": "lined", "joined": "both" },
+				{ "shape": "cylinder", "dimensions": [ 1.25, 4.0 ], "joined": "left" }
+			],
+			"internal_end": [
+				{ "shape": "cylinder", "dimensions": [ 2.0, 4.0 ], "colours": [ "silver" ], "finish": "lined" }
+			]
+		},
+		{
+			"type": "eraser",
+			"material": "rubber",
+			"colours": [ "white" ],
+			"internal_start": [
+				{ "shape": "cylinder", "dimensions": [ 6.75, 3.75 ], "internal_offset": 115.75 }
+			],
+			"internal_end": [
+				{ "shape": "cylinder", "dimensions": [ 3.5, 4.0 ] }
+			]
+		},
+		{
+			"type": "head",
+			"material": "plastic",
+			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 2.0, 9.25 ] }
+			]
+		},
+		{
+			"type": "grip",
+			"material": "rubber",
+			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 0.75, 9.25 ], "colours": [ "dimgray"] },
+				{ "shape": "cylinder", "dimensions": [ 33.75, 9.25 ], "finish": "tk12-grip" },
+				{ "shape": "cylinder", "dimensions": [ 2.25, 9.25 ], "colours": [ "dimgray"] }
+			]
+		},
+		{
+			"type": "body",
+			"material": "plastic",
+			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 2.25, 9.25 ] },
+				{ "shape": "cylinder", "dimensions": [ 2.2, 9.5 ], "colours": [ "red" ] },
+				{ "shape": "cylinder", "dimensions": [ 59, 9.25 ] }
+			]
+		},
+		{
+			"type": "clip",
+			"material": "metal",
+			"colours": [ "silver" ],
+			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 5.25, 9.25 ] }
+			]
+		},
+		{
+			"type": "tail",
+			"material": "plastic",
+			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 3.25, 9.25 ], "shape_offset": [0, 0, 0, 2.5] }
+			]
+		},
+		{
+			"type": "cap",
+			"material": "metal",
+			"colours": [ "silver" ],
+			"internal_start": [
+				{ "shape": "cylinder", "dimensions": [ 6.5, 5.75 ], "shape_offset": [ 0, 0.5, 0, 2.05 ], "joined": "right" }
+			],
+			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 11.0, 5.75 ], "shape_offset": [ 0.5, 0, 2.05, 0], "joined": "left" },
+				{ "shape": "concave", "dimensions": [ 1.0, 5.75 ], "offset": [ 2.25, 2.875 ] }
+			]
+		}
+	],
+
+	"sources": [
+		{ "name": "o-plus Brands", "href": "https://oplusbrands.bg/media/stenik_brochure/pdf/rOtring%20Catalog%202025%20LR.pdf" },
+		{ "name":  "rotring", "href":  "https://www.rotring.com/pens-pencils/mechanical-pencils/tikky-mechanical-pencil/SAP_1904691.html"}
+	]
+}

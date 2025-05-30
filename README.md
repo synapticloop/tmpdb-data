@@ -47,11 +47,13 @@ _(To regenerate the list - and this `README.md` file, run `npm run readme-genera
 | **Pacific Arc** | **Premium** | H-1309 | 2.0 | 2 | high |
 | **Pacific Arc** | **TECH PRO** | H-1305 | 2.0 | 5 | high |
 | **Redcircle** | **600** | 600 | 2.0 | 3 | high |
+| **rOtring** | **Tikky** | TK12 | 0.5 | 10 | high |
+| **rOtring** | **Tikky** | TK12 | 0.7 | 15 | high |
 | **Staedtler** | **Mars Technico** | 780c | 2.0 | 2 | high |
 | **STUDMARK** | **3750** | 3750 | 2.0 | 1 | high |
 | **Unbranded** | **Metal Black** | unknown | 2.0 | 1 | high |
 | **Unbranded** | **Plastic Black** | unknown | 2.0 | 1 | high |
-| | | **20 Pencils** | | **58 Variants**<br />_(colours / patterns)_  | |
+| | | **22 Pencils** | | **83 Variants**<br />_(colours / patterns)_  | |
 
 
 

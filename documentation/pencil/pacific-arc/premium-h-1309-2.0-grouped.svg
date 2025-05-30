@@ -69,7 +69,7 @@
 <path d="M208.7 279.375 L356.3 279.375 M356.3 320.625 L208.7 320.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !right !both --><path d="M356.3 279.375 L356.3 320.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !left !both --><path d="M208.7 279.375 L208.7 320.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<path d="M208.75 279.375 L356.25 279.375 L356.25 320.625 L208.75 320.625 Z" stroke-width="1.0" stroke="black" fill="url(#knurled)"/>
+<!-- DEFAULT FINISH: knurled --><path d="M208.75 279.375 L356.25 279.375 L356.25 320.625 L208.75 320.625 Z" stroke-width="0.5" stroke="black" fill="url(#knurled)"/>
 
 
 <!-- renderSideComponent: body -->
@@ -118,7 +118,7 @@
 <path d="M741.2 279.375 L788.8 279.375 M788.8 320.625 L741.2 320.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !right !both --><path d="M788.8 279.375 L788.8 320.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !left !both --><path d="M741.2 279.375 L741.2 320.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<path d="M741.25 279.375 L788.75 279.375 L788.75 320.625 L741.25 320.625 Z" stroke-width="1.0" stroke="black" fill="url(#knurled)"/>
+<!-- DEFAULT FINISH: knurled --><path d="M741.25 279.375 L788.75 279.375 L788.75 320.625 L741.25 320.625 Z" stroke-width="0.5" stroke="black" fill="url(#knurled)"/>
 <rect x="751.25" y="289.6875" width="27.5" height="20.625" rx="3" ry="3" stroke-width="1" stroke="black" fill="white"/>
 <text x="765" y="300" text-anchor="middle" dominant-baseline="central"><tspan stroke="dimgray" stroke-width="0.5" font-family="sans-serif" fill="black" textLength="{this.width * 5 - 24}" > HB</tspan></text>
 
@@ -281,7 +281,7 @@
 <path d="M208.7 619.375 L356.3 619.375 M356.3 660.625 L208.7 660.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1"/>
 <!-- !right !both --><path d="M356.3 619.375 L356.3 660.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1"/>
 <!-- !left !both --><path d="M208.7 619.375 L208.7 660.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1"/>
-<path d="M208.75 619.375 L356.25 619.375 L356.25 660.625 L208.75 660.625 Z" stroke-width="1.0" stroke="black" fill="url(#knurled)"/>
+<!-- DEFAULT FINISH: knurled --><path d="M208.75 619.375 L356.25 619.375 L356.25 660.625 L208.75 660.625 Z" stroke-width="0.5" stroke="black" fill="url(#knurled)"/>
 
 
 <!-- renderSideComponent: body -->
@@ -330,7 +330,7 @@
 <path d="M741.2 619.375 L788.8 619.375 M788.8 660.625 L741.2 660.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1"/>
 <!-- !right !both --><path d="M788.8 619.375 L788.8 660.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1"/>
 <!-- !left !both --><path d="M741.2 619.375 L741.2 660.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1"/>
-<path d="M741.25 619.375 L788.75 619.375 L788.75 660.625 L741.25 660.625 Z" stroke-width="1.0" stroke="black" fill="url(#knurled)"/>
+<!-- DEFAULT FINISH: knurled --><path d="M741.25 619.375 L788.75 619.375 L788.75 660.625 L741.25 660.625 Z" stroke-width="0.5" stroke="black" fill="url(#knurled)"/>
 <rect x="751.25" y="629.6875" width="27.5" height="20.625" rx="3" ry="3" stroke-width="1" stroke="black" fill="#b4b8b9"/>
 <text x="765" y="640" text-anchor="middle" dominant-baseline="central"><tspan stroke="dimgray" stroke-width="0.5" font-family="sans-serif" fill="black" textLength="{this.width * 5 - 24}" > HB</tspan></text>
 
@@ -439,7 +439,7 @@
 <path d="M208.7 739.375 L356.3 739.375 M356.3 780.625 L208.7 780.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#000000" fill-opacity="1"/>
 <!-- !right !both --><path d="M356.3 739.375 L356.3 780.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#000000" fill-opacity="1"/>
 <!-- !left !both --><path d="M208.7 739.375 L208.7 780.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#000000" fill-opacity="1"/>
-<path d="M208.75 739.375 L356.25 739.375 L356.25 780.625 L208.75 780.625 Z" stroke-width="1.0" stroke="black" fill="url(#knurled)"/>
+<!-- DEFAULT FINISH: knurled --><path d="M208.75 739.375 L356.25 739.375 L356.25 780.625 L208.75 780.625 Z" stroke-width="0.5" stroke="black" fill="url(#knurled)"/>
 
 
 <!-- renderSideComponent: body -->
@@ -488,7 +488,7 @@
 <path d="M741.2 739.375 L788.8 739.375 M788.8 780.625 L741.2 780.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#000000" fill-opacity="1"/>
 <!-- !right !both --><path d="M788.8 739.375 L788.8 780.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#000000" fill-opacity="1"/>
 <!-- !left !both --><path d="M741.2 739.375 L741.2 780.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#000000" fill-opacity="1"/>
-<path d="M741.25 739.375 L788.75 739.375 L788.75 780.625 L741.25 780.625 Z" stroke-width="1.0" stroke="black" fill="url(#knurled)"/>
+<!-- DEFAULT FINISH: knurled --><path d="M741.25 739.375 L788.75 739.375 L788.75 780.625 L741.25 780.625 Z" stroke-width="0.5" stroke="black" fill="url(#knurled)"/>
 <rect x="751.25" y="749.6875" width="27.5" height="20.625" rx="3" ry="3" stroke-width="1" stroke="black" fill="#000000"/>
 <text x="765" y="760" text-anchor="middle" dominant-baseline="central"><tspan stroke="dimgray" stroke-width="0.5" font-family="sans-serif" fill="black" textLength="{this.width * 5 - 24}" > HB</tspan></text>
 

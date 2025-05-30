@@ -62,7 +62,7 @@
 <path d="M420.575 140 L574.425 140 M574.425 180 L420.575 180" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !right !both --><path d="M574.425 140 L574.425 180" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !left !both --><path d="M420.575 140 L420.575 180" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<path d="M420.625 140 L574.375 140 L574.375 180 L420.625 180 Z" stroke-width="1.0" stroke="black" fill="url(#knurled-small)"/>
+<!-- DEFAULT FINISH: knurled-small --><path d="M420.625 140 L574.375 140 L574.375 180 L420.625 180 Z" stroke-width="0.5" stroke="black" fill="url(#knurled-small)"/>
 
 
 <!-- renderSideComponent: body -->
@@ -150,7 +150,7 @@
 <path d="M414.95 260 L543.8 260 M543.8 300 L414.95 300" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !right !both --><path d="M543.8 260 L543.8 300" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !left !both --><path d="M414.95 260 L414.95 300" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<path d="M415 260 L543.75 260 L543.75 300 L415 300 Z" stroke-width="1.0" stroke="black" fill="url(#knurled-small)"/>
+<!-- DEFAULT FINISH: knurled-small --><path d="M415 260 L543.75 260 L543.75 300 L415 300 Z" stroke-width="0.5" stroke="black" fill="url(#knurled-small)"/>
 
 
 <!-- renderSideComponent: body -->
@@ -193,7 +193,7 @@
 <path d="M1018.7 260.625 L1032.55 260.625 M1032.55 299.375 L1018.7 299.375" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !right !both --><path d="M1032.55 260.625 L1032.55 299.375" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !left !both --><path d="M1018.7 260.625 L1018.7 299.375" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<path d="M1018.75 260.625 L1032.5 260.625 L1032.5 299.375 L1018.75 299.375 Z" stroke-width="1.0" stroke="black" fill="url(#lined)"/>
+<!-- DEFAULT FINISH: lined --><path d="M1018.75 260.625 L1032.5 260.625 L1032.5 299.375 L1018.75 299.375 Z" stroke-width="0.5" stroke="black" fill="url(#lined)"/>
 
 
 <!-- renderSideComponent: cap -->

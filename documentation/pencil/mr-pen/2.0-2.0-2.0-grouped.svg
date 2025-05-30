@@ -75,7 +75,7 @@
 <path d="M218.075 278.75 L373.175 278.75 M373.175 321.25 L218.075 321.25" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !right !both --><path d="M373.175 278.75 L373.175 321.25" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !left !both --><path d="M218.075 278.75 L218.075 321.25" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<path d="M218.125 278.75 L373.125 278.75 L373.125 321.25 L218.125 321.25 Z" stroke-width="1.0" stroke="black" fill="url(#knurled)"/>
+<!-- DEFAULT FINISH: knurled --><path d="M218.125 278.75 L373.125 278.75 L373.125 321.25 L218.125 321.25 Z" stroke-width="0.5" stroke="black" fill="url(#knurled)"/>
 
 
 <!-- renderSideComponent: body -->
@@ -205,7 +205,7 @@
 <path d="M218.075 618.75 L373.175 618.75 M373.175 661.25 L218.075 661.25" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1"/>
 <!-- !right !both --><path d="M373.175 618.75 L373.175 661.25" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1"/>
 <!-- !left !both --><path d="M218.075 618.75 L218.075 661.25" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1"/>
-<path d="M218.125 618.75 L373.125 618.75 L373.125 661.25 L218.125 661.25 Z" stroke-width="1.0" stroke="black" fill="url(#knurled)"/>
+<!-- DEFAULT FINISH: knurled --><path d="M218.125 618.75 L373.125 618.75 L373.125 661.25 L218.125 661.25 Z" stroke-width="0.5" stroke="black" fill="url(#knurled)"/>
 
 
 <!-- renderSideComponent: body -->
