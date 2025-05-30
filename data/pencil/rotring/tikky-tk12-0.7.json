@@ -29,7 +29,7 @@
 		"neon orange": "#f06507",
 		"neon green": "#77f02a",
 		"neon pink": "#f92e75",
-		"light blue": "#1e1f22",
+		"light blue": "#b1d0c7",
 		"orchid": "#b19cbb",
 		"opal": "#cfdfd8",
 		"sea blue": "#5ca4a0",
@@ -65,7 +65,47 @@
 				{ "shape": "cone", "dimensions": [ 12.5, 2.5, 9.25 ] }
 			],
 			"internal_end": [
-				{ "shape": "cylinder", "dimensions": [ 3.5, 1.0 ] }
+				{ "shape": "cylinder", "dimensions": [ 3.5, 7.0 ] }
+			]
+		},
+		{
+			"type": "shaft",
+			"material": "plastic",
+			"internal_start": [
+				{ "shape": "cylinder", "dimensions": [ 2.0, 4.5 ], "colours": [ "brass" ] }
+			],
+			"internal_end": [
+				{ "shape": "cylinder", "dimensions": [ 1.25, 4.75 ], "colours": [ "sea blue" ], "finish": "threaded" },
+				{ "shape": "cylinder", "dimensions": [ 3.75, 4.75 ], "colours": [ "sea blue" ], "finish": "threaded" },
+				{ "shape": "cylinder", "dimensions": [ 4.25, 7.0 ], "colours": [ "sea blue" ], "finish": "threaded" },
+				{ "shape": "cylinder", "dimensions": [ 14.0, 6.25 ], "colours": [ "sea blue" ] },
+				{ "shape": "cylinder", "dimensions": [ 80.5, 5.0 ], "colours": [ "white" ] },
+				{ "shape": "cylinder", "dimensions": [ 1.25, 5.5 ], "colours": [ "white" ] },
+				{ "shape": "cylinder", "dimensions": [ 8.75, 5.0 ], "colours": [ "white" ] }
+			]
+		},
+		{
+			"type": "eraser clip",
+			"material": "metal",
+			"colours": [ "silver" ],
+			"internal_start": [
+				{ "shape": "cylinder", "dimensions": [ 4.25, 4.0 ], "internal_offset": 113.75, "joined": "right" },
+				{ "shape": "cylinder", "dimensions": [ 1.25, 4.0 ], "finish": "lined", "joined": "both" },
+				{ "shape": "cylinder", "dimensions": [ 1.25, 4.0 ], "joined": "left" }
+			],
+			"internal_end": [
+				{ "shape": "cylinder", "dimensions": [ 2.0, 4.0 ], "colours": [ "silver" ], "finish": "lined" }
+			]
+		},
+		{
+			"type": "eraser",
+			"material": "rubber",
+			"colours": [ "white" ],
+			"internal_start": [
+				{ "shape": "cylinder", "dimensions": [ 6.75, 3.75 ], "internal_offset": 115.75 }
+			],
+			"internal_end": [
+				{ "shape": "cylinder", "dimensions": [ 3.5, 4.0 ] }
 			]
 		},
 		{
@@ -94,15 +134,6 @@
 			]
 		},
 		{
-			"type": "shaft",
-			"material": "plastic",
-			"internal_start": [
-				{ "shape": "cylinder", "dimensions": [ 2.25, 9.25 ] },
-				{ "shape": "cylinder", "dimensions": [ 2.2, 9.5 ], "colours": [ "red" ] },
-				{ "shape": "cylinder", "dimensions": [ 59, 9.25 ] }
-			]
-		},
-		{
 			"type": "clip",
 			"material": "metal",
 			"colours": [ "silver" ],
@@ -118,11 +149,14 @@
 			]
 		},
 		{
-			"type": "tail",
+			"type": "cap",
 			"material": "metal",
 			"colours": [ "silver" ],
+			"internal_start": [
+				{ "shape": "cylinder", "dimensions": [ 6.5, 5.75 ], "shape_offset": [ 0, 0.5, 0, 2.05 ], "joined": "right" }
+			],
 			"parts": [
-				{ "shape": "cylinder", "dimensions": [ 11.0, 5.75 ], "shape_offset": [ 0.5, 0, 2.05, 0] },
+				{ "shape": "cylinder", "dimensions": [ 11.0, 5.75 ], "shape_offset": [ 0.5, 0, 2.05, 0], "joined": "left" },
 				{ "shape": "concave", "dimensions": [ 1.0, 5.75 ], "offset": [ 2.25, 2.875 ] }
 			]
 		}

@@ -46,6 +46,10 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 	SVG_WIDTH: number = 1200;
 	SVG_HEIGHT: number = 120;
 
+	// this switch is to debug the component markers - which will draw lines
+	// where needed in various colours
+	debug: boolean = true;
+
 	private markerMap: Map<number, ComponentMarker> = new Map<number, ComponentMarker>();
 
 	constructor(pencil: Pencil, pencilDir: string) {
@@ -120,8 +124,10 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 
 					if(!previousComponent.hasInternal || component.hasInternalStart) {
 						this.markComponent(y + 60, x, y, Infinity)
-						// svgString += lineHorizontal(x, y, 40, "2", "orange");
-						// svgString += lineVertical(x + 40, y, 60, "2", "orange");
+						if(this.debug) {
+							svgString += lineHorizontal(x, y, 40, "5", "orange");
+							svgString += lineVertical(x + 40, y, 60, "5", "orange");
+						}
 					}
 
 					incremented = true;
@@ -152,8 +158,10 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 
 			if(component.hasInternalStart) {
 				this.markComponent(y - 60, x, y, -component.internalStartLength);
-				// svgString += lineHorizontal(x, y, component.internalStartLength * -5 - 40, "2", "green");
-				// svgString += lineVertical(x - component.internalStartLength * 5 - 40 , y, -60, "2", "green");
+				if(this.debug) {
+					svgString += lineHorizontal(x, y, component.internalStartLength * -5 - 40, "2", "green");
+					svgString += lineVertical(x - component.internalStartLength * 5 - 40 , y, -60, "2", "green");
+				}
 			}
 
 
@@ -197,8 +205,10 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 
 			if(component.hasInternalEnd) {
 				this.markComponent(y + 60, x - component.internalEndLength * 5, y, component.internalEndLength);
-				// 	svgString += lineHorizontal(x - component.internalEndLength * 5, y, component.internalEndLength * 5 + 40, "2", "blue");
-				// svgString += lineVertical(x + 40, y, 60, "2", "blue");
+				if(this.debug) {
+					svgString += lineHorizontal(x - component.internalEndLength * 5, y, component.internalEndLength * 5 + 40, "2", "blue");
+					svgString += lineVertical(x + 40, y, 60, "2", "blue");
+				}
 			}
 
 			if(component.hasInternalEnd  && !component.isHidden) {
@@ -219,8 +229,10 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 
 			if(!component.hasInternalStart && incremented) {
 				this.markComponent(y - 60, x, y, -Infinity)
-				// svgString += lineHorizontal(x - 40, y, 40, "2", "red");
-				// svgString += lineVertical(x - 40 , y, -60, "2", "red");
+				if(this.debug) {
+					svgString += lineHorizontal(x - 40, y, 40, "2", "red");
+					svgString += lineVertical(x - 40, y, -60, "2", "red");
+				}
 			}
 
 			if(incremented && previousComponent.isHidden) {
@@ -228,8 +240,10 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 				const nextComponent: Component = this.pencil.components[index + 1];
 				if(nextComponent && !nextComponent.isHidden && !nextComponent.hasInternalStart) {
 					this.markComponent(y - 60, x, y, -Infinity);
-					// svgString += lineHorizontal(x - 40, y, 40, "2", "purple");
-					// svgString += lineVertical(x - 40 , y, -60, "2", "purple");
+					if(this.debug) {
+						svgString += lineHorizontal(x - 40, y, 40, "2", "purple");
+						svgString += lineVertical(x - 40, y, -60, "2", "purple");
+					}
 				}
 			}
 		}

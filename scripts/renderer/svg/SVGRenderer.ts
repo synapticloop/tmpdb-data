@@ -37,7 +37,7 @@ export abstract class SVGRenderer {
 
 	static defaultFinishLoaded: boolean = false;
 
-	private finishMap: Map<string, Pencil> = new Map();
+	private finishMap: Map<string, Finish> = new Map();
 	protected pencilDir: string = null;
 
 	protected pencil: Pencil;
@@ -62,7 +62,7 @@ export abstract class SVGRenderer {
 		this.defaultFinishLoaded = true;
 	}
 
-	private loadCustomFinishes() {
+	private loadCustomFinishes(): void {
 		if(!this.pencilDir) {
 			return;
 		}
@@ -93,7 +93,7 @@ export abstract class SVGRenderer {
 		this._rendererName = rendererName;
 		this.pencilDir = pencilDir;
 
-		this.loadCustomFinishes(pencilDir);
+		this.loadCustomFinishes();
 	}
 
 	/**
@@ -1071,7 +1071,7 @@ export abstract class SVGRenderer {
 		// now for the finish - although this only really works for cylinder types
 		// the question becomes whether there will be other finishes on different
 		// objects
-		for(const finish of part.finish.split(",")) {
+		for(let finish of part.finish.split(",")) {
 			let xStart: number = x + (part.internalOffset)* 5;
 			let xEnd: number = x + part.length * 5;
 
@@ -1081,17 +1081,24 @@ export abstract class SVGRenderer {
 			let yEndTop: number = y - (part.endHeight / 2 * 5);
 			let yEndBottom: number = y + (part.endHeight / 2 * 5);
 
+			let foundOutlineFinish: boolean = true;
+			if(colourIndex == -1) {
+				if(this.finishMap.has(finish + "-1")) {
+					finish = finish + "-1";
+				}
+			}
+
 			// TODO - do specific lookup for the pattern
 			if(this.finishMap.has(finish)) {
-				svgString += `<path d="M${xStart} ${yStartTop} ` +
+				svgString += `<!-- CUSTOM FINISH: ${finish} --><path d="M${xStart} ${yStartTop} ` +
 					`L${xEnd} ${yEndTop} ` +
 					`L${xEnd} ${yEndBottom} ` +
-					`L${xStart} ${yStartBottom} Z" stroke-width="1.0" stroke="black" fill="url(#${finish})"/>\n`;
+					`L${xStart} ${yStartBottom} Z" stroke-width="0.5" stroke="black" fill="url(#${finish})"/>\n`;
 			} else if(SVGRenderer.defaultFinishMap.has(finish)) {
-				svgString += `<path d="M${xStart} ${yStartTop} ` +
+				svgString += `<!-- DEFAULT FINISH: ${finish} --><path d="M${xStart} ${yStartTop} ` +
 					`L${xEnd} ${yEndTop} ` +
 					`L${xEnd} ${yEndBottom} ` +
-					`L${xStart} ${yStartBottom} Z" stroke-width="1.0" stroke="black" fill="url(#${finish})"/>\n`;
+					`L${xStart} ${yStartBottom} Z" stroke-width="0.5" stroke="black" fill="url(#${finish})"/>\n`;
 			}
 
 			let backgoundColour: OpaqueColour = part.getBackgroundOpacityColour(colourIndex);

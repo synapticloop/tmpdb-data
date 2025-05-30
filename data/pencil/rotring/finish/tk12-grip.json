@@ -5,23 +5,15 @@
 	"in_built": false,
 	"TODO": "need to round this",
 	"pattern": [
-		"<pattern id=\"tk12-grip\" x=\"0\" y=\"0\" patternUnits=\"objectBoundingBox\" width=\"55\" height=\"46\">",
-		"<line stroke=\"#656f74\" stroke-width=\"28\" x1=\"14\" x2=\"14\" y1=\"15\" y2=\"46\"/>",
-		"<line stroke=\"#656f74\" stroke-width=\"28\" x1=\"42\" x2=\"42\" y1=\"0\" y2=\"31\"/>",
-		"<line stroke=\"#656f74\" stroke-width=\"28\" x1=\"70\" x2=\"70\" y1=\"15\" y2=\"46\"/>",
-		"<line stroke=\"#656f74\" stroke-width=\"28\" x1=\"98\" x2=\"98\" y1=\"0\" y2=\"31\"/>",
-		"<line stroke=\"#656f74\" stroke-width=\"28\" x1=\"126\" x2=\"126\" y1=\"15\" y2=\"46\"/>",
-		"<line stroke=\"#656f74\" stroke-width=\"28\" x1=\"154\" x2=\"154\" y1=\"0\" y2=\"31\"/>",
-		"<line stroke=\"#7f7f7f\" stroke-width=\"3\" x1=\"28\" x2=\"28\" y1=\"0\" y2=\"46\"/>",
-		"<line stroke=\"#0f0f0f\" stroke-width=\"1\" x1=\"28\" x2=\"28\" y1=\"0\" y2=\"46\"/>",
-		"<line stroke=\"#7f7f7f\" stroke-width=\"3\" x1=\"56\" x2=\"56\" y1=\"0\" y2=\"46\"/>",
-		"<line stroke=\"#0f0f0f\" stroke-width=\"1\" x1=\"56\" x2=\"56\" y1=\"0\" y2=\"46\"/>",
-		"<line stroke=\"#7f7f7f\" stroke-width=\"3\" x1=\"84\" x2=\"84\" y1=\"0\" y2=\"46\"/>",
-		"<line stroke=\"#0f0f0f\" stroke-width=\"1\" x1=\"84\" x2=\"84\" y1=\"0\" y2=\"46\"/>",
-		"<line stroke=\"#7f7f7f\" stroke-width=\"3\" x1=\"112\" x2=\"112\" y1=\"0\" y2=\"46\"/>",
-		"<line stroke=\"#0f0f0f\" stroke-width=\"1\" x1=\"112\" x2=\"112\" y1=\"0\" y2=\"46\"/>",
-		"<line stroke=\"#7f7f7f\" stroke-width=\"3\" x1=\"140\" x2=\"140\" y1=\"0\" y2=\"46\"/>",
-		"<line stroke=\"#0f0f0f\" stroke-width=\"1\" x1=\"140\" x2=\"140\" y1=\"0\" y2=\"46\"/>",
+		"<pattern id=\"tk12-grip\" x=\"0\" y=\"0\" patternUnits=\"objectBoundingBox\" width=\"1\" height=\"1\">",
+		"<path d=\"M 0 5 C 0 15 28 15 28 5 L 28 46 L 0 46 L 0 5\" stroke-width=\"1\" stroke=\"black\" fill=\"#656f74\" />",
+		"<path d=\"M 56 5 C 56 15 84 15 84 5 L 84 46 L 56 46 L 56 5\" stroke-width=\"1\" stroke=\"black\" fill=\"#656f74\" />",
+		"<path d=\"M 112 5 C 112 15 140 15 140 5 L 140 46 L 112 46 L 112 5\" stroke-width=\"1\" stroke=\"black\" fill=\"#656f74\" />",
+
+		"<path d=\"M 28 41 C 28 31 56 31 56 41 L 56 0 L 28 0 L 28 41\" stroke-width=\"1\" stroke=\"black\" fill=\"#656f74\" />",
+		"<path d=\"M 84 41 C 84 31 112 31 112 41 L 112 0 L 84 0 L 84 41\" stroke-width=\"1\" stroke=\"black\" fill=\"#656f74\" />",
+		"<path d=\"M 140 41 C 140 31 168 31 168 41 L 168 0 L 140 0 L 140 41\" stroke-width=\"1\" stroke=\"black\" fill=\"#656f74\" />",
+
 		"</pattern>"
 
 	]

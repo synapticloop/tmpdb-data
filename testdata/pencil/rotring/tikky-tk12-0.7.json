@@ -87,11 +87,25 @@
 		{
 			"type": "eraser clip",
 			"material": "metal",
+			"colours": [ "silver" ],
 			"internal_start": [
-				{ "shape": "cylinder", "dimensions": [ 6.75, 4.0 ], "colours": [ "silver" ] }
+				{ "shape": "cylinder", "dimensions": [ 4.25, 4.0 ], "internal_offset": 113.75, "joined": "right" },
+				{ "shape": "cylinder", "dimensions": [ 1.25, 4.0 ], "finish": "lined", "joined": "both" },
+				{ "shape": "cylinder", "dimensions": [ 1.25, 4.0 ], "joined": "left" }
 			],
 			"internal_end": [
-				{ "shape": "cylinder", "dimensions": [ 2.0, 4.0 ], "colours": [ "silver" ] }
+				{ "shape": "cylinder", "dimensions": [ 2.0, 4.0 ], "colours": [ "silver" ], "finish": "lined" }
+			]
+		},
+		{
+			"type": "eraser",
+			"material": "rubber",
+			"colours": [ "white" ],
+			"internal_start": [
+				{ "shape": "cylinder", "dimensions": [ 6.75, 3.75 ], "internal_offset": 115.75 }
+			],
+			"internal_end": [
+				{ "shape": "cylinder", "dimensions": [ 3.5, 4.0 ] }
 			]
 		},
 		{

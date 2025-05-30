@@ -1,0 +1,20 @@
+{
+	"name": "tk12-grip-1",
+	"description": "Grip for the Tikky rOtring TK12 grip",
+	"ignored": true,
+	"in_built": false,
+	"TODO": "need to round this",
+	"pattern": [
+		"<pattern id=\"tk12-grip-1\" x=\"0\" y=\"0\" patternUnits=\"objectBoundingBox\" width=\"1\" height=\"1\">",
+		"<path d=\"M 0 5 C 0 15 28 15 28 5 L 28 46 L 0 46 L 0 5\" stroke-width=\"0.5\" stroke=\"black\" fill=\"none\" />",
+		"<path d=\"M 56 5 C 56 15 84 15 84 5 L 84 46 L 56 46 L 56 5\" stroke-width=\"0.5\" stroke=\"black\" fill=\"none\" />",
+		"<path d=\"M 112 5 C 112 15 140 15 140 5 L 140 46 L 112 46 L 112 5\" stroke-width=\"0.5\" stroke=\"black\" fill=\"none\" />",
+
+		"<path d=\"M 28 41 C 28 31 56 31 56 41 L 56 0 L 28 0 L 28 41\" stroke-width=\"0.5\" stroke=\"black\" fill=\"none\" />",
+		"<path d=\"M 84 41 C 84 31 112 31 112 41 L 112 0 L 84 0 L 84 41\" stroke-width=\"0.5\" stroke=\"black\" fill=\"none\" />",
+		"<path d=\"M 140 41 C 140 31 168 31 168 41 L 168 0 L 140 0 L 140 41\" stroke-width=\"0.5\" stroke=\"black\" fill=\"none\" />",
+
+		"</pattern>"
+
+	]
+}
