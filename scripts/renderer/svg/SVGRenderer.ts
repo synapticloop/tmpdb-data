@@ -898,27 +898,25 @@ export abstract class SVGRenderer {
 		// draw the background colour first
 		let xLeftTop: number = x + part.internalOffset * 5 - 0.05 + part.xTopLeftOffset * 5;
 		let xRightTop: number = x + part.internalOffset * 5 + part.length * 5 +  + part.xTopRightOffset * 5 + 0.05;
-		let xLeftMid: number = 0;
-		let xRightMid: number = 0;
+		let xLeftMid: number = (null !== part.xMidLeftOffset ? xLeftTop + part.xMidLeftOffset * 5: 0);
+		let xRightMid: number = (null !== part.xMidRightOffset ? xRightTop + part.xMidRightOffset * 5: 0);
 		let xLeftBottom: number = x + part.internalOffset * 5 - 0.05 + part.xBottomLeftOffset * 5;
 		let xRightBottom: number = x + part.internalOffset * 5 + part.length * 5 + part.xBottomRightOffset + 0.05;
 
 		let yLeftTop: number = y - (part.startHeight / 2 * 5);
 		let yRightTop: number = y - (part.endHeight / 2 * 5);
-		let yLeftMid: number = 0;
-		let yRightMid: number = 0;
 		let yLeftBottom: number = y + (part.startHeight / 2 * 5);
 		let yRightBottom: number = y + (part.endHeight / 2 * 5);
 
 		// now for the mid lines
 		let leftMidLine: string = "";
 		if(part.xMidLeftOffset !== null) {
-
+			`L${xLeftMid} ${y}`;
 		}
 
 		let rightMidLine: string = "";
 		if(part.xMidRightOffset !== null) {
-
+			`L${xRightMid} ${y}`;
 		}
 
 		switch (part.shape) {
@@ -934,6 +932,7 @@ export abstract class SVGRenderer {
 						rightMidLine + // line to the right midline (if it exists)
 						`L${xRightBottom} ${yRightBottom} ` + // line to bottom right
 						`L${xLeftBottom} ${yLeftBottom} ` + // line to bottom left
+						leftMidLine + // line to the left midline (if it exists)
 						`L${xLeftBottom} ${yLeftTop}" ` + // line to top left
 					`stroke-width="0" ` +
 					`stroke="none" ` +
