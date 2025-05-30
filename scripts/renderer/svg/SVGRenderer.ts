@@ -896,19 +896,30 @@ export abstract class SVGRenderer {
 		let opaqueColour: OpaqueColour = part.getOpacityColour(colourIndex);
 
 		// draw the background colour first
-		let xLeftTop: number = x + part.internalOffset * 5 - 0.05;
-		let xRightTop: number = 0;
+		let xLeftTop: number = x + part.internalOffset * 5 - 0.05 + part.xTopLeftOffset * 5;
+		let xRightTop: number = x + part.internalOffset * 5 + part.length * 5 +  + part.xTopRightOffset * 5 + 0.05;
 		let xLeftMid: number = 0;
 		let xRightMid: number = 0;
-		let xLeftBottom: number = 0;
-		let xRightBottom: number = 0;
+		let xLeftBottom: number = x + part.internalOffset * 5 - 0.05 + part.xBottomLeftOffset * 5;
+		let xRightBottom: number = x + part.internalOffset * 5 + part.length * 5 + part.xBottomRightOffset + 0.05;
 
-		let yLeftTop: number = 0;
-		let yRightTop: number = 0;
+		let yLeftTop: number = y - (part.startHeight / 2 * 5);
+		let yRightTop: number = y - (part.endHeight / 2 * 5);
 		let yLeftMid: number = 0;
 		let yRightMid: number = 0;
-		let yLeftBottom: number = 0;
-		let yRightBottom: number = 0;
+		let yLeftBottom: number = y + (part.startHeight / 2 * 5);
+		let yRightBottom: number = y + (part.endHeight / 2 * 5);
+
+		// now for the mid lines
+		let leftMidLine: string = "";
+		if(part.xMidLeftOffset !== null) {
+
+		}
+
+		let rightMidLine: string = "";
+		if(part.xMidRightOffset !== null) {
+
+		}
 
 		switch (part.shape) {
 			case "cylinder":
@@ -918,10 +929,12 @@ export abstract class SVGRenderer {
 				// draw the background colour first - we do just a slight adjustment
 				// to fill in the colour completely (0.05)... (this will be overwritten
 				// by the stroke perhaps)
-				svgString += `<path d="M${xLeftTop} ${y - (part.startHeight / 2 * 5)} ` + // move to top left
-						`L${x + part.internalOffset * 5 + part.length * 5 + 0.05} ${y - (part.endHeight / 2 * 5)} ` + // line to top right
-						`L${x + part.internalOffset * 5 + part.length * 5 + 0.05} ${y + (part.endHeight / 2 * 5)} ` + //
-						`L${x + part.internalOffset * 5 - 0.05} ${y + (part.startHeight / 2 * 5)} Z" ` +
+				svgString += `<path d="M${xLeftTop} ${yLeftTop} ` + // move to top left
+						`L${xRightTop} ${yRightTop} ` + // line to top right
+						rightMidLine + // line to the right midline (if it exists)
+						`L${xRightBottom} ${yRightBottom} ` + // line to bottom right
+						`L${xLeftBottom} ${yLeftBottom} ` + // line to bottom left
+						`L${xLeftBottom} ${yLeftTop}" ` + // line to top left
 					`stroke-width="0" ` +
 					`stroke="none" ` +
 					`stroke-linejoin="round" ` +

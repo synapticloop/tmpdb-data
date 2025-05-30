@@ -25,6 +25,9 @@ export class Part extends Base {
 	@JsonProperty({ name: "colours", required: false })
 	private colours: string[] = [];
 
+	@JsonProperty({ name: "shape_offset", required: false })
+	shapeOffest: number[] = []; // the shape offset
+
 	@JsonProperty({ name: "background_colours", required: false })
 	private backgroundColours: string[] = [];
 
@@ -44,6 +47,14 @@ export class Part extends Base {
 
 	material: string = null;
 
+	xTopLeftOffset: number = 0;
+	xTopRightOffset: number = 0;
+
+	xMidLeftOffset: number = null;
+	xMidRightOffset: number = null;
+
+	xBottomLeftOffset: number = 0;
+	xBottomRightOffset: number = 0;
 
 	postConstruct(colours: string[], colourMap: Map<string, string>): void {
 		// contribute to the length
@@ -64,6 +75,25 @@ export class Part extends Base {
 			this.endHeight = this.dimensions[2];
 		} else {
 			this.endHeight = this.dimensions[1];
+		}
+		switch (this.shapeOffest.length) {
+			case 0:
+				// do nothing
+				break;
+			case 4:
+				this.xTopLeftOffset = this.shapeOffest[0];
+				this.xTopRightOffset = this.shapeOffest[1];
+				this.xBottomLeftOffset = this.shapeOffest[2];
+				this.xBottomRightOffset = this.shapeOffest[3];
+				break;
+			case 6:
+				this.xTopLeftOffset = this.shapeOffest[0];
+				this.xTopRightOffset = this.shapeOffest[1];
+				this.xMidLeftOffset = this.shapeOffest[2];
+				this.xMidRightOffset = this.shapeOffest[3];
+				this.xBottomLeftOffset = this.shapeOffest[4];
+				this.xBottomRightOffset = this.shapeOffest[5];
+				break;
 		}
 	}
 
