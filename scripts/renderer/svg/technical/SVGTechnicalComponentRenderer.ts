@@ -5,8 +5,8 @@ import {
 } from "../../../utils/svg-helper.ts";
 
 export class SVGTechnicalComponentRenderer extends SVGRenderer {
-	constructor(pencil: Pencil) {
-		super(pencil, 1200, 500, "SVGTechnicalComponentRenderer");
+	constructor(pencil: Pencil, pencilDir: string) {
+		super(pencil, 1200, 500, "SVGTechnicalComponentRenderer", pencilDir);
 	}
 
 	/**

@@ -14,7 +14,6 @@ import {
 	drawTextBoldCentred,
 	lineHorizontal,
 	lineVertical,
-	lineVerticalGuide,
 	rectangle,
 	renderExtra,
 	target,
@@ -39,6 +38,7 @@ export abstract class SVGRenderer {
 	static defaultFinishLoaded: boolean = false;
 
 	private finishMap: Map<string, Pencil> = new Map();
+	protected pencilDir: string = null;
 
 	protected pencil: Pencil;
 	protected _width: number;
@@ -46,31 +46,54 @@ export abstract class SVGRenderer {
 
 	private readonly _rendererName: string;
 
-	static loadDefaultPatterns(): void {
+	static loadDefaultFinishes(): void {
 		// load all the patterns
-		for (const listFile of listFiles("./meta/finishes")) {
-			const patternName: string = listFile.substring(0, listFile.lastIndexOf("."));
-			const pattern: Finish = ObjectMapper.deserialize(Finish, JSON.parse(fs.readFileSync("./meta/finishes/" + listFile, "utf8")));
-			console.log(`Statically loaded pattern ${listFile} (${pattern.name} - ${pattern.description}) ${pattern.inBuilt ? "In built into the system as code." : ""}`);
+		for (const listFile of listFiles("./meta/finish")) {
+			const finishName: string = listFile.substring(0, listFile.lastIndexOf("."));
+			const finish: Finish = ObjectMapper.deserialize(Finish, JSON.parse(fs.readFileSync("./meta/finish/" + listFile, "utf8")));
+			console.log(`Statically loaded finish from file: ${listFile} (${finish.name} - ${finish.description}) ${finish.inBuilt ? "In built into the system as code." : ""}`);
 
-			if(!pattern.inBuilt) {
-				this.defaultFinishMap.set(patternName, pattern);
+			if(!finish.inBuilt) {
+				this.defaultFinishMap.set(finishName, finish);
 			}
 
-			this.allFinishMap.set(patternName, pattern);
+			this.allFinishMap.set(finishName, finish);
 		}
 		this.defaultFinishLoaded = true;
 	}
 
-	protected constructor(pencil:Pencil, width: number, height: number, rendererName:string = "") {
-		if(!SVGRenderer.defaultFinishLoaded) {
-			SVGRenderer.loadDefaultPatterns();
+	private loadCustomFinishes() {
+		if(!this.pencilDir) {
+			return;
 		}
+
+		if(!fs.existsSync("./data/pencil/" + this.pencilDir + "/finish/")) {
+			return;
+		}
+
+		for (const listFile of listFiles("./data/pencil/" + this.pencilDir + "/finish/")) {
+			const finishName: string = listFile.substring(0, listFile.lastIndexOf("."));
+			const finish: Finish = ObjectMapper.deserialize(Finish, JSON.parse(fs.readFileSync("./data/pencil/" + this.pencilDir + "/finish/" + listFile, "utf8")));
+			console.log(`Custom loaded finish from file ${listFile} (${finish.name} - ${finish.description}) ${finish.inBuilt ? "In built into the system as code." : ""}`);
+
+			this.finishMap.set(finishName, finish);
+		}
+	}
+
+	protected constructor(pencil:Pencil, width: number, height: number, rendererName:string = "",pencilDir: string=null) {
+		if(!SVGRenderer.defaultFinishLoaded) {
+			SVGRenderer.loadDefaultFinishes();
+		}
+
+
 
 		this.pencil = pencil;
 		this._width = width;
 		this._height = height;
 		this._rendererName = rendererName;
+		this.pencilDir = pencilDir;
+
+		this.loadCustomFinishes(pencilDir);
 	}
 
 	/**
@@ -107,8 +130,12 @@ export abstract class SVGRenderer {
 			`width="${this._width}" ` +
 			`height="${this._height}">\n `;
 
-		for(const pattern of SVGRenderer.defaultFinishMap.values()) {
-			svgString += pattern.pattern.join("\n");
+		for(const finish of SVGRenderer.defaultFinishMap.values()) {
+			svgString += finish.pattern.join("\n");
+		}
+
+		for(const finish of this.finishMap.values()) {
+			svgString += finish.pattern.join("\n");
 		}
 
 		svgString += this.addOutlineBox(this._width, this._height, transparent) +
@@ -697,8 +724,12 @@ export abstract class SVGRenderer {
 		return(svgString);
 	}
 
-	protected renderSideMaterials(): string {
+	protected renderSideMaterials(yMid: number=null): string {
 		let svgString: string = "";
+
+		if(yMid === null) {
+			yMid = this._height/2;
+		}
 
 		let xOffset: number = (this._width - this.pencil.totalLength * 5)/2;
 		for (let component of this.pencil.components) {
@@ -710,7 +741,7 @@ export abstract class SVGRenderer {
 			for(const extra of component.extras) {
 				svgString += dimensionsHorizontal(
 					xOffset + extra.xOffset * 5,
-					this._height/2 + 80,
+					yMid + 80,
 					extra.length * 5,
 					`${component.materials.join("\n")}`,
 					TextOrientation.BOTTOM,
@@ -719,7 +750,7 @@ export abstract class SVGRenderer {
 
 			// draw all the dimensions
 			svgString += dimensionsHorizontal(xOffset,
-				this._height/2 + 120,
+				yMid + 120,
 				component.length * 5,
 				`${(component.materials.join("\n"))}`,
 				TextOrientation.BOTTOM_ROTATED,
@@ -843,10 +874,13 @@ export abstract class SVGRenderer {
 		return(svgString);
 	}
 
-	protected renderTotalLengthDimensions(): string {
+	protected renderTotalLengthDimensions(yMid: number=null): string {
+		if(null === yMid) {
+			yMid = this._height/2;
+		}
 		return(dimensionsHorizontal(
 			this._width/2 - this.pencil.totalLength*5/2,
-			this._height/2 + 30 + this.pencil.maxHeight/2 * 5,
+			yMid + 30 + this.pencil.maxHeight/2 * 5,
 			this.pencil.totalLength * 5,
 			`${formatToTwoPlaces(this.pencil.totalLength)} mm`,
 			TextOrientation.CENTER,

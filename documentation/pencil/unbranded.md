@@ -2,11 +2,64 @@
 
 Available pencil definitions:
 
+ - Plastic Black // Model #: unknown - (2.0 mm) 
+
  - Metal Black // Model #: unknown - (2.0 mm) 
 
 
 
 <img src="./unbranded/unbranded-brand-grouped.png" />
+
+## Unbranded Plastic Black // Model #: unknown - (2.0mm) 
+
+Accuracy level for information on this pencil: `high`
+
+### Pencil Information
+
+| `---Item---` | `---Information---` |
+| ---: | :--- |
+| **Brand** | Unbranded |
+| **Model name** | Plastic Black |
+| **Model number** | unknown |
+| **Weight** | undefined g |
+| **Mechanism** | click |
+| **Lead size** | 2.0 mm |
+| **Lead shape** | cylindrical |
+| **Maximum lead length** | undefined |
+| **Manufactured in** | unknown |
+| **`---Feature---`** | **`---Location---`** |
+| **sharpener** | inside cap |
+| **lead grade indicator** | tail |
+### Pencil Measurements
+
+_(Note: all offsets are from the start of the pencil)_
+
+| `---Item---` | `---Offset---` | `---Length---` |
+| ---: | ---: | ---: |
+| **tip** | 0 mm | 19 mm |
+| **body** | 19 mm | 115 mm |
+| **cap** | 134 mm | 11.75 mm |
+| **grip** | 19 mm | 25.75 mm |
+| **clip** | 110.75 mm | 41.5 mm |
+| | **Pencil length** | 145.75 mm |
+
+
+
+
+<img src="./unbranded/aliexpress-unbranded-plastic-2.0-grouped.png" />
+
+
+
+### Colours
+
+
+
+| Colour | SKU | Manufacture dates |
+| ---: | :--- | :--- |
+| **royalblue** | unrecorded | From: undefined to undefined |
+
+
+---
 
 ## Unbranded Metal Black // Model #: unknown - (2.0mm) 
 

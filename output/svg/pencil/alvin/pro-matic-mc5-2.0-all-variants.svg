@@ -31,30 +31,30 @@
 
 
 <!-- renderPart: cone -->
-<path d="M124.95 112.5 L142.55 105.625 L142.55 134.375 L124.95 127.5 Z" stroke-width="0" stroke="none" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
-<path d="M125 112.5 L142.5 105.625 M142.5 134.375 L125 127.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
-<!-- !right !both --><path d="M142.5 105.625 L142.5 134.375" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
-<!-- !left !both --><path d="M125 112.5 L125 127.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
+<path d="M124.95 112.5 L142.55 105.625 L142.55 134.375 L124.95 127.5 L124.95 112.5" stroke-width="0" stroke="none" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
+<path d="M124.95 112.5 L142.55 105.625 M142.55 134.375 L124.95 127.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
+<!-- !right !both --><path d="M142.55 105.625 L142.55 134.375" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
+<!-- !left !both --><path d="M124.95 112.5 L124.95 127.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
 
 
 <!-- renderSideComponent: tip -->
 
 
 <!-- renderPart: cone -->
-<path d="M142.45 103.125 L215.05 101.25 L215.05 138.75 L142.45 136.875 Z" stroke-width="0" stroke="none" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
-<path d="M142.5 103.125 L215 101.25 M215 138.75 L142.5 136.875" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
-<!-- !right !both --><path d="M215 101.25 L215 138.75" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
-<!-- !left !both --><path d="M142.5 103.125 L142.5 136.875" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
+<path d="M142.45 103.125 L215.05 101.25 L215.05 138.75 L142.45 136.875 L142.45 103.125" stroke-width="0" stroke="none" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
+<path d="M142.45 103.125 L215.05 101.25 M215.05 138.75 L142.45 136.875" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
+<!-- !right !both --><path d="M215.05 101.25 L215.05 138.75" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
+<!-- !left !both --><path d="M142.45 103.125 L142.45 136.875" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
 
 
 <!-- renderSideComponent: grip -->
 
 
 <!-- renderPart: cylinder -->
-<path d="M214.95 100 L343.8 100 L343.8 140 L214.95 140 Z" stroke-width="0" stroke="none" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
-<path d="M215 100 L343.75 100 M343.75 140 L215 140" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
-<!-- !right !both --><path d="M343.75 100 L343.75 140" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
-<!-- !left !both --><path d="M215 100 L215 140" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
+<path d="M214.95 100 L343.8 100 L343.8 140 L214.95 140 L214.95 100" stroke-width="0" stroke="none" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
+<path d="M214.95 100 L343.8 100 M343.8 140 L214.95 140" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
+<!-- !right !both --><path d="M343.8 100 L343.8 140" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
+<!-- !left !both --><path d="M214.95 100 L214.95 140" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
 <path d="M215 100 L343.75 100 L343.75 140 L215 140 Z" stroke-width="1.0" stroke="black" fill="url(#knurled-small)"/>
 
 
@@ -62,10 +62,10 @@
 
 
 <!-- renderPart: hexagonal -->
-<path d="M343.7 100 L760.05 100 L760.05 140 L343.7 140 Z" stroke-width="0" stroke="none" stroke-linejoin="round" fill="#24549C" fill-opacity="1"/>
-<path d="M343.75 100 L760 100 M760 140 L343.75 140" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#24549C" fill-opacity="1"/>
-<!-- !right !both --><path d="M760 100 L760 140" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#24549C" fill-opacity="1"/>
-<!-- !left !both --><path d="M343.75 100 L343.75 140" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#24549C" fill-opacity="1"/>
+<path d="M343.7 100 L760.05 100 L760.05 140 L343.7 140 L343.7 100" stroke-width="0" stroke="none" stroke-linejoin="round" fill="#24549C" fill-opacity="1"/>
+<path d="M343.7 100 L760.05 100 M760.05 140 L343.7 140" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#24549C" fill-opacity="1"/>
+<!-- !right !both --><path d="M760.05 100 L760.05 140" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#24549C" fill-opacity="1"/>
+<!-- !left !both --><path d="M343.7 100 L343.7 140" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#24549C" fill-opacity="1"/>
 
 <!-- shine -->
 <line x1="343.75" y1="117" x2="760" y2="117" stroke-width="4" stroke-opacity="0.2" stroke="white" /><line x1="343.75" y1="118" x2="760" y2="118" stroke-width="1" stroke-opacity="0.2" stroke="white" /><line x1="343.75" y1="114" x2="760" y2="114" stroke-width="1" stroke-opacity="0.1" stroke="white" /><line x1="343.75" y1="101" x2="760" y2="101" stroke-width="2" stroke-opacity="0.3" stroke="black" /><line x1="343.75" y1="102" x2="760" y2="104" stroke-width="2" stroke-opacity="0.1" stroke="black" /><line x1="343.75" y1="123" x2="760" y2="123" stroke-width="4" stroke-opacity="0.2" stroke="white" /><line x1="343.75" y1="122" x2="760" y2="122" stroke-width="1" stroke-opacity="0.2" stroke="white" /><line x1="343.75" y1="126" x2="760" y2="126" stroke-width="1" stroke-opacity="0.1" stroke="white" /><line x1="343.75" y1="136" x2="760" y2="136" stroke-width="2" stroke-opacity="0.1" stroke="black" /><line x1="343.75" y1="139" x2="760" y2="139" stroke-width="2" stroke-opacity="0.3" stroke="black" /><line x1="343.75" y1="138" x2="760" y2="136" stroke-width="2" stroke-opacity="0.1" stroke="black" /><line x1="346.25" y1="120" x2="762.5" y2="120" stroke-width="1.5" stroke="gray" fill="gray" stroke-opacity="1.0"/>
@@ -76,17 +76,17 @@
 
 
 <!-- renderPart: cone -->
-<path d="M759.95 98.75 L772.55 100 L772.55 140 L759.95 141.25 Z" stroke-width="0" stroke="none" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
-<path d="M760 98.75 L772.5 100 M772.5 140 L760 141.25" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
-<!-- !right !both --><path d="M772.5 100 L772.5 140" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
-<!-- !left !both --><path d="M760 98.75 L760 141.25" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
+<path d="M759.95 98.75 L772.55 100 L772.55 140 L759.95 141.25 L759.95 98.75" stroke-width="0" stroke="none" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
+<path d="M759.95 98.75 L772.55 100 M772.55 140 L759.95 141.25" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
+<!-- !right !both --><path d="M772.55 100 L772.55 140" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
+<!-- !left !both --><path d="M759.95 98.75 L759.95 141.25" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
 
 
 <!-- renderPart: cylinder -->
-<path d="M772.45 100 L818.8 100 L818.8 140 L772.45 140 Z" stroke-width="0" stroke="none" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
-<path d="M772.5 100 L818.75 100 M818.75 140 L772.5 140" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
-<!-- !right !both --><path d="M818.75 100 L818.75 140" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
-<!-- !left !both --><path d="M772.5 100 L772.5 140" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
+<path d="M772.45 100 L818.8 100 L818.8 140 L772.45 140 L772.45 100" stroke-width="0" stroke="none" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
+<path d="M772.45 100 L818.8 100 M818.8 140 L772.45 140" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
+<!-- !right !both --><path d="M818.8 100 L818.8 140" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
+<!-- !left !both --><path d="M772.45 100 L772.45 140" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
 <rect x="782.5" y="110" width="26.25" height="20" rx="3" ry="3" stroke-width="1" stroke="black" fill="silver"/>
 <text x="795.625" y="120" text-anchor="middle" dominant-baseline="central"><tspan stroke="dimgray" stroke-width="0.5" font-family="sans-serif" fill="black" textLength="{this.width * 5 - 24}" > HB</tspan></text>
 
@@ -94,10 +94,10 @@
 
 
 <!-- renderPart: cylinder -->
-<path d="M818.7 100.625 L832.55 100.625 L832.55 139.375 L818.7 139.375 Z" stroke-width="0" stroke="none" stroke-linejoin="round" fill="black" fill-opacity="1"/>
-<path d="M818.75 100.625 L832.5 100.625 M832.5 139.375 L818.75 139.375" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1"/>
-<!-- !right !both --><path d="M832.5 100.625 L832.5 139.375" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1"/>
-<!-- !left !both --><path d="M818.75 100.625 L818.75 139.375" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1"/>
+<path d="M818.7 100.625 L832.55 100.625 L832.55 139.375 L818.7 139.375 L818.7 100.625" stroke-width="0" stroke="none" stroke-linejoin="round" fill="black" fill-opacity="1"/>
+<path d="M818.7 100.625 L832.55 100.625 M832.55 139.375 L818.7 139.375" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1"/>
+<!-- !right !both --><path d="M832.55 100.625 L832.55 139.375" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1"/>
+<!-- !left !both --><path d="M818.7 100.625 L818.7 139.375" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1"/>
 <path d="M818.75 100.625 L832.5 100.625 L832.5 139.375 L818.75 139.375 Z" stroke-width="1.0" stroke="black" fill="url(#lined)"/>
 
 
@@ -105,9 +105,9 @@
 
 
 <!-- renderPart: cylinder -->
-<path d="M832.45 106.25 L875.05 106.25 L875.05 133.75 L832.45 133.75 Z" stroke-width="0" stroke="none" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
-<path d="M832.5 106.25 L875 106.25 M875 133.75 L832.5 133.75" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
-<!-- !right !both --><path d="M875 106.25 L875 133.75" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
+<path d="M832.45 106.25 L875.05 106.25 L875.05 133.75 L832.45 133.75 L832.45 106.25" stroke-width="0" stroke="none" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
+<path d="M832.45 106.25 L875.05 106.25 M875.05 133.75 L832.45 133.75" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
+<!-- !right !both --><path d="M875.05 106.25 L875.05 133.75" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
 
 <!-- TAPER START: hexagonal -->
 <path d="M 343.65 100.25 L 346.25 100.25 C 343.4375 105, 343.4375 115, 346.25 120 C 343.4375 125, 343.4375 135, 346.25 139.75 L 343.65 139.75 Z" stroke-width="0" stroke="0" stroke-linecap="round" fill-opacity="1" fill="#24549C" /><path d="M 346.25 100.5 C 343.4375 105, 343.4375 115, 346.25 120 C 343.4375 125, 343.4375 135, 346.25 139.45" stroke-width="1.5" stroke="gray" stroke-linecap="round" fill-opacity="0" fill="none" /><path d="M 346.25 100.5 C 343.4375 105, 343.4375 115, 346.25 120 C 343.4375 125, 343.4375 135, 346.25 139.5" stroke-width="0.5" stroke="black" stroke-opacity="0.5" stroke-linecap="round" fill-opacity="0" fill="none" /></g><text x="50%" y="200" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // Synapticloop // The Mechanical Pencil Database (tmpdb)</text>

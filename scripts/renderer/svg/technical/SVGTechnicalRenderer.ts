@@ -19,11 +19,10 @@ import {Extra} from "../../../model/Extra.ts";
 import {OpaqueColour} from "../../../model/meta/OpaqueColour.ts";
 
 export class SVGTechnicalRenderer extends SVGRenderer {
-	SVG_WIDTH: number = 1500;
-	SVG_HEIGHT: number = 600;
+	renderCentralLine: number = 500;
 
-	constructor(pencil: Pencil) {
-		super(pencil, 1500, 600, "SVGTechnicalRenderer");
+	constructor(pencil: Pencil, pencilDir: string) {
+		super(pencil, 1500, 800, "SVGTechnicalRenderer", pencilDir);
 	}
 
 	/**
@@ -38,13 +37,13 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 		let svgString:string = this.getSvgStart();
 
 		// centre line for the entire pencil
-		svgString += super.renderCentreLineHorizontal(this.SVG_HEIGHT/2);
+		svgString += super.renderCentreLineHorizontal(this.renderCentralLine);
 		// centre line for the side view
-		svgString += super.renderCentreLineVertical(this.SVG_WIDTH/2, 90, 90);
+		svgString += super.renderCentreLineVertical(this._width/2, 90, 90);
 		// centre line for the front view
 		svgString += super.renderCentreLineVertical(160, 150, 90);
 		// centre line for the back view
-		svgString += super.renderCentreLineVertical(this.SVG_WIDTH - 100, 150, 90);
+		svgString += super.renderCentreLineVertical(this._width - 100, 150, 90);
 
 		// overview text
 		svgString += super.renderOverviewText();
@@ -64,25 +63,25 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 		// now we get into the dimensions
 
 		// render the front dimensions
-		svgString += super.renderFrontDimensions(160, this.SVG_HEIGHT/2);
+		svgString += super.renderFrontDimensions(160, 500);
 
 		//render the side dimensions
-		svgString += super.renderSideDimensions((this._width - this.pencil.totalLength * 5)/2, this.SVG_HEIGHT/2);
+		svgString += super.renderSideDimensions((this._width - this.pencil.totalLength * 5)/2, this.renderCentralLine);
 
 		// render the back dimensions
-		svgString += super.renderBackDimensions(this.SVG_WIDTH - 150, this.SVG_HEIGHT/2);
+		svgString += super.renderBackDimensions(this._width - 150, this.renderCentralLine);
 
-		svgString += super.renderTotalLengthDimensions();
+		svgString += super.renderTotalLengthDimensions(this.renderCentralLine);
 
 		//render the side materials
-		svgString += super.renderSideMaterials();
+		svgString += super.renderSideMaterials(this.renderCentralLine);
 
 		// now it is time to render the details of the pencil
-		svgString += super.renderSideComponents(this._width/2 - (this.pencil.totalLength*5/2), this.SVG_HEIGHT/2, colourIndex);
+		svgString += super.renderSideComponents(this._width/2 - (this.pencil.totalLength*5/2), this.renderCentralLine, colourIndex);
 
-		svgString += super.renderFrontComponents(160, this.SVG_HEIGHT/2, colourIndex);
+		svgString += super.renderFrontComponents(160, this.renderCentralLine, colourIndex);
 
-		svgString += super.renderBackComponents(this.SVG_WIDTH - 100, this.SVG_HEIGHT/2, colourIndex);
+		svgString += super.renderBackComponents(this._width - 100, this.renderCentralLine, colourIndex);
 
 		// end the end of the SVG
 		svgString += this.getSvgEnd();
@@ -99,15 +98,15 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 		for (let component of this.pencil.components) {
 			for(const extra of component.extras) {
 				// draw the straight-through line for guidance top of the extra parts
-				const y = this.SVG_HEIGHT/2 - extra.yOffset * 5 - (extra.height) * 5;
+				const y = this.renderCentralLine - extra.yOffset * 5 - (extra.height) * 5;
 
-				svgString += lineHorizontalGuide(100, y, this.SVG_WIDTH - 200);
+				svgString += lineHorizontalGuide(100, y, this._width - 200);
 				// draw the straight-through line for guidance bottom of the extra parts
-				svgString += lineHorizontalGuide(160, this.SVG_HEIGHT/2 - extra.yOffset * 5, this.SVG_WIDTH - 260);
+				svgString += lineHorizontalGuide(160, this.renderCentralLine - extra.yOffset * 5, this._width - 260);
 				// guidelines for the extra width - left side
-				svgString += lineVerticalGuide(160 - extra.depth/2 * 5, this.SVG_HEIGHT/2 - 70, 70);
+				svgString += lineVerticalGuide(160 - extra.depth/2 * 5, this.renderCentralLine - 70, 70);
 				// guidelines for the extra width - right side
-				svgString += lineVerticalGuide(160 + extra.depth/2 * 5, this.SVG_HEIGHT/2 - 70, 70);
+				svgString += lineVerticalGuide(160 + extra.depth/2 * 5, this.renderCentralLine - 70, 70);
 
 				hasExtra = true;
 			}
@@ -116,41 +115,41 @@ export class SVGTechnicalRenderer extends SVGRenderer {
 		// FRONT VIEW GUIDELINES
 
 		// top horizontal line
-		svgString += lineHorizontalGuide((hasExtra ? 160 : 100), this.SVG_HEIGHT/2 - this.pencil.maxHeight/2 * 5, this.SVG_WIDTH - 100 - (hasExtra ? 160 : 100));
+		svgString += lineHorizontalGuide((hasExtra ? 160 : 100), this.renderCentralLine - this.pencil.maxHeight/2 * 5, this._width - 100 - (hasExtra ? 160 : 100));
 
 		// bottom line of full pencil
-		svgString += lineHorizontalGuide(100, this.SVG_HEIGHT/2 + this.pencil.maxHeight/2 * 5, this.SVG_WIDTH - 200);
+		svgString += lineHorizontalGuide(100, this.renderCentralLine + this.pencil.maxHeight/2 * 5, this._width - 200);
 
 		// Vertical line of width - left
 		svgString += lineVerticalGuide(160 - this.pencil.maxWidth/2 * 5,
-				this.SVG_HEIGHT/2,
+				this.renderCentralLine,
 				20 + this.pencil.maxHeight/2 * 5);
 		// Vertical line of width - right
 		svgString += lineVerticalGuide(160 + this.pencil.maxWidth/2 * 5,
-				this.SVG_HEIGHT/2,
+				this.renderCentralLine,
 				20 + this.pencil.maxHeight/2 * 5);
 
 		// SIDE VIEW GUIDELINES FOR THE COMPONENTS
 		// reset the offset to redraw
-		offset = this.SVG_WIDTH/2 - this.pencil.totalLength * 5/2;
+		offset = this._width/2 - this.pencil.totalLength * 5/2;
 
 		for (let component of this.pencil.components) {
 			// vertical line
-			svgString += lineVerticalGuide(offset, this.SVG_HEIGHT/2 - 120, 240);
+			svgString += lineVerticalGuide(offset, this.renderCentralLine - 120, 240);
 			// now for extraParts
 			for(const extra of component.extras) {
 				svgString += lineVerticalGuide(offset + extra.xOffset * 5,
-								this.SVG_HEIGHT/2 - 80,
+								this.renderCentralLine - 80,
 								160);
 				svgString += lineVerticalGuide(offset + extra.xOffset * 5 + extra.length * 5,
-								this.SVG_HEIGHT/2 - 80,
+								this.renderCentralLine - 80,
 								160);
 			}
 
 			offset += component.length * 5;
 		}
 
-		svgString += lineVerticalGuide(offset, this.SVG_HEIGHT/2 - 88 - this.pencil.maxHeight/2 * 5, 208);
+		svgString += lineVerticalGuide(offset, this.renderCentralLine - 88 - this.pencil.maxHeight/2 * 5, 208);
 		return(svgString);
 	}
 }

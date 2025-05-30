@@ -50,7 +50,8 @@ _(To regenerate the list - and this `README.md` file, run `npm run readme-genera
 | **Staedtler** | **Mars Technico** | 780c | 2.0 | 2 | high |
 | **STUDMARK** | **3750** | 3750 | 2.0 | 1 | high |
 | **Unbranded** | **Metal Black** | unknown | 2.0 | 1 | high |
-| | | **19 Pencils** | | **57 Variants**<br />_(colours / patterns)_  | |
+| **Unbranded** | **Plastic Black** | unknown | 2.0 | 1 | high |
+| | | **20 Pencils** | | **58 Variants**<br />_(colours / patterns)_  | |
 
 
 

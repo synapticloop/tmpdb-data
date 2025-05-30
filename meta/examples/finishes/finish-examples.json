@@ -1,8 +1,8 @@
 {
 	"brand": "Synapticloop",
-	"model_name": "In-built pattern finishes",
+	"model_name": "In-built finishes",
 	"lead_size": "2.0",
-	"colour_component": "pattern",
+	"colour_component": "finish",
 	"colours": [
 		"gray"
 	],
@@ -13,37 +13,37 @@
 	"accurate": true,
 	"components": [
 		{
-			"type": "knurled (/meta/finishes/knurled.json)",
+			"type": "knurled (/meta/finish/knurled.json)",
 			"parts": [
 				{ "shape": "cylindrical", "dimensions": [ 40, 8 ], "finish": "knurled" }
 			]
 		},
 		{
-			"type": "knurled-large (/meta/finishes/knurled-large.json)",
+			"type": "knurled-large (/meta/finish/knurled-large.json)",
 			"parts": [
 				{ "shape": "cylindrical", "dimensions": [ 40, 8 ], "finish": "knurled-large" }
 			]
 		},
 		{
-			"type": "knurled-small (/meta/finishes/knurled-small.json)",
+			"type": "knurled-small (/meta/finish/knurled-small.json)",
 			"parts": [
 				{ "shape": "cylindrical", "dimensions": [ 40, 8 ], "finish": "knurled-small" }
 			]
 		},
 		{
-			"type": "spring (/meta/finishes/spring.json and in code)",
+			"type": "spring (/meta/finish/spring.json and in code)",
 			"parts": [
 				{ "shape": "cylinder", "dimensions": [ 20, 4 ], "finish": "spring" }
 			]
 		},
 		{
-			"type": "lined (/meta/finishes/lined.json)",
+			"type": "lined (/meta/finish/lined.json)",
 			"parts": [
 				{ "shape": "cylinder", "dimensions": [ 40, 8 ], "finish": "lined" }
 			]
 		},
 		{
-			"type": "ridged (/meta/finishes/ridged.json)",
+			"type": "ridged (/meta/finish/ridged.json)",
 			"parts": [
 				{ "shape": "cylinder", "dimensions": [ 40, 8 ], "finish": "ridged" }
 			]

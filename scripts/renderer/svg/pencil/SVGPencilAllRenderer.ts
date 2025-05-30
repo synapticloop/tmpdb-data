@@ -8,8 +8,8 @@ export class SVGPencilAllRenderer extends SVGRenderer {
 	SVG_WIDTH:number = 1000;
 	SVG_HEIGHT:number = 200;
 
-	constructor(pencil: Pencil) {
-		super(pencil, 1000, 600, "SVGPencilAllRenderer");
+	constructor(pencil: Pencil, pencilDir: string) {
+		super(pencil, 1000, 600, "SVGPencilAllRenderer", pencilDir);
 	}
 
 	/**

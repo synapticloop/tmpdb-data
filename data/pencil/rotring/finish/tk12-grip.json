@@ -1,0 +1,28 @@
+{
+	"name": "tk12-grip",
+	"description": "Grip for the Tikky rOtring TK12 grip",
+	"ignored": true,
+	"in_built": false,
+	"TODO": "need to round this",
+	"pattern": [
+		"<pattern id=\"tk12-grip\" x=\"0\" y=\"0\" patternUnits=\"objectBoundingBox\" width=\"55\" height=\"46\">",
+		"<line stroke=\"#656f74\" stroke-width=\"28\" x1=\"14\" x2=\"14\" y1=\"15\" y2=\"46\"/>",
+		"<line stroke=\"#656f74\" stroke-width=\"28\" x1=\"42\" x2=\"42\" y1=\"0\" y2=\"31\"/>",
+		"<line stroke=\"#656f74\" stroke-width=\"28\" x1=\"70\" x2=\"70\" y1=\"15\" y2=\"46\"/>",
+		"<line stroke=\"#656f74\" stroke-width=\"28\" x1=\"98\" x2=\"98\" y1=\"0\" y2=\"31\"/>",
+		"<line stroke=\"#656f74\" stroke-width=\"28\" x1=\"126\" x2=\"126\" y1=\"15\" y2=\"46\"/>",
+		"<line stroke=\"#656f74\" stroke-width=\"28\" x1=\"154\" x2=\"154\" y1=\"0\" y2=\"31\"/>",
+		"<line stroke=\"#7f7f7f\" stroke-width=\"3\" x1=\"28\" x2=\"28\" y1=\"0\" y2=\"46\"/>",
+		"<line stroke=\"#0f0f0f\" stroke-width=\"1\" x1=\"28\" x2=\"28\" y1=\"0\" y2=\"46\"/>",
+		"<line stroke=\"#7f7f7f\" stroke-width=\"3\" x1=\"56\" x2=\"56\" y1=\"0\" y2=\"46\"/>",
+		"<line stroke=\"#0f0f0f\" stroke-width=\"1\" x1=\"56\" x2=\"56\" y1=\"0\" y2=\"46\"/>",
+		"<line stroke=\"#7f7f7f\" stroke-width=\"3\" x1=\"84\" x2=\"84\" y1=\"0\" y2=\"46\"/>",
+		"<line stroke=\"#0f0f0f\" stroke-width=\"1\" x1=\"84\" x2=\"84\" y1=\"0\" y2=\"46\"/>",
+		"<line stroke=\"#7f7f7f\" stroke-width=\"3\" x1=\"112\" x2=\"112\" y1=\"0\" y2=\"46\"/>",
+		"<line stroke=\"#0f0f0f\" stroke-width=\"1\" x1=\"112\" x2=\"112\" y1=\"0\" y2=\"46\"/>",
+		"<line stroke=\"#7f7f7f\" stroke-width=\"3\" x1=\"140\" x2=\"140\" y1=\"0\" y2=\"46\"/>",
+		"<line stroke=\"#0f0f0f\" stroke-width=\"1\" x1=\"140\" x2=\"140\" y1=\"0\" y2=\"46\"/>",
+		"</pattern>"
+
+	]
+}

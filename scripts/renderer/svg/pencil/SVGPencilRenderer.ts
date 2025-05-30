@@ -5,8 +5,8 @@ import {SVGRenderer} from "../SVGRenderer.ts";
  * Render a single pencil
  */
 export class SVGPencilRenderer extends SVGRenderer {
-	constructor(pencil: Pencil) {
-		super(pencil, 1000, 200, "SVGPencilRenderer");
+	constructor(pencil: Pencil, pencilDir: string) {
+		super(pencil, 1000, 200, "SVGPencilRenderer", pencilDir);
 	}
 
 	/**

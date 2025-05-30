@@ -48,8 +48,8 @@ export class SVGTechnicalExplodedRenderer extends SVGRenderer {
 
 	private markerMap: Map<number, ComponentMarker> = new Map<number, ComponentMarker>();
 
-	constructor(pencil: Pencil) {
-		super(pencil, 1200, 200, "SVGTechnicalExplodedRenderer");
+	constructor(pencil: Pencil, pencilDir: string) {
+		super(pencil, 1200, 200, "SVGTechnicalExplodedRenderer", pencilDir);
 	}
 
 	/**
