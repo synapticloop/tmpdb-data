@@ -25,9 +25,11 @@
 	"front": [
 		{ "shape": "cylinder", "dimensions": [ 2.0, 10.0 ], "fill":  "black" }
 	],
+
 	"back":[
 		{ "shape": "cylinder", "dimensions": [ 2.0, 10.0 ] , "fill":  "black" }
 	],
+
 	"components": [
 		{
 			"type": "tip",
@@ -99,14 +101,14 @@
 		},
 		{
 			"type": "cap",
-			"parts": [
-				{ "shape": "cylinder", "dimensions": [ 5.25, 6.25 ] },
-				{ "shape": "cylinder", "dimensions": [ 11.0, 8.25 ] },
-				{ "shape": "cylinder", "dimensions": [ 0.5, 8.0 ] },
-				{ "shape": "cylinder", "dimensions": [ 1.5, 8.25 ] }
-			],
 			"internal_start": [
 				{ "shape": "cylinder", "dimensions": [ 6.25, 6.25 ] }
+			],
+			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 5.25, 6.25 ] },
+				{ "shape": "cylinder", "dimensions": [ 11.0, 8.25 ], "finish": "sharpener-exposed" },
+				{ "shape": "cylinder", "dimensions": [ 0.5, 8.0 ] },
+				{ "shape": "cylinder", "dimensions": [ 1.5, 8.25 ] }
 			],
 			"material": "plastic"
 		}

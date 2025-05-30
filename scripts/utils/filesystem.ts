@@ -18,6 +18,13 @@ export function listDirectories(directoryPath: string): string[] {
 			.map(directoryEntry => directoryEntry.name);
 }
 
+/**
+ * List all files with the extension
+ *
+ * @param directoryPath the directory path
+ * @param dotExtension the dot extension - default ".json", for all files use
+ *        an empty string - ""
+ */
 export function listFiles(directoryPath:string, dotExtension:string=".json") {
 	return fs.readdirSync(directoryPath, {withFileTypes: true})
 			.filter(fileEntry => {

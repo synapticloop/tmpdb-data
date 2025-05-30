@@ -13,7 +13,6 @@ import {
 	drawTextBold,
 	drawTextBoldCentred,
 	lineHorizontal,
-	lineJoined,
 	lineVertical,
 	lineVerticalGuide,
 	rectangle,
@@ -810,9 +809,6 @@ export abstract class SVGRenderer {
 		return(svgString);
 	}
 
-
-
-
 	protected renderHiddenSideComponents(x: number, y: number, colourIndex:number): string {
 		let svgString: string = "";
 
@@ -900,6 +896,20 @@ export abstract class SVGRenderer {
 		let opaqueColour: OpaqueColour = part.getOpacityColour(colourIndex);
 
 		// draw the background colour first
+		let xLeftTop: number = x + part.internalOffset * 5 - 0.05;
+		let xRightTop: number = 0;
+		let xLeftMid: number = 0;
+		let xRightMid: number = 0;
+		let xLeftBottom: number = 0;
+		let xRightBottom: number = 0;
+
+		let yLeftTop: number = 0;
+		let yRightTop: number = 0;
+		let yLeftMid: number = 0;
+		let yRightMid: number = 0;
+		let yLeftBottom: number = 0;
+		let yRightBottom: number = 0;
+
 		switch (part.shape) {
 			case "cylinder":
 			case "hexagonal":
@@ -908,7 +918,7 @@ export abstract class SVGRenderer {
 				// draw the background colour first - we do just a slight adjustment
 				// to fill in the colour completely (0.05)... (this will be overwritten
 				// by the stroke perhaps)
-				svgString += `<path d="M${x + part.internalOffset * 5 - 0.05} ${y - (part.startHeight / 2 * 5)} ` + // move to top right
+				svgString += `<path d="M${xLeftTop} ${y - (part.startHeight / 2 * 5)} ` + // move to top left
 						`L${x + part.internalOffset * 5 + part.length * 5 + 0.05} ${y - (part.endHeight / 2 * 5)} ` + // line to top right
 						`L${x + part.internalOffset * 5 + part.length * 5 + 0.05} ${y + (part.endHeight / 2 * 5)} ` + //
 						`L${x + part.internalOffset * 5 - 0.05} ${y + (part.startHeight / 2 * 5)} Z" ` +
@@ -974,12 +984,13 @@ export abstract class SVGRenderer {
 				break;
 			case "convex":
 				// TODO - need to update as per above
-				let offsetX = part.length * 5;
+				//   also convex and concave are actually the same...
+				let offsetX: number = part.length * 5;
 				if (part.offset[0] !== 0) {
 					offsetX = part.offset[0] * 5;
 				}
 
-				let offsetY = part.startHeight / 2 * 5;
+				let offsetY:number = part.startHeight / 2 * 5;
 				if (part.offset[1] !== 0) {
 					offsetY = (part.startHeight / 2 - part.offset[1]) * 5;
 				}
@@ -1184,39 +1195,6 @@ export abstract class SVGRenderer {
 			}
 		}
 
-		return(svgString);
-	}
-
-	protected renderGuidelines(): string {
-		let svgString:string = "";
-		// now we are going to go through each of the components and draw the shapes
-		let offset:number;
-
-
-		// SIDE VIEW GUIDELINES FOR THE COMPONENTS
-		// reset the offset to redraw
-		offset = this._width/2 - this.pencil.totalLength*5/2;
-
-		svgString += lineVerticalGuide(offset, this._height/2 - 88 - this.pencil.maxHeight/2 * 5, 140 + this.pencil.maxHeight/2 * 5);
-
-		for (let component of this.pencil.components) {
-			// vertical line
-			svgString += lineVerticalGuide(offset, this._height/2 - 120, 120);
-
-			offset += component.length * 5;
-
-			// now for extraParts
-			for(const extra of component.extras) {
-				svgString += lineVerticalGuide(offset + extra.xOffset * 5,
-						this._height/2 - 80,
-						80);
-				svgString += lineVerticalGuide(offset + extra.xOffset * 5 + extra.length * 5,
-						this._height/2 - 80,
-						80);
-			}
-		}
-
-		svgString += lineVerticalGuide(offset, this._height/2 - 88 - this.pencil.maxHeight/2 * 5, 140 + this.pencil.maxHeight/2 * 5);
 		return(svgString);
 	}
 

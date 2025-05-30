@@ -299,6 +299,7 @@ export function circle(x: number, y: number, radius: number, strokeWidth: string
 			`stroke-width="${strokeWidth}"  />\n`);
 
 }
+
 export function lineVertical(x: number, y: number, height: number, strokeWidth: string, strokeColour: string, strokeDashArray: string=null): string {
 	let svgString: string = "";
 	svgString += `<line x1="${x}" ` +
@@ -596,6 +597,7 @@ export function dimensionsHorizontal(x: number, y:number, width:number, text: st
 	}
 	return(svgString);
 }
+
 export function rectangle(x:number, y:number, width:number, height:number, strokeColour:string, fillColour: OpaqueColour): string {
 	let svgString = "";
 	svgString += `<rect x="${x}" ` +
