@@ -140,9 +140,6 @@
 <!-- !right !both --><path d="M851.875 479.375 L851.875 520.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#0174bd" fill-opacity="1"/>
 <!-- !left !both --><path d="M796.875 479.375 L796.875 520.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#0174bd" fill-opacity="1"/>
 
-<!-- sharpener-exposed --><rect x="806.875" y="489.6875" width="35" height="20.625" stroke-width="1" stroke="black" fill="#0174bd"/>
-<path d="M807.875 490.6875 L 840.875 490.6875 L 840.875 495.6875 L 807.875 500.6875 Z" stroke-width="1" stroke="gray" fill="gray" />
-<line x1="807.375" y1="500.6875" x2="841.375" y2="495.6875" stroke="silver" stroke-width="1" />
 
 <!-- renderPart: cylinder -->
 <path d="M851.825 480 L854.425 480 L854.425 520 L851.825 520 Z" stroke-width="0" stroke="none" stroke-linejoin="round" fill="#0174bd" fill-opacity="1"/>

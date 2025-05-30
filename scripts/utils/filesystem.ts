@@ -18,10 +18,10 @@ export function listDirectories(directoryPath: string): string[] {
 			.map(directoryEntry => directoryEntry.name);
 }
 
-export function listFiles(directoryPath:string) {
+export function listFiles(directoryPath:string, dotExtension:string=".json") {
 	return fs.readdirSync(directoryPath, {withFileTypes: true})
 			.filter(fileEntry => {
-				return(fileEntry.isFile() && fileEntry.name.endsWith(".json"));
+				return(fileEntry.isFile() && fileEntry.name.endsWith(dotExtension));
 			})
 			.map(fileEntry => fileEntry.name);
 }

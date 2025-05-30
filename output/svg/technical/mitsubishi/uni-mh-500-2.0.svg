@@ -257,11 +257,11 @@
 <!-- !right !both --><path d="M1101.25 281.25 L1101.25 318.75" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !left !both --><path d="M1091.25 281.25 L1091.25 318.75" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 
-<!-- FRONT COMPONENT: cap -->
+<!-- FRONT COMPONENTS: cap -->
 <circle r="18.75" cx="160" cy="300" fill="white" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 <circle r="15" cx="160" cy="300" fill="white" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 
-<!-- FRONT COMPONENT: clip -->
+<!-- FRONT COMPONENTS: clip -->
 <circle r="23.125" cx="160" cy="300" fill="white" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 <!-- WxH 4 2.25 --><rect x="150" y="266.875" width="20" height="11.25" rx="0" ry="0" stroke-width="1.0" stroke="dimgray" fill="white"/>
 <rect x="150" y="266.875" width="20" height="11.25" rx="0" ry="0" stroke-width="1.0" stroke="dimgray" fill="none"/>
@@ -272,19 +272,19 @@
 <!-- WxH 4 0.25 --><rect x="150" y="276.875" width="20" height="1.25" rx="0" ry="0" stroke-width="1.0" stroke="dimgray" fill="white"/>
 <rect x="150" y="276.875" width="20" height="1.25" rx="0" ry="0" stroke-width="1.0" stroke="dimgray" fill="none"/>
 
-<!-- FRONT COMPONENT: body -->
+<!-- FRONT COMPONENTS: body -->
 <polygon points="148.09215069796397,279.375 171.90784930203603,279.375 183.81569860407205,300 171.90784930203603,320.625 148.09215069796397,320.625 136.18430139592795,300 " stroke="black" stroke-width="0.5" fill="white" fill-opacity="1"/>
 
-<!-- FRONT COMPONENT: grip -->
+<!-- FRONT COMPONENTS: grip -->
 <circle r="20" cx="160" cy="300" fill="white" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 
-<!-- FRONT COMPONENT: tip -->
-<circle r="13.125" cx="160" cy="300" stroke="black" stroke-width="0.5" fill="white" fill-opacity="1"/>
+<!-- FRONT COMPONENTS: tip -->
 <circle r="18.75" cx="160" cy="300" stroke="black" stroke-width="0.5" fill="white" fill-opacity="1"/>
+<circle r="13.125" cx="160" cy="300" stroke="black" stroke-width="0.5" fill="white" fill-opacity="1"/>
 
-<!-- FRONT COMPONENT: jaws -->
-<circle r="6.875" cx="160" cy="300" stroke="black" stroke-width="0.5" fill="white" fill-opacity="1"/>
+<!-- FRONT COMPONENTS: jaws -->
 <circle r="10.625" cx="160" cy="300" stroke="black" stroke-width="0.5" fill="white" fill-opacity="1"/>
+<circle r="6.875" cx="160" cy="300" stroke="black" stroke-width="0.5" fill="white" fill-opacity="1"/>
 <circle r="5" cx="160" cy="300" fill="white" fill-opacity="1" stroke="dimgray" stroke-width="0.5"  />
 <circle r="6.875" cx="1400" cy="300" stroke="black" stroke-width="0.5" fill="white" fill-opacity="1"/>
 <circle r="10.625" cx="1400" cy="300" stroke="black" stroke-width="0.5" fill="white" fill-opacity="1"/>

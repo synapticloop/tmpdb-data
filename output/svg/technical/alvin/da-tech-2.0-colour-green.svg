@@ -270,13 +270,13 @@
 <path d="M1083.125 286.25 L1119.375 286.25 M1119.375 313.75 L1083.125 313.75" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#1d2e28" fill-opacity="1"/>
 <!-- !right !both --><path d="M1119.375 286.25 L1119.375 313.75" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#1d2e28" fill-opacity="1"/>
 
-<!-- FRONT COMPONENT: cap -->
+<!-- FRONT COMPONENTS: cap -->
 <circle r="13.75" cx="160" cy="300" fill="#1d2e28" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 
-<!-- FRONT COMPONENT: tail -->
+<!-- FRONT COMPONENTS: tail -->
 <circle r="20.625" cx="160" cy="300" fill="silver" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 
-<!-- FRONT COMPONENT: clip -->
+<!-- FRONT COMPONENTS: clip -->
 <circle r="21.25" cx="160" cy="300" fill="silver" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 <!-- WxH 4.5 3.5 --><rect x="148.75" y="261.25" width="22.5" height="17.5" rx="0" ry="0" stroke-width="1.0" stroke="dimgray" fill="silver"/>
 <rect x="148.75" y="261.25" width="22.5" height="17.5" rx="0" ry="0" stroke-width="1.0" stroke="dimgray" fill="none"/>
@@ -287,19 +287,19 @@
 <!-- WxH 4.5 1 --><rect x="148.75" y="273.75" width="22.5" height="5" rx="0" ry="0" stroke-width="1.0" stroke="dimgray" fill="silver"/>
 <rect x="148.75" y="273.75" width="22.5" height="5" rx="0" ry="0" stroke-width="1.0" stroke="dimgray" fill="none"/>
 
-<!-- FRONT COMPONENT: body -->
+<!-- FRONT COMPONENTS: body -->
 <polygon points="148.4529946162075,280 171.5470053837925,280 183.09401076758502,300 171.5470053837925,320 148.4529946162075,320 136.90598923241498,300 " stroke="black" stroke-width="0.5" fill="#0F5FF0" fill-opacity="1"/>
 
-<!-- FRONT COMPONENT: grip -->
+<!-- FRONT COMPONENTS: grip -->
 <circle r="20" cx="160" cy="300" fill="silver" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 
-<!-- FRONT COMPONENT: tip -->
-<circle r="16.875" cx="160" cy="300" stroke="black" stroke-width="0.5" fill="silver" fill-opacity="1"/>
+<!-- FRONT COMPONENTS: tip -->
 <circle r="18.75" cx="160" cy="300" stroke="black" stroke-width="0.5" fill="silver" fill-opacity="1"/>
+<circle r="16.875" cx="160" cy="300" stroke="black" stroke-width="0.5" fill="silver" fill-opacity="1"/>
 
-<!-- FRONT COMPONENT: jaws -->
-<circle r="7.5" cx="160" cy="300" stroke="black" stroke-width="0.5" fill="silver" fill-opacity="1"/>
+<!-- FRONT COMPONENTS: jaws -->
 <circle r="14.375" cx="160" cy="300" stroke="black" stroke-width="0.5" fill="silver" fill-opacity="1"/>
+<circle r="7.5" cx="160" cy="300" stroke="black" stroke-width="0.5" fill="silver" fill-opacity="1"/>
 <circle r="5" cx="160" cy="300" fill="black" fill-opacity="1" stroke="dimgray" stroke-width="0.5"  />
 <circle r="7.5" cx="1400" cy="300" stroke="black" stroke-width="0.5" fill="silver" fill-opacity="1"/>
 <circle r="14.375" cx="1400" cy="300" stroke="black" stroke-width="0.5" fill="silver" fill-opacity="1"/>

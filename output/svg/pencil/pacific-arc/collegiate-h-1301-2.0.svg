@@ -138,9 +138,6 @@
 <!-- !right !both --><path d="M851.875 79.375 L851.875 120.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !left !both --><path d="M796.875 79.375 L796.875 120.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 
-<!-- sharpener-exposed --><rect x="806.875" y="89.6875" width="35" height="20.625" stroke-width="1" stroke="black" fill="white"/>
-<path d="M807.875 90.6875 L 840.875 90.6875 L 840.875 95.6875 L 807.875 100.6875 Z" stroke-width="1" stroke="gray" fill="gray" />
-<line x1="807.375" y1="100.6875" x2="841.375" y2="95.6875" stroke="silver" stroke-width="1" />
 
 <!-- renderPart: cylinder -->
 <path d="M851.825 80 L854.425 80 L854.425 120 L851.825 120 Z" stroke-width="0" stroke="none" stroke-linejoin="round" fill="white" fill-opacity="1"/>

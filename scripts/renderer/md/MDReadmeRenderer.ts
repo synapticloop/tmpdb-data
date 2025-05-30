@@ -20,6 +20,8 @@ export class MDReadmeRenderer {
 		}
 		mdString += `| | | **${this.pencils.length} Pencils** | | **${numVariants} Variants**<br />_(colours / patterns)_  | |\n\n\n`;
 
+		mdString += "\n\n---\n\n_`[Rendered with MDReadmeRenderer]`_\n\n---\n\n";
+
 		return(mdString);
 	}
 }

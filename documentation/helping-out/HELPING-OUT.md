@@ -35,6 +35,8 @@ Each pencil should reside in the brand directory and named as follows
 `<model_name>-<model_number>-<lead_size>.json`
 
 
+
+
 ## File format
 
 ### Accuracy levels
@@ -54,4 +56,67 @@ schematics/designs are available and are used for the measurements.
 #### 'Unknown' accuracy
 
 Where the JSON file does not include the `accuracy` key, it will be set to this.
+
+# Defining a pencil
+
+Pencils are defined through a json file, an example, showing _most_ of the 
+parts is shown below:
+
+```
+{
+	"brand": "",
+	"model_name": "",
+	"model_number": "",
+	"text": "",
+
+	"skus": [ ],
+
+	"manufactured_in": "",
+	"manufactured_from": [],
+	"manufactured_to": [],
+
+	"accuracy": "",
+
+	"mechanism": "",
+	"lead_size": 0.0,
+	"weight": 0.0,
+
+	"features": [
+	],
+
+	"colour_component": "",
+	"colours": [ ],
+	"colour_map": {
+	},
+
+	"front": [
+	],
+
+	"back": [
+	],
+
+	"components": [
+		{
+			"type": "",
+			"material": "",
+			"colours": [ ],
+			"internal_start": [
+			],
+			"parts": [
+			],
+			"internal_end": [
+			]
+		}
+	],
+
+	"sources": [
+	]
+}
+```
+
+In the above JSON fileThis documentation is automatically generated from the files in the:
+
+ - `/data/documentation/helping-out/`
+
+In the numerical order in which they were found.
 

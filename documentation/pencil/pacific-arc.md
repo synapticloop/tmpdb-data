@@ -2,11 +2,15 @@
 
 Available pencil definitions:
 
- - COLLEGIATE // Model #: H-1301 - (2.0mm) 
+ - COLLEGIATE // Model #: H-1301 - (2.0 mm) 
 
- - Premium // Model #: H-1309 - (2.0mm) 
+ - Premium // Model #: H-1309 - (2.0 mm) 
 
- - TECH PRO // Model #: H-1305 - (2.0mm) 
+ - TECH PRO // Model #: H-1305 - (2.0 mm) 
+
+
+
+<img src="./pacific-arc/pacific-arc-brand-grouped.png" />
 
 ## Pacific Arc COLLEGIATE // Model #: H-1301 - (2.0mm) 
 
@@ -198,4 +202,12 @@ _(Note: all offsets are from the start of the pencil)_
 
  - The accuracy level for this mechanical pencil could not be determined.
  - The accuracy of the colours of the pencil's parts may not be reflected by the rendered images.
+
+
+
+---
+
+_`[Rendered with MDBrandGroupRenderer]`_
+
+---
 

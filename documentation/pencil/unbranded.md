@@ -2,7 +2,11 @@
 
 Available pencil definitions:
 
- - Metal Black // Model #: unknown - (2.0mm) 
+ - Metal Black // Model #: unknown - (2.0 mm) 
+
+
+
+<img src="./unbranded/unbranded-brand-grouped.png" />
 
 ## Unbranded Metal Black // Model #: unknown - (2.0mm) 
 
@@ -88,4 +92,12 @@ _(Note: all offsets are from the start of the pencil)_
 
  - The accuracy level for this mechanical pencil could not be determined.
  - The accuracy of the colours of the pencil's parts may not be reflected by the rendered images.
+
+
+
+---
+
+_`[Rendered with MDBrandGroupRenderer]`_
+
+---
 

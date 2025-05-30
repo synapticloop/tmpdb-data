@@ -21,8 +21,10 @@ export class MDBrandGroupRenderer {
 		mdString += `Available pencil definitions:\n\n`;
 		// list the pencil models
 		for(const [ index, pencil ] of this.pencils.entries()) {
-			mdString += ` - ${pencil.modelName} // Model #: ${pencil.modelNumber} - (${formatToOnePlace(pencil.leadSize)}mm) \n\n`
+			mdString += ` - ${pencil.modelName} // Model #: ${pencil.modelNumber} - (${formatToOnePlace(pencil.leadSize)} mm) \n\n`
 		}
+
+		mdString += `\n\n<img src="./${this.pencilFileDirectories[0]}/${this.pencilFileDirectories[0]}-brand-grouped.png" />\n\n`
 
 		for(const [ index, pencil ] of this.pencils.entries()) {
 			mdString += `## ${pencil.brand} ${pencil.modelName} // Model #: ${pencil.modelNumber} - (${formatToOnePlace(pencil.leadSize)}mm) \n\n`
@@ -96,6 +98,8 @@ export class MDBrandGroupRenderer {
 
 			mdString += `\n`;
 		}
+
+		mdString += "\n\n---\n\n_`[Rendered with MDBrandGroupRenderer]`_\n\n---\n\n";
 
 		return(mdString);
 	}

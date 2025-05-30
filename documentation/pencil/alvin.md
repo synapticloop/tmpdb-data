@@ -2,9 +2,13 @@
 
 Available pencil definitions:
 
- - DA // Model #: TECH - (2.0mm) 
+ - DA // Model #: TECH - (2.0 mm) 
 
- - PRO-MATIC // Model #: MC5 - (2.0mm) 
+ - PRO-MATIC // Model #: MC5 - (2.0 mm) 
+
+
+
+<img src="./alvin/alvin-brand-grouped.png" />
 
 ## Alvin DA // Model #: TECH - (2.0mm) 
 
@@ -141,4 +145,12 @@ _(Note: all offsets are from the start of the pencil)_
 
  - The accuracy level for this mechanical pencil could not be determined.
  - The accuracy of the colours of the pencil's parts may not be reflected by the rendered images.
+
+
+
+---
+
+_`[Rendered with MDBrandGroupRenderer]`_
+
+---
 

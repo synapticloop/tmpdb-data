@@ -2,7 +2,11 @@
 
 Available pencil definitions:
 
- - uni // Model #: MH-500 - (2.0mm) 
+ - uni // Model #: MH-500 - (2.0 mm) 
+
+
+
+<img src="./mitsubishi/mitsubishi-brand-grouped.png" />
 
 ## Mitsubishi uni // Model #: MH-500 - (2.0mm) 
 
@@ -86,4 +90,12 @@ _(Note: all offsets are from the start of the pencil)_
 
  - The accuracy level for this mechanical pencil could not be determined.
  - The accuracy of the colours of the pencil's parts may not be reflected by the rendered images.
+
+
+
+---
+
+_`[Rendered with MDBrandGroupRenderer]`_
+
+---
 

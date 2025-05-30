@@ -28,6 +28,9 @@ export class MDIndividualRenderer {
 		mdString += this.addTableRow("Lead size", this.pencil.leadSize);
 		mdString += this.addTableRow("Lead shape", this.pencil.leadShape);
 		mdString += this.addTableRow("Maximum lead length", this.pencil.maximumLeadLength);
+
+		mdString += "\n\n---\n\n_`[Rendered with MDIndividualRenderer]`_\n\n---\n\n";
+
 		return(mdString);
 	}
 

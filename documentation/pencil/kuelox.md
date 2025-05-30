@@ -2,7 +2,11 @@
 
 Available pencil definitions:
 
- - 3308 // Model #: 3308 - (2.0mm) 
+ - 3308 // Model #: 3308 - (2.0 mm) 
+
+
+
+<img src="./kuelox/kuelox-brand-grouped.png" />
 
 ## Küelox 3308 // Model #: 3308 - (2.0mm) 
 
@@ -89,4 +93,12 @@ _(Note: all offsets are from the start of the pencil)_
 
  - The accuracy level for this mechanical pencil could not be determined.
  - The accuracy of the colours of the pencil's parts may not be reflected by the rendered images.
+
+
+
+---
+
+_`[Rendered with MDBrandGroupRenderer]`_
+
+---
 

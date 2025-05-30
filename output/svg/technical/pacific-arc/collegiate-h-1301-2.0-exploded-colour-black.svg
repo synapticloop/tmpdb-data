@@ -171,9 +171,6 @@
 <!-- !right !both --><path d="M951.875 339.375 L951.875 380.625" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1"/>
 <!-- !left !both --><path d="M896.875 339.375 L896.875 380.625" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1"/>
 
-<!-- sharpener-exposed --><rect x="906.875" y="349.6875" width="35" height="20.625" stroke-width="1" stroke="black" fill="black"/>
-<path d="M907.875 350.6875 L 940.875 350.6875 L 940.875 355.6875 L 907.875 360.6875 Z" stroke-width="1" stroke="gray" fill="gray" />
-<line x1="907.375" y1="360.6875" x2="941.375" y2="355.6875" stroke="silver" stroke-width="1" />
 
 <!-- renderPart: cylinder -->
 <path d="M951.825 340 L954.425 340 L954.425 380 L951.825 380 Z" stroke-width="0" stroke="none" stroke-linejoin="round" fill="black" fill-opacity="1"/>

@@ -15,3 +15,11 @@
 | **Lead size** | 0.5 |
 | **Lead shape** | cylindrical |
 | **Maximum lead length** | undefined |
+
+
+---
+
+_`[Rendered with MDIndividualRenderer]`_
+
+---
+

@@ -2,7 +2,11 @@
 
 Available pencil definitions:
 
- - Easy Come Easy Go! // Model #: amp-35601 - (2.0mm) 
+ - Easy Come Easy Go! // Model #: amp-35601 - (2.0 mm) 
+
+
+
+<img src="./m-and-g/m-and-g-brand-grouped.png" />
 
 ## M &amp; G Easy Come Easy Go! // Model #: amp-35601 - (2.0mm) 
 
@@ -87,4 +91,12 @@ _(Note: all offsets are from the start of the pencil)_
 
  - The accuracy level for this mechanical pencil could not be determined.
  - The accuracy of the colours of the pencil's parts may not be reflected by the rendered images.
+
+
+
+---
+
+_`[Rendered with MDBrandGroupRenderer]`_
+
+---
 

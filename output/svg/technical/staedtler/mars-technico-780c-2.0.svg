@@ -281,13 +281,13 @@
 <path d="M 636.875 280.625 C 728.125 285.46875, 728.125 295.15625, 636.875 300" stroke-width="0.5" stroke="black" stroke-linecap="round" fill-opacity="1" fill="white" />
 <path d="M 636.875 319.375 C 728.125 314.53125, 728.125 304.84375, 636.875 300" stroke-width="0.5" stroke="black" stroke-linecap="round" fill-opacity="1" fill="white" />
 
-<!-- FRONT COMPONENT: cap -->
+<!-- FRONT COMPONENTS: cap -->
 <circle r="14.375" cx="160" cy="300" fill="white" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 
-<!-- FRONT COMPONENT: tail -->
+<!-- FRONT COMPONENTS: tail -->
 <circle r="19.375" cx="160" cy="300" fill="white" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 
-<!-- FRONT COMPONENT: clip -->
+<!-- FRONT COMPONENTS: clip -->
 <circle r="21.875" cx="160" cy="300" fill="white" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 <!-- WxH 4 3 --><rect x="150" y="265.625" width="20" height="15" rx="0" ry="0" stroke-width="1.0" stroke="dimgray" fill="white"/>
 <rect x="150" y="265.625" width="20" height="15" rx="0" ry="0" stroke-width="1.0" stroke="dimgray" fill="none"/>
@@ -300,19 +300,19 @@
 <!-- WxH 4 1.5 --><rect x="150" y="273.125" width="20" height="7.5" rx="0" ry="0" stroke-width="1.0" stroke="dimgray" fill="white"/>
 <rect x="150" y="273.125" width="20" height="7.5" rx="0" ry="0" stroke-width="1.0" stroke="dimgray" fill="none"/>
 
-<!-- FRONT COMPONENT: body -->
+<!-- FRONT COMPONENTS: body -->
 <circle r="19.375" cx="160" cy="300" fill="white" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 <polygon points="148.813838534451,280.625 171.186161465549,280.625 182.37232293109798,300 171.186161465549,319.375 148.813838534451,319.375 137.62767706890202,300 " stroke="black" stroke-width="0.5" fill="white" fill-opacity="1"/>
 
-<!-- FRONT COMPONENT: grip -->
-<circle r="18.75" cx="160" cy="300" stroke="black" stroke-width="0.5" fill="white" fill-opacity="1"/>
+<!-- FRONT COMPONENTS: grip -->
 <circle r="21.25" cx="160" cy="300" stroke="black" stroke-width="0.5" fill="white" fill-opacity="1"/>
+<circle r="18.75" cx="160" cy="300" stroke="black" stroke-width="0.5" fill="white" fill-opacity="1"/>
 
-<!-- FRONT COMPONENT: tip -->
-<circle r="13.75" cx="160" cy="300" stroke="black" stroke-width="0.5" fill="white" fill-opacity="1"/>
+<!-- FRONT COMPONENTS: tip -->
 <circle r="17.5" cx="160" cy="300" stroke="black" stroke-width="0.5" fill="white" fill-opacity="1"/>
+<circle r="13.75" cx="160" cy="300" stroke="black" stroke-width="0.5" fill="white" fill-opacity="1"/>
 
-<!-- FRONT COMPONENT: jaws -->
+<!-- FRONT COMPONENTS: jaws -->
 <circle r="6.875" cx="160" cy="300" fill="white" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 <circle r="5" cx="160" cy="300" fill="white" fill-opacity="1" stroke="dimgray" stroke-width="0.5"  />
 <circle r="6.875" cx="1400" cy="300" fill="white" fill-opacity="1" stroke="black" stroke-width="0.5"  />

@@ -141,9 +141,6 @@
 <!-- !right !both --><path d="M851.875 99.375 L851.875 140.625" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1"/>
 <!-- !left !both --><path d="M796.875 99.375 L796.875 140.625" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1"/>
 
-<!-- sharpener-exposed --><rect x="806.875" y="109.6875" width="35" height="20.625" stroke-width="1" stroke="black" fill="black"/>
-<path d="M807.875 110.6875 L 840.875 110.6875 L 840.875 115.6875 L 807.875 120.6875 Z" stroke-width="1" stroke="gray" fill="gray" />
-<line x1="807.375" y1="120.6875" x2="841.375" y2="115.6875" stroke="silver" stroke-width="1" />
 
 <!-- renderPart: cylinder -->
 <path d="M851.825 100 L854.425 100 L854.425 140 L851.825 140 Z" stroke-width="0" stroke="none" stroke-linejoin="round" fill="black" fill-opacity="1"/>
@@ -280,9 +277,6 @@
 <!-- !right !both --><path d="M851.875 219.375 L851.875 260.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#0174bd" fill-opacity="1"/>
 <!-- !left !both --><path d="M796.875 219.375 L796.875 260.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#0174bd" fill-opacity="1"/>
 
-<!-- sharpener-exposed --><rect x="806.875" y="229.6875" width="35" height="20.625" stroke-width="1" stroke="black" fill="#0174bd"/>
-<path d="M807.875 230.6875 L 840.875 230.6875 L 840.875 235.6875 L 807.875 240.6875 Z" stroke-width="1" stroke="gray" fill="gray" />
-<line x1="807.375" y1="240.6875" x2="841.375" y2="235.6875" stroke="silver" stroke-width="1" />
 
 <!-- renderPart: cylinder -->
 <path d="M851.825 220 L854.425 220 L854.425 260 L851.825 260 Z" stroke-width="0" stroke="none" stroke-linejoin="round" fill="#0174bd" fill-opacity="1"/>
