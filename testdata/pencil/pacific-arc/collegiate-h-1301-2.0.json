@@ -25,9 +25,11 @@
 	"front": [
 		{ "shape": "cylinder", "dimensions": [ 2.0, 10.0 ], "fill":  "black" }
 	],
+
 	"back":[
 		{ "shape": "cylinder", "dimensions": [ 2.0, 10.0 ] , "fill":  "black" }
 	],
+
 	"components": [
 		{
 			"type": "tip",

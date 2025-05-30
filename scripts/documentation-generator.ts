@@ -1,20 +1,13 @@
-import {listDirectories, listFiles} from "./utils/filesystem.ts";
 import * as path from "node:path";
-import { Pencil } from "./model/Pencil.ts";
 import fs from "fs";
-import {SVGTechnicalRenderer} from "./renderer/svg/technical/SVGTechnicalRenderer.ts";
-import {PNGRenderer} from "./renderer/png/PNGRenderer.ts";
-import {PDFDatasheetRenderer} from "./renderer/pdf/PDFDatasheetRenderer.ts";
-
-import {SVGPencilRenderer} from "./renderer/svg/pencil/SVGPencilRenderer.ts";
-import {SVGRenderer} from "./renderer/svg/SVGRenderer.ts";
-import {SVGTechnicalComponentRenderer} from "./renderer/svg/technical/SVGTechnicalComponentRenderer.ts";
-import {SVGTechnicalExplodedRenderer} from "./renderer/svg/technical/SVGTechnicalExplodedRenderer.ts";
-import {SVGPencilAllRenderer} from "./renderer/svg/pencil/SVGPencilAllRenderer.ts";
-import {SVGPencil45Renderer} from "./renderer/svg/pencil/SVGPencil45Renderer.ts";
-import {ObjectMapper} from "json-object-mapper";
 import deserialize = ObjectMapper.deserialize;
-import {Component} from "./model/Component.ts";
+
+import {listDirectories, listFiles} from "./utils/filesystem.ts";
+
+import {Pencil} from "./model/Pencil.ts";
+import {PNGRenderer} from "./renderer/png/PNGRenderer.ts";
+import {SVGRenderer} from "./renderer/svg/SVGRenderer.ts";
+import {ObjectMapper} from "json-object-mapper";
 import {SVGTechnicalGroupedRenderer} from "./renderer/svg/technical/SVGTechnicalGroupedRenderer.ts";
 import {MDIndividualRenderer} from "./renderer/md/MDIndividualRenderer.ts";
 import {MDBrandGroupRenderer} from "./renderer/md/MDBrandGroupRenderer.ts";
@@ -30,6 +23,7 @@ if(process.argv[2]) {
 const pencilDirectories:string[] = listDirectories(baseDir);
 
 generatePencilInformation().then(r => { /** */ });
+
 generateHelpingOut()
 
 
