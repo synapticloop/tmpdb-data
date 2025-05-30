@@ -896,12 +896,14 @@ export abstract class SVGRenderer {
 		let opaqueColour: OpaqueColour = part.getOpacityColour(colourIndex);
 
 		// draw the background colour first
-		let xLeftTop: number = x + part.internalOffset * 5 - 0.05 + part.xTopLeftOffset * 5;
-		let xRightTop: number = x + part.internalOffset * 5 + part.length * 5 +  + part.xTopRightOffset * 5 + 0.05;
+		let xLeftTop: number = x + (part.internalOffset + part.xTopLeftOffset) * 5 - 0.05;
+		let xRightTop: number = x + (part.internalOffset + part.length + part.xTopRightOffset) * 5 + 0.05;
+
 		let xLeftMid: number = (null !== part.xMidLeftOffset ? xLeftTop + part.xMidLeftOffset * 5: 0);
 		let xRightMid: number = (null !== part.xMidRightOffset ? xRightTop + part.xMidRightOffset * 5: 0);
-		let xLeftBottom: number = x + part.internalOffset * 5 - 0.05 + part.xBottomLeftOffset * 5;
-		let xRightBottom: number = x + part.internalOffset * 5 + part.length * 5 + part.xBottomRightOffset + 0.05;
+
+		let xLeftBottom: number = x + (part.internalOffset + part.xBottomLeftOffset) * 5 - 0.05;
+		let xRightBottom: number = x + (part.internalOffset + part.length + part.xBottomRightOffset) * 5 + 0.05;
 
 		let yLeftTop: number = y - (part.startHeight / 2 * 5);
 		let yRightTop: number = y - (part.endHeight / 2 * 5);
@@ -911,12 +913,12 @@ export abstract class SVGRenderer {
 		// now for the mid lines
 		let leftMidLine: string = "";
 		if(part.xMidLeftOffset !== null) {
-			`L${xLeftMid} ${y}`;
+			`L${xLeftMid} ${y} `;
 		}
 
 		let rightMidLine: string = "";
 		if(part.xMidRightOffset !== null) {
-			`L${xRightMid} ${y}`;
+			`L${xRightMid} ${y} `;
 		}
 
 		switch (part.shape) {
@@ -933,7 +935,7 @@ export abstract class SVGRenderer {
 						`L${xRightBottom} ${yRightBottom} ` + // line to bottom right
 						`L${xLeftBottom} ${yLeftBottom} ` + // line to bottom left
 						leftMidLine + // line to the left midline (if it exists)
-						`L${xLeftBottom} ${yLeftTop}" ` + // line to top left
+						`L${xLeftTop} ${yLeftTop}" ` + // line to top left
 					`stroke-width="0" ` +
 					`stroke="none" ` +
 					`stroke-linejoin="round" ` +
@@ -942,7 +944,7 @@ export abstract class SVGRenderer {
 
 				// now draw the top and bottom lines
 				svgString += `<path d="M${xLeftTop} ${yLeftTop} ` + // move to top-left
-					`L${xTopRight} ${yRightTop} ` + // line to top right
+					`L${xRightTop} ${yRightTop} ` + // line to top right
 					`M${xRightBottom} ${yRightBottom} ` + // move to bottom right
 					`L${xLeftBottom} ${yLeftBottom}" ` + // line to bottom left
 					`stroke-width="0.5" ` +
@@ -957,9 +959,9 @@ export abstract class SVGRenderer {
 						break;
 					case "left":
 						// draw the right line
-						svgString += `<!-- !right !both --><path d="M${x + part.internalOffset * 5 + part.length * 5} ${y - (part.endHeight / 2 * 5)} ` + // move to top-right
+						svgString += `<!-- !right !both --><path d="M${xRightTop} ${yRightTop} ` + // move to top-right
 							rightMidLine +
-							`L${x + part.internalOffset * 5 + part.length * 5} ${y + (part.endHeight / 2 * 5)}" ` + // line to bottom right
+							`L${xRightBottom} ${yRightBottom}" ` + // line to bottom right
 							`stroke-width="0.5" ` +
 							`stroke="${strokeColour}" ` +
 							`stroke-linejoin="round" ` +
@@ -968,9 +970,9 @@ export abstract class SVGRenderer {
 						break;
 					case "right":
 						// draw the left line
-						svgString += `<!-- !left !both --><path d="M${x + part.internalOffset * 5} ${y - (part.startHeight / 2 * 5)} ` + // move to top-left
+						svgString += `<!-- !left !both --><path d="M${xLeftTop} ${yLeftTop} ` + // move to top-left
 							leftMidLine +
-							`L${x + part.internalOffset * 5} ${y + (part.startHeight / 2 * 5)}" ` + // line to bottom left
+							`L${xLeftBottom} ${yLeftBottom}" ` + // line to bottom left
 							`stroke-width="0.5" ` +
 							`stroke="${strokeColour}" ` +
 							`stroke-linejoin="round" ` +
@@ -979,18 +981,18 @@ export abstract class SVGRenderer {
 						break;
 					default:
 						// draw both
-						svgString += `<!-- !right !both --><path d="M${x + part.internalOffset * 5 + part.length * 5} ${y - (part.endHeight / 2 * 5)} ` + // move to top-right
+						svgString += `<!-- !right !both --><path d="M${xRightTop} ${yRightTop} ` + // move to top-right
 							rightMidLine +
-							`L${x + part.internalOffset * 5 + part.length * 5} ${y + (part.endHeight / 2 * 5)}" ` + // line to bottom right
+							`L${xRightBottom} ${yRightBottom}" ` + // line to bottom right
 							`stroke-width="0.5" ` +
 							`stroke="${strokeColour}" ` +
 							`stroke-linejoin="round" ` +
 							`fill="${opaqueColour.colour}" ` +
 							`fill-opacity="${opaqueColour.opacity}"/>\n`
 						// draw the left line
-						svgString += `<!-- !left !both --><path d="M${x + part.internalOffset * 5} ${y - (part.startHeight / 2 * 5)} ` + // move to top-left
-							leftMidLine
-							`L${x + part.internalOffset * 5} ${y + (part.startHeight / 2 * 5)}" ` + // line to bottom left
+						svgString += `<!-- !left !both --><path d="M${xLeftTop} ${yLeftTop} ` + // move to top-left
+							leftMidLine +
+							`L${xLeftBottom} ${yLeftBottom}" ` + // line to bottom left
 							`stroke-width="0.5" ` +
 							`stroke="${strokeColour}" ` +
 							`stroke-linejoin="round" ` +
