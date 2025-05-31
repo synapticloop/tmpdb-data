@@ -34,6 +34,7 @@ _(To regenerate the list - and this `README.md` file, run `npm run readme-genera
 | **Alvin** | **DA** | TECH | 2.0 | 3 | high |
 | **Alvin** | **PRO-MATIC** | MC5 | 2.0 | 1 | high |
 | **BIC** | **Criterium** | LUXE | 2.0 | 3 | high |
+| **Daiso** | **2mm Mechanical Pencil** |  | 2.0 | 2 | high |
 | **Hapila** | **2mm mechanical pencil** | SPSHHB | 2.0 | 2 | high |
 | **ito-ya** | **Wooden Sharp Pencil** | WSP | 2.0 | 4 | high |
 | **Kita Boshi** | **Adult Pencil** | OTP-580 | 2.0 | 4 | high |
@@ -56,7 +57,7 @@ _(To regenerate the list - and this `README.md` file, run `npm run readme-genera
 | **STUDMARK** | **3750** | 3750 | 2.0 | 1 | high |
 | **Unbranded** | **Metal Black** | unknown | 2.0 | 1 | high |
 | **Unbranded** | **Plastic Black** | unknown | 2.0 | 1 | high |
-| | | **25 Pencils** | | **93 Variants**<br />_(colours / patterns)_  | |
+| | | **26 Pencils** | | **95 Variants**<br />_(colours / patterns)_  | |
 
 
 

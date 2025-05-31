@@ -1,0 +1,96 @@
+{
+	"brand": "Daiso",
+	"model_name": "2mm Mechanical Pencil",
+	"model_number": "unknown",
+	"skus": [ "4549131396775", ""],
+
+	"text": "",
+
+	"lead_size": 2.0,
+	"mechanism": "click",
+
+	"accuracy": "high",
+
+	"colour_component": "body",
+	"colours": [ "black", "blue" ],
+	"colour_map": {
+		"black": "#000000",
+		"blue": "#AEDCDE"
+	},
+
+	"front": [
+		{ "shape":"cylinder", "dimensions": [ 2.0, 10.0 ], "fill": [ "black" ] }
+	],
+	"back":[
+		{ "shape":"cylinder", "dimensions": [ 2.0, 10.0 ] , "fill":  [ "black" ] }
+	],
+	"components": [
+		{
+			"type": "tip",
+			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 2.5, 3.75 ] },
+				{ "shape": "cone", "dimensions": [ 8.25, 4.0, 7.5 ] },
+				{ "shape": "cylinder", "dimensions": [3.0 , 7.5 ] },
+				{ "shape": "cylinder", "dimensions": [ 6.0, 8.25] }
+			],
+			"material": "plastic",
+			"colours": [ "silver" ]
+		},
+		{
+			"type": "body",
+			"parts": [
+				{ "shape": "hexagonal", "dimensions": [ 99.75, 8.0 ], "taper_start": { "offset": [ 1.0, 0.25 ] }
+				}
+			],
+			"internal_start": [
+				{ "shape": "cylinder", "dimensions": [ 4.0, 6.5 ], "finish": "threaded" }
+			],
+			"material": "plastic"
+		},
+		{
+			"type": "clip",
+			"parts": [
+				{ "shape": "cylinder", "dimensions":  [ 4.75, 9.25 ] }
+			],
+			"extras": [
+				{
+					"offset": [ -35.75, 4.325 ],
+					"dimensions": [ 40.5, 2.0, 4.0 ],
+					"parts": [
+						{ "shape": "line", "points": [ 0.0, -2.0, 3.0, -2.0] },
+						{ "shape": "line", "points": [ 3.0, -2.0, 7.0, -0.25] },
+						{ "shape": "line", "points": [ 7.0, -0.25, 11.0, -2.0] },
+						{ "shape": "line", "points": [ 11.0, -2.0, 39.0, -2.0] },
+						{ "shape": "curve", "points": [ 39.0, -2.0, 39.0, 0.0, 43.0, -1.0] }
+					]
+				}
+			],
+			"material": "plastic",
+			"colours": [ "silver" ]
+		},
+		{
+			"type": "tail",
+			"parts": [
+				{ "shape": "cone", "dimensions": [ 1.75, 8.0, 7.75 ] },
+				{ "shape": "cylinder", "dimensions": [ 1.75, 7.75 ] }
+			],
+			"material": "plastic"
+		},
+		{
+			"type": "cap",
+			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 4.25, 6.0 ] },
+				{ "shape": "octagonal", "dimensions": [ 9.25, 8.0 ] },
+				{ "shape": "cylinder", "dimensions": [ 1.25, 8.5 ]},
+				{ "shape": "convex", "dimensions":  [ 0.75, 8.5 ], "offset": [ 1.5, 4.25 ] }
+			],
+			"internal_start": [
+				{ "shape": "cylinder", "dimensions": [ 6.75, 6.0 ] }
+			],
+			"material": "plastic"
+		}
+	],
+	"sources": [
+		{ "name":  "Daiso", "href": "https://shop.daisosingapore.com.sg/products/4549131396775" }
+	]
+}
