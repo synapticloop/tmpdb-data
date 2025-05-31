@@ -34,6 +34,7 @@ _(To regenerate the list - and this `README.md` file, run `npm run readme-genera
 | **Alvin** | **DA** | TECH | 2.0 | 3 | high |
 | **Alvin** | **PRO-MATIC** | MC5 | 2.0 | 1 | high |
 | **BIC** | **Criterium** | LUXE | 2.0 | 3 | high |
+| **ito-ya** | **Wooden Sharp Pencil** | WSP | 2.0 | 4 | high |
 | **Koh-i-Noor** | **TECHNIGRAPH** | 5611 | 2.0 | 7 | low |
 | **Küelox** | **3308** | 3308 | 2.0 | 1 | high |
 | **M &amp; G** | **Easy Come Easy Go!** | amp-35601 | 2.0 | 3 | high |
@@ -53,7 +54,7 @@ _(To regenerate the list - and this `README.md` file, run `npm run readme-genera
 | **STUDMARK** | **3750** | 3750 | 2.0 | 1 | high |
 | **Unbranded** | **Metal Black** | unknown | 2.0 | 1 | high |
 | **Unbranded** | **Plastic Black** | unknown | 2.0 | 1 | high |
-| | | **22 Pencils** | | **83 Variants**<br />_(colours / patterns)_  | |
+| | | **23 Pencils** | | **87 Variants**<br />_(colours / patterns)_  | |
 
 
 

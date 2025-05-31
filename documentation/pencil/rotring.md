@@ -35,12 +35,12 @@ _(Note: all offsets are from the start of the pencil)_
 
 | `---Item---` | `---Offset---` | `---Length---` |
 | ---: | ---: | ---: |
-| **tip** | 0 mm | 16.5 mm |
-| **body** | 16.5 mm | 110.7 mm |
-| **cap** | 127.19999999999999 mm | 12 mm |
-| **grip** | 18.5 mm | 36.75 mm |
-| **clip** | 118.7 mm | 5.25 mm |
-| | **Pencil length** | 139.2 mm |
+| **tip** | 0 mm | 17.75 mm |
+| **body** | 17.75 mm | 111.5 mm |
+| **cap** | 129.25 mm | 13.25 mm |
+| **grip** | 19.75 mm | 37 mm |
+| **clip** | 121.25 mm | 45.75 mm |
+| | **Pencil length** | 142.5 mm |
 
 
 
@@ -94,12 +94,12 @@ _(Note: all offsets are from the start of the pencil)_
 
 | `---Item---` | `---Offset---` | `---Length---` |
 | ---: | ---: | ---: |
-| **tip** | 0 mm | 16.5 mm |
-| **body** | 16.5 mm | 110.7 mm |
-| **cap** | 127.19999999999999 mm | 12 mm |
-| **grip** | 18.5 mm | 36.75 mm |
-| **clip** | 118.7 mm | 5.25 mm |
-| | **Pencil length** | 139.2 mm |
+| **tip** | 0 mm | 17.75 mm |
+| **body** | 17.75 mm | 111.5 mm |
+| **cap** | 129.25 mm | 13.25 mm |
+| **grip** | 19.75 mm | 37 mm |
+| **clip** | 121.25 mm | 45.75 mm |
+| | **Pencil length** | 142.5 mm |
 
 
 
