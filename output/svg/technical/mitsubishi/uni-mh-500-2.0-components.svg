@@ -107,7 +107,7 @@
 <path d="M311.2 280 L438.8 280 M438.8 320 L311.2 320" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !right !both --><path d="M438.8 280 L438.8 320" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !left !both --><path d="M311.2 280 L311.2 320" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<path d="M311.25 280 L438.75 280 L438.75 320 L311.25 320 Z" stroke-width="1.0" stroke="black" fill="url(#knurled)"/>
+<!-- DEFAULT FINISH: knurled --><path d="M311.25 280 L438.75 280 L438.75 320 L311.25 320 Z" stroke-width="0.5" stroke="black" fill="url(#knurled)"/>
 
 
 <!-- renderSideComponent: body -->

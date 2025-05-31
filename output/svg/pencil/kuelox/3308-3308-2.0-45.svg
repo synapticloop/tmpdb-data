@@ -54,7 +54,7 @@
 <path d="M208.7 479.375 L356.3 479.375 M356.3 520.625 L208.7 520.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !right !both --><path d="M356.3 479.375 L356.3 520.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !left !both --><path d="M208.7 479.375 L208.7 520.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<path d="M208.75 479.375 L356.25 479.375 L356.25 520.625 L208.75 520.625 Z" stroke-width="1.0" stroke="black" fill="url(#knurled)"/>
+<!-- DEFAULT FINISH: knurled --><path d="M208.75 479.375 L356.25 479.375 L356.25 520.625 L208.75 520.625 Z" stroke-width="0.5" stroke="black" fill="url(#knurled)"/>
 
 
 <!-- renderSideComponent: body -->
@@ -81,6 +81,7 @@
 <!-- !right !both --><path d="M721.3 477.5 L713.8 522.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !left !both --><path d="M693.7 477.5 L693.7 522.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <path d="M538.5 465.875 Q561.25 488.375 571.25 465.875 Z" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
+<rect x="538.5" y="465.875" width="35" height="-12.5" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
 <line x1="536.25" y1="464.375" x2="718.75" y2="464.375" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
 <path d="M718.75 464.375 Q738.75 471.875 718.75 478.125" stroke-width="3" stroke="white" fill="none" stroke-linecap="round" />
 
@@ -103,7 +104,7 @@
 <path d="M741.2 479.375 L788.8 479.375 M788.8 520.625 L741.2 520.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !right !both --><path d="M788.8 479.375 L788.8 520.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !left !both --><path d="M741.2 479.375 L741.2 520.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<path d="M741.25 479.375 L788.75 479.375 L788.75 520.625 L741.25 520.625 Z" stroke-width="1.0" stroke="black" fill="url(#knurled)"/>
+<!-- DEFAULT FINISH: knurled --><path d="M741.25 479.375 L788.75 479.375 L788.75 520.625 L741.25 520.625 Z" stroke-width="0.5" stroke="black" fill="url(#knurled)"/>
 <rect x="751.25" y="489.6875" width="27.5" height="20.625" rx="3" ry="3" stroke-width="1" stroke="black" fill="white"/>
 <text x="765" y="500" text-anchor="middle" dominant-baseline="central"><tspan stroke="dimgray" stroke-width="0.5" font-family="sans-serif" fill="black" textLength="{this.width * 5 - 24}" > HB</tspan></text>
 

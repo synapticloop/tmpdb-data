@@ -242,24 +242,24 @@
 
 <!-- TAPER START: hexagonal -->
 <path d="M 471.15 472.75 L 483.75 472.75 C 467.1875 479.375, 467.1875 493.125, 483.75 500 C 467.1875 506.875, 467.1875 520.625, 483.75 527.25 L 471.15 527.25 Z" stroke-width="0" stroke="0" stroke-linecap="round" fill-opacity="1" fill="#c38066" /><path d="M 483.75 473 C 467.1875 479.375, 467.1875 493.125, 483.75 500 C 467.1875 506.875, 467.1875 520.625, 483.75 526.95" stroke-width="1.5" stroke="gray" stroke-linecap="round" fill-opacity="0" fill="none" /><path d="M 483.75 473 C 467.1875 479.375, 467.1875 493.125, 483.75 500 C 467.1875 506.875, 467.1875 520.625, 483.75 527" stroke-width="0.5" stroke="black" stroke-opacity="0.5" stroke-linecap="round" fill-opacity="0" fill="none" />
-<!-- FRONT COMPONENTS: eraser -->
+<!-- FRONT COMPONENT: eraser -->
 <circle r="23.125" cx="160" cy="500" fill="#db756d" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 
-<!-- FRONT COMPONENTS: cap -->
+<!-- FRONT COMPONENT: cap -->
 <circle r="25" cx="160" cy="500" fill="#E1C16E" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 <circle r="23.75" cx="160" cy="500" fill="#E1C16E" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 
-<!-- FRONT COMPONENTS: ferrule -->
+<!-- FRONT COMPONENT: ferrule -->
 <circle r="25.625" cx="160" cy="500" fill="#E1C16E" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 
-<!-- FRONT COMPONENTS: body -->
+<!-- FRONT COMPONENT: body -->
 <polygon points="144.12286759728528,472.5 175.87713240271472,472.5 191.75426480542941,500 175.87713240271472,527.5 144.12286759728528,527.5 128.24573519457059,500 " stroke="black" stroke-width="0.5" fill="#014fa1" fill-opacity="1"/>
 
-<!-- FRONT COMPONENTS: head -->
+<!-- FRONT COMPONENT: head -->
 <circle r="27.5" cx="160" cy="500" stroke="black" stroke-width="0.5" fill="#c38066" fill-opacity="1"/>
 <circle r="20" cx="160" cy="500" stroke="black" stroke-width="0.5" fill="#c38066" fill-opacity="1"/>
 
-<!-- FRONT COMPONENTS: tip -->
+<!-- FRONT COMPONENT: tip -->
 <circle r="18.75" cx="160" cy="500" stroke="black" stroke-width="0.5" fill="#E1C16E" fill-opacity="1"/>
 <circle r="8.125" cx="160" cy="500" stroke="black" stroke-width="0.5" fill="#E1C16E" fill-opacity="1"/>
 <circle r="8.125" cx="160" cy="500" fill="#E1C16E" fill-opacity="1" stroke="black" stroke-width="0.5"  />

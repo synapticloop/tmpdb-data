@@ -6,6 +6,7 @@ import {
 	drawExtraBackground,
 	drawExtraForeground,
 	drawOutlineCircle,
+	drawOutlineCylinderRectangle,
 	drawOutlineHexagon,
 	drawOutlineOctagon,
 	drawShapeDetails,
@@ -523,6 +524,9 @@ export abstract class SVGRenderer {
 				case "octagonal":
 					svgString += drawOutlineOctagon(x, y, part.startHeight, colour);
 					break;
+				case "cylinder-rectangle":
+					svgString += drawOutlineCylinderRectangle(x, y, part.startHeight/2 * 5, colour);
+					break;
 			}
 		}
 
@@ -539,8 +543,6 @@ export abstract class SVGRenderer {
 	protected renderFrontComponents(x: number, y: number, colourIndex:number): string {
 		let svgString: string = "";
 
-		let colour: OpaqueColour = new OpaqueColour(this.pencil.colourMap, "white%0");
-
 		// we want to render them back to front so that the last component is on
 		// the bottom
 
@@ -548,40 +550,9 @@ export abstract class SVGRenderer {
 
 		// go through the components and render them
 		for(const component of this.pencil.components) {
-
-			svgString += `\n<!-- FRONT COMPONENTS: ${component.type} -->\n`
-			component.parts.reverse();
-			for (let part of component.parts) {
-				colour = part.getOpacityColour(colourIndex);
-				switch (part.shape) {
-					case "cylinder":
-						svgString += circle(x, y, (part.startHeight / 2) * 5, "0.5", "black", colour);
-						break;
-					case "cone":
-					case "convex":
-					case "concave":
-						svgString += drawOutlineCircle((part.endHeight / 2) * 5, x, y, colour);
-						svgString += drawOutlineCircle((part.startHeight / 2) * 5, x, y, colour);
-						break;
-					case "hexagonal":
-						svgString += drawOutlineHexagon(x, y, part.startHeight, colour);
-						break;
-					case "octagonal":
-						svgString += drawOutlineOctagon(x, y, part.startHeight, colour);
-						break;
-				}
-			}
-
-			for(const extra of component.extras) {
-				extra.extraParts.reverse();
-				svgString += renderExtra(x, y, extra.xOffset, extra.yOffset, extra.depth, extra.extraParts, extra.getBackgroundOpacityColour(colourIndex));
-				extra.extraParts.reverse();
-			}
-
-			component.parts.reverse();
+			svgString += this.renderFrontComponent(x, y, component, colourIndex);
 		}
 
-		// now put it back in order
 		this.pencil.components.reverse()
 
 		for(let front of this.pencil.front) {
@@ -700,6 +671,9 @@ export abstract class SVGRenderer {
 						break;
 					case "octagonal":
 						svgString += drawOutlineOctagon(x, y, part.startHeight, colour);
+						break;
+					case "cylinder-rectangle":
+						svgString += drawOutlineCylinderRectangle(x, y, part.startHeight/2 * 5, colour);
 						break;
 				}
 			}
@@ -959,6 +933,7 @@ export abstract class SVGRenderer {
 			case "cylinder":
 			case "hexagonal":
 			case "octagonal":
+			case "cylinder-rectangle":
 			case "cone":
 				// draw the background colour first - we do just a slight adjustment
 				// to fill in the colour completely (0.05)... (this will be overwritten

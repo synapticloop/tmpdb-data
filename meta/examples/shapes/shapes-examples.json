@@ -35,6 +35,12 @@
 			"parts": [
 				{ "shape": "octagonal", "dimensions": [ 40, 8 ] }
 			]
+		},
+		{
+			"type": "cylinder-rectangle",
+			"parts": [
+				{ "shape": "cylinder-rectangle", "dimensions": [ 40, 8 ] }
+			]
 		}
 	]
 }

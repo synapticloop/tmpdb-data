@@ -43,10 +43,10 @@
 
 
 <!-- renderPart: hexagonal -->
-<path d="M483.075 157.5 L516.925 157.5 L516.925 202.5 L483.075 202.5 Z" stroke-width="0" stroke="none" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<path d="M483.125 157.5 L516.875 157.5 M516.875 202.5 L483.125 202.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<!-- !right !both --><path d="M516.875 157.5 L516.875 202.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<!-- !left !both --><path d="M483.125 157.5 L483.125 202.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<path d="M483.075 157.5 L516.925 157.5 L516.925 202.5 L483.075 202.5 L483.075 157.5" stroke-width="0" stroke="none" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<path d="M483.075 157.5 L516.925 157.5 M516.925 202.5 L483.075 202.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<!-- !right !both --><path d="M516.925 157.5 L516.925 202.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<!-- !left !both --><path d="M483.075 157.5 L483.075 202.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <line x1="483.125" y1="180" x2="516.875" y2="180" stroke-width="1.5" stroke="gray" fill="gray" stroke-opacity="1.0"/>
 <line x1="483.125" y1="180" x2="516.875" y2="180" stroke-width="0.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 <path d="M348.125 152.25 Q370.625 168.5 380.625 148.5" stroke-width="3" stroke="white" fill="none" stroke-linecap="round" />
@@ -65,10 +65,10 @@
 
 
 <!-- renderPart: cylinder -->
-<path d="M488.075 276.875 L511.925 276.875 L511.925 323.125 L488.075 323.125 Z" stroke-width="0" stroke="none" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<path d="M488.125 276.875 L511.875 276.875 M511.875 323.125 L488.125 323.125" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<!-- !right !both --><path d="M511.875 276.875 L511.875 323.125" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<!-- !left !both --><path d="M488.125 276.875 L488.125 323.125" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<path d="M488.075 276.875 L511.925 276.875 L511.925 323.125 L488.075 323.125 L488.075 276.875" stroke-width="0" stroke="none" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<path d="M488.075 276.875 L511.925 276.875 M511.925 323.125 L488.075 323.125" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<!-- !right !both --><path d="M511.925 276.875 L511.925 323.125" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<!-- !left !both --><path d="M488.075 276.875 L488.075 323.125" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <line x1="309.375" y1="269.375" x2="324.375" y2="269.375" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
 <line x1="324.375" y1="269.375" x2="344.375" y2="278.125" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
 <line x1="344.375" y1="278.125" x2="364.375" y2="269.375" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />

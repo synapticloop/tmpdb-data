@@ -55,7 +55,7 @@
 <path d="M220.575 100 L374.425 100 M374.425 140 L220.575 140" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
 <!-- !right !both --><path d="M374.425 100 L374.425 140" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
 <!-- !left !both --><path d="M220.575 100 L220.575 140" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
-<path d="M220.625 100 L374.375 100 L374.375 140 L220.625 140 Z" stroke-width="1.0" stroke="black" fill="url(#knurled-small)"/>
+<!-- DEFAULT FINISH: knurled-small --><path d="M220.625 100 L374.375 100 L374.375 140 L220.625 140 Z" stroke-width="0.5" stroke="black" fill="url(#knurled-small)"/>
 
 
 <!-- renderSideComponent: body -->
@@ -135,7 +135,7 @@
 <path d="M220.575 220 L374.425 220 M374.425 260 L220.575 260" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
 <!-- !right !both --><path d="M374.425 220 L374.425 260" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
 <!-- !left !both --><path d="M220.575 220 L220.575 260" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
-<path d="M220.625 220 L374.375 220 L374.375 260 L220.625 260 Z" stroke-width="1.0" stroke="black" fill="url(#knurled-small)"/>
+<!-- DEFAULT FINISH: knurled-small --><path d="M220.625 220 L374.375 220 L374.375 260 L220.625 260 Z" stroke-width="0.5" stroke="black" fill="url(#knurled-small)"/>
 
 
 <!-- renderSideComponent: body -->
@@ -215,7 +215,7 @@
 <path d="M220.575 340 L374.425 340 M374.425 380 L220.575 380" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
 <!-- !right !both --><path d="M374.425 340 L374.425 380" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
 <!-- !left !both --><path d="M220.575 340 L220.575 380" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
-<path d="M220.625 340 L374.375 340 L374.375 380 L220.625 380 Z" stroke-width="1.0" stroke="black" fill="url(#knurled-small)"/>
+<!-- DEFAULT FINISH: knurled-small --><path d="M220.625 340 L374.375 340 L374.375 380 L220.625 380 Z" stroke-width="0.5" stroke="black" fill="url(#knurled-small)"/>
 
 
 <!-- renderSideComponent: body -->

@@ -58,7 +58,7 @@
 <path d="M273.075 101.25 L383.175 98.75 M383.175 141.25 L273.075 138.75" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
 <!-- !right !both --><path d="M383.175 98.75 L383.175 141.25" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
 <!-- !left !both --><path d="M273.075 101.25 L273.075 138.75" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
-<path d="M273.125 101.25 L383.125 98.75 L383.125 141.25 L273.125 138.75 Z" stroke-width="1.0" stroke="black" fill="url(#knurled)"/>
+<!-- DEFAULT FINISH: knurled --><path d="M273.125 101.25 L383.125 98.75 L383.125 141.25 L273.125 138.75 Z" stroke-width="0.5" stroke="black" fill="url(#knurled)"/>
 
 
 <!-- renderSideComponent: body -->
@@ -110,6 +110,8 @@
 <path d="M880.575 100.625 L915.675 100.625 M915.675 139.375 L880.575 139.375" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="blue" fill-opacity="1"/>
 <!-- !right !both --><path d="M915.675 100.625 L915.675 139.375" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="blue" fill-opacity="1"/>
 <!-- !left !both --><path d="M880.575 100.625 L880.575 139.375" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="blue" fill-opacity="1"/>
+<line x1="915.625" y1="120" x2="955.625" y2="120" stroke-linecap="round" stroke="orange"  stroke-width="5" />
+<line x1="955.625" y1="120" x2="955.625" y2="180" stroke="orange" stroke-linecap="round"  stroke-width="5" />
 
 
 <!-- renderPart: cylinder -->
@@ -124,6 +126,8 @@
 <path d="M879.325 225.625 L915.675 225.625 M915.675 254.375 L879.325 254.375" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
 <!-- !right !both --><path d="M915.675 225.625 L915.675 254.375" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
 <!-- !left !both --><path d="M879.325 225.625 L879.325 254.375" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
+<line x1="915.625" y1="240" x2="823.125" y2="240" stroke-linecap="round" stroke="green"  stroke-width="2" />
+<line x1="823.125" y1="240" x2="823.125" y2="180" stroke="green" stroke-linecap="round"  stroke-width="2" />
 
 
 <!-- renderSideComponent: cap -->

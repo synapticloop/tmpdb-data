@@ -69,7 +69,7 @@
 <path d="M173.075 281.25 L283.175 278.75 M283.175 321.25 L173.075 318.75" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !right !both --><path d="M283.175 278.75 L283.175 321.25" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !left !both --><path d="M173.075 281.25 L173.075 318.75" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<path d="M173.125 281.25 L283.125 278.75 L283.125 321.25 L173.125 318.75 Z" stroke-width="1.0" stroke="black" fill="url(#knurled)"/>
+<!-- DEFAULT FINISH: knurled --><path d="M173.125 281.25 L283.125 278.75 L283.125 321.25 L173.125 318.75 Z" stroke-width="0.5" stroke="black" fill="url(#knurled)"/>
 
 
 <!-- renderSideComponent: body -->
@@ -216,7 +216,7 @@
 <path d="M173.075 621.25 L283.175 618.75 M283.175 661.25 L173.075 658.75" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
 <!-- !right !both --><path d="M283.175 618.75 L283.175 661.25" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
 <!-- !left !both --><path d="M173.075 621.25 L173.075 658.75" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
-<path d="M173.125 621.25 L283.125 618.75 L283.125 661.25 L173.125 658.75 Z" stroke-width="1.0" stroke="black" fill="url(#knurled)"/>
+<!-- DEFAULT FINISH: knurled --><path d="M173.125 621.25 L283.125 618.75 L283.125 661.25 L173.125 658.75 Z" stroke-width="0.5" stroke="black" fill="url(#knurled)"/>
 
 
 <!-- renderSideComponent: body -->
@@ -309,7 +309,7 @@
 <path d="M173.075 741.25 L283.175 738.75 M283.175 781.25 L173.075 778.75" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
 <!-- !right !both --><path d="M283.175 738.75 L283.175 781.25" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
 <!-- !left !both --><path d="M173.075 741.25 L173.075 778.75" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
-<path d="M173.125 741.25 L283.125 738.75 L283.125 781.25 L173.125 778.75 Z" stroke-width="1.0" stroke="black" fill="url(#knurled)"/>
+<!-- DEFAULT FINISH: knurled --><path d="M173.125 741.25 L283.125 738.75 L283.125 781.25 L173.125 778.75 Z" stroke-width="0.5" stroke="black" fill="url(#knurled)"/>
 
 
 <!-- renderSideComponent: body -->

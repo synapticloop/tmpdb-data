@@ -191,7 +191,7 @@
 <path d="M468.075 478.75 L623.175 478.75 M623.175 521.25 L468.075 521.25" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !right !both --><path d="M623.175 478.75 L623.175 521.25" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !left !both --><path d="M468.075 478.75 L468.075 521.25" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<path d="M468.125 478.75 L623.125 478.75 L623.125 521.25 L468.125 521.25 Z" stroke-width="1.0" stroke="black" fill="url(#knurled)"/>
+<!-- DEFAULT FINISH: knurled --><path d="M468.125 478.75 L623.125 478.75 L623.125 521.25 L468.125 521.25 Z" stroke-width="0.5" stroke="black" fill="url(#knurled)"/>
 
 
 <!-- renderSideComponent: body -->
@@ -231,28 +231,28 @@
 <!-- !right !both --><path d="M1134.425 484.375 L1134.425 515.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !left !both --><path d="M1056.825 484.375 L1056.825 515.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 
-<!-- FRONT COMPONENTS: cap -->
+<!-- FRONT COMPONENT: cap -->
 <circle r="15.625" cx="160" cy="500" fill="white" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 
-<!-- FRONT COMPONENTS: tail -->
+<!-- FRONT COMPONENT: tail -->
 <circle r="20" cx="160" cy="500" fill="white" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 <circle r="20.625" cx="160" cy="500" fill="white" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 
-<!-- FRONT COMPONENTS: clip -->
+<!-- FRONT COMPONENT: clip -->
 
-<!-- FRONT COMPONENTS: body -->
+<!-- FRONT COMPONENT: body -->
 <circle r="20.625" cx="160" cy="500" fill="white" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 
-<!-- FRONT COMPONENTS: grip -->
+<!-- FRONT COMPONENT: grip -->
 <circle r="21.25" cx="160" cy="500" fill="white" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 
-<!-- FRONT COMPONENTS: shaft eraser -->
+<!-- FRONT COMPONENT: shaft eraser -->
 
-<!-- FRONT COMPONENTS: shaft cap -->
+<!-- FRONT COMPONENT: shaft cap -->
 
-<!-- FRONT COMPONENTS: shaft -->
+<!-- FRONT COMPONENT: shaft -->
 
-<!-- FRONT COMPONENTS: tip -->
+<!-- FRONT COMPONENT: tip -->
 <circle r="20.625" cx="160" cy="500" stroke="black" stroke-width="0.5" fill="white" fill-opacity="1"/>
 <circle r="19.375" cx="160" cy="500" stroke="black" stroke-width="0.5" fill="white" fill-opacity="1"/>
 <circle r="18.125" cx="160" cy="500" stroke="black" stroke-width="0.5" fill="white" fill-opacity="1"/>

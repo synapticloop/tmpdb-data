@@ -87,7 +87,7 @@
 <path d="M231.825 275 L379.425 275 M379.425 325 L231.825 325" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !right !both --><path d="M379.425 275 L379.425 325" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !left !both --><path d="M231.825 275 L231.825 325" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<path d="M231.875 275 L379.375 275 L379.375 325 L231.875 325 Z" stroke-width="1.0" stroke="black" fill="url(#ridged)"/>
+<!-- DEFAULT FINISH: ridged --><path d="M231.875 275 L379.375 275 L379.375 325 L231.875 325 Z" stroke-width="0.5" stroke="black" fill="url(#ridged)"/>
 
 
 <!-- renderSideComponent: indicator -->
@@ -125,6 +125,7 @@
 <!-- !right !both --><path d="M761.925 276.875 L761.925 323.125" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !left !both --><path d="M738.075 276.875 L738.075 323.125" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <path d="M582.875 265.875 Q605.625 288.375 615.625 265.875 Z" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
+<rect x="582.875" y="265.875" width="35" height="-12.5" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
 <line x1="580.625" y1="264.375" x2="763.125" y2="264.375" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
 <path d="M763.125 264.375 Q783.125 271.875 763.125 278.125" stroke-width="3" stroke="white" fill="none" stroke-linecap="round" />
 
@@ -281,7 +282,7 @@
 <path d="M231.825 615 L379.425 615 M379.425 665 L231.825 665" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1"/>
 <!-- !right !both --><path d="M379.425 615 L379.425 665" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1"/>
 <!-- !left !both --><path d="M231.825 615 L231.825 665" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1"/>
-<path d="M231.875 615 L379.375 615 L379.375 665 L231.875 665 Z" stroke-width="1.0" stroke="black" fill="url(#ridged)"/>
+<!-- DEFAULT FINISH: ridged --><path d="M231.875 615 L379.375 615 L379.375 665 L231.875 665 Z" stroke-width="0.5" stroke="black" fill="url(#ridged)"/>
 
 
 <!-- renderSideComponent: indicator -->
@@ -319,6 +320,7 @@
 <!-- !right !both --><path d="M761.925 616.875 L761.925 663.125" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1"/>
 <!-- !left !both --><path d="M738.075 616.875 L738.075 663.125" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1"/>
 <path d="M582.875 605.875 Q605.625 628.375 615.625 605.875 Z" stroke-width="3" stroke="#b4b8b9" fill="#b4b8b9" stroke-linecap="round" />
+<rect x="582.875" y="605.875" width="35" height="-12.5" stroke-width="3" stroke="#b4b8b9" fill="#b4b8b9" stroke-linecap="round" />
 <line x1="580.625" y1="604.375" x2="763.125" y2="604.375" stroke-width="3" stroke="#b4b8b9" fill="#b4b8b9" stroke-linecap="round" />
 <path d="M763.125 604.375 Q783.125 611.875 763.125 618.125" stroke-width="3" stroke="#b4b8b9" fill="none" stroke-linecap="round" />
 
@@ -421,7 +423,7 @@
 <path d="M231.825 735 L379.425 735 M379.425 785 L231.825 785" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#0174bd" fill-opacity="1"/>
 <!-- !right !both --><path d="M379.425 735 L379.425 785" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#0174bd" fill-opacity="1"/>
 <!-- !left !both --><path d="M231.825 735 L231.825 785" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#0174bd" fill-opacity="1"/>
-<path d="M231.875 735 L379.375 735 L379.375 785 L231.875 785 Z" stroke-width="1.0" stroke="black" fill="url(#ridged)"/>
+<!-- DEFAULT FINISH: ridged --><path d="M231.875 735 L379.375 735 L379.375 785 L231.875 785 Z" stroke-width="0.5" stroke="black" fill="url(#ridged)"/>
 
 
 <!-- renderSideComponent: indicator -->
@@ -459,6 +461,7 @@
 <!-- !right !both --><path d="M761.925 736.875 L761.925 783.125" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1"/>
 <!-- !left !both --><path d="M738.075 736.875 L738.075 783.125" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1"/>
 <path d="M582.875 725.875 Q605.625 748.375 615.625 725.875 Z" stroke-width="3" stroke="#b4b8b9" fill="#b4b8b9" stroke-linecap="round" />
+<rect x="582.875" y="725.875" width="35" height="-12.5" stroke-width="3" stroke="#b4b8b9" fill="#b4b8b9" stroke-linecap="round" />
 <line x1="580.625" y1="724.375" x2="763.125" y2="724.375" stroke-width="3" stroke="#b4b8b9" fill="#b4b8b9" stroke-linecap="round" />
 <path d="M763.125 724.375 Q783.125 731.875 763.125 738.125" stroke-width="3" stroke="#b4b8b9" fill="none" stroke-linecap="round" />
 

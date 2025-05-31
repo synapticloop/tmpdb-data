@@ -114,21 +114,21 @@ _(Note: all offsets are from the start of the pencil)_
 
 | Colour | SKU | Manufacture dates |
 | ---: | :--- | :--- |
-| **white** | 1904506 | From: undefined to undefined |
-| **red** | 1904507 | From: undefined to undefined |
-| **blue** | 1904508 | From: undefined to undefined |
-| **neon orange** | 2007211 | From: undefined to undefined |
-| **neon green** | 2007216 | From: undefined to undefined |
-| **neon pink** | 2007218 | From: undefined to undefined |
-| **light blue** | 2007252 | From: undefined to undefined |
-| **orchid** | 2189066 | From: undefined to undefined |
-| **opal** | 2189067 | From: undefined to undefined |
-| **sea blue** | 2189069 | From: undefined to undefined |
-| **rose** | 2189068 | From: undefined to undefined |
-| **magenta** | 2214581 | From: undefined to undefined |
-| **iris** | 2214584 | From: undefined to undefined |
-| **marigold** | 2214585 | From: undefined to undefined |
-| **spidermum** | 2214586 | From: undefined to undefined |
+| **white** | 1904506 | From:  to undefined |
+| **red** | 1904507 | From:  to undefined |
+| **blue** | 1904508 | From:  to undefined |
+| **neon orange** | 2007211 | From:  to undefined |
+| **neon green** | 2007216 | From:  to undefined |
+| **neon pink** | 2007218 | From:  to undefined |
+| **light blue** | 2007252 | From:  to undefined |
+| **orchid** | 2189066 | From:  to undefined |
+| **opal** | 2189067 | From:  to undefined |
+| **sea blue** | 2189069 | From:  to undefined |
+| **rose** | 2189068 | From:  to undefined |
+| **magenta** | 2214581 | From: 2025 to undefined |
+| **iris** | 2214584 | From: 2025 to undefined |
+| **marigold** | 2214585 | From: 2025 to undefined |
+| **spidermum** | 2214586 | From: 2025 to undefined |
 
 
 ---

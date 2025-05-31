@@ -90,6 +90,17 @@ export function drawOutlineCircle(radius: number, x: number, y:number, fillColou
 			`stroke="${strokeColour}" stroke-width="0.5" fill="${fillColour.colour}" fill-opacity="${fillColour.opacity}"/>\n`);
 }
 
+export function drawOutlineCylinderRectangle(x: number, y:number, radius: number, fillColour: OpaqueColour): string {
+	let strokeColour: string = "black";
+	if(fillColour.colour === "black") {
+		strokeColour = "dimgray";
+	}
+
+	// TODO - need to round the rectangle at the bottom
+	return(`<!-- cylinder-rectangle --><path d="M${x + radius} ${y} A ${radius} ${radius} 360 0 0 ${x - radius} ${y} L ${x - radius} ${y + radius} L ${x + radius} ${y + radius} Z" ` +
+		`stroke="${strokeColour}" stroke-width="0.5" fill="${fillColour.colour}" fill-opacity="${fillColour.opacity}" />\n`);
+}
+
 export function drawShapeDetails(x: number, y: number, width: number) {
 	return(`<line x1="${x}" ` +
 			`y1="${y}" ` +
@@ -101,60 +112,6 @@ export function drawShapeDetails(x: number, y: number, width: number) {
 			`x2="${x + width}" ` +
 			`y2="${y}" ` +
 			`stroke-width="0.5" stroke="black" fill="none" stroke-opacity="0.5"/>\n`);
-}
-
-export function drawExtra(offsetX: number, offsetY: number, parts: Part[], strokeColour: string):string {
-	let thisStrokeColour = "black";
-	if(strokeColour === "black") {
-		thisStrokeColour = "dimgray";
-	}
-	let svgString = "";
-	for(const part of parts) {
-		if(part["line"]) {
-			const points = part["line"];
-			svgString += `<line x1="${offsetX + (points[0] * 5)}" ` +
-					`y1="${offsetY + (points[1] * 5)+ 1}" ` +
-					`x2="${offsetX + (points[2] * 5)}" ` +
-					`y2="${offsetY + (points[3] * 5)+ 1}" ` +
-					`stroke-width="3" stroke="${thisStrokeColour}" fill="dimgray" stroke-linecap="round" />\n/>`;
-		} else if(part["curve"]) {
-			const points = part["curve"];
-			svgString += `<path d="M${offsetX + (points[0] * 5)} ${offsetY + (points[1] * 5) + 1} ` +
-					`Q${offsetX + (points[4] * 5)} ${offsetY + (points[5] * 5) + 1} ` +
-					`${offsetX + (points[2] * 5)} ${offsetY + (points[3] * 5) + 1}" ` +
-					`stroke-width="3" stroke="${thisStrokeColour}" fill="none" stroke-linecap="round" />\n`
-		} else if(part["curve-fill"]) {
-			const points = part["curve-fill"];
-			svgString += `<path d="M${offsetX + (points[0] * 5)} ${offsetY + (points[1] * 5)} ` +
-					`Q${offsetX + (points[4] * 5)} ${offsetY + (points[5] * 5) + 1} ` +
-					`${offsetX + (points[2] * 5)} ${offsetY + (points[3] * 5)} Z" ` +
-					`stroke-width="3" stroke="${thisStrokeColour}" fill="dimgray" stroke-linecap="round" />\n`
-		}
-	}
-
-	for(const part of parts) {
-		if(part["line"]) {
-			const points = part["line"];
-			svgString += `<line x1="${offsetX + (points[0] * 5)}" ` +
-					`y1="${offsetY + (points[1] * 5) + 1}" ` +
-					`x2="${offsetX + (points[2] * 5)}" ` +
-					`y2="${offsetY + (points[3] * 5) + 1}" ` +
-					`stroke-width="2" stroke="${strokeColour}" fill="${strokeColour}" stroke-linecap="round" />\n/>`;
-		} else if(part["curve"]) {
-			const points = part["curve"];
-			svgString += `<path d="M${offsetX + (points[0] * 5)} ${offsetY + (points[1] * 5) + 1} ` +
-					`Q${offsetX + (points[4] * 5)} ${offsetY + (points[5] * 5) + 1} ` +
-					`${offsetX + (points[2] * 5)} ${offsetY + (points[3] * 5) + 1}" ` +
-					`stroke-width="2" stroke="${strokeColour}" fill="none" stroke-linecap="round" />\n`
-		} else if(part["curve-fill"]) {
-			const points = part["curve-fill"];
-			svgString += `<path d="M${offsetX + (points[0] * 5)} ${offsetY + (points[1] * 5)} ` +
-					`Q${offsetX + (points[4] * 5)} ${offsetY + (points[5] * 5)} ` +
-					`${offsetX + (points[2] * 5)} ${offsetY + (points[3] * 5)} Z" ` +
-					`stroke-width="2" stroke="${strokeColour}" fill="${strokeColour}" stroke-linecap="round" />\n`
-		}
-	}
-	return(svgString);
 }
 
 export function drawExtraBackground(offsetX: number, offsetY: number, extraParts: ExtraPart[], strokeColour: string): string {
@@ -176,12 +133,20 @@ export function drawExtraBackground(offsetX: number, offsetY: number, extraParts
 					`${offsetX + (points[2] * 5)} ${offsetY + (points[3] * 5) + 1}" ` +
 					`stroke-width="${extraPart.width + 1}" stroke="${strokeColour}" fill="none" stroke-linecap="round" />\n`
 				break;
-			case "curve-fill": {
+			case "curve-fill":
 				svgString += `<path d="M${offsetX + (points[0] * 5)} ${offsetY + (points[1] * 5)} ` +
-						`Q${offsetX + (points[4] * 5)} ${offsetY + (points[5] * 5) + 1} ` +
-						`${offsetX + (points[2] * 5)} ${offsetY + (points[3] * 5)} Z" ` +
-						`stroke-width="${extraPart.width + 1}" stroke="${strokeColour}" fill="dimgray" stroke-linecap="round" />\n`
-			}
+					`Q${offsetX + (points[4] * 5)} ${offsetY + (points[5] * 5) + 1} ` +
+					`${offsetX + (points[2] * 5)} ${offsetY + (points[3] * 5)} Z" ` +
+					`stroke-width="${extraPart.width + 1}" stroke="${strokeColour}" fill="dimgray" stroke-linecap="round" />\n`
+				break;
+			case "rectangle-fill":
+				svgString += `<rect x="${offsetX + (points[0] * 5)}" y="${offsetY + (points[1] * 5)}" width="${points[2] * 5}" height="${points[3] * 5}" ` +
+					`stroke-width="${extraPart.width + 1}" stroke="${strokeColour}" fill="dimgray" stroke-linecap="round" />\n`
+				break;
+			case "rectangle":
+				svgString += `<rect x="${offsetX + (points[0] * 5)}" y="${offsetY + (points[1] * 5)}" width="${points[2] * 5}" height="${points[3] * 5}" ` +
+					`stroke-width="${extraPart.width + 1}" stroke="${strokeColour}" fill="none" stroke-linecap="round" />\n`
+				break;
 		}
 	}
 
@@ -213,6 +178,13 @@ export function drawExtraForeground(offsetX: number, offsetY: number, extraParts
 					`Q${offsetX + (points[4] * 5)} ${offsetY + (points[5] * 5)} ` +
 					`${offsetX + (points[2] * 5)} ${offsetY + (points[3] * 5)} Z" ` +
 					`stroke-width="${extraPart.width}" stroke="${fillColour}" fill="${fillColour}" stroke-linecap="round" />\n`
+			case "rectangle-fill":
+				svgString += `<rect x="${offsetX + (points[0] * 5)}" y="${offsetY + (points[1] * 5)}" width="${points[2] * 5}" height="${points[3] * 5}" ` +
+					`stroke-width="${extraPart.width}" stroke="${fillColour}" fill="${fillColour}" stroke-linecap="round" />\n`
+				break;
+			case "rectangle":
+				svgString += `<rect x="${offsetX + (points[0] * 5)}" y="${offsetY + (points[1] * 5)}" width="${points[2] * 5}" height="${points[3] * 5}" ` +
+					`stroke-width="${extraPart.width}" stroke="${fillColour}" fill="none" stroke-linecap="round" />\n`
 				break;
 		}
 	}

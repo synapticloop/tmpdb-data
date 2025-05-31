@@ -435,7 +435,7 @@
 <path d="M948.075 283.75 L953.175 283.75 M953.175 316.25 L948.075 316.25" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !right !both --><path d="M953.175 283.75 L953.175 316.25" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !left !both --><path d="M948.075 283.75 L948.075 316.25" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<path d="M948.125 283.75 L953.125 283.75 L953.125 316.25 L948.125 316.25 Z" stroke-width="1.0" stroke="black" fill="url(#lined)"/>
+<!-- DEFAULT FINISH: lined --><path d="M948.125 283.75 L953.125 283.75 L953.125 316.25 L948.125 316.25 Z" stroke-width="0.5" stroke="black" fill="url(#lined)"/>
 
 
 <!-- renderPart: cylinder -->

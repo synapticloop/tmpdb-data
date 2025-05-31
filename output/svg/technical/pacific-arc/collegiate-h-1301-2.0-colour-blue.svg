@@ -237,7 +237,7 @@
 <path d="M481.825 475 L629.425 475 M629.425 525 L481.825 525" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#0174bd" fill-opacity="1"/>
 <!-- !right !both --><path d="M629.425 475 L629.425 525" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#0174bd" fill-opacity="1"/>
 <!-- !left !both --><path d="M481.825 475 L481.825 525" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#0174bd" fill-opacity="1"/>
-<path d="M481.875 475 L629.375 475 L629.375 525 L481.875 525 Z" stroke-width="1.0" stroke="black" fill="url(#ridged)"/>
+<!-- DEFAULT FINISH: ridged --><path d="M481.875 475 L629.375 475 L629.375 525 L481.875 525 Z" stroke-width="0.5" stroke="black" fill="url(#ridged)"/>
 
 
 <!-- renderSideComponent: indicator -->
@@ -275,6 +275,7 @@
 <!-- !right !both --><path d="M1011.925 476.875 L1011.925 523.125" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1"/>
 <!-- !left !both --><path d="M988.075 476.875 L988.075 523.125" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1"/>
 <path d="M832.875 465.875 Q855.625 488.375 865.625 465.875 Z" stroke-width="3" stroke="#b4b8b9" fill="#b4b8b9" stroke-linecap="round" />
+<rect x="832.875" y="465.875" width="35" height="-12.5" stroke-width="3" stroke="#b4b8b9" fill="#b4b8b9" stroke-linecap="round" />
 <line x1="830.625" y1="464.375" x2="1013.125" y2="464.375" stroke-width="3" stroke="#b4b8b9" fill="#b4b8b9" stroke-linecap="round" />
 <path d="M1013.125 464.375 Q1033.125 471.875 1013.125 478.125" stroke-width="3" stroke="#b4b8b9" fill="none" stroke-linecap="round" />
 
@@ -329,16 +330,16 @@
 <rect x="581.875" y="475.25" width="47" height="49.5" rx="0" ry="0" stroke-width="0.5" stroke="none" fill="none" fill-opacity="1"/>
 <path d="M 581.875 475 C 615.125 475, 615.125 525, 581.875 525" stroke-width="0.5" stroke="black" stroke-linecap="round" fill-opacity="1" fill="#0174bd" />
 
-<!-- FRONT COMPONENTS: cap -->
+<!-- FRONT COMPONENT: cap -->
 <circle r="20.625" cx="160" cy="500" fill="#0174bd" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 <circle r="20" cx="160" cy="500" fill="#0174bd" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 <circle r="20.625" cx="160" cy="500" fill="#0174bd" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 <circle r="15.625" cx="160" cy="500" fill="#0174bd" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 
-<!-- FRONT COMPONENTS: tail -->
+<!-- FRONT COMPONENT: tail -->
 <circle r="21.875" cx="160" cy="500" fill="#0174bd" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 
-<!-- FRONT COMPONENTS: clip -->
+<!-- FRONT COMPONENT: clip -->
 <circle r="23.125" cx="160" cy="500" fill="#b4b8b9" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 <!-- WxH 4.5 2.75 --><rect x="148.75" y="464.625" width="22.5" height="13.75" rx="0" ry="0" stroke-width="1.0" stroke="dimgray" fill="#b4b8b9"/>
 <rect x="148.75" y="464.625" width="22.5" height="13.75" rx="0" ry="0" stroke-width="1.0" stroke="dimgray" fill="none"/>
@@ -347,16 +348,16 @@
 <!-- WxH 4.5 0.6 --><rect x="148.75" y="475.375" width="22.5" height="3" rx="0" ry="0" stroke-width="1.0" stroke="dimgray" fill="#b4b8b9"/>
 <rect x="148.75" y="475.375" width="22.5" height="3" rx="0" ry="0" stroke-width="1.0" stroke="dimgray" fill="none"/>
 
-<!-- FRONT COMPONENTS: body -->
+<!-- FRONT COMPONENT: body -->
 <circle r="22.5" cx="160" cy="500" fill="#0174bd" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 
-<!-- FRONT COMPONENTS: indicator -->
+<!-- FRONT COMPONENT: indicator -->
 <circle r="23.75" cx="160" cy="500" fill="grey" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 
-<!-- FRONT COMPONENTS: grip -->
+<!-- FRONT COMPONENT: grip -->
 <circle r="25" cx="160" cy="500" fill="#0174bd" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 
-<!-- FRONT COMPONENTS: tip -->
+<!-- FRONT COMPONENT: tip -->
 <circle r="21.875" cx="160" cy="500" fill="#b4b8b9" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 <circle r="20" cx="160" cy="500" fill="#b4b8b9" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 <circle r="18.75" cx="160" cy="500" fill="#b4b8b9" fill-opacity="1" stroke="black" stroke-width="0.5"  />

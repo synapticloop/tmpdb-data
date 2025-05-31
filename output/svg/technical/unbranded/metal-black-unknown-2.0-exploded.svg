@@ -52,6 +52,8 @@
 <path d="M302.45 101.25 L326.3 101.25 M326.3 138.75 L302.45 138.75" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !right !both --><path d="M326.3 101.25 L326.3 138.75" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !left !both --><path d="M302.45 101.25 L302.45 138.75" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<line x1="326.25" y1="120" x2="366.25" y2="120" stroke-linecap="round" stroke="orange"  stroke-width="5" />
+<line x1="366.25" y1="120" x2="366.25" y2="180" stroke="orange" stroke-linecap="round"  stroke-width="5" />
 
 
 <!-- renderPart: cylinder -->
@@ -67,6 +69,8 @@
 <line x1="315" y1="228.125" x2="320" y2="251.875" stroke="[object Object]" stroke-linecap="round" stroke-width="1" />
 <line x1="320" y1="228.125" x2="325" y2="251.875" stroke="dimgray" stroke-linecap="round" stroke-width="2" />
 <line x1="320" y1="228.125" x2="325" y2="251.875" stroke="[object Object]" stroke-linecap="round" stroke-width="1" />
+<line x1="326.25" y1="240" x2="265" y2="240" stroke-linecap="round" stroke="green"  stroke-width="2" />
+<line x1="265" y1="240" x2="265" y2="180" stroke="green" stroke-linecap="round"  stroke-width="2" />
 
 
 <!-- renderSideComponent: shaft -->
@@ -100,7 +104,7 @@
 <path d="M356.2 233.125 L383.8 233.125 M383.8 246.875 L356.2 246.875" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !right !both --><path d="M383.8 233.125 L383.8 246.875" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !left !both --><path d="M356.2 233.125 L356.2 246.875" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<path d="M356.25 233.125 L383.75 233.125 L383.75 246.875 L356.25 246.875 Z" stroke-width="1.0" stroke="black" fill="url(#spring)"/>
+<!-- DEFAULT FINISH: spring --><path d="M356.25 233.125 L383.75 233.125 L383.75 246.875 L356.25 246.875 Z" stroke-width="0.5" stroke="black" fill="url(#spring)"/>
 <!-- feature: spring --><rect x="361.25" y="228.125" width="17.5" height="23.75" stroke-width="0.0" stroke="black" fill="url(#spring)"/>
 <line x1="356.75" y1="228.125" x2="356.75" y2="251.875" stroke="dimgray" stroke-linecap="round" stroke-width="2" />
 <line x1="356.75" y1="228.125" x2="356.75" y2="251.875" stroke="white" stroke-linecap="round" stroke-width="1" />
@@ -142,6 +146,10 @@
 <path d="M383.7 233.125 L402.55 233.125 M402.55 246.875 L383.7 246.875" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !right !both --><path d="M402.55 233.125 L402.55 246.875" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !left !both --><path d="M383.7 233.125 L383.7 246.875" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<line x1="326.25" y1="240" x2="958.75" y2="240" stroke-linecap="round" stroke="blue"  stroke-width="2" />
+<line x1="958.75" y1="240" x2="958.75" y2="300" stroke="blue" stroke-linecap="round"  stroke-width="2" />
+<line x1="286.25" y1="360" x2="326.25" y2="360" stroke-linecap="round" stroke="purple"  stroke-width="2" />
+<line x1="286.25" y1="360" x2="286.25" y2="300" stroke="purple" stroke-linecap="round"  stroke-width="2" />
 
 
 <!-- renderSideComponent: head -->
@@ -162,7 +170,7 @@
 <path d="M333.7 337.5 L346.3 337.5 M346.3 382.5 L333.7 382.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !right !both --><path d="M346.3 337.5 L346.3 382.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !left !both --><path d="M333.7 337.5 L333.7 382.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<path d="M333.75 337.5 L346.25 337.5 L346.25 382.5 L333.75 382.5 Z" stroke-width="1.0" stroke="black" fill="url(#knurled)"/>
+<!-- DEFAULT FINISH: knurled --><path d="M333.75 337.5 L346.25 337.5 L346.25 382.5 L333.75 382.5 Z" stroke-width="0.5" stroke="black" fill="url(#knurled)"/>
 
 
 <!-- renderPart: cylinder -->
@@ -177,7 +185,7 @@
 <path d="M351.2 337.5 L363.8 337.5 M363.8 382.5 L351.2 382.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !right !both --><path d="M363.8 337.5 L363.8 382.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !left !both --><path d="M351.2 337.5 L351.2 382.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<path d="M351.25 337.5 L363.75 337.5 L363.75 382.5 L351.25 382.5 Z" stroke-width="1.0" stroke="black" fill="url(#knurled)"/>
+<!-- DEFAULT FINISH: knurled --><path d="M351.25 337.5 L363.75 337.5 L363.75 382.5 L351.25 382.5 Z" stroke-width="0.5" stroke="black" fill="url(#knurled)"/>
 
 
 <!-- renderPart: cylinder -->
@@ -192,7 +200,7 @@
 <path d="M368.7 337.5 L381.3 337.5 M381.3 382.5 L368.7 382.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !right !both --><path d="M381.3 337.5 L381.3 382.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !left !both --><path d="M368.7 337.5 L368.7 382.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<path d="M368.75 337.5 L381.25 337.5 L381.25 382.5 L368.75 382.5 Z" stroke-width="1.0" stroke="black" fill="url(#knurled)"/>
+<!-- DEFAULT FINISH: knurled --><path d="M368.75 337.5 L381.25 337.5 L381.25 382.5 L368.75 382.5 Z" stroke-width="0.5" stroke="black" fill="url(#knurled)"/>
 
 
 <!-- renderPart: cylinder -->
@@ -207,7 +215,7 @@
 <path d="M386.2 337.5 L398.8 337.5 M398.8 382.5 L386.2 382.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !right !both --><path d="M398.8 337.5 L398.8 382.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !left !both --><path d="M386.2 337.5 L386.2 382.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<path d="M386.25 337.5 L398.75 337.5 L398.75 382.5 L386.25 382.5 Z" stroke-width="1.0" stroke="black" fill="url(#knurled)"/>
+<!-- DEFAULT FINISH: knurled --><path d="M386.25 337.5 L398.75 337.5 L398.75 382.5 L386.25 382.5 Z" stroke-width="0.5" stroke="black" fill="url(#knurled)"/>
 
 
 <!-- renderPart: cylinder -->
@@ -222,7 +230,7 @@
 <path d="M403.7 337.5 L416.3 337.5 M416.3 382.5 L403.7 382.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !right !both --><path d="M416.3 337.5 L416.3 382.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !left !both --><path d="M403.7 337.5 L403.7 382.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<path d="M403.75 337.5 L416.25 337.5 L416.25 382.5 L403.75 382.5 Z" stroke-width="1.0" stroke="black" fill="url(#knurled)"/>
+<!-- DEFAULT FINISH: knurled --><path d="M403.75 337.5 L416.25 337.5 L416.25 382.5 L403.75 382.5 Z" stroke-width="0.5" stroke="black" fill="url(#knurled)"/>
 
 
 <!-- renderPart: cylinder -->
@@ -237,7 +245,7 @@
 <path d="M421.2 337.5 L518.8 337.5 M518.8 382.5 L421.2 382.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !right !both --><path d="M518.8 337.5 L518.8 382.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !left !both --><path d="M421.2 337.5 L421.2 382.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<path d="M421.25 337.5 L518.75 337.5 L518.75 382.5 L421.25 382.5 Z" stroke-width="1.0" stroke="black" fill="url(#knurled)"/>
+<!-- DEFAULT FINISH: knurled --><path d="M421.25 337.5 L518.75 337.5 L518.75 382.5 L421.25 382.5 Z" stroke-width="0.5" stroke="black" fill="url(#knurled)"/>
 
 
 <!-- renderSideComponent: body -->
@@ -278,6 +286,8 @@
 <path d="M886.2 341.25 L897.55 341.25 M897.55 378.75 L886.2 378.75" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !right !both --><path d="M897.55 341.25 L897.55 378.75" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !left !both --><path d="M886.2 341.25 L886.2 378.75" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<line x1="897.5" y1="360" x2="937.5" y2="360" stroke-linecap="round" stroke="orange"  stroke-width="5" />
+<line x1="937.5" y1="360" x2="937.5" y2="420" stroke="orange" stroke-linecap="round"  stroke-width="5" />
 
 
 <!-- renderPart: cylinder -->
@@ -299,6 +309,8 @@
 <path d="M891.2 464.375 L897.55 464.375 M897.55 495.625 L891.2 495.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !right !both --><path d="M897.55 464.375 L897.55 495.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !left !both --><path d="M891.2 464.375 L891.2 495.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<line x1="897.5" y1="480" x2="836.25" y2="480" stroke-linecap="round" stroke="green"  stroke-width="2" />
+<line x1="836.25" y1="480" x2="836.25" y2="420" stroke="green" stroke-linecap="round"  stroke-width="2" />
 
 
 <!-- renderSideComponent: cap -->

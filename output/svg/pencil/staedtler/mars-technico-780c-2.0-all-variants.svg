@@ -55,7 +55,7 @@
 <path d="M173.075 101.25 L283.175 98.75 M283.175 141.25 L173.075 138.75" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
 <!-- !right !both --><path d="M283.175 98.75 L283.175 141.25" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
 <!-- !left !both --><path d="M173.075 101.25 L173.075 138.75" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
-<path d="M173.125 101.25 L283.125 98.75 L283.125 141.25 L173.125 138.75 Z" stroke-width="1.0" stroke="black" fill="url(#knurled)"/>
+<!-- DEFAULT FINISH: knurled --><path d="M173.125 101.25 L283.125 98.75 L283.125 141.25 L173.125 138.75 Z" stroke-width="0.5" stroke="black" fill="url(#knurled)"/>
 
 
 <!-- renderSideComponent: body -->
@@ -147,7 +147,7 @@
 <path d="M173.075 221.25 L283.175 218.75 M283.175 261.25 L173.075 258.75" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
 <!-- !right !both --><path d="M283.175 218.75 L283.175 261.25" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
 <!-- !left !both --><path d="M173.075 221.25 L173.075 258.75" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
-<path d="M173.125 221.25 L283.125 218.75 L283.125 261.25 L173.125 258.75 Z" stroke-width="1.0" stroke="black" fill="url(#knurled)"/>
+<!-- DEFAULT FINISH: knurled --><path d="M173.125 221.25 L283.125 218.75 L283.125 261.25 L173.125 258.75 Z" stroke-width="0.5" stroke="black" fill="url(#knurled)"/>
 
 
 <!-- renderSideComponent: body -->

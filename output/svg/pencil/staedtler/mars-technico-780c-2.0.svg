@@ -52,7 +52,7 @@
 <path d="M173.075 81.25 L283.175 78.75 M283.175 121.25 L173.075 118.75" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !right !both --><path d="M283.175 78.75 L283.175 121.25" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !left !both --><path d="M173.075 81.25 L173.075 118.75" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<path d="M173.125 81.25 L283.125 78.75 L283.125 121.25 L173.125 118.75 Z" stroke-width="1.0" stroke="black" fill="url(#knurled)"/>
+<!-- DEFAULT FINISH: knurled --><path d="M173.125 81.25 L283.125 78.75 L283.125 121.25 L173.125 118.75 Z" stroke-width="0.5" stroke="black" fill="url(#knurled)"/>
 
 
 <!-- renderSideComponent: body -->

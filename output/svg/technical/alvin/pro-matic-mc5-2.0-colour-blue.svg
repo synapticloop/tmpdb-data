@@ -190,7 +190,7 @@
 <path d="M464.95 480 L593.8 480 M593.8 520 L464.95 520" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
 <!-- !right !both --><path d="M593.8 480 L593.8 520" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
 <!-- !left !both --><path d="M464.95 480 L464.95 520" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
-<path d="M465 480 L593.75 480 L593.75 520 L465 520 Z" stroke-width="1.0" stroke="black" fill="url(#knurled-small)"/>
+<!-- DEFAULT FINISH: knurled-small --><path d="M465 480 L593.75 480 L593.75 520 L465 520 Z" stroke-width="0.5" stroke="black" fill="url(#knurled-small)"/>
 
 
 <!-- renderSideComponent: body -->
@@ -233,7 +233,7 @@
 <path d="M1068.7 480.625 L1082.55 480.625 M1082.55 519.375 L1068.7 519.375" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1"/>
 <!-- !right !both --><path d="M1082.55 480.625 L1082.55 519.375" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1"/>
 <!-- !left !both --><path d="M1068.7 480.625 L1068.7 519.375" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1"/>
-<path d="M1068.75 480.625 L1082.5 480.625 L1082.5 519.375 L1068.75 519.375 Z" stroke-width="1.0" stroke="black" fill="url(#lined)"/>
+<!-- DEFAULT FINISH: lined --><path d="M1068.75 480.625 L1082.5 480.625 L1082.5 519.375 L1068.75 519.375 Z" stroke-width="0.5" stroke="black" fill="url(#lined)"/>
 
 
 <!-- renderSideComponent: cap -->
@@ -246,28 +246,28 @@
 
 <!-- TAPER START: hexagonal -->
 <path d="M 593.65 480.25 L 596.25 480.25 C 593.4375 485, 593.4375 495, 596.25 500 C 593.4375 505, 593.4375 515, 596.25 519.75 L 593.65 519.75 Z" stroke-width="0" stroke="0" stroke-linecap="round" fill-opacity="1" fill="#24549C" /><path d="M 596.25 480.5 C 593.4375 485, 593.4375 495, 596.25 500 C 593.4375 505, 593.4375 515, 596.25 519.45" stroke-width="1.5" stroke="gray" stroke-linecap="round" fill-opacity="0" fill="none" /><path d="M 596.25 480.5 C 593.4375 485, 593.4375 495, 596.25 500 C 593.4375 505, 593.4375 515, 596.25 519.5" stroke-width="0.5" stroke="black" stroke-opacity="0.5" stroke-linecap="round" fill-opacity="0" fill="none" />
-<!-- FRONT COMPONENTS: cap -->
+<!-- FRONT COMPONENT: cap -->
 <circle r="13.75" cx="160" cy="500" fill="silver" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 
-<!-- FRONT COMPONENTS: tail -->
+<!-- FRONT COMPONENT: tail -->
 <circle r="19.375" cx="160" cy="500" fill="black" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 
-<!-- FRONT COMPONENTS: indicator -->
+<!-- FRONT COMPONENT: indicator -->
 <circle r="20" cx="160" cy="500" fill="silver" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 <circle r="20" cx="160" cy="500" stroke="black" stroke-width="0.5" fill="silver" fill-opacity="1"/>
 <circle r="21.25" cx="160" cy="500" stroke="black" stroke-width="0.5" fill="silver" fill-opacity="1"/>
 
-<!-- FRONT COMPONENTS: body -->
+<!-- FRONT COMPONENT: body -->
 <polygon points="148.4529946162075,480 171.5470053837925,480 183.09401076758502,500 171.5470053837925,520 148.4529946162075,520 136.90598923241498,500 " stroke="black" stroke-width="0.5" fill="#24549C" fill-opacity="1"/>
 
-<!-- FRONT COMPONENTS: grip -->
+<!-- FRONT COMPONENT: grip -->
 <circle r="20" cx="160" cy="500" fill="silver" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 
-<!-- FRONT COMPONENTS: tip -->
+<!-- FRONT COMPONENT: tip -->
 <circle r="18.75" cx="160" cy="500" stroke="black" stroke-width="0.5" fill="silver" fill-opacity="1"/>
 <circle r="16.875" cx="160" cy="500" stroke="black" stroke-width="0.5" fill="silver" fill-opacity="1"/>
 
-<!-- FRONT COMPONENTS: jaws -->
+<!-- FRONT COMPONENT: jaws -->
 <circle r="14.375" cx="160" cy="500" stroke="black" stroke-width="0.5" fill="silver" fill-opacity="1"/>
 <circle r="7.5" cx="160" cy="500" stroke="black" stroke-width="0.5" fill="silver" fill-opacity="1"/>
 <circle r="5" cx="160" cy="500" fill="black" fill-opacity="1" stroke="dimgray" stroke-width="0.5"  />

@@ -24,7 +24,7 @@
 </pattern><rect x="0" y="0" width="1000" height="1400" fill="white" stroke="black" stroke-width="4" />
 <rect x="2" y="2" width="996" height="1396" fill="white" stroke="dimgray" stroke-width="1" />
 <g transform="rotate(0 0 0)">
-<text x="30" y="50" font-size="2.0em" font-weight="bold"> Synapticloop // In-built pattern finishes </text>
+<text x="30" y="50" font-size="2.0em" font-weight="bold"> Synapticloop // In-built finishes </text>
 <line x1="500" y1="80" x2="500" y2="1320" stroke="#5f5f5f" stroke-linecap="round" stroke-dasharray="2" stroke-width="1" />
 <line x1="480" y1="80" x2="520" y2="80" stroke-linecap="round" stroke="#000000"  stroke-width="1" />
 <line x1="500" y1="60" x2="500" y2="100" stroke="#000000" stroke-linecap="round"  stroke-width="1" />
@@ -32,42 +32,42 @@
 <line x1="480" y1="1320" x2="520" y2="1320" stroke-linecap="round" stroke="#000000"  stroke-width="1" />
 <line x1="500" y1="1300" x2="500" y2="1340" stroke="#000000" stroke-linecap="round"  stroke-width="1" />
 <circle r="10" cx="500" cy="1320" fill="white" fill-opacity="0" stroke="#000000" stroke-width="1"  />
-<text x="500" y="120" font-size="1.0em" font-weight="bold" text-anchor="middle" dominant-baseline="central">knurled (/meta/finishes/knurled.json)</text>
+<text x="500" y="120" font-size="1.0em" font-weight="bold" text-anchor="middle" dominant-baseline="central">knurled (/meta/finish/knurled.json)</text>
 
 
-<!-- renderSideComponent: knurled (/meta/finishes/knurled.json) -->
-
-
-<!-- renderPart: cylindrical -->
-<path d="M400 160 L600 160 L600 200 L400 200 Z" stroke-width="1.0" stroke="black" fill="url(#knurled)"/>
-<text x="500" y="240" font-size="1.0em" font-weight="bold" text-anchor="middle" dominant-baseline="central">knurled-large (/meta/finishes/knurled-large.json)</text>
-
-
-<!-- renderSideComponent: knurled-large (/meta/finishes/knurled-large.json) -->
+<!-- renderSideComponent: knurled (/meta/finish/knurled.json) -->
 
 
 <!-- renderPart: cylindrical -->
-<path d="M400 280 L600 280 L600 320 L400 320 Z" stroke-width="1.0" stroke="black" fill="url(#knurled-large)"/>
-<text x="500" y="360" font-size="1.0em" font-weight="bold" text-anchor="middle" dominant-baseline="central">knurled-small (/meta/finishes/knurled-small.json)</text>
+<!-- DEFAULT FINISH: knurled --><path d="M400 160 L600 160 L600 200 L400 200 Z" stroke-width="0.5" stroke="black" fill="url(#knurled)"/>
+<text x="500" y="240" font-size="1.0em" font-weight="bold" text-anchor="middle" dominant-baseline="central">knurled-large (/meta/finish/knurled-large.json)</text>
 
 
-<!-- renderSideComponent: knurled-small (/meta/finishes/knurled-small.json) -->
+<!-- renderSideComponent: knurled-large (/meta/finish/knurled-large.json) -->
 
 
 <!-- renderPart: cylindrical -->
-<path d="M400 400 L600 400 L600 440 L400 440 Z" stroke-width="1.0" stroke="black" fill="url(#knurled-small)"/>
-<text x="500" y="480" font-size="1.0em" font-weight="bold" text-anchor="middle" dominant-baseline="central">spring (/meta/finishes/spring.json and in code)</text>
+<!-- DEFAULT FINISH: knurled-large --><path d="M400 280 L600 280 L600 320 L400 320 Z" stroke-width="0.5" stroke="black" fill="url(#knurled-large)"/>
+<text x="500" y="360" font-size="1.0em" font-weight="bold" text-anchor="middle" dominant-baseline="central">knurled-small (/meta/finish/knurled-small.json)</text>
 
 
-<!-- renderSideComponent: spring (/meta/finishes/spring.json and in code) -->
+<!-- renderSideComponent: knurled-small (/meta/finish/knurled-small.json) -->
+
+
+<!-- renderPart: cylindrical -->
+<!-- DEFAULT FINISH: knurled-small --><path d="M400 400 L600 400 L600 440 L400 440 Z" stroke-width="0.5" stroke="black" fill="url(#knurled-small)"/>
+<text x="500" y="480" font-size="1.0em" font-weight="bold" text-anchor="middle" dominant-baseline="central">spring (/meta/finish/spring.json and in code)</text>
+
+
+<!-- renderSideComponent: spring (/meta/finish/spring.json and in code) -->
 
 
 <!-- renderPart: cylinder -->
-<path d="M449.95 530 L550.05 530 L550.05 550 L449.95 550 Z" stroke-width="0" stroke="none" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<path d="M450 530 L550 530 M550 550 L450 550" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<!-- !right !both --><path d="M550 530 L550 550" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<!-- !left !both --><path d="M450 530 L450 550" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<path d="M450 530 L550 530 L550 550 L450 550 Z" stroke-width="1.0" stroke="black" fill="url(#spring)"/>
+<path d="M449.95 530 L550.05 530 L550.05 550 L449.95 550 L449.95 530" stroke-width="0" stroke="none" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<path d="M449.95 530 L550.05 530 M550.05 550 L449.95 550" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<!-- !right !both --><path d="M550.05 530 L550.05 550" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<!-- !left !both --><path d="M449.95 530 L449.95 550" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<!-- DEFAULT FINISH: spring --><path d="M450 530 L550 530 L550 550 L450 550 Z" stroke-width="0.5" stroke="black" fill="url(#spring)"/>
 <!-- feature: spring --><rect x="455" y="525" width="90" height="30" stroke-width="0.0" stroke="black" fill="url(#spring)"/>
 <line x1="450.5" y1="525" x2="450.5" y2="555" stroke="dimgray" stroke-linecap="round" stroke-width="2" />
 <line x1="450.5" y1="525" x2="450.5" y2="555" stroke="white" stroke-linecap="round" stroke-width="1" />
@@ -85,30 +85,30 @@
 <line x1="456.5" y1="525" x2="456.5" y2="555" stroke="white" stroke-linecap="round" stroke-width="1" />
 <line x1="543.5" y1="525" x2="543.5" y2="555" stroke="dimgray" stroke-linecap="round" stroke-width="2" />
 <line x1="543.5" y1="525" x2="543.5" y2="555" stroke="white" stroke-linecap="round" stroke-width="1" />
-<text x="500" y="600" font-size="1.0em" font-weight="bold" text-anchor="middle" dominant-baseline="central">lined (/meta/finishes/lined.json)</text>
+<text x="500" y="600" font-size="1.0em" font-weight="bold" text-anchor="middle" dominant-baseline="central">lined (/meta/finish/lined.json)</text>
 
 
-<!-- renderSideComponent: lined (/meta/finishes/lined.json) -->
-
-
-<!-- renderPart: cylinder -->
-<path d="M399.95 640 L600.05 640 L600.05 680 L399.95 680 Z" stroke-width="0" stroke="none" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<path d="M400 640 L600 640 M600 680 L400 680" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<!-- !right !both --><path d="M600 640 L600 680" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<!-- !left !both --><path d="M400 640 L400 680" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<path d="M400 640 L600 640 L600 680 L400 680 Z" stroke-width="1.0" stroke="black" fill="url(#lined)"/>
-<text x="500" y="720" font-size="1.0em" font-weight="bold" text-anchor="middle" dominant-baseline="central">ridged (/meta/finishes/ridged.json)</text>
-
-
-<!-- renderSideComponent: ridged (/meta/finishes/ridged.json) -->
+<!-- renderSideComponent: lined (/meta/finish/lined.json) -->
 
 
 <!-- renderPart: cylinder -->
-<path d="M399.95 760 L600.05 760 L600.05 800 L399.95 800 Z" stroke-width="0" stroke="none" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<path d="M400 760 L600 760 M600 800 L400 800" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<!-- !right !both --><path d="M600 760 L600 800" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<!-- !left !both --><path d="M400 760 L400 800" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<path d="M400 760 L600 760 L600 800 L400 800 Z" stroke-width="1.0" stroke="black" fill="url(#ridged)"/>
+<path d="M399.95 640 L600.05 640 L600.05 680 L399.95 680 L399.95 640" stroke-width="0" stroke="none" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<path d="M399.95 640 L600.05 640 M600.05 680 L399.95 680" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<!-- !right !both --><path d="M600.05 640 L600.05 680" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<!-- !left !both --><path d="M399.95 640 L399.95 680" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<!-- DEFAULT FINISH: lined --><path d="M400 640 L600 640 L600 680 L400 680 Z" stroke-width="0.5" stroke="black" fill="url(#lined)"/>
+<text x="500" y="720" font-size="1.0em" font-weight="bold" text-anchor="middle" dominant-baseline="central">ridged (/meta/finish/ridged.json)</text>
+
+
+<!-- renderSideComponent: ridged (/meta/finish/ridged.json) -->
+
+
+<!-- renderPart: cylinder -->
+<path d="M399.95 760 L600.05 760 L600.05 800 L399.95 800 L399.95 760" stroke-width="0" stroke="none" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<path d="M399.95 760 L600.05 760 M600.05 800 L399.95 800" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<!-- !right !both --><path d="M600.05 760 L600.05 800" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<!-- !left !both --><path d="M399.95 760 L399.95 800" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<!-- DEFAULT FINISH: ridged --><path d="M400 760 L600 760 L600 800 L400 800 Z" stroke-width="0.5" stroke="black" fill="url(#ridged)"/>
 <text x="500" y="840" font-size="1.0em" font-weight="bold" text-anchor="middle" dominant-baseline="central">indicator (in code)</text>
 
 
@@ -116,10 +116,10 @@
 
 
 <!-- renderPart: cylinder -->
-<path d="M469.95 880 L530.05 880 L530.05 920 L469.95 920 Z" stroke-width="0" stroke="none" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<path d="M470 880 L530 880 M530 920 L470 920" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<!-- !right !both --><path d="M530 880 L530 920" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<!-- !left !both --><path d="M470 880 L470 920" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<path d="M469.95 880 L530.05 880 L530.05 920 L469.95 920 L469.95 880" stroke-width="0" stroke="none" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<path d="M469.95 880 L530.05 880 M530.05 920 L469.95 920" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<!-- !right !both --><path d="M530.05 880 L530.05 920" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<!-- !left !both --><path d="M469.95 880 L469.95 920" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <rect x="480" y="890" width="40" height="20" rx="3" ry="3" stroke-width="1" stroke="black" fill="white"/>
 <text x="500" y="900" text-anchor="middle" dominant-baseline="central"><tspan stroke="dimgray" stroke-width="0.5" font-family="sans-serif" fill="black" textLength="{this.width * 5 - 24}" > HB</tspan></text><text x="500" y="960" font-size="1.0em" font-weight="bold" text-anchor="middle" dominant-baseline="central">indicator-split (in code)</text>
 
@@ -128,10 +128,10 @@
 
 
 <!-- renderPart: cylinder -->
-<path d="M469.95 1000 L530.05 1000 L530.05 1040 L469.95 1040 Z" stroke-width="0" stroke="none" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<path d="M470 1000 L530 1000 M530 1040 L470 1040" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<!-- !right !both --><path d="M530 1000 L530 1040" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<!-- !left !both --><path d="M470 1000 L470 1040" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<path d="M469.95 1000 L530.05 1000 L530.05 1040 L469.95 1040 L469.95 1000" stroke-width="0" stroke="none" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<path d="M469.95 1000 L530.05 1000 M530.05 1040 L469.95 1040" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<!-- !right !both --><path d="M530.05 1000 L530.05 1040" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<!-- !left !both --><path d="M469.95 1000 L469.95 1040" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <rect x="470" y="1016" width="60" height="8" rx="0" ry="0" stroke-width="1" stroke="black" fill="white"/>
 <rect x="476" y="1010" width="48" height="20" rx="3" ry="3" stroke-width="1" stroke="black" fill="white"/>
 <rect x="470.25" y="1016.25" width="59.5" height="7.5" rx="0" ry="0" stroke-width="1" stroke="none" fill="white"/>
@@ -142,10 +142,10 @@
 
 
 <!-- renderPart: cylinder -->
-<path d="M469.95 1120 L530.05 1120 L530.05 1160 L469.95 1160 Z" stroke-width="0" stroke="none" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<path d="M470 1120 L530 1120 M530 1160 L470 1160" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<!-- !right !both --><path d="M530 1120 L530 1160" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<!-- !left !both --><path d="M470 1120 L470 1160" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<path d="M469.95 1120 L530.05 1120 L530.05 1160 L469.95 1160 L469.95 1120" stroke-width="0" stroke="none" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<path d="M469.95 1120 L530.05 1120 M530.05 1160 L469.95 1160" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<!-- !right !both --><path d="M530.05 1120 L530.05 1160" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<!-- !left !both --><path d="M469.95 1120 L469.95 1160" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <text x="500" y="1140" text-anchor="middle" dominant-baseline="central"><tspan stroke="dimgray" stroke-width="0.5" font-family="sans-serif" fill="black" textLength="{this.width * 5 - 12}" > HB</tspan></text><text x="500" y="1200" font-size="1.0em" font-weight="bold" text-anchor="middle" dominant-baseline="central">sharpener-exposed (in code)</text>
 
 
@@ -153,10 +153,10 @@
 
 
 <!-- renderPart: cylinder -->
-<path d="M469.95 1240 L530.05 1240 L530.05 1280 L469.95 1280 Z" stroke-width="0" stroke="none" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<path d="M470 1240 L530 1240 M530 1280 L470 1280" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<!-- !right !both --><path d="M530 1240 L530 1280" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<!-- !left !both --><path d="M470 1240 L470 1280" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<path d="M469.95 1240 L530.05 1240 L530.05 1280 L469.95 1280 L469.95 1240" stroke-width="0" stroke="none" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<path d="M469.95 1240 L530.05 1240 M530.05 1280 L469.95 1280" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<!-- !right !both --><path d="M530.05 1240 L530.05 1280" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<!-- !left !both --><path d="M469.95 1240 L469.95 1280" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 
 <!-- sharpener-exposed --><rect x="480" y="1250" width="40" height="20" stroke-width="1" stroke="black" fill="white"/>
 <path d="M481 1251 L 519 1251 L 519 1256 L 481 1261 Z" stroke-width="1" stroke="gray" fill="gray" />

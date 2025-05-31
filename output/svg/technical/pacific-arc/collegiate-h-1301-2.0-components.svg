@@ -130,7 +130,7 @@
 <path d="M331.825 275 L479.425 275 M479.425 325 L331.825 325" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !right !both --><path d="M479.425 275 L479.425 325" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !left !both --><path d="M331.825 275 L331.825 325" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<path d="M331.875 275 L479.375 275 L479.375 325 L331.875 325 Z" stroke-width="1.0" stroke="black" fill="url(#ridged)"/>
+<!-- DEFAULT FINISH: ridged --><path d="M331.875 275 L479.375 275 L479.375 325 L331.875 325 Z" stroke-width="0.5" stroke="black" fill="url(#ridged)"/>
 
 
 <!-- renderSideComponent: indicator -->
@@ -168,6 +168,7 @@
 <!-- !right !both --><path d="M861.925 276.875 L861.925 323.125" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !left !both --><path d="M838.075 276.875 L838.075 323.125" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <path d="M682.875 265.875 Q705.625 288.375 715.625 265.875 Z" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
+<rect x="682.875" y="265.875" width="35" height="-12.5" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
 <line x1="680.625" y1="264.375" x2="863.125" y2="264.375" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
 <path d="M863.125 264.375 Q883.125 271.875 863.125 278.125" stroke-width="3" stroke="white" fill="none" stroke-linecap="round" />
 

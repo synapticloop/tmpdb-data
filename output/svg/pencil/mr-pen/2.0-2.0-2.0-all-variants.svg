@@ -61,7 +61,7 @@
 <path d="M218.075 98.75 L373.175 98.75 M373.175 141.25 L218.075 141.25" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1"/>
 <!-- !right !both --><path d="M373.175 98.75 L373.175 141.25" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1"/>
 <!-- !left !both --><path d="M218.075 98.75 L218.075 141.25" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1"/>
-<path d="M218.125 98.75 L373.125 98.75 L373.125 141.25 L218.125 141.25 Z" stroke-width="1.0" stroke="black" fill="url(#knurled)"/>
+<!-- DEFAULT FINISH: knurled --><path d="M218.125 98.75 L373.125 98.75 L373.125 141.25 L218.125 141.25 Z" stroke-width="0.5" stroke="black" fill="url(#knurled)"/>
 
 
 <!-- renderSideComponent: body -->

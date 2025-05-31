@@ -242,7 +242,7 @@
 <path d="M459.95 479.375 L607.55 479.375 M607.55 520.625 L459.95 520.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1"/>
 <!-- !right !both --><path d="M607.55 479.375 L607.55 520.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1"/>
 <!-- !left !both --><path d="M459.95 479.375 L459.95 520.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1"/>
-<path d="M460 479.375 L607.5 479.375 L607.5 520.625 L460 520.625 Z" stroke-width="1.0" stroke="black" fill="url(#knurled)"/>
+<!-- DEFAULT FINISH: knurled --><path d="M460 479.375 L607.5 479.375 L607.5 520.625 L460 520.625 Z" stroke-width="0.5" stroke="black" fill="url(#knurled)"/>
 
 
 <!-- renderSideComponent: body -->
@@ -269,6 +269,7 @@
 <!-- !right !both --><path d="M972.55 477.5 L972.55 522.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1"/>
 <!-- !left !both --><path d="M944.95 477.5 L944.95 522.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1"/>
 <path d="M789.75 465.875 Q812.5 488.375 822.5 465.875 Z" stroke-width="3" stroke="#b4b8b9" fill="#b4b8b9" stroke-linecap="round" />
+<rect x="789.75" y="465.875" width="35" height="-12.5" stroke-width="3" stroke="#b4b8b9" fill="#b4b8b9" stroke-linecap="round" />
 <line x1="787.5" y1="464.375" x2="970" y2="464.375" stroke-width="3" stroke="#b4b8b9" fill="#b4b8b9" stroke-linecap="round" />
 <path d="M970 464.375 Q990 471.875 970 478.125" stroke-width="3" stroke="#b4b8b9" fill="none" stroke-linecap="round" />
 
@@ -291,7 +292,7 @@
 <path d="M992.45 479.375 L1040.05 479.375 M1040.05 520.625 L992.45 520.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1"/>
 <!-- !right !both --><path d="M1040.05 479.375 L1040.05 520.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1"/>
 <!-- !left !both --><path d="M992.45 479.375 L992.45 520.625" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1"/>
-<path d="M992.5 479.375 L1040 479.375 L1040 520.625 L992.5 520.625 Z" stroke-width="1.0" stroke="black" fill="url(#knurled)"/>
+<!-- DEFAULT FINISH: knurled --><path d="M992.5 479.375 L1040 479.375 L1040 520.625 L992.5 520.625 Z" stroke-width="0.5" stroke="black" fill="url(#knurled)"/>
 <rect x="1002.5" y="489.6875" width="27.5" height="20.625" rx="3" ry="3" stroke-width="1" stroke="black" fill="#b4b8b9"/>
 <text x="1016.25" y="500" text-anchor="middle" dominant-baseline="central"><tspan stroke="dimgray" stroke-width="0.5" font-family="sans-serif" fill="black" textLength="{this.width * 5 - 24}" > HB</tspan></text>
 
@@ -356,7 +357,7 @@
 <!-- !right !both --><path d="M1120.05 486.25 L1120.05 513.75" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1"/>
 <!-- !left !both --><path d="M1111.2 486.25 L1111.2 513.75" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#b4b8b9" fill-opacity="1"/>
 
-<!-- FRONT COMPONENTS: cap -->
+<!-- FRONT COMPONENT: cap -->
 <circle r="13.75" cx="160" cy="500" fill="#b4b8b9" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 <circle r="12.5" cx="160" cy="500" fill="#b4b8b9" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 <circle r="13.75" cx="160" cy="500" fill="#b4b8b9" fill-opacity="1" stroke="black" stroke-width="0.5"  />
@@ -365,16 +366,16 @@
 <circle r="12.5" cx="160" cy="500" fill="#b4b8b9" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 <circle r="13.75" cx="160" cy="500" fill="#b4b8b9" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 
-<!-- FRONT COMPONENTS: foot -->
+<!-- FRONT COMPONENT: foot -->
 <circle r="20" cx="160" cy="500" fill="#b4b8b9" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 
-<!-- FRONT COMPONENTS: indicator -->
+<!-- FRONT COMPONENT: indicator -->
 <circle r="20.625" cx="160" cy="500" fill="#b4b8b9" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 
-<!-- FRONT COMPONENTS: tail -->
+<!-- FRONT COMPONENT: tail -->
 <circle r="20" cx="160" cy="500" fill="#b4b8b9" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 
-<!-- FRONT COMPONENTS: clip -->
+<!-- FRONT COMPONENT: clip -->
 <circle r="22.5" cx="160" cy="500" fill="#b4b8b9" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 <!-- WxH 4.5 2.75 --><rect x="148.75" y="464.625" width="22.5" height="13.75" rx="0" ry="0" stroke-width="1.0" stroke="dimgray" fill="#b4b8b9"/>
 <rect x="148.75" y="464.625" width="22.5" height="13.75" rx="0" ry="0" stroke-width="1.0" stroke="dimgray" fill="none"/>
@@ -383,17 +384,17 @@
 <!-- WxH 4.5 0.6 --><rect x="148.75" y="475.375" width="22.5" height="3" rx="0" ry="0" stroke-width="1.0" stroke="dimgray" fill="#b4b8b9"/>
 <rect x="148.75" y="475.375" width="22.5" height="3" rx="0" ry="0" stroke-width="1.0" stroke="dimgray" fill="none"/>
 
-<!-- FRONT COMPONENTS: body -->
+<!-- FRONT COMPONENT: body -->
 <polygon points="148.4529946162075,480 171.5470053837925,480 183.09401076758502,500 171.5470053837925,520 148.4529946162075,520 136.90598923241498,500 " stroke="black" stroke-width="0.5" fill="#1d528a" fill-opacity="1"/>
 
-<!-- FRONT COMPONENTS: grip -->
+<!-- FRONT COMPONENT: grip -->
 <circle r="20.625" cx="160" cy="500" fill="#b4b8b9" fill-opacity="1" stroke="black" stroke-width="0.5"  />
 
-<!-- FRONT COMPONENTS: tip -->
+<!-- FRONT COMPONENT: tip -->
 <circle r="20.625" cx="160" cy="500" stroke="black" stroke-width="0.5" fill="#b4b8b9" fill-opacity="1"/>
 <circle r="13.125" cx="160" cy="500" stroke="black" stroke-width="0.5" fill="#b4b8b9" fill-opacity="1"/>
 
-<!-- FRONT COMPONENTS: jaws -->
+<!-- FRONT COMPONENT: jaws -->
 <circle r="10" cx="160" cy="500" stroke="black" stroke-width="0.5" fill="#b4b8b9" fill-opacity="1"/>
 <circle r="8.125" cx="160" cy="500" stroke="black" stroke-width="0.5" fill="#b4b8b9" fill-opacity="1"/>
 <circle r="5" cx="160" cy="500" fill="l" fill-opacity="1" stroke="dimgray" stroke-width="0.5"  />

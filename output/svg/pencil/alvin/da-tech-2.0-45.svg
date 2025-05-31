@@ -54,7 +54,7 @@
 <path d="M220.575 480 L374.425 480 M374.425 520 L220.575 520" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !right !both --><path d="M374.425 480 L374.425 520" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !left !both --><path d="M220.575 480 L220.575 520" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<path d="M220.625 480 L374.375 480 L374.375 520 L220.625 520 Z" stroke-width="1.0" stroke="black" fill="url(#knurled-small)"/>
+<!-- DEFAULT FINISH: knurled-small --><path d="M220.625 480 L374.375 480 L374.375 520 L220.625 520 Z" stroke-width="0.5" stroke="black" fill="url(#knurled-small)"/>
 
 
 <!-- renderSideComponent: body -->

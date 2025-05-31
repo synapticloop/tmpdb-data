@@ -52,7 +52,7 @@
 <path d="M214.95 80 L343.8 80 M343.8 120 L214.95 120" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
 <!-- !right !both --><path d="M343.8 80 L343.8 120" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
 <!-- !left !both --><path d="M214.95 80 L214.95 120" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
-<path d="M215 80 L343.75 80 L343.75 120 L215 120 Z" stroke-width="1.0" stroke="black" fill="url(#knurled-small)"/>
+<!-- DEFAULT FINISH: knurled-small --><path d="M215 80 L343.75 80 L343.75 120 L215 120 Z" stroke-width="0.5" stroke="black" fill="url(#knurled-small)"/>
 
 
 <!-- renderSideComponent: body -->
@@ -95,7 +95,7 @@
 <path d="M818.7 80.625 L832.55 80.625 M832.55 119.375 L818.7 119.375" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1"/>
 <!-- !right !both --><path d="M832.55 80.625 L832.55 119.375" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1"/>
 <!-- !left !both --><path d="M818.7 80.625 L818.7 119.375" stroke-width="0.5" stroke="dimgray" stroke-linejoin="round" fill="black" fill-opacity="1"/>
-<path d="M818.75 80.625 L832.5 80.625 L832.5 119.375 L818.75 119.375 Z" stroke-width="1.0" stroke="black" fill="url(#lined)"/>
+<!-- DEFAULT FINISH: lined --><path d="M818.75 80.625 L832.5 80.625 L832.5 119.375 L818.75 119.375 Z" stroke-width="0.5" stroke="black" fill="url(#lined)"/>
 
 
 <!-- renderSideComponent: cap -->

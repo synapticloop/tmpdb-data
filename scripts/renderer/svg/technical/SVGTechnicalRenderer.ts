@@ -1,22 +1,9 @@
 import {Pencil} from "../../../model/Pencil.ts";
 import {SVGRenderer} from "../SVGRenderer.ts";
 import {
-	circle,
-	dimensionsHorizontal,
-	dimensionsVertical, drawExtra, drawOutlineCircle, drawOutlineHexagon, drawOutlineOctagon, drawShapeDetails,
-	drawText,
-	drawTextBold,
-	drawTextBoldCentred,
-	lineHorizontal,
 	lineHorizontalGuide,
-	lineVertical,
-	lineVerticalGuide, rectangle, renderExtra,
-	target,
-	TextOrientation
+	lineVerticalGuide
 } from "../../../utils/svg-helper.ts";
-import {Part} from "../../../model/Part.ts";
-import {Extra} from "../../../model/Extra.ts";
-import {OpaqueColour} from "../../../model/meta/OpaqueColour.ts";
 
 export class SVGTechnicalRenderer extends SVGRenderer {
 	renderCentralLine: number = 500;
