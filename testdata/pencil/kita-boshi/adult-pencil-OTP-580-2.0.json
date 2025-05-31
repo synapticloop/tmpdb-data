@@ -1,0 +1,79 @@
+{
+	"brand": "Kita Boshi",
+	"model_name": "Adult Pencil",
+	"model_number": "OTP-580",
+	"text": "",
+
+	"skus": [ "OTP-580N", "OTP-580M", "OTP-580I", "OTP-580B" ],
+
+	"manufactured_in": "",
+	"manufactured_from": [],
+	"manufactured_to": [],
+
+	"accuracy": "high",
+
+	"mechanism": "click",
+	"lead_size": 2.0,
+	"weight": 0.0,
+
+	"features": [
+	],
+
+	"colour_component": "",
+	"colours": [ "natural", "red", "blue", "black" ],
+	"colour_map": {
+		"natural": "#c38066",
+		"red": "#b33835",
+		"blue": "#252936",
+		"black": "#12120e",
+		"brass": "#e1c16e"
+	},
+
+	"TODO": "define the tip better",
+	"front": [
+		{ "shape": "cylinder", "dimensions": [ 2.0, 10.0 ], "fill":  "black" }
+	],
+
+	"components": [
+		{
+			"type": "tip",
+			"material": "metal",
+			"colours": [ "silver" ],
+			"parts": [
+				{ "shape": "cone", "dimensions": [ 13.0, 3.5, 7.75 ], "joined": "right" },
+				{ "shape": "cylinder", "dimensions": [ 7.0, 7.75  ], "joined": "left" }
+			]
+		},
+		{
+			"type": "body",
+			"material": "wood",
+			"internal_start": [
+				{ "shape": "cylinder", "dimensions": [ 3.5, 5.5 ], "colours": [ "brass" ], "material": "metal" },
+				{ "shape": "cylinder", "dimensions": [ 4.75, 5.75 ], "colours": [ "brass" ], "material": "metal", "finish": "threaded" }
+			],
+			"parts": [
+				{ "shape": "hexagonal", "dimensions": [ 131.75, 8.0 ] }
+			]
+		},
+		{
+			"type": "cap",
+			"material": "metal",
+			"colours": [ "silver" ],
+			"internal_start": [
+				{ "shape": "cylinder", "dimensions": [ 1.0, 2.5 ] },
+				{ "shape": "cylinder", "dimensions": [ 2.25, 3.0 ] },
+				{ "shape": "cylinder", "dimensions": [ 1.0, 2.5 ] },
+				{ "shape": "cylinder", "dimensions": [ 2.25, 4.5 ] }
+			],
+			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 6.0, 4.5 ] },
+				{ "shape": "cylinder", "dimensions": [ 2.75, 7.75 ] },
+				{ "shape": "convex", "dimensions": [ 0.5, 7.75 ], "offset": [ 1.0, 3.75 ] }
+			]
+		}
+	],
+
+	"sources": [
+		{ "name":  "kita-boshi", "href":  "http://www.kitaboshi.co.jp/product/post-20/" }
+	]
+}
