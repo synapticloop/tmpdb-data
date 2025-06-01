@@ -1,0 +1,138 @@
+{
+	"brand": "Takumi",
+	"model_name": "Marking Pencil",
+	"model_number": "7808",
+	"skus": [ "7780", "7781", "7782", "7783", "7784", "7785", "7794", "7796" ],
+
+	"text": "2.0 [LOGO] Marking Pencil",
+
+	"mechanism": "click",
+	"lead_size": 2.0,
+	"multi_leads": true,
+
+	"accuracy": "high",
+
+	"features": [
+		{ "type": "sharpener", "location":  "Inside cap"}
+	],
+
+	"colour_component": "body",
+	"colours": [ "blue", "HB", "2B", "white", "red", "pink", "yellow", "2H" ],
+	"colour_map": {
+		"blue":  "#2f95d7",
+		"HB":  "#7b8d9b",
+		"2B":  "#393a3f",
+		"white":  "#dae4ed",
+		"red":  "#d43845",
+		"pink":  "#e293c2",
+		"yellow":  "#e4c38e",
+		"2H":  "#aec0cc",
+		"black": "#29282e",
+
+		"brass": "#e1c16e"
+	},
+
+	"front": [
+		{ "shape": "cylinder", "dimensions": [ 2.0, 10.0 ], "fill":  "black" }
+	],
+
+	"back": [
+		{ "shape": "cylinder", "dimensions": [ 2.0, 10.0 ], "fill":  "black" }
+	],
+
+	"components": [
+		{
+			"type": "tip",
+			"parts": [
+				{ "shape": "cone", "dimensions": [ 13.0, 3.25, 6.75 ] },
+				{ "shape": "cone", "dimensions": [ 2.0, 6.75, 10.0 ] },
+				{ "shape": "cone", "dimensions": [ 1.5, 10.0, 10.25 ] },
+				{ "shape": "cone", "dimensions": [ 1.5, 10.25, 10.75 ] },
+				{ "shape": "cone", "dimensions": [ 2.0, 10.75, 12.25 ] }
+			],
+
+			"material": "metal",
+			"colours": [ "silver" ]
+		},
+		{
+			"type": "grip",
+			"internal_start": [
+				{ "shape": "cylinder", "dimensions": [ 0,0 ] }
+			],
+			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 45.0, 13.0 ], "finish": "7808-grip" }
+			],
+			"material": "rubber",
+			"colours": [ "black" ]
+		},
+		{
+			"type": "body",
+			"internal_start": [
+				{ "shape": "cylinder", "dimensions": [ 2.5, 10.5 ], "colours": [ "silver" ] },
+				{ "shape": "cylinder", "dimensions": [ 42.5, 10.25 ], "colours": [ "black" ] }
+
+			],
+			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 2.5, 12.5 ], "colours": [ "black" ], "material": "plastic" },
+				{ "shape": "cylinder", "dimensions": [ 63.25, 12.5 ] }
+			],
+			"material": "metal"
+		},
+		{
+			"type": "clip",
+			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 9.0, 14.0 ] }
+			],
+			"extras": [
+				{ "dimensions": [ 40.5, 4.5, 4.5 ],
+					"offset":  [ -40, 4.25 ],
+					"parts": [
+						{ "shape": "curve", "points": [ 0.425, -4.0, 6.75, -3.25, 3, 2.0 ], "width": 5.0 },
+						{ "shape": "line", "points": [ 0.425, -4.25, 40.5, -4.25 ], "width": 4.0 },
+						{ "shape": "line", "points": [ 40.5, -4.25, 40.5, -0.5 ], "width": 5.0 }
+					]
+				}
+			],
+			"material": "metal",
+			"colours": [ "silver" ]
+		},
+		{
+			"type": "shaft",
+			"internal_start": [
+				{ "shape": "cylinder", "dimensions": [ 1.75, 4.75 ], "material": "metal", "colours": [ "brass" ], "internal_offset": -119.75 },
+				{ "shape": "cylinder", "dimensions": [ 0.75, 6.0 ], "material": "metal", "colours": [ "brass" ] },
+				{ "shape": "cylinder", "dimensions": [ 4, 6.75 ], "material": "metal", "colours": [ "brass" ], "finish": "threaded" }
+			],
+			"internal_end": [
+				{ "shape": "cylinder", "dimensions": [ 2, 6.75 ], "material": "metal", "colours": [ "brass" ] },
+				{ "shape": "cylinder", "dimensions": [ 10.25, 6.25 ], "material": "metal", "colours": [ "brass" ] },
+				{ "shape": "cylinder", "dimensions": [ 3.5, 3.5 ], "material": "metal", "colours": [ "brass" ] },
+				{ "shape": "cylinder", "dimensions": [ 6.75, 4.75 ], "material": "plastic", "colours": [ "white%20" ], "internal_offset": -3.5 },
+				{ "shape": "hexagonal", "dimensions": [ 97.0, 7.75 ], "material": "plastic", "colours": [ "white%20" ] }
+			]
+		},
+		{
+			"type": "cap",
+			"internal_start": [
+				{ "shape": "cylinder", "dimensions": [ 1.0, 6.25 ] },
+				{ "shape": "cylinder", "dimensions": [ 2.0, 6.5 ] },
+				{ "shape": "cylinder", "dimensions": [ 1.0, 6.25 ] },
+				{ "shape": "cylinder", "dimensions": [ 4.0, 8.5 ], "joined": "right" }
+			],
+			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 4.25, 8.5 ], "joined": "left" },
+				{ "shape": "cylinder", "dimensions": [ 0.75, 7.5 ] },
+				{ "shape": "cylinder", "dimensions": [ 1.25, 8.5 ] },
+				{ "shape": "cylinder", "dimensions": [ 0.75, 7.5 ] },
+				{ "shape": "cylinder", "dimensions": [ 1.25, 8.5 ] },
+				{ "shape": "cylinder", "dimensions": [ 0.75, 7.5 ] },
+				{ "shape": "cylinder", "dimensions": [ 1.75, 8.5 ] }
+			],
+			"material": "metal",
+			"colours": [ "silver" ]
+		}
+	],
+	"sources": [
+		{ "name":  "Takumi", "href": "https://takumi-brand.co.jp/custom453.html" }
+	]
+}

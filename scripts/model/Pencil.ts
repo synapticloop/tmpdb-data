@@ -44,8 +44,8 @@ export class Pencil extends Base {
 
 	@JsonProperty({ name: "maximum_lead_length", required: false })
 	maximumLeadLength: number; // the maximum length of lead that will fit in the pencil
-	@JsonProperty({ name: "number_leads", required: false })
-	numberLeads: number = 1; // the maximum length of lead that will fit in the pencil
+	@JsonProperty({ name: "multi_leads", required: false })
+	multiLeads: boolean = false; // whether multiple leads can be stored in the shaft
 	@JsonProperty({ name: "weight", required: false })
 	weight: number;
 

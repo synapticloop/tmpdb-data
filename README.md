@@ -36,6 +36,7 @@ _(To regenerate the list - and this `README.md` file, run `npm run readme-genera
 | **BIC** | **Criterium** | LUXE | 2.0 | 3 | high |
 | **Daiso** | **2mm Mechanical Pencil** | unknown | 2.0 | 2 | high |
 | **Flair** | **Tri-o** |  | 2.0 | 5 | high |
+| **Fueki** | **Architectural Mechanical Pencil** | SP20 | 2.0 | 4 | medium |
 | **Fueki** | **Mechanical Pencil Hard Type** | SPG20 | 2.0 | 2 | high |
 | **Hapila** | **2mm mechanical pencil** | SPSHHB | 2.0 | 2 | high |
 | **ito-ya** | **Wooden Sharp Pencil** | WSP | 2.0 | 4 | high |
@@ -58,10 +59,11 @@ _(To regenerate the list - and this `README.md` file, run `npm run readme-genera
 | **Staedtler** | **925** | 35/25-20 | 2.0 | 3 | high |
 | **Staedtler** | **Mars Technico** | 780c | 2.0 | 2 | high |
 | **STUDMARK** | **3750** | 3750 | 2.0 | 1 | high |
+| **Takumi** | **Marking Pencil** | 7808 | 2.0 | 8 | high |
 | **Unbranded** | **Metal Black** | unknown | 2.0 | 1 | high |
 | **Unbranded** | **Plastic Black (manomano.co.uk)** | unknown | 2.0 | 1 | high |
 | **Unbranded** | **Plastic Blue** | unknown | 2.0 | 1 | high |
-| | | **30 Pencils** | | **106 Variants**<br />_(colours / patterns)_  | |
+| | | **32 Pencils** | | **118 Variants**<br />_(colours / patterns)_  | |
 
 
 

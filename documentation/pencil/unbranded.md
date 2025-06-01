@@ -39,11 +39,11 @@ _(Note: all offsets are from the start of the pencil)_
 | `---Item---` | `---Offset---` | `---Length---` |
 | ---: | ---: | ---: |
 | **tip** | 0 mm | 15 mm |
-| **body** | 15 mm | 115 mm |
-| **cap** | 130 mm | 11.75 mm |
-| **grip** | 15 mm | 25.75 mm |
-| **clip** | 106.75 mm | 41.5 mm |
-| | **Pencil length** | 141.75 mm |
+| **body** | 15 mm | 116 mm |
+| **cap** | 131 mm | 12.25 mm |
+| **grip** | 15 mm | 26.25 mm |
+| **clip** | 107.5 mm | 41.5 mm |
+| | **Pencil length** | 143.25 mm |
 
 
 
