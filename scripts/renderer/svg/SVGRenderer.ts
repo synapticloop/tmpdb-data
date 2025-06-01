@@ -1048,7 +1048,7 @@ export abstract class SVGRenderer {
 		// objects
 		for(let finish of part.finish.split(",")) {
 			let xStart: number = x + (part.internalOffset)* 5;
-			let xEnd: number = x + part.length * 5;
+			let xEnd: number = x + part.length * 5 + part.internalOffset * 5;
 
 			let yStartTop: number = y - (part.startHeight / 2 * 5);
 			let yStartBottom: number = y + (part.startHeight / 2 * 5);
