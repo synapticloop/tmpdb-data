@@ -1,0 +1,57 @@
+{
+	"brand": "Staedtler",
+	"model_name": "925",
+	"model_number": "35/25-20",
+	"text": "[LOGO] Staedtler 925-35/25 20 JAPAN",
+
+	"skus": [ "925 35-20B", "925 35-20N", "925 25-20"],
+
+	"manufactured_in": "Japan",
+	"manufactured_from": [],
+	"manufactured_to": [],
+
+	"accuracy": "high",
+
+	"mechanism": "click",
+	"lead_size": 2.0,
+	"weight": 0.0,
+
+	"features": [
+		{ "type":  "lead size indicator", "location":  "embossed on end of pencil"}
+	],
+
+	"colour_component": "body",
+	"colours": [ "black", "dark blue", "silver" ],
+	"colour_map": {
+		"black":  "#000000",
+		"dark blue":  "#003399",
+		"silver":  "#c0c0c0",
+
+		"brass": "#e1c16e"
+	},
+
+	"front": [
+		{ "shape": "cylinder", "dimensions": [ 2.0, 10.0 ], "fill":  "black" }
+	],
+
+	"back": [
+	],
+
+	"components": [
+		{
+			"type": "tip",
+			"material": "metal",
+			"colours": [ "black", "silver", "silver" ],
+			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 4.0, 2.75 ] },
+				{ "shape": "cone", "dimensions": [ 6.25, 4.45, 6.25 ] },
+				{ "shape": "cylinder", "dimensions": [ 4.25, 6.25 ] },
+				{ "shape": "cylinder", "dimensions": [ 2.0, 7.25 ] },
+				{ "shape": "cylinder", "dimensions": [ 1.5, 8.75 ], "finish": "knurled-small" }
+			]
+		}
+	],
+
+	"sources": [
+	]
+}

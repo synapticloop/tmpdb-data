@@ -111,8 +111,10 @@ export class Part extends Base {
 	getMaxWidth(): number {
 		switch (this.shape) {
 			case "hexagonal":
-				let apothem = this.startHeight/2;
+				let apothem:number = this.startHeight/2;
 				return(apothem/Math.cos(30 * Math.PI/180) * 2);
+			case "triangular":
+				return(this.startHeight * Math.sin(30 * Math.PI/180));
 		}
 		return(this.getMaxHeight());
 	}

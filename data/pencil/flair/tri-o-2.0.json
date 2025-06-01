@@ -1,0 +1,56 @@
+{
+	"brand": "Flair",
+	"model_name": "Tri-o",
+	"model_number": "",
+	"text": "Flair TIR-O 2.0",
+
+	"TODO": "add in triangular rounded, fill in details",
+	"skus": [ ],
+
+	"manufactured_in": "India",
+	"manufactured_from": [],
+	"manufactured_to": [],
+
+	"accuracy": "high",
+
+	"mechanism": "click",
+	"lead_size": 2.0,
+	"weight": 0.0,
+
+	"features": [
+		{ "type":  "sharpener", "location":  "End of pencil, inside cap"}
+	],
+
+	"colour_component": "body",
+	"colours": [ "light blue", "red", "yellow", "gray", "blue" ],
+	"colour_map": {
+		"light blue":  "#01bfd0",
+		"red":  "#c42330",
+		"yellow":  "#f4e005",
+		"gray":  "#9ba2aa",
+		"blue": "#1c51a1"
+	},
+
+	"front": [
+	],
+
+	"back": [
+	],
+
+	"components": [
+		{
+			"type": "",
+			"material": "",
+			"colours": [ ],
+			"internal_start": [
+			],
+			"parts": [
+			],
+			"internal_end": [
+			]
+		}
+	],
+
+	"sources": [
+	]
+}
