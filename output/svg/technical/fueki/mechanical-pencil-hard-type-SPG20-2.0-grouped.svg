@@ -78,13 +78,11 @@
 <!-- renderSideComponent: body -->
 
 
-<!-- renderPart: hexagonal -->
+<!-- renderPart: cylinder -->
 <path d="M354.325 277.5 L786.925 277.5 L786.925 322.5 L354.325 322.5 L354.325 277.5" stroke-width="0" stroke="none" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <path d="M354.325 277.5 L786.925 277.5 M786.925 322.5 L354.325 322.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !right !both --><path d="M786.925 277.5 L786.925 322.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
 <!-- !left !both --><path d="M354.325 277.5 L354.325 322.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
-<line x1="354.375" y1="300" x2="786.875" y2="300" stroke-width="1.5" stroke="gray" fill="gray" stroke-opacity="1.0"/>
-<line x1="354.375" y1="300" x2="786.875" y2="300" stroke-width="0.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 
 
 <!-- renderSideComponent: clip -->
@@ -221,13 +219,11 @@
 <!-- renderSideComponent: body -->
 
 
-<!-- renderPart: hexagonal -->
+<!-- renderPart: cylinder -->
 <path d="M354.325 617.5 L786.925 617.5 L786.925 662.5 L354.325 662.5 L354.325 617.5" stroke-width="0" stroke="none" stroke-linejoin="round" fill="#222222" fill-opacity="1"/>
 <path d="M354.325 617.5 L786.925 617.5 M786.925 662.5 L354.325 662.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#222222" fill-opacity="1"/>
 <!-- !right !both --><path d="M786.925 617.5 L786.925 662.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#222222" fill-opacity="1"/>
 <!-- !left !both --><path d="M354.325 617.5 L354.325 662.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#222222" fill-opacity="1"/>
-<line x1="354.375" y1="640" x2="786.875" y2="640" stroke-width="1.5" stroke="gray" fill="gray" stroke-opacity="1.0"/>
-<line x1="354.375" y1="640" x2="786.875" y2="640" stroke-width="0.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 
 
 <!-- renderSideComponent: clip -->
@@ -270,7 +266,7 @@
 <path d="M833.075 617.5 L848.175 617.5 M848.175 662.5 L833.075 662.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
 <!-- !right !both --><path d="M848.175 617.5 L848.175 662.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
 <!-- !left !both --><path d="M833.075 617.5 L833.075 662.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
-<text x="500" y="690" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central">black</text>
+<text x="500" y="690" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central">black (SPG20B-H)</text>
 
 
 <!-- renderSideComponent: tip -->
@@ -310,13 +306,11 @@
 <!-- renderSideComponent: body -->
 
 
-<!-- renderPart: hexagonal -->
+<!-- renderPart: cylinder -->
 <path d="M354.325 737.5 L786.925 737.5 L786.925 782.5 L354.325 782.5 L354.325 737.5" stroke-width="0" stroke="none" stroke-linejoin="round" fill="#ad2323" fill-opacity="1"/>
 <path d="M354.325 737.5 L786.925 737.5 M786.925 782.5 L354.325 782.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#ad2323" fill-opacity="1"/>
 <!-- !right !both --><path d="M786.925 737.5 L786.925 782.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#ad2323" fill-opacity="1"/>
 <!-- !left !both --><path d="M354.325 737.5 L354.325 782.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#ad2323" fill-opacity="1"/>
-<line x1="354.375" y1="760" x2="786.875" y2="760" stroke-width="1.5" stroke="gray" fill="gray" stroke-opacity="1.0"/>
-<line x1="354.375" y1="760" x2="786.875" y2="760" stroke-width="0.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 
 
 <!-- renderSideComponent: clip -->
@@ -359,7 +353,7 @@
 <path d="M833.075 737.5 L848.175 737.5 M848.175 782.5 L833.075 782.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
 <!-- !right !both --><path d="M848.175 737.5 L848.175 782.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
 <!-- !left !both --><path d="M833.075 737.5 L833.075 782.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="silver" fill-opacity="1"/>
-<text x="500" y="810" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central">red</text>
+<text x="500" y="810" font-size="1.2em" font-weight="bold" text-anchor="middle" dominant-baseline="central">red (SPG20R-H)</text>
 </g><text x="50%" y="860" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // Synapticloop // The Mechanical Pencil Database (tmpdb)</text>
 <text x="50%" y="880" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
 <text x="990" y="890" font-size="0.5em" font-weight="bold" text-anchor="end" dominant-baseline="middle">SVGTechnicalGroupedRenderer</text>

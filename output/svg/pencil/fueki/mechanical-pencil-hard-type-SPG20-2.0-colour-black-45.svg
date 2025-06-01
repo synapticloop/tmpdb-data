@@ -63,13 +63,11 @@
 <!-- renderSideComponent: body -->
 
 
-<!-- renderPart: hexagonal -->
+<!-- renderPart: cylinder -->
 <path d="M354.325 477.5 L786.925 477.5 L786.925 522.5 L354.325 522.5 L354.325 477.5" stroke-width="0" stroke="none" stroke-linejoin="round" fill="#222222" fill-opacity="1"/>
 <path d="M354.325 477.5 L786.925 477.5 M786.925 522.5 L354.325 522.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#222222" fill-opacity="1"/>
 <!-- !right !both --><path d="M786.925 477.5 L786.925 522.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#222222" fill-opacity="1"/>
 <!-- !left !both --><path d="M354.325 477.5 L354.325 522.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#222222" fill-opacity="1"/>
-<line x1="354.375" y1="500" x2="786.875" y2="500" stroke-width="1.5" stroke="gray" fill="gray" stroke-opacity="1.0"/>
-<line x1="354.375" y1="500" x2="786.875" y2="500" stroke-width="0.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 
 
 <!-- renderSideComponent: clip -->

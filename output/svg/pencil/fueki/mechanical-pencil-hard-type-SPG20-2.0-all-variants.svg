@@ -64,13 +64,11 @@
 <!-- renderSideComponent: body -->
 
 
-<!-- renderPart: hexagonal -->
+<!-- renderPart: cylinder -->
 <path d="M354.325 97.5 L786.925 97.5 L786.925 142.5 L354.325 142.5 L354.325 97.5" stroke-width="0" stroke="none" stroke-linejoin="round" fill="#222222" fill-opacity="1"/>
 <path d="M354.325 97.5 L786.925 97.5 M786.925 142.5 L354.325 142.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#222222" fill-opacity="1"/>
 <!-- !right !both --><path d="M786.925 97.5 L786.925 142.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#222222" fill-opacity="1"/>
 <!-- !left !both --><path d="M354.325 97.5 L354.325 142.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#222222" fill-opacity="1"/>
-<line x1="354.375" y1="120" x2="786.875" y2="120" stroke-width="1.5" stroke="gray" fill="gray" stroke-opacity="1.0"/>
-<line x1="354.375" y1="120" x2="786.875" y2="120" stroke-width="0.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 
 
 <!-- renderSideComponent: clip -->
@@ -152,13 +150,11 @@
 <!-- renderSideComponent: body -->
 
 
-<!-- renderPart: hexagonal -->
+<!-- renderPart: cylinder -->
 <path d="M354.325 217.5 L786.925 217.5 L786.925 262.5 L354.325 262.5 L354.325 217.5" stroke-width="0" stroke="none" stroke-linejoin="round" fill="#ad2323" fill-opacity="1"/>
 <path d="M354.325 217.5 L786.925 217.5 M786.925 262.5 L354.325 262.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#ad2323" fill-opacity="1"/>
 <!-- !right !both --><path d="M786.925 217.5 L786.925 262.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#ad2323" fill-opacity="1"/>
 <!-- !left !both --><path d="M354.325 217.5 L354.325 262.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="#ad2323" fill-opacity="1"/>
-<line x1="354.375" y1="240" x2="786.875" y2="240" stroke-width="1.5" stroke="gray" fill="gray" stroke-opacity="1.0"/>
-<line x1="354.375" y1="240" x2="786.875" y2="240" stroke-width="0.5" stroke="black" fill="none" stroke-opacity="0.5"/>
 
 
 <!-- renderSideComponent: clip -->

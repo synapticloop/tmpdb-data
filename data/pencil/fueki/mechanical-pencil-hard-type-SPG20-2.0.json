@@ -2,6 +2,7 @@
 	"brand": "Fueki",
 	"model_name": "Mechanical Pencil Hard Type",
 	"model_number": "SPG20",
+	"skus": [ "SPG20B-H", "SPG20R-H" ],
 
 	"text": "Sharp Pencil 2.0 HARD SPG20",
 
@@ -79,7 +80,7 @@
 		{
 			"type": "body",
 			"parts": [
-				{ "shape": "hexagonal", "dimensions": [ 86.5, 9.0 ] }
+				{ "shape": "cylinder", "dimensions": [ 86.5, 9.0 ] }
 			],
 			"material": "plastic"
 		},

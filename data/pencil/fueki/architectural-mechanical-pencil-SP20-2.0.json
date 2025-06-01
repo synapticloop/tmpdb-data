@@ -1,24 +1,26 @@
 {
 	"brand": "Fueki",
-	"model_name": "Mechanical Pencil Hard Type",
-	"model_number": "SPG20",
+	"model_name": "Architectural Mechanical Pencil",
+	"model_number": "SP20",
+	"skus": [ "SP20B-H", "SP20R-H", "SP20W-H", "SP20G-H" ],
 
 	"text": "Sharp Pencil 2.0 HARD SPG20",
 
 	"mechanism": "click",
 	"lead_size": 2.0,
 
-	"accuracy": "high",
+	"accuracy": "medium",
 
 	"features": [
 	],
 
 	"colour_component": "body",
-	"colours": [ "black", "red" ],
+	"colours": [ "black", "red", "white", "gray" ],
 	"colour_map": {
 		"black": "#222222",
 		"red": "#ad2323",
-		"brass": "#e1c16e"
+		"brass": "#e1c16e",
+		"gray": "#555756"
 	},
 
 	"front": [
@@ -63,23 +65,9 @@
 			]
 		},
 		{
-			"type": "grip",
-			"parts": [
-				{ "shape": "cylinder", "dimensions": [ 32.0, 9.0 ], "finish":  "knurled" }
-			],
-			"internal_end": [
-				{ "shape": "cylinder", "dimensions": [ 0.5, 6.75 ] },
-				{ "shape": "cylinder", "dimensions": [ 1.0, 6.5 ] },
-				{ "shape": "cylinder", "dimensions": [ 3.5, 6.75 ], "finish": "threaded" },
-				{ "shape": "cylinder", "dimensions": [ 3.5, 6.5 ] }
-			],
-			"material": "metal",
-			"colours": [ "silver" ]
-		},
-		{
 			"type": "body",
 			"parts": [
-				{ "shape": "hexagonal", "dimensions": [ 86.5, 9.0 ] }
+				{ "shape": "hexagonal", "dimensions": [ 118.5, 9.0 ] }
 			],
 			"material": "plastic"
 		},
