@@ -2,11 +2,65 @@
 
 Available pencil definitions:
 
+ - 925 // Model #: 35/25-20 - (2.0 mm) 
+
  - Mars Technico // Model #: 780c - (2.0 mm) 
 
 
 
 <img src="./staedtler/staedtler-brand-grouped.png" />
+
+## Staedtler 925 // Model #: 35/25-20 - (2.0mm) 
+
+Accuracy level for information on this pencil: `high`
+
+### Pencil Information
+
+| `---Item---` | `---Information---` |
+| ---: | :--- |
+| **Brand** | Staedtler |
+| **Model name** | 925 |
+| **Model number** | 35/25-20 |
+| **Weight** | 0 g |
+| **Mechanism** | click |
+| **Lead size** | 2.0 mm |
+| **Lead shape** | cylindrical |
+| **Maximum lead length** | undefined |
+| **Manufactured in** | Japan |
+| **`---Feature---`** | **`---Location---`** |
+| **lead size indicator** | embossed on end of pencil |
+### Pencil Measurements
+
+_(Note: all offsets are from the start of the pencil)_
+
+| `---Item---` | `---Offset---` | `---Length---` |
+| ---: | ---: | ---: |
+| **tip** | 0 mm | 18 mm |
+| **body** | 18 mm | 112 mm |
+| **cap** | 130 mm | 14.25 mm |
+| **grip** | 18 mm | 25.5 mm |
+| **clip** | 123 mm | 32.5 mm |
+| | **Pencil length** | 144.25 mm |
+
+
+
+
+<img src="./staedtler/lead-holder-925-35-2.0-grouped.png" />
+
+
+
+### Colours
+
+
+
+| Colour | SKU | Manufacture dates |
+| ---: | :--- | :--- |
+| **black** | 925 35-20B | From: undefined to undefined |
+| **dark blue** | 925 35-20N | From: undefined to undefined |
+| **silver** | 925 25-20 | From: undefined to undefined |
+
+
+---
 
 ## Staedtler Mars Technico // Model #: 780c - (2.0mm) 
 

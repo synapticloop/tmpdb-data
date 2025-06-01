@@ -1,6 +1,6 @@
 # Daiso // 2mm Mechanical Pencil 2 mm
 
-## Model #: 
+## Model #: unknown
 
 <img src="./mechanical-pencil-2.0-grouped.png">
 
@@ -10,7 +10,7 @@
 | ---: | :--- |
 | **Brand** | Daiso |
 | **Model name** | 2mm Mechanical Pencil |
-| **Model number** |  |
+| **Model number** | unknown |
 | **Mechanism** | click |
 | **Lead size** | 2 |
 | **Lead shape** | cylindrical |

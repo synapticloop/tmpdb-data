@@ -67,11 +67,11 @@
 		},
 		{
 			"type": "clip",
-			"parts": [
-				{ "shape": "cylinder", "dimensions": [ 0.75, 8.5 ] }
-			],
 			"internal_start": [
 				{ "shape": "cylinder", "dimensions": [ 0, 0 ] }
+			],
+			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 0.75, 8.5 ] }
 			],
 			"extras": [
 				{

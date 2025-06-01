@@ -34,7 +34,8 @@ _(To regenerate the list - and this `README.md` file, run `npm run readme-genera
 | **Alvin** | **DA** | TECH | 2.0 | 3 | high |
 | **Alvin** | **PRO-MATIC** | MC5 | 2.0 | 1 | high |
 | **BIC** | **Criterium** | LUXE | 2.0 | 3 | high |
-| **Daiso** | **2mm Mechanical Pencil** |  | 2.0 | 2 | high |
+| **Daiso** | **2mm Mechanical Pencil** | unknown | 2.0 | 2 | high |
+| **Flair** | **Tri-o** |  | 2.0 | 5 | high |
 | **Hapila** | **2mm mechanical pencil** | SPSHHB | 2.0 | 2 | high |
 | **ito-ya** | **Wooden Sharp Pencil** | WSP | 2.0 | 4 | high |
 | **Kita Boshi** | **Adult Pencil** | OTP-580 | 2.0 | 4 | high |
@@ -53,11 +54,12 @@ _(To regenerate the list - and this `README.md` file, run `npm run readme-genera
 | **Redcircle** | **600** | 600 | 2.0 | 3 | high |
 | **rOtring** | **Tikky** | TK12 | 0.5 | 10 | high |
 | **rOtring** | **Tikky** | TK12 | 0.7 | 15 | high |
+| **Staedtler** | **925** | 35/25-20 | 2.0 | 3 | high |
 | **Staedtler** | **Mars Technico** | 780c | 2.0 | 2 | high |
 | **STUDMARK** | **3750** | 3750 | 2.0 | 1 | high |
 | **Unbranded** | **Metal Black** | unknown | 2.0 | 1 | high |
 | **Unbranded** | **Plastic Black** | unknown | 2.0 | 1 | high |
-| | | **26 Pencils** | | **95 Variants**<br />_(colours / patterns)_  | |
+| | | **28 Pencils** | | **103 Variants**<br />_(colours / patterns)_  | |
 
 
 

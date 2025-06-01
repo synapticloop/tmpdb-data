@@ -2,13 +2,13 @@
 
 Available pencil definitions:
 
- - 2mm Mechanical Pencil // Model #:  - (2.0 mm) 
+ - 2mm Mechanical Pencil // Model #: unknown - (2.0 mm) 
 
 
 
 <img src="./daiso/daiso-brand-grouped.png" />
 
-## Daiso 2mm Mechanical Pencil // Model #:  - (2.0mm) 
+## Daiso 2mm Mechanical Pencil // Model #: unknown - (2.0mm) 
 
 Accuracy level for information on this pencil: `high`
 
@@ -18,7 +18,7 @@ Accuracy level for information on this pencil: `high`
 | ---: | :--- |
 | **Brand** | Daiso |
 | **Model name** | 2mm Mechanical Pencil |
-| **Model number** |  |
+| **Model number** | unknown |
 | **Weight** | undefined g |
 | **Mechanism** | click |
 | **Lead size** | 2.0 mm |
@@ -50,7 +50,7 @@ _(Note: all offsets are from the start of the pencil)_
 
 | Colour | SKU | Manufacture dates |
 | ---: | :--- | :--- |
-| **black** | unrecorded | From: undefined to undefined |
+| **black** | 4549131396775 | From: undefined to undefined |
 | **blue** | unrecorded | From: undefined to undefined |
 
 

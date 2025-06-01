@@ -49,6 +49,123 @@
 				{ "shape": "cylinder", "dimensions": [ 2.0, 7.25 ] },
 				{ "shape": "cylinder", "dimensions": [ 1.5, 8.75 ], "finish": "knurled-small" }
 			]
+		},
+		{
+			"type": "shaft",
+			"material": "metal",
+			"colours": [ "brass" ],
+			"internal_start": [
+				{ "shape": "cylinder", "dimensions": [ 3.0, 5.5 ], "colour": "black" },
+				{ "shape": "cylinder", "dimensions": [ 3.25, 6.75 ], "finish": "threaded" }
+			],
+			"internal_end": [
+				{ "shape": "cylinder", "dimensions": [ 1.5, 5.0 ] },
+				{ "shape": "cylinder", "dimensions": [ 2.25, 5.5 ], "finish": "threaded" },
+				{ "shape": "cylinder", "dimensions": [ 3.45, 3.0 ], "finish": "spring" },
+				{ "shape": "cylinder", "dimensions": [ 1.0, 4.25 ], "material": "plastic", "colours": [ "white"] },
+				{ "shape": "cylinder", "dimensions": [ 110.25, 4.0 ] }
+			]
+		},
+		{
+			"type": "grip",
+			"material": "metal",
+			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 1.5, 8.75 ], "finish": "knurled-small" },
+				{ "shape": "cylinder", "dimensions": [ 0.5, 8.5 ] },
+				{ "shape": "cylinder", "dimensions": [ 1.5, 8.75 ], "finish": "knurled-small" },
+				{ "shape": "cylinder", "dimensions": [ 0.5, 8.5 ] },
+				{ "shape": "cylinder", "dimensions": [ 1.5, 8.75 ], "finish": "knurled-small" },
+				{ "shape": "cylinder", "dimensions": [ 0.5, 8.5 ] },
+				{ "shape": "cylinder", "dimensions": [ 1.5, 8.75 ], "finish": "knurled-small" },
+				{ "shape": "cylinder", "dimensions": [ 0.5, 8.5 ] },
+				{ "shape": "cylinder", "dimensions": [ 1.5, 8.75 ], "finish": "knurled-small" },
+				{ "shape": "cylinder", "dimensions": [ 0.5, 8.5 ] },
+				{ "shape": "cylinder", "dimensions": [ 1.5, 8.75 ], "finish": "knurled-small" },
+				{ "shape": "cylinder", "dimensions": [ 0.5, 8.5 ] },
+				{ "shape": "cylinder", "dimensions": [ 1.5, 8.75 ], "finish": "knurled-small" },
+				{ "shape": "cylinder", "dimensions": [ 0.5, 8.5 ] },
+				{ "shape": "cylinder", "dimensions": [ 1.5, 8.75 ], "finish": "knurled-small" },
+				{ "shape": "cylinder", "dimensions": [ 0.5, 8.5 ] },
+				{ "shape": "cylinder", "dimensions": [ 1.5, 8.75 ], "finish": "knurled-small" },
+				{ "shape": "cylinder", "dimensions": [ 0.5, 8.5 ] },
+				{ "shape": "cylinder", "dimensions": [ 1.5, 8.75 ], "finish": "knurled-small" },
+				{ "shape": "cylinder", "dimensions": [ 0.5, 8.5 ] },
+				{ "shape": "cylinder", "dimensions": [ 1.5, 8.75 ], "finish": "knurled-small" },
+				{ "shape": "cylinder", "dimensions": [ 0.5, 8.5 ] },
+				{ "shape": "cylinder", "dimensions": [ 1.5, 8.75 ], "finish": "knurled-small" },
+				{ "shape": "cylinder", "dimensions": [ 0.5, 8.5 ] },
+				{ "shape": "cylinder", "dimensions": [ 1.5, 8.75 ], "finish": "knurled-small" }
+			],
+			"internal_end": [
+				{ "shape": "cylinder", "dimensions": [ 1.0, 6.0 ], "colours": [ "black", "silver", "silver"] },
+				{ "shape": "cylinder", "dimensions": [ 3.75, 6.5 ], "colours": [ "black", "silver", "silver"], "finish": "threaded" }
+			]
+		},
+		{
+			"type": "indicator",
+			"material": "metal",
+			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 6.75, 8.75 ], "colours": [ "black", "silver", "silver"], "finish": "indicator" }
+			],
+			"internal_end": [
+				{ "shape": "cylinder", "dimensions": [ 0, 0 ] }
+			]
+		},
+		{
+			"type": "body",
+			"material": "metal",
+			"internal_start": [
+				{ "shape": "cylinder", "dimensions": [ 6.75, 8.0 ] }
+			],
+			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 72.75, 8.75 ] }
+			]
+		},
+		{
+			"type": "clip",
+			"material": "metal",
+			"colours": [ "black", "silver", "silver"],
+			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 5.0, 10.0 ] }
+			],
+			"extras": [
+				{
+					"dimensions": [ 32.5, 3.0, 3.75 ],
+					"offset": [ -26.5, 4.325 ],
+					"parts": [
+						{ "shape": "curve", "points": [ 0.45, -2.75, 6.0, -2.75, 3.0, 1.35 ] },
+						{ "shape": "line", "points": [ 0.45, -2.75, 30.25, -2.75 ] },
+						{ "shape": "curve", "points": [ 30.25, -2.75, 30.25, -0.25, 33.5, -1.25 ] }
+					]
+				}
+			]
+		},
+		{
+			"type": "tail",
+			"material": "metal",
+			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 2.0, 8.75 ] }
+			]
+		},
+		{
+			"type": "cap",
+			"material": "metal",
+			"internal_start": [
+				{ "shape": "cylinder", "dimensions": [ 4.5, 4.75 ] },
+				{ "shape": "cylinder", "dimensions": [ 1.25, 5.75 ], "joined": "right" }
+			],
+			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 5.5, 5.75 ], "joined": "left" },
+				{ "shape": "cylinder", "dimensions": [ 1.50, 8.75 ] },
+				{ "shape": "cylinder", "dimensions": [ 0.5, 8.5 ] },
+				{ "shape": "cylinder", "dimensions": [ 1.25, 8.75 ] },
+				{ "shape": "cylinder", "dimensions": [ 0.5, 8.5 ] },
+				{ "shape": "cylinder", "dimensions": [ 1.25, 8.75 ] },
+				{ "shape": "cylinder", "dimensions": [ 0.5, 8.5 ] },
+				{ "shape": "cylinder", "dimensions": [ 1.25, 8.75 ] },
+				{ "shape": "cylinder", "dimensions": [ 0.5, 8.5 ] },
+				{ "shape": "cylinder", "dimensions": [ 1.50, 8.75 ] }
+			]
 		}
 	],
 

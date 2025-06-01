@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="440">
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="680">
  <pattern id="knurled-large" patternUnits="userSpaceOnUse" width="12" height="12">
 <path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 6,6 L 12,12"/>
 <path stroke="dimgray" stroke-linecap="round" stroke-width="1" d="M 6,6 L 0,12"/>
@@ -21,17 +21,17 @@
 </pattern><pattern id="spring" patternUnits="userSpaceOnUse" width="8" height="60">
 <path stroke="dimgray" stroke-linecap="round" stroke-width="2" d="M 1,1 L 8,60"/>
 <path stroke="white" stroke-linecap="round" stroke-width="1" d="M 1,1 L 8,60"/>
-</pattern><rect x="0" y="0" width="1000" height="440" fill="white" stroke="black" stroke-width="4" />
-<rect x="2" y="2" width="996" height="436" fill="white" stroke="dimgray" stroke-width="1" />
+</pattern><rect x="0" y="0" width="1000" height="680" fill="white" stroke="black" stroke-width="4" />
+<rect x="2" y="2" width="996" height="676" fill="white" stroke="dimgray" stroke-width="1" />
 <g transform="rotate(0 0 0)">
 <text x="30" y="50" font-size="2.0em" font-weight="bold"> Synapticloop // Clip examples </text>
-<line x1="500" y1="80" x2="500" y2="360" stroke="#5f5f5f" stroke-linecap="round" stroke-dasharray="2" stroke-width="1" />
+<line x1="500" y1="80" x2="500" y2="600" stroke="#5f5f5f" stroke-linecap="round" stroke-dasharray="2" stroke-width="1" />
 <line x1="480" y1="80" x2="520" y2="80" stroke-linecap="round" stroke="#000000"  stroke-width="1" />
 <line x1="500" y1="60" x2="500" y2="100" stroke="#000000" stroke-linecap="round"  stroke-width="1" />
 <circle r="10" cx="500" cy="80" fill="white" fill-opacity="0" stroke="#000000" stroke-width="1"  />
-<line x1="480" y1="360" x2="520" y2="360" stroke-linecap="round" stroke="#000000"  stroke-width="1" />
-<line x1="500" y1="340" x2="500" y2="380" stroke="#000000" stroke-linecap="round"  stroke-width="1" />
-<circle r="10" cx="500" cy="360" fill="white" fill-opacity="0" stroke="#000000" stroke-width="1"  />
+<line x1="480" y1="600" x2="520" y2="600" stroke-linecap="round" stroke="#000000"  stroke-width="1" />
+<line x1="500" y1="580" x2="500" y2="620" stroke="#000000" stroke-linecap="round"  stroke-width="1" />
+<circle r="10" cx="500" cy="600" fill="white" fill-opacity="0" stroke="#000000" stroke-width="1"  />
 <text x="500" y="120" font-size="1.0em" font-weight="bold" text-anchor="middle" dominant-baseline="central">BIC // Criterium (/data/BIC/criterium.json)</text>
 
 
@@ -74,7 +74,43 @@
 <line x1="344.375" y1="278.125" x2="364.375" y2="269.375" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
 <line x1="364.375" y1="269.375" x2="504.375" y2="269.375" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
 <path d="M504.375 269.375 Q524.375 274.375 504.375 279.375" stroke-width="3" stroke="white" fill="none" stroke-linecap="round" />
-</g><text x="50%" y="400" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // Synapticloop // The Mechanical Pencil Database (tmpdb)</text>
-<text x="50%" y="420" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
-<text x="990" y="430" font-size="0.5em" font-weight="bold" text-anchor="end" dominant-baseline="middle">SVGExampleRenderer</text>
+<text x="500" y="360" font-size="1.0em" font-weight="bold" text-anchor="middle" dominant-baseline="central">Hapila! // SPSHHB (/data/hapila/2mm-mechanical-pencil-SPSHHB-2.0.json)</text>
+
+
+<!-- renderSideComponent: Hapila! // SPSHHB (/data/hapila/2mm-mechanical-pencil-SPSHHB-2.0.json) -->
+<path d="M332.875 385.875 Q355.625 409.375 365.625 385.875 Z" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
+<line x1="330.625" y1="384.375" x2="513.125" y2="384.375" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
+<path d="M513.125 384.375 Q533.125 391.875 513.125 398.125" stroke-width="4" stroke="black" fill="none" stroke-linecap="round" />
+
+
+<!-- renderPart: cylinder -->
+<path d="M488.075 396.875 L511.925 396.875 L511.925 443.125 L488.075 443.125 L488.075 396.875" stroke-width="0" stroke="none" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<path d="M488.075 396.875 L511.925 396.875 M511.925 443.125 L488.075 443.125" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<!-- !right !both --><path d="M511.925 396.875 L511.925 443.125" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<!-- !left !both --><path d="M488.075 396.875 L488.075 443.125" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<path d="M332.875 385.875 Q355.625 408.375 365.625 385.875 Z" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
+<rect x="332.875" y="385.875" width="35" height="-12.5" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
+<line x1="330.625" y1="384.375" x2="513.125" y2="384.375" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
+<path d="M513.125 384.375 Q533.125 391.875 513.125 398.125" stroke-width="3" stroke="white" fill="none" stroke-linecap="round" />
+<text x="500" y="480" font-size="1.0em" font-weight="bold" text-anchor="middle" dominant-baseline="central">Ito-Ya // Helvetica (/data/ito-ya/helvetica-wooden-sharp-pencil-wsp.json)</text>
+
+
+<!-- renderSideComponent: Ito-Ya // Helvetica (/data/ito-ya/helvetica-wooden-sharp-pencil-wsp.json) -->
+<path d="M325.625 502.5 Q340.625 523.5 356.875 502.5 Z" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
+<line x1="324.375" y1="501.25" x2="463.125" y2="501.25" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
+<line x1="463.125" y1="501.25" x2="481.875" y2="513.5" stroke-width="4" stroke="black" fill="dimgray" stroke-linecap="round" />
+
+
+<!-- renderPart: cylinder -->
+<path d="M481.825 512.5 L518.175 512.5 L518.175 567.5 L481.825 567.5 L481.825 512.5" stroke-width="0" stroke="none" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<path d="M481.825 512.5 L518.175 512.5 M518.175 567.5 L481.825 567.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<!-- !right !both --><path d="M518.175 512.5 L518.175 567.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<!-- !left !both --><path d="M481.825 512.5 L481.825 567.5" stroke-width="0.5" stroke="black" stroke-linejoin="round" fill="white" fill-opacity="1"/>
+<path d="M325.625 502.5 Q340.625 522.5 356.875 502.5 Z" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
+<rect x="325.625" y="502.5" width="32.5" height="-10" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
+<line x1="324.375" y1="501.25" x2="463.125" y2="501.25" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
+<line x1="463.125" y1="501.25" x2="481.875" y2="513.5" stroke-width="3" stroke="white" fill="white" stroke-linecap="round" />
+</g><text x="50%" y="640" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Copyright (c) // Synapticloop // The Mechanical Pencil Database (tmpdb)</text>
+<text x="50%" y="660" font-size="1.1em" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</text>
+<text x="990" y="670" font-size="0.5em" font-weight="bold" text-anchor="end" dominant-baseline="middle">SVGExampleRenderer</text>
 </svg>
