@@ -1,0 +1,120 @@
+{
+	"brand": "Unbranded",
+	"model_name": "Plastic Black (manomano.co.uk)",
+	"model_number": "unknown",
+
+	"text": "",
+
+	"mechanism": "clutch",
+	"lead_size": 2.0,
+
+	"accuracy": "high",
+
+	"features": [
+		{ "type":  "sharpener", "location": "inside cap" },
+		{ "type":  "lead grade indicator", "location": "tail" }
+	],
+
+	"colour_component": "body",
+	"colours": [ "black" ],
+
+	"front": [
+		{ "shape": "cylinder", "dimensions": [ 2.0, 10.0 ], "fill":  "black" }
+	],
+	"back": [
+		{ "shape": "cylinder", "dimensions": [ 2.0, 10.0 ], "fill":  "black" }
+	],
+	"components": [
+		{
+			"type": "jaws",
+			"parts": [
+				{ "shape": "cone", "dimensions": [ 1.0, 4.25, 5.25 ] },
+				{ "shape": "cylinder", "dimensions": [ 1.75, 5.25 ] }
+			],
+			"material": "metal",
+			"colours": [ "silver" ]
+		},
+		{
+			"type": "tip",
+			"parts": [
+				{ "shape": "cone", "dimensions": [ 12.25, 5.25, 7.25 ] }
+			],
+			"material": "metal",
+			"colours": [ "silver" ]
+		},
+		{
+			"type": "grip",
+			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 25.75, 8.25 ], "finish":  "knurled" }
+			],
+			"material": "metal",
+			"colours": [ "silver" ]
+		},
+		{
+			"type": "body",
+			"parts": [
+				{ "shape": "hexagonal", "dimensions": [ 66.0, 8.25 ] }
+			],
+			"material": "plastic"
+		},
+		{
+			"type": "clip",
+			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 6.0, 9.5 ] }
+			],
+			"extras": [
+				{ "dimensions": [ 41.5, 4.0, 4.0 ],
+					"offset":  [ -32, 4.25 ],
+					"parts": [
+						{ "shape": "curve-fill", "points": [ 0.425, -2.45, 7.0, -2.9, 5.0, 2.0 ] },
+						{ "shape": "line", "points": [ 0.0, -3.0, 33.5, -4.0 ], "width": 4.0 },
+						{ "shape": "line", "points": [ 33.5, -3.75, 38, -3.0 ] },
+						{ "shape": "curve",  "points": [ 38, -3.0, 38, -0.5, 44.5, -2.0 ] }
+					]
+				}
+			],
+			"material": "plastic",
+			"colours": [ "silver" ]
+		},
+		{
+			"type": "tail",
+			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 4.5, 8.25 ] },
+				{ "shape": "cylinder", "dimensions": [ 0.75, 8.25 ], "colours": [ "red" ], "material": "rubber" }
+			],
+			"material": "plastic"
+		},
+		{
+			"type": "indicator",
+			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 9.5, 8.25 ], "finish": "knurled,indicator" }
+			],
+			"material": "plastic",
+			"colours": [ "silver" ]
+		},
+		{
+			"type": "foot",
+			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 2.5, 8.25 ] }
+			],
+			"material": "plastic",
+			"colours": [ "silver" ]
+		},
+		{
+			"type": "cap",
+			"parts": [
+				{ "shape": "cylinder", "dimensions": [ 10.5, 5.5 ] },
+				{ "shape": "convex", "dimensions": [ 1.25, 5.5 ], "offset": [ 2.25, 2.75 ] }
+			],
+			"internal_start": [
+				{ "shape": "cylinder", "dimensions": [ 4.0, 5.5 ], "colours":  [ "black" ]  },
+				{ "shape": "cylinder", "dimensions": [ 0.25, 5.0 ], "colours":  [ "black" ]  },
+				{ "shape": "cylinder", "dimensions": [ 6.75, 5.5 ], "colours":  [ "silver" ] }
+			],
+			"material": "plastic",
+			"colours": [ "silver" ]
+		}
+	],
+	"sources": [
+	]
+}

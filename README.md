@@ -58,8 +58,9 @@ _(To regenerate the list - and this `README.md` file, run `npm run readme-genera
 | **Staedtler** | **Mars Technico** | 780c | 2.0 | 2 | high |
 | **STUDMARK** | **3750** | 3750 | 2.0 | 1 | high |
 | **Unbranded** | **Metal Black** | unknown | 2.0 | 1 | high |
-| **Unbranded** | **Plastic Black** | unknown | 2.0 | 1 | high |
-| | | **28 Pencils** | | **103 Variants**<br />_(colours / patterns)_  | |
+| **Unbranded** | **Plastic Black (manomano.co.uk)** | unknown | 2.0 | 1 | high |
+| **Unbranded** | **Plastic Blue** | unknown | 2.0 | 1 | high |
+| | | **29 Pencils** | | **104 Variants**<br />_(colours / patterns)_  | |
 
 
 
